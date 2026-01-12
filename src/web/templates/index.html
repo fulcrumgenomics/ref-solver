@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's my genome? - Powered by ref-solver</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">
+            <h1>What's my genome?</h1>
+            <p class="subtitle">Powered by ref-solver - Identify <span class="human-highlight">HUMAN</span> reference genomes from sequence headers and files</p>
+        </div>
+        <div class="header-logo">
+            <a href="https://fulcrumgenomics.com" target="_blank" rel="noopener">
+                <img src="https://fulcrumgenomics.com/wp-content/uploads/2021/09/logo.png" alt="Fulcrum Genomics">
+            </a>
+        </div>
+    </div>
+
+    <!-- Help System -->
+    <div class="help-section">
+        <div class="help-toggle" onclick="toggleHelp()">
+            <span><strong>📖 Help & Documentation</strong></span>
+            <span id="help-arrow">▼</span>
+        </div>
+        <div class="help-content" id="help-content">
+            <div class="help-tabs">
+                <button class="help-tab active" onclick="showHelpTab('overview')">Overview</button>
+                <button class="help-tab" onclick="showHelpTab('input-types')">Input Types</button>
+                <button class="help-tab" onclick="showHelpTab('results')">Understanding Results</button>
+            </div>
+            <div class="help-tab-content active" id="help-overview">
+                <h3>How ref-solver Works</h3>
+                <p>ref-solver identifies reference genomes by analyzing sequence headers and comparing them against a curated catalog of known references. It uses multiple matching strategies:</p>
+                <ul>
+                    <li><strong>MD5 checksums</strong> - Most accurate method for exact sequence matching</li>
+                    <li><strong>Name + length</strong> - Matches contigs by identifier and sequence length</li>
+                    <li><strong>Alias matching</strong> - Handles different naming conventions (chr1 vs 1, etc.)</li>
+                    <li><strong>Order analysis</strong> - Detects if contigs are reordered</li>
+                </ul>
+                <p>The tool provides confidence scores and actionable suggestions for handling mismatches.</p>
+            </div>
+            <div class="help-tab-content" id="help-input-types">
+                <h3>Supported Input Types</h3>
+                <p><strong>SAM Header:</strong> Paste <code>@SQ</code> lines directly or upload .sam files</p>
+                <p><strong>Sequence Dictionary:</strong> Upload Picard .dict files from reference preparation</p>
+                <p><strong>Assembly Report:</strong> Upload NCBI assembly reports with comprehensive metadata</p>
+                <p><strong>VCF Header:</strong> Upload VCF files to extract <code>##contig</code> lines</p>
+                <p><strong>BAM/CRAM:</strong> Upload .bam or .cram files to extract headers automatically</p>
+                <p>All formats are automatically detected and parsed appropriately.</p>
+            </div>
+            <div class="help-tab-content" id="help-results">
+                <h3>Understanding Results</h3>
+                <p><strong>Confidence Levels:</strong></p>
+                <ul>
+                    <li><span style="color: var(--success)">Exact</span> - Perfect match, safe to use</li>
+                    <li><span style="color: var(--success)">High</span> - Very good match with minor differences</li>
+                    <li><span style="color: var(--warning)">Medium</span> - Good match but needs attention</li>
+                    <li><span style="color: var(--error)">Low</span> - Poor match, likely wrong reference</li>
+                </ul>
+                <p><strong>Match Types:</strong> Exact, Renamed, Reordered, Partial, Mixed, No Match</p>
+                <p><strong>Suggestions:</strong> Actionable commands for fixing common issues like renaming or reordering contigs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Input Interface -->
+    <div class="card input-section" id="input-section">
+        <div class="card-header" onclick="toggleInputSection()">
+            <h2>Input & Configuration</h2>
+            <span id="input-collapse-arrow">▼</span>
+        </div>
+        <div class="card-body">
+            <div class="tabs">
+            <button class="tab-button active" onclick="showTab('sam-dict')">SAM Header / Dictionary</button>
+            <button class="tab-button" onclick="showTab('assembly-report')">Assembly Report</button>
+            <button class="tab-button" onclick="showTab('vcf')">VCF Header</button>
+            <button class="tab-button" onclick="showTab('binary')">BAM/CRAM</button>
+        </div>
+
+        <form id="identify-form">
+            <!-- SAM Header / Dictionary Tab -->
+            <div class="tab-content active" id="tab-sam-dict">
+                <div class="card-body">
+                    <div class="tab-description">
+                        Paste SAM header lines (@SQ) or upload SAM files / Picard sequence dictionary (.dict) files.
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <label for="sam-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
+                        <input type="file" id="sam-file-upload" name="file" accept=".sam,.dict,.txt" onchange="handleFileUpload(this, 'text')" style="display: none;">
+                        <button type="button" class="demo-button" onclick="loadExample('sam-dict')">📋 Load Example</button>
+                        <button type="button" class="demo-button" onclick="clearTextArea('header-input')">🗑️ Clear</button>
+                    </div>
+                    <textarea
+                        name="header_text"
+                        id="header-input"
+                        placeholder="Paste SAM header here (@SQ lines) or click 'Load Example' for a demo..."></textarea>
+                </div>
+            </div>
+
+            <!-- Assembly Report Tab -->
+            <div class="tab-content" id="tab-assembly-report">
+                <div class="card-body">
+                    <div class="tab-description">
+                        Paste NCBI assembly report content or upload assembly report files (.txt/.tsv) with comprehensive sequence metadata.
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <label for="report-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
+                        <input type="file" id="report-file-upload" name="file" accept=".txt,.tsv" onchange="handleFileUpload(this, 'assembly')" style="display: none;">
+                        <button type="button" class="demo-button" onclick="loadExample('assembly-report')">📋 Load Example</button>
+                        <button type="button" class="demo-button" onclick="clearTextArea('assembly-input')">🗑️ Clear</button>
+                    </div>
+                    <textarea
+                        name="assembly_text"
+                        id="assembly-input"
+                        placeholder="Paste assembly report content here or click 'Load Example' for a demo..."></textarea>
+                </div>
+            </div>
+
+            <!-- VCF Header Tab -->
+            <div class="tab-content" id="tab-vcf">
+                <div class="card-body">
+                    <div class="tab-description">
+                        Paste VCF contig header lines (##contig) or upload VCF files to extract reference information.
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <label for="vcf-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
+                        <input type="file" id="vcf-file-upload" name="file" accept=".vcf,.vcf.gz" onchange="handleFileUpload(this, 'vcf')" style="display: none;">
+                        <button type="button" class="demo-button" onclick="loadExample('vcf')">📋 Load Example</button>
+                        <button type="button" class="demo-button" onclick="clearTextArea('vcf-input')">🗑️ Clear</button>
+                    </div>
+                    <textarea
+                        name="vcf_text"
+                        id="vcf-input"
+                        placeholder="Paste VCF ##contig header lines here or click 'Load Example' for a demo..."></textarea>
+                </div>
+            </div>
+
+            <!-- BAM/CRAM Tab -->
+            <div class="tab-content" id="tab-binary">
+                <div class="card-body">
+                    <div class="tab-description">
+                        Upload BAM or CRAM files to automatically extract sequence dictionary information from headers. Binary files cannot be pasted as text.
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <label for="binary-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
+                        <input type="file" id="binary-file-upload" name="file" accept=".bam,.cram" onchange="handleFileUpload(this, 'binary')" style="display: none;">
+                    </div>
+                    <div id="binary-preview" style="margin-top: 1rem; display: none;">
+                        <p style="color: var(--text-muted);">File uploaded: <span id="binary-filename"></span></p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Binary files are processed server-side. Click Identify to analyze.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Identify Button -->
+            <div style="margin-top: 1.5rem;">
+                <button type="submit" id="submit-btn" style="
+                    background: var(--success);
+                    color: white;
+                    border: none;
+                    padding: 1rem 2rem;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    transition: background 0.2s ease;
+                ">
+                    🔍 Identify
+                </button>
+            </div>
+
+            <!-- Configuration Controls -->
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                <h3 style="color: var(--accent); margin-bottom: 1rem;">Configuration</h3>
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label class="control-label" for="score-threshold">Score Threshold</label>
+                        <div class="slider-container">
+                            <div class="slider-value" id="threshold-value">80%</div>
+                            <input type="range" id="score-threshold" min="0" max="100" value="80"
+                                   oninput="updateThreshold(this.value)">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="result-limit">Maximum Results</label>
+                        <select id="result-limit">
+                            <option value="5">5 results</option>
+                            <option value="10" selected>10 results</option>
+                            <option value="15">15 results</option>
+                            <option value="20">20 results</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="button" class="advanced-toggle" onclick="toggleAdvanced()">
+                    <span id="advanced-arrow">▶</span> Advanced Scoring Options
+                </button>
+
+                <div class="advanced-options" id="advanced-options">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">Scoring Weights</h3>
+                    <div class="advanced-grid">
+                        <div class="control-group">
+                            <label class="control-label">MD5 Jaccard Weight</label>
+                            <div class="slider-container">
+                                <div class="slider-value" id="md5-jaccard-value">40%</div>
+                                <input type="range" id="md5-jaccard-weight" min="0" max="100" value="40"
+                                       oninput="updateWeight('md5-jaccard', this.value)">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Name/Length Jaccard Weight</label>
+                            <div class="slider-container">
+                                <div class="slider-value" id="name-length-value">30%</div>
+                                <input type="range" id="name-length-weight" min="0" max="100" value="30"
+                                       oninput="updateWeight('name-length', this.value)">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">MD5 Query Coverage Weight</label>
+                            <div class="slider-container">
+                                <div class="slider-value" id="md5-coverage-value">20%</div>
+                                <input type="range" id="md5-coverage-weight" min="0" max="100" value="20"
+                                       oninput="updateWeight('md5-coverage', this.value)">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Order Score Weight</label>
+                            <div class="slider-container">
+                                <div class="slider-value" id="order-score-value">10%</div>
+                                <input type="range" id="order-score-weight" min="0" max="100" value="10"
+                                       oninput="updateWeight('order-score', this.value)">
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;">
+                        Note: Weights are automatically normalized to sum to 100% during scoring.
+                    </p>
+                </div>
+            </div>
+
+        </form>
+        </div>
+    </div>
+
+
+    <!-- Split View Modal -->
+    <div id="split-view-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Contig Comparison</h2>
+                <span class="modal-close" onclick="splitViewManager.closeComparison()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="search-controls">
+                    <div class="search-section">
+                        <label for="query-search">Query Contigs Search:</label>
+                        <input type="text" id="query-search" placeholder="Search by name..." oninput="splitViewManager.debouncedFilterQuery(this.value)">
+                    </div>
+                    <div class="connections-status" id="connections-status">
+                        Showing connections
+                    </div>
+                    <div class="search-section">
+                        <label for="ref-search">Reference Contigs Search:</label>
+                        <input type="text" id="ref-search" placeholder="Search by name..." oninput="splitViewManager.debouncedFilterRef(this.value)">
+                    </div>
+                </div>
+                <div class="split-view-container">
+                    <div class="split-panel query-panel">
+                        <div class="panel-header">
+                            <h3>Query Contigs</h3>
+                            <div class="pagination-info" id="query-pagination-info"></div>
+                        </div>
+                        <div class="contigs-list" id="query-contigs"></div>
+                        <div class="pagination-controls" id="query-pagination"></div>
+                    </div>
+                    <div class="split-panel connections-panel">
+                        <svg id="connections-svg" width="100%" height="500"></svg>
+                    </div>
+                    <div class="split-panel reference-panel">
+                        <div class="panel-header">
+                            <h3 id="reference-title">Reference Contigs</h3>
+                            <div class="pagination-info" id="ref-pagination-info"></div>
+                        </div>
+                        <div class="contigs-list" id="reference-contigs"></div>
+                        <div class="pagination-controls" id="ref-pagination"></div>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item"><span class="legend-color exact"></span> Exact Match</div>
+                    <div class="legend-item"><span class="legend-color renamed"></span> Renamed Match</div>
+                    <div class="legend-item"><span class="legend-color conflict"></span> Conflict</div>
+                    <div class="legend-item"><span class="legend-color missing"></span> Missing/Unmatched</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>ref-solver by <a href="https://www.fulcrumgenomics.com" target="_blank" rel="noopener">Fulcrum Genomics</a></p>
+    </div>
+
+    <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

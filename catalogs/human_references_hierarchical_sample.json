@@ -1,0 +1,157 @@
+{
+  "version": "2.0.0",
+  "created_at": "2026-01-13T00:00:00Z",
+  "assemblies": [
+    {
+      "id": "grch38",
+      "name": "GRCh38",
+      "organism": "Homo sapiens",
+      "versions": [
+        {
+          "id": "grch38_p14",
+          "version": "p14",
+          "source": {
+            "type": "ncbi",
+            "accession": "GCF_000001405.40",
+            "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_assembly_report.txt",
+            "date": "2024-03-12"
+          },
+          "report_contigs": [
+            {
+              "id": 1,
+              "sequence_name": "1",
+              "length": 248956422,
+              "md5": null,
+              "refseq_accn": "NC_000001.11",
+              "genbank_accn": "CM000663.2",
+              "ucsc_name": "chr1",
+              "sequence_role": "assembled-molecule",
+              "assigned_molecule": "1"
+            },
+            {
+              "id": 2,
+              "sequence_name": "2",
+              "length": 242193529,
+              "md5": null,
+              "refseq_accn": "NC_000002.12",
+              "genbank_accn": "CM000664.2",
+              "ucsc_name": "chr2",
+              "sequence_role": "assembled-molecule",
+              "assigned_molecule": "2"
+            }
+          ],
+          "fasta_distributions": [
+            {
+              "id": "hg38_ucsc_sample",
+              "display_name": "hg38 (UCSC) - Sample",
+              "source": "ucsc",
+              "download_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz",
+              "tags": ["primary", "sample"],
+              "contigs": [
+                {
+                  "name": "chr1",
+                  "length": 248956422,
+                  "md5": "2648ae1bacce4ec4b6cf337dcae37816",
+                  "sort_order": 0,
+                  "report_contig_id": 1,
+                  "aliases": ["1", "CM000663.2", "NC_000001.11"]
+                },
+                {
+                  "name": "chr2",
+                  "length": 242193529,
+                  "md5": "4bb4f82880a14111eb7327169ffb729b",
+                  "sort_order": 1,
+                  "report_contig_id": 2,
+                  "aliases": ["2", "CM000664.2", "NC_000002.12"]
+                }
+              ]
+            },
+            {
+              "id": "hs38DH_sample",
+              "display_name": "hs38DH (1KG) - Sample",
+              "source": "one_thousand_genomes",
+              "download_url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
+              "tags": ["analysis_set", "decoy", "hla", "sample"],
+              "contigs": [
+                {
+                  "name": "chr1",
+                  "length": 248956422,
+                  "md5": "6aef897c3d6ff0c78aff06ac189178dd",
+                  "sort_order": 0,
+                  "report_contig_id": 1,
+                  "aliases": []
+                },
+                {
+                  "name": "chr2",
+                  "length": 242193529,
+                  "md5": "f98db672eb0993dcfdabafe2a882905c",
+                  "sort_order": 1,
+                  "report_contig_id": 2,
+                  "aliases": []
+                },
+                {
+                  "name": "chr1_decoy",
+                  "length": 5000,
+                  "md5": "decoy_md5_sample_placeholder",
+                  "sort_order": 2,
+                  "report_contig_id": null,
+                  "aliases": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grch37",
+      "name": "GRCh37",
+      "organism": "Homo sapiens",
+      "versions": [
+        {
+          "id": "grch37_p13",
+          "version": "p13",
+          "source": {
+            "type": "ncbi",
+            "accession": "GCF_000001405.25",
+            "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_assembly_report.txt",
+            "date": null
+          },
+          "report_contigs": [
+            {
+              "id": 1,
+              "sequence_name": "1",
+              "length": 249250621,
+              "md5": null,
+              "refseq_accn": "NC_000001.10",
+              "genbank_accn": "CM000663.1",
+              "ucsc_name": "chr1",
+              "sequence_role": "assembled-molecule",
+              "assigned_molecule": "1"
+            }
+          ],
+          "fasta_distributions": [
+            {
+              "id": "hg19_ucsc_sample",
+              "display_name": "hg19 (UCSC) - Sample",
+              "source": "ucsc",
+              "download_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz",
+              "tags": ["sample"],
+              "contigs": [
+                {
+                  "name": "chr1",
+                  "length": 249250621,
+                  "md5": "1b22b98cdeb4a9304cb5d48026a85128",
+                  "sort_order": 0,
+                  "report_contig_id": 1,
+                  "aliases": ["1", "NC_000001.10"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "standalone_distributions": []
+}

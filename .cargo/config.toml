@@ -1,0 +1,8 @@
+[alias]
+ci-test = "nextest run --all-features --locked --no-tests=pass"
+ci-fmt = "fmt -- --check"
+ci-lint = "clippy --package ref-solver --all-targets --all-features -- -D warnings -W clippy::pedantic"
+# Run tests with convenient alias
+t = "test --all-features"
+
+[build]

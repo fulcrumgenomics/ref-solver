@@ -1,0 +1,194 @@
+{
+  "description": "Source files for building the reference catalog",
+  "last_updated": "2026-01-12",
+  "assembly_reports": [
+    {
+      "id": "grch38_p14",
+      "name": "GRCh38.p14",
+      "source": "NCBI",
+      "type": "ncbi_assembly_report",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_assembly_report.txt",
+      "filename": "GCF_000001405.40_GRCh38.p14_assembly_report.txt",
+      "downloaded": "2026-01-12",
+      "assembly": "GRCh38",
+      "contig_count": 709,
+      "notes": "Latest GRCh38 patch release. Provides authoritative naming for all GRCh38-based references."
+    },
+    {
+      "id": "grch37_p13",
+      "name": "GRCh37.p13",
+      "source": "NCBI",
+      "type": "ncbi_assembly_report",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_assembly_report.txt",
+      "filename": "GCF_000001405.25_GRCh37.p13_assembly_report.txt",
+      "downloaded": "2026-01-12",
+      "assembly": "GRCh37",
+      "contig_count": 297,
+      "notes": "Latest GRCh37 patch release. Provides authoritative naming for all GRCh37-based references."
+    },
+    {
+      "id": "t2t_chm13_v2",
+      "name": "T2T-CHM13v2.0",
+      "source": "NCBI",
+      "type": "ncbi_assembly_report",
+      "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_assembly_report.txt",
+      "filename": "GCF_009914755.1_T2T-CHM13v2.0_assembly_report.txt",
+      "downloaded": "2026-01-12",
+      "assembly": "T2T-CHM13v2.0",
+      "contig_count": 25,
+      "notes": "Telomere-to-Telomere CHM13 assembly with chrY from NA24385."
+    }
+  ],
+  "reference_fastas": [
+    {
+      "id": "hg38_ucsc",
+      "name": "hg38 (UCSC)",
+      "source": "UCSC",
+      "assembly": "GRCh38",
+      "fasta_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "UCSC hg38 primary assembly with chr prefix."
+    },
+    {
+      "id": "grch38_ncbi",
+      "name": "GRCh38 (NCBI)",
+      "source": "NCBI",
+      "assembly": "GRCh38",
+      "fasta_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "NCBI GRCh38 no-ALT analysis set."
+    },
+    {
+      "id": "grch38_broad_analysis_set",
+      "name": "GRCh38 Broad Analysis Set",
+      "source": "Broad",
+      "assembly": "GRCh38",
+      "fasta_url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta",
+      "dict_url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dict",
+      "downloaded": null,
+      "notes": "Broad Institute GRCh38 analysis set for GATK Best Practices."
+    },
+    {
+      "id": "hg19_ucsc",
+      "name": "hg19 (UCSC)",
+      "source": "UCSC",
+      "assembly": "GRCh37",
+      "fasta_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "UCSC hg19 with chr prefix."
+    },
+    {
+      "id": "grch37_ncbi",
+      "name": "GRCh37 (NCBI)",
+      "source": "NCBI",
+      "assembly": "GRCh37",
+      "fasta_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "NCBI GRCh37.p13 reference."
+    },
+    {
+      "id": "hs37d5",
+      "name": "hs37d5 (1000 Genomes + decoy)",
+      "source": "1KG",
+      "assembly": "GRCh37",
+      "fasta_url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "1000 Genomes GRCh37 + decoy. 86 contigs."
+    },
+    {
+      "id": "b37_broad",
+      "name": "b37 (Broad)",
+      "source": "Broad",
+      "assembly": "GRCh37",
+      "fasta_url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg19/v0/Homo_sapiens_assembly19.fasta",
+      "dict_url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg19/v0/Homo_sapiens_assembly19.dict",
+      "downloaded": null,
+      "notes": "Broad Institute b37 (GRCh37-based) for GATK."
+    },
+    {
+      "id": "grch38_dragen",
+      "name": "GRCh38 DRAGEN",
+      "source": "Illumina",
+      "assembly": "GRCh38",
+      "fasta_url": null,
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "Illumina DRAGEN GRCh38. URL TBD."
+    },
+    {
+      "id": "hs38",
+      "name": "hs38 (no-ALT, lh3/ref-gen)",
+      "source": "lh3",
+      "assembly": "GRCh38",
+      "fasta_url": null,
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "lh3/ref-gen minimal GRCh38 without ALT contigs. URL TBD."
+    },
+    {
+      "id": "chm13v2",
+      "name": "T2T-CHM13v2.0",
+      "source": "T2T",
+      "assembly": "T2T-CHM13v2.0",
+      "fasta_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "T2T-CHM13v2.0 complete assembly. 25 contigs."
+    },
+    {
+      "id": "grch38_1kg_analysis",
+      "name": "GRCh38 1000 Genomes Analysis Set",
+      "source": "1KG",
+      "assembly": "GRCh38",
+      "fasta_url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "1000 Genomes GRCh38 analysis set + decoy + HLA."
+    },
+    {
+      "id": "hs38DH",
+      "name": "hs38DH (GRCh38 + ALT + decoy + HLA)",
+      "source": "1KG",
+      "assembly": "GRCh38",
+      "fasta_url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "Same as grch38_1kg_analysis. 3366 contigs with ALT, decoy, HLA."
+    },
+    {
+      "id": "hs37",
+      "name": "hs37 (minimal GRCh37, lh3/ref-gen)",
+      "source": "lh3",
+      "assembly": "GRCh37",
+      "fasta_url": null,
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "lh3/ref-gen minimal GRCh37. URL TBD."
+    },
+    {
+      "id": "grch38_gdc",
+      "name": "GRCh38.d1.vd1 (NCI GDC)",
+      "source": "GDC",
+      "assembly": "GRCh38",
+      "fasta_url": "https://api.gdc.cancer.gov/data/254f697d-310d-4d7d-a27b-27fbf767a834",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "NCI Genomic Data Commons GRCh38 reference."
+    },
+    {
+      "id": "grch38_dragen_altmasked",
+      "name": "GRCh38 DRAGEN ALT-masked",
+      "source": "Illumina",
+      "assembly": "GRCh38",
+      "fasta_url": "https://ilmn-dragen-giab-samples.s3.amazonaws.com/FASTA/hg38.fa",
+      "dict_url": null,
+      "downloaded": null,
+      "notes": "Illumina DRAGEN GRCh38 with ALT contigs masked."
+    }
+  ]
+}

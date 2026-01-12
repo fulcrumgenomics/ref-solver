@@ -1,0 +1,25 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+*.profraw
+
+# Large reference files (downloaded for catalog building, not tracked)
+catalogs/sources/fasta/
+catalogs/sources/*.fa
+catalogs/sources/*.fa.gz
+catalogs/sources/*.fasta
+catalogs/sources/*.fasta.gz
+catalogs/sources/*.dict

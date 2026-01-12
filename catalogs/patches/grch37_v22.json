@@ -1,0 +1,3129 @@
+{
+  "id": "grch37_v22",
+  "display_name": "GRCh37.p10 (NCBI RefSeq)",
+  "assembly": "Grch37",
+  "source": "ncbi",
+  "naming_convention": "mixed",
+  "download_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.22_GRCh37.p10/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+  "assembly_report_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.22_GRCh37.p10/GCF_000001405.22_GRCh37.p10_assembly_report.txt",
+  "contigs": [
+    {
+      "name": "NC_000001.10",
+      "length": 249250621,
+      "md5": "1b22b98cdeb4a9304cb5d48026a85128",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "1",
+        "chr1",
+        "CM000663.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113878.1",
+      "length": 106433,
+      "md5": "d75b436f50a8214ee9c2a51d30b2c2cc",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR1_RANDOM_CTG5",
+        "GL000191.1",
+        "chr1_gl000191_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_167207.1",
+      "length": 547496,
+      "md5": "325ba9e808f669dfeee210fdd7b470ac",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr1_gl000192_random",
+        "GL000192.1",
+        "HSCHR1_RANDOM_CTG12"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000002.11",
+      "length": 243199373,
+      "md5": "a0d9851da00400dec1098a9255ac712e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr2",
+        "2",
+        "CM000664.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000003.11",
+      "length": 198022430,
+      "md5": "fdfd811849cc2fadebc929bb925902e5",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000665.1",
+        "chr3",
+        "3"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000004.11",
+      "length": 191154276,
+      "md5": "23dccd106897542ad87d2765d28a19a1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "4",
+        "chr4",
+        "CM000666.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113885.1",
+      "length": 189789,
+      "md5": "dbb6e8ece0b5de29da56601613007c2a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr4_gl000193_random",
+        "HSCHR4_RANDOM_CTG2",
+        "GL000193.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113888.1",
+      "length": 191469,
+      "md5": "6ac8f815bf8e845bb3031b73f812c012",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR4_RANDOM_CTG3",
+        "GL000194.1",
+        "chr4_gl000194_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000005.9",
+      "length": 180915260,
+      "md5": "0740173db9ffd264d728f32784845cd7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr5",
+        "5",
+        "CM000667.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000006.11",
+      "length": 171115067,
+      "md5": "1d3a93a248d92a729ee764823acbbc6b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000668.1",
+        "chr6",
+        "6"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000007.13",
+      "length": 159138663,
+      "md5": "618366e953d6aaad97dbe4777c29375e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "7",
+        "chr7",
+        "CM000669.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113901.1",
+      "length": 182896,
+      "md5": "5d9ec007868d517e73543b005ba48535",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR7_RANDOM_CTG1",
+        "chr7_gl000195_random",
+        "GL000195.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000008.10",
+      "length": 146364022,
+      "md5": "96f514a9929e410c6651697bded59aec",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000670.1",
+        "chr8",
+        "8"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113909.1",
+      "length": 38914,
+      "md5": "d92206d1bb4c3b4019c43c0875c06dc0",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000196.1",
+        "HSCHR8_RANDOM_CTG1",
+        "chr8_gl000196_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113907.1",
+      "length": 37175,
+      "md5": "6f5efdd36643a9b8c8ccad6f2f1edc7b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000197.1",
+        "chr8_gl000197_random",
+        "HSCHR8_RANDOM_CTG4"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000009.11",
+      "length": 141213431,
+      "md5": "3e273117f15e0a400f01055d9f393768",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000671.1",
+        "9",
+        "chr9"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113914.1",
+      "length": 90085,
+      "md5": "868e7784040da90d900d2d1b667a1383",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000198.1",
+        "HSCHR9_RANDOM_CTG1",
+        "chr9_gl000198_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113916.2",
+      "length": 169874,
+      "md5": "569af3b73522fab4b40995ae4944e78e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000199.1",
+        "chr9_gl000199_random",
+        "HSCHR9_RANDOM_CTG2"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113915.1",
+      "length": 187035,
+      "md5": "75e4c8d17cd4addf3917d1703cacaf25",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000200.1",
+        "chr9_gl000200_random",
+        "HSCHR9_RANDOM_CTG4"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113911.1",
+      "length": 36148,
+      "md5": "dfb7e7ec60ffdcb85cb359ea28454ee9",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR9_RANDOM_CTG5",
+        "GL000201.1",
+        "chr9_gl000201_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000010.10",
+      "length": 135534747,
+      "md5": "988c28e000e84c26d552359af1ea2e1d",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr10",
+        "10",
+        "CM000672.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000011.9",
+      "length": 135006516,
+      "md5": "98c59049a2df285c76ffb1c6db8f8b96",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "11",
+        "chr11",
+        "CM000673.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113921.2",
+      "length": 40103,
+      "md5": "06cbf126247d89664a4faebad130fe9c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000202.1",
+        "chr11_gl000202_random",
+        "HSCHR11_RANDOM_CTG2"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000012.11",
+      "length": 133851895,
+      "md5": "51851ac0e1a115847ad36449b0015864",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr12",
+        "CM000674.1",
+        "12"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000013.10",
+      "length": 115169878,
+      "md5": "283f8d7892baa81b510a015719ca7b0b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000675.1",
+        "chr13",
+        "13"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000014.8",
+      "length": 107349540,
+      "md5": "98f3cae32b2a2e9524bc19813927542e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000676.1",
+        "chr14",
+        "14"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000015.9",
+      "length": 102531392,
+      "md5": "e5645a794a8238215b2cd77acb95a078",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "15",
+        "chr15",
+        "CM000677.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000016.9",
+      "length": 90354753,
+      "md5": "fc9b1a7b42b97a864f56b348b06095e6",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000678.1",
+        "chr16",
+        "16"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000017.10",
+      "length": 81195210,
+      "md5": "351f64d4f4f9ddd45b35336ad97aa6de",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr17",
+        "CM000679.1",
+        "17"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113941.1",
+      "length": 37498,
+      "md5": "96358c325fe0e70bee73436e8bb14dbd",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_RANDOM_CTG1",
+        "chr17_gl000203_random",
+        "GL000203.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113943.1",
+      "length": 81310,
+      "md5": "efc49c871536fa8d79cb0a06fa739722",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_RANDOM_CTG2",
+        "GL000204.1",
+        "chr17_gl000204_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113930.1",
+      "length": 174588,
+      "md5": "d22441398d99caf673e9afb9a1908ec5",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000205.1",
+        "HSCHR17_RANDOM_CTG3",
+        "chr17_gl000205_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113945.1",
+      "length": 41001,
+      "md5": "43f69e423533e948bfae5ce1d45bd3f1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_RANDOM_CTG4",
+        "GL000206.1",
+        "chr17_gl000206_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000018.9",
+      "length": 78077248,
+      "md5": "b15d4b2d29dde9d3e4f93d1d0f2cbc9c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "18",
+        "CM000680.1",
+        "chr18"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113947.1",
+      "length": 4262,
+      "md5": "f3814841f1939d3ca19072d9e89f3fd7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000207.1",
+        "HSCHR18_RANDOM_CTG1",
+        "chr18_gl000207_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000019.9",
+      "length": 59128983,
+      "md5": "1aacd71f30db8e561810913e0b72636d",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "CM000681.1",
+        "chr19",
+        "19"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113948.1",
+      "length": 92689,
+      "md5": "aa81be49bf3fe63a79bdc6a6f279abf6",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000208.1",
+        "HSCHR19_RANDOM_CTG1",
+        "chr19_gl000208_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NT_113949.1",
+      "length": 159169,
+      "md5": "f40598e2a5a6b26e84a3775e0d1e2c81",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr19_gl000209_random",
+        "HSCHR19_RANDOM_CTG2",
+        "GL000209.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000020.10",
+      "length": 63025520,
+      "md5": "0dec9660ec1efaaf33281c0d5ea2560f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr20",
+        "20",
+        "CM000682.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000021.8",
+      "length": 48129895,
+      "md5": "2979a6085bfe28e3ad6f552f361ed74d",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "21",
+        "CM000683.1",
+        "chr21"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113950.2",
+      "length": 27682,
+      "md5": "851106a74238044126131ce2a8e5847c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000210.1",
+        "chr21_gl000210_random",
+        "HSCHR21_RANDOM_CTG9"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_000022.10",
+      "length": 51304566,
+      "md5": "a718acaa6135fdca8357d5bfe94211dd",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "22",
+        "CM000684.1",
+        "chr22"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000023.10",
+      "length": 155270560,
+      "md5": "7e0e2e580297b7764e31dbc80c2540dd",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "X",
+        "CM000685.1",
+        "chrX"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NC_000024.9",
+      "length": 59373566,
+      "md5": "1e86411d73e6f00a10590f976be01623",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrY",
+        "Y",
+        "CM000686.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "NT_113961.1",
+      "length": 166566,
+      "md5": "7daaa45c66b288847b9b32b964e623d3",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG1",
+        "chrUn_gl000211",
+        "GL000211.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_113923.1",
+      "length": 186858,
+      "md5": "563531689f3dbd691331fd6c5730a88b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG2",
+        "chrUn_gl000212",
+        "GL000212.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167208.1",
+      "length": 164239,
+      "md5": "9d424fdcc98866650b58f004080a992a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000213.1",
+        "chrUn_gl000213",
+        "HSCHRUN_RANDOM_CTG3"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167209.1",
+      "length": 137718,
+      "md5": "46c2032c37f2ed899eb41c0473319a69",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000214.1",
+        "HSCHRUN_RANDOM_CTG4",
+        "chrUn_gl000214"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167210.1",
+      "length": 172545,
+      "md5": "5eb3b418480ae67a997957c909375a73",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000215.1",
+        "HSCHRUN_RANDOM_CTG5",
+        "chrUn_gl000215"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167211.1",
+      "length": 172294,
+      "md5": "642a232d91c486ac339263820aef7fe0",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000216",
+        "GL000216.1",
+        "HSCHRUN_RANDOM_CTG6"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167212.1",
+      "length": 172149,
+      "md5": "6d243e18dea1945fb7f2517615b8f52e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000217",
+        "HSCHRUN_RANDOM_CTG7",
+        "GL000217.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_113889.1",
+      "length": 161147,
+      "md5": "1d708b54644c26c7e01c2dad5426d38c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG9",
+        "GL000218.1",
+        "chrUn_gl000218"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167213.1",
+      "length": 179198,
+      "md5": "f977edd13bac459cb2ed4a5457dba1b3",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000219",
+        "GL000219.1",
+        "HSCHRUN_RANDOM_CTG10"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167214.1",
+      "length": 161802,
+      "md5": "fc35de963c57bf7648429e6454f1c9db",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000220.1",
+        "HSCHRUN_RANDOM_CTG11",
+        "chrUn_gl000220"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167215.1",
+      "length": 155397,
+      "md5": "3238fb74ea87ae857f9c7508d315babb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG13",
+        "GL000221.1",
+        "chrUn_gl000221"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167216.1",
+      "length": 186861,
+      "md5": "6fe9abac455169f50470f5a6b01d0f59",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000222",
+        "HSCHRUN_RANDOM_CTG14",
+        "GL000222.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167217.1",
+      "length": 180455,
+      "md5": "399dfa03bf32022ab52a846f7ca35b30",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000223",
+        "GL000223.1",
+        "HSCHRUN_RANDOM_CTG15"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167218.1",
+      "length": 179693,
+      "md5": "d5b2fc04f6b41b212a4198a07f450e20",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000224",
+        "GL000224.1",
+        "HSCHRUN_RANDOM_CTG16"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167219.1",
+      "length": 211173,
+      "md5": "63945c3e6962f28ffd469719a747e73c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000225",
+        "GL000225.1",
+        "HSCHRUN_RANDOM_CTG17"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167220.1",
+      "length": 15008,
+      "md5": "1c1b2cd1fccbc0a99b6a447fa24d1504",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000226.1",
+        "chrUn_gl000226",
+        "HSCHRUN_RANDOM_CTG19"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167221.1",
+      "length": 128374,
+      "md5": "a4aead23f8053f2655e468bcc6ecdceb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG20",
+        "GL000227.1",
+        "chrUn_gl000227"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167222.1",
+      "length": 129120,
+      "md5": "c5a17c97e2c1a0b6a9cc5a6b064b714f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000228.1",
+        "chrUn_gl000228",
+        "HSCHRUN_RANDOM_CTG21"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167223.1",
+      "length": 19913,
+      "md5": "d0f40ec87de311d8e715b52e4c7062e1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000229",
+        "HSCHRUN_RANDOM_CTG22",
+        "GL000229.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167224.1",
+      "length": 43691,
+      "md5": "b4eb71ee878d3706246b7c1dbef69299",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000230.1",
+        "HSCHRUN_RANDOM_CTG23",
+        "chrUn_gl000230"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167225.1",
+      "length": 27386,
+      "md5": "ba8882ce3a1efa2080e5d29b956568a4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG24",
+        "GL000231.1",
+        "chrUn_gl000231"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167226.1",
+      "length": 40652,
+      "md5": "3e06b6741061ad93a8587531307057d8",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG25",
+        "GL000232.1",
+        "chrUn_gl000232"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167227.1",
+      "length": 45941,
+      "md5": "7fed60298a8d62ff808b74b6ce820001",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000233.1",
+        "HSCHRUN_RANDOM_CTG26",
+        "chrUn_gl000233"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167228.1",
+      "length": 40531,
+      "md5": "93f998536b61a56fd0ff47322a911d4b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000234",
+        "HSCHRUN_RANDOM_CTG27",
+        "GL000234.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167229.1",
+      "length": 34474,
+      "md5": "118a25ca210cfbcdfb6c2ebb249f9680",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000235.1",
+        "HSCHRUN_RANDOM_CTG28",
+        "chrUn_gl000235"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167230.1",
+      "length": 41934,
+      "md5": "fdcd739913efa1fdc64b6c0cd7016779",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000236.1",
+        "chrUn_gl000236",
+        "HSCHRUN_RANDOM_CTG29"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167231.1",
+      "length": 45867,
+      "md5": "e0c82e7751df73f4f6d0ed30cdc853c0",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG30",
+        "GL000237.1",
+        "chrUn_gl000237"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167232.1",
+      "length": 39939,
+      "md5": "131b1efc3270cc838686b54e7c34b17b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000238",
+        "GL000238.1",
+        "HSCHRUN_RANDOM_CTG31"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167233.1",
+      "length": 33824,
+      "md5": "99795f15702caec4fa1c4e15f8a29c07",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000239.1",
+        "HSCHRUN_RANDOM_CTG32",
+        "chrUn_gl000239"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167234.1",
+      "length": 41933,
+      "md5": "445a86173da9f237d7bcf41c6cb8cc62",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000240.1",
+        "HSCHRUN_RANDOM_CTG33",
+        "chrUn_gl000240"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167235.1",
+      "length": 42152,
+      "md5": "ef4258cdc5a45c206cea8fc3e1d858cf",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000241",
+        "HSCHRUN_RANDOM_CTG34",
+        "GL000241.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167236.1",
+      "length": 43523,
+      "md5": "2f8694fc47576bc81b5fe9e7de0ba49e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG35",
+        "GL000242.1",
+        "chrUn_gl000242"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167237.1",
+      "length": 43341,
+      "md5": "cc34279a7e353136741c9fce79bc4396",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG36",
+        "chrUn_gl000243",
+        "GL000243.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167238.1",
+      "length": 39929,
+      "md5": "0996b4475f353ca98bacb756ac479140",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG37",
+        "chrUn_gl000244",
+        "GL000244.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167239.1",
+      "length": 36651,
+      "md5": "89bc61960f37d94abf0df2d481ada0ec",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000245",
+        "HSCHRUN_RANDOM_CTG38",
+        "GL000245.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167240.1",
+      "length": 38154,
+      "md5": "e4afcd31912af9d9c2546acf1cb23af2",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000246.1",
+        "HSCHRUN_RANDOM_CTG39",
+        "chrUn_gl000246"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167241.1",
+      "length": 36422,
+      "md5": "7de00226bb7df1c57276ca6baabafd15",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000247",
+        "GL000247.1",
+        "HSCHRUN_RANDOM_CTG40"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167242.1",
+      "length": 39786,
+      "md5": "5a8e43bec9be36c7b49c84d585107776",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chrUn_gl000248",
+        "HSCHRUN_RANDOM_CTG41",
+        "GL000248.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NT_167243.1",
+      "length": 38502,
+      "md5": "1d78abec37c15fe29a275eb08d5af236",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000249.1",
+        "chrUn_gl000249",
+        "HSCHRUN_RANDOM_CTG42"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "NW_004070864.1",
+      "length": 23300,
+      "md5": "fc0f284de9eae6d3e2eaf3cafac8d984",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1472_PATCH",
+        "JH806574.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571030.1",
+      "length": 151551,
+      "md5": "9bb3fbcd1fc9c35884e0987755c55667",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949741.1",
+        "HG989_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871056.1",
+      "length": 1447017,
+      "md5": "a1acb21758ddced925513034dbcd5875",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH636053.1",
+        "HG1292_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871055.2",
+      "length": 7208242,
+      "md5": "d03cce28926677b65a89143ea538841d",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH636052.3",
+        "HG1287_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315905.1",
+      "length": 182439,
+      "md5": "978987018f1a910273ebcc387e038de8",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383518.1",
+        "HSCHR1_1_CTG31"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315906.1",
+      "length": 110268,
+      "md5": "349e96f115f829409bd1087b5fb684ca",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR1_2_CTG31",
+        "GL383519.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315907.1",
+      "length": 366579,
+      "md5": "3c5f20fb0744b7658d37d4ed79a286d1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383520.1",
+        "HSCHR1_3_CTG31"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_004070863.1",
+      "length": 24680,
+      "md5": "13a8dc0d93c1bf1ae397593eba841721",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1471_PATCH",
+        "JH806573.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871057.1",
+      "length": 758378,
+      "md5": "0d12851232bcd8250e6dd61e3e7fd6a2",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1293_PATCH",
+        "JH636054.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070865.1",
+      "length": 47409,
+      "md5": "8ac2dc8046e4bd0d6d46e827ff05ecd1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1473_PATCH",
+        "JH806575.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315903.1",
+      "length": 49316,
+      "md5": "e0da36f2d1d2c6092f13d5bee52537e0",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG999_1_PATCH",
+        "GL383516.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315904.1",
+      "length": 49352,
+      "md5": "bc79d1abee7076ea672293e12bd7ccb9",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383517.1",
+        "HG999_2_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315908.1",
+      "length": 143390,
+      "md5": "8c6f0a214ddbfbd52be574a566e4b21a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR2_1_CTG1",
+        "GL383521.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571032.1",
+      "length": 389939,
+      "md5": "32ceefe714becfd36f207c5bffca4ba7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL877871.1",
+        "HG686_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571033.2",
+      "length": 96131,
+      "md5": "485c442c93fe19514153702f0c84d952",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582966.2",
+        "HSCHR2_2_CTG12"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315909.1",
+      "length": 123821,
+      "md5": "df3e809f9a87f792218db18db51f6ad4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383522.1",
+        "HSCHR2_1_CTG12"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571031.1",
+      "length": 66021,
+      "md5": "d0b63f9cef6c4d382e49636465eab851",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL877870.2",
+        "HG1007_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871060.1",
+      "length": 173151,
+      "md5": "09eb3a0b22a83c775d34b3b4406c5644",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR3_1_CTG1",
+        "JH636055.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871059.1",
+      "length": 100694,
+      "md5": "1452be48789c27311d94561610f6d5af",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159132.1",
+        "HG325_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315910.1",
+      "length": 171362,
+      "md5": "18fd9605f12ec0982adcf9e908f53331",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383523.1",
+        "HG186_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315911.1",
+      "length": 78793,
+      "md5": "74cff045a9cd92b7f571a756f248d16a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG280_PATCH",
+        "GL383524.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871058.1",
+      "length": 393769,
+      "md5": "67f26a755ca4c6ca9a8f567d80d15fb9",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1091_PATCH",
+        "JH159131.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315912.1",
+      "length": 65063,
+      "md5": "f2bfb99f84f2dd2ea538fe69ee786a0d",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383525.1",
+        "HG991_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315913.1",
+      "length": 180671,
+      "md5": "620913159e2fbd4e931ac120e3c584c9",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR3_1_CTG2_1",
+        "GL383526.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315915.1",
+      "length": 376187,
+      "md5": "2948653361f974fbed3e26a4dfbf332c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383528.1",
+        "HSCHR4_1_CTG6"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315916.1",
+      "length": 121345,
+      "md5": "0f0364ed52ebe7757feea96ce623239f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383529.1",
+        "HSCHR4_2_CTG9"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571035.1",
+      "length": 248177,
+      "md5": "0aee7c3e4bcc4c942230508c7836069b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582967.1",
+        "HG706_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315914.1",
+      "length": 164536,
+      "md5": "6d728406957c5c7fb158dbdb7efef2b7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383527.1",
+        "HSCHR4_1_CTG12"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571034.1",
+      "length": 297485,
+      "md5": "20da91baf79b2e14b605a8ebe1f3704e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1032_PATCH",
+        "GL877872.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315920.1",
+      "length": 82728,
+      "md5": "eb61b6b3f9374b05ce68ae4a393cf5ef",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR5_2_CTG1",
+        "GL383532.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571036.1",
+      "length": 226852,
+      "md5": "20d5046bbd2a21729fdd64fa94bdd5a1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR5_3_CTG1",
+        "GL949742.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315917.2",
+      "length": 1612928,
+      "md5": "1b6fa375fdf382778e6645d822d12254",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL339449.2",
+        "HSCHR5_1_CTG1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315918.1",
+      "length": 101241,
+      "md5": "adcb4048e465b6b949990853e436a136",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR5_1_CTG2",
+        "GL383530.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871061.1",
+      "length": 266316,
+      "md5": "10b523cdfd4f3707276ec92f0f9cddfb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159133.1",
+        "HG1063_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315919.1",
+      "length": 173459,
+      "md5": "9161d10779b02fa44b841136ef9e499c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR5_1_CTG5",
+        "GL383531.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_004070866.1",
+      "length": 273386,
+      "md5": "5eb6da458990f121fae13ff83a4bcbca",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806576.1",
+        "HG27_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871063.1",
+      "length": 200195,
+      "md5": "fef0bc815f4826ea408515d8ec74ca80",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1322_PATCH",
+        "JH636057.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315921.1",
+      "length": 124736,
+      "md5": "7d1a65603558094937299ff10e8714af",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383533.1",
+        "HSCHR6_1_CTG5"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871062.1",
+      "length": 262912,
+      "md5": "0bdfd2a40e1ceab32d71d6f1c9a6ca32",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH636056.1",
+        "HG1304_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571039.1",
+      "length": 354970,
+      "md5": "e5cd94b0e0668debf81b82f405597b28",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582970.1",
+        "HG736_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571038.1",
+      "length": 251823,
+      "md5": "d4e2cf05984db16a78c953b898f5a86e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582969.1",
+        "HG14_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871064.1",
+      "length": 3821770,
+      "md5": "e0e934bd79ff323b31f4c9b80fb80a5c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159134.2",
+        "HG1257_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571041.1",
+      "length": 327774,
+      "md5": "4791ba11d768da2cc1346d37a558047a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG946_PATCH",
+        "GL582972.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571037.1",
+      "length": 356330,
+      "md5": "2118ff7bca8f75acc4629ab88bae1c2e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG115_PATCH",
+        "GL582968.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871065.1",
+      "length": 716227,
+      "md5": "a2ecd2eb53eb1737423d5a637e4374a9",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH636058.1",
+        "HG1308_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315922.2",
+      "length": 119183,
+      "md5": "c6ff49147dedce02366d6ade10580611",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR7_1_CTG6",
+        "GL383534.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571040.1",
+      "length": 1284284,
+      "md5": "16197ace4bfafdc2354857b98fc2a794",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582971.1",
+        "HG7_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571042.1",
+      "length": 608579,
+      "md5": "ed6bcd4459b3bc6b366ce00262952f57",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949743.1",
+        "HG19_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871066.1",
+      "length": 102251,
+      "md5": "f211e642d8ddec3d571293c0c431e6d0",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159135.1",
+        "HG418_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315923.1",
+      "length": 429806,
+      "md5": "caebc01e3f44f7b2a559179b0261b77e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG104_HG975_PATCH",
+        "GL383535.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315924.1",
+      "length": 203777,
+      "md5": "5835d9de56b65cefb9406d104d64531e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383536.1",
+        "HG243_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315928.1",
+      "length": 162988,
+      "md5": "12406aad3f3da31bda9c21a1aa0e16b6",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR9_1_CTG1",
+        "GL383539.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871067.1",
+      "length": 295379,
+      "md5": "24f6ccbfc261e62451042a9713be6280",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH636059.1",
+        "HG962_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315929.1",
+      "length": 71551,
+      "md5": "23aea04f46682e2a2be1a5ff3934a9fe",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383540.1",
+        "HSCHR9_1_CTG35"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315930.1",
+      "length": 171286,
+      "md5": "0c787911df2449cbba8609bebf897ecb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383541.1",
+        "HSCHR9_2_CTG35"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315931.1",
+      "length": 60032,
+      "md5": "12a3180640a49f33c960eb12ca61a6c4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR9_3_CTG35",
+        "GL383542.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_004070869.1",
+      "length": 211307,
+      "md5": "73d39b5d51e6e2e8d9549bb85d7dae04",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806579.1",
+        "HG1502_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315925.1",
+      "length": 330164,
+      "md5": "03f5fa89e52d0fe155d2e3968bf2eeb7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL339450.1",
+        "HG79_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070867.1",
+      "length": 22394,
+      "md5": "50fd52ddb8ad2b024fb8b83a5c90a642",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806577.1",
+        "HG1500_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070868.1",
+      "length": 169437,
+      "md5": "6b862a953dfe724a1f48eaf12a3b948a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806578.1",
+        "HG1501_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315926.1",
+      "length": 62435,
+      "md5": "404580d8ad56ded0fb33642c8b99c28b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383537.1",
+        "HG998_1_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315927.1",
+      "length": 49281,
+      "md5": "07f56906bd56829f146dc0bf4b158603",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383538.1",
+        "HG998_2_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571043.1",
+      "length": 168465,
+      "md5": "94409f94ca59e67f811cd36ab133a82c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL877873.1",
+        "HG905_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871071.1",
+      "length": 437946,
+      "md5": "15a2182cf9d3a55a7809adadc0775e03",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH636060.1",
+        "HG871_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315932.1",
+      "length": 392792,
+      "md5": "faa48b73103366d1da02065870a58bda",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG544_PATCH",
+        "GL383543.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315934.1",
+      "length": 179254,
+      "md5": "c27dc6fea378fecf178a44682257c25e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383545.1",
+        "HSCHR10_1_CTG2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315935.1",
+      "length": 309802,
+      "md5": "ed6fb45e0a25c31903cbb0f78d9d487e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383546.1",
+        "HSCHR10_1_CTG5"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871068.1",
+      "length": 2281126,
+      "md5": "5950c02594cedbdf0fea5e8335e7cf80",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1211_PATCH",
+        "JH591181.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871070.1",
+      "length": 177920,
+      "md5": "8be94fbd771c113ab4fc04051a4f9a4f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG339_PATCH",
+        "JH591183.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871069.1",
+      "length": 196262,
+      "md5": "ac9c384b2fc322b684128f1baf75785e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH591182.1",
+        "HG311_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315933.1",
+      "length": 128378,
+      "md5": "09d4cb1070e1c521d6e86e7038824c1c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383544.1",
+        "HG995_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070870.1",
+      "length": 93149,
+      "md5": "7b6d6d01c18e91fc07f727ade2450f46",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1479_PATCH",
+        "JH806580.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871075.1",
+      "length": 462282,
+      "md5": "90ad438579d919fd20c42bb4f48de64b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH591184.1",
+        "HG256_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871082.1",
+      "length": 167437,
+      "md5": "bdbef584c4cd0821851cf4c5cc2a4d3f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH591185.1",
+        "HG873_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315936.1",
+      "length": 154407,
+      "md5": "7b556f03729e304a286c8d7ef0f0c10e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383547.1",
+        "HSCHR11_1_CTG1_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571045.1",
+      "length": 321004,
+      "md5": "ab73a8d586ef4fc44dd063730b6aef39",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582973.1",
+        "HG281_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871073.1",
+      "length": 200998,
+      "md5": "8ac9fb9d942dba38bfd30f8d767f4bba",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG142_HG150_NOVEL_TEST",
+        "JH159136.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871074.1",
+      "length": 191409,
+      "md5": "b293c854ddcbc316cb1d449bca46fbb3",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG151_NOVEL_TEST",
+        "JH159137.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571046.1",
+      "length": 276448,
+      "md5": "5b90c3ac4e5938b400fcc2c29f3017bc",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG536_PATCH",
+        "GL949744.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070871.1",
+      "length": 872115,
+      "md5": "192dead6bc331a0dcbd1ba9d3d8a6f80",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806581.1",
+        "HG865_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871081.1",
+      "length": 191402,
+      "md5": "93a798f03267e553445c7456c6f7ee49",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159143.1",
+        "HG414_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871079.1",
+      "length": 240775,
+      "md5": "2cfa9ec8f70be88f95411dac6efb24c1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159141.2",
+        "HG348_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871077.1",
+      "length": 120441,
+      "md5": "da648c938f1bb43b41d254bd9a015cfb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159139.1",
+        "HG305_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871080.1",
+      "length": 326647,
+      "md5": "856a46516332f58a35eeb4f84d17febc",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159142.2",
+        "HG388_HG400_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871078.1",
+      "length": 546435,
+      "md5": "dada6dd12ec844a3a13f547f4946428e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159140.1",
+        "HG306_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871072.1",
+      "length": 408430,
+      "md5": "62d80ea0aeda6ccdb5202a79a6876b76",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720443.1",
+        "HG122_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871076.1",
+      "length": 108875,
+      "md5": "d08cc284ad35f0bd1eafb443c23ad8bd",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159138.1",
+        "HG299_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571048.1",
+      "length": 163298,
+      "md5": "18c01f6e62136005ce1b2f2f33173f02",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG858_PATCH",
+        "GL582974.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571049.1",
+      "length": 167313,
+      "md5": "3dd30a7638c3a3c518fc15571546b1be",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR12_1_CTG1",
+        "GL877875.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871083.1",
+      "length": 273128,
+      "md5": "7ce57cb9a87ba0ca3658a7b9b1f85a54",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720444.1",
+        "HG344_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571047.1",
+      "length": 372609,
+      "md5": "2536c2286fdeb98404ac410dbf528a3e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949745.1",
+        "HG1133_PATCH"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571050.1",
+      "length": 408271,
+      "md5": "5c3a364520bf7ed46894abdce8f6e032",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR12_2_CTG2",
+        "GL877876.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315938.1",
+      "length": 120804,
+      "md5": "60a7c1711d7f23fd7311a7e4f96896f7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383549.1",
+        "HSCHR12_1_CTG2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315939.1",
+      "length": 169178,
+      "md5": "fb4450cecb959b6149b927522d442ded",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR12_1_CTG2_1",
+        "GL383550.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315941.1",
+      "length": 138655,
+      "md5": "c28f12c6ee0dec4cc6995766a710960c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383552.1",
+        "HSCHR12_2_CTG2_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315942.2",
+      "length": 152874,
+      "md5": "89b111e38005345de92036b249ab6080",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR12_3_CTG2_1",
+        "GL383553.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315940.1",
+      "length": 184319,
+      "md5": "d96719c32333013a51c4d6d3261f984f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR12_1_CTG5",
+        "GL383551.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315937.1",
+      "length": 165247,
+      "md5": "6cba57c0e509ab785d3869134979b668",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383548.1",
+        "HG996_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571051.1",
+      "length": 34662,
+      "md5": "e8c870267b2a5261edb9d51d0efd6469",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG531_PATCH",
+        "GL582975.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315943.1",
+      "length": 296527,
+      "md5": "4a3d54bda53308ca941d6d0e794b05cb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383554.1",
+        "HSCHR15_1_CTG4"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315944.1",
+      "length": 388773,
+      "md5": "2f4f58e3b3a95bed1132833156340778",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR15_1_CTG8",
+        "GL383555.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871084.1",
+      "length": 170033,
+      "md5": "5935aecc5bbab313b7a30a1b600bd02b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720445.1",
+        "HG971_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315945.1",
+      "length": 192462,
+      "md5": "bed6a2667e8452a176e93e921e0c21f6",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383556.1",
+        "HSCHR16_1_CTG3_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871085.1",
+      "length": 97345,
+      "md5": "157eecba5817aa1781a7bc4a9b60f933",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1208_PATCH",
+        "JH720446.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315946.1",
+      "length": 89672,
+      "md5": "0989118882ce9c38635e2809e5bf71c6",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383557.1",
+        "HSCHR16_2_CTG3_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_004070872.1",
+      "length": 342635,
+      "md5": "3ed3a55cce14b1ee27572ef1351b1b51",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806582.1",
+        "HG417_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315952.1",
+      "length": 270261,
+      "md5": "d4cfed7b2cfc7384d635fdabd5acacc4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_1_CTG1",
+        "GL383563.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315951.1",
+      "length": 45551,
+      "md5": "ebf72aeb4d53f0fd56e2e72967751f8a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG990_PATCH",
+        "GL383562.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315950.1",
+      "length": 406963,
+      "md5": "aae101fa42278e85e65618be55c7396f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG987_PATCH",
+        "GL383561.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871090.1",
+      "length": 194862,
+      "md5": "c86ffa095c924372aa455e43e61c96e8",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG883_PATCH",
+        "JH159145.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315949.1",
+      "length": 534288,
+      "md5": "2e0bec27cfa9b440c746be52187fab0b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG75_PATCH",
+        "GL383560.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315948.1",
+      "length": 338640,
+      "md5": "2276c95173dafaa1d319b5a8f8238e4e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383559.1",
+        "HG745_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871091.1",
+      "length": 278131,
+      "md5": "384b5b32f0ea2cfd15ac268a2ce07909",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_4_CTG4",
+        "JH159146.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871093.1",
+      "length": 88070,
+      "md5": "bd147af8e713f365ff05352eb8a4508f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_6_CTG4",
+        "JH159148.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871092.1",
+      "length": 70345,
+      "md5": "4bf63957bfa1ecdbbab483d4c0ce6682",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159147.1",
+        "HSCHR17_5_CTG4"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315953.1",
+      "length": 133151,
+      "md5": "cc9e77f5ecf7201578d99df884fd1b3c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383564.1",
+        "HSCHR17_1_CTG4"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571052.1",
+      "length": 412535,
+      "md5": "faae4c952e9c38254538e1853b786276",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582976.1",
+        "HG185_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871086.1",
+      "length": 454385,
+      "md5": "049056a72b5aee0b3f876ddf554f0208",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1146_PATCH",
+        "JH720447.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315947.1",
+      "length": 457041,
+      "md5": "03de7a950b56720768373120bbddf693",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383558.1",
+        "HG183_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871088.1",
+      "length": 388340,
+      "md5": "dd0bc538e31f35af2073daec1f378147",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG747_PATCH",
+        "JH159144.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315954.1",
+      "length": 223995,
+      "md5": "063358c8e7f81361b959efab7b3f15cc",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_2_CTG4",
+        "GL383565.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315955.1",
+      "length": 90219,
+      "md5": "a0f25165c6537c9861cc1231f710e99f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR17_3_CTG4",
+        "GL383566.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871089.1",
+      "length": 376223,
+      "md5": "d8ef242a7373ff5657c8311b92dabfde",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG748_PATCH",
+        "JH591186.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871087.1",
+      "length": 186059,
+      "md5": "fdeb8db11e8544a638179a592c051331",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH636061.1",
+        "HG271_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315956.1",
+      "length": 289831,
+      "md5": "d9015dd9a0916a98ed8ab99fd3cdd012",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR18_1_CTG1_1",
+        "GL383567.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315959.1",
+      "length": 164789,
+      "md5": "08366c03855961f13b1d5e65920ccf74",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR18_2_CTG1_1",
+        "GL383570.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315960.1",
+      "length": 198278,
+      "md5": "40015159c7da8f06875bb558587e3f07",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383571.1",
+        "HSCHR18_2_CTG2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315957.1",
+      "length": 104552,
+      "md5": "e9aba11d18125a2bce2b1e5915e9a904",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR18_1_CTG2",
+        "GL383568.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315958.1",
+      "length": 167950,
+      "md5": "8d13c3e7cbb2b7e1a3225c5a54fe8f44",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383569.1",
+        "HSCHR18_1_CTG2_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315961.1",
+      "length": 159547,
+      "md5": "8fc7aaa775b43df3d77c9782a140a981",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383572.1",
+        "HSCHR18_2_CTG2_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871094.1",
+      "length": 245473,
+      "md5": "3e0825dd23c9fce74a88d863e33c42b7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG729_PATCH",
+        "JH159149.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571053.1",
+      "length": 580393,
+      "md5": "ff3184dc82f8cbfe54d40a8c36a0cf7e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL582977.1",
+        "HG730_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315962.1",
+      "length": 385657,
+      "md5": "5404455aab275489bc8e6c9fb3ead5cb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383573.1",
+        "HSCHR19_1_CTG3"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315964.2",
+      "length": 170222,
+      "md5": "dd8730d9d33765ff135fcfadb8810280",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR19_2_CTG3",
+        "GL383575.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315965.1",
+      "length": 188024,
+      "md5": "8d4496a682182f8273a2fad665fcf4a4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383576.1",
+        "HSCHR19_3_CTG3"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315963.1",
+      "length": 155864,
+      "md5": "0386df1d3476e6649f919195cc072fc7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR19_1_CTG3_1",
+        "GL383574.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571054.1",
+      "length": 987716,
+      "md5": "d76e635e75bc038782fb3d0c195d33fb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949746.1",
+        "HSCHR19LRC_COX1_CTG1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571055.1",
+      "length": 729519,
+      "md5": "474baa8f6c6684c55bbc2a10bfa84baf",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR19LRC_COX2_CTG1",
+        "GL949747.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571056.1",
+      "length": 1064303,
+      "md5": "122be4e189778434d8845fd5fd2c9a6b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949748.1",
+        "HSCHR19LRC_LRC_I_CTG1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571057.1",
+      "length": 1091840,
+      "md5": "e6c232469067e8cadfa852a2ea5513b7",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR19LRC_LRC_J_CTG1",
+        "GL949749.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571058.1",
+      "length": 1066389,
+      "md5": "afb0d13ed9fa7518989caa0ec55aeb96",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949750.1",
+        "HSCHR19LRC_LRC_S_CTG1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571059.1",
+      "length": 1002682,
+      "md5": "b8864877618b25fc14f80e8538f23b77",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949751.1",
+        "HSCHR19LRC_LRC_T_CTG1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571060.1",
+      "length": 987100,
+      "md5": "7d007a35ff02e56325881c68bb17b565",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR19LRC_PGF1_CTG1",
+        "GL949752.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003571061.1",
+      "length": 796478,
+      "md5": "8a92722deabdf885d1aebfa8881d5903",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL949753.1",
+        "HSCHR19LRC_PGF2_CTG1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315966.1",
+      "length": 128385,
+      "md5": "a3bf927c2422ea0a661640669efd1081",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR20_1_CTG1",
+        "GL383577.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003871095.1",
+      "length": 70483,
+      "md5": "e11adfbb638e60f61d7e8ef6647f30f2",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG144_PATCH",
+        "JH720448.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571063.2",
+      "length": 179899,
+      "md5": "e5b96eb9510763261839281c198607dd",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG506_HG507_HG1000_PATCH",
+        "GL582979.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315967.1",
+      "length": 63917,
+      "md5": "4112dee892050e18ad279b8ebdcc5d48",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383578.1",
+        "HSCHR21_1_CTG1_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315968.1",
+      "length": 201198,
+      "md5": "edf086bce359065367b105cae0abfeee",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383579.1",
+        "HSCHR21_2_CTG1_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315969.1",
+      "length": 74652,
+      "md5": "902d62224f09e59cb9c6c44f71b5fca3",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR21_3_CTG1_1",
+        "GL383580.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315970.1",
+      "length": 116690,
+      "md5": "883b29a1e5975e0f3139c183fbe2596d",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383581.1",
+        "HSCHR21_4_CTG1_1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_004070874.1",
+      "length": 70876,
+      "md5": "8b8b645d7059bb1fdc426feeabe5c9f6",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1487_PATCH",
+        "JH806584.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070873.1",
+      "length": 167183,
+      "md5": "9fba246d2d3ee71080d49382b22b05cd",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1486_PATCH",
+        "JH806583.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070875.1",
+      "length": 73505,
+      "md5": "f7ee47af8d462cd9aeb6d40de99acb36",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1488_PATCH",
+        "JH806585.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871096.1",
+      "length": 212298,
+      "md5": "dd784bb8074d6f5b949464ffea8c6901",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720449.1",
+        "HG329_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003315972.1",
+      "length": 96924,
+      "md5": "68391fb8f16a37b63f607b76702de3b1",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383583.1",
+        "HSCHR22_1_CTG2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_003315971.1",
+      "length": 158507,
+      "md5": "bd100e19465edb621133a46be79e0bdc",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL383582.1",
+        "HSCHR22_1_CTG1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "NW_004070876.1",
+      "length": 43543,
+      "md5": "be51fd8c00d62c3efc077a8e882062a4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806586.1",
+        "HG497_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003571064.1",
+      "length": 284527,
+      "md5": "68acd8be9f3b83000d37d3fa851de000",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG480_HG481_PATCH",
+        "GL877877.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871098.1",
+      "length": 898979,
+      "md5": "9d197695e8a47d4c30c891a53a0fd588",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720451.1",
+        "HG1423_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871099.1",
+      "length": 522319,
+      "md5": "16a9ef53c176dcd2cf029940cbc29382",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720452.1",
+        "HG1424_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070879.1",
+      "length": 270630,
+      "md5": "0db85f8e0ff66a470b46801c9892e471",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806589.1",
+        "HG1435_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070880.1",
+      "length": 2448393,
+      "md5": "bf6bc3bc7e29bca78cc55e67123d3b71",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1436_HG1432_PATCH",
+        "JH806590.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070877.1",
+      "length": 4110759,
+      "md5": "cdab95f32513753b3c0add3014afad3b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1433_PATCH",
+        "JH806587.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070881.1",
+      "length": 882083,
+      "md5": "7e0afbdc97540aa0b101228b7bd331fb",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806591.1",
+        "HG1437_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070882.1",
+      "length": 835911,
+      "md5": "9dcedb7219aa23057244ca9a446f01ac",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1438_PATCH",
+        "JH806592.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871100.1",
+      "length": 1461188,
+      "md5": "aa5b0a15acec3c6177db764bd103d8a0",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720453.1",
+        "HG1425_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871101.2",
+      "length": 754245,
+      "md5": "c7b87d1623acaf8816b19bda4fb1a208",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720454.2",
+        "HG1426_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070883.1",
+      "length": 389631,
+      "md5": "447fe0ff3103170150280c775095eebf",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806593.1",
+        "HG1439_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070884.1",
+      "length": 390496,
+      "md5": "ba6a3b1599661e674918200a8d1333d3",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1440_PATCH",
+        "JH806594.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070885.1",
+      "length": 444074,
+      "md5": "a1dab5e9bbedd3539ace29af1f9d6139",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806595.1",
+        "HG1441_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871102.1",
+      "length": 65034,
+      "md5": "ff7c4316cb69a8d571bd7ef85c1a10e4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH720455.1",
+        "HG375_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070878.1",
+      "length": 862483,
+      "md5": "35889722e6212fc9499e06e630268101",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1434_PATCH",
+        "JH806588.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070891.1",
+      "length": 1389764,
+      "md5": "abb9297c8b9dfc3013d416c803ff486c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806601.1",
+        "HG1462_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070892.1",
+      "length": 713266,
+      "md5": "ca0e3270f27bbee944844e44ec76659d",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1463_PATCH",
+        "JH806602.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070893.1",
+      "length": 182949,
+      "md5": "2fc316247e162f76a01012bbd9b665e6",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1490_PATCH",
+        "JH806603.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070886.1",
+      "length": 413927,
+      "md5": "4bc4f02a4fca2c9d70646455bee8066e",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806596.1",
+        "HG1442_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070887.1",
+      "length": 1045622,
+      "md5": "d0caa7bf982cf1e6ca8c8b833f56a21c",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806597.1",
+        "HG1443_HG1444_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070888.1",
+      "length": 899320,
+      "md5": "741179e4ee12c60fbcc6eba4a5c7695b",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH806598.1",
+        "HG1453_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070889.1",
+      "length": 1214327,
+      "md5": "adec63ae44a39d716808cfee03b7a870",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1458_PATCH",
+        "JH806599.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_004070890.1",
+      "length": 6530008,
+      "md5": "ff543ec93955689078384fef66fbd880",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HG1459_PATCH",
+        "JH806600.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NW_003871103.2",
+      "length": 3150045,
+      "md5": "0449b6d2e763a12fe3a03bac953fe2ba",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "JH159150.2",
+        "HG1497_PATCH"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "NT_167244.1",
+      "length": 4622290,
+      "md5": "fe71bc63420d666884f37a3ad79f3317",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR6_MHC_APD_CTG1",
+        "GL000250.1",
+        "chr6_apd_hap1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_113891.2",
+      "length": 4795371,
+      "md5": "18c17e1641ef04873b15f40f6c8659a4",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000251.1",
+        "chr6_cox_hap2",
+        "HSCHR6_MHC_COX_CTG1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_167245.1",
+      "length": 4610396,
+      "md5": "2a3c677c426a10e137883ae1ffb8da3f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr6_dbb_hap3",
+        "HSCHR6_MHC_DBB_CTG1",
+        "GL000252.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_167246.1",
+      "length": 4683263,
+      "md5": "9d51d4152174461cd6715c7ddc588dc8",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "chr6_mann_hap4",
+        "HSCHR6_MHC_MANN_CTG1",
+        "GL000253.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_167247.1",
+      "length": 4833398,
+      "md5": "efed415dd8742349cb7aaca054675b9a",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR6_MHC_MCF_CTG1",
+        "GL000254.1",
+        "chr6_mcf_hap5"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_167248.1",
+      "length": 4611984,
+      "md5": "094d037050cad692b57ea12c4fef790f",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR6_MHC_QBL_CTG1",
+        "chr6_qbl_hap6",
+        "GL000255.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_167249.1",
+      "length": 4928567,
+      "md5": "3b6d666200e72bcc036bf88a4d7e0749",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "HSCHR6_MHC_SSTO_CTG1",
+        "chr6_ssto_hap7",
+        "GL000256.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_167250.1",
+      "length": 590426,
+      "md5": "fa24f81b680df26bcfb6d69b784fbe36",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000257.1",
+        "chr4_ctg9_hap1",
+        "HSCHR4_1_CTG9"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NT_167251.1",
+      "length": 1680828,
+      "md5": "d89517b400226d3b56e753972a7cad67",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "GL000258.1",
+        "HSCHR17_1_CTG5",
+        "chr17_ctg5_hap1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "NC_012920.1",
+      "length": 16569,
+      "md5": "c68f52674c9fb33aef52dcf399755519",
+      "uri": "file:///Users/nhomer/work/git/ref-solver/v1.0/catalogs/sources/fasta/patches/GCF_000001405.22_GRCh37.p10_genomic.fna.gz",
+      "aliases": [
+        "J01415.2",
+        "chrM",
+        "MT"
+      ],
+      "sequence_role": "assembled-molecule"
+    }
+  ]
+}

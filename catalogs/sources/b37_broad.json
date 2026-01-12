@@ -1,0 +1,3122 @@
+{
+  "id": "b37_broad",
+  "display_name": "b37 (Broad)",
+  "assembly": "Grch37",
+  "source": "broad",
+  "naming_convention": "ncbi",
+  "download_url": "https://storage.googleapis.com/gcp-public-data--broad-references/hg19/v0/Homo_sapiens_assembly19.fasta",
+  "assembly_report_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_assembly_report.txt",
+  "contigs": [
+    {
+      "name": "1",
+      "length": 249250621,
+      "md5": "1b22b98cdeb4a9304cb5d48026a85128",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr1",
+        "NC_000001.10",
+        "CM000663.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "2",
+      "length": 243199373,
+      "md5": "a0d9851da00400dec1098a9255ac712e",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000664.1",
+        "NC_000002.11",
+        "chr2"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "3",
+      "length": 198022430,
+      "md5": "fdfd811849cc2fadebc929bb925902e5",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000665.1",
+        "NC_000003.11",
+        "chr3"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "4",
+      "length": 191154276,
+      "md5": "23dccd106897542ad87d2765d28a19a1",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr4",
+        "CM000666.1",
+        "NC_000004.11"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "5",
+      "length": 180915260,
+      "md5": "0740173db9ffd264d728f32784845cd7",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr5",
+        "NC_000005.9",
+        "CM000667.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "6",
+      "length": 171115067,
+      "md5": "1d3a93a248d92a729ee764823acbbc6b",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000668.1",
+        "NC_000006.11",
+        "chr6"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "7",
+      "length": 159138663,
+      "md5": "618366e953d6aaad97dbe4777c29375e",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000669.1",
+        "NC_000007.13",
+        "chr7"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "8",
+      "length": 146364022,
+      "md5": "96f514a9929e410c6651697bded59aec",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000008.10",
+        "chr8",
+        "CM000670.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "9",
+      "length": 141213431,
+      "md5": "3e273117f15e0a400f01055d9f393768",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr9",
+        "NC_000009.11",
+        "CM000671.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "10",
+      "length": 135534747,
+      "md5": "988c28e000e84c26d552359af1ea2e1d",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000010.10",
+        "chr10",
+        "CM000672.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "11",
+      "length": 135006516,
+      "md5": "98c59049a2df285c76ffb1c6db8f8b96",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr11",
+        "CM000673.1",
+        "NC_000011.9"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "12",
+      "length": 133851895,
+      "md5": "51851ac0e1a115847ad36449b0015864",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000012.11",
+        "chr12",
+        "CM000674.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "13",
+      "length": 115169878,
+      "md5": "283f8d7892baa81b510a015719ca7b0b",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000675.1",
+        "NC_000013.10",
+        "chr13"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "14",
+      "length": 107349540,
+      "md5": "98f3cae32b2a2e9524bc19813927542e",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000014.8",
+        "chr14",
+        "CM000676.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "15",
+      "length": 102531392,
+      "md5": "e5645a794a8238215b2cd77acb95a078",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr15",
+        "CM000677.1",
+        "NC_000015.9"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "16",
+      "length": 90354753,
+      "md5": "fc9b1a7b42b97a864f56b348b06095e6",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000678.1",
+        "NC_000016.9",
+        "chr16"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "17",
+      "length": 81195210,
+      "md5": "351f64d4f4f9ddd45b35336ad97aa6de",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000679.1",
+        "NC_000017.10",
+        "chr17"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "18",
+      "length": 78077248,
+      "md5": "b15d4b2d29dde9d3e4f93d1d0f2cbc9c",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000018.9",
+        "CM000680.1",
+        "chr18"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "19",
+      "length": 59128983,
+      "md5": "1aacd71f30db8e561810913e0b72636d",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000681.1",
+        "chr19",
+        "NC_000019.9"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "20",
+      "length": 63025520,
+      "md5": "0dec9660ec1efaaf33281c0d5ea2560f",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr20",
+        "CM000682.1",
+        "NC_000020.10"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "21",
+      "length": 48129895,
+      "md5": "2979a6085bfe28e3ad6f552f361ed74d",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000021.8",
+        "chr21",
+        "CM000683.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "22",
+      "length": 51304566,
+      "md5": "a718acaa6135fdca8357d5bfe94211dd",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "CM000684.1",
+        "NC_000022.10",
+        "chr22"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "X",
+      "length": 155270560,
+      "md5": "7e0e2e580297b7764e31dbc80c2540dd",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000023.10",
+        "chrX",
+        "CM000685.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "Y",
+      "length": 59373566,
+      "md5": "1fa3474750af0948bdf97d5a0ee52e51",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NC_000024.9",
+        "CM000686.1",
+        "chrY"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "MT",
+      "length": 16569,
+      "md5": "c68f52674c9fb33aef52dcf399755519",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "J01415.2",
+        "NC_012920.1",
+        "chrM"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "GL000207.1",
+      "length": 4262,
+      "md5": "f3814841f1939d3ca19072d9e89f3fd7",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR18_RANDOM_CTG1",
+        "chr18_gl000207_random",
+        "NT_113947.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000226.1",
+      "length": 15008,
+      "md5": "1c1b2cd1fccbc0a99b6a447fa24d1504",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167220.1",
+        "chrUn_gl000226",
+        "HSCHRUN_RANDOM_CTG19"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000229.1",
+      "length": 19913,
+      "md5": "d0f40ec87de311d8e715b52e4c7062e1",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000229",
+        "NT_167223.1",
+        "HSCHRUN_RANDOM_CTG22"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000231.1",
+      "length": 27386,
+      "md5": "ba8882ce3a1efa2080e5d29b956568a4",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000231",
+        "NT_167225.1",
+        "HSCHRUN_RANDOM_CTG24"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000210.1",
+      "length": 27682,
+      "md5": "851106a74238044126131ce2a8e5847c",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR21_RANDOM_CTG9",
+        "NT_113950.2",
+        "chr21_gl000210_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000239.1",
+      "length": 33824,
+      "md5": "99795f15702caec4fa1c4e15f8a29c07",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000239",
+        "HSCHRUN_RANDOM_CTG32",
+        "NT_167233.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000235.1",
+      "length": 34474,
+      "md5": "118a25ca210cfbcdfb6c2ebb249f9680",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG28",
+        "chrUn_gl000235",
+        "NT_167229.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000201.1",
+      "length": 36148,
+      "md5": "dfb7e7ec60ffdcb85cb359ea28454ee9",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR9_RANDOM_CTG5",
+        "NT_113911.1",
+        "chr9_gl000201_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000247.1",
+      "length": 36422,
+      "md5": "7de00226bb7df1c57276ca6baabafd15",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG40",
+        "chrUn_gl000247",
+        "NT_167241.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000245.1",
+      "length": 36651,
+      "md5": "89bc61960f37d94abf0df2d481ada0ec",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167239.1",
+        "chrUn_gl000245",
+        "HSCHRUN_RANDOM_CTG38"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000197.1",
+      "length": 37175,
+      "md5": "6f5efdd36643a9b8c8ccad6f2f1edc7b",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR8_RANDOM_CTG4",
+        "NT_113907.1",
+        "chr8_gl000197_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000203.1",
+      "length": 37498,
+      "md5": "96358c325fe0e70bee73436e8bb14dbd",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113941.1",
+        "chr17_gl000203_random",
+        "HSCHR17_RANDOM_CTG1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000246.1",
+      "length": 38154,
+      "md5": "e4afcd31912af9d9c2546acf1cb23af2",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG39",
+        "NT_167240.1",
+        "chrUn_gl000246"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000249.1",
+      "length": 38502,
+      "md5": "1d78abec37c15fe29a275eb08d5af236",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000249",
+        "HSCHRUN_RANDOM_CTG42",
+        "NT_167243.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000196.1",
+      "length": 38914,
+      "md5": "d92206d1bb4c3b4019c43c0875c06dc0",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr8_gl000196_random",
+        "HSCHR8_RANDOM_CTG1",
+        "NT_113909.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000248.1",
+      "length": 39786,
+      "md5": "5a8e43bec9be36c7b49c84d585107776",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167242.1",
+        "chrUn_gl000248",
+        "HSCHRUN_RANDOM_CTG41"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000244.1",
+      "length": 39929,
+      "md5": "0996b4475f353ca98bacb756ac479140",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG37",
+        "NT_167238.1",
+        "chrUn_gl000244"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000238.1",
+      "length": 39939,
+      "md5": "131b1efc3270cc838686b54e7c34b17b",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167232.1",
+        "chrUn_gl000238",
+        "HSCHRUN_RANDOM_CTG31"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000202.1",
+      "length": 40103,
+      "md5": "06cbf126247d89664a4faebad130fe9c",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113921.2",
+        "HSCHR11_RANDOM_CTG2",
+        "chr11_gl000202_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000234.1",
+      "length": 40531,
+      "md5": "93f998536b61a56fd0ff47322a911d4b",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000234",
+        "HSCHRUN_RANDOM_CTG27",
+        "NT_167228.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000232.1",
+      "length": 40652,
+      "md5": "3e06b6741061ad93a8587531307057d8",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167226.1",
+        "HSCHRUN_RANDOM_CTG25",
+        "chrUn_gl000232"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000206.1",
+      "length": 41001,
+      "md5": "43f69e423533e948bfae5ce1d45bd3f1",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113945.1",
+        "chr17_gl000206_random",
+        "HSCHR17_RANDOM_CTG4"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000240.1",
+      "length": 41933,
+      "md5": "445a86173da9f237d7bcf41c6cb8cc62",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG33",
+        "chrUn_gl000240",
+        "NT_167234.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000236.1",
+      "length": 41934,
+      "md5": "fdcd739913efa1fdc64b6c0cd7016779",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000236",
+        "HSCHRUN_RANDOM_CTG29",
+        "NT_167230.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000241.1",
+      "length": 42152,
+      "md5": "ef4258cdc5a45c206cea8fc3e1d858cf",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000241",
+        "NT_167235.1",
+        "HSCHRUN_RANDOM_CTG34"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000243.1",
+      "length": 43341,
+      "md5": "cc34279a7e353136741c9fce79bc4396",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167237.1",
+        "HSCHRUN_RANDOM_CTG36",
+        "chrUn_gl000243"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000242.1",
+      "length": 43523,
+      "md5": "2f8694fc47576bc81b5fe9e7de0ba49e",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167236.1",
+        "chrUn_gl000242",
+        "HSCHRUN_RANDOM_CTG35"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000230.1",
+      "length": 43691,
+      "md5": "b4eb71ee878d3706246b7c1dbef69299",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167224.1",
+        "chrUn_gl000230",
+        "HSCHRUN_RANDOM_CTG23"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000237.1",
+      "length": 45867,
+      "md5": "e0c82e7751df73f4f6d0ed30cdc853c0",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000237",
+        "HSCHRUN_RANDOM_CTG30",
+        "NT_167231.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000233.1",
+      "length": 45941,
+      "md5": "7fed60298a8d62ff808b74b6ce820001",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167227.1",
+        "chrUn_gl000233",
+        "HSCHRUN_RANDOM_CTG26"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000204.1",
+      "length": 81310,
+      "md5": "efc49c871536fa8d79cb0a06fa739722",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR17_RANDOM_CTG2",
+        "NT_113943.1",
+        "chr17_gl000204_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000198.1",
+      "length": 90085,
+      "md5": "868e7784040da90d900d2d1b667a1383",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR9_RANDOM_CTG1",
+        "NT_113914.1",
+        "chr9_gl000198_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000208.1",
+      "length": 92689,
+      "md5": "aa81be49bf3fe63a79bdc6a6f279abf6",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr19_gl000208_random",
+        "HSCHR19_RANDOM_CTG1",
+        "NT_113948.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000191.1",
+      "length": 106433,
+      "md5": "d75b436f50a8214ee9c2a51d30b2c2cc",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113878.1",
+        "chr1_gl000191_random",
+        "HSCHR1_RANDOM_CTG5"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000227.1",
+      "length": 128374,
+      "md5": "a4aead23f8053f2655e468bcc6ecdceb",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167221.1",
+        "chrUn_gl000227",
+        "HSCHRUN_RANDOM_CTG20"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000228.1",
+      "length": 129120,
+      "md5": "c5a17c97e2c1a0b6a9cc5a6b064b714f",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167222.1",
+        "chrUn_gl000228",
+        "HSCHRUN_RANDOM_CTG21"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000214.1",
+      "length": 137718,
+      "md5": "46c2032c37f2ed899eb41c0473319a69",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167209.1",
+        "HSCHRUN_RANDOM_CTG4",
+        "chrUn_gl000214"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000221.1",
+      "length": 155397,
+      "md5": "3238fb74ea87ae857f9c7508d315babb",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167215.1",
+        "chrUn_gl000221",
+        "HSCHRUN_RANDOM_CTG13"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000209.1",
+      "length": 159169,
+      "md5": "f40598e2a5a6b26e84a3775e0d1e2c81",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR19_RANDOM_CTG2",
+        "NT_113949.1",
+        "chr19_gl000209_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000218.1",
+      "length": 161147,
+      "md5": "1d708b54644c26c7e01c2dad5426d38c",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113889.1",
+        "chrUn_gl000218",
+        "HSCHRUN_RANDOM_CTG9"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000220.1",
+      "length": 161802,
+      "md5": "fc35de963c57bf7648429e6454f1c9db",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000220",
+        "NT_167214.1",
+        "HSCHRUN_RANDOM_CTG11"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000213.1",
+      "length": 164239,
+      "md5": "9d424fdcc98866650b58f004080a992a",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000213",
+        "NT_167208.1",
+        "HSCHRUN_RANDOM_CTG3"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000211.1",
+      "length": 166566,
+      "md5": "7daaa45c66b288847b9b32b964e623d3",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG1",
+        "NT_113961.1",
+        "chrUn_gl000211"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000199.1",
+      "length": 169874,
+      "md5": "569af3b73522fab4b40995ae4944e78e",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chr9_gl000199_random",
+        "HSCHR9_RANDOM_CTG2",
+        "NT_113916.2"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000217.1",
+      "length": 172149,
+      "md5": "6d243e18dea1945fb7f2517615b8f52e",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000217",
+        "NT_167212.1",
+        "HSCHRUN_RANDOM_CTG7"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000216.1",
+      "length": 172294,
+      "md5": "642a232d91c486ac339263820aef7fe0",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG6",
+        "NT_167211.1",
+        "chrUn_gl000216"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000215.1",
+      "length": 172545,
+      "md5": "5eb3b418480ae67a997957c909375a73",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000215",
+        "NT_167210.1",
+        "HSCHRUN_RANDOM_CTG5"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000205.1",
+      "length": 174588,
+      "md5": "d22441398d99caf673e9afb9a1908ec5",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113930.1",
+        "HSCHR17_RANDOM_CTG3",
+        "chr17_gl000205_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000219.1",
+      "length": 179198,
+      "md5": "f977edd13bac459cb2ed4a5457dba1b3",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167213.1",
+        "chrUn_gl000219",
+        "HSCHRUN_RANDOM_CTG10"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000224.1",
+      "length": 179693,
+      "md5": "d5b2fc04f6b41b212a4198a07f450e20",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167218.1",
+        "chrUn_gl000224",
+        "HSCHRUN_RANDOM_CTG16"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000223.1",
+      "length": 180455,
+      "md5": "399dfa03bf32022ab52a846f7ca35b30",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "chrUn_gl000223",
+        "NT_167217.1",
+        "HSCHRUN_RANDOM_CTG15"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000195.1",
+      "length": 182896,
+      "md5": "5d9ec007868d517e73543b005ba48535",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR7_RANDOM_CTG1",
+        "NT_113901.1",
+        "chr7_gl000195_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000212.1",
+      "length": 186858,
+      "md5": "563531689f3dbd691331fd6c5730a88b",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113923.1",
+        "chrUn_gl000212",
+        "HSCHRUN_RANDOM_CTG2"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000222.1",
+      "length": 186861,
+      "md5": "6fe9abac455169f50470f5a6b01d0f59",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHRUN_RANDOM_CTG14",
+        "chrUn_gl000222",
+        "NT_167216.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000200.1",
+      "length": 187035,
+      "md5": "75e4c8d17cd4addf3917d1703cacaf25",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "HSCHR9_RANDOM_CTG4",
+        "chr9_gl000200_random",
+        "NT_113915.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000193.1",
+      "length": 189789,
+      "md5": "dbb6e8ece0b5de29da56601613007c2a",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113885.1",
+        "chr4_gl000193_random",
+        "HSCHR4_RANDOM_CTG2"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000194.1",
+      "length": 191469,
+      "md5": "6ac8f815bf8e845bb3031b73f812c012",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_113888.1",
+        "HSCHR4_RANDOM_CTG3",
+        "chr4_gl000194_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "GL000225.1",
+      "length": 211173,
+      "md5": "63945c3e6962f28ffd469719a747e73c",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167219.1",
+        "chrUn_gl000225",
+        "HSCHRUN_RANDOM_CTG17"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "GL000192.1",
+      "length": 547496,
+      "md5": "325ba9e808f669dfeee210fdd7b470ac",
+      "assembly": "GRCh37",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Homo Sapiens",
+      "aliases": [
+        "NT_167207.1",
+        "chr1_gl000192_random",
+        "HSCHR1_RANDOM_CTG12"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "NC_007605",
+      "length": 171823,
+      "md5": "6743bd63b3ff2b5b8985d8933c53290a",
+      "assembly": "NC_007605.1",
+      "uri": "http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta",
+      "species": "Epstein-Barr virus"
+    },
+    {
+      "name": "HG999_1_PATCH",
+      "length": 49316,
+      "aliases": [
+        "NW_003315903.1",
+        "GL383516.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG999_2_PATCH",
+      "length": 49352,
+      "aliases": [
+        "GL383517.1",
+        "NW_003315904.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG989_PATCH",
+      "length": 151551,
+      "aliases": [
+        "NW_003571030.1",
+        "GL949741.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1287_PATCH",
+      "length": 7283150,
+      "aliases": [
+        "NW_003871055.3",
+        "JH636052.4"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1292_PATCH",
+      "length": 1676126,
+      "aliases": [
+        "JH636053.3",
+        "NW_003871056.3"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1293_PATCH",
+      "length": 758378,
+      "aliases": [
+        "NW_003871057.1",
+        "JH636054.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1471_PATCH",
+      "length": 24680,
+      "aliases": [
+        "JH806573.1",
+        "NW_004070863.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1472_PATCH",
+      "length": 22982,
+      "aliases": [
+        "JH806574.2",
+        "NW_004070864.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1473_PATCH",
+      "length": 47409,
+      "aliases": [
+        "NW_004070865.1",
+        "JH806575.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR1_1_CTG31",
+      "length": 182439,
+      "aliases": [
+        "GL383518.1",
+        "NW_003315905.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_2_CTG31",
+      "length": 110268,
+      "aliases": [
+        "GL383519.1",
+        "NW_003315906.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_3_CTG31",
+      "length": 366579,
+      "aliases": [
+        "NW_003315907.1",
+        "GL383520.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG1007_PATCH",
+      "length": 66021,
+      "aliases": [
+        "GL877870.2",
+        "NW_003571031.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG686_PATCH",
+      "length": 389939,
+      "aliases": [
+        "GL877871.1",
+        "NW_003571032.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG953_PATCH",
+      "length": 599580,
+      "aliases": [
+        "NW_004504299.1",
+        "KB663603.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR2_1_CTG1",
+      "length": 143390,
+      "aliases": [
+        "NW_003315908.1",
+        "GL383521.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR2_1_CTG12",
+      "length": 123821,
+      "aliases": [
+        "GL383522.1",
+        "NW_003315909.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR2_2_CTG12",
+      "length": 96131,
+      "aliases": [
+        "NW_003571033.2",
+        "GL582966.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG186_PATCH",
+      "length": 171362,
+      "aliases": [
+        "NW_003315910.1",
+        "GL383523.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG280_PATCH",
+      "length": 78793,
+      "aliases": [
+        "GL383524.1",
+        "NW_003315911.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG991_PATCH",
+      "length": 65063,
+      "aliases": [
+        "GL383525.1",
+        "NW_003315912.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1091_PATCH",
+      "length": 393769,
+      "aliases": [
+        "NW_003871058.1",
+        "JH159131.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG325_PATCH",
+      "length": 100694,
+      "aliases": [
+        "JH159132.1",
+        "NW_003871059.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG957_PATCH",
+      "length": 263861,
+      "aliases": [
+        "NW_004775426.1",
+        "KE332495.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR3_1_CTG2_1",
+      "length": 180671,
+      "aliases": [
+        "GL383526.1",
+        "NW_003315913.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR3_1_CTG1",
+      "length": 173151,
+      "aliases": [
+        "JH636055.1",
+        "NW_003871060.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG706_PATCH",
+      "length": 248177,
+      "aliases": [
+        "NW_003571035.1",
+        "GL582967.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1032_PATCH",
+      "length": 297485,
+      "aliases": [
+        "NW_003571034.1",
+        "GL877872.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG174_HG254_PATCH",
+      "length": 503215,
+      "aliases": [
+        "KE332496.1",
+        "NW_004775427.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR4_1_CTG12",
+      "length": 164536,
+      "aliases": [
+        "GL383527.1",
+        "NW_003315914.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR4_1_CTG6",
+      "length": 376187,
+      "aliases": [
+        "GL383528.1",
+        "NW_003315915.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR4_2_CTG9",
+      "length": 121345,
+      "aliases": [
+        "GL383529.1",
+        "NW_003315916.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG1063_PATCH",
+      "length": 266316,
+      "aliases": [
+        "JH159133.1",
+        "NW_003871061.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1082_HG167_PATCH",
+      "length": 543325,
+      "aliases": [
+        "NW_004775428.1",
+        "KE332497.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR5_1_CTG1",
+      "length": 1612928,
+      "aliases": [
+        "GL339449.2",
+        "NW_003315917.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR5_1_CTG2",
+      "length": 101241,
+      "aliases": [
+        "GL383530.1",
+        "NW_003315918.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR5_1_CTG5",
+      "length": 173459,
+      "aliases": [
+        "NW_003315919.1",
+        "GL383531.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR5_2_CTG1",
+      "length": 82728,
+      "aliases": [
+        "GL383532.1",
+        "NW_003315920.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR5_3_CTG1",
+      "length": 226852,
+      "aliases": [
+        "NW_003571036.1",
+        "GL949742.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG1304_PATCH",
+      "length": 262912,
+      "aliases": [
+        "NW_003871062.1",
+        "JH636056.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1322_PATCH",
+      "length": 200195,
+      "aliases": [
+        "NW_003871063.1",
+        "JH636057.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG27_PATCH",
+      "length": 273386,
+      "aliases": [
+        "JH806576.1",
+        "NW_004070866.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG357_PATCH",
+      "length": 478993,
+      "aliases": [
+        "NW_004504300.1",
+        "KB663604.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG193_PATCH",
+      "length": 149443,
+      "aliases": [
+        "KE332498.1",
+        "NW_004775429.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR6_1_CTG5",
+      "length": 124736,
+      "aliases": [
+        "GL383533.1",
+        "NW_003315921.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR6_2_CTG5",
+      "length": 187824,
+      "aliases": [
+        "NW_004166862.1",
+        "KB021644.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG115_PATCH",
+      "length": 356330,
+      "aliases": [
+        "NW_003571037.1",
+        "GL582968.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG14_PATCH",
+      "length": 251823,
+      "aliases": [
+        "GL582969.1",
+        "NW_003571038.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG736_PATCH",
+      "length": 354970,
+      "aliases": [
+        "GL582970.1",
+        "NW_003571039.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG7_PATCH",
+      "length": 1284284,
+      "aliases": [
+        "GL582971.1",
+        "NW_003571040.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG946_PATCH",
+      "length": 327774,
+      "aliases": [
+        "NW_003571041.1",
+        "GL582972.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1257_PATCH",
+      "length": 3821770,
+      "aliases": [
+        "NW_003871064.1",
+        "JH159134.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1308_PATCH",
+      "length": 716227,
+      "aliases": [
+        "NW_003871065.1",
+        "JH636058.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG444_PATCH",
+      "length": 274521,
+      "aliases": [
+        "NW_004775430.1",
+        "KE332499.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR7_1_CTG6",
+      "length": 119183,
+      "aliases": [
+        "GL383534.2",
+        "NW_003315922.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG104_HG975_PATCH",
+      "length": 429806,
+      "aliases": [
+        "GL383535.1",
+        "NW_003315923.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG243_PATCH",
+      "length": 203777,
+      "aliases": [
+        "NW_003315924.1",
+        "GL383536.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG19_PATCH",
+      "length": 608579,
+      "aliases": [
+        "GL949743.1",
+        "NW_003571042.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG418_PATCH",
+      "length": 102251,
+      "aliases": [
+        "JH159135.2",
+        "NW_003871066.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1699_PATCH",
+      "length": 228602,
+      "aliases": [
+        "KE332500.1",
+        "NW_004775431.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG79_PATCH",
+      "length": 330164,
+      "aliases": [
+        "GL339450.1",
+        "NW_003315925.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG998_1_PATCH",
+      "length": 62435,
+      "aliases": [
+        "GL383537.1",
+        "NW_003315926.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG998_2_PATCH",
+      "length": 49281,
+      "aliases": [
+        "GL383538.1",
+        "NW_003315927.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG962_PATCH",
+      "length": 295379,
+      "aliases": [
+        "JH636059.1",
+        "NW_003871067.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1500_PATCH",
+      "length": 22394,
+      "aliases": [
+        "JH806577.1",
+        "NW_004070867.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1501_PATCH",
+      "length": 169437,
+      "aliases": [
+        "NW_004070868.1",
+        "JH806578.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1502_PATCH",
+      "length": 211307,
+      "aliases": [
+        "NW_004070869.1",
+        "JH806579.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG50_PATCH",
+      "length": 155926,
+      "aliases": [
+        "NW_004504301.1",
+        "KB663605.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR9_1_CTG1",
+      "length": 162988,
+      "aliases": [
+        "NW_003315928.1",
+        "GL383539.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR9_1_CTG35",
+      "length": 71551,
+      "aliases": [
+        "NW_003315929.1",
+        "GL383540.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR9_2_CTG35",
+      "length": 171286,
+      "aliases": [
+        "GL383541.1",
+        "NW_003315930.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR9_3_CTG35",
+      "length": 60032,
+      "aliases": [
+        "GL383542.1",
+        "NW_003315931.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG544_PATCH",
+      "length": 392792,
+      "aliases": [
+        "GL383543.1",
+        "NW_003315932.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG995_PATCH",
+      "length": 128378,
+      "aliases": [
+        "NW_003315933.1",
+        "GL383544.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG905_PATCH",
+      "length": 168465,
+      "aliases": [
+        "GL877873.1",
+        "NW_003571043.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1211_PATCH",
+      "length": 2281126,
+      "aliases": [
+        "NW_003871068.1",
+        "JH591181.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG311_PATCH",
+      "length": 196262,
+      "aliases": [
+        "NW_003871069.1",
+        "JH591182.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG339_PATCH",
+      "length": 177920,
+      "aliases": [
+        "JH591183.1",
+        "NW_003871070.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG871_PATCH",
+      "length": 437946,
+      "aliases": [
+        "JH636060.1",
+        "NW_003871071.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1479_PATCH",
+      "length": 93149,
+      "aliases": [
+        "JH806580.1",
+        "NW_004070870.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1074_PATCH",
+      "length": 305900,
+      "aliases": [
+        "NW_004504302.1",
+        "KB663606.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG979_PATCH",
+      "length": 1020827,
+      "aliases": [
+        "KE332501.1",
+        "NW_004775432.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR10_1_CTG2",
+      "length": 179254,
+      "aliases": [
+        "NW_003315934.1",
+        "GL383545.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR10_1_CTG5",
+      "length": 309802,
+      "aliases": [
+        "GL383546.1",
+        "NW_003315935.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG281_PATCH",
+      "length": 321004,
+      "aliases": [
+        "NW_003571045.1",
+        "GL582973.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG536_PATCH",
+      "length": 276448,
+      "aliases": [
+        "NW_003571046.1",
+        "GL949744.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG299_PATCH",
+      "length": 108875,
+      "aliases": [
+        "JH159138.1",
+        "NW_003871076.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG305_PATCH",
+      "length": 120441,
+      "aliases": [
+        "JH159139.1",
+        "NW_003871077.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG306_PATCH",
+      "length": 546435,
+      "aliases": [
+        "JH159140.1",
+        "NW_003871078.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG348_PATCH",
+      "length": 240775,
+      "aliases": [
+        "NW_003871079.1",
+        "JH159141.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG388_HG400_PATCH",
+      "length": 326647,
+      "aliases": [
+        "JH159142.2",
+        "NW_003871080.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG414_PATCH",
+      "length": 191402,
+      "aliases": [
+        "JH159143.1",
+        "NW_003871081.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG256_PATCH",
+      "length": 462282,
+      "aliases": [
+        "JH591184.1",
+        "NW_003871075.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG873_PATCH",
+      "length": 167437,
+      "aliases": [
+        "JH591185.1",
+        "NW_003871082.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG122_PATCH",
+      "length": 408430,
+      "aliases": [
+        "JH720443.2",
+        "NW_003871072.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG865_PATCH",
+      "length": 872115,
+      "aliases": [
+        "JH806581.1",
+        "NW_004070871.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR11_1_CTG1_1",
+      "length": 154407,
+      "aliases": [
+        "NW_003315936.1",
+        "GL383547.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG142_HG150_NOVEL_TEST",
+      "length": 200998,
+      "aliases": [
+        "JH159136.1",
+        "NW_003871073.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG151_NOVEL_TEST",
+      "length": 191409,
+      "aliases": [
+        "NW_003871074.1",
+        "JH159137.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG996_PATCH",
+      "length": 165247,
+      "aliases": [
+        "NW_003315937.1",
+        "GL383548.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG858_PATCH",
+      "length": 163298,
+      "aliases": [
+        "GL582974.1",
+        "NW_003571048.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG344_PATCH",
+      "length": 273128,
+      "aliases": [
+        "JH720444.2",
+        "NW_003871083.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1595_PATCH",
+      "length": 334922,
+      "aliases": [
+        "KB663607.2",
+        "NW_004504303.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR12_1_CTG2",
+      "length": 120804,
+      "aliases": [
+        "GL383549.1",
+        "NW_003315938.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_1_CTG2_1",
+      "length": 169178,
+      "aliases": [
+        "GL383550.1",
+        "NW_003315939.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_1_CTG5",
+      "length": 184319,
+      "aliases": [
+        "NW_003315940.1",
+        "GL383551.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_2_CTG2_1",
+      "length": 138655,
+      "aliases": [
+        "NW_003315941.1",
+        "GL383552.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_3_CTG2_1",
+      "length": 152874,
+      "aliases": [
+        "GL383553.2",
+        "NW_003315942.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_1_CTG1",
+      "length": 167313,
+      "aliases": [
+        "GL877875.1",
+        "NW_003571049.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_2_CTG2",
+      "length": 408271,
+      "aliases": [
+        "NW_003571050.1",
+        "GL877876.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG1133_PATCH",
+      "length": 372609,
+      "aliases": [
+        "GL949745.1",
+        "NW_003571047.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG531_PATCH",
+      "length": 34662,
+      "aliases": [
+        "NW_003571051.1",
+        "GL582975.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1592_PATCH",
+      "length": 1523386,
+      "aliases": [
+        "KB021645.1",
+        "NW_004166863.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG971_PATCH",
+      "length": 170033,
+      "aliases": [
+        "JH720445.1",
+        "NW_003871084.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR15_1_CTG4",
+      "length": 296527,
+      "aliases": [
+        "GL383554.1",
+        "NW_003315943.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR15_1_CTG8",
+      "length": 388773,
+      "aliases": [
+        "GL383555.1",
+        "NW_003315944.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG1208_PATCH",
+      "length": 97345,
+      "aliases": [
+        "JH720446.1",
+        "NW_003871085.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR16_1_CTG3_1",
+      "length": 192462,
+      "aliases": [
+        "NW_003315945.1",
+        "GL383556.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR16_2_CTG3_1",
+      "length": 89672,
+      "aliases": [
+        "GL383557.1",
+        "NW_003315946.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG183_PATCH",
+      "length": 457041,
+      "aliases": [
+        "NW_003315947.1",
+        "GL383558.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG745_PATCH",
+      "length": 338640,
+      "aliases": [
+        "NW_003315948.2",
+        "GL383559.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG75_PATCH",
+      "length": 534288,
+      "aliases": [
+        "NW_003315949.1",
+        "GL383560.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG987_PATCH",
+      "length": 644425,
+      "aliases": [
+        "GL383561.2",
+        "NW_003315950.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG990_PATCH",
+      "length": 45551,
+      "aliases": [
+        "GL383562.1",
+        "NW_003315951.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG185_PATCH",
+      "length": 412535,
+      "aliases": [
+        "GL582976.1",
+        "NW_003571052.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG747_PATCH",
+      "length": 388340,
+      "aliases": [
+        "JH159144.1",
+        "NW_003871088.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG883_PATCH",
+      "length": 194862,
+      "aliases": [
+        "JH159145.1",
+        "NW_003871090.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG748_PATCH",
+      "length": 376223,
+      "aliases": [
+        "NW_003871089.1",
+        "JH591186.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG271_PATCH",
+      "length": 186059,
+      "aliases": [
+        "JH636061.1",
+        "NW_003871087.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1146_PATCH",
+      "length": 454385,
+      "aliases": [
+        "JH720447.1",
+        "NW_003871086.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG417_PATCH",
+      "length": 342635,
+      "aliases": [
+        "JH806582.2",
+        "NW_004070872.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG385_PATCH",
+      "length": 211416,
+      "aliases": [
+        "KB021646.2",
+        "NW_004166864.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1591_PATCH",
+      "length": 341712,
+      "aliases": [
+        "KE332502.1",
+        "NW_004775433.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR17_1_CTG1",
+      "length": 270261,
+      "aliases": [
+        "GL383563.2",
+        "NW_003315952.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_1_CTG4",
+      "length": 133151,
+      "aliases": [
+        "NW_003315953.1",
+        "GL383564.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_2_CTG4",
+      "length": 223995,
+      "aliases": [
+        "GL383565.1",
+        "NW_003315954.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_3_CTG4",
+      "length": 90219,
+      "aliases": [
+        "GL383566.1",
+        "NW_003315955.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_4_CTG4",
+      "length": 278131,
+      "aliases": [
+        "NW_003871091.1",
+        "JH159146.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_5_CTG4",
+      "length": 70345,
+      "aliases": [
+        "NW_003871092.1",
+        "JH159147.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_6_CTG4",
+      "length": 88070,
+      "aliases": [
+        "NW_003871093.1",
+        "JH159148.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR18_1_CTG1_1",
+      "length": 289831,
+      "aliases": [
+        "GL383567.1",
+        "NW_003315956.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR18_1_CTG2",
+      "length": 104552,
+      "aliases": [
+        "NW_003315957.1",
+        "GL383568.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR18_1_CTG2_1",
+      "length": 167950,
+      "aliases": [
+        "GL383569.1",
+        "NW_003315958.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR18_2_CTG1_1",
+      "length": 164789,
+      "aliases": [
+        "GL383570.1",
+        "NW_003315959.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR18_2_CTG2",
+      "length": 198278,
+      "aliases": [
+        "GL383571.1",
+        "NW_003315960.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR18_2_CTG2_1",
+      "length": 159547,
+      "aliases": [
+        "GL383572.1",
+        "NW_003315961.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG730_PATCH",
+      "length": 580393,
+      "aliases": [
+        "GL582977.2",
+        "NW_003571053.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG729_PATCH",
+      "length": 245473,
+      "aliases": [
+        "JH159149.1",
+        "NW_003871094.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1079_PATCH",
+      "length": 1058686,
+      "aliases": [
+        "NW_004166865.1",
+        "KB021647.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1350_HG959_PATCH",
+      "length": 579598,
+      "aliases": [
+        "KE332505.1",
+        "NW_004775434.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR19_1_CTG3",
+      "length": 385657,
+      "aliases": [
+        "GL383573.1",
+        "NW_003315962.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19_1_CTG3_1",
+      "length": 155864,
+      "aliases": [
+        "GL383574.1",
+        "NW_003315963.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19_2_CTG3",
+      "length": 170222,
+      "aliases": [
+        "GL383575.2",
+        "NW_003315964.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19_3_CTG3",
+      "length": 188024,
+      "aliases": [
+        "GL383576.1",
+        "NW_003315965.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_COX1_CTG1",
+      "length": 987716,
+      "aliases": [
+        "GL949746.1",
+        "NW_003571054.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_COX2_CTG1",
+      "length": 729519,
+      "aliases": [
+        "GL949747.1",
+        "NW_003571055.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_I_CTG1",
+      "length": 1064303,
+      "aliases": [
+        "GL949748.1",
+        "NW_003571056.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_J_CTG1",
+      "length": 1091840,
+      "aliases": [
+        "GL949749.1",
+        "NW_003571057.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_S_CTG1",
+      "length": 1066389,
+      "aliases": [
+        "NW_003571058.1",
+        "GL949750.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_T_CTG1",
+      "length": 1002682,
+      "aliases": [
+        "GL949751.1",
+        "NW_003571059.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_PGF1_CTG1",
+      "length": 987100,
+      "aliases": [
+        "NW_003571060.1",
+        "GL949752.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19LRC_PGF2_CTG1",
+      "length": 796478,
+      "aliases": [
+        "GL949753.1",
+        "NW_003571061.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG506_HG507_HG1000_PATCH",
+      "length": 179899,
+      "aliases": [
+        "NW_003571063.2",
+        "GL582979.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG144_PATCH",
+      "length": 70483,
+      "aliases": [
+        "JH720448.1",
+        "NW_003871095.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG944_PATCH",
+      "length": 283551,
+      "aliases": [
+        "NW_004504304.1",
+        "KB663608.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR20_1_CTG1",
+      "length": 128385,
+      "aliases": [
+        "GL383577.1",
+        "NW_003315966.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG237_PATCH",
+      "length": 307252,
+      "aliases": [
+        "KE332506.1",
+        "NW_004775435.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR21_1_CTG1_1",
+      "length": 63917,
+      "aliases": [
+        "NW_003315967.1",
+        "GL383578.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR21_2_CTG1_1",
+      "length": 201198,
+      "aliases": [
+        "GL383579.1",
+        "NW_003315968.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR21_3_CTG1_1",
+      "length": 74652,
+      "aliases": [
+        "NW_003315969.1",
+        "GL383580.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR21_4_CTG1_1",
+      "length": 116690,
+      "aliases": [
+        "GL383581.1",
+        "NW_003315970.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG329_PATCH",
+      "length": 212298,
+      "aliases": [
+        "JH720449.1",
+        "NW_003871096.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1486_PATCH",
+      "length": 167183,
+      "aliases": [
+        "NW_004070873.1",
+        "JH806583.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1487_PATCH",
+      "length": 70876,
+      "aliases": [
+        "JH806584.1",
+        "NW_004070874.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1488_PATCH",
+      "length": 73505,
+      "aliases": [
+        "NW_004070875.1",
+        "JH806585.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG497_PATCH",
+      "length": 43543,
+      "aliases": [
+        "NW_004070876.1",
+        "JH806586.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR22_1_CTG1",
+      "length": 162811,
+      "aliases": [
+        "NW_003315971.2",
+        "GL383582.2"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR22_1_CTG2",
+      "length": 96924,
+      "aliases": [
+        "GL383583.1",
+        "NW_003315972.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR22_2_CTG1",
+      "length": 74013,
+      "aliases": [
+        "NW_004504305.1",
+        "KB663609.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG480_HG481_PATCH",
+      "length": 284527,
+      "aliases": [
+        "GL877877.2",
+        "NW_003571064.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1497_PATCH",
+      "length": 3110903,
+      "aliases": [
+        "JH159150.3",
+        "NW_003871103.3"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1423_PATCH",
+      "length": 898979,
+      "aliases": [
+        "JH720451.1",
+        "NW_003871098.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1424_PATCH",
+      "length": 522319,
+      "aliases": [
+        "JH720452.1",
+        "NW_003871099.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1425_PATCH",
+      "length": 1461188,
+      "aliases": [
+        "JH720453.1",
+        "NW_003871100.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1426_PATCH",
+      "length": 752267,
+      "aliases": [
+        "JH720454.3",
+        "NW_003871101.3"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG375_PATCH",
+      "length": 65034,
+      "aliases": [
+        "JH720455.1",
+        "NW_003871102.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1433_PATCH",
+      "length": 4110759,
+      "aliases": [
+        "JH806587.1",
+        "NW_004070877.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1434_PATCH",
+      "length": 862483,
+      "aliases": [
+        "JH806588.1",
+        "NW_004070878.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1435_PATCH",
+      "length": 270630,
+      "aliases": [
+        "JH806589.1",
+        "NW_004070879.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1436_HG1432_PATCH",
+      "length": 2418393,
+      "aliases": [
+        "NW_004070880.2",
+        "JH806590.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1437_PATCH",
+      "length": 882083,
+      "aliases": [
+        "NW_004070881.1",
+        "JH806591.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1438_PATCH",
+      "length": 835911,
+      "aliases": [
+        "JH806592.1",
+        "NW_004070882.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1439_PATCH",
+      "length": 389631,
+      "aliases": [
+        "NW_004070883.1",
+        "JH806593.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1440_PATCH",
+      "length": 390496,
+      "aliases": [
+        "NW_004070884.1",
+        "JH806594.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1441_PATCH",
+      "length": 444074,
+      "aliases": [
+        "JH806595.1",
+        "NW_004070885.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1442_PATCH",
+      "length": 413927,
+      "aliases": [
+        "JH806596.1",
+        "NW_004070886.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1443_HG1444_PATCH",
+      "length": 1045622,
+      "aliases": [
+        "NW_004070887.1",
+        "JH806597.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1453_PATCH",
+      "length": 899320,
+      "aliases": [
+        "JH806598.1",
+        "NW_004070888.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1458_PATCH",
+      "length": 1214327,
+      "aliases": [
+        "JH806599.1",
+        "NW_004070889.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1459_PATCH",
+      "length": 6530008,
+      "aliases": [
+        "JH806600.2",
+        "NW_004070890.2"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1462_PATCH",
+      "length": 1389764,
+      "aliases": [
+        "JH806601.1",
+        "NW_004070891.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1463_PATCH",
+      "length": 713266,
+      "aliases": [
+        "JH806602.1",
+        "NW_004070892.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1490_PATCH",
+      "length": 182949,
+      "aliases": [
+        "JH806603.1",
+        "NW_004070893.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG29_PATCH",
+      "length": 469972,
+      "aliases": [
+        "KB021648.1",
+        "NW_004166866.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR6_MHC_APD_CTG1",
+      "length": 4622290,
+      "aliases": [
+        "NT_167244.1",
+        "GL000250.1",
+        "chr6_apd_hap1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_COX_CTG1",
+      "length": 4795371,
+      "aliases": [
+        "GL000251.1",
+        "NT_113891.2",
+        "chr6_cox_hap2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_DBB_CTG1",
+      "length": 4610396,
+      "aliases": [
+        "NT_167245.1",
+        "GL000252.1",
+        "chr6_dbb_hap3"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_MANN_CTG1",
+      "length": 4683263,
+      "aliases": [
+        "NT_167246.1",
+        "GL000253.1",
+        "chr6_mann_hap4"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_MCF_CTG1",
+      "length": 4833398,
+      "aliases": [
+        "chr6_mcf_hap5",
+        "NT_167247.1",
+        "GL000254.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_QBL_CTG1",
+      "length": 4611984,
+      "aliases": [
+        "chr6_qbl_hap6",
+        "NT_167248.1",
+        "GL000255.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_SSTO_CTG1",
+      "length": 4928567,
+      "aliases": [
+        "GL000256.1",
+        "NT_167249.1",
+        "chr6_ssto_hap7"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_1_CTG9",
+      "length": 590426,
+      "aliases": [
+        "NT_167250.1",
+        "chr4_ctg9_hap1",
+        "GL000257.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_1_CTG5",
+      "length": 1680828,
+      "aliases": [
+        "NT_167251.1",
+        "chr17_ctg5_hap1",
+        "GL000258.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    }
+  ],
+  "description": "Broad Institute b37 (GRCh37-based) for GATK"
+}
