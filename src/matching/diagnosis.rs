@@ -172,10 +172,15 @@ impl MatchDiagnosis {
                     }
                 }
 
-                // If names differ but match via alias, count as renamed
-                if q_contig.name == r_contig.name {
+                // Check if query name matches ref name OR any ref alias
+                // Alias matches should be treated equally as direct name matches
+                let is_name_match =
+                    q_contig.name == r_contig.name || r_contig.aliases.contains(&q_contig.name);
+
+                if is_name_match {
                     name_length_only_matches.push(ContigMatch);
                 } else {
+                    // Only count as renamed if query name doesn't match ref name or aliases
                     renamed_matches.push(RenamedContig {
                         query_name: q_contig.name.clone(),
                         reference_name: r_contig.name.clone(),
