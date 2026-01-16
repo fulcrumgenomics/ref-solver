@@ -39,13 +39,14 @@ pub fn is_fasta_file(path: &Path) -> bool {
     matches!(
         path.extension()
             .and_then(OsStr::to_str)
-            .map(|s| s.to_lowercase())
+            .map(str::to_lowercase)
             .as_deref(),
         Some("fa" | "fasta" | "fna")
     )
 }
 
 /// Check if the path is a gzipped file
+#[allow(clippy::case_sensitive_file_extension_comparisons)] // Already lowercased
 fn is_gzipped(path: &Path) -> bool {
     let path_str = path.to_string_lossy().to_lowercase();
     path_str.ends_with(".gz") || path_str.ends_with(".bgz")
@@ -55,6 +56,12 @@ fn is_gzipped(path: &Path) -> bool {
 ///
 /// This reads through the entire FASTA file to determine sequence lengths.
 /// For large files, consider using an existing .fai index instead.
+///
+/// # Errors
+///
+/// Returns `ParseError::Io` if the file cannot be read, `ParseError::Noodles` if
+/// parsing fails, `ParseError::InvalidFormat` if no contigs are found, or
+/// `ParseError::TooManyContigs` if the limit is exceeded.
 pub fn parse_fasta_file(path: &Path) -> Result<QueryHeader, ParseError> {
     if is_gzipped(path) {
         parse_fasta_gzipped(path)
@@ -68,6 +75,12 @@ pub fn parse_fasta_file(path: &Path) -> Result<QueryHeader, ParseError> {
 /// This reads through the entire FASTA file and computes MD5 on the
 /// uppercase sequence (standard for sequence checksums).
 /// This is slower than `parse_fasta_file` but provides MD5 for matching.
+///
+/// # Errors
+///
+/// Returns `ParseError::Io` if the file cannot be read, `ParseError::Noodles` if
+/// parsing fails, `ParseError::InvalidFormat` if no contigs are found, or
+/// `ParseError::TooManyContigs` if the limit is exceeded.
 pub fn parse_fasta_file_with_md5(path: &Path) -> Result<QueryHeader, ParseError> {
     if is_gzipped(path) {
         parse_fasta_gzipped_with_md5(path)
@@ -103,7 +116,7 @@ fn parse_fasta_reader_with_md5<R: BufRead>(
 
     for result in reader.records() {
         let record = result
-            .map_err(|e| ParseError::Noodles(format!("Failed to parse FASTA record: {}", e)))?;
+            .map_err(|e| ParseError::Noodles(format!("Failed to parse FASTA record: {e}")))?;
 
         // Check contig limit for DOS protection
         if check_contig_limit(contigs.len()).is_some() {
@@ -118,7 +131,7 @@ fn parse_fasta_reader_with_md5<R: BufRead>(
         let uppercase: Vec<u8> = sequence
             .as_ref()
             .iter()
-            .map(|b| b.to_ascii_uppercase())
+            .map(u8::to_ascii_uppercase)
             .collect();
         let md5 = format!("{:x}", md5::compute(&uppercase));
 
@@ -163,7 +176,7 @@ fn parse_fasta_reader<R: BufRead>(
 
     for result in reader.records() {
         let record = result
-            .map_err(|e| ParseError::Noodles(format!("Failed to parse FASTA record: {}", e)))?;
+            .map_err(|e| ParseError::Noodles(format!("Failed to parse FASTA record: {e}")))?;
 
         // Check contig limit for DOS protection
         if check_contig_limit(contigs.len()).is_some() {

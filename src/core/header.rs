@@ -32,7 +32,7 @@ pub struct QueryHeader {
     #[serde(skip)]
     pub md5_set: HashSet<String>,
 
-    /// Set of (exact_name, length) pairs for matching
+    /// Set of (`exact_name`, length) pairs for matching
     #[serde(skip)]
     pub name_length_set: HashSet<(String, u64)>,
 
@@ -46,6 +46,7 @@ pub struct QueryHeader {
 }
 
 impl QueryHeader {
+    #[must_use]
     pub fn new(contigs: Vec<Contig>) -> Self {
         let naming_convention = detect_naming_convention(&contigs);
 
@@ -63,6 +64,7 @@ impl QueryHeader {
         header
     }
 
+    #[must_use]
     pub fn with_source(mut self, source: impl Into<String>) -> Self {
         self.source = Some(source.into());
         self
@@ -95,11 +97,13 @@ impl QueryHeader {
     }
 
     /// Check if header has MD5 information
+    #[must_use]
     pub fn has_md5s(&self) -> bool {
         !self.md5_set.is_empty()
     }
 
     /// Fraction of contigs with MD5 checksums
+    #[must_use]
     pub fn md5_coverage(&self) -> f64 {
         if self.contigs.is_empty() {
             return 0.0;
@@ -110,6 +114,7 @@ impl QueryHeader {
 
     /// Get only primary chromosomes (1-22, X, Y, MT)
     #[cfg(test)]
+    #[must_use]
     pub fn primary_contigs(&self) -> Vec<&Contig> {
         self.contigs
             .iter()

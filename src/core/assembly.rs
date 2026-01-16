@@ -1,7 +1,7 @@
 //! Hierarchical assembly types for the catalog.
 //!
 //! This module provides types for representing the hierarchy:
-//! Assembly → AssemblyVersion → FastaDistribution → FastaContig
+//! Assembly → `AssemblyVersion` → `FastaDistribution` → `FastaContig`
 //!
 //! This allows tracking:
 //! - Multiple FASTA distributions per assembly version (e.g., UCSC hg38 vs 1KG hs38DH)
@@ -14,12 +14,12 @@ use std::collections::HashSet;
 use crate::core::contig::SequenceRole;
 use crate::core::types::ReferenceSource;
 
-/// Top-level assembly (e.g., GRCh38, GRCh37, CHM13)
+/// Top-level assembly (e.g., `GRCh38`, `GRCh37`, CHM13)
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct HierarchicalAssembly {
     /// Unique identifier (e.g., "grch38")
     pub id: String,
-    /// Display name (e.g., "GRCh38")
+    /// Display name (e.g., "`GRCh38`")
     pub name: String,
     /// Organism (e.g., "Homo sapiens")
     pub organism: String,
@@ -30,7 +30,7 @@ pub struct HierarchicalAssembly {
 /// A specific version/patch of an assembly (has one assembly report)
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct AssemblyVersion {
-    /// Unique identifier (e.g., "grch38_p14")
+    /// Unique identifier (e.g., "`grch38_p14`")
     pub id: String,
     /// Version string (e.g., "p14")
     pub version: String,
@@ -50,7 +50,7 @@ pub struct AssemblyVersion {
 pub enum ReportSource {
     /// Official NCBI assembly report
     Ncbi {
-        /// NCBI accession (e.g., "GCF_000001405.40")
+        /// NCBI accession (e.g., "`GCF_000001405.40`")
         accession: String,
         /// Download URL
         #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -63,7 +63,7 @@ pub enum ReportSource {
     DerivedFromFasta {
         /// Source files used to build this
         source_files: Vec<String>,
-        /// Inferred base assembly (e.g., "grch38_p14")
+        /// Inferred base assembly (e.g., "`grch38_p14`")
         #[serde(default, skip_serializing_if = "Option::is_none")]
         base_assembly: Option<String>,
     },
@@ -79,7 +79,7 @@ pub enum ReportSource {
 /// A contig from an assembly report (canonical definition)
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct ReportContig {
-    /// Internal ID for linking to FastaContig
+    /// Internal ID for linking to `FastaContig`
     pub id: u32,
     /// Primary sequence name
     pub sequence_name: String,
@@ -88,10 +88,10 @@ pub struct ReportContig {
     /// MD5 checksum if known
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub md5: Option<String>,
-    /// RefSeq accession (e.g., "NC_000001.11")
+    /// `RefSeq` accession (e.g., "`NC_000001.11`")
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub refseq_accn: Option<String>,
-    /// GenBank accession (e.g., "CM000663.2")
+    /// `GenBank` accession (e.g., "CM000663.2")
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub genbank_accn: Option<String>,
     /// UCSC-style name (e.g., "chr1")
@@ -117,7 +117,7 @@ pub struct FastaDistribution {
     /// Download URL
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub download_url: Option<String>,
-    /// Tags (e.g., "analysis_set", "with_decoy")
+    /// Tags (e.g., "`analysis_set`", "`with_decoy`")
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub tags: Vec<String>,
     /// Contigs in this FASTA
@@ -126,6 +126,7 @@ pub struct FastaDistribution {
 
 impl FastaDistribution {
     /// Count contigs by presence type
+    #[must_use]
     pub fn presence_counts(&self) -> PresenceCounts {
         let mut counts = PresenceCounts::default();
         for contig in &self.contigs {
@@ -150,7 +151,7 @@ pub struct FastaContig {
     pub md5: String,
     /// Sort order (position in original file)
     pub sort_order: u32,
-    /// Link to ReportContig (None for decoy/HLA not in assembly report)
+    /// Link to `ReportContig` (None for decoy/HLA not in assembly report)
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub report_contig_id: Option<u32>,
     /// Alternative names
@@ -174,6 +175,13 @@ impl FastaContig {
     /// Merge another contig's metadata into this one
     ///
     /// Used when building from multiple input files (e.g., dict + NCBI report)
+    ///
+    /// # Errors
+    ///
+    /// Returns an error if:
+    /// - Names don't match (`ContigMergeError::NameMismatch`)
+    /// - Lengths don't match (`ContigMergeError::LengthMismatch`)
+    /// - Both contigs have different non-empty MD5 checksums (`ContigMergeError::Md5Conflict`)
     pub fn merge(&mut self, other: &FastaContig) -> Result<(), ContigMergeError> {
         // Validate name and length match
         if self.name != other.name {
@@ -193,7 +201,7 @@ impl FastaContig {
         // MD5: take first non-empty, error if conflict
         if !other.md5.is_empty() {
             if self.md5.is_empty() {
-                self.md5 = other.md5.clone();
+                self.md5.clone_from(&other.md5);
             } else if self.md5 != other.md5 {
                 return Err(ContigMergeError::Md5Conflict {
                     name: self.name.clone(),
@@ -256,8 +264,7 @@ impl std::fmt::Display for ContigMergeError {
             Self::NameMismatch { expected, found } => {
                 write!(
                     f,
-                    "Contig name mismatch: expected '{}', found '{}'",
-                    expected, found
+                    "Contig name mismatch: expected '{expected}', found '{found}'"
                 )
             }
             Self::LengthMismatch {
@@ -267,8 +274,7 @@ impl std::fmt::Display for ContigMergeError {
             } => {
                 write!(
                     f,
-                    "Length mismatch for '{}': expected {}, found {}",
-                    name, expected, found
+                    "Length mismatch for '{name}': expected {expected}, found {found}"
                 )
             }
             Self::Md5Conflict {
@@ -278,8 +284,7 @@ impl std::fmt::Display for ContigMergeError {
             } => {
                 write!(
                     f,
-                    "MD5 conflict for '{}': existing={}, incoming={}",
-                    name, existing, incoming
+                    "MD5 conflict for '{name}': existing={existing}, incoming={incoming}"
                 )
             }
         }

@@ -26,11 +26,18 @@ pub enum ParseError {
 }
 
 /// Parse a SAM/BAM/CRAM file and extract the header
+///
+/// # Errors
+///
+/// Returns `ParseError::Io` if the file cannot be read, `ParseError::Noodles` if
+/// parsing fails, `ParseError::UnsupportedFormat` for unknown extensions,
+/// `ParseError::InvalidFormat` if no contigs are found, or
+/// `ParseError::TooManyContigs` if the limit is exceeded.
 pub fn parse_file(path: &Path) -> Result<QueryHeader, ParseError> {
     let extension = path
         .extension()
         .and_then(|e| e.to_str())
-        .map(|s| s.to_lowercase());
+        .map(str::to_lowercase);
 
     match extension.as_deref() {
         Some("sam") => parse_sam_file(path),
@@ -90,7 +97,7 @@ fn parse_cram_file(path: &Path) -> Result<QueryHeader, ParseError> {
     header_to_query(&header, Some(path))
 }
 
-/// Convert noodles header to QueryHeader
+/// Convert noodles header to `QueryHeader`
 fn header_to_query(
     header: &noodles::sam::Header,
     source: Option<&Path>,
@@ -176,6 +183,12 @@ fn header_to_query(
 }
 
 /// Parse header from raw text (stdin or pasted)
+///
+/// # Errors
+///
+/// Returns `ParseError::InvalidFormat` if the text has invalid format, missing
+/// required fields, or no contigs are found, or `ParseError::TooManyContigs`
+/// if the limit is exceeded.
 pub fn parse_header_text(text: &str) -> Result<QueryHeader, ParseError> {
     let mut contigs = Vec::new();
 
@@ -261,12 +274,12 @@ mod tests {
 
     #[test]
     fn test_parse_header_text() {
-        let header = r#"@HD	VN:1.6	SO:coordinate
-@SQ	SN:chr1	LN:248956422	M5:6aef897c3d6ff0c78aff06ac189178dd
-@SQ	SN:chr2	LN:242193529	M5:f98db672eb0993dcfdabafe2a882905c
+        let header = r"@HD	VN:1.6	SO:coordinate
+@SQ	SN:chr1	LN:248_956_422	M5:6aef897c3d6ff0c78aff06ac189178dd
+@SQ	SN:chr2	LN:242_193_529	M5:f98db672eb0993dcfdabafe2a882905c
 @SQ	SN:chrM	LN:16569
 @RG	ID:sample1
-"#;
+";
 
         let query = parse_header_text(header).unwrap();
         assert_eq!(query.contigs.len(), 3);
@@ -292,10 +305,10 @@ mod tests {
 
     #[test]
     fn test_parse_header_text_with_aliases() {
-        let header = r#"@HD	VN:1.6
-@SQ	SN:chr1	LN:248956422	M5:6aef897c3d6ff0c78aff06ac189178dd	AN:1,NC_000001.11
+        let header = r"@HD	VN:1.6
+@SQ	SN:chr1	LN:248_956_422	M5:6aef897c3d6ff0c78aff06ac189178dd	AN:1,NC_000001.11
 @SQ	SN:chrM	LN:16569	AN:MT,chrMT,NC_012920.1
-"#;
+";
 
         let query = parse_header_text(header).unwrap();
         assert_eq!(query.contigs.len(), 2);

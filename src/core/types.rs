@@ -38,12 +38,12 @@ impl std::fmt::Display for ReferenceSource {
             Self::Ensembl => write!(f, "Ensembl"),
             Self::OneThousandGenomes => write!(f, "1000 Genomes"),
             Self::Illumina => write!(f, "Illumina"),
-            Self::Custom(name) => write!(f, "{}", name),
+            Self::Custom(name) => write!(f, "{name}"),
         }
     }
 }
 
-/// Assembly version (e.g., GRCh37, GRCh38)
+/// Assembly version (e.g., `GRCh37`, `GRCh38`)
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Assembly {
     Grch37,
@@ -56,7 +56,7 @@ impl std::fmt::Display for Assembly {
         match self {
             Self::Grch37 => write!(f, "GRCh37"),
             Self::Grch38 => write!(f, "GRCh38"),
-            Self::Other(name) => write!(f, "{}", name),
+            Self::Other(name) => write!(f, "{name}"),
         }
     }
 }
@@ -104,6 +104,7 @@ pub enum Confidence {
 }
 
 impl Confidence {
+    #[must_use]
     pub fn from_score(score: f64) -> Self {
         if score >= 1.0 {
             Self::Exact

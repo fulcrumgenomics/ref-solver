@@ -2,7 +2,7 @@ use crate::core::header::QueryHeader;
 use std::path::Path;
 
 /// Supported file formats for reference identification
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub enum FileFormat {
     /// SAM/BAM/CRAM files or plain text headers
     Sam,
@@ -42,6 +42,8 @@ pub enum ParseError {
 
 impl FileFormat {
     /// Get the display name for this format
+    #[must_use]
+    #[allow(clippy::trivially_copy_pass_by_ref)] // Idiomatic method signature
     pub fn display_name(&self) -> &'static str {
         match self {
             FileFormat::Sam => "SAM/BAM Header",
@@ -57,6 +59,12 @@ impl FileFormat {
 }
 
 /// Detect file format from content and optional filename
+///
+/// # Errors
+///
+/// Returns `FormatError::UnknownFormat` if the format cannot be detected, or
+/// `FormatError::UnsupportedBinary` if the file appears to be binary but the
+/// specific format cannot be determined.
 pub fn detect_format(content: &str, filename: Option<&str>) -> Result<FileFormat, FormatError> {
     // First try filename-based detection if available
     if let Some(name) = filename {
@@ -212,6 +220,7 @@ fn detect_format_from_content(content: &str) -> Result<FileFormat, FormatError> 
 }
 
 /// Validate that content matches the expected format
+#[allow(clippy::trivially_copy_pass_by_ref)] // Clearer API with reference
 fn validate_format_content(content: &str, format: &FileFormat) -> bool {
     match format {
         FileFormat::Sam => {
@@ -239,6 +248,11 @@ fn validate_format_content(content: &str, format: &FileFormat) -> bool {
 }
 
 /// Parse content with the specified format
+///
+/// # Errors
+///
+/// Returns `ParseError::ParseFailed` if the content cannot be parsed with the
+/// specified format.
 pub fn parse_with_format(content: &str, format: FileFormat) -> Result<QueryHeader, ParseError> {
     match format {
         FileFormat::Sam => {
@@ -279,7 +293,7 @@ pub fn parse_with_format(content: &str, format: FileFormat) -> Result<QueryHeade
                 Err(_) => crate::parsing::tsv::parse_tsv_text(content, ',').map_err(|e| {
                     ParseError::ParseFailed {
                         format: FileFormat::Tsv,
-                        message: format!("Failed to parse as TSV or CSV: {}", e),
+                        message: format!("Failed to parse as TSV or CSV: {e}"),
                     }
                 }),
             }
@@ -297,7 +311,7 @@ pub fn parse_with_format(content: &str, format: FileFormat) -> Result<QueryHeade
             let detected_format =
                 detect_format_from_content(content).map_err(|e| ParseError::ParseFailed {
                     format: FileFormat::Auto,
-                    message: format!("Auto-detection failed: {}", e),
+                    message: format!("Auto-detection failed: {e}"),
                 })?;
 
             parse_with_format(content, detected_format)
@@ -308,6 +322,11 @@ pub fn parse_with_format(content: &str, format: FileFormat) -> Result<QueryHeade
 /// Parse binary file content (for BAM/CRAM files)
 ///
 /// Note: This creates a secure temporary file since the underlying parsers expect file paths
+///
+/// # Errors
+///
+/// Returns `ParseError::Io` if the temporary file cannot be created or written,
+/// or `ParseError::ParseFailed` if parsing fails.
 pub fn parse_binary_file(
     file_content: &[u8],
     format: FileFormat,
@@ -381,13 +400,13 @@ mod tests {
 
     #[test]
     fn test_sam_header_detection() {
-        let content = "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
+        let content = "@SQ\tSN:chr1\tLN:248_956_422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
         assert_eq!(detect_format_from_content(content), Ok(FileFormat::Sam));
     }
 
     #[test]
     fn test_dict_detection() {
-        let content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248956422\tM5:abc123\n";
+        let content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248_956_422\tM5:abc123\n";
         assert_eq!(detect_format_from_content(content), Ok(FileFormat::Dict));
     }
 
@@ -424,7 +443,7 @@ mod tests {
 
     #[test]
     fn test_combined_detection() {
-        let content = "@SQ\tSN:chr1\tLN:248956422\n";
+        let content = "@SQ\tSN:chr1\tLN:248_956_422\n";
         assert_eq!(
             detect_format(content, Some("test.sam")),
             Ok(FileFormat::Sam)

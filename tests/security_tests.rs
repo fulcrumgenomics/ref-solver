@@ -71,11 +71,8 @@ fn test_filename_validation_security() {
             Err(ValidationError::InvalidFilename) => {
                 // This is expected - directory traversal should be blocked
             }
-            Ok(_) => panic!(
-                "Directory traversal attempt '{}' should have been blocked",
-                attempt
-            ),
-            Err(e) => panic!("Unexpected error for '{}': {:?}", attempt, e),
+            Ok(_) => panic!("Directory traversal attempt '{attempt}' should have been blocked"),
+            Err(e) => panic!("Unexpected error for '{attempt}': {e:?}"),
         }
     }
 
@@ -85,8 +82,7 @@ fn test_filename_validation_security() {
     for attempt in null_byte_attempts {
         assert!(
             validate_filename(attempt).is_err(),
-            "Null byte injection '{}' should be blocked",
-            attempt
+            "Null byte injection '{attempt}' should be blocked"
         );
     }
 
@@ -96,8 +92,7 @@ fn test_filename_validation_security() {
     for attempt in control_char_attempts {
         assert!(
             validate_filename(attempt).is_err(),
-            "Control character injection '{}' should be blocked",
-            attempt
+            "Control character injection '{attempt}' should be blocked"
         );
     }
 
@@ -111,14 +106,15 @@ fn test_filename_validation_security() {
 
     for (input, expected) in valid_tests {
         match validate_filename(input) {
-            Ok(sanitized) => assert_eq!(sanitized, expected, "Sanitization failed for '{}'", input),
-            Err(e) => panic!("Valid filename '{}' should be accepted: {:?}", input, e),
+            Ok(sanitized) => assert_eq!(sanitized, expected, "Sanitization failed for '{input}'"),
+            Err(e) => panic!("Valid filename '{input}' should be accepted: {e:?}"),
         }
     }
 }
 
 /// Test file format validation using magic numbers
 #[test]
+#[allow(clippy::similar_names)] // valid_bam/valid_sam naming is intentional
 fn test_file_format_validation() {
     use ref_solver::utils::validation::validate_file_format;
     use ref_solver::web::format_detection::FileFormat;
@@ -249,7 +245,7 @@ fn test_format_detection_security() {
     use ref_solver::web::format_detection::{detect_format, FileFormat};
 
     // Test public format detection API with different content types
-    let dict_content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248956422\tM5:abc123\n";
+    let dict_content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248_956_422\tM5:abc123\n";
     let detected = detect_format(dict_content, Some("test.dict")).unwrap();
     // Should detect dict based on filename and content
     assert!(matches!(detected, FileFormat::Dict | FileFormat::Sam));
@@ -343,16 +339,15 @@ fn test_validation_error_handling() {
 
     for (input, expected_error_type) in test_cases {
         let result = validate_filename(input);
-        assert!(result.is_err(), "Input '{}' should fail validation", input);
+        assert!(result.is_err(), "Input '{input}' should fail validation");
 
         let error = result.unwrap_err();
         match (&error, &expected_error_type) {
-            (ValidationError::EmptyFilename, ValidationError::EmptyFilename) => {}
-            (ValidationError::FilenameTooLong, ValidationError::FilenameTooLong) => {}
-            (ValidationError::InvalidFilename, ValidationError::InvalidFilename) => {}
+            (ValidationError::EmptyFilename, ValidationError::EmptyFilename)
+            | (ValidationError::FilenameTooLong, ValidationError::FilenameTooLong)
+            | (ValidationError::InvalidFilename, ValidationError::InvalidFilename) => {}
             _ => panic!(
-                "Expected error type {:?} but got {:?} for input '{}'",
-                expected_error_type, error, input
+                "Expected error type {expected_error_type:?} but got {error:?} for input '{input}'"
             ),
         }
     }

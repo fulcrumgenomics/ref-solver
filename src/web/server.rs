@@ -27,7 +27,7 @@ use crate::web::format_detection::{
     detect_format, parse_binary_file, parse_with_format, FileFormat,
 };
 
-/// Security configuration constants to prevent DoS attacks
+/// Security configuration constants to prevent `DoS` attacks
 pub const MAX_MULTIPART_FIELDS: usize = 10;
 pub const MAX_FILE_FIELD_SIZE: usize = 16 * 1024 * 1024; // 16MB
 pub const MAX_TEXT_FIELD_SIZE: usize = 1024 * 1024; // 1MB
@@ -110,6 +110,11 @@ pub fn create_safe_error_response(
     }
 }
 
+/// Run the web server
+///
+/// # Errors
+///
+/// Returns an error if the tokio runtime cannot be created or the server fails to start.
 pub fn run(args: ServeArgs) -> anyhow::Result<()> {
     // Build tokio runtime
     let rt = tokio::runtime::Runtime::new()?;
@@ -117,6 +122,11 @@ pub fn run(args: ServeArgs) -> anyhow::Result<()> {
 }
 
 /// Create the application router with all routes and middleware configured.
+///
+/// # Errors
+///
+/// Returns an error if the catalog cannot be loaded.
+#[allow(clippy::missing_panics_doc)] // Panics only on invalid governor config (constants are valid)
 pub fn create_router() -> anyhow::Result<Router> {
     // Load catalog
     let catalog = ReferenceCatalog::load_embedded()?;
@@ -200,10 +210,10 @@ async fn run_server(args: ServeArgs) -> anyhow::Result<()> {
     let app = create_router()?;
 
     let addr = format!("{}:{}", args.address, args.port);
-    println!("Starting ref-solver web server at http://{}", addr);
+    println!("Starting ref-solver web server at http://{addr}");
 
     if args.open {
-        let _ = open::that(format!("http://{}", addr));
+        let _ = open::that(format!("http://{addr}"));
     }
 
     let listener = TcpListener::bind(&addr).await?;
@@ -291,6 +301,7 @@ async fn split_view_manager_js_handler() -> impl IntoResponse {
 }
 
 /// API endpoint for identifying references
+#[allow(clippy::too_many_lines)] // TODO: Refactor into smaller functions
 async fn identify_handler(
     State(state): State<Arc<AppState>>,
     Query(params): Query<DetailedQueryParams>,
@@ -397,6 +408,7 @@ async fn identify_handler(
         })
         .collect();
 
+    #[allow(clippy::cast_possible_truncation)] // Processing time won't exceed u64
     let processing_time = start_time.elapsed().as_millis() as u64;
 
     Json(serde_json::json!({
@@ -408,7 +420,7 @@ async fn identify_handler(
         },
         "matches": results,
         "processing_info": {
-            "detected_format": input_data.format.as_ref().map(|f| f.display_name()).unwrap_or("unknown"),
+            "detected_format": input_data.format.as_ref().map_or("unknown", super::format_detection::FileFormat::display_name),
             "processing_time_ms": processing_time,
             "configuration": {
                 "score_threshold": config.score_threshold,
@@ -421,6 +433,11 @@ async fn identify_handler(
 }
 
 /// Handle detailed response mode for contig breakdown
+#[allow(
+    clippy::cast_possible_truncation,
+    clippy::unused_async,
+    clippy::too_many_lines
+)] // JSON indices; TODO: refactor
 async fn handle_detailed_response(
     params: &DetailedQueryParams,
     matches: &[crate::matching::engine::MatchResult],
@@ -432,19 +449,16 @@ async fn handle_detailed_response(
 
     // Get the specific match or default to first match
     let match_index = params.match_id.unwrap_or(0);
-    let selected_match = match matches.get(match_index) {
-        Some(m) => m,
-        None => {
-            return (
-                StatusCode::BAD_REQUEST,
-                Json(create_safe_error_response(
-                    "invalid_match_id",
-                    "Invalid match ID specified",
-                    Some("Match index out of bounds"),
-                )),
-            )
-                .into_response();
-        }
+    let Some(selected_match) = matches.get(match_index) else {
+        return (
+            StatusCode::BAD_REQUEST,
+            Json(create_safe_error_response(
+                "invalid_match_id",
+                "Invalid match ID specified",
+                Some("Match index out of bounds"),
+            )),
+        )
+            .into_response();
     };
 
     // Set up pagination parameters
@@ -553,18 +567,30 @@ async fn handle_detailed_response(
 
     // Identify reference-only contigs (those not matched by any query contig)
     let mut matched_ref_indices = std::collections::HashSet::new();
+    #[allow(clippy::cast_possible_truncation)] // Contig indices bounded by MAX_CONTIGS
     for mapping in &exact_match_mappings {
-        if let Some(ref_idx) = mapping.get("reference_index").and_then(|v| v.as_u64()) {
+        if let Some(ref_idx) = mapping
+            .get("reference_index")
+            .and_then(serde_json::Value::as_u64)
+        {
             matched_ref_indices.insert(ref_idx as usize);
         }
     }
+    #[allow(clippy::cast_possible_truncation)]
     for mapping in &renamed_match_mappings {
-        if let Some(ref_idx) = mapping.get("reference_index").and_then(|v| v.as_u64()) {
+        if let Some(ref_idx) = mapping
+            .get("reference_index")
+            .and_then(serde_json::Value::as_u64)
+        {
             matched_ref_indices.insert(ref_idx as usize);
         }
     }
+    #[allow(clippy::cast_possible_truncation)]
     for mapping in &conflict_mappings {
-        if let Some(ref_idx) = mapping.get("reference_index").and_then(|v| v.as_u64()) {
+        if let Some(ref_idx) = mapping
+            .get("reference_index")
+            .and_then(serde_json::Value::as_u64)
+        {
             matched_ref_indices.insert(ref_idx as usize);
         }
     }
@@ -576,6 +602,7 @@ async fn handle_detailed_response(
     }
 
     // Build response
+    #[allow(clippy::cast_possible_truncation)] // Processing time won't exceed u64
     let processing_time = start_time.elapsed().as_millis() as u64;
 
     Json(serde_json::json!({
@@ -587,11 +614,11 @@ async fn handle_detailed_response(
                 // Determine match status for this contig
                 let match_status = if query_only_indices.contains(&global_idx) {
                     "missing"
-                } else if conflict_mappings.iter().any(|c| c.get("query_index").and_then(|v| v.as_u64()).map(|i| i as usize) == Some(global_idx)) {
+                } else if conflict_mappings.iter().any(|c| c.get("query_index").and_then(serde_json::Value::as_u64).map(|i| i as usize) == Some(global_idx)) {
                     "conflict"
-                } else if renamed_match_mappings.iter().any(|r| r.get("query_index").and_then(|v| v.as_u64()).map(|i| i as usize) == Some(global_idx)) {
+                } else if renamed_match_mappings.iter().any(|r| r.get("query_index").and_then(serde_json::Value::as_u64).map(|i| i as usize) == Some(global_idx)) {
                     "renamed"
-                } else if exact_match_mappings.iter().any(|e| e.get("query_index").and_then(|v| v.as_u64()).map(|i| i as usize) == Some(global_idx)) {
+                } else if exact_match_mappings.iter().any(|e| e.get("query_index").and_then(serde_json::Value::as_u64).map(|i| i as usize) == Some(global_idx)) {
                     "exact"
                 } else {
                     "unknown"
@@ -623,11 +650,11 @@ async fn handle_detailed_response(
                 // Determine match status for this reference contig
                 let match_status = if reference_only_indices.contains(&global_idx) {
                     "missing"
-                } else if conflict_mappings.iter().any(|c| c.get("reference_index").and_then(|v| v.as_u64()).map(|i| i as usize) == Some(global_idx)) {
+                } else if conflict_mappings.iter().any(|c| c.get("reference_index").and_then(serde_json::Value::as_u64).map(|i| i as usize) == Some(global_idx)) {
                     "conflict"
-                } else if renamed_match_mappings.iter().any(|r| r.get("reference_index").and_then(|v| v.as_u64()).map(|i| i as usize) == Some(global_idx)) {
+                } else if renamed_match_mappings.iter().any(|r| r.get("reference_index").and_then(serde_json::Value::as_u64).map(|i| i as usize) == Some(global_idx)) {
                     "renamed"
-                } else if exact_match_mappings.iter().any(|e| e.get("reference_index").and_then(|v| v.as_u64()).map(|i| i as usize) == Some(global_idx)) {
+                } else if exact_match_mappings.iter().any(|e| e.get("reference_index").and_then(serde_json::Value::as_u64).map(|i| i as usize) == Some(global_idx)) {
                     "exact"
                 } else {
                     "unknown"
@@ -678,6 +705,7 @@ async fn handle_detailed_response(
 }
 
 /// Extract input data and configuration from multipart form
+#[allow(clippy::too_many_lines)] // TODO: Refactor into smaller functions
 async fn extract_request_data(
     multipart: &mut Multipart,
 ) -> Result<(InputData, ConfigurationInfo), Response> {
@@ -719,7 +747,7 @@ async fn extract_request_data(
 
                 match name.as_str() {
                     "file" => {
-                        let filename = field.file_name().map(|s| s.to_string());
+                        let filename = field.file_name().map(std::string::ToString::to_string);
 
                         match field.bytes().await {
                             Ok(bytes) => {
@@ -744,11 +772,8 @@ async fn extract_request_data(
                                 };
 
                                 // Use comprehensive validation function for security
-                                match validate_upload(
-                                    filename.as_deref(),
-                                    &bytes,
-                                    detected_format.clone(),
-                                ) {
+                                match validate_upload(filename.as_deref(), &bytes, detected_format)
+                                {
                                     Ok(validated_filename) => {
                                         input_data.filename = validated_filename;
 
@@ -857,7 +882,7 @@ async fn extract_request_data(
                         if let Ok(text) = field.text().await {
                             if let Ok(weights) = serde_json::from_str::<HashMap<String, f64>>(&text)
                             {
-                                config.scoring_weights = parse_scoring_weights(weights);
+                                config.scoring_weights = parse_scoring_weights(&weights);
                             }
                         }
                     }
@@ -931,7 +956,7 @@ fn parse_input_data(
         }
     } else if let Some(binary_content) = &input_data.binary_content {
         // Binary file parsing
-        let format = input_data.format.clone().unwrap_or(FileFormat::Bam);
+        let format = input_data.format.unwrap_or(FileFormat::Bam);
 
         match parse_binary_file(binary_content, format) {
             Ok(query) => Ok(query),
@@ -998,7 +1023,7 @@ fn detect_binary_format(filename: &str) -> Option<FileFormat> {
 }
 
 /// Parse scoring weights from frontend format
-fn parse_scoring_weights(weights: HashMap<String, f64>) -> ScoringWeights {
+fn parse_scoring_weights(weights: &HashMap<String, f64>) -> ScoringWeights {
     // Note: The frontend sends percentages (0-100), but the backend expects ratios (0-1)
     let md5_jaccard = weights.get("md5Jaccard").unwrap_or(&40.0) / 100.0;
     let name_length_jaccard = weights.get("nameLength").unwrap_or(&30.0) / 100.0;

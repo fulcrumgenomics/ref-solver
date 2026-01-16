@@ -31,7 +31,7 @@ pub enum CatalogCommands {
         #[arg(long)]
         catalog: Option<PathBuf>,
 
-        /// Filter by assembly (e.g., "GRCh38")
+        /// Filter by assembly (e.g., "`GRCh38`")
         #[arg(long)]
         assembly: Option<String>,
 
@@ -73,9 +73,9 @@ pub enum CatalogCommands {
         catalog: PathBuf,
     },
 
-    /// Build a hierarchical catalog entry (FastaDistribution)
+    /// Build a hierarchical catalog entry (`FastaDistribution`)
     BuildHierarchical {
-        /// Distribution ID (e.g., "hg38_custom")
+        /// Distribution ID (e.g., "`hg38_custom`")
         #[arg(long, required = true)]
         id: String,
 
@@ -91,7 +91,7 @@ pub enum CatalogCommands {
         #[arg(long)]
         assembly_id: Option<String>,
 
-        /// Version ID to attach to (e.g., "grch38_p14")
+        /// Version ID to attach to (e.g., "`grch38_p14`")
         #[arg(long)]
         version_id: Option<String>,
 
@@ -126,21 +126,23 @@ pub enum CatalogCommands {
         /// Infer base assembly by matching MD5s against an existing catalog
         /// If no path given, uses the embedded catalog (or --append-to catalog)
         #[arg(long)]
+        #[allow(clippy::option_option)]
+        // Distinguishes: not present / present without value / present with value
         infer_assembly: Option<Option<PathBuf>>,
     },
 
     /// Build a new reference entry from input files
     Build {
-        /// Unique reference ID (e.g., "grch38_custom")
+        /// Unique reference ID (e.g., "`grch38_custom`")
         #[arg(long, required = true)]
         id: String,
 
-        /// Display name (e.g., "GRCh38 Custom Build")
+        /// Display name (e.g., "`GRCh38` Custom Build")
         #[arg(long, required = true)]
         name: String,
 
         /// Input file(s) - can be specified multiple times
-        /// Supported formats: .dict, .fai, .sam, .bam, .cram, .vcf, _assembly_report.txt
+        /// Supported formats: .dict, .fai, .sam, .bam, .cram, .vcf, _`assembly_report.txt`
         #[arg(short, long = "input", required = true, num_args = 1..)]
         inputs: Vec<PathBuf>,
 
@@ -220,6 +222,11 @@ impl From<InputFormatArg> for InputFormat {
     }
 }
 
+/// Execute catalog subcommand
+///
+/// # Errors
+///
+/// Returns an error if the catalog cannot be loaded or the operation fails.
 pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Result<()> {
     match args.command {
         CatalogCommands::List {
@@ -309,6 +316,7 @@ pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
     }
 }
 
+#[allow(clippy::too_many_lines)] // TODO: Refactor into smaller functions
 fn run_list(
     catalog_path: Option<PathBuf>,
     assembly_filter: Option<&str>,
@@ -492,6 +500,7 @@ fn run_list(
     Ok(())
 }
 
+#[allow(clippy::needless_pass_by_value)] // CLI entry point, values from clap
 fn run_show(
     id: String,
     catalog_path: Option<PathBuf>,
@@ -507,7 +516,7 @@ fn run_show(
     let ref_id = crate::core::types::ReferenceId::new(&id);
     let reference = catalog
         .get(&ref_id)
-        .ok_or_else(|| anyhow::anyhow!("Reference '{}' not found", id))?;
+        .ok_or_else(|| anyhow::anyhow!("Reference '{id}' not found"))?;
 
     match format {
         OutputFormat::Text => {
@@ -521,11 +530,11 @@ fn run_show(
             println!("Has ALT:   {}", reference.has_alt());
 
             if let Some(desc) = &reference.description {
-                println!("\nDescription: {}", desc);
+                println!("\nDescription: {desc}");
             }
 
             if let Some(url) = &reference.download_url {
-                println!("\nDownload URL: {}", url);
+                println!("\nDownload URL: {url}");
             }
 
             if !reference.tags.is_empty() {
@@ -576,6 +585,7 @@ fn run_show(
     Ok(())
 }
 
+#[allow(clippy::needless_pass_by_value)] // CLI entry point, values from clap
 fn run_export(output: PathBuf, catalog_path: Option<PathBuf>) -> anyhow::Result<()> {
     let catalog = if let Some(path) = catalog_path {
         ReferenceCatalog::load_from_file(&path)?
@@ -595,6 +605,7 @@ fn run_export(output: PathBuf, catalog_path: Option<PathBuf>) -> anyhow::Result<
     Ok(())
 }
 
+#[allow(clippy::needless_pass_by_value, clippy::too_many_lines)] // CLI entry point; TODO: refactor
 fn run_list_hierarchical(
     catalog_path: PathBuf,
     format: OutputFormat,
@@ -648,14 +659,14 @@ fn run_list_hierarchical(
                     // Show report source
                     match &version.source {
                         crate::core::assembly::ReportSource::Ncbi { accession, .. } => {
-                            println!("    Source: NCBI ({})", accession);
+                            println!("    Source: NCBI ({accession})");
                         }
                         crate::core::assembly::ReportSource::DerivedFromFasta {
                             base_assembly,
                             ..
                         } => {
                             if let Some(base) = base_assembly {
-                                println!("    Source: Derived from FASTA (base: {})", base);
+                                println!("    Source: Derived from FASTA (base: {base})");
                             } else {
                                 println!("    Source: Derived from FASTA");
                             }
@@ -691,7 +702,7 @@ fn run_list_hierarchical(
                             }
 
                             if let Some(url) = &dist.download_url {
-                                println!("        URL: {}", url);
+                                println!("        URL: {url}");
                             }
                         }
                     }
@@ -754,7 +765,12 @@ fn run_list_hierarchical(
     Ok(())
 }
 
-#[allow(clippy::too_many_arguments)]
+#[allow(
+    clippy::too_many_arguments,
+    clippy::needless_pass_by_value,
+    clippy::option_option,
+    clippy::too_many_lines
+)] // CLI entry point
 fn run_build_hierarchical(
     id: String,
     name: String,
@@ -775,9 +791,9 @@ fn run_build_hierarchical(
     use crate::catalog::builder::DistributionBuilder;
 
     // Parse source
-    let ref_source = source
-        .map(|s| parse_reference_source(&s))
-        .unwrap_or(ReferenceSource::Custom("custom".to_string()));
+    let ref_source = source.map_or(ReferenceSource::Custom("custom".to_string()), |s| {
+        parse_reference_source(&s)
+    });
 
     // Parse tags
     let tags: Vec<String> = tags
@@ -861,29 +877,26 @@ fn run_build_hierarchical(
         };
 
         if let Some(ref catalog) = infer_catalog {
-            match catalog.infer_base_assembly_default(&dist.contigs) {
-                Some(inferred) => {
-                    if verbose {
-                        eprintln!(
-                            "Inferred base assembly: {} {} ({:.1}% match, {}/{} contigs)",
-                            inferred.assembly_name,
-                            inferred.version_string,
-                            inferred.match_rate * 100.0,
-                            inferred.matched_contigs,
-                            inferred.total_input_contigs
-                        );
-                    }
-                    (
-                        assembly_id.clone().or(Some(inferred.assembly_id)),
-                        version_id.clone().or(Some(inferred.version_id)),
-                    )
+            if let Some(inferred) = catalog.infer_base_assembly_default(&dist.contigs) {
+                if verbose {
+                    eprintln!(
+                        "Inferred base assembly: {} {} ({:.1}% match, {}/{} contigs)",
+                        inferred.assembly_name,
+                        inferred.version_string,
+                        inferred.match_rate * 100.0,
+                        inferred.matched_contigs,
+                        inferred.total_input_contigs
+                    );
                 }
-                None => {
-                    if verbose {
-                        eprintln!("Could not infer base assembly (no match above 90% threshold)");
-                    }
-                    (assembly_id.clone(), version_id.clone())
+                (
+                    assembly_id.clone().or(Some(inferred.assembly_id)),
+                    version_id.clone().or(Some(inferred.version_id)),
+                )
+            } else {
+                if verbose {
+                    eprintln!("Could not infer base assembly (no match above 90% threshold)");
                 }
+                (assembly_id.clone(), version_id.clone())
             }
         } else {
             (assembly_id.clone(), version_id.clone())
@@ -907,9 +920,7 @@ fn run_build_hierarchical(
                             // Check for existing distribution
                             if !force && version.fasta_distributions.iter().any(|d| d.id == id) {
                                 anyhow::bail!(
-                                    "Distribution '{}' already exists in version '{}'. Use --force to overwrite.",
-                                    id,
-                                    ver_id
+                                    "Distribution '{id}' already exists in version '{ver_id}'. Use --force to overwrite."
                                 );
                             }
 
@@ -923,18 +934,13 @@ fn run_build_hierarchical(
                 }
             }
             if !found {
-                anyhow::bail!(
-                    "Assembly '{}' with version '{}' not found in catalog",
-                    asm_id,
-                    ver_id
-                );
+                anyhow::bail!("Assembly '{asm_id}' with version '{ver_id}' not found in catalog");
             }
         } else {
             // Add as standalone distribution
             if !force && catalog.standalone_distributions.iter().any(|d| d.id == id) {
                 anyhow::bail!(
-                    "Standalone distribution '{}' already exists. Use --force to overwrite.",
-                    id
+                    "Standalone distribution '{id}' already exists. Use --force to overwrite."
                 );
             }
             catalog.standalone_distributions.retain(|d| d.id != id);
@@ -953,19 +959,16 @@ fn run_build_hierarchical(
         }
 
         // Output as standalone distribution JSON or wrap in catalog
-        match format {
-            OutputFormat::Json => {
-                // Just output the distribution as JSON
-                let json = serde_json::to_string_pretty(&dist)?;
-                std::fs::write(&out_path, json)?;
-                eprintln!("Wrote distribution to {}", out_path.display());
-            }
-            _ => {
-                // Create a catalog with just this distribution
-                let catalog = HierarchicalCatalog::new().with_standalone_distribution(dist);
-                catalog.save(&out_path)?;
-                eprintln!("Wrote hierarchical catalog to {}", out_path.display());
-            }
+        if let OutputFormat::Json = format {
+            // Just output the distribution as JSON
+            let json = serde_json::to_string_pretty(&dist)?;
+            std::fs::write(&out_path, json)?;
+            eprintln!("Wrote distribution to {}", out_path.display());
+        } else {
+            // Create a catalog with just this distribution
+            let catalog = HierarchicalCatalog::new().with_standalone_distribution(dist);
+            catalog.save(&out_path)?;
+            eprintln!("Wrote hierarchical catalog to {}", out_path.display());
         }
     } else {
         // Print to stdout
@@ -1000,7 +1003,7 @@ fn print_distribution_summary(dist: &crate::core::assembly::FastaDistribution) {
     println!("Distribution: {} ({})", dist.display_name, dist.id);
     println!("Source: {:?}", dist.source);
     if let Some(url) = &dist.download_url {
-        println!("Download URL: {}", url);
+        println!("Download URL: {url}");
     }
     if !dist.tags.is_empty() {
         println!("Tags: {}", dist.tags.join(", "));
@@ -1008,14 +1011,14 @@ fn print_distribution_summary(dist: &crate::core::assembly::FastaDistribution) {
     println!("Contigs: {}", dist.contigs.len());
 
     let md5_count = dist.contigs.iter().filter(|c| !c.md5.is_empty()).count();
-    println!("With MD5: {}", md5_count);
+    println!("With MD5: {md5_count}");
 
     let linked = dist
         .contigs
         .iter()
         .filter(|c| c.report_contig_id.is_some())
         .count();
-    println!("Linked to report: {}", linked);
+    println!("Linked to report: {linked}");
 
     // Show presence counts
     let counts = dist.presence_counts();
@@ -1047,7 +1050,11 @@ fn truncate(s: &str, max_len: usize) -> String {
     }
 }
 
-#[allow(clippy::too_many_arguments)]
+#[allow(
+    clippy::too_many_arguments,
+    clippy::needless_pass_by_value,
+    clippy::too_many_lines
+)] // CLI entry point
 fn run_build(
     id: String,
     name: String,
@@ -1123,7 +1130,7 @@ fn run_build(
     if !summary.conflicts.is_empty() {
         eprintln!("Build failed due to conflicts:");
         for conflict in &summary.conflicts {
-            eprintln!("  - {}", conflict);
+            eprintln!("  - {conflict}");
         }
         anyhow::bail!(
             "Build failed: {} conflict(s) detected",
@@ -1145,7 +1152,7 @@ fn run_build(
 
     // Print summary
     if verbose || matches!(format, OutputFormat::Text) {
-        eprintln!("{}", summary);
+        eprintln!("{summary}");
     }
 
     // Handle output
@@ -1161,7 +1168,7 @@ fn run_build(
         let ref_id = crate::core::types::ReferenceId::new(&id);
         if catalog.get(&ref_id).is_some() {
             if force {
-                eprintln!("Warning: Overwriting existing reference '{}'", id);
+                eprintln!("Warning: Overwriting existing reference '{id}'");
                 // Remove old reference by rebuilding catalog without it
                 let refs: Vec<_> = catalog
                     .references
@@ -1174,8 +1181,7 @@ fn run_build(
                 }
             } else {
                 anyhow::bail!(
-                    "Reference '{}' already exists in catalog. Use --force to overwrite.",
-                    id
+                    "Reference '{id}' already exists in catalog. Use --force to overwrite."
                 );
             }
         }

@@ -1,7 +1,7 @@
 //! Parser for FASTA index (.fai) files using noodles.
 //!
 //! FAI format provides name and length for each contig, but no MD5 or aliases.
-//! Format: name\tlength\toffset\tline_bases\tline_width
+//! Format: `name\tlength\toffset\tline_bases\tline_width`
 
 use std::io::BufReader;
 use std::path::Path;
@@ -12,6 +12,12 @@ use crate::parsing::sam::ParseError;
 use crate::utils::validation::check_contig_limit;
 
 /// Parse a FASTA index (.fai) file using noodles
+///
+/// # Errors
+///
+/// Returns `ParseError::Io` if the file cannot be read, `ParseError::Noodles` if
+/// parsing fails, `ParseError::InvalidFormat` if no contigs are found, or
+/// `ParseError::TooManyContigs` if the limit is exceeded.
 pub fn parse_fai_file(path: &Path) -> Result<QueryHeader, ParseError> {
     use noodles::fasta;
 
@@ -19,12 +25,12 @@ pub fn parse_fai_file(path: &Path) -> Result<QueryHeader, ParseError> {
 
     let index = fasta::fai::io::Reader::new(reader)
         .read_index()
-        .map_err(|e| ParseError::Noodles(format!("Failed to parse FAI file: {}", e)))?;
+        .map_err(|e| ParseError::Noodles(format!("Failed to parse FAI file: {e}")))?;
 
     index_to_query(&index)
 }
 
-/// Convert noodles FAI index to QueryHeader
+/// Convert noodles FAI index to `QueryHeader`
 fn index_to_query(index: &noodles::fasta::fai::Index) -> Result<QueryHeader, ParseError> {
     let mut contigs = Vec::new();
 
@@ -50,6 +56,11 @@ fn index_to_query(index: &noodles::fasta::fai::Index) -> Result<QueryHeader, Par
 }
 
 /// Parse FAI from text (fallback for raw text input)
+///
+/// # Errors
+///
+/// Returns `ParseError::InvalidFormat` if the text has invalid format or no contigs,
+/// or `ParseError::TooManyContigs` if the limit is exceeded.
 pub fn parse_fai_text(text: &str) -> Result<QueryHeader, ParseError> {
     let mut contigs = Vec::new();
 
@@ -161,20 +172,20 @@ mod tests {
 
     #[test]
     fn test_parse_fai_text() {
-        let fai = r#"chr1	248956422	112	70	71
+        let fai = r"chr1	248956422	112	70	71
 chr2	242193529	253404903	70	71
 chrM	16569	3099922541	70	71
-"#;
+";
 
         let query = parse_fai_text(fai).unwrap();
         assert_eq!(query.contigs.len(), 3);
 
         assert_eq!(query.contigs[0].name, "chr1");
-        assert_eq!(query.contigs[0].length, 248956422);
+        assert_eq!(query.contigs[0].length, 248_956_422);
         assert!(query.contigs[0].md5.is_none()); // FAI doesn't have MD5
 
         assert_eq!(query.contigs[1].name, "chr2");
-        assert_eq!(query.contigs[1].length, 242193529);
+        assert_eq!(query.contigs[1].length, 242_193_529);
 
         assert_eq!(query.contigs[2].name, "chrM");
         assert_eq!(query.contigs[2].length, 16569);
@@ -187,7 +198,7 @@ chrM	16569	3099922541	70	71
         let entries = parse_fai_entries(fai).unwrap();
         assert_eq!(entries.len(), 1);
         assert_eq!(entries[0].name, "chr1");
-        assert_eq!(entries[0].length, 248956422);
+        assert_eq!(entries[0].length, 248_956_422);
         assert_eq!(entries[0].offset, 112);
         assert_eq!(entries[0].line_bases, 70);
         assert_eq!(entries[0].line_width, 71);

@@ -38,11 +38,11 @@ pub struct ReferenceCatalog {
     /// Index: MD5 -> indices of references containing this MD5
     pub md5_to_refs: HashMap<String, Vec<usize>>,
 
-    /// Index: (exact_name, length) -> indices of references
+    /// Index: (`exact_name`, length) -> indices of references
     pub name_length_to_refs: HashMap<(String, u64), Vec<usize>>,
 
     /// Index: (alias, length) -> indices of references
-    /// Separate from name_length_to_refs to distinguish primary names from aliases
+    /// Separate from `name_length_to_refs` to distinguish primary names from aliases
     pub alias_length_to_refs: HashMap<(String, u64), Vec<usize>>,
 
     /// Index: signature -> reference index (for exact matches)
@@ -51,6 +51,7 @@ pub struct ReferenceCatalog {
 
 impl ReferenceCatalog {
     /// Create an empty catalog
+    #[must_use]
     pub fn new() -> Self {
         Self {
             references: Vec::new(),
@@ -63,6 +64,10 @@ impl ReferenceCatalog {
     }
 
     /// Load the embedded default catalog
+    ///
+    /// # Errors
+    ///
+    /// Returns `CatalogError::Json` if the embedded catalog is invalid.
     pub fn load_embedded() -> Result<Self, CatalogError> {
         // Embedded at compile time via build.rs
         const EMBEDDED_CATALOG: &str = include_str!("../../catalogs/human_references.json");
@@ -70,12 +75,21 @@ impl ReferenceCatalog {
     }
 
     /// Load catalog from a JSON file
+    ///
+    /// # Errors
+    ///
+    /// Returns `CatalogError::Io` if the file cannot be read, or
+    /// `CatalogError::Json` if parsing fails.
     pub fn load_from_file(path: &Path) -> Result<Self, CatalogError> {
         let content = std::fs::read_to_string(path)?;
         Self::from_json(&content)
     }
 
     /// Parse catalog from JSON string
+    ///
+    /// # Errors
+    ///
+    /// Returns `CatalogError::Json` if the JSON is invalid.
     pub fn from_json(json: &str) -> Result<Self, CatalogError> {
         let data: CatalogData = serde_json::from_str(json)?;
 
@@ -135,11 +149,13 @@ impl ReferenceCatalog {
     }
 
     /// Get a reference by ID
+    #[must_use]
     pub fn get(&self, id: &ReferenceId) -> Option<&KnownReference> {
         self.id_to_index.get(id).map(|&idx| &self.references[idx])
     }
 
     /// Find exact match by signature
+    #[must_use]
     pub fn find_by_signature(&self, signature: &str) -> Option<&KnownReference> {
         self.signature_to_ref
             .get(signature)
@@ -147,6 +163,10 @@ impl ReferenceCatalog {
     }
 
     /// Export catalog to JSON
+    ///
+    /// # Errors
+    ///
+    /// Returns `CatalogError::Json` if serialization fails.
     pub fn to_json(&self) -> Result<String, CatalogError> {
         let data = CatalogData {
             version: CATALOG_VERSION.to_string(),
@@ -157,11 +177,13 @@ impl ReferenceCatalog {
     }
 
     /// Number of references in catalog
+    #[must_use]
     pub fn len(&self) -> usize {
         self.references.len()
     }
 
     /// Check if catalog is empty
+    #[must_use]
     pub fn is_empty(&self) -> bool {
         self.references.is_empty()
     }

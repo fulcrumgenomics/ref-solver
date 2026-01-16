@@ -21,12 +21,14 @@ pub const MIN_FILE_CONTENT_SIZE: usize = 1;
 /// assert!(!is_valid_md5("not-an-md5"));
 /// assert!(!is_valid_md5("6aef897c3d6ff0c78aff06ac189178d")); // 31 chars
 /// ```
+#[must_use]
 pub fn is_valid_md5(s: &str) -> bool {
     s.len() == 32 && s.chars().all(|c| c.is_ascii_hexdigit())
 }
 
 /// Normalize an MD5 string to lowercase.
 /// Returns None if the input is not a valid MD5.
+#[must_use]
 pub fn normalize_md5(s: &str) -> Option<String> {
     if is_valid_md5(s) {
         Some(s.to_lowercase())
@@ -43,16 +45,18 @@ pub fn normalize_md5(s: &str) -> Option<String> {
 /// 3. Computing MD5 of the concatenated string
 ///
 /// This provides a deterministic identifier for a set of contigs.
+#[must_use]
+#[allow(clippy::implicit_hasher)] // Default hasher is fine for this use case
 pub fn compute_signature(md5s: &HashSet<String>) -> String {
     if md5s.is_empty() {
         return String::new();
     }
 
-    let mut sorted: Vec<&str> = md5s.iter().map(|s| s.as_str()).collect();
-    sorted.sort();
+    let mut sorted: Vec<&str> = md5s.iter().map(std::string::String::as_str).collect();
+    sorted.sort_unstable();
     let concatenated = sorted.join(",");
     let digest = md5::compute(concatenated.as_bytes());
-    format!("{:x}", digest)
+    format!("{digest:x}")
 }
 
 /// Check if adding another contig would exceed the maximum allowed.
@@ -67,11 +71,11 @@ pub fn compute_signature(md5s: &HashSet<String>) -> String {
 /// }
 /// contigs.push(new_contig); // Safe to add
 /// ```
+#[must_use]
 pub fn check_contig_limit(count: usize) -> Option<String> {
     if count >= MAX_CONTIGS {
         Some(format!(
-            "Too many contigs: adding another would exceed maximum of {}",
-            MAX_CONTIGS
+            "Too many contigs: adding another would exceed maximum of {MAX_CONTIGS}"
         ))
     } else {
         None
@@ -101,7 +105,11 @@ pub enum ValidationError {
 /// - Removing potentially dangerous characters
 /// - Ensuring filename is not empty after sanitization
 ///
-/// Returns sanitized filename on success
+/// # Errors
+///
+/// Returns `ValidationError::EmptyFilename` if the filename is empty,
+/// `ValidationError::FilenameTooLong` if it exceeds the limit, or
+/// `ValidationError::InvalidFilename` if it contains invalid characters.
 pub fn validate_filename(filename: &str) -> Result<String, ValidationError> {
     // Check if filename is empty
     if filename.trim().is_empty() {
@@ -166,6 +174,7 @@ fn has_known_extension(filename: &str) -> bool {
 ///
 /// Performs format validation by checking magic numbers (file signatures)
 /// to prevent format confusion attacks and ensure file integrity
+#[must_use]
 pub fn validate_file_format(content: &[u8], expected_format: FileFormat) -> bool {
     if content.is_empty() {
         return false;
@@ -224,6 +233,11 @@ pub fn validate_file_format(content: &[u8], expected_format: FileFormat) -> bool
 /// - Minimum size requirements
 /// - Binary content detection for text formats
 /// - Basic malformation checks
+///
+/// # Errors
+///
+/// Returns `ValidationError::InvalidFileContent` if the content is too small,
+/// contains unexpected binary data for text formats, or fails UTF-8 validation.
 pub fn validate_file_content(content: &[u8], expected_text: bool) -> Result<(), ValidationError> {
     // Check minimum content size
     if content.len() < MIN_FILE_CONTENT_SIZE {
@@ -258,6 +272,11 @@ pub fn validate_file_content(content: &[u8], expected_text: bool) -> Result<(), 
 /// - Filename sanitization and security checks
 /// - File format validation via magic numbers
 /// - Content integrity validation
+///
+/// # Errors
+///
+/// Returns a `ValidationError` if filename validation fails, the file format
+/// doesn't match the expected format, or content validation fails.
 pub fn validate_upload(
     filename: Option<&str>,
     content: &[u8],
@@ -284,11 +303,7 @@ pub fn validate_upload(
     validate_file_content(content, is_text_format)?;
 
     // Validate file format - even for auto-detection, check for obvious mismatches
-    if expected_format != FileFormat::Auto {
-        if !validate_file_format(content, expected_format.clone()) {
-            return Err(ValidationError::FormatValidationFailed);
-        }
-    } else {
+    if expected_format == FileFormat::Auto {
         // For auto-detection, at least verify it's not a malformed binary file
         // Check if it looks like a known binary format but is malformed
         if content.len() >= 4 {
@@ -303,6 +318,8 @@ pub fn validate_upload(
                 return Err(ValidationError::FormatValidationFailed);
             }
         }
+    } else if !validate_file_format(content, expected_format) {
+        return Err(ValidationError::FormatValidationFailed);
     }
 
     Ok(validated_filename)

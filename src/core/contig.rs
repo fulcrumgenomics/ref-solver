@@ -25,6 +25,7 @@ pub enum SequenceRole {
 
 impl SequenceRole {
     /// Parse a sequence role from string representation (e.g. from NCBI assembly report)
+    #[must_use]
     pub fn parse(s: &str) -> Self {
         match s.to_lowercase().as_str() {
             "assembled-molecule" => SequenceRole::AssembledMolecule,
@@ -73,6 +74,7 @@ pub struct Contig {
     pub sequence_role: SequenceRole,
 }
 
+#[allow(clippy::trivially_copy_pass_by_ref)] // Required signature for serde skip_serializing_if
 fn is_unknown_role(role: &SequenceRole) -> bool {
     matches!(role, SequenceRole::Unknown)
 }
@@ -92,6 +94,7 @@ impl Contig {
     }
 
     #[cfg(test)]
+    #[must_use]
     pub fn with_md5(mut self, md5: impl Into<String>) -> Self {
         self.md5 = Some(md5.into());
         self
@@ -99,6 +102,7 @@ impl Contig {
 
     /// Check if this contig is a primary chromosome (1-22, X, Y)
     /// Matches both UCSC (chr1) and NCBI (1) naming conventions exactly
+    #[must_use]
     pub fn is_primary_chromosome(&self) -> bool {
         // NCBI style: 1-22, X, Y
         // UCSC style: chr1-chr22, chrX, chrY
@@ -156,6 +160,7 @@ impl Contig {
 
     /// Check if this is a mitochondrial contig
     /// Matches common mitochondrial names from various reference builds
+    #[must_use]
     pub fn is_mitochondrial(&self) -> bool {
         let name_lower = self.name.to_lowercase();
         matches!(
@@ -164,12 +169,14 @@ impl Contig {
         ) || name_lower.contains("mitochon")
     }
 
-    /// Check if this is an ALT contig (GRCh38)
+    /// Check if this is an ALT contig (`GRCh38`)
+    #[must_use]
     pub fn is_alt(&self) -> bool {
         self.name.ends_with("_alt") || self.name.contains("_alt_")
     }
 
     /// Check if this is a decoy contig
+    #[must_use]
     pub fn is_decoy(&self) -> bool {
         self.name.contains("decoy")
             || self.name == "hs37d5"
@@ -183,6 +190,7 @@ impl Contig {
 // or NCBI assembly report columns). Matching uses exact names.
 
 /// Detect the naming convention used by a set of contigs
+#[must_use]
 pub fn detect_naming_convention(contigs: &[Contig]) -> NamingConvention {
     let mut has_chr_prefix = false;
     let mut has_no_prefix = false;

@@ -6,11 +6,23 @@ use crate::parsing::sam::ParseError;
 use crate::utils::validation::{check_contig_limit, normalize_md5};
 
 /// Parse a TSV/CSV file with columns: name, length, [md5]
+///
+/// # Errors
+///
+/// Returns `ParseError::Io` if the file cannot be read, or other parse errors
+/// if the content is invalid.
 pub fn parse_tsv_file(path: &Path, delimiter: char) -> Result<QueryHeader, ParseError> {
     let content = std::fs::read_to_string(path)?;
     parse_tsv_text(&content, delimiter)
 }
 
+/// Parse TSV/CSV text with columns: name, length, [md5]
+///
+/// # Errors
+///
+/// Returns `ParseError::InvalidFormat` if lines have fewer than 2 fields,
+/// contain invalid length values, or no contigs are found, or
+/// `ParseError::TooManyContigs` if the limit is exceeded.
 pub fn parse_tsv_text(text: &str, delimiter: char) -> Result<QueryHeader, ParseError> {
     let mut contigs = Vec::new();
     let mut first_data_line = true;
@@ -37,8 +49,7 @@ pub fn parse_tsv_text(text: &str, delimiter: char) -> Result<QueryHeader, ParseE
 
         if fields.len() < 2 {
             return Err(ParseError::InvalidFormat(format!(
-                "Line {} has fewer than 2 fields",
-                line_num
+                "Line {line_num} has fewer than 2 fields"
             )));
         }
 
@@ -81,26 +92,26 @@ mod tests {
 
     #[test]
     fn test_parse_tsv_text() {
-        let tsv = r#"name	length	md5
-chr1	248956422	6aef897c3d6ff0c78aff06ac189178dd
-chr2	242193529	f98db672eb0993dcfdabafe2a882905c
+        let tsv = r"name	length	md5
+chr1	248_956_422	6aef897c3d6ff0c78aff06ac189178dd
+chr2	242_193_529	f98db672eb0993dcfdabafe2a882905c
 chrM	16569
-"#;
+";
 
         let query = parse_tsv_text(tsv, '\t').unwrap();
         assert_eq!(query.contigs.len(), 3);
         assert_eq!(query.contigs[0].name, "chr1");
-        assert_eq!(query.contigs[0].length, 248956422);
+        assert_eq!(query.contigs[0].length, 248_956_422);
         assert!(query.contigs[0].md5.is_some());
         assert!(query.contigs[2].md5.is_none());
     }
 
     #[test]
     fn test_parse_csv_text() {
-        let csv = r#"chrom,length,md5
-chr1,248956422,6aef897c3d6ff0c78aff06ac189178dd
-chr2,242193529,f98db672eb0993dcfdabafe2a882905c
-"#;
+        let csv = r"chrom,length,md5
+chr1,248_956_422,6aef897c3d6ff0c78aff06ac189178dd
+chr2,242_193_529,f98db672eb0993dcfdabafe2a882905c
+";
 
         let query = parse_tsv_text(csv, ',').unwrap();
         assert_eq!(query.contigs.len(), 2);
@@ -108,7 +119,7 @@ chr2,242193529,f98db672eb0993dcfdabafe2a882905c
 
     #[test]
     fn test_parse_tsv_no_header() {
-        let tsv = "chr1\t248956422\nchr2\t242193529\n";
+        let tsv = "chr1\t248_956_422\nchr2\t242_193_529\n";
         let query = parse_tsv_text(tsv, '\t').unwrap();
         assert_eq!(query.contigs.len(), 2);
     }
@@ -116,13 +127,13 @@ chr2,242193529,f98db672eb0993dcfdabafe2a882905c
     #[test]
     fn test_parse_tsv_comments_before_header() {
         // Test that header detection works even with comments before it
-        let tsv = r#"# This is a comment
+        let tsv = r"# This is a comment
 # Another comment
 
 name	length	md5
-chr1	248956422	6aef897c3d6ff0c78aff06ac189178dd
-chr2	242193529	f98db672eb0993dcfdabafe2a882905c
-"#;
+chr1	248_956_422	6aef897c3d6ff0c78aff06ac189178dd
+chr2	242_193_529	f98db672eb0993dcfdabafe2a882905c
+";
         let query = parse_tsv_text(tsv, '\t').unwrap();
         assert_eq!(query.contigs.len(), 2);
         assert_eq!(query.contigs[0].name, "chr1");

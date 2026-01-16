@@ -1,7 +1,7 @@
 //! Hierarchical catalog structure for assemblies and distributions.
 //!
 //! This module provides a hierarchical catalog structure:
-//! HierarchicalCatalog → HierarchicalAssembly → AssemblyVersion → FastaDistribution
+//! `HierarchicalCatalog` → `HierarchicalAssembly` → `AssemblyVersion` → `FastaDistribution`
 //!
 //! This structure allows:
 //! - Clear relationships between assemblies and their versions
@@ -47,6 +47,7 @@ impl Default for HierarchicalCatalog {
 }
 
 impl HierarchicalCatalog {
+    #[must_use]
     pub fn new() -> Self {
         Self {
             version: "1.0.0".to_string(),
@@ -57,12 +58,14 @@ impl HierarchicalCatalog {
     }
 
     /// Add a standalone distribution (no assembly report)
+    #[must_use]
     pub fn with_standalone_distribution(mut self, dist: FastaDistribution) -> Self {
         self.standalone_distributions.push(dist);
         self
     }
 
     /// Build indexes for fast matching
+    #[must_use]
     pub fn build_index(&self) -> CatalogIndex {
         let mut index = CatalogIndex::default();
 
@@ -127,6 +130,7 @@ impl HierarchicalCatalog {
     }
 
     /// Get a distribution by ID
+    #[must_use]
     pub fn get_distribution(&self, id: &str) -> Option<DistributionRef<'_>> {
         for assembly in &self.assemblies {
             for version in &assembly.versions {
@@ -156,6 +160,10 @@ impl HierarchicalCatalog {
     }
 
     /// Load from JSON file
+    ///
+    /// # Errors
+    ///
+    /// Returns an error if the file cannot be read or contains invalid JSON.
     pub fn load(path: &Path) -> Result<Self, std::io::Error> {
         let file = std::fs::File::open(path)?;
         let reader = std::io::BufReader::new(file);
@@ -164,6 +172,10 @@ impl HierarchicalCatalog {
     }
 
     /// Save to JSON file
+    ///
+    /// # Errors
+    ///
+    /// Returns an error if the file cannot be created or written.
     pub fn save(&self, path: &Path) -> Result<(), std::io::Error> {
         let file = std::fs::File::create(path)?;
         let writer = std::io::BufWriter::new(file);
@@ -184,6 +196,7 @@ impl HierarchicalCatalog {
     /// # Returns
     /// * `Some(InferredAssembly)` if a match is found above the threshold
     /// * `None` if no assembly matches well enough
+    #[must_use]
     pub fn infer_base_assembly(
         &self,
         contigs: &[FastaContig],
@@ -226,8 +239,7 @@ impl HierarchicalCatalog {
                 if match_rate >= min_match_rate {
                     let is_better = best_match
                         .as_ref()
-                        .map(|b| match_rate > b.match_rate)
-                        .unwrap_or(true);
+                        .is_none_or(|b| match_rate > b.match_rate);
 
                     if is_better {
                         best_match = Some(InferredAssembly {
@@ -248,6 +260,7 @@ impl HierarchicalCatalog {
     }
 
     /// Infer base assembly with default threshold (90%)
+    #[must_use]
     pub fn infer_base_assembly_default(&self, contigs: &[FastaContig]) -> Option<InferredAssembly> {
         self.infer_base_assembly(contigs, 0.9)
     }
@@ -258,9 +271,9 @@ impl HierarchicalCatalog {
 pub struct InferredAssembly {
     /// Assembly ID (e.g., "grch38")
     pub assembly_id: String,
-    /// Assembly name (e.g., "GRCh38")
+    /// Assembly name (e.g., "`GRCh38`")
     pub assembly_name: String,
-    /// Version ID (e.g., "grch38_p14")
+    /// Version ID (e.g., "`grch38_p14`")
     pub version_id: String,
     /// Version string (e.g., "p14")
     pub version_string: String,
@@ -291,16 +304,17 @@ pub struct CatalogIndex {
 
 impl CatalogIndex {
     /// Find all locations for a given MD5
+    #[must_use]
     pub fn find_by_md5(&self, md5: &str) -> &[ContigLocation] {
-        self.by_md5.get(md5).map(|v| v.as_slice()).unwrap_or(&[])
+        self.by_md5.get(md5).map_or(&[], std::vec::Vec::as_slice)
     }
 
     /// Find all locations for a given name+length
+    #[must_use]
     pub fn find_by_name_length(&self, name: &str, length: u64) -> &[ContigLocation] {
         self.by_name_length
             .get(&(name.to_string(), length))
-            .map(|v| v.as_slice())
-            .unwrap_or(&[])
+            .map_or(&[], std::vec::Vec::as_slice)
     }
 }
 

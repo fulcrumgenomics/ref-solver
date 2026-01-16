@@ -71,15 +71,22 @@ pub enum InputFormat {
     Csv,
 }
 
+/// Execute identify subcommand
+///
+/// # Errors
+///
+/// Returns an error if the input cannot be parsed or identification fails.
+#[allow(clippy::needless_pass_by_value)] // CLI entry point, values from clap
 pub fn run(args: IdentifyArgs, format: OutputFormat, verbose: bool) -> anyhow::Result<()> {
     // Parse input first (needed for both catalog types)
     let query = parse_input(&args)?;
 
     if verbose {
+        #[allow(clippy::cast_possible_truncation, clippy::cast_sign_loss)] // Percentage 0-100
+        let md5_pct = (query.md5_coverage() * 100.0) as u32;
         eprintln!(
-            "Parsed {} contigs from input ({}% have MD5)",
+            "Parsed {} contigs from input ({md5_pct}% have MD5)",
             query.contigs.len(),
-            (query.md5_coverage() * 100.0) as u32
         );
     }
 
@@ -125,7 +132,7 @@ fn run_flat(
     // Output results
     match format {
         OutputFormat::Text => {
-            print_text_results(&matches, query, verbose, args.missing_contig_handling)
+            print_text_results(&matches, query, verbose, args.missing_contig_handling);
         }
         OutputFormat::Json => print_json_results(&matches, args.missing_contig_handling)?,
         OutputFormat::Tsv => print_tsv_results(&matches),
@@ -221,7 +228,7 @@ fn detect_format(path: &Path) -> InputFormat {
     let ext = path
         .extension()
         .and_then(|e| e.to_str())
-        .map(|s| s.to_lowercase());
+        .map(str::to_lowercase);
 
     match ext.as_deref() {
         Some("bam") => InputFormat::Bam,
@@ -235,6 +242,7 @@ fn detect_format(path: &Path) -> InputFormat {
     }
 }
 
+#[allow(clippy::too_many_lines)] // TODO: Refactor into smaller functions
 fn print_text_results(
     matches: &[MatchResult],
     query: &QueryHeader,
@@ -323,8 +331,7 @@ fn print_text_results(
         let conflicts = result.diagnosis.conflicts.len();
 
         println!(
-            "\n   Contigs: {} exact, {} renamed, {} by name+length, {} unmatched, {} conflicts",
-            exact, renamed, name_len, unmatched, conflicts
+            "\n   Contigs: {exact} exact, {renamed} renamed, {name_len} by name+length, {unmatched} unmatched, {conflicts} conflicts"
         );
 
         if result.diagnosis.reordered {
@@ -347,13 +354,13 @@ fn print_text_results(
                     Suggestion::RenameContigs { command_hint, .. } => {
                         println!("   - Rename contigs:");
                         for line in command_hint.lines() {
-                            println!("     {}", line);
+                            println!("     {line}");
                         }
                     }
                     Suggestion::ReorderContigs { command_hint } => {
                         println!("   - Reorder contigs:");
                         for line in command_hint.lines() {
-                            println!("     {}", line);
+                            println!("     {line}");
                         }
                     }
                     Suggestion::ReplaceContig {
@@ -361,7 +368,7 @@ fn print_text_results(
                         reason,
                         ..
                     } => {
-                        println!("   - Replace {}: {}", contig_name, reason);
+                        println!("   - Replace {contig_name}: {reason}");
                     }
                     Suggestion::UseAsIs { warnings } => {
                         if warnings.is_empty() {
@@ -369,7 +376,7 @@ fn print_text_results(
                         } else {
                             println!("   - Safe to use with warnings:");
                             for w in warnings {
-                                println!("     - {}", w);
+                                println!("     - {w}");
                             }
                         }
                     }
@@ -377,8 +384,8 @@ fn print_text_results(
                         reason,
                         suggested_reference,
                     } => {
-                        println!("   - Realignment needed: {}", reason);
-                        println!("     Suggested reference: {}", suggested_reference);
+                        println!("   - Realignment needed: {reason}");
+                        println!("     Suggested reference: {suggested_reference}");
                     }
                 }
             }
@@ -386,7 +393,7 @@ fn print_text_results(
 
         // Download URL
         if let Some(url) = &result.reference.download_url {
-            println!("\n   Download: {}", url);
+            println!("\n   Download: {url}");
         }
 
         // Verbose details
@@ -539,7 +546,7 @@ fn print_hierarchical_text_results(
         if verbose {
             println!("\n   Query contigs: {}", query.contigs.len());
             let md5_count = query.contigs.iter().filter(|c| c.md5.is_some()).count();
-            println!("   Query contigs with MD5: {}", md5_count);
+            println!("   Query contigs with MD5: {md5_count}");
         }
     }
 

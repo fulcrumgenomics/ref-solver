@@ -29,15 +29,22 @@ pub struct CompareArgs {
     pub catalog: Option<PathBuf>,
 }
 
+/// Execute compare subcommand
+///
+/// # Errors
+///
+/// Returns an error if inputs cannot be parsed or comparison fails.
+#[allow(clippy::needless_pass_by_value)] // CLI entry point, values from clap
 pub fn run(args: CompareArgs, format: OutputFormat, verbose: bool) -> anyhow::Result<()> {
     // Parse first input
     let query_a = parse_input(&args.input_a)?;
 
     if verbose {
+        #[allow(clippy::cast_possible_truncation, clippy::cast_sign_loss)] // Percentage 0-100
+        let md5_pct = (query_a.md5_coverage() * 100.0) as u32;
         eprintln!(
-            "Input A: {} contigs ({}% have MD5)",
+            "Input A: {} contigs ({md5_pct}% have MD5)",
             query_a.contigs.len(),
-            (query_a.md5_coverage() * 100.0) as u32
         );
     }
 
@@ -64,10 +71,11 @@ pub fn run(args: CompareArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
     };
 
     if verbose {
+        #[allow(clippy::cast_possible_truncation, clippy::cast_sign_loss)] // Percentage 0-100
+        let md5_pct = (query_b.md5_coverage() * 100.0) as u32;
         eprintln!(
-            "Input B: {} contigs ({}% have MD5)",
+            "Input B: {} contigs ({md5_pct}% have MD5)",
             query_b.contigs.len(),
-            (query_b.md5_coverage() * 100.0) as u32
         );
     }
 
@@ -96,13 +104,13 @@ fn parse_input(path: &Path) -> anyhow::Result<QueryHeader> {
     let ext = path
         .extension()
         .and_then(|e| e.to_str())
-        .map(|s| s.to_lowercase());
+        .map(str::to_lowercase);
 
     match ext.as_deref() {
-        Some("bam" | "sam" | "cram") => Ok(parsing::sam::parse_file(path)?),
         Some("dict") => Ok(parsing::dict::parse_dict_file(path)?),
         Some("tsv") => Ok(parsing::tsv::parse_tsv_file(path, '\t')?),
         Some("csv") => Ok(parsing::tsv::parse_tsv_file(path, ',')?),
+        // Default to SAM/BAM/CRAM parsing for bam, sam, cram, and unknown extensions
         _ => Ok(parsing::sam::parse_file(path)?),
     }
 }

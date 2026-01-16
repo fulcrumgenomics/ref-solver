@@ -19,7 +19,7 @@
 //! let query = parse_file(Path::new("sample.bam")).unwrap();
 //!
 //! // Or parse from raw header text
-//! let header = "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
+//! let header = "@SQ\tSN:chr1\tLN:248_956_422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
 //! let query = parse_header_text(header).unwrap();
 //! ```
 //!

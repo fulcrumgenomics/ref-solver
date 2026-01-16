@@ -38,7 +38,7 @@ pub struct KnownReference {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
 
-    /// Tags for filtering (e.g., "with_decoy", "no_alt", "analysis_set")
+    /// Tags for filtering (e.g., "`with_decoy`", "`no_alt`", "`analysis_set`")
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub tags: Vec<String>,
 
@@ -52,7 +52,7 @@ pub struct KnownReference {
     #[serde(skip)]
     pub md5_set: HashSet<String>,
 
-    /// Set of all (exact_name, length) pairs for matching
+    /// Set of all (`exact_name`, length) pairs for matching
     #[serde(skip)]
     pub name_length_set: HashSet<(String, u64)>,
 
@@ -86,6 +86,7 @@ impl KnownReference {
         }
     }
 
+    #[must_use]
     pub fn with_contigs(mut self, contigs: Vec<Contig>) -> Self {
         self.naming_convention = detect_naming_convention(&contigs);
         self.contigs = contigs;
@@ -123,16 +124,19 @@ impl KnownReference {
     }
 
     /// Check if this reference has decoy sequences
+    #[must_use]
     pub fn has_decoy(&self) -> bool {
-        self.contigs.iter().any(|c| c.is_decoy())
+        self.contigs.iter().any(super::contig::Contig::is_decoy)
     }
 
     /// Check if this reference has ALT contigs
+    #[must_use]
     pub fn has_alt(&self) -> bool {
-        self.contigs.iter().any(|c| c.is_alt())
+        self.contigs.iter().any(super::contig::Contig::is_alt)
     }
 
     /// Count contigs by sequence role
+    #[must_use]
     pub fn role_counts(&self) -> RoleCounts {
         let mut counts = RoleCounts::default();
         for contig in &self.contigs {

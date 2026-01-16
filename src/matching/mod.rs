@@ -31,7 +31,7 @@
 //! use ref_solver::parsing::sam::parse_header_text;
 //!
 //! let catalog = ReferenceCatalog::load_embedded().unwrap();
-//! let query = parse_header_text("@SQ\tSN:chr1\tLN:248956422\n").unwrap();
+//! let query = parse_header_text("@SQ\tSN:chr1\tLN:248_956_422\n").unwrap();
 //!
 //! let engine = MatchingEngine::new(&catalog);
 //! let matches = engine.find_matches(&query, 5);

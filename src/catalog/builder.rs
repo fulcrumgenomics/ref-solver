@@ -47,11 +47,14 @@ pub enum InputFormat {
 
 impl InputFormat {
     /// Detect format from file extension
+    #[must_use]
     pub fn from_path(path: &Path) -> Option<Self> {
         let name = path.file_name()?.to_str()?;
         let name_lower = name.to_lowercase();
 
         // Check for NCBI assembly report pattern first
+        // name_lower is already lowercase, so case-sensitive check is fine
+        #[allow(clippy::case_sensitive_file_extension_comparisons)]
         if name_lower.contains("_assembly_report") && name_lower.ends_with(".txt") {
             return Some(Self::NcbiReport);
         }
@@ -78,8 +81,9 @@ impl InputFormat {
             "vcf" => Some(Self::Vcf),
             "tsv" | "txt" => Some(Self::Tsv),
             "gz" => {
-                // Check for .vcf.gz
-                let stem = path.file_stem()?.to_str()?;
+                // Check for .vcf.gz (stem is lowercased)
+                let stem = path.file_stem()?.to_str()?.to_lowercase();
+                #[allow(clippy::case_sensitive_file_extension_comparisons)]
                 if stem.ends_with(".vcf") {
                     Some(Self::Vcf)
                 } else {
@@ -141,10 +145,10 @@ impl ContigMetadata {
     fn to_contig(&self) -> Option<Contig> {
         let length = self.length?;
         let mut contig = Contig::new(&self.primary_name, length);
-        contig.md5 = self.md5.clone();
-        contig.assembly = self.assembly.clone();
-        contig.uri = self.uri.clone();
-        contig.species = self.species.clone();
+        contig.md5.clone_from(&self.md5);
+        contig.assembly.clone_from(&self.assembly);
+        contig.uri.clone_from(&self.uri);
+        contig.species.clone_from(&self.species);
         contig.aliases = self.aliases.iter().cloned().collect();
         contig.sequence_role = self.sequence_role;
         Some(contig)
@@ -212,37 +216,48 @@ impl ReferenceBuilder {
         }
     }
 
+    #[must_use]
     pub fn assembly(mut self, assembly: Assembly) -> Self {
         self.assembly = Some(assembly);
         self
     }
 
+    #[must_use]
     pub fn source(mut self, source: ReferenceSource) -> Self {
         self.source = Some(source);
         self
     }
 
+    #[must_use]
     pub fn description(mut self, description: impl Into<String>) -> Self {
         self.description = Some(description.into());
         self
     }
 
+    #[must_use]
     pub fn download_url(mut self, url: impl Into<String>) -> Self {
         self.download_url = Some(url.into());
         self
     }
 
+    #[must_use]
     pub fn assembly_report_url(mut self, url: impl Into<String>) -> Self {
         self.assembly_report_url = Some(url.into());
         self
     }
 
+    #[must_use]
     pub fn tags(mut self, tags: Vec<String>) -> Self {
         self.tags = tags;
         self
     }
 
     /// Add an input file (auto-detect format)
+    ///
+    /// # Errors
+    ///
+    /// Returns `BuilderError::Parse` if format cannot be detected, or other
+    /// errors from parsing the specific format.
     pub fn add_input(&mut self, path: &Path) -> Result<(), BuilderError> {
         let format = InputFormat::from_path(path).ok_or_else(|| {
             BuilderError::Parse(format!("Cannot detect format for: {}", path.display()))
@@ -251,6 +266,11 @@ impl ReferenceBuilder {
     }
 
     /// Add an input file with explicit format
+    ///
+    /// # Errors
+    ///
+    /// Returns `BuilderError::Io` if the file cannot be read, `BuilderError::Parse`
+    /// if parsing fails, or `BuilderError::Conflict` if contig data conflicts.
     pub fn add_input_with_format(
         &mut self,
         path: &Path,
@@ -492,7 +512,7 @@ impl ReferenceBuilder {
     }
 
     /// Merge a contig into the builder.
-    /// Returns (was_merged_into_existing, num_aliases_added)
+    /// Returns (`was_merged_into_existing`, `num_aliases_added`)
     fn merge_contig(
         &mut self,
         contig: &Contig,
@@ -541,7 +561,7 @@ impl ReferenceBuilder {
                     return Err(BuilderError::Conflict(msg));
                 }
             } else if metadata.md5.is_none() && contig.md5.is_some() {
-                metadata.md5 = contig.md5.clone();
+                metadata.md5.clone_from(&contig.md5);
             }
 
             // Merge aliases
@@ -570,13 +590,13 @@ impl ReferenceBuilder {
 
             // Fill other fields
             if metadata.assembly.is_none() && contig.assembly.is_some() {
-                metadata.assembly = contig.assembly.clone();
+                metadata.assembly.clone_from(&contig.assembly);
             }
             if metadata.uri.is_none() && contig.uri.is_some() {
-                metadata.uri = contig.uri.clone();
+                metadata.uri.clone_from(&contig.uri);
             }
             if metadata.species.is_none() && contig.species.is_some() {
-                metadata.species = contig.species.clone();
+                metadata.species.clone_from(&contig.species);
             }
             // Update sequence role if not already set
             if matches!(metadata.sequence_role, SequenceRole::Unknown) {
@@ -591,10 +611,10 @@ impl ReferenceBuilder {
             // Create new entry
             let mut metadata = ContigMetadata::new(contig.name.clone());
             metadata.length = Some(contig.length);
-            metadata.md5 = contig.md5.clone();
-            metadata.assembly = contig.assembly.clone();
-            metadata.uri = contig.uri.clone();
-            metadata.species = contig.species.clone();
+            metadata.md5.clone_from(&contig.md5);
+            metadata.assembly.clone_from(&contig.assembly);
+            metadata.uri.clone_from(&contig.uri);
+            metadata.species.clone_from(&contig.species);
             metadata.sequence_role = contig.sequence_role;
             metadata.sources.push(source.to_string());
 
@@ -638,7 +658,12 @@ impl ReferenceBuilder {
         None
     }
 
-    /// Build the final KnownReference
+    /// Build the final `KnownReference`
+    ///
+    /// # Errors
+    ///
+    /// Returns `BuilderError::MissingField` if no contigs were added or required
+    /// fields are missing.
     pub fn build(self) -> Result<KnownReference, BuilderError> {
         // Validate
         if self.contigs.is_empty() {
@@ -656,8 +681,7 @@ impl ReferenceBuilder {
         }
         if !missing_length.is_empty() {
             return Err(BuilderError::MissingField(format!(
-                "Missing length for contigs: {:?}",
-                missing_length
+                "Missing length for contigs: {missing_length:?}"
             )));
         }
 
@@ -714,6 +738,7 @@ impl ReferenceBuilder {
     }
 
     /// Get summary of build
+    #[must_use]
     pub fn summary(&self) -> BuildSummary {
         let total_contigs = self.contigs.len();
         let with_length = self.contigs.values().filter(|m| m.length.is_some()).count();
@@ -799,10 +824,10 @@ impl std::fmt::Display for BuildSummary {
         writeln!(f, "ID:       {}", self.id)?;
         writeln!(f, "Name:     {}", self.display_name)?;
         if let Some(ref assembly) = self.assembly {
-            writeln!(f, "Assembly: {:?}", assembly)?;
+            writeln!(f, "Assembly: {assembly:?}")?;
         }
         if let Some(ref source) = self.source {
-            writeln!(f, "Source:   {:?}", source)?;
+            writeln!(f, "Source:   {source:?}")?;
         }
         writeln!(f)?;
 
@@ -870,13 +895,13 @@ impl std::fmt::Display for BuildSummary {
 
         writeln!(f, "Conflicts: {}", self.conflicts.len())?;
         for conflict in &self.conflicts {
-            writeln!(f, "  - {}", conflict)?;
+            writeln!(f, "  - {conflict}")?;
         }
 
         let total_warnings = self.warnings.len() + self.missing_md5_assembled.len();
-        writeln!(f, "Warnings: {}", total_warnings)?;
+        writeln!(f, "Warnings: {total_warnings}")?;
         for warning in &self.warnings {
-            writeln!(f, "  - {}", warning)?;
+            writeln!(f, "  - {warning}")?;
         }
         if !self.missing_md5_assembled.is_empty() {
             writeln!(
@@ -890,7 +915,7 @@ impl std::fmt::Display for BuildSummary {
     }
 }
 
-/// Builder for creating FastaDistribution from multiple input files
+/// Builder for creating `FastaDistribution` from multiple input files
 ///
 /// This builder merges contig metadata from multiple sources (dict, VCF, SAM/BAM, etc.)
 /// keyed by (name, length). It handles:
@@ -937,30 +962,39 @@ impl DistributionBuilder {
     }
 
     /// Set the display name
+    #[must_use]
     pub fn with_display_name(mut self, name: impl Into<String>) -> Self {
         self.display_name = name.into();
         self
     }
 
     /// Set the reference source
+    #[must_use]
     pub fn with_source(mut self, source: ReferenceSource) -> Self {
         self.source = source;
         self
     }
 
     /// Set the download URL
+    #[must_use]
     pub fn with_download_url(mut self, url: impl Into<String>) -> Self {
         self.download_url = Some(url.into());
         self
     }
 
     /// Set tags
+    #[must_use]
     pub fn with_tags(mut self, tags: Vec<String>) -> Self {
         self.tags = tags;
         self
     }
 
     /// Add an input file (auto-detect format)
+    ///
+    /// # Errors
+    ///
+    /// Returns `BuilderError::Parse` if format cannot be detected, or other
+    /// errors from parsing the specific format.
     pub fn add_input(&mut self, path: &Path) -> Result<&mut Self, BuilderError> {
         let format = InputFormat::from_path(path).ok_or_else(|| {
             BuilderError::Parse(format!("Cannot detect format for: {}", path.display()))
@@ -969,6 +1003,11 @@ impl DistributionBuilder {
     }
 
     /// Add an input file with explicit format
+    ///
+    /// # Errors
+    ///
+    /// Returns `BuilderError::Io` if the file cannot be read, `BuilderError::Parse`
+    /// if parsing fails, or `BuilderError::Conflict` if contig data conflicts.
     pub fn add_input_with_format(
         &mut self,
         path: &Path,
@@ -981,6 +1020,7 @@ impl DistributionBuilder {
 
         for contig in contigs {
             let key = (contig.name.clone(), contig.length);
+            #[allow(clippy::cast_possible_truncation)] // Contig count limited by MAX_CONTIGS (50k)
             let fasta_contig = FastaContig {
                 name: contig.name,
                 length: contig.length,
@@ -990,14 +1030,11 @@ impl DistributionBuilder {
                 aliases: contig.aliases,
             };
 
-            match self.contigs.get_mut(&key) {
-                Some(existing) => {
-                    existing.merge(&fasta_contig)?;
-                }
-                None => {
-                    self.insertion_order.push(key.clone());
-                    self.contigs.insert(key, fasta_contig);
-                }
+            if let Some(existing) = self.contigs.get_mut(&key) {
+                existing.merge(&fasta_contig)?;
+            } else {
+                self.insertion_order.push(key.clone());
+                self.contigs.insert(key, fasta_contig);
             }
         }
 
@@ -1005,6 +1042,7 @@ impl DistributionBuilder {
     }
 
     /// Parse contigs from an input file
+    #[allow(clippy::unused_self)] // Kept as method for API consistency
     fn parse_input(&self, path: &Path, format: InputFormat) -> Result<Vec<Contig>, BuilderError> {
         match format {
             InputFormat::Dict | InputFormat::Sam => {
@@ -1051,7 +1089,11 @@ impl DistributionBuilder {
         }
     }
 
-    /// Build the FastaDistribution
+    /// Build the `FastaDistribution`
+    ///
+    /// # Errors
+    ///
+    /// Returns `BuilderError::MissingField` if no contigs were found.
     pub fn build(self) -> Result<FastaDistribution, BuilderError> {
         if self.contigs.is_empty() {
             return Err(BuilderError::MissingField("No contigs found".to_string()));
@@ -1061,7 +1103,10 @@ impl DistributionBuilder {
         let mut contigs: Vec<FastaContig> = Vec::with_capacity(self.insertion_order.len());
         for (i, key) in self.insertion_order.iter().enumerate() {
             if let Some(mut contig) = self.contigs.get(key).cloned() {
-                contig.sort_order = i as u32;
+                #[allow(clippy::cast_possible_truncation)] // Contig count limited
+                {
+                    contig.sort_order = i as u32;
+                }
                 contigs.push(contig);
             }
         }
@@ -1078,6 +1123,7 @@ impl DistributionBuilder {
 }
 
 /// Detect assembly version from display name
+#[must_use]
 pub fn detect_assembly_from_name(display_name: &str) -> Assembly {
     let lower = display_name.to_lowercase();
     if lower.contains("chm13") || lower.contains("t2t") {
@@ -1322,12 +1368,12 @@ mod tests {
         .unwrap();
         writeln!(
             file,
-            "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178dd"
+            "@SQ\tSN:chr1\tLN:248_956_422\tM5:6aef897c3d6ff0c78aff06ac189178dd"
         )
         .unwrap();
         writeln!(
             file,
-            "@SQ\tSN:chr2\tLN:242193529\tM5:f98db672eb0993dcfdabafe2a882905c"
+            "@SQ\tSN:chr2\tLN:242_193_529\tM5:f98db672eb0993dcfdabafe2a882905c"
         )
         .unwrap();
 

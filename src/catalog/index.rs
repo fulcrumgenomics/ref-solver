@@ -10,12 +10,14 @@ pub struct CandidateFinder<'a> {
 }
 
 impl<'a> CandidateFinder<'a> {
+    #[must_use]
     pub fn new(catalog: &'a ReferenceCatalog) -> Self {
         Self { catalog }
     }
 
     /// Find candidate references based on MD5 overlap
     /// Returns indices sorted by number of overlapping MD5s (descending)
+    #[must_use]
     pub fn find_candidates_by_md5(&self, query: &QueryHeader) -> Vec<(usize, usize)> {
         let mut ref_counts: HashMap<usize, usize> = HashMap::new();
 
@@ -33,6 +35,7 @@ impl<'a> CandidateFinder<'a> {
     }
 
     /// Find candidates by (name, length) pairs when MD5s aren't available
+    #[must_use]
     pub fn find_candidates_by_name_length(&self, query: &QueryHeader) -> Vec<(usize, usize)> {
         let mut ref_counts: HashMap<usize, usize> = HashMap::new();
 
@@ -70,6 +73,7 @@ impl<'a> CandidateFinder<'a> {
     }
 
     /// Get top N candidates combining MD5 and name/length matching
+    #[must_use]
     pub fn find_top_candidates(&self, query: &QueryHeader, limit: usize) -> Vec<usize> {
         let mut seen: HashSet<usize> = HashSet::new();
         let mut result = Vec::new();

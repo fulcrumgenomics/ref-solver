@@ -1,7 +1,7 @@
 //! Hierarchical matching engine for the new catalog structure.
 //!
 //! This engine matches queries against the hierarchical catalog which
-//! contains Assembly → AssemblyVersion → FastaDistribution → FastaContig.
+//! contains Assembly → `AssemblyVersion` → `FastaDistribution` → `FastaContig`.
 
 use std::collections::HashMap;
 
@@ -54,12 +54,14 @@ pub struct HierarchicalMatchResult {
 
 impl HierarchicalMatchResult {
     /// Get match percentage
+    #[must_use]
     pub fn match_percentage(&self) -> f64 {
         self.score * 100.0
     }
 
     /// Check if this is an exact match
     #[cfg(test)]
+    #[must_use]
     pub fn is_exact(&self) -> bool {
         matches!(self.match_type, MatchType::Exact)
     }
@@ -74,6 +76,7 @@ pub struct HierarchicalMatchingEngine<'a> {
 
 impl<'a> HierarchicalMatchingEngine<'a> {
     /// Create a new engine from a hierarchical catalog
+    #[must_use]
     pub fn new(catalog: &'a HierarchicalCatalog) -> Self {
         let index = catalog.build_index();
         Self {
@@ -84,6 +87,7 @@ impl<'a> HierarchicalMatchingEngine<'a> {
     }
 
     /// Find the best matching distributions for a query
+    #[must_use]
     pub fn find_matches(&self, query: &QueryHeader, limit: usize) -> Vec<HierarchicalMatchResult> {
         // Score each distribution based on MD5 and name+length matches
         let mut scores: HashMap<String, (usize, usize)> = HashMap::new(); // dist_id -> (md5_matches, name_len_matches)

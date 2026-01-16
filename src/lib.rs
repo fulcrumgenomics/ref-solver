@@ -3,7 +3,7 @@
 //! A library for identifying human reference genomes from BAM/SAM/CRAM headers.
 //!
 //! When working with alignment files from external sources, it's often unclear exactly
-//! which reference genome was used. While a reference might be labeled "GRCh38" or "hg19",
+//! which reference genome was used. While a reference might be labeled "`GRCh38`" or "hg19",
 //! there are dozens of variations with different naming conventions, contig sets, and
 //! sequence versions.
 //!
@@ -29,7 +29,7 @@
 //! let catalog = ReferenceCatalog::load_embedded().unwrap();
 //!
 //! // Parse a SAM header
-//! let header_text = "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
+//! let header_text = "@SQ\tSN:chr1\tLN:248_956_422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
 //! let query = parse_header_text(header_text).unwrap();
 //!
 //! // Find matching references

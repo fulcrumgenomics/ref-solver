@@ -23,7 +23,7 @@ pub struct MatchScore {
     /// Jaccard similarity of MD5 sets: |intersection| / |union|
     pub md5_jaccard: f64,
 
-    /// Jaccard similarity of (normalized_name, length) pairs
+    /// Jaccard similarity of (`normalized_name`, length) pairs
     pub name_length_jaccard: f64,
 
     /// Fraction of query contigs matched by MD5
@@ -47,6 +47,7 @@ pub struct MatchScore {
 
 impl MatchScore {
     /// Calculate match score between query and reference
+    #[must_use]
     pub fn calculate(query: &QueryHeader, reference: &KnownReference) -> Self {
         let md5_jaccard = jaccard_similarity(&query.md5_set, &reference.md5_set);
 
@@ -94,6 +95,7 @@ impl MatchScore {
     }
 
     /// Calculate match score with custom scoring weights
+    #[must_use]
     pub fn calculate_with_weights(
         query: &QueryHeader,
         reference: &KnownReference,
@@ -187,7 +189,7 @@ fn jaccard_similarity<T: Eq + std::hash::Hash>(a: &HashSet<T>, b: &HashSet<T>) -
 /// - Query name+length matches reference name+length directly, OR
 /// - Query alias+length matches reference name+length (reverse alias matching)
 ///
-/// Returns (jaccard_similarity, query_coverage)
+/// Returns (`jaccard_similarity`, `query_coverage`)
 fn calculate_name_length_similarity_with_aliases(
     query: &QueryHeader,
     reference: &KnownReference,
@@ -207,19 +209,13 @@ fn calculate_name_length_similarity_with_aliases(
         }
 
         // Check alias matches (query alias -> ref name)
-        let mut found_alias_match = false;
         for alias in &contig.aliases {
             let alias_key = (alias.clone(), contig.length);
             if reference.name_length_set.contains(&alias_key) {
                 matched_query_contigs += 1;
                 matched_ref_keys.insert(alias_key);
-                found_alias_match = true;
                 break;
             }
-        }
-
-        if found_alias_match {
-            continue;
         }
     }
 
@@ -247,9 +243,9 @@ fn calculate_name_length_similarity_with_aliases(
 /// Analyze if contigs are in the same order.
 /// Considers both direct name matches and alias-based matches.
 ///
-/// Returns (order_preserved, order_score) where:
-/// - order_preserved: true if all matched contigs appear in the same order
-/// - order_score: fraction of contigs in the longest increasing subsequence
+/// Returns (`order_preserved`, `order_score`) where:
+/// - `order_preserved`: true if all matched contigs appear in the same order
+/// - `order_score`: fraction of contigs in the longest increasing subsequence
 ///
 /// When there are < 2 matching contigs, returns (true, 0.0) since order
 /// cannot be meaningfully assessed with so few matches.

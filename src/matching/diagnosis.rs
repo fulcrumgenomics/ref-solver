@@ -82,6 +82,8 @@ pub enum Suggestion {
 }
 
 impl MatchDiagnosis {
+    #[must_use]
+    #[allow(clippy::too_many_lines)] // TODO: Refactor into smaller functions
     pub fn analyze(query: &QueryHeader, reference: &KnownReference) -> Self {
         let mut exact_matches = Vec::new();
         let mut renamed_matches = Vec::new();
@@ -166,13 +168,13 @@ impl MatchDiagnosis {
                 }
 
                 // If names differ but match via alias, count as renamed
-                if q_contig.name != r_contig.name {
+                if q_contig.name == r_contig.name {
+                    name_length_only_matches.push(ContigMatch);
+                } else {
                     renamed_matches.push(RenamedContig {
                         query_name: q_contig.name.clone(),
                         reference_name: r_contig.name.clone(),
                     });
-                } else {
-                    name_length_only_matches.push(ContigMatch);
                 }
                 continue;
             }
@@ -323,7 +325,7 @@ fn generate_suggestions(
                         "Mitochondrial sequence differs: {} ({}bp) vs expected ({}bp)",
                         conflict.query_contig.name,
                         conflict.query_contig.length,
-                        conflict.expected.as_ref().map(|c| c.length).unwrap_or(0)
+                        conflict.expected.as_ref().map_or(0, |c| c.length)
                     ),
                     source: reference.download_url.clone().unwrap_or_default(),
                 });

@@ -1,7 +1,7 @@
 //! Parser for VCF header contig lines.
 //!
 //! VCF files have contig definitions in the header as:
-//! `##contig=<ID=chr1,length=248956422>`
+//! `##contig=<ID=chr1,length=248_956_422>`
 //!
 //! Additional fields like `md5` and `assembly` may also be present.
 //!
@@ -16,12 +16,22 @@ use crate::parsing::sam::ParseError;
 use crate::utils::validation::{check_contig_limit, normalize_md5};
 
 /// Parse VCF file and extract contig definitions from header
+///
+/// # Errors
+///
+/// Returns `ParseError::Io` if the file cannot be read, or other parse errors
+/// if the content is invalid.
 pub fn parse_vcf_file(path: &Path) -> Result<QueryHeader, ParseError> {
     let content = std::fs::read_to_string(path)?;
     parse_vcf_header_text(&content)
 }
 
 /// Parse VCF header text and extract contig definitions
+///
+/// # Errors
+///
+/// Returns `ParseError::InvalidFormat` if contig lines are malformed or no
+/// contig lines are found, or `ParseError::TooManyContigs` if the limit is exceeded.
 pub fn parse_vcf_header_text(text: &str) -> Result<QueryHeader, ParseError> {
     let mut contigs = Vec::new();
 
@@ -55,13 +65,11 @@ pub fn parse_vcf_header_text(text: &str) -> Result<QueryHeader, ParseError> {
 
 /// Parse a single ##contig=<...> line
 fn parse_contig_line(line: &str) -> Result<Option<Contig>, ParseError> {
-    // Format: ##contig=<ID=chr1,length=248956422,md5=abc123,...>
+    // Format: ##contig=<ID=chr1,length=248_956_422,md5=abc123,...>
     let content = line
         .strip_prefix("##contig=<")
         .and_then(|s| s.strip_suffix('>'))
-        .ok_or_else(|| {
-            ParseError::InvalidFormat(format!("Invalid contig line format: {}", line))
-        })?;
+        .ok_or_else(|| ParseError::InvalidFormat(format!("Invalid contig line format: {line}")))?;
 
     let mut name: Option<String> = None;
     let mut length: Option<u64> = None;
@@ -96,8 +104,7 @@ fn parse_contig_line(line: &str) -> Result<Option<Contig>, ParseError> {
             Ok(Some(contig))
         }
         (Some(name), None) => Err(ParseError::InvalidFormat(format!(
-            "Contig '{}' missing length",
-            name
+            "Contig '{name}' missing length"
         ))),
         _ => Ok(None), // Skip malformed lines without ID
     }
@@ -141,8 +148,8 @@ mod tests {
     #[test]
     fn test_parse_vcf_header() {
         let vcf = r#"##fileformat=VCFv4.2
-##contig=<ID=chr1,length=248956422>
-##contig=<ID=chr2,length=242193529,md5=f98db672eb0993dcfdabafe2a882905c>
+##contig=<ID=chr1,length=248_956_422>
+##contig=<ID=chr2,length=242_193_529,md5=f98db672eb0993dcfdabafe2a882905c>
 ##contig=<ID=chrM,length=16569,assembly=GRCh38>
 ##INFO=<ID=DP,Number=1,Type=Integer,Description="Depth">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
@@ -152,11 +159,11 @@ mod tests {
         assert_eq!(query.contigs.len(), 3);
 
         assert_eq!(query.contigs[0].name, "chr1");
-        assert_eq!(query.contigs[0].length, 248956422);
+        assert_eq!(query.contigs[0].length, 248_956_422);
         assert!(query.contigs[0].md5.is_none());
 
         assert_eq!(query.contigs[1].name, "chr2");
-        assert_eq!(query.contigs[1].length, 242193529);
+        assert_eq!(query.contigs[1].length, 242_193_529);
         assert_eq!(
             query.contigs[1].md5,
             Some("f98db672eb0993dcfdabafe2a882905c".to_string())
@@ -176,11 +183,11 @@ mod tests {
 
     #[test]
     fn test_parse_contig_line() {
-        let line = "##contig=<ID=chr1,length=248956422,md5=6aef897c3d6ff0c78aff06ac189178dd>";
+        let line = "##contig=<ID=chr1,length=248_956_422,md5=6aef897c3d6ff0c78aff06ac189178dd>";
         let contig = parse_contig_line(line).unwrap().unwrap();
 
         assert_eq!(contig.name, "chr1");
-        assert_eq!(contig.length, 248956422);
+        assert_eq!(contig.length, 248_956_422);
         assert_eq!(
             contig.md5,
             Some("6aef897c3d6ff0c78aff06ac189178dd".to_string())
@@ -191,7 +198,7 @@ mod tests {
     fn test_parse_vcf_quoted_values() {
         // Test that quoted values are handled properly
         let vcf = r#"##fileformat=VCFv4.2
-##contig=<ID=chr1,length=248956422,assembly="GRCh38.p14">
+##contig=<ID=chr1,length=248_956_422,assembly="GRCh38.p14">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
 "#;
         let query = parse_vcf_header_text(vcf).unwrap();

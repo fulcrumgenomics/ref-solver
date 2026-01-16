@@ -4,8 +4,8 @@
 //! naming conventions. The key columns are:
 //!
 //! - Sequence-Name: The primary name (e.g., "1", "X", "MT")
-//! - GenBank-Accn: GenBank accession (e.g., "CM000663.2")
-//! - RefSeq-Accn: RefSeq accession (e.g., "NC_000001.11")
+//! - GenBank-Accn: `GenBank` accession (e.g., "CM000663.2")
+//! - RefSeq-Accn: `RefSeq` accession (e.g., "`NC_000001.11`")
 //! - UCSC-style-name: UCSC-style name (e.g., "chr1")
 //! - Sequence-Length: Length in base pairs
 //!
@@ -24,9 +24,9 @@ pub struct NcbiContigEntry {
     pub sequence_name: String,
     /// Sequence length
     pub length: u64,
-    /// GenBank accession
+    /// `GenBank` accession
     pub genbank_accn: Option<String>,
-    /// RefSeq accession
+    /// `RefSeq` accession
     pub refseq_accn: Option<String>,
     /// UCSC-style name
     pub ucsc_name: Option<String>,
@@ -36,6 +36,7 @@ pub struct NcbiContigEntry {
 
 impl NcbiContigEntry {
     /// Get all unique, non-empty names for this contig as aliases
+    #[must_use]
     pub fn all_names(&self) -> Vec<String> {
         let mut names = vec![self.sequence_name.clone()];
 
@@ -60,6 +61,7 @@ impl NcbiContigEntry {
     }
 
     /// Convert to a Contig with aliases populated
+    #[must_use]
     pub fn to_contig(&self) -> Contig {
         let mut contig = Contig::new(&self.sequence_name, self.length);
 
@@ -79,6 +81,11 @@ impl NcbiContigEntry {
 }
 
 /// Parse NCBI assembly report from text
+///
+/// # Errors
+///
+/// Returns `ParseError::InvalidFormat` if the header is missing, required columns
+/// are not found, or field values cannot be parsed.
 pub fn parse_ncbi_report_text(text: &str) -> Result<Vec<NcbiContigEntry>, ParseError> {
     let mut entries = Vec::new();
     // Use lowercase keys for case-insensitive matching
@@ -183,13 +190,13 @@ mod tests {
     #[test]
     fn test_parse_ncbi_report() {
         // Simplified NCBI assembly report format
-        let report = r#"# Assembly name:  GRCh38.p14
+        let report = r"# Assembly name:  GRCh38.p14
 # Organism name:  Homo sapiens
 # Sequence-Name	Sequence-Role	Assigned-Molecule	Assigned-Molecule-Location/Type	GenBank-Accn	Relationship	RefSeq-Accn	Assembly-Unit	Sequence-Length	UCSC-style-name
-1	assembled-molecule	1	Chromosome	CM000663.2	=	NC_000001.11	Primary Assembly	248956422	chr1
-2	assembled-molecule	2	Chromosome	CM000664.2	=	NC_000002.12	Primary Assembly	242193529	chr2
+1	assembled-molecule	1	Chromosome	CM000663.2	=	NC_000001.11	Primary Assembly	248_956_422	chr1
+2	assembled-molecule	2	Chromosome	CM000664.2	=	NC_000002.12	Primary Assembly	242_193_529	chr2
 MT	assembled-molecule	MT	Mitochondrion	J01415.2	=	NC_012920.1	non-nuclear	16569	chrM
-"#;
+";
 
         let entries = parse_ncbi_report_text(report).unwrap();
         assert_eq!(entries.len(), 3);
@@ -197,7 +204,7 @@ MT	assembled-molecule	MT	Mitochondrion	J01415.2	=	NC_012920.1	non-nuclear	16569	
         // Check chr1
         let chr1 = &entries[0];
         assert_eq!(chr1.sequence_name, "1");
-        assert_eq!(chr1.length, 248956422);
+        assert_eq!(chr1.length, 248_956_422);
         assert_eq!(chr1.genbank_accn, Some("CM000663.2".to_string()));
         assert_eq!(chr1.refseq_accn, Some("NC_000001.11".to_string()));
         assert_eq!(chr1.ucsc_name, Some("chr1".to_string()));
@@ -220,7 +227,7 @@ MT	assembled-molecule	MT	Mitochondrion	J01415.2	=	NC_012920.1	non-nuclear	16569	
     fn test_ncbi_entry_to_contig() {
         let entry = NcbiContigEntry {
             sequence_name: "1".to_string(),
-            length: 248956422,
+            length: 248_956_422,
             genbank_accn: Some("CM000663.2".to_string()),
             refseq_accn: Some("NC_000001.11".to_string()),
             ucsc_name: Some("chr1".to_string()),
@@ -229,7 +236,7 @@ MT	assembled-molecule	MT	Mitochondrion	J01415.2	=	NC_012920.1	non-nuclear	16569	
 
         let contig = entry.to_contig();
         assert_eq!(contig.name, "1");
-        assert_eq!(contig.length, 248956422);
+        assert_eq!(contig.length, 248_956_422);
         assert_eq!(contig.aliases.len(), 3); // CM000663.2, NC_000001.11, chr1
         assert!(contig.aliases.contains(&"chr1".to_string()));
         assert!(contig.aliases.contains(&"NC_000001.11".to_string()));
@@ -237,7 +244,7 @@ MT	assembled-molecule	MT	Mitochondrion	J01415.2	=	NC_012920.1	non-nuclear	16569	
 
     #[test]
     fn test_parse_ncbi_report_no_header() {
-        let report = "1\tassembled-molecule\t1\t248956422\n";
+        let report = "1\tassembled-molecule\t1\t248_956_422\n";
         let result = parse_ncbi_report_text(report);
         assert!(result.is_err());
     }

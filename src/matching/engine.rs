@@ -19,6 +19,7 @@ pub struct MatchResult {
 }
 
 impl MatchResult {
+    #[must_use]
     pub fn new(reference: &KnownReference, query: &QueryHeader) -> Self {
         let score = MatchScore::calculate(query, reference);
         let diagnosis = MatchDiagnosis::analyze(query, reference);
@@ -30,6 +31,7 @@ impl MatchResult {
         }
     }
 
+    #[must_use]
     pub fn new_with_weights(
         reference: &KnownReference,
         query: &QueryHeader,
@@ -93,6 +95,7 @@ impl Default for ScoringWeights {
 
 impl ScoringWeights {
     /// Normalize weights to sum to 1.0
+    #[must_use]
     pub fn normalized(&self) -> Self {
         let total = self.md5_jaccard
             + self.name_length_jaccard
@@ -121,6 +124,7 @@ pub struct MatchingEngine<'a> {
 
 impl<'a> MatchingEngine<'a> {
     /// Create a new matching engine with default configuration
+    #[must_use]
     pub fn new(catalog: &'a ReferenceCatalog) -> Self {
         Self {
             catalog,
@@ -129,11 +133,13 @@ impl<'a> MatchingEngine<'a> {
     }
 
     /// Create a new matching engine with custom configuration
+    #[must_use]
     pub fn with_config(catalog: &'a ReferenceCatalog, config: MatchingConfig) -> Self {
         Self { catalog, config }
     }
 
     /// Find the best matching references for a query
+    #[must_use]
     pub fn find_matches(&self, query: &QueryHeader, limit: usize) -> Vec<MatchResult> {
         // Step 1: Try exact signature match
         if let Some(sig) = &query.signature {
@@ -173,6 +179,7 @@ impl<'a> MatchingEngine<'a> {
 
     /// Find the single best match
     #[cfg(test)]
+    #[must_use]
     pub fn find_best_match(&self, query: &QueryHeader) -> Option<MatchResult> {
         self.find_matches(query, 1).into_iter().next()
     }

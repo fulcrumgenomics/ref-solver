@@ -1,8 +1,8 @@
-//! DoS Attack Simulation and Prevention Tests
+//! `DoS` Attack Simulation and Prevention Tests
 //!
 //! This test suite simulates various denial-of-service attack patterns
 //! to verify that the implemented security measures effectively prevent
-//! resource exhaustion, memory attacks, and other DoS vectors.
+//! resource exhaustion, memory attacks, and other `DoS` vectors.
 
 use std::time::{Duration, Instant};
 use tokio::time::timeout;
@@ -43,7 +43,6 @@ async fn test_file_size_limit_prevention() {
 
     // Test that file size limits prevent memory exhaustion
     let large_file_size = 1_000_000_000; // 1GB
-    let _very_large_size = 10_000_000_000u64; // 10GB
 
     // Verify our limits prevent excessive allocations
     assert!(
@@ -199,7 +198,7 @@ async fn test_malformed_multipart_protection() {
 
     // Test 3: Field name length limits
     let max_field_name_length = 1000; // Reasonable limit
-    let attack_field_name_length = 100000;
+    let attack_field_name_length = 100_000;
     assert!(
         attack_field_name_length > max_field_name_length * 10,
         "Should test long field name attack"
@@ -215,11 +214,11 @@ async fn test_binary_processing_resource_limits() {
     // Test that binary file processing is resource-bounded
 
     // Test temp file creation limits
-    let max_temp_files = 1000; // Reasonable limit for concurrent processing
-    let temp_file_size_limit = 16 * 1024 * 1024; // 16MB limit
+    let max_temp_files: u64 = 1000; // Reasonable limit for concurrent processing
+    let temp_file_size_limit: u64 = 16 * 1024 * 1024; // 16MB limit
 
     // Calculate worst-case resource usage
-    let max_temp_storage = (max_temp_files as u64) * (temp_file_size_limit as u64);
+    let max_temp_storage = max_temp_files * temp_file_size_limit;
 
     // Verify bounded disk usage (16GB worst case)
     assert!(
@@ -258,6 +257,7 @@ async fn test_cpu_intensive_parsing_protection() {
 
     // Calculate processing time estimates
     let processing_time_per_contig = Duration::from_nanos(100); // 100ns per contig
+    #[allow(clippy::cast_possible_truncation)] // MAX_CONTIGS is 50_000, fits in u32
     let max_processing_time = processing_time_per_contig.saturating_mul(MAX_CONTIGS as u32);
 
     // Verify processing time is reasonable (under 50ms for max contigs)
@@ -285,25 +285,24 @@ async fn test_string_processing_limits() {
     let max_text_field_size = 1024 * 1024; // 1MB
 
     // Test quadratic time attack scenarios
-    let quadratic_attack_size = 100000; // Large input for O(n²) algorithms
+    let quadratic_attack_size: u64 = 100_000; // Large input for O(n²) algorithms
 
     assert!(
         max_filename_length < quadratic_attack_size,
         "Filename limit should prevent O(n²) attacks"
     );
     assert!(
-        max_text_field_size < (quadratic_attack_size as u64) * (quadratic_attack_size as u64),
+        max_text_field_size < quadratic_attack_size * quadratic_attack_size,
         "Text limit should prevent extreme O(n²)"
     );
 
     // Test regex complexity attacks (ReDoS)
     let max_regex_input_size = max_text_field_size;
-    let redos_attack_pattern_length = 10000; // Long pattern designed to cause exponential backtracking
+    let redos_attack_pattern_length: u64 = 10_000; // Long pattern designed to cause exponential backtracking
 
     // Our limits should prevent ReDoS attacks
     assert!(
-        max_regex_input_size
-            < (redos_attack_pattern_length as u64) * (redos_attack_pattern_length as u64),
+        max_regex_input_size < redos_attack_pattern_length * redos_attack_pattern_length,
         "Input size limits should help prevent ReDoS attacks"
     );
 }
@@ -346,12 +345,12 @@ async fn test_memory_allocation_protection() {
 async fn test_network_resource_protection() {
     // Test limits that prevent network-based DoS
 
-    let max_request_size = 10 * 1024 * 1024; // 10MB
-    let max_concurrent_connections = 100;
+    let max_request_size: u64 = 10 * 1024 * 1024; // 10MB
+    let max_concurrent_connections: u64 = 100;
     let request_timeout = Duration::from_secs(30);
 
     // Calculate maximum network resource usage
-    let max_network_memory = (max_request_size as u64) * (max_concurrent_connections as u64);
+    let max_network_memory = max_request_size * max_concurrent_connections;
     let max_connection_time = request_timeout;
 
     // Verify network resources are bounded
@@ -365,8 +364,11 @@ async fn test_network_resource_protection() {
     );
 
     // Test bandwidth limiting concepts
-    let max_bandwidth_per_connection = max_request_size as f64 / request_timeout.as_secs() as f64;
-    let total_max_bandwidth = max_bandwidth_per_connection * max_concurrent_connections as f64;
+    #[allow(clippy::cast_precision_loss)] // Precision loss acceptable for bandwidth calculations
+    let max_bandwidth_per_connection =
+        (max_request_size as f64) / (request_timeout.as_secs() as f64);
+    #[allow(clippy::cast_precision_loss)]
+    let total_max_bandwidth = max_bandwidth_per_connection * (max_concurrent_connections as f64);
 
     // These help estimate DoS protection effectiveness
     assert!(
@@ -495,14 +497,15 @@ async fn test_realistic_attack_simulation() {
     // Verify that our security measures handle each attack vector
     for vector in &attack_vectors {
         // Calculate resource impact
-        let total_requests = vector.requests_per_second * vector.duration.as_secs() as u32;
-        let peak_memory = (vector.file_size as u64) * (vector.requests_per_second as u64);
-        let total_fields = (vector.field_count as u64) * (total_requests as u64);
+        #[allow(clippy::cast_possible_truncation)] // Test durations are small (< 300 secs)
+        let total_requests = vector.requests_per_second * (vector.duration.as_secs() as u32);
+        let peak_memory = (vector.file_size as u64) * u64::from(vector.requests_per_second);
+        let total_fields = u64::from(vector.field_count) * u64::from(total_requests);
 
         println!("Testing attack vector: {}", vector.name);
-        println!("  Total requests: {}", total_requests);
+        println!("  Total requests: {total_requests}");
         println!("  Peak memory estimate: {} MB", peak_memory / (1024 * 1024));
-        println!("  Total fields: {}", total_fields);
+        println!("  Total fields: {total_fields}");
 
         // Verify our limits would prevent each attack
         match vector.name {
@@ -537,7 +540,7 @@ async fn test_realistic_attack_simulation() {
     // Test combined attack resistance
     let combined_attack_memory = attack_vectors
         .iter()
-        .map(|v| (v.file_size as u64) * (v.requests_per_second as u64))
+        .map(|v| (v.file_size as u64) * u64::from(v.requests_per_second))
         .sum::<u64>();
 
     let our_memory_limits = 100u64 * (16 * 1024 * 1024); // 100 concurrent * 16MB limit
