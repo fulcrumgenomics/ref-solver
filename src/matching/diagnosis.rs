@@ -172,15 +172,24 @@ impl MatchDiagnosis {
                     }
                 }
 
-                // Check if query name matches ref name OR any ref alias
-                // Alias matches should be treated equally as direct name matches
-                let is_name_match =
-                    q_contig.name == r_contig.name || r_contig.aliases.contains(&q_contig.name);
+                // Check all 4 combinations - any match via name or alias should be treated equally:
+                // 1. Query primary == Ref primary
+                // 2. Query primary in Ref aliases
+                // 3. Query alias == Ref primary
+                // 4. Query alias in Ref aliases
+                let query_names_match_ref_primary = q_contig.name == r_contig.name
+                    || q_contig.aliases.iter().any(|a| a == &r_contig.name);
+                let query_names_match_ref_alias = r_contig.aliases.contains(&q_contig.name)
+                    || q_contig
+                        .aliases
+                        .iter()
+                        .any(|qa| r_contig.aliases.contains(qa));
+                let is_name_match = query_names_match_ref_primary || query_names_match_ref_alias;
 
                 if is_name_match {
                     name_length_only_matches.push(ContigMatch);
                 } else {
-                    // Only count as renamed if query name doesn't match ref name or aliases
+                    // Only count as renamed if no name/alias overlap at all
                     renamed_matches.push(RenamedContig {
                         query_name: q_contig.name.clone(),
                         reference_name: r_contig.name.clone(),
