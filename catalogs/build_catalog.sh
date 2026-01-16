@@ -4,7 +4,7 @@
 
 set -e
 
-BINARY="./target/release/ref-finder"
+BINARY="./target/release/ref-solver"
 SOURCES="catalogs/sources"
 FASTA="$SOURCES/fasta"
 OUTPUT="$SOURCES"

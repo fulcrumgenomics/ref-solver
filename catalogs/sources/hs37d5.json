@@ -14,8 +14,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "CM000663.1",
-        "chr1",
-        "NC_000001.10"
+        "NC_000001.10",
+        "chr1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -25,9 +25,9 @@
       "md5": "a0d9851da00400dec1098a9255ac712e",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "CM000664.1",
+        "chr2",
         "NC_000002.11",
-        "chr2"
+        "CM000664.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -38,8 +38,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "NC_000003.11",
-        "chr3",
-        "CM000665.1"
+        "CM000665.1",
+        "chr3"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -62,8 +62,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "CM000667.1",
-        "chr5",
-        "NC_000005.9"
+        "NC_000005.9",
+        "chr5"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -74,8 +74,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "NC_000006.11",
-        "CM000668.1",
-        "chr6"
+        "chr6",
+        "CM000668.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -97,9 +97,9 @@
       "md5": "96f514a9929e410c6651697bded59aec",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "NC_000008.10",
         "chr8",
-        "CM000670.1",
-        "NC_000008.10"
+        "CM000670.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -109,8 +109,8 @@
       "md5": "3e273117f15e0a400f01055d9f393768",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "CM000671.1",
         "NC_000009.11",
+        "CM000671.1",
         "chr9"
       ],
       "sequence_role": "assembled-molecule"
@@ -121,9 +121,9 @@
       "md5": "988c28e000e84c26d552359af1ea2e1d",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr10",
         "NC_000010.10",
-        "CM000672.1"
+        "CM000672.1",
+        "chr10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -134,8 +134,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "chr11",
-        "CM000673.1",
-        "NC_000011.9"
+        "NC_000011.9",
+        "CM000673.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -145,9 +145,9 @@
       "md5": "51851ac0e1a115847ad36449b0015864",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "NC_000012.11",
         "chr12",
-        "CM000674.1",
-        "NC_000012.11"
+        "CM000674.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -157,9 +157,9 @@
       "md5": "283f8d7892baa81b510a015719ca7b0b",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NC_000013.10",
+        "chr13",
         "CM000675.1",
-        "chr13"
+        "NC_000013.10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -169,9 +169,9 @@
       "md5": "98f3cae32b2a2e9524bc19813927542e",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "CM000676.1",
         "chr14",
-        "NC_000014.8"
+        "NC_000014.8",
+        "CM000676.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -181,9 +181,9 @@
       "md5": "e5645a794a8238215b2cd77acb95a078",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "CM000677.1",
+        "chr15",
         "NC_000015.9",
-        "chr15"
+        "CM000677.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -194,8 +194,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "CM000678.1",
-        "chr16",
-        "NC_000016.9"
+        "NC_000016.9",
+        "chr16"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -205,8 +205,8 @@
       "md5": "351f64d4f4f9ddd45b35336ad97aa6de",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr17",
         "NC_000017.10",
+        "chr17",
         "CM000679.1"
       ],
       "sequence_role": "assembled-molecule"
@@ -217,9 +217,9 @@
       "md5": "b15d4b2d29dde9d3e4f93d1d0f2cbc9c",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "CM000680.1",
         "NC_000018.9",
-        "chr18"
+        "chr18",
+        "CM000680.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -230,8 +230,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "NC_000019.9",
-        "CM000681.1",
-        "chr19"
+        "chr19",
+        "CM000681.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -241,9 +241,9 @@
       "md5": "0dec9660ec1efaaf33281c0d5ea2560f",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr20",
         "CM000682.1",
-        "NC_000020.10"
+        "NC_000020.10",
+        "chr20"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -253,9 +253,9 @@
       "md5": "2979a6085bfe28e3ad6f552f361ed74d",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr21",
+        "CM000683.1",
         "NC_000021.8",
-        "CM000683.1"
+        "chr21"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -265,9 +265,9 @@
       "md5": "a718acaa6135fdca8357d5bfe94211dd",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr22",
         "NC_000022.10",
-        "CM000684.1"
+        "CM000684.1",
+        "chr22"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -277,9 +277,9 @@
       "md5": "7e0e2e580297b7764e31dbc80c2540dd",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "CM000685.1",
         "NC_000023.10",
-        "chrX"
+        "chrX",
+        "CM000685.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -289,9 +289,9 @@
       "md5": "1fa3474750af0948bdf97d5a0ee52e51",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NC_000024.9",
+        "chrY",
         "CM000686.1",
-        "chrY"
+        "NC_000024.9"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -301,8 +301,8 @@
       "md5": "c68f52674c9fb33aef52dcf399755519",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NC_012920.1",
         "J01415.2",
+        "NC_012920.1",
         "chrM"
       ],
       "sequence_role": "assembled-molecule"
@@ -313,9 +313,9 @@
       "md5": "f3814841f1939d3ca19072d9e89f3fd7",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "HSCHR18_RANDOM_CTG1",
         "NT_113947.1",
-        "chr18_gl000207_random",
-        "HSCHR18_RANDOM_CTG1"
+        "chr18_gl000207_random"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -337,9 +337,9 @@
       "md5": "d0f40ec87de311d8e715b52e4c7062e1",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_167223.1",
         "chrUn_gl000229",
-        "HSCHRUN_RANDOM_CTG22"
+        "HSCHRUN_RANDOM_CTG22",
+        "NT_167223.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -386,8 +386,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "HSCHRUN_RANDOM_CTG28",
-        "NT_167229.1",
-        "chrUn_gl000235"
+        "chrUn_gl000235",
+        "NT_167229.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -397,9 +397,9 @@
       "md5": "dfb7e7ec60ffdcb85cb359ea28454ee9",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr9_gl000201_random",
         "HSCHR9_RANDOM_CTG5",
-        "NT_113911.1"
+        "NT_113911.1",
+        "chr9_gl000201_random"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -409,9 +409,9 @@
       "md5": "7de00226bb7df1c57276ca6baabafd15",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_167241.1",
+        "HSCHRUN_RANDOM_CTG40",
         "chrUn_gl000247",
-        "HSCHRUN_RANDOM_CTG40"
+        "NT_167241.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -421,9 +421,9 @@
       "md5": "89bc61960f37d94abf0df2d481ada0ec",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "NT_167239.1",
         "chrUn_gl000245",
-        "HSCHRUN_RANDOM_CTG38",
-        "NT_167239.1"
+        "HSCHRUN_RANDOM_CTG38"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -433,8 +433,8 @@
       "md5": "6f5efdd36643a9b8c8ccad6f2f1edc7b",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr8_gl000197_random",
         "NT_113907.1",
+        "chr8_gl000197_random",
         "HSCHR8_RANDOM_CTG4"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -457,9 +457,9 @@
       "md5": "e4afcd31912af9d9c2546acf1cb23af2",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chrUn_gl000246",
+        "HSCHRUN_RANDOM_CTG39",
         "NT_167240.1",
-        "HSCHRUN_RANDOM_CTG39"
+        "chrUn_gl000246"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -469,9 +469,9 @@
       "md5": "1d78abec37c15fe29a275eb08d5af236",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_167243.1",
+        "HSCHRUN_RANDOM_CTG42",
         "chrUn_gl000249",
-        "HSCHRUN_RANDOM_CTG42"
+        "NT_167243.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -493,9 +493,9 @@
       "md5": "5a8e43bec9be36c7b49c84d585107776",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "NT_167242.1",
         "chrUn_gl000248",
-        "HSCHRUN_RANDOM_CTG41",
-        "NT_167242.1"
+        "HSCHRUN_RANDOM_CTG41"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -505,9 +505,9 @@
       "md5": "0996b4475f353ca98bacb756ac479140",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_167238.1",
         "chrUn_gl000244",
-        "HSCHRUN_RANDOM_CTG37"
+        "HSCHRUN_RANDOM_CTG37",
+        "NT_167238.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -529,9 +529,9 @@
       "md5": "06cbf126247d89664a4faebad130fe9c",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "chr11_gl000202_random",
         "HSCHR11_RANDOM_CTG2",
-        "NT_113921.2",
-        "chr11_gl000202_random"
+        "NT_113921.2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -541,8 +541,8 @@
       "md5": "93f998536b61a56fd0ff47322a911d4b",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chrUn_gl000234",
         "NT_167228.1",
+        "chrUn_gl000234",
         "HSCHRUN_RANDOM_CTG27"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -565,9 +565,9 @@
       "md5": "43f69e423533e948bfae5ce1d45bd3f1",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "NT_113945.1",
         "chr17_gl000206_random",
-        "HSCHR17_RANDOM_CTG4",
-        "NT_113945.1"
+        "HSCHR17_RANDOM_CTG4"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -578,8 +578,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "chrUn_gl000240",
-        "HSCHRUN_RANDOM_CTG33",
-        "NT_167234.1"
+        "NT_167234.1",
+        "HSCHRUN_RANDOM_CTG33"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -613,9 +613,9 @@
       "md5": "cc34279a7e353136741c9fce79bc4396",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_167237.1",
         "chrUn_gl000243",
-        "HSCHRUN_RANDOM_CTG36"
+        "HSCHRUN_RANDOM_CTG36",
+        "NT_167237.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -626,8 +626,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "chrUn_gl000242",
-        "NT_167236.1",
-        "HSCHRUN_RANDOM_CTG35"
+        "HSCHRUN_RANDOM_CTG35",
+        "NT_167236.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -637,8 +637,8 @@
       "md5": "b4eb71ee878d3706246b7c1dbef69299",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chrUn_gl000230",
         "HSCHRUN_RANDOM_CTG23",
+        "chrUn_gl000230",
         "NT_167224.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -649,9 +649,9 @@
       "md5": "e0c82e7751df73f4f6d0ed30cdc853c0",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG30",
         "NT_167231.1",
-        "chrUn_gl000237"
+        "chrUn_gl000237",
+        "HSCHRUN_RANDOM_CTG30"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -661,9 +661,9 @@
       "md5": "7fed60298a8d62ff808b74b6ce820001",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_167227.1",
         "chrUn_gl000233",
-        "HSCHRUN_RANDOM_CTG26"
+        "HSCHRUN_RANDOM_CTG26",
+        "NT_167227.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -673,9 +673,9 @@
       "md5": "efc49c871536fa8d79cb0a06fa739722",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "HSCHR17_RANDOM_CTG2",
         "NT_113943.1",
-        "chr17_gl000204_random"
+        "chr17_gl000204_random",
+        "HSCHR17_RANDOM_CTG2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -685,9 +685,9 @@
       "md5": "868e7784040da90d900d2d1b667a1383",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "HSCHR9_RANDOM_CTG1",
+        "chr9_gl000198_random",
         "NT_113914.1",
-        "chr9_gl000198_random"
+        "HSCHR9_RANDOM_CTG1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -697,9 +697,9 @@
       "md5": "aa81be49bf3fe63a79bdc6a6f279abf6",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr19_gl000208_random",
+        "HSCHR19_RANDOM_CTG1",
         "NT_113948.1",
-        "HSCHR19_RANDOM_CTG1"
+        "chr19_gl000208_random"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -721,9 +721,9 @@
       "md5": "a4aead23f8053f2655e468bcc6ecdceb",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chrUn_gl000227",
+        "NT_167221.1",
         "HSCHRUN_RANDOM_CTG20",
-        "NT_167221.1"
+        "chrUn_gl000227"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -733,8 +733,8 @@
       "md5": "c5a17c97e2c1a0b6a9cc5a6b064b714f",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chrUn_gl000228",
         "NT_167222.1",
+        "chrUn_gl000228",
         "HSCHRUN_RANDOM_CTG21"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -746,8 +746,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "chrUn_gl000214",
-        "HSCHRUN_RANDOM_CTG4",
-        "NT_167209.1"
+        "NT_167209.1",
+        "HSCHRUN_RANDOM_CTG4"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -758,8 +758,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "NT_167215.1",
-        "chrUn_gl000221",
-        "HSCHRUN_RANDOM_CTG13"
+        "HSCHRUN_RANDOM_CTG13",
+        "chrUn_gl000221"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -769,9 +769,9 @@
       "md5": "f40598e2a5a6b26e84a3775e0d1e2c81",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "HSCHR19_RANDOM_CTG2",
         "chr19_gl000209_random",
-        "NT_113949.1"
+        "NT_113949.1",
+        "HSCHR19_RANDOM_CTG2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -794,8 +794,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "NT_167214.1",
-        "chrUn_gl000220",
-        "HSCHRUN_RANDOM_CTG11"
+        "HSCHRUN_RANDOM_CTG11",
+        "chrUn_gl000220"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -818,8 +818,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "chrUn_gl000211",
-        "HSCHRUN_RANDOM_CTG1",
-        "NT_113961.1"
+        "NT_113961.1",
+        "HSCHRUN_RANDOM_CTG1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -829,9 +829,9 @@
       "md5": "569af3b73522fab4b40995ae4944e78e",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_113916.2",
         "chr9_gl000199_random",
-        "HSCHR9_RANDOM_CTG2"
+        "HSCHR9_RANDOM_CTG2",
+        "NT_113916.2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -853,9 +853,9 @@
       "md5": "642a232d91c486ac339263820aef7fe0",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chrUn_gl000216",
+        "NT_167211.1",
         "HSCHRUN_RANDOM_CTG6",
-        "NT_167211.1"
+        "chrUn_gl000216"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -889,9 +889,9 @@
       "md5": "f977edd13bac459cb2ed4a5457dba1b3",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_167213.1",
         "HSCHRUN_RANDOM_CTG10",
-        "chrUn_gl000219"
+        "chrUn_gl000219",
+        "NT_167213.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -902,8 +902,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "NT_167218.1",
-        "chrUn_gl000224",
-        "HSCHRUN_RANDOM_CTG16"
+        "HSCHRUN_RANDOM_CTG16",
+        "chrUn_gl000224"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -914,8 +914,8 @@
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
         "NT_167217.1",
-        "chrUn_gl000223",
-        "HSCHRUN_RANDOM_CTG15"
+        "HSCHRUN_RANDOM_CTG15",
+        "chrUn_gl000223"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -925,8 +925,8 @@
       "md5": "5d9ec007868d517e73543b005ba48535",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr7_gl000195_random",
         "NT_113901.1",
+        "chr7_gl000195_random",
         "HSCHR7_RANDOM_CTG1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -937,9 +937,9 @@
       "md5": "563531689f3dbd691331fd6c5730a88b",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "NT_113923.1",
         "HSCHRUN_RANDOM_CTG2",
-        "chrUn_gl000212"
+        "chrUn_gl000212",
+        "NT_113923.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -949,9 +949,9 @@
       "md5": "6fe9abac455169f50470f5a6b01d0f59",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
+        "chrUn_gl000222",
         "NT_167216.1",
-        "HSCHRUN_RANDOM_CTG14",
-        "chrUn_gl000222"
+        "HSCHRUN_RANDOM_CTG14"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -961,9 +961,9 @@
       "md5": "75e4c8d17cd4addf3917d1703cacaf25",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "HSCHR9_RANDOM_CTG4",
         "NT_113915.1",
-        "chr9_gl000200_random"
+        "chr9_gl000200_random",
+        "HSCHR9_RANDOM_CTG4"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -973,8 +973,8 @@
       "md5": "dbb6e8ece0b5de29da56601613007c2a",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr4_gl000193_random",
         "HSCHR4_RANDOM_CTG2",
+        "chr4_gl000193_random",
         "NT_113885.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -985,9 +985,9 @@
       "md5": "6ac8f815bf8e845bb3031b73f812c012",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr4_gl000194_random",
+        "HSCHR4_RANDOM_CTG3",
         "NT_113888.1",
-        "HSCHR4_RANDOM_CTG3"
+        "chr4_gl000194_random"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -997,9 +997,9 @@
       "md5": "63945c3e6962f28ffd469719a747e73c",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG17",
         "NT_167219.1",
-        "chrUn_gl000225"
+        "chrUn_gl000225",
+        "HSCHRUN_RANDOM_CTG17"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1009,9 +1009,9 @@
       "md5": "325ba9e808f669dfeee210fdd7b470ac",
       "uri": "file:/mnt/ntapstor5/obsp/dx_ref_genome/hs37d5_from_1kg/hs37d5.fa",
       "aliases": [
-        "chr1_gl000192_random",
+        "NT_167207.1",
         "HSCHR1_RANDOM_CTG12",
-        "NT_167207.1"
+        "chr1_gl000192_random"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -1031,8 +1031,9 @@
       "name": "HG999_1_PATCH",
       "length": 49316,
       "aliases": [
+        "NW_003315903.1",
         "GL383516.1",
-        "NW_003315903.1"
+        "chr1_GL383516v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1040,6 +1041,7 @@
       "name": "HG999_2_PATCH",
       "length": 49352,
       "aliases": [
+        "chr1_GL383517v1_fix",
         "GL383517.1",
         "NW_003315904.1"
       ],
@@ -1049,8 +1051,9 @@
       "name": "HG989_PATCH",
       "length": 151551,
       "aliases": [
+        "NW_003571030.1",
         "GL949741.1",
-        "NW_003571030.1"
+        "chr1_GL949741v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1058,6 +1061,7 @@
       "name": "HG1287_PATCH",
       "length": 7283150,
       "aliases": [
+        "chr1_JH636052v4_fix",
         "NW_003871055.3",
         "JH636052.4"
       ],
@@ -1068,6 +1072,7 @@
       "length": 1676126,
       "aliases": [
         "NW_003871056.3",
+        "chr1_JH636053v3_fix",
         "JH636053.3"
       ],
       "sequence_role": "fix-patch"
@@ -1076,8 +1081,9 @@
       "name": "HG1293_PATCH",
       "length": 758378,
       "aliases": [
-        "JH636054.1",
-        "NW_003871057.1"
+        "NW_003871057.1",
+        "chr1_JH636054v1_fix",
+        "JH636054.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1085,8 +1091,9 @@
       "name": "HG1471_PATCH",
       "length": 24680,
       "aliases": [
-        "NW_004070863.1",
-        "JH806573.1"
+        "chr1_JH806573v1_fix",
+        "JH806573.1",
+        "NW_004070863.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1094,8 +1101,9 @@
       "name": "HG1472_PATCH",
       "length": 22982,
       "aliases": [
-        "NW_004070864.2",
-        "JH806574.2"
+        "chr1_JH806574v2_fix",
+        "JH806574.2",
+        "NW_004070864.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1103,8 +1111,9 @@
       "name": "HG1473_PATCH",
       "length": 47409,
       "aliases": [
+        "JH806575.1",
         "NW_004070865.1",
-        "JH806575.1"
+        "chr1_JH806575v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1113,6 +1122,7 @@
       "length": 182439,
       "aliases": [
         "GL383518.1",
+        "chr1_GL383518v1_alt",
         "NW_003315905.1"
       ],
       "sequence_role": "novel-patch"
@@ -1121,8 +1131,9 @@
       "name": "HSCHR1_2_CTG31",
       "length": 110268,
       "aliases": [
-        "NW_003315906.1",
-        "GL383519.1"
+        "GL383519.1",
+        "chr1_GL383519v1_alt",
+        "NW_003315906.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1130,8 +1141,9 @@
       "name": "HSCHR1_3_CTG31",
       "length": 366579,
       "aliases": [
-        "NW_003315907.1",
-        "GL383520.1"
+        "GL383520.1",
+        "chr1_GL383520v1_alt",
+        "NW_003315907.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1140,6 +1152,7 @@
       "length": 66021,
       "aliases": [
         "GL877870.2",
+        "chr2_GL877870v2_fix",
         "NW_003571031.1"
       ],
       "sequence_role": "fix-patch"
@@ -1148,8 +1161,9 @@
       "name": "HG686_PATCH",
       "length": 389939,
       "aliases": [
-        "GL877871.1",
-        "NW_003571032.1"
+        "NW_003571032.1",
+        "chr2_GL877871v1_fix",
+        "GL877871.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1157,6 +1171,7 @@
       "name": "HG953_PATCH",
       "length": 599580,
       "aliases": [
+        "chr2_KB663603v1_fix",
         "KB663603.1",
         "NW_004504299.1"
       ],
@@ -1167,6 +1182,7 @@
       "length": 143390,
       "aliases": [
         "GL383521.1",
+        "chr2_GL383521v1_alt",
         "NW_003315908.1"
       ],
       "sequence_role": "novel-patch"
@@ -1176,6 +1192,7 @@
       "length": 123821,
       "aliases": [
         "GL383522.1",
+        "chr2_GL383522v1_alt",
         "NW_003315909.1"
       ],
       "sequence_role": "novel-patch"
@@ -1184,6 +1201,7 @@
       "name": "HSCHR2_2_CTG12",
       "length": 96131,
       "aliases": [
+        "chr2_GL582966v2_alt",
         "GL582966.2",
         "NW_003571033.2"
       ],
@@ -1193,8 +1211,9 @@
       "name": "HG186_PATCH",
       "length": 171362,
       "aliases": [
+        "NW_003315910.1",
         "GL383523.1",
-        "NW_003315910.1"
+        "chr3_GL383523v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1203,7 +1222,8 @@
       "length": 78793,
       "aliases": [
         "GL383524.1",
-        "NW_003315911.1"
+        "NW_003315911.1",
+        "chr3_GL383524v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1211,8 +1231,9 @@
       "name": "HG991_PATCH",
       "length": 65063,
       "aliases": [
-        "NW_003315912.1",
-        "GL383525.1"
+        "chr3_GL383525v1_fix",
+        "GL383525.1",
+        "NW_003315912.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1220,8 +1241,9 @@
       "name": "HG1091_PATCH",
       "length": 393769,
       "aliases": [
-        "JH159131.1",
-        "NW_003871058.1"
+        "NW_003871058.1",
+        "chr3_JH159131v1_fix",
+        "JH159131.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1230,7 +1252,8 @@
       "length": 100694,
       "aliases": [
         "JH159132.1",
-        "NW_003871059.1"
+        "NW_003871059.1",
+        "chr3_JH159132v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1239,6 +1262,7 @@
       "length": 263861,
       "aliases": [
         "NW_004775426.1",
+        "chr3_KE332495v1_fix",
         "KE332495.1"
       ],
       "sequence_role": "fix-patch"
@@ -1247,8 +1271,9 @@
       "name": "HSCHR3_1_CTG2_1",
       "length": 180671,
       "aliases": [
-        "NW_003315913.1",
-        "GL383526.1"
+        "chr3_GL383526v1_alt",
+        "GL383526.1",
+        "NW_003315913.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1256,8 +1281,9 @@
       "name": "HSCHR3_1_CTG1",
       "length": 173151,
       "aliases": [
+        "JH636055.1",
         "NW_003871060.1",
-        "JH636055.1"
+        "chr3_JH636055v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1265,8 +1291,9 @@
       "name": "HG706_PATCH",
       "length": 248177,
       "aliases": [
-        "NW_003571035.1",
-        "GL582967.1"
+        "GL582967.1",
+        "chr4_GL582967v1_fix",
+        "NW_003571035.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1274,8 +1301,9 @@
       "name": "HG1032_PATCH",
       "length": 297485,
       "aliases": [
+        "GL877872.1",
         "NW_003571034.1",
-        "GL877872.1"
+        "chr4_GL877872v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1283,6 +1311,7 @@
       "name": "HG174_HG254_PATCH",
       "length": 503215,
       "aliases": [
+        "chr4_KE332496v1_fix",
         "KE332496.1",
         "NW_004775427.1"
       ],
@@ -1292,8 +1321,9 @@
       "name": "HSCHR4_1_CTG12",
       "length": 164536,
       "aliases": [
-        "NW_003315914.1",
-        "GL383527.1"
+        "GL383527.1",
+        "chr4_GL383527v1_alt",
+        "NW_003315914.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1302,6 +1332,7 @@
       "length": 376187,
       "aliases": [
         "NW_003315915.1",
+        "chr4_GL383528v1_alt",
         "GL383528.1"
       ],
       "sequence_role": "novel-patch"
@@ -1310,8 +1341,9 @@
       "name": "HSCHR4_2_CTG9",
       "length": 121345,
       "aliases": [
-        "GL383529.1",
-        "NW_003315916.1"
+        "NW_003315916.1",
+        "chr4_GL383529v1_alt",
+        "GL383529.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1320,7 +1352,8 @@
       "length": 266316,
       "aliases": [
         "NW_003871061.1",
-        "JH159133.1"
+        "JH159133.1",
+        "chr5_JH159133v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1328,8 +1361,9 @@
       "name": "HG1082_HG167_PATCH",
       "length": 543325,
       "aliases": [
-        "NW_004775428.1",
-        "KE332497.1"
+        "KE332497.1",
+        "chr5_KE332497v1_fix",
+        "NW_004775428.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1337,8 +1371,9 @@
       "name": "HSCHR5_1_CTG1",
       "length": 1612928,
       "aliases": [
-        "NW_003315917.2",
-        "GL339449.2"
+        "GL339449.2",
+        "chr5_GL339449v2_alt",
+        "NW_003315917.2"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1346,8 +1381,9 @@
       "name": "HSCHR5_1_CTG2",
       "length": 101241,
       "aliases": [
-        "NW_003315918.1",
-        "GL383530.1"
+        "chr5_GL383530v1_alt",
+        "GL383530.1",
+        "NW_003315918.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1356,6 +1392,7 @@
       "length": 173459,
       "aliases": [
         "GL383531.1",
+        "chr5_GL383531v1_alt",
         "NW_003315919.1"
       ],
       "sequence_role": "novel-patch"
@@ -1364,8 +1401,9 @@
       "name": "HSCHR5_2_CTG1",
       "length": 82728,
       "aliases": [
-        "NW_003315920.1",
-        "GL383532.1"
+        "GL383532.1",
+        "chr5_GL383532v1_alt",
+        "NW_003315920.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1373,8 +1411,9 @@
       "name": "HSCHR5_3_CTG1",
       "length": 226852,
       "aliases": [
-        "NW_003571036.1",
-        "GL949742.1"
+        "GL949742.1",
+        "chr5_GL949742v1_alt",
+        "NW_003571036.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1382,8 +1421,9 @@
       "name": "HG1304_PATCH",
       "length": 262912,
       "aliases": [
+        "NW_003871062.1",
         "JH636056.1",
-        "NW_003871062.1"
+        "chr6_JH636056v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1392,6 +1432,7 @@
       "length": 200195,
       "aliases": [
         "NW_003871063.1",
+        "chr6_JH636057v1_fix",
         "JH636057.1"
       ],
       "sequence_role": "fix-patch"
@@ -1400,8 +1441,9 @@
       "name": "HG27_PATCH",
       "length": 273386,
       "aliases": [
+        "JH806576.1",
         "NW_004070866.1",
-        "JH806576.1"
+        "chr6_JH806576v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1410,7 +1452,8 @@
       "length": 478993,
       "aliases": [
         "NW_004504300.1",
-        "KB663604.1"
+        "KB663604.1",
+        "chr6_KB663604v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1418,8 +1461,9 @@
       "name": "HG193_PATCH",
       "length": 149443,
       "aliases": [
-        "NW_004775429.1",
-        "KE332498.1"
+        "chr6_KE332498v1_fix",
+        "KE332498.1",
+        "NW_004775429.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1428,7 +1472,8 @@
       "length": 124736,
       "aliases": [
         "GL383533.1",
-        "NW_003315921.1"
+        "NW_003315921.1",
+        "chr6_GL383533v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1437,7 +1482,8 @@
       "length": 187824,
       "aliases": [
         "KB021644.1",
-        "NW_004166862.1"
+        "NW_004166862.1",
+        "chr6_KB021644v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1446,6 +1492,7 @@
       "length": 356330,
       "aliases": [
         "GL582968.1",
+        "chr7_GL582968v1_fix",
         "NW_003571037.1"
       ],
       "sequence_role": "fix-patch"
@@ -1454,8 +1501,9 @@
       "name": "HG14_PATCH",
       "length": 251823,
       "aliases": [
-        "GL582969.1",
-        "NW_003571038.1"
+        "chr7_GL582969v1_fix",
+        "NW_003571038.1",
+        "GL582969.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1463,8 +1511,9 @@
       "name": "HG736_PATCH",
       "length": 354970,
       "aliases": [
-        "GL582970.1",
-        "NW_003571039.1"
+        "NW_003571039.1",
+        "chr7_GL582970v1_fix",
+        "GL582970.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1472,8 +1521,9 @@
       "name": "HG7_PATCH",
       "length": 1284284,
       "aliases": [
-        "NW_003571040.1",
-        "GL582971.1"
+        "chr7_GL582971v1_fix",
+        "GL582971.1",
+        "NW_003571040.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1481,8 +1531,9 @@
       "name": "HG946_PATCH",
       "length": 327774,
       "aliases": [
+        "NW_003571041.1",
         "GL582972.1",
-        "NW_003571041.1"
+        "chr7_GL582972v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1490,8 +1541,9 @@
       "name": "HG1257_PATCH",
       "length": 3821770,
       "aliases": [
-        "JH159134.2",
-        "NW_003871064.1"
+        "NW_003871064.1",
+        "chr7_JH159134v2_fix",
+        "JH159134.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1499,8 +1551,9 @@
       "name": "HG1308_PATCH",
       "length": 716227,
       "aliases": [
-        "NW_003871065.1",
-        "JH636058.1"
+        "JH636058.1",
+        "chr7_JH636058v1_fix",
+        "NW_003871065.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1508,8 +1561,9 @@
       "name": "HG444_PATCH",
       "length": 274521,
       "aliases": [
-        "KE332499.1",
-        "NW_004775430.1"
+        "NW_004775430.1",
+        "chr7_KE332499v1_fix",
+        "KE332499.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1518,7 +1572,8 @@
       "length": 119183,
       "aliases": [
         "GL383534.2",
-        "NW_003315922.2"
+        "NW_003315922.2",
+        "chr7_GL383534v2_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1526,8 +1581,9 @@
       "name": "HG104_HG975_PATCH",
       "length": 429806,
       "aliases": [
+        "GL383535.1",
         "NW_003315923.1",
-        "GL383535.1"
+        "chr8_GL383535v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1536,7 +1592,8 @@
       "length": 203777,
       "aliases": [
         "GL383536.1",
-        "NW_003315924.1"
+        "NW_003315924.1",
+        "chr8_GL383536v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1544,8 +1601,9 @@
       "name": "HG19_PATCH",
       "length": 608579,
       "aliases": [
+        "GL949743.1",
         "NW_003571042.1",
-        "GL949743.1"
+        "chr8_GL949743v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1553,8 +1611,9 @@
       "name": "HG418_PATCH",
       "length": 102251,
       "aliases": [
-        "JH159135.2",
-        "NW_003871066.2"
+        "chr8_JH159135v2_fix",
+        "NW_003871066.2",
+        "JH159135.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1562,6 +1621,7 @@
       "name": "HG1699_PATCH",
       "length": 228602,
       "aliases": [
+        "chr8_KE332500v1_fix",
         "KE332500.1",
         "NW_004775431.1"
       ],
@@ -1571,8 +1631,9 @@
       "name": "HG79_PATCH",
       "length": 330164,
       "aliases": [
-        "GL339450.1",
-        "NW_003315925.1"
+        "chr9_GL339450v1_fix",
+        "NW_003315925.1",
+        "GL339450.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1580,6 +1641,7 @@
       "name": "HG998_1_PATCH",
       "length": 62435,
       "aliases": [
+        "chr9_GL383537v1_fix",
         "GL383537.1",
         "NW_003315926.1"
       ],
@@ -1590,7 +1652,8 @@
       "length": 49281,
       "aliases": [
         "GL383538.1",
-        "NW_003315927.1"
+        "NW_003315927.1",
+        "chr9_GL383538v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1598,8 +1661,9 @@
       "name": "HG962_PATCH",
       "length": 295379,
       "aliases": [
-        "NW_003871067.1",
-        "JH636059.1"
+        "chr9_JH636059v1_fix",
+        "JH636059.1",
+        "NW_003871067.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1607,8 +1671,9 @@
       "name": "HG1500_PATCH",
       "length": 22394,
       "aliases": [
-        "NW_004070867.1",
-        "JH806577.1"
+        "JH806577.1",
+        "chr9_JH806577v1_fix",
+        "NW_004070867.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1616,6 +1681,7 @@
       "name": "HG1501_PATCH",
       "length": 169437,
       "aliases": [
+        "chr9_JH806578v1_fix",
         "JH806578.1",
         "NW_004070868.1"
       ],
@@ -1625,8 +1691,9 @@
       "name": "HG1502_PATCH",
       "length": 211307,
       "aliases": [
+        "NW_004070869.1",
         "JH806579.1",
-        "NW_004070869.1"
+        "chr9_JH806579v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1635,7 +1702,8 @@
       "length": 155926,
       "aliases": [
         "KB663605.1",
-        "NW_004504301.1"
+        "NW_004504301.1",
+        "chr9_KB663605v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1644,7 +1712,8 @@
       "length": 162988,
       "aliases": [
         "NW_003315928.1",
-        "GL383539.1"
+        "GL383539.1",
+        "chr9_GL383539v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1653,7 +1722,8 @@
       "length": 71551,
       "aliases": [
         "GL383540.1",
-        "NW_003315929.1"
+        "NW_003315929.1",
+        "chr9_GL383540v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1661,6 +1731,7 @@
       "name": "HSCHR9_2_CTG35",
       "length": 171286,
       "aliases": [
+        "chr9_GL383541v1_alt",
         "GL383541.1",
         "NW_003315930.1"
       ],
@@ -1670,8 +1741,9 @@
       "name": "HSCHR9_3_CTG35",
       "length": 60032,
       "aliases": [
-        "GL383542.1",
-        "NW_003315931.1"
+        "NW_003315931.1",
+        "chr9_GL383542v1_alt",
+        "GL383542.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1679,8 +1751,9 @@
       "name": "HG544_PATCH",
       "length": 392792,
       "aliases": [
-        "NW_003315932.1",
-        "GL383543.1"
+        "chr10_GL383543v1_fix",
+        "GL383543.1",
+        "NW_003315932.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1688,8 +1761,9 @@
       "name": "HG995_PATCH",
       "length": 128378,
       "aliases": [
-        "GL383544.1",
-        "NW_003315933.1"
+        "NW_003315933.1",
+        "chr10_GL383544v1_fix",
+        "GL383544.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1697,8 +1771,9 @@
       "name": "HG905_PATCH",
       "length": 168465,
       "aliases": [
-        "GL877873.1",
-        "NW_003571043.1"
+        "chr10_GL877873v1_fix",
+        "NW_003571043.1",
+        "GL877873.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1706,8 +1781,9 @@
       "name": "HG1211_PATCH",
       "length": 2281126,
       "aliases": [
+        "NW_003871068.1",
         "JH591181.2",
-        "NW_003871068.1"
+        "chr10_JH591181v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1715,8 +1791,9 @@
       "name": "HG311_PATCH",
       "length": 196262,
       "aliases": [
-        "NW_003871069.1",
-        "JH591182.1"
+        "chr10_JH591182v1_fix",
+        "JH591182.1",
+        "NW_003871069.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1725,6 +1802,7 @@
       "length": 177920,
       "aliases": [
         "JH591183.1",
+        "chr10_JH591183v1_fix",
         "NW_003871070.1"
       ],
       "sequence_role": "fix-patch"
@@ -1734,7 +1812,8 @@
       "length": 437946,
       "aliases": [
         "JH636060.1",
-        "NW_003871071.1"
+        "NW_003871071.1",
+        "chr10_JH636060v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1743,7 +1822,8 @@
       "length": 93149,
       "aliases": [
         "JH806580.1",
-        "NW_004070870.1"
+        "NW_004070870.1",
+        "chr10_JH806580v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1751,6 +1831,7 @@
       "name": "HG1074_PATCH",
       "length": 305900,
       "aliases": [
+        "chr10_KB663606v1_fix",
         "NW_004504302.1",
         "KB663606.1"
       ],
@@ -1760,8 +1841,9 @@
       "name": "HG979_PATCH",
       "length": 1020827,
       "aliases": [
+        "KE332501.1",
         "NW_004775432.1",
-        "KE332501.1"
+        "chr10_KE332501v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1770,6 +1852,7 @@
       "length": 179254,
       "aliases": [
         "NW_003315934.1",
+        "chr10_GL383545v1_alt",
         "GL383545.1"
       ],
       "sequence_role": "novel-patch"
@@ -1778,8 +1861,9 @@
       "name": "HSCHR10_1_CTG5",
       "length": 309802,
       "aliases": [
-        "NW_003315935.1",
-        "GL383546.1"
+        "chr10_GL383546v1_alt",
+        "GL383546.1",
+        "NW_003315935.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1788,7 +1872,8 @@
       "length": 321004,
       "aliases": [
         "GL582973.1",
-        "NW_003571045.1"
+        "NW_003571045.1",
+        "chr11_GL582973v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1796,8 +1881,9 @@
       "name": "HG536_PATCH",
       "length": 276448,
       "aliases": [
+        "NW_003571046.1",
         "GL949744.1",
-        "NW_003571046.1"
+        "chr11_GL949744v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1806,6 +1892,7 @@
       "length": 108875,
       "aliases": [
         "NW_003871076.1",
+        "chr11_JH159138v1_fix",
         "JH159138.1"
       ],
       "sequence_role": "fix-patch"
@@ -1815,6 +1902,7 @@
       "length": 120441,
       "aliases": [
         "NW_003871077.1",
+        "chr11_JH159139v1_fix",
         "JH159139.1"
       ],
       "sequence_role": "fix-patch"
@@ -1824,6 +1912,7 @@
       "length": 546435,
       "aliases": [
         "NW_003871078.1",
+        "chr11_JH159140v1_fix",
         "JH159140.1"
       ],
       "sequence_role": "fix-patch"
@@ -1833,6 +1922,7 @@
       "length": 240775,
       "aliases": [
         "NW_003871079.1",
+        "chr11_JH159141v2_fix",
         "JH159141.2"
       ],
       "sequence_role": "fix-patch"
@@ -1841,8 +1931,9 @@
       "name": "HG388_HG400_PATCH",
       "length": 326647,
       "aliases": [
+        "JH159142.2",
         "NW_003871080.1",
-        "JH159142.2"
+        "chr11_JH159142v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1851,7 +1942,8 @@
       "length": 191402,
       "aliases": [
         "JH159143.1",
-        "NW_003871081.1"
+        "NW_003871081.1",
+        "chr11_JH159143v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1860,6 +1952,7 @@
       "length": 462282,
       "aliases": [
         "NW_003871075.1",
+        "chr11_JH591184v1_fix",
         "JH591184.1"
       ],
       "sequence_role": "fix-patch"
@@ -1868,8 +1961,9 @@
       "name": "HG873_PATCH",
       "length": 167437,
       "aliases": [
+        "NW_003871082.1",
         "JH591185.1",
-        "NW_003871082.1"
+        "chr11_JH591185v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1878,7 +1972,8 @@
       "length": 408430,
       "aliases": [
         "NW_003871072.2",
-        "JH720443.2"
+        "JH720443.2",
+        "chr11_JH720443v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1886,6 +1981,7 @@
       "name": "HG865_PATCH",
       "length": 872115,
       "aliases": [
+        "chr11_JH806581v1_fix",
         "JH806581.1",
         "NW_004070871.1"
       ],
@@ -1895,8 +1991,9 @@
       "name": "HSCHR11_1_CTG1_1",
       "length": 154407,
       "aliases": [
-        "NW_003315936.1",
-        "GL383547.1"
+        "GL383547.1",
+        "chr11_GL383547v1_alt",
+        "NW_003315936.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1904,8 +2001,9 @@
       "name": "HG142_HG150_NOVEL_TEST",
       "length": 200998,
       "aliases": [
+        "NW_003871073.1",
         "JH159136.1",
-        "NW_003871073.1"
+        "chr11_JH159136v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1913,6 +2011,7 @@
       "name": "HG151_NOVEL_TEST",
       "length": 191409,
       "aliases": [
+        "chr11_JH159137v1_alt",
         "JH159137.1",
         "NW_003871074.1"
       ],
@@ -1923,6 +2022,7 @@
       "length": 165247,
       "aliases": [
         "NW_003315937.1",
+        "chr12_GL383548v1_fix",
         "GL383548.1"
       ],
       "sequence_role": "fix-patch"
@@ -1932,6 +2032,7 @@
       "length": 163298,
       "aliases": [
         "NW_003571048.1",
+        "chr12_GL582974v1_fix",
         "GL582974.1"
       ],
       "sequence_role": "fix-patch"
@@ -1940,8 +2041,9 @@
       "name": "HG344_PATCH",
       "length": 273128,
       "aliases": [
-        "NW_003871083.2",
-        "JH720444.2"
+        "JH720444.2",
+        "chr12_JH720444v2_fix",
+        "NW_003871083.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1950,6 +2052,7 @@
       "length": 334922,
       "aliases": [
         "NW_004504303.2",
+        "chr12_KB663607v2_fix",
         "KB663607.2"
       ],
       "sequence_role": "fix-patch"
@@ -1959,6 +2062,7 @@
       "length": 120804,
       "aliases": [
         "NW_003315938.1",
+        "chr12_GL383549v1_alt",
         "GL383549.1"
       ],
       "sequence_role": "novel-patch"
@@ -1967,8 +2071,9 @@
       "name": "HSCHR12_1_CTG2_1",
       "length": 169178,
       "aliases": [
-        "GL383550.1",
-        "NW_003315939.1"
+        "chr12_GL383550v1_alt",
+        "NW_003315939.1",
+        "GL383550.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1976,8 +2081,9 @@
       "name": "HSCHR12_1_CTG5",
       "length": 184319,
       "aliases": [
+        "NW_003315940.1",
         "GL383551.1",
-        "NW_003315940.1"
+        "chr12_GL383551v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1985,8 +2091,9 @@
       "name": "HSCHR12_2_CTG2_1",
       "length": 138655,
       "aliases": [
+        "GL383552.1",
         "NW_003315941.1",
-        "GL383552.1"
+        "chr12_GL383552v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1995,6 +2102,7 @@
       "length": 152874,
       "aliases": [
         "GL383553.2",
+        "chr12_GL383553v2_alt",
         "NW_003315942.2"
       ],
       "sequence_role": "novel-patch"
@@ -2004,6 +2112,7 @@
       "length": 167313,
       "aliases": [
         "GL877875.1",
+        "chr12_GL877875v1_alt",
         "NW_003571049.1"
       ],
       "sequence_role": "novel-patch"
@@ -2012,8 +2121,9 @@
       "name": "HSCHR12_2_CTG2",
       "length": 408271,
       "aliases": [
-        "GL877876.1",
-        "NW_003571050.1"
+        "NW_003571050.1",
+        "chr12_GL877876v1_alt",
+        "GL877876.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2021,6 +2131,7 @@
       "name": "HG1133_PATCH",
       "length": 372609,
       "aliases": [
+        "chr12_GL949745v1_alt",
         "GL949745.1",
         "NW_003571047.1"
       ],
@@ -2031,7 +2142,8 @@
       "length": 34662,
       "aliases": [
         "GL582975.1",
-        "NW_003571051.1"
+        "NW_003571051.1",
+        "chr13_GL582975v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2039,8 +2151,9 @@
       "name": "HG1592_PATCH",
       "length": 1523386,
       "aliases": [
+        "KB021645.1",
         "NW_004166863.1",
-        "KB021645.1"
+        "chr14_KB021645v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2048,8 +2161,9 @@
       "name": "HG971_PATCH",
       "length": 170033,
       "aliases": [
-        "JH720445.1",
-        "NW_003871084.1"
+        "NW_003871084.1",
+        "chr15_JH720445v1_fix",
+        "JH720445.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2057,8 +2171,9 @@
       "name": "HSCHR15_1_CTG4",
       "length": 296527,
       "aliases": [
-        "GL383554.1",
-        "NW_003315943.1"
+        "NW_003315943.1",
+        "chr15_GL383554v1_alt",
+        "GL383554.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2067,7 +2182,8 @@
       "length": 388773,
       "aliases": [
         "GL383555.1",
-        "NW_003315944.1"
+        "NW_003315944.1",
+        "chr15_GL383555v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2076,7 +2192,8 @@
       "length": 97345,
       "aliases": [
         "NW_003871085.1",
-        "JH720446.1"
+        "JH720446.1",
+        "chr16_JH720446v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2084,8 +2201,9 @@
       "name": "HSCHR16_1_CTG3_1",
       "length": 192462,
       "aliases": [
+        "GL383556.1",
         "NW_003315945.1",
-        "GL383556.1"
+        "chr16_GL383556v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2094,7 +2212,8 @@
       "length": 89672,
       "aliases": [
         "GL383557.1",
-        "NW_003315946.1"
+        "NW_003315946.1",
+        "chr16_GL383557v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2102,8 +2221,9 @@
       "name": "HG183_PATCH",
       "length": 457041,
       "aliases": [
+        "NW_003315947.1",
         "GL383558.1",
-        "NW_003315947.1"
+        "chr17_GL383558v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2112,7 +2232,8 @@
       "length": 338640,
       "aliases": [
         "GL383559.2",
-        "NW_003315948.2"
+        "NW_003315948.2",
+        "chr17_GL383559v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2121,7 +2242,8 @@
       "length": 534288,
       "aliases": [
         "NW_003315949.1",
-        "GL383560.1"
+        "GL383560.1",
+        "chr17_GL383560v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2129,6 +2251,7 @@
       "name": "HG987_PATCH",
       "length": 644425,
       "aliases": [
+        "chr17_GL383561v2_fix",
         "GL383561.2",
         "NW_003315950.2"
       ],
@@ -2138,6 +2261,7 @@
       "name": "HG990_PATCH",
       "length": 45551,
       "aliases": [
+        "chr17_GL383562v1_fix",
         "GL383562.1",
         "NW_003315951.1"
       ],
@@ -2148,6 +2272,7 @@
       "length": 412535,
       "aliases": [
         "NW_003571052.1",
+        "chr17_GL582976v1_fix",
         "GL582976.1"
       ],
       "sequence_role": "fix-patch"
@@ -2156,8 +2281,9 @@
       "name": "HG747_PATCH",
       "length": 388340,
       "aliases": [
-        "JH159144.1",
-        "NW_003871088.1"
+        "NW_003871088.1",
+        "chr17_JH159144v1_fix",
+        "JH159144.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2165,8 +2291,9 @@
       "name": "HG883_PATCH",
       "length": 194862,
       "aliases": [
+        "NW_003871090.1",
         "JH159145.1",
-        "NW_003871090.1"
+        "chr17_JH159145v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2174,6 +2301,7 @@
       "name": "HG748_PATCH",
       "length": 376223,
       "aliases": [
+        "chr17_JH591186v1_fix",
         "JH591186.1",
         "NW_003871089.1"
       ],
@@ -2183,8 +2311,9 @@
       "name": "HG271_PATCH",
       "length": 186059,
       "aliases": [
+        "JH636061.1",
         "NW_003871087.1",
-        "JH636061.1"
+        "chr17_JH636061v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2192,6 +2321,7 @@
       "name": "HG1146_PATCH",
       "length": 454385,
       "aliases": [
+        "chr17_JH720447v1_fix",
         "NW_003871086.1",
         "JH720447.1"
       ],
@@ -2201,8 +2331,9 @@
       "name": "HG417_PATCH",
       "length": 342635,
       "aliases": [
-        "JH806582.2",
-        "NW_004070872.2"
+        "NW_004070872.2",
+        "chr17_JH806582v2_fix",
+        "JH806582.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2211,7 +2342,8 @@
       "length": 211416,
       "aliases": [
         "KB021646.2",
-        "NW_004166864.2"
+        "NW_004166864.2",
+        "chr17_KB021646v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2220,6 +2352,7 @@
       "length": 341712,
       "aliases": [
         "KE332502.1",
+        "chr17_KE332502v1_fix",
         "NW_004775433.1"
       ],
       "sequence_role": "fix-patch"
@@ -2228,8 +2361,9 @@
       "name": "HSCHR17_1_CTG1",
       "length": 270261,
       "aliases": [
-        "NW_003315952.2",
-        "GL383563.2"
+        "chr17_GL383563v2_alt",
+        "GL383563.2",
+        "NW_003315952.2"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2237,8 +2371,9 @@
       "name": "HSCHR17_1_CTG4",
       "length": 133151,
       "aliases": [
-        "GL383564.1",
-        "NW_003315953.1"
+        "NW_003315953.1",
+        "chr17_GL383564v1_alt",
+        "GL383564.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2246,6 +2381,7 @@
       "name": "HSCHR17_2_CTG4",
       "length": 223995,
       "aliases": [
+        "chr17_GL383565v1_alt",
         "GL383565.1",
         "NW_003315954.1"
       ],
@@ -2256,6 +2392,7 @@
       "length": 90219,
       "aliases": [
         "GL383566.1",
+        "chr17_GL383566v1_alt",
         "NW_003315955.1"
       ],
       "sequence_role": "novel-patch"
@@ -2264,8 +2401,9 @@
       "name": "HSCHR17_4_CTG4",
       "length": 278131,
       "aliases": [
+        "JH159146.1",
         "NW_003871091.1",
-        "JH159146.1"
+        "chr17_JH159146v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2274,6 +2412,7 @@
       "length": 70345,
       "aliases": [
         "NW_003871092.1",
+        "chr17_JH159147v1_alt",
         "JH159147.1"
       ],
       "sequence_role": "novel-patch"
@@ -2282,8 +2421,9 @@
       "name": "HSCHR17_6_CTG4",
       "length": 88070,
       "aliases": [
-        "JH159148.1",
-        "NW_003871093.1"
+        "NW_003871093.1",
+        "chr17_JH159148v1_alt",
+        "JH159148.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2292,7 +2432,8 @@
       "length": 289831,
       "aliases": [
         "GL383567.1",
-        "NW_003315956.1"
+        "NW_003315956.1",
+        "chr18_GL383567v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2301,7 +2442,8 @@
       "length": 104552,
       "aliases": [
         "NW_003315957.1",
-        "GL383568.1"
+        "GL383568.1",
+        "chr18_GL383568v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2310,6 +2452,7 @@
       "length": 167950,
       "aliases": [
         "GL383569.1",
+        "chr18_GL383569v1_alt",
         "NW_003315958.1"
       ],
       "sequence_role": "novel-patch"
@@ -2318,8 +2461,9 @@
       "name": "HSCHR18_2_CTG1_1",
       "length": 164789,
       "aliases": [
-        "NW_003315959.1",
-        "GL383570.1"
+        "GL383570.1",
+        "chr18_GL383570v1_alt",
+        "NW_003315959.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2327,8 +2471,9 @@
       "name": "HSCHR18_2_CTG2",
       "length": 198278,
       "aliases": [
+        "NW_003315960.1",
         "GL383571.1",
-        "NW_003315960.1"
+        "chr18_GL383571v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2336,8 +2481,9 @@
       "name": "HSCHR18_2_CTG2_1",
       "length": 159547,
       "aliases": [
-        "NW_003315961.1",
-        "GL383572.1"
+        "chr18_GL383572v1_alt",
+        "GL383572.1",
+        "NW_003315961.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2346,7 +2492,8 @@
       "length": 580393,
       "aliases": [
         "NW_003571053.2",
-        "GL582977.2"
+        "GL582977.2",
+        "chr19_GL582977v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2354,8 +2501,9 @@
       "name": "HG729_PATCH",
       "length": 245473,
       "aliases": [
-        "NW_003871094.1",
-        "JH159149.1"
+        "chr19_JH159149v1_fix",
+        "JH159149.1",
+        "NW_003871094.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2364,6 +2512,7 @@
       "length": 1058686,
       "aliases": [
         "KB021647.1",
+        "chr19_KB021647v1_fix",
         "NW_004166865.1"
       ],
       "sequence_role": "fix-patch"
@@ -2373,7 +2522,8 @@
       "length": 579598,
       "aliases": [
         "KE332505.1",
-        "NW_004775434.1"
+        "NW_004775434.1",
+        "chr19_KE332505v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2381,8 +2531,9 @@
       "name": "HSCHR19_1_CTG3",
       "length": 385657,
       "aliases": [
-        "NW_003315962.1",
-        "GL383573.1"
+        "chr19_GL383573v1_alt",
+        "GL383573.1",
+        "NW_003315962.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2391,6 +2542,7 @@
       "length": 155864,
       "aliases": [
         "GL383574.1",
+        "chr19_GL383574v1_alt",
         "NW_003315963.1"
       ],
       "sequence_role": "novel-patch"
@@ -2399,6 +2551,7 @@
       "name": "HSCHR19_2_CTG3",
       "length": 170222,
       "aliases": [
+        "chr19_GL383575v2_alt",
         "GL383575.2",
         "NW_003315964.2"
       ],
@@ -2408,8 +2561,9 @@
       "name": "HSCHR19_3_CTG3",
       "length": 188024,
       "aliases": [
-        "NW_003315965.1",
-        "GL383576.1"
+        "chr19_GL383576v1_alt",
+        "GL383576.1",
+        "NW_003315965.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2417,8 +2571,9 @@
       "name": "HSCHR19LRC_COX1_CTG1",
       "length": 987716,
       "aliases": [
+        "GL949746.1",
         "NW_003571054.1",
-        "GL949746.1"
+        "chr19_GL949746v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2426,8 +2581,9 @@
       "name": "HSCHR19LRC_COX2_CTG1",
       "length": 729519,
       "aliases": [
-        "NW_003571055.1",
-        "GL949747.1"
+        "GL949747.1",
+        "chr19_GL949747v1_alt",
+        "NW_003571055.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2436,7 +2592,8 @@
       "length": 1064303,
       "aliases": [
         "GL949748.1",
-        "NW_003571056.1"
+        "NW_003571056.1",
+        "chr19_GL949748v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2444,8 +2601,9 @@
       "name": "HSCHR19LRC_LRC_J_CTG1",
       "length": 1091840,
       "aliases": [
-        "NW_003571057.1",
-        "GL949749.1"
+        "chr19_GL949749v1_alt",
+        "GL949749.1",
+        "NW_003571057.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2453,6 +2611,7 @@
       "name": "HSCHR19LRC_LRC_S_CTG1",
       "length": 1066389,
       "aliases": [
+        "chr19_GL949750v1_alt",
         "GL949750.1",
         "NW_003571058.1"
       ],
@@ -2462,8 +2621,9 @@
       "name": "HSCHR19LRC_LRC_T_CTG1",
       "length": 1002682,
       "aliases": [
-        "GL949751.1",
-        "NW_003571059.1"
+        "NW_003571059.1",
+        "chr19_GL949751v1_alt",
+        "GL949751.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2471,8 +2631,9 @@
       "name": "HSCHR19LRC_PGF1_CTG1",
       "length": 987100,
       "aliases": [
-        "NW_003571060.1",
-        "GL949752.1"
+        "chr19_GL949752v1_alt",
+        "GL949752.1",
+        "NW_003571060.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2481,7 +2642,8 @@
       "length": 796478,
       "aliases": [
         "NW_003571061.1",
-        "GL949753.1"
+        "GL949753.1",
+        "chr19_GL949753v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2490,6 +2652,7 @@
       "length": 179899,
       "aliases": [
         "NW_003571063.2",
+        "chr20_GL582979v2_fix",
         "GL582979.2"
       ],
       "sequence_role": "fix-patch"
@@ -2498,8 +2661,9 @@
       "name": "HG144_PATCH",
       "length": 70483,
       "aliases": [
+        "JH720448.1",
         "NW_003871095.1",
-        "JH720448.1"
+        "chr20_JH720448v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2507,8 +2671,9 @@
       "name": "HG944_PATCH",
       "length": 283551,
       "aliases": [
-        "KB663608.1",
-        "NW_004504304.1"
+        "NW_004504304.1",
+        "chr20_KB663608v1_fix",
+        "KB663608.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2517,7 +2682,8 @@
       "length": 128385,
       "aliases": [
         "GL383577.1",
-        "NW_003315966.1"
+        "NW_003315966.1",
+        "chr20_GL383577v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2526,7 +2692,8 @@
       "length": 307252,
       "aliases": [
         "NW_004775435.1",
-        "KE332506.1"
+        "KE332506.1",
+        "chr21_KE332506v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2534,8 +2701,9 @@
       "name": "HSCHR21_1_CTG1_1",
       "length": 63917,
       "aliases": [
-        "GL383578.1",
-        "NW_003315967.1"
+        "NW_003315967.1",
+        "chr21_GL383578v1_alt",
+        "GL383578.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2544,6 +2712,7 @@
       "length": 201198,
       "aliases": [
         "GL383579.1",
+        "chr21_GL383579v1_alt",
         "NW_003315968.1"
       ],
       "sequence_role": "novel-patch"
@@ -2552,8 +2721,9 @@
       "name": "HSCHR21_3_CTG1_1",
       "length": 74652,
       "aliases": [
-        "GL383580.1",
-        "NW_003315969.1"
+        "NW_003315969.1",
+        "chr21_GL383580v1_alt",
+        "GL383580.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2561,8 +2731,9 @@
       "name": "HSCHR21_4_CTG1_1",
       "length": 116690,
       "aliases": [
+        "NW_003315970.1",
         "GL383581.1",
-        "NW_003315970.1"
+        "chr21_GL383581v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2571,7 +2742,8 @@
       "length": 212298,
       "aliases": [
         "JH720449.1",
-        "NW_003871096.1"
+        "NW_003871096.1",
+        "chr22_JH720449v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2579,8 +2751,9 @@
       "name": "HG1486_PATCH",
       "length": 167183,
       "aliases": [
-        "JH806583.1",
-        "NW_004070873.1"
+        "NW_004070873.1",
+        "chr22_JH806583v1_fix",
+        "JH806583.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2589,6 +2762,7 @@
       "length": 70876,
       "aliases": [
         "JH806584.1",
+        "chr22_JH806584v1_fix",
         "NW_004070874.1"
       ],
       "sequence_role": "fix-patch"
@@ -2597,8 +2771,9 @@
       "name": "HG1488_PATCH",
       "length": 73505,
       "aliases": [
+        "JH806585.1",
         "NW_004070875.1",
-        "JH806585.1"
+        "chr22_JH806585v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2606,8 +2781,9 @@
       "name": "HG497_PATCH",
       "length": 43543,
       "aliases": [
-        "NW_004070876.1",
-        "JH806586.1"
+        "JH806586.1",
+        "chr22_JH806586v1_fix",
+        "NW_004070876.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2615,6 +2791,7 @@
       "name": "HSCHR22_1_CTG1",
       "length": 162811,
       "aliases": [
+        "chr22_GL383582v2_alt",
         "GL383582.2",
         "NW_003315971.2"
       ],
@@ -2625,7 +2802,8 @@
       "length": 96924,
       "aliases": [
         "NW_003315972.1",
-        "GL383583.1"
+        "GL383583.1",
+        "chr22_GL383583v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2633,8 +2811,9 @@
       "name": "HSCHR22_2_CTG1",
       "length": 74013,
       "aliases": [
+        "KB663609.1",
         "NW_004504305.1",
-        "KB663609.1"
+        "chr22_KB663609v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2643,6 +2822,7 @@
       "length": 284527,
       "aliases": [
         "NW_003571064.2",
+        "chrX_GL877877v2_fix",
         "GL877877.2"
       ],
       "sequence_role": "fix-patch"
@@ -2652,7 +2832,8 @@
       "length": 3110903,
       "aliases": [
         "JH159150.3",
-        "NW_003871103.3"
+        "NW_003871103.3",
+        "chrX_JH159150v3_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2660,8 +2841,9 @@
       "name": "HG1423_PATCH",
       "length": 898979,
       "aliases": [
+        "JH720451.1",
         "NW_003871098.1",
-        "JH720451.1"
+        "chrX_JH720451v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2670,7 +2852,8 @@
       "length": 522319,
       "aliases": [
         "JH720452.1",
-        "NW_003871099.1"
+        "NW_003871099.1",
+        "chrX_JH720452v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2678,8 +2861,9 @@
       "name": "HG1425_PATCH",
       "length": 1461188,
       "aliases": [
+        "JH720453.1",
         "NW_003871100.1",
-        "JH720453.1"
+        "chrX_JH720453v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2687,8 +2871,9 @@
       "name": "HG1426_PATCH",
       "length": 752267,
       "aliases": [
+        "NW_003871101.3",
         "JH720454.3",
-        "NW_003871101.3"
+        "chrX_JH720454v3_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2697,6 +2882,7 @@
       "length": 65034,
       "aliases": [
         "NW_003871102.1",
+        "chrX_JH720455v1_fix",
         "JH720455.1"
       ],
       "sequence_role": "fix-patch"
@@ -2706,7 +2892,8 @@
       "length": 4110759,
       "aliases": [
         "NW_004070877.1",
-        "JH806587.1"
+        "JH806587.1",
+        "chrX_JH806587v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2715,7 +2902,8 @@
       "length": 862483,
       "aliases": [
         "JH806588.1",
-        "NW_004070878.1"
+        "NW_004070878.1",
+        "chrX_JH806588v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2724,7 +2912,8 @@
       "length": 270630,
       "aliases": [
         "JH806589.1",
-        "NW_004070879.1"
+        "NW_004070879.1",
+        "chrX_JH806589v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2733,6 +2922,7 @@
       "length": 2418393,
       "aliases": [
         "NW_004070880.2",
+        "chrX_JH806590v2_fix",
         "JH806590.2"
       ],
       "sequence_role": "fix-patch"
@@ -2741,8 +2931,9 @@
       "name": "HG1437_PATCH",
       "length": 882083,
       "aliases": [
+        "NW_004070881.1",
         "JH806591.1",
-        "NW_004070881.1"
+        "chrX_JH806591v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2750,6 +2941,7 @@
       "name": "HG1438_PATCH",
       "length": 835911,
       "aliases": [
+        "chrX_JH806592v1_fix",
         "JH806592.1",
         "NW_004070882.1"
       ],
@@ -2759,8 +2951,9 @@
       "name": "HG1439_PATCH",
       "length": 389631,
       "aliases": [
+        "JH806593.1",
         "NW_004070883.1",
-        "JH806593.1"
+        "chrX_JH806593v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2768,6 +2961,7 @@
       "name": "HG1440_PATCH",
       "length": 390496,
       "aliases": [
+        "chrX_JH806594v1_fix",
         "NW_004070884.1",
         "JH806594.1"
       ],
@@ -2777,8 +2971,9 @@
       "name": "HG1441_PATCH",
       "length": 444074,
       "aliases": [
-        "JH806595.1",
-        "NW_004070885.1"
+        "NW_004070885.1",
+        "chrX_JH806595v1_fix",
+        "JH806595.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2787,6 +2982,7 @@
       "length": 413927,
       "aliases": [
         "NW_004070886.1",
+        "chrX_JH806596v1_fix",
         "JH806596.1"
       ],
       "sequence_role": "fix-patch"
@@ -2795,8 +2991,9 @@
       "name": "HG1443_HG1444_PATCH",
       "length": 1045622,
       "aliases": [
+        "NW_004070887.1",
         "JH806597.1",
-        "NW_004070887.1"
+        "chrX_JH806597v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2804,8 +3001,9 @@
       "name": "HG1453_PATCH",
       "length": 899320,
       "aliases": [
-        "JH806598.1",
-        "NW_004070888.1"
+        "chrX_JH806598v1_fix",
+        "NW_004070888.1",
+        "JH806598.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2813,8 +3011,9 @@
       "name": "HG1458_PATCH",
       "length": 1214327,
       "aliases": [
+        "JH806599.1",
         "NW_004070889.1",
-        "JH806599.1"
+        "chrX_JH806599v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2822,8 +3021,9 @@
       "name": "HG1459_PATCH",
       "length": 6530008,
       "aliases": [
-        "JH806600.2",
-        "NW_004070890.2"
+        "NW_004070890.2",
+        "chrX_JH806600v2_fix",
+        "JH806600.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2831,8 +3031,9 @@
       "name": "HG1462_PATCH",
       "length": 1389764,
       "aliases": [
-        "JH806601.1",
-        "NW_004070891.1"
+        "NW_004070891.1",
+        "chrX_JH806601v1_fix",
+        "JH806601.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2840,6 +3041,7 @@
       "name": "HG1463_PATCH",
       "length": 713266,
       "aliases": [
+        "chrX_JH806602v1_fix",
         "NW_004070892.1",
         "JH806602.1"
       ],
@@ -2850,7 +3052,8 @@
       "length": 182949,
       "aliases": [
         "JH806603.1",
-        "NW_004070893.1"
+        "NW_004070893.1",
+        "chrX_JH806603v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2859,7 +3062,8 @@
       "length": 469972,
       "aliases": [
         "KB021648.1",
-        "NW_004166866.1"
+        "NW_004166866.1",
+        "chrX_KB021648v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2867,9 +3071,9 @@
       "name": "HSCHR6_MHC_APD_CTG1",
       "length": 4622290,
       "aliases": [
-        "GL000250.1",
         "NT_167244.1",
-        "chr6_apd_hap1"
+        "chr6_apd_hap1",
+        "GL000250.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2878,8 +3082,8 @@
       "length": 4795371,
       "aliases": [
         "GL000251.1",
-        "NT_113891.2",
-        "chr6_cox_hap2"
+        "chr6_cox_hap2",
+        "NT_113891.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2887,8 +3091,8 @@
       "name": "HSCHR6_MHC_DBB_CTG1",
       "length": 4610396,
       "aliases": [
-        "GL000252.1",
         "NT_167245.1",
+        "GL000252.1",
         "chr6_dbb_hap3"
       ],
       "sequence_role": "alt-scaffold"
@@ -2897,9 +3101,9 @@
       "name": "HSCHR6_MHC_MANN_CTG1",
       "length": 4683263,
       "aliases": [
+        "GL000253.1",
         "NT_167246.1",
-        "chr6_mann_hap4",
-        "GL000253.1"
+        "chr6_mann_hap4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2907,9 +3111,9 @@
       "name": "HSCHR6_MHC_MCF_CTG1",
       "length": 4833398,
       "aliases": [
+        "NT_167247.1",
         "chr6_mcf_hap5",
-        "GL000254.1",
-        "NT_167247.1"
+        "GL000254.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2917,9 +3121,9 @@
       "name": "HSCHR6_MHC_QBL_CTG1",
       "length": 4611984,
       "aliases": [
-        "GL000255.1",
         "NT_167248.1",
-        "chr6_qbl_hap6"
+        "chr6_qbl_hap6",
+        "GL000255.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2927,9 +3131,9 @@
       "name": "HSCHR6_MHC_SSTO_CTG1",
       "length": 4928567,
       "aliases": [
+        "GL000256.1",
         "NT_167249.1",
-        "chr6_ssto_hap7",
-        "GL000256.1"
+        "chr6_ssto_hap7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2938,8 +3142,8 @@
       "length": 590426,
       "aliases": [
         "NT_167250.1",
-        "chr4_ctg9_hap1",
-        "GL000257.1"
+        "GL000257.1",
+        "chr4_ctg9_hap1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2948,8 +3152,8 @@
       "length": 1680828,
       "aliases": [
         "GL000258.1",
-        "chr17_ctg5_hap1",
-        "NT_167251.1"
+        "NT_167251.1",
+        "chr17_ctg5_hap1"
       ],
       "sequence_role": "alt-scaffold"
     }

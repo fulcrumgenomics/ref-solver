@@ -1,0 +1,5987 @@
+{
+  "id": "hg38_p12_ucsc",
+  "display_name": "hg38.p12 (UCSC)",
+  "assembly": "Grch38",
+  "source": "ucsc",
+  "naming_convention": "ncbi",
+  "download_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/p12/hg38.p12.fa.gz",
+  "contigs": [
+    {
+      "name": "1",
+      "length": 248956422,
+      "aliases": [
+        "NC_000001.11",
+        "CM000663.2",
+        "chr1"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "2",
+      "length": 242193529,
+      "aliases": [
+        "chr2",
+        "CM000664.2",
+        "NC_000002.12"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "3",
+      "length": 198295559,
+      "aliases": [
+        "NC_000003.12",
+        "chr3",
+        "CM000665.2"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "4",
+      "length": 190214555,
+      "aliases": [
+        "CM000666.2",
+        "chr4",
+        "NC_000004.12"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "5",
+      "length": 181538259,
+      "aliases": [
+        "NC_000005.10",
+        "CM000667.2",
+        "chr5"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "6",
+      "length": 170805979,
+      "aliases": [
+        "NC_000006.12",
+        "chr6",
+        "CM000668.2"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "7",
+      "length": 159345973,
+      "aliases": [
+        "CM000669.2",
+        "NC_000007.14",
+        "chr7"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "8",
+      "length": 145138636,
+      "aliases": [
+        "NC_000008.11",
+        "CM000670.2",
+        "chr8"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "9",
+      "length": 138394717,
+      "aliases": [
+        "chr9",
+        "CM000671.2",
+        "NC_000009.12"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "10",
+      "length": 133797422,
+      "aliases": [
+        "CM000672.2",
+        "NC_000010.11",
+        "chr10"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "11",
+      "length": 135086622,
+      "aliases": [
+        "NC_000011.10",
+        "chr11",
+        "CM000673.2"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "12",
+      "length": 133275309,
+      "aliases": [
+        "CM000674.2",
+        "NC_000012.12",
+        "chr12"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "13",
+      "length": 114364328,
+      "aliases": [
+        "CM000675.2",
+        "NC_000013.11",
+        "chr13"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "14",
+      "length": 107043718,
+      "aliases": [
+        "CM000676.2",
+        "NC_000014.9",
+        "chr14"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "15",
+      "length": 101991189,
+      "aliases": [
+        "chr15",
+        "CM000677.2",
+        "NC_000015.10"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "16",
+      "length": 90338345,
+      "aliases": [
+        "NC_000016.10",
+        "chr16",
+        "CM000678.2"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "17",
+      "length": 83257441,
+      "aliases": [
+        "CM000679.2",
+        "NC_000017.11",
+        "chr17"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "18",
+      "length": 80373285,
+      "aliases": [
+        "chr18",
+        "NC_000018.10",
+        "CM000680.2"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "19",
+      "length": 58617616,
+      "aliases": [
+        "NC_000019.10",
+        "chr19",
+        "CM000681.2"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "20",
+      "length": 64444167,
+      "aliases": [
+        "CM000682.2",
+        "NC_000020.11",
+        "chr20"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "21",
+      "length": 46709983,
+      "aliases": [
+        "chr21",
+        "CM000683.2",
+        "NC_000021.9"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "22",
+      "length": 50818468,
+      "aliases": [
+        "chr22",
+        "CM000684.2",
+        "NC_000022.11"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "X",
+      "length": 156040895,
+      "aliases": [
+        "chrX",
+        "CM000685.2",
+        "NC_000023.11"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "Y",
+      "length": 57227415,
+      "aliases": [
+        "NC_000024.10",
+        "CM000686.2",
+        "chrY"
+      ],
+      "sequence_role": "assembled-molecule"
+    },
+    {
+      "name": "HSCHR1_CTG1_UNLOCALIZED",
+      "length": 175055,
+      "aliases": [
+        "KI270706.1",
+        "NT_187361.1",
+        "chr1_KI270706v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG2_UNLOCALIZED",
+      "length": 32032,
+      "aliases": [
+        "chr1_KI270707v1_random",
+        "KI270707.1",
+        "NT_187362.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG3_UNLOCALIZED",
+      "length": 127682,
+      "aliases": [
+        "KI270708.1",
+        "NT_187363.1",
+        "chr1_KI270708v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG4_UNLOCALIZED",
+      "length": 66860,
+      "aliases": [
+        "KI270709.1",
+        "NT_187364.1",
+        "chr1_KI270709v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG5_UNLOCALIZED",
+      "length": 40176,
+      "aliases": [
+        "KI270710.1",
+        "NT_187365.1",
+        "chr1_KI270710v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG6_UNLOCALIZED",
+      "length": 42210,
+      "aliases": [
+        "KI270711.1",
+        "chr1_KI270711v1_random",
+        "NT_187366.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG7_UNLOCALIZED",
+      "length": 176043,
+      "aliases": [
+        "chr1_KI270712v1_random",
+        "KI270712.1",
+        "NT_187367.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG8_UNLOCALIZED",
+      "length": 40745,
+      "aliases": [
+        "KI270713.1",
+        "NT_187368.1",
+        "chr1_KI270713v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR1_CTG9_UNLOCALIZED",
+      "length": 41717,
+      "aliases": [
+        "KI270714.1",
+        "NT_187369.1",
+        "chr1_KI270714v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR2_RANDOM_CTG1",
+      "length": 161471,
+      "aliases": [
+        "chr2_KI270715v1_random",
+        "NT_187370.1",
+        "KI270715.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR2_RANDOM_CTG2",
+      "length": 153799,
+      "aliases": [
+        "NT_187371.1",
+        "KI270716.1",
+        "chr2_KI270716v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR3UN_CTG2",
+      "length": 155397,
+      "aliases": [
+        "GL000221.1",
+        "NT_167215.1",
+        "chr3_GL000221v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR4_RANDOM_CTG4",
+      "length": 209709,
+      "aliases": [
+        "GL000008.2",
+        "NT_113793.3",
+        "chr4_GL000008v2_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR5_RANDOM_CTG1",
+      "length": 92689,
+      "aliases": [
+        "chr5_GL000208v1_random",
+        "GL000208.1",
+        "NT_113948.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR9_UNLOCALIZED_CTG1",
+      "length": 40062,
+      "aliases": [
+        "chr9_KI270717v1_random",
+        "KI270717.1",
+        "NT_187372.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR9_UNLOCALIZED_CTG2",
+      "length": 38054,
+      "aliases": [
+        "chr9_KI270718v1_random",
+        "KI270718.1",
+        "NT_187373.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR9_UNLOCALIZED_CTG3",
+      "length": 176845,
+      "aliases": [
+        "chr9_KI270719v1_random",
+        "KI270719.1",
+        "NT_187374.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR9_UNLOCALIZED_CTG4",
+      "length": 39050,
+      "aliases": [
+        "KI270720.1",
+        "NT_187375.1",
+        "chr9_KI270720v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR11_CTG1_UNLOCALIZED",
+      "length": 100316,
+      "aliases": [
+        "chr11_KI270721v1_random",
+        "KI270721.1",
+        "NT_187376.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG1_UNLOCALIZED",
+      "length": 201709,
+      "aliases": [
+        "NT_113796.3",
+        "GL000009.2",
+        "chr14_GL000009v2_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG4_UNLOCALIZED",
+      "length": 191469,
+      "aliases": [
+        "NT_113888.1",
+        "GL000194.1",
+        "chr14_GL000194v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG2_UNLOCALIZED",
+      "length": 211173,
+      "aliases": [
+        "chr14_GL000225v1_random",
+        "GL000225.1",
+        "NT_167219.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG3_UNLOCALIZED",
+      "length": 194050,
+      "aliases": [
+        "chr14_KI270722v1_random",
+        "KI270722.1",
+        "NT_187377.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG5_UNLOCALIZED",
+      "length": 38115,
+      "aliases": [
+        "NT_187378.1",
+        "chr14_KI270723v1_random",
+        "KI270723.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG6_UNLOCALIZED",
+      "length": 39555,
+      "aliases": [
+        "KI270724.1",
+        "chr14_KI270724v1_random",
+        "NT_187379.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG7_UNLOCALIZED",
+      "length": 172810,
+      "aliases": [
+        "KI270725.1",
+        "NT_187380.1",
+        "chr14_KI270725v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR14_CTG8_UNLOCALIZED",
+      "length": 43739,
+      "aliases": [
+        "chr14_KI270726v1_random",
+        "KI270726.1",
+        "NT_187381.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR15_RANDOM_CTG1",
+      "length": 448248,
+      "aliases": [
+        "chr15_KI270727v1_random",
+        "NT_187382.1",
+        "KI270727.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR16_RANDOM_CTG1",
+      "length": 1872759,
+      "aliases": [
+        "NT_187383.1",
+        "chr16_KI270728v1_random",
+        "KI270728.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR17_RANDOM_CTG3",
+      "length": 185591,
+      "aliases": [
+        "GL000205.2",
+        "NT_113930.2",
+        "chr17_GL000205v2_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR17_RANDOM_CTG4",
+      "length": 280839,
+      "aliases": [
+        "NT_187384.1",
+        "KI270729.1",
+        "chr17_KI270729v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR17_RANDOM_CTG5",
+      "length": 112551,
+      "aliases": [
+        "NT_187385.1",
+        "KI270730.1",
+        "chr17_KI270730v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG1",
+      "length": 150754,
+      "aliases": [
+        "chr22_KI270731v1_random",
+        "KI270731.1",
+        "NT_187386.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG2",
+      "length": 41543,
+      "aliases": [
+        "NT_187387.1",
+        "KI270732.1",
+        "chr22_KI270732v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG3",
+      "length": 179772,
+      "aliases": [
+        "chr22_KI270733v1_random",
+        "KI270733.1",
+        "NT_187388.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG4",
+      "length": 165050,
+      "aliases": [
+        "NT_187389.1",
+        "chr22_KI270734v1_random",
+        "KI270734.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG5",
+      "length": 42811,
+      "aliases": [
+        "chr22_KI270735v1_random",
+        "NT_187390.1",
+        "KI270735.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG6",
+      "length": 181920,
+      "aliases": [
+        "chr22_KI270736v1_random",
+        "NT_187391.1",
+        "KI270736.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG7",
+      "length": 103838,
+      "aliases": [
+        "chr22_KI270737v1_random",
+        "NT_187392.1",
+        "KI270737.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG8",
+      "length": 99375,
+      "aliases": [
+        "chr22_KI270738v1_random",
+        "NT_187393.1",
+        "KI270738.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHR22_UNLOCALIZED_CTG9",
+      "length": 73985,
+      "aliases": [
+        "chr22_KI270739v1_random",
+        "NT_187394.1",
+        "KI270739.1"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHRY_RANDOM_CTG1",
+      "length": 37240,
+      "aliases": [
+        "NT_187395.1",
+        "KI270740.1",
+        "chrY_KI270740v1_random"
+      ],
+      "sequence_role": "unlocalized-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG1",
+      "length": 182896,
+      "aliases": [
+        "GL000195.1",
+        "NT_113901.1",
+        "chrUn_GL000195v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG2",
+      "length": 164239,
+      "aliases": [
+        "GL000213.1",
+        "NT_167208.1",
+        "chrUn_GL000213v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG4",
+      "length": 137718,
+      "aliases": [
+        "GL000214.1",
+        "NT_167209.1",
+        "chrUn_GL000214v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG6",
+      "length": 176608,
+      "aliases": [
+        "chrUn_GL000216v2",
+        "NT_167211.2",
+        "GL000216.2"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG9",
+      "length": 161147,
+      "aliases": [
+        "NT_113889.1",
+        "chrUn_GL000218v1",
+        "GL000218.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG10",
+      "length": 179198,
+      "aliases": [
+        "GL000219.1",
+        "NT_167213.1",
+        "chrUn_GL000219v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG11",
+      "length": 161802,
+      "aliases": [
+        "NT_167214.1",
+        "chrUn_GL000220v1",
+        "GL000220.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG16",
+      "length": 179693,
+      "aliases": [
+        "NT_167218.1",
+        "chrUn_GL000224v1",
+        "GL000224.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG19",
+      "length": 15008,
+      "aliases": [
+        "chrUn_GL000226v1",
+        "GL000226.1",
+        "NT_167220.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_100",
+      "length": 2274,
+      "aliases": [
+        "NT_187396.1",
+        "chrUn_KI270302v1",
+        "KI270302.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_102",
+      "length": 1942,
+      "aliases": [
+        "NT_187398.1",
+        "chrUn_KI270303v1",
+        "KI270303.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_101",
+      "length": 2165,
+      "aliases": [
+        "chrUn_KI270304v1",
+        "NT_187397.1",
+        "KI270304.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_103",
+      "length": 1472,
+      "aliases": [
+        "chrUn_KI270305v1",
+        "KI270305.1",
+        "NT_187399.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_106",
+      "length": 1201,
+      "aliases": [
+        "chrUn_KI270310v1",
+        "NT_187402.1",
+        "KI270310.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_110",
+      "length": 12399,
+      "aliases": [
+        "NT_187406.1",
+        "chrUn_KI270311v1",
+        "KI270311.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_109",
+      "length": 998,
+      "aliases": [
+        "NT_187405.1",
+        "KI270312.1",
+        "chrUn_KI270312v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_108",
+      "length": 2276,
+      "aliases": [
+        "KI270315.1",
+        "NT_187404.1",
+        "chrUn_KI270315v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_107",
+      "length": 1444,
+      "aliases": [
+        "NT_187403.1",
+        "chrUn_KI270316v1",
+        "KI270316.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_111",
+      "length": 37690,
+      "aliases": [
+        "chrUn_KI270317v1",
+        "KI270317.1",
+        "NT_187407.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_105",
+      "length": 4416,
+      "aliases": [
+        "KI270320.1",
+        "NT_187401.1",
+        "chrUn_KI270320v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_104",
+      "length": 21476,
+      "aliases": [
+        "chrUn_KI270322v1",
+        "KI270322.1",
+        "NT_187400.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_167",
+      "length": 1040,
+      "aliases": [
+        "KI270329.1",
+        "NT_187459.1",
+        "chrUn_KI270329v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_166",
+      "length": 1652,
+      "aliases": [
+        "chrUn_KI270330v1",
+        "KI270330.1",
+        "NT_187458.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_169",
+      "length": 2699,
+      "aliases": [
+        "NT_187461.1",
+        "KI270333.1",
+        "chrUn_KI270333v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_168",
+      "length": 1368,
+      "aliases": [
+        "KI270334.1",
+        "chrUn_KI270334v1",
+        "NT_187460.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_170",
+      "length": 1048,
+      "aliases": [
+        "NT_187462.1",
+        "chrUn_KI270335v1",
+        "KI270335.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_173",
+      "length": 1026,
+      "aliases": [
+        "chrUn_KI270336v1",
+        "KI270336.1",
+        "NT_187465.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_174",
+      "length": 1121,
+      "aliases": [
+        "NT_187466.1",
+        "chrUn_KI270337v1",
+        "KI270337.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_171",
+      "length": 1428,
+      "aliases": [
+        "KI270338.1",
+        "NT_187463.1",
+        "chrUn_KI270338v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_172",
+      "length": 1428,
+      "aliases": [
+        "NT_187464.1",
+        "chrUn_KI270340v1",
+        "KI270340.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_177",
+      "length": 3530,
+      "aliases": [
+        "KI270362.1",
+        "NT_187469.1",
+        "chrUn_KI270362v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_175",
+      "length": 1803,
+      "aliases": [
+        "chrUn_KI270363v1",
+        "KI270363.1",
+        "NT_187467.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_176",
+      "length": 2855,
+      "aliases": [
+        "chrUn_KI270364v1",
+        "KI270364.1",
+        "NT_187468.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_178",
+      "length": 8320,
+      "aliases": [
+        "KI270366.1",
+        "NT_187470.1",
+        "chrUn_KI270366v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_202",
+      "length": 2805,
+      "aliases": [
+        "NT_187494.1",
+        "KI270371.1",
+        "chrUn_KI270371v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_199",
+      "length": 1650,
+      "aliases": [
+        "KI270372.1",
+        "NT_187491.1",
+        "chrUn_KI270372v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_200",
+      "length": 1451,
+      "aliases": [
+        "KI270373.1",
+        "NT_187492.1",
+        "chrUn_KI270373v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_198",
+      "length": 2656,
+      "aliases": [
+        "KI270374.1",
+        "chrUn_KI270374v1",
+        "NT_187490.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_201",
+      "length": 2378,
+      "aliases": [
+        "chrUn_KI270375v1",
+        "KI270375.1",
+        "NT_187493.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_197",
+      "length": 1136,
+      "aliases": [
+        "NT_187489.1",
+        "chrUn_KI270376v1",
+        "KI270376.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_179",
+      "length": 1048,
+      "aliases": [
+        "NT_187471.1",
+        "chrUn_KI270378v1",
+        "KI270378.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_180",
+      "length": 1045,
+      "aliases": [
+        "NT_187472.1",
+        "KI270379.1",
+        "chrUn_KI270379v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_194",
+      "length": 1930,
+      "aliases": [
+        "NT_187486.1",
+        "chrUn_KI270381v1",
+        "KI270381.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_196",
+      "length": 4215,
+      "aliases": [
+        "NT_187488.1",
+        "chrUn_KI270382v1",
+        "KI270382.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_190",
+      "length": 1750,
+      "aliases": [
+        "KI270383.1",
+        "NT_187482.1",
+        "chrUn_KI270383v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_192",
+      "length": 1658,
+      "aliases": [
+        "chrUn_KI270384v1",
+        "KI270384.1",
+        "NT_187484.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_195",
+      "length": 990,
+      "aliases": [
+        "chrUn_KI270385v1",
+        "KI270385.1",
+        "NT_187487.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_188",
+      "length": 1788,
+      "aliases": [
+        "NT_187480.1",
+        "chrUn_KI270386v1",
+        "KI270386.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_183",
+      "length": 1537,
+      "aliases": [
+        "chrUn_KI270387v1",
+        "NT_187475.1",
+        "KI270387.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_186",
+      "length": 1216,
+      "aliases": [
+        "chrUn_KI270388v1",
+        "NT_187478.1",
+        "KI270388.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_181",
+      "length": 1298,
+      "aliases": [
+        "KI270389.1",
+        "NT_187473.1",
+        "chrUn_KI270389v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_182",
+      "length": 2387,
+      "aliases": [
+        "chrUn_KI270390v1",
+        "KI270390.1",
+        "NT_187474.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_189",
+      "length": 1484,
+      "aliases": [
+        "NT_187481.1",
+        "chrUn_KI270391v1",
+        "KI270391.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_193",
+      "length": 971,
+      "aliases": [
+        "chrUn_KI270392v1",
+        "KI270392.1",
+        "NT_187485.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_191",
+      "length": 1308,
+      "aliases": [
+        "chrUn_KI270393v1",
+        "KI270393.1",
+        "NT_187483.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_187",
+      "length": 970,
+      "aliases": [
+        "NT_187479.1",
+        "KI270394.1",
+        "chrUn_KI270394v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_184",
+      "length": 1143,
+      "aliases": [
+        "NT_187476.1",
+        "chrUn_KI270395v1",
+        "KI270395.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_185",
+      "length": 1880,
+      "aliases": [
+        "KI270396.1",
+        "chrUn_KI270396v1",
+        "NT_187477.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_113",
+      "length": 2646,
+      "aliases": [
+        "NT_187409.1",
+        "chrUn_KI270411v1",
+        "KI270411.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_112",
+      "length": 1179,
+      "aliases": [
+        "KI270412.1",
+        "NT_187408.1",
+        "chrUn_KI270412v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_114",
+      "length": 2489,
+      "aliases": [
+        "NT_187410.1",
+        "KI270414.1",
+        "chrUn_KI270414v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_119",
+      "length": 2043,
+      "aliases": [
+        "NT_187415.1",
+        "KI270417.1",
+        "chrUn_KI270417v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_116",
+      "length": 2145,
+      "aliases": [
+        "NT_187412.1",
+        "chrUn_KI270418v1",
+        "KI270418.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_115",
+      "length": 1029,
+      "aliases": [
+        "NT_187411.1",
+        "KI270419.1",
+        "chrUn_KI270419v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_117",
+      "length": 2321,
+      "aliases": [
+        "chrUn_KI270420v1",
+        "KI270420.1",
+        "NT_187413.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_120",
+      "length": 1445,
+      "aliases": [
+        "NT_187416.1",
+        "chrUn_KI270422v1",
+        "KI270422.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_121",
+      "length": 981,
+      "aliases": [
+        "NT_187417.1",
+        "chrUn_KI270423v1",
+        "KI270423.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_118",
+      "length": 2140,
+      "aliases": [
+        "chrUn_KI270424v1",
+        "KI270424.1",
+        "NT_187414.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_122",
+      "length": 1884,
+      "aliases": [
+        "KI270425.1",
+        "NT_187418.1",
+        "chrUn_KI270425v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_123",
+      "length": 1361,
+      "aliases": [
+        "chrUn_KI270429v1",
+        "KI270429.1",
+        "NT_187419.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_128",
+      "length": 92983,
+      "aliases": [
+        "NT_187424.1",
+        "chrUn_KI270435v1",
+        "KI270435.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_129",
+      "length": 112505,
+      "aliases": [
+        "KI270438.1",
+        "NT_187425.1",
+        "chrUn_KI270438v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_124",
+      "length": 392061,
+      "aliases": [
+        "KI270442.1",
+        "chrUn_KI270442v1",
+        "NT_187420.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_203",
+      "length": 7992,
+      "aliases": [
+        "NT_187495.1",
+        "chrUn_KI270448v1",
+        "KI270448.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_126",
+      "length": 1774,
+      "aliases": [
+        "NT_187422.1",
+        "KI270465.1",
+        "chrUn_KI270465v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_125",
+      "length": 1233,
+      "aliases": [
+        "chrUn_KI270466v1",
+        "NT_187421.1",
+        "KI270466.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_127",
+      "length": 3920,
+      "aliases": [
+        "chrUn_KI270467v1",
+        "NT_187423.1",
+        "KI270467.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_130",
+      "length": 4055,
+      "aliases": [
+        "NT_187426.1",
+        "chrUn_KI270468v1",
+        "KI270468.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_141",
+      "length": 5353,
+      "aliases": [
+        "chrUn_KI270507v1",
+        "NT_187437.1",
+        "KI270507.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_134",
+      "length": 1951,
+      "aliases": [
+        "NT_187430.1",
+        "chrUn_KI270508v1",
+        "KI270508.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_132",
+      "length": 2318,
+      "aliases": [
+        "NT_187428.1",
+        "KI270509.1",
+        "chrUn_KI270509v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_131",
+      "length": 2415,
+      "aliases": [
+        "NT_187427.1",
+        "KI270510.1",
+        "chrUn_KI270510v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_139",
+      "length": 8127,
+      "aliases": [
+        "chrUn_KI270511v1",
+        "NT_187435.1",
+        "KI270511.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_136",
+      "length": 22689,
+      "aliases": [
+        "chrUn_KI270512v1",
+        "NT_187432.1",
+        "KI270512.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_140",
+      "length": 6361,
+      "aliases": [
+        "NT_187436.1",
+        "chrUn_KI270515v1",
+        "KI270515.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_135",
+      "length": 1300,
+      "aliases": [
+        "KI270516.1",
+        "NT_187431.1",
+        "chrUn_KI270516v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_142",
+      "length": 3253,
+      "aliases": [
+        "KI270517.1",
+        "chrUn_KI270517v1",
+        "NT_187438.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_133",
+      "length": 2186,
+      "aliases": [
+        "KI270518.1",
+        "NT_187429.1",
+        "chrUn_KI270518v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_137",
+      "length": 138126,
+      "aliases": [
+        "KI270519.1",
+        "NT_187433.1",
+        "chrUn_KI270519v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_204",
+      "length": 7642,
+      "aliases": [
+        "KI270521.1",
+        "chrUn_KI270521v1",
+        "NT_187496.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_138",
+      "length": 5674,
+      "aliases": [
+        "NT_187434.1",
+        "chrUn_KI270522v1",
+        "KI270522.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_144",
+      "length": 2983,
+      "aliases": [
+        "NT_187440.1",
+        "KI270528.1",
+        "chrUn_KI270528v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_143",
+      "length": 1899,
+      "aliases": [
+        "chrUn_KI270529v1",
+        "KI270529.1",
+        "NT_187439.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_145",
+      "length": 2168,
+      "aliases": [
+        "chrUn_KI270530v1",
+        "KI270530.1",
+        "NT_187441.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_147",
+      "length": 91309,
+      "aliases": [
+        "KI270538.1",
+        "chrUn_KI270538v1",
+        "NT_187443.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_146",
+      "length": 993,
+      "aliases": [
+        "NT_187442.1",
+        "KI270539.1",
+        "chrUn_KI270539v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_148",
+      "length": 1202,
+      "aliases": [
+        "NT_187444.1",
+        "chrUn_KI270544v1",
+        "KI270544.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_149",
+      "length": 1599,
+      "aliases": [
+        "NT_187445.1",
+        "KI270548.1",
+        "chrUn_KI270548v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_158",
+      "length": 31033,
+      "aliases": [
+        "KI270579.1",
+        "NT_187450.1",
+        "chrUn_KI270579v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_156",
+      "length": 1553,
+      "aliases": [
+        "KI270580.1",
+        "NT_187448.1",
+        "chrUn_KI270580v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_157",
+      "length": 7046,
+      "aliases": [
+        "NT_187449.1",
+        "KI270581.1",
+        "chrUn_KI270581v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_162",
+      "length": 6504,
+      "aliases": [
+        "NT_187454.1",
+        "chrUn_KI270582v1",
+        "KI270582.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_154",
+      "length": 1400,
+      "aliases": [
+        "NT_187446.1",
+        "chrUn_KI270583v1",
+        "KI270583.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_161",
+      "length": 4513,
+      "aliases": [
+        "NT_187453.1",
+        "KI270584.1",
+        "chrUn_KI270584v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_155",
+      "length": 2969,
+      "aliases": [
+        "KI270587.1",
+        "chrUn_KI270587v1",
+        "NT_187447.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_163",
+      "length": 6158,
+      "aliases": [
+        "NT_187455.1",
+        "KI270588.1",
+        "chrUn_KI270588v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_159",
+      "length": 44474,
+      "aliases": [
+        "NT_187451.1",
+        "chrUn_KI270589v1",
+        "KI270589.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_160",
+      "length": 4685,
+      "aliases": [
+        "chrUn_KI270590v1",
+        "KI270590.1",
+        "NT_187452.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_165",
+      "length": 5796,
+      "aliases": [
+        "chrUn_KI270591v1",
+        "KI270591.1",
+        "NT_187457.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_164",
+      "length": 3041,
+      "aliases": [
+        "KI270593.1",
+        "NT_187456.1",
+        "chrUn_KI270593v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG17",
+      "length": 157432,
+      "aliases": [
+        "KI270741.1",
+        "chrUn_KI270741v1",
+        "NT_187497.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG42",
+      "length": 186739,
+      "aliases": [
+        "KI270742.1",
+        "NT_187513.1",
+        "chrUn_KI270742v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG20",
+      "length": 210658,
+      "aliases": [
+        "chrUn_KI270743v1",
+        "NT_187498.1",
+        "KI270743.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG21",
+      "length": 168472,
+      "aliases": [
+        "KI270744.1",
+        "NT_187499.1",
+        "chrUn_KI270744v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG22",
+      "length": 41891,
+      "aliases": [
+        "KI270745.1",
+        "NT_187500.1",
+        "chrUn_KI270745v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG23",
+      "length": 66486,
+      "aliases": [
+        "KI270746.1",
+        "NT_187501.1",
+        "chrUn_KI270746v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG24",
+      "length": 198735,
+      "aliases": [
+        "chrUn_KI270747v1",
+        "KI270747.1",
+        "NT_187502.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG25",
+      "length": 93321,
+      "aliases": [
+        "NT_187503.1",
+        "KI270748.1",
+        "chrUn_KI270748v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG26",
+      "length": 158759,
+      "aliases": [
+        "chrUn_KI270749v1",
+        "KI270749.1",
+        "NT_187504.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG27",
+      "length": 148850,
+      "aliases": [
+        "NT_187505.1",
+        "KI270750.1",
+        "chrUn_KI270750v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG28",
+      "length": 150742,
+      "aliases": [
+        "NT_187506.1",
+        "KI270751.1",
+        "chrUn_KI270751v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG29",
+      "length": 27745,
+      "aliases": [
+        "chrUn_KI270752v1",
+        "KI270752.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG30",
+      "length": 62944,
+      "aliases": [
+        "NT_187508.1",
+        "chrUn_KI270753v1",
+        "KI270753.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG33",
+      "length": 40191,
+      "aliases": [
+        "chrUn_KI270754v1",
+        "KI270754.1",
+        "NT_187509.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG34",
+      "length": 36723,
+      "aliases": [
+        "NT_187510.1",
+        "chrUn_KI270755v1",
+        "KI270755.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG35",
+      "length": 79590,
+      "aliases": [
+        "KI270756.1",
+        "NT_187511.1",
+        "chrUn_KI270756v1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HSCHRUN_RANDOM_CTG36",
+      "length": 71251,
+      "aliases": [
+        "chrUn_KI270757v1",
+        "KI270757.1",
+        "NT_187512.1"
+      ],
+      "sequence_role": "unplaced-scaffold"
+    },
+    {
+      "name": "HG986_PATCH",
+      "length": 186494,
+      "aliases": [
+        "KN196472.1",
+        "chr1_KN196472v1_fix",
+        "NW_009646194.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2058_PATCH",
+      "length": 166200,
+      "aliases": [
+        "NW_009646195.1",
+        "KN196473.1",
+        "chr1_KN196473v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2104_PATCH",
+      "length": 122022,
+      "aliases": [
+        "KN196474.1",
+        "NW_009646196.1",
+        "chr1_KN196474v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1832_PATCH",
+      "length": 460100,
+      "aliases": [
+        "chr1_KN538360v1_fix",
+        "KN538360.1",
+        "NW_011332687.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2095_PATCH",
+      "length": 305542,
+      "aliases": [
+        "KN538361.1",
+        "NW_011332688.1",
+        "chr1_KN538361v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1342_HG2282_PATCH",
+      "length": 467143,
+      "aliases": [
+        "NW_012132914.1",
+        "KQ031383.1",
+        "chr1_KQ031383v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2002_PATCH",
+      "length": 330031,
+      "aliases": [
+        "chr1_KZ208906v1_fix",
+        "NW_018654708.1",
+        "KZ208906.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG460_PATCH",
+      "length": 44955,
+      "aliases": [
+        "KZ559100.1",
+        "chr1_KZ559100v1_fix",
+        "NW_019805487.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR1_3_CTG3",
+      "length": 141019,
+      "aliases": [
+        "NW_014040925.1",
+        "chr1_KQ458382v1_alt",
+        "KQ458382.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_4_CTG3",
+      "length": 349938,
+      "aliases": [
+        "NW_014040926.1",
+        "chr1_KQ458383v1_alt",
+        "KQ458383.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_5_CTG32_1",
+      "length": 212205,
+      "aliases": [
+        "chr1_KQ458384v1_alt",
+        "KQ458384.1",
+        "NW_014040927.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_5_CTG3",
+      "length": 278659,
+      "aliases": [
+        "NW_015495298.1",
+        "chr1_KQ983255v1_alt",
+        "KQ983255.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_6_CTG3",
+      "length": 551020,
+      "aliases": [
+        "KV880763.1",
+        "chr1_KV880763v1_alt",
+        "NW_017852928.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_8_CTG3",
+      "length": 166136,
+      "aliases": [
+        "chr1_KZ208904v1_alt",
+        "NW_018654706.1",
+        "KZ208904.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR1_9_CTG3",
+      "length": 140355,
+      "aliases": [
+        "KZ208905.1",
+        "NW_018654707.1",
+        "chr1_KZ208905v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2233_PATCH",
+      "length": 208149,
+      "aliases": [
+        "KN538362.1",
+        "NW_011332689.1",
+        "chr2_KN538362v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2232_PATCH",
+      "length": 365499,
+      "aliases": [
+        "NW_011332690.1",
+        "KN538363.1",
+        "chr2_KN538363v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2290_PATCH",
+      "length": 481245,
+      "aliases": [
+        "NW_012132915.1",
+        "KQ031384.1",
+        "chr2_KQ031384v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR2_6_CTG7_2",
+      "length": 535088,
+      "aliases": [
+        "KQ983256.1",
+        "NW_015495299.1",
+        "chr2_KQ983256v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR2_7_CTG7_2",
+      "length": 181658,
+      "aliases": [
+        "NW_018654709.1",
+        "KZ208907.1",
+        "chr2_KZ208907v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR2_8_CTG7_2",
+      "length": 140361,
+      "aliases": [
+        "chr2_KZ208908v1_alt",
+        "NW_018654710.1",
+        "KZ208908.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2066_PATCH",
+      "length": 451168,
+      "aliases": [
+        "chr3_KN196475v1_fix",
+        "KN196475.1",
+        "NW_009646197.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2022_PATCH",
+      "length": 305979,
+      "aliases": [
+        "chr3_KN196476v1_fix",
+        "KN196476.1",
+        "NW_009646198.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG126_PATCH",
+      "length": 415308,
+      "aliases": [
+        "NW_011332691.1",
+        "chr3_KN538364v1_fix",
+        "KN538364.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2235_PATCH",
+      "length": 373699,
+      "aliases": [
+        "chr3_KQ031385v1_fix",
+        "NW_012132916.1",
+        "KQ031385.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2237_PATCH",
+      "length": 165718,
+      "aliases": [
+        "chr3_KQ031386v1_fix",
+        "NW_012132917.1",
+        "KQ031386.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2236_PATCH",
+      "length": 411654,
+      "aliases": [
+        "NW_017363813.1",
+        "KV766192.1",
+        "chr3_KV766192v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2133_PATCH",
+      "length": 105527,
+      "aliases": [
+        "KZ559104.1",
+        "chr3_KZ559104v1_fix",
+        "NW_019805491.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR3_4_CTG1",
+      "length": 175849,
+      "aliases": [
+        "KZ208909.1",
+        "NW_018654711.1",
+        "chr3_KZ208909v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR3_7_CTG2_1",
+      "length": 164041,
+      "aliases": [
+        "NW_019805488.1",
+        "chr3_KZ559101v1_alt",
+        "KZ559101.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR3_8_CTG2_1",
+      "length": 197752,
+      "aliases": [
+        "NW_019805489.1",
+        "KZ559102.1",
+        "chr3_KZ559102v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR3_9_CTG2_1",
+      "length": 302885,
+      "aliases": [
+        "KZ559103.1",
+        "chr3_KZ559103v1_alt",
+        "NW_019805490.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR3_6_CTG2_1",
+      "length": 195063,
+      "aliases": [
+        "chr3_KZ559105v1_alt",
+        "KZ559105.1",
+        "NW_019805492.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2023_PATCH",
+      "length": 230434,
+      "aliases": [
+        "chr4_KQ983257v1_fix",
+        "KQ983257.1",
+        "NW_015495300.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR4_2_CTG4",
+      "length": 90922,
+      "aliases": [
+        "KQ090013.1",
+        "NW_013171799.1",
+        "chr4_KQ090013v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR4_8_CTG12",
+      "length": 163749,
+      "aliases": [
+        "NW_013171800.1",
+        "KQ090014.1",
+        "chr4_KQ090014v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR4_9_CTG12",
+      "length": 236512,
+      "aliases": [
+        "NW_013171801.1",
+        "KQ090015.1",
+        "chr4_KQ090015v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR4_11_CTG12",
+      "length": 205407,
+      "aliases": [
+        "NW_015495301.1",
+        "KQ983258.1",
+        "chr4_KQ983258v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR4_12_CTG12",
+      "length": 420675,
+      "aliases": [
+        "NW_017363814.1",
+        "chr4_KV766193v1_alt",
+        "KV766193.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG30_PATCH",
+      "length": 673059,
+      "aliases": [
+        "chr5_KV575244v1_fix",
+        "NW_016107298.1",
+        "KV575244.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR5_7_CTG1",
+      "length": 139087,
+      "aliases": [
+        "chr5_KN196477v1_alt",
+        "NW_009646199.1",
+        "KN196477.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR5_8_CTG1",
+      "length": 362221,
+      "aliases": [
+        "NW_016107297.1",
+        "KV575243.1",
+        "chr5_KV575243v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR5_9_CTG1",
+      "length": 135987,
+      "aliases": [
+        "KZ208910.1",
+        "NW_018654712.1",
+        "chr5_KZ208910v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2128_PATCH",
+      "length": 268330,
+      "aliases": [
+        "NW_009646200.1",
+        "chr6_KN196478v1_fix",
+        "KN196478.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1651_PATCH",
+      "length": 320750,
+      "aliases": [
+        "NW_012132918.1",
+        "chr6_KQ031387v1_fix",
+        "KQ031387.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2072_PATCH",
+      "length": 245716,
+      "aliases": [
+        "KQ090016.1",
+        "NW_013171802.1",
+        "chr6_KQ090016v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2121_PATCH",
+      "length": 139427,
+      "aliases": [
+        "chr6_KV766194v1_fix",
+        "NW_017363815.1",
+        "KV766194.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2057_PATCH",
+      "length": 242796,
+      "aliases": [
+        "KZ208911.1",
+        "NW_018654713.1",
+        "chr6_KZ208911v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR6_1_CTG10",
+      "length": 82315,
+      "aliases": [
+        "KQ090017.1",
+        "chr6_KQ090017v1_alt",
+        "NW_013171803.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2239_PATCH",
+      "length": 179932,
+      "aliases": [
+        "KQ031388.1",
+        "NW_012132919.1",
+        "chr7_KQ031388v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2088_PATCH",
+      "length": 142129,
+      "aliases": [
+        "NW_017852929.1",
+        "chr7_KV880764v1_fix",
+        "KV880764.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2266_PATCH",
+      "length": 468267,
+      "aliases": [
+        "chr7_KV880765v1_fix",
+        "KV880765.1",
+        "NW_017852930.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG708_PATCH",
+      "length": 589656,
+      "aliases": [
+        "chr7_KZ208912v1_fix",
+        "NW_018654714.1",
+        "KZ208912.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR7_3_CTG4_4",
+      "length": 680662,
+      "aliases": [
+        "KZ208913.1",
+        "chr7_KZ208913v1_alt",
+        "NW_018654715.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR7_3_CTG1",
+      "length": 172555,
+      "aliases": [
+        "KZ559106.1",
+        "chr7_KZ559106v1_alt",
+        "NW_019805493.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2067_PATCH",
+      "length": 156998,
+      "aliases": [
+        "KV880766.1",
+        "NW_017852931.1",
+        "chr8_KV880766v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2068_PATCH",
+      "length": 265876,
+      "aliases": [
+        "KV880767.1",
+        "NW_017852932.1",
+        "chr8_KV880767v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2419_PATCH",
+      "length": 165120,
+      "aliases": [
+        "chr8_KZ208914v1_fix",
+        "KZ208914.1",
+        "NW_018654716.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG76_PATCH",
+      "length": 6367528,
+      "aliases": [
+        "KZ208915.1",
+        "chr8_KZ208915v1_fix",
+        "NW_018654717.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR8_7_CTG7",
+      "length": 103072,
+      "aliases": [
+        "chr8_KZ559107v1_alt",
+        "NW_019805494.1",
+        "KZ559107.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2030_PATCH",
+      "length": 330164,
+      "aliases": [
+        "KN196479.1",
+        "chr9_KN196479v1_fix",
+        "NW_009646201.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR9_1_CTG6",
+      "length": 163882,
+      "aliases": [
+        "NW_013171804.1",
+        "chr9_KQ090018v1_alt",
+        "KQ090018.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR9_1_CTG7",
+      "length": 134099,
+      "aliases": [
+        "chr9_KQ090019v1_alt",
+        "KQ090019.1",
+        "NW_013171805.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2191_PATCH",
+      "length": 277797,
+      "aliases": [
+        "NW_009646202.1",
+        "chr10_KN196480v1_fix",
+        "KN196480.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2241_PATCH",
+      "length": 14347,
+      "aliases": [
+        "NW_011332692.1",
+        "chr10_KN538365v1_fix",
+        "KN538365.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2242_HG2243_PATCH",
+      "length": 85284,
+      "aliases": [
+        "chr10_KN538366v1_fix",
+        "KN538366.1",
+        "NW_011332693.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2244_HG2245_PATCH",
+      "length": 420164,
+      "aliases": [
+        "NW_011332694.1",
+        "chr10_KN538367v1_fix",
+        "KN538367.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2334_PATCH",
+      "length": 264545,
+      "aliases": [
+        "KQ090021.1",
+        "NW_013171807.1",
+        "chr10_KQ090021v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR10_1_CTG6",
+      "length": 185507,
+      "aliases": [
+        "chr10_KQ090020v1_alt",
+        "NW_013171806.1",
+        "KQ090020.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2217_PATCH",
+      "length": 108875,
+      "aliases": [
+        "NW_009646203.1",
+        "chr11_KN196481v1_fix",
+        "KN196481.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2116_PATCH",
+      "length": 181958,
+      "aliases": [
+        "NW_013171808.1",
+        "chr11_KQ090022v1_fix",
+        "KQ090022.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG107_PATCH",
+      "length": 196940,
+      "aliases": [
+        "KQ759759.1",
+        "NW_015148966.1",
+        "chr11_KQ759759v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1708_PATCH",
+      "length": 140877,
+      "aliases": [
+        "NW_017363816.1",
+        "chr11_KV766195v1_fix",
+        "KV766195.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2060_PATCH",
+      "length": 305244,
+      "aliases": [
+        "chr11_KZ559108v1_fix",
+        "NW_019805495.1",
+        "KZ559108.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2114_PATCH",
+      "length": 279644,
+      "aliases": [
+        "KZ559109.1",
+        "NW_019805496.1",
+        "chr11_KZ559109v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR11_1_CTG1_2",
+      "length": 203552,
+      "aliases": [
+        "KN538368.1",
+        "NW_011332695.1",
+        "chr11_KN538368v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR11_2_CTG8",
+      "length": 301637,
+      "aliases": [
+        "NW_019805497.1",
+        "KZ559110.1",
+        "chr11_KZ559110v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR11_1_CTG3_1",
+      "length": 181167,
+      "aliases": [
+        "chr11_KZ559111v1_alt",
+        "NW_019805498.1",
+        "KZ559111.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG23_PATCH",
+      "length": 211377,
+      "aliases": [
+        "NW_009646204.1",
+        "KN196482.1",
+        "chr12_KN196482v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1362_PATCH",
+      "length": 541038,
+      "aliases": [
+        "KN538369.1",
+        "NW_011332696.1",
+        "chr12_KN538369v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2247_PATCH",
+      "length": 86533,
+      "aliases": [
+        "chr12_KN538370v1_fix",
+        "KN538370.1",
+        "NW_011332697.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2063_PATCH",
+      "length": 315610,
+      "aliases": [
+        "KQ759760.1",
+        "chr12_KQ759760v1_fix",
+        "NW_015148967.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1815_PATCH",
+      "length": 1046838,
+      "aliases": [
+        "NW_018654718.1",
+        "chr12_KZ208916v1_fix",
+        "KZ208916.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2047_PATCH",
+      "length": 64689,
+      "aliases": [
+        "KZ208917.1",
+        "NW_018654719.1",
+        "chr12_KZ208917v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR12_2_CTG1",
+      "length": 109323,
+      "aliases": [
+        "NW_013171809.1",
+        "chr12_KQ090023v1_alt",
+        "KQ090023.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_8_CTG2_1",
+      "length": 174808,
+      "aliases": [
+        "chr12_KZ208918v1_alt",
+        "NW_018654720.1",
+        "KZ208918.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR12_9_CTG2_1",
+      "length": 154139,
+      "aliases": [
+        "chr12_KZ559112v1_alt",
+        "NW_019805499.1",
+        "KZ559112.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2216_PATCH",
+      "length": 35455,
+      "aliases": [
+        "chr13_KN196483v1_fix",
+        "KN196483.1",
+        "NW_009646205.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2288_HG2289_PATCH",
+      "length": 206320,
+      "aliases": [
+        "KN538371.1",
+        "NW_011332698.1",
+        "chr13_KN538371v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2291_PATCH",
+      "length": 356766,
+      "aliases": [
+        "KN538372.1",
+        "NW_011332699.1",
+        "chr13_KN538372v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2249_PATCH",
+      "length": 148762,
+      "aliases": [
+        "NW_011332700.1",
+        "chr13_KN538373v1_fix",
+        "KN538373.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR13_1_CTG7",
+      "length": 168146,
+      "aliases": [
+        "KQ090024.1",
+        "NW_013171810.1",
+        "chr13_KQ090024v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR13_1_CTG8",
+      "length": 123480,
+      "aliases": [
+        "KQ090025.1",
+        "NW_013171811.1",
+        "chr13_KQ090025v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG1_PATCH",
+      "length": 690932,
+      "aliases": [
+        "KZ208920.1",
+        "NW_018654722.1",
+        "chr14_KZ208920v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR14_8_CTG1",
+      "length": 171798,
+      "aliases": [
+        "NW_018654721.1",
+        "KZ208919.1",
+        "chr14_KZ208919v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2139_PATCH",
+      "length": 4998962,
+      "aliases": [
+        "KN538374.1",
+        "NW_011332701.1",
+        "chr15_KN538374v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR15_6_CTG8",
+      "length": 2365364,
+      "aliases": [
+        "KQ031389.1",
+        "NW_012132920.1",
+        "chr15_KQ031389v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG926_PATCH",
+      "length": 1927115,
+      "aliases": [
+        "NW_017852933.1",
+        "chr16_KV880768v1_fix",
+        "KV880768.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2263_PATCH",
+      "length": 480415,
+      "aliases": [
+        "KZ559113.1",
+        "NW_019805500.1",
+        "chr16_KZ559113v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR16_3_CTG3_1",
+      "length": 169136,
+      "aliases": [
+        "NW_012132921.1",
+        "KQ031390.1",
+        "chr16_KQ031390v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR16_5_CTG1",
+      "length": 59016,
+      "aliases": [
+        "NW_013171812.1",
+        "KQ090026.1",
+        "chr16_KQ090026v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR16_4_CTG3_1",
+      "length": 267463,
+      "aliases": [
+        "chr16_KQ090027v1_alt",
+        "KQ090027.1",
+        "NW_013171813.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR16_5_CTG3_1",
+      "length": 78609,
+      "aliases": [
+        "NW_018654723.1",
+        "KZ208921.1",
+        "chr16_KZ208921v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2046_PATCH",
+      "length": 154723,
+      "aliases": [
+        "chr17_KV575245v1_fix",
+        "NW_016107299.1",
+        "KV575245.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2285_HG106_HG2252_PATCH",
+      "length": 281919,
+      "aliases": [
+        "KV766196.1",
+        "NW_017363817.1",
+        "chr17_KV766196v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR17_11_CTG4",
+      "length": 246895,
+      "aliases": [
+        "NW_017363818.1",
+        "KV766197.1",
+        "chr17_KV766197v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_3_CTG1",
+      "length": 276292,
+      "aliases": [
+        "chr17_KV766198v1_alt",
+        "KV766198.1",
+        "NW_017363819.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR17_12_CTG4",
+      "length": 116753,
+      "aliases": [
+        "chr17_KZ559114v1_alt",
+        "KZ559114.1",
+        "NW_019805501.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2213_PATCH",
+      "length": 407387,
+      "aliases": [
+        "KQ090028.1",
+        "chr18_KQ090028v1_fix",
+        "NW_013171814.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2442_PATCH",
+      "length": 93070,
+      "aliases": [
+        "NW_018654724.1",
+        "KZ208922.1",
+        "chr18_KZ208922v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG2412_PATCH",
+      "length": 230843,
+      "aliases": [
+        "NW_019805502.1",
+        "chr18_KZ559115v1_fix",
+        "KZ559115.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR18_5_CTG1_1",
+      "length": 205101,
+      "aliases": [
+        "chr18_KQ458385v1_alt",
+        "KQ458385.1",
+        "NW_014040928.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR18_1_CTG1",
+      "length": 163186,
+      "aliases": [
+        "NW_019805503.1",
+        "KZ559116.1",
+        "chr18_KZ559116v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2021_PATCH",
+      "length": 370917,
+      "aliases": [
+        "NW_009646206.1",
+        "chr19_KN196484v1_fix",
+        "KN196484.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG26_PATCH",
+      "length": 405389,
+      "aliases": [
+        "NW_014040929.1",
+        "KQ458386.1",
+        "chr19_KQ458386v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR19KIR_0019-4656-A_CTG3_1",
+      "length": 163926,
+      "aliases": [
+        "chr19_KV575246v1_alt",
+        "NW_016107300.1",
+        "KV575246.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_CA01-TA01_1_CTG3_1",
+      "length": 170206,
+      "aliases": [
+        "NW_016107301.1",
+        "chr19_KV575247v1_alt",
+        "KV575247.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_CA01-TA01_2_CTG3_1",
+      "length": 168131,
+      "aliases": [
+        "NW_016107302.1",
+        "KV575248.1",
+        "chr19_KV575248v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_CA01-TB04_CTG3_1",
+      "length": 293522,
+      "aliases": [
+        "chr19_KV575249v1_alt",
+        "KV575249.1",
+        "NW_016107303.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_CA01-TB01_CTG3_1",
+      "length": 241058,
+      "aliases": [
+        "KV575250.1",
+        "NW_016107304.1",
+        "chr19_KV575250v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_HG2394_CTG3_1",
+      "length": 159285,
+      "aliases": [
+        "chr19_KV575251v1_alt",
+        "KV575251.1",
+        "NW_016107305.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_502960008-2_CTG3_1",
+      "length": 178197,
+      "aliases": [
+        "chr19_KV575252v1_alt",
+        "NW_016107306.1",
+        "KV575252.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_502960008-1_CTG3_1",
+      "length": 166713,
+      "aliases": [
+        "NW_016107307.1",
+        "KV575253.1",
+        "chr19_KV575253v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_0010-5217-AB_CTG3_1",
+      "length": 99845,
+      "aliases": [
+        "KV575254.1",
+        "chr19_KV575254v1_alt",
+        "NW_016107308.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_7191059-1_CTG3_1",
+      "length": 161095,
+      "aliases": [
+        "NW_016107309.1",
+        "KV575255.1",
+        "chr19_KV575255v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_0019-4656-B_CTG3_1",
+      "length": 223118,
+      "aliases": [
+        "chr19_KV575256v1_alt",
+        "NW_016107310.1",
+        "KV575256.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_CA04_CTG3_1",
+      "length": 100553,
+      "aliases": [
+        "chr19_KV575257v1_alt",
+        "KV575257.1",
+        "NW_016107311.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_HG2393_CTG3_1",
+      "length": 156965,
+      "aliases": [
+        "NW_016107312.1",
+        "chr19_KV575258v1_alt",
+        "KV575258.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_7191059-2_CTG3_1",
+      "length": 171263,
+      "aliases": [
+        "NW_016107313.1",
+        "chr19_KV575259v1_alt",
+        "KV575259.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR19KIR_HG2396_CTG3_1",
+      "length": 145691,
+      "aliases": [
+        "NW_016107314.1",
+        "KV575260.1",
+        "chr19_KV575260v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG1311_PATCH",
+      "length": 101037,
+      "aliases": [
+        "chr22_KQ759762v1_fix",
+        "NW_015148969.1",
+        "KQ759762.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR22_4_CTG1",
+      "length": 156562,
+      "aliases": [
+        "KN196485.1",
+        "NW_009646207.1",
+        "chr22_KN196485v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR22_5_CTG1",
+      "length": 153027,
+      "aliases": [
+        "KN196486.1",
+        "chr22_KN196486v1_alt",
+        "NW_009646208.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR22_6_CTG1",
+      "length": 155930,
+      "aliases": [
+        "KQ458387.1",
+        "NW_014040930.1",
+        "chr22_KQ458387v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR22_7_CTG1",
+      "length": 174749,
+      "aliases": [
+        "NW_014040931.1",
+        "chr22_KQ458388v1_alt",
+        "KQ458388.1"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHR22_8_CTG1",
+      "length": 145162,
+      "aliases": [
+        "KQ759761.1",
+        "NW_015148968.1",
+        "chr22_KQ759761v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HSCHRX_3_CTG7",
+      "length": 188004,
+      "aliases": [
+        "NW_017363820.1",
+        "KV766199.1",
+        "chrX_KV766199v1_alt"
+      ],
+      "sequence_role": "novel-patch"
+    },
+    {
+      "name": "HG2062_PATCH",
+      "length": 101150,
+      "aliases": [
+        "KN196487.1",
+        "NW_009646209.1",
+        "chrY_KN196487v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1531_PATCH",
+      "length": 48370,
+      "aliases": [
+        "NW_018654725.1",
+        "KZ208923.1",
+        "chrY_KZ208923v1_fix"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HG1535_PATCH",
+      "length": 209722,
+      "aliases": [
+        "KZ208924.1",
+        "chrY_KZ208924v1_fix",
+        "NW_018654726.1"
+      ],
+      "sequence_role": "fix-patch"
+    },
+    {
+      "name": "HSCHR1_1_CTG31",
+      "length": 182439,
+      "aliases": [
+        "NW_003315905.1",
+        "chr1_GL383518v1_alt",
+        "GL383518.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_2_CTG31",
+      "length": 110268,
+      "aliases": [
+        "NW_003315906.1",
+        "GL383519.1",
+        "chr1_GL383519v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_3_CTG31",
+      "length": 366580,
+      "aliases": [
+        "NW_003315907.2",
+        "GL383520.2",
+        "chr1_GL383520v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_1_CTG32_1",
+      "length": 425601,
+      "aliases": [
+        "NT_187516.1",
+        "chr1_KI270759v1_alt",
+        "KI270759.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_1_CTG11",
+      "length": 109528,
+      "aliases": [
+        "chr1_KI270760v1_alt",
+        "KI270760.1",
+        "NT_187514.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_2_CTG32_1",
+      "length": 165834,
+      "aliases": [
+        "NT_187518.1",
+        "chr1_KI270761v1_alt",
+        "KI270761.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_1_CTG3",
+      "length": 354444,
+      "aliases": [
+        "KI270762.1",
+        "NT_187515.1",
+        "chr1_KI270762v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_3_CTG32_1",
+      "length": 911658,
+      "aliases": [
+        "KI270763.1",
+        "NT_187519.1",
+        "chr1_KI270763v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_4_CTG32_1",
+      "length": 50258,
+      "aliases": [
+        "chr1_KI270764v1_alt",
+        "KI270764.1",
+        "NT_187521.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_4_CTG31",
+      "length": 185285,
+      "aliases": [
+        "NT_187520.1",
+        "chr1_KI270765v1_alt",
+        "KI270765.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_2_CTG3",
+      "length": 256271,
+      "aliases": [
+        "NT_187517.1",
+        "KI270766.1",
+        "chr1_KI270766v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_1_CTG5",
+      "length": 143390,
+      "aliases": [
+        "NW_003315908.1",
+        "chr2_GL383521v1_alt",
+        "GL383521.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_1_CTG7_2",
+      "length": 123821,
+      "aliases": [
+        "GL383522.1",
+        "NW_003315909.1",
+        "chr2_GL383522v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_2_CTG7_2",
+      "length": 96131,
+      "aliases": [
+        "GL582966.2",
+        "NW_003571033.2",
+        "chr2_GL582966v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_1_CTG15",
+      "length": 161578,
+      "aliases": [
+        "NT_187523.1",
+        "KI270767.1",
+        "chr2_KI270767v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_3_CTG7_2",
+      "length": 110099,
+      "aliases": [
+        "KI270768.1",
+        "NT_187528.1",
+        "chr2_KI270768v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_1_CTG1",
+      "length": 120616,
+      "aliases": [
+        "KI270769.1",
+        "chr2_KI270769v1_alt",
+        "NT_187522.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_2_CTG1",
+      "length": 136240,
+      "aliases": [
+        "NT_187525.1",
+        "chr2_KI270770v1_alt",
+        "KI270770.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_4_CTG7_2",
+      "length": 110395,
+      "aliases": [
+        "KI270771.1",
+        "NT_187530.1",
+        "chr2_KI270771v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_1_CTG7",
+      "length": 133041,
+      "aliases": [
+        "NT_187524.1",
+        "chr2_KI270772v1_alt",
+        "KI270772.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_3_CTG1",
+      "length": 70887,
+      "aliases": [
+        "KI270773.1",
+        "chr2_KI270773v1_alt",
+        "NT_187526.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_4_CTG1",
+      "length": 223625,
+      "aliases": [
+        "KI270774.1",
+        "NT_187529.1",
+        "chr2_KI270774v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_5_CTG7_2",
+      "length": 138019,
+      "aliases": [
+        "KI270775.1",
+        "chr2_KI270775v1_alt",
+        "NT_187531.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_3_CTG15",
+      "length": 174166,
+      "aliases": [
+        "KI270776.1",
+        "NT_187527.1",
+        "chr2_KI270776v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_1_CTG2_1",
+      "length": 180671,
+      "aliases": [
+        "GL383526.1",
+        "NW_003315913.1",
+        "chr3_GL383526v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_1_CTG1",
+      "length": 173151,
+      "aliases": [
+        "JH636055.2",
+        "chr3_JH636055v2_alt",
+        "NW_003871060.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_2_CTG2_1",
+      "length": 173649,
+      "aliases": [
+        "chr3_KI270777v1_alt",
+        "NT_187533.1",
+        "KI270777.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_3_CTG2_1",
+      "length": 248252,
+      "aliases": [
+        "chr3_KI270778v1_alt",
+        "KI270778.1",
+        "NT_187536.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_1_CTG3",
+      "length": 205312,
+      "aliases": [
+        "KI270779.1",
+        "NT_187532.1",
+        "chr3_KI270779v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_4_CTG2_1",
+      "length": 224108,
+      "aliases": [
+        "KI270780.1",
+        "chr3_KI270780v1_alt",
+        "NT_187537.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_5_CTG2_1",
+      "length": 113034,
+      "aliases": [
+        "KI270781.1",
+        "NT_187538.1",
+        "chr3_KI270781v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_2_CTG3",
+      "length": 162429,
+      "aliases": [
+        "KI270782.1",
+        "NT_187534.1",
+        "chr3_KI270782v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_3_CTG1",
+      "length": 109187,
+      "aliases": [
+        "KI270783.1",
+        "NT_187535.1",
+        "chr3_KI270783v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_9_CTG3",
+      "length": 184404,
+      "aliases": [
+        "chr3_KI270784v1_alt",
+        "KI270784.1",
+        "NT_187539.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_1_CTG9",
+      "length": 586476,
+      "aliases": [
+        "chr4_GL000257v2_alt",
+        "GL000257.2",
+        "NT_167250.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_1_CTG12",
+      "length": 164536,
+      "aliases": [
+        "NW_003315914.1",
+        "chr4_GL383527v1_alt",
+        "GL383527.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_1_CTG6",
+      "length": 376187,
+      "aliases": [
+        "chr4_GL383528v1_alt",
+        "GL383528.1",
+        "NW_003315915.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_2_CTG12",
+      "length": 119912,
+      "aliases": [
+        "chr4_KI270785v1_alt",
+        "KI270785.1",
+        "NT_187542.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_3_CTG12",
+      "length": 244096,
+      "aliases": [
+        "chr4_KI270786v1_alt",
+        "KI270786.1",
+        "NT_187543.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_1_CTG8_1",
+      "length": 111943,
+      "aliases": [
+        "KI270787.1",
+        "NT_187541.1",
+        "chr4_KI270787v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_4_CTG12",
+      "length": 158965,
+      "aliases": [
+        "KI270788.1",
+        "NT_187544.1",
+        "chr4_KI270788v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_5_CTG12",
+      "length": 205944,
+      "aliases": [
+        "NT_187545.1",
+        "chr4_KI270789v1_alt",
+        "KI270789.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_1_CTG4",
+      "length": 220246,
+      "aliases": [
+        "KI270790.1",
+        "chr4_KI270790v1_alt",
+        "NT_187540.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_2_CTG1_1",
+      "length": 1612928,
+      "aliases": [
+        "chr5_GL339449v2_alt",
+        "GL339449.2",
+        "NW_003315917.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_3_CTG1_1",
+      "length": 101241,
+      "aliases": [
+        "chr5_GL383530v1_alt",
+        "GL383530.1",
+        "NW_003315918.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_1_CTG5",
+      "length": 173459,
+      "aliases": [
+        "chr5_GL383531v1_alt",
+        "GL383531.1",
+        "NW_003315919.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_1_CTG1",
+      "length": 82728,
+      "aliases": [
+        "GL383532.1",
+        "NW_003315920.1",
+        "chr5_GL383532v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_2_CTG1",
+      "length": 226852,
+      "aliases": [
+        "GL949742.1",
+        "NW_003571036.1",
+        "chr5_GL949742v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_3_CTG1",
+      "length": 195710,
+      "aliases": [
+        "chr5_KI270791v1_alt",
+        "KI270791.1",
+        "NT_187547.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_4_CTG1",
+      "length": 179043,
+      "aliases": [
+        "chr5_KI270792v1_alt",
+        "NT_187548.1",
+        "KI270792.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_5_CTG1",
+      "length": 126136,
+      "aliases": [
+        "KI270793.1",
+        "chr5_KI270793v1_alt",
+        "NT_187550.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_6_CTG1",
+      "length": 164558,
+      "aliases": [
+        "chr5_KI270794v1_alt",
+        "NT_187551.1",
+        "KI270794.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_2_CTG5",
+      "length": 131892,
+      "aliases": [
+        "chr5_KI270795v1_alt",
+        "KI270795.1",
+        "NT_187546.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_4_CTG1_1",
+      "length": 172708,
+      "aliases": [
+        "KI270796.1",
+        "NT_187549.1",
+        "chr5_KI270796v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_APD_CTG1",
+      "length": 4672374,
+      "aliases": [
+        "chr6_GL000250v2_alt",
+        "GL000250.2",
+        "NT_167244.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG2",
+      "length": 124736,
+      "aliases": [
+        "chr6_GL383533v1_alt",
+        "GL383533.1",
+        "NW_003315921.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG3",
+      "length": 185823,
+      "aliases": [
+        "chr6_KB021644v2_alt",
+        "KB021644.2",
+        "NW_004166862.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG4",
+      "length": 197536,
+      "aliases": [
+        "chr6_KI270797v1_alt",
+        "NT_187552.1",
+        "KI270797.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG5",
+      "length": 271782,
+      "aliases": [
+        "NT_187553.1",
+        "chr6_KI270798v1_alt",
+        "KI270798.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG6",
+      "length": 152148,
+      "aliases": [
+        "chr6_KI270799v1_alt",
+        "KI270799.1",
+        "NT_187554.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG7",
+      "length": 175808,
+      "aliases": [
+        "chr6_KI270800v1_alt",
+        "NT_187555.1",
+        "KI270800.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG8",
+      "length": 870480,
+      "aliases": [
+        "NT_187556.1",
+        "chr6_KI270801v1_alt",
+        "KI270801.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_1_CTG9",
+      "length": 75005,
+      "aliases": [
+        "NT_187557.1",
+        "chr6_KI270802v1_alt",
+        "KI270802.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_1_CTG6",
+      "length": 119183,
+      "aliases": [
+        "GL383534.2",
+        "chr7_GL383534v2_alt",
+        "NW_003315922.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_2_CTG6",
+      "length": 1111570,
+      "aliases": [
+        "KI270803.1",
+        "NT_187562.1",
+        "chr7_KI270803v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_1_CTG1",
+      "length": 157952,
+      "aliases": [
+        "NT_187558.1",
+        "KI270804.1",
+        "chr7_KI270804v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_1_CTG7",
+      "length": 209988,
+      "aliases": [
+        "NT_187560.1",
+        "KI270805.1",
+        "chr7_KI270805v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_1_CTG4_4",
+      "length": 158166,
+      "aliases": [
+        "chr7_KI270806v1_alt",
+        "KI270806.1",
+        "NT_187559.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_2_CTG7",
+      "length": 126434,
+      "aliases": [
+        "KI270807.1",
+        "chr7_KI270807v1_alt",
+        "NT_187563.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_3_CTG6",
+      "length": 271455,
+      "aliases": [
+        "NT_187564.1",
+        "chr7_KI270808v1_alt",
+        "KI270808.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_2_CTG4_4",
+      "length": 209586,
+      "aliases": [
+        "NT_187561.1",
+        "chr7_KI270809v1_alt",
+        "KI270809.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_1_CTG7",
+      "length": 374415,
+      "aliases": [
+        "NT_187567.1",
+        "chr8_KI270810v1_alt",
+        "KI270810.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_1_CTG1",
+      "length": 292436,
+      "aliases": [
+        "KI270811.1",
+        "chr8_KI270811v1_alt",
+        "NT_187565.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_2_CTG1",
+      "length": 282736,
+      "aliases": [
+        "NT_187568.1",
+        "chr8_KI270812v1_alt",
+        "KI270812.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_3_CTG1",
+      "length": 300230,
+      "aliases": [
+        "NT_187570.1",
+        "KI270813.1",
+        "chr8_KI270813v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_1_CTG6",
+      "length": 141812,
+      "aliases": [
+        "chr8_KI270814v1_alt",
+        "KI270814.1",
+        "NT_187566.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_2_CTG7",
+      "length": 132244,
+      "aliases": [
+        "NT_187569.1",
+        "KI270815.1",
+        "chr8_KI270815v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_3_CTG7",
+      "length": 305841,
+      "aliases": [
+        "chr8_KI270816v1_alt",
+        "KI270816.1",
+        "NT_187571.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_4_CTG7",
+      "length": 158983,
+      "aliases": [
+        "KI270817.1",
+        "NT_187573.1",
+        "chr8_KI270817v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_4_CTG1",
+      "length": 145606,
+      "aliases": [
+        "NT_187572.1",
+        "KI270818.1",
+        "chr8_KI270818v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_5_CTG7",
+      "length": 133535,
+      "aliases": [
+        "NT_187574.1",
+        "chr8_KI270819v1_alt",
+        "KI270819.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_6_CTG7",
+      "length": 36640,
+      "aliases": [
+        "NT_187575.1",
+        "chr8_KI270820v1_alt",
+        "KI270820.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_8_CTG1",
+      "length": 985506,
+      "aliases": [
+        "chr8_KI270821v1_alt",
+        "KI270821.1",
+        "NT_187576.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_9_CTG1",
+      "length": 624492,
+      "aliases": [
+        "chr8_KI270822v1_alt",
+        "KI270822.1",
+        "NT_187577.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR9_1_CTG1",
+      "length": 162988,
+      "aliases": [
+        "chr9_GL383539v1_alt",
+        "GL383539.1",
+        "NW_003315928.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR9_1_CTG2",
+      "length": 71551,
+      "aliases": [
+        "chr9_GL383540v1_alt",
+        "GL383540.1",
+        "NW_003315929.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR9_1_CTG3",
+      "length": 171286,
+      "aliases": [
+        "chr9_GL383541v1_alt",
+        "GL383541.1",
+        "NW_003315930.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR9_1_CTG4",
+      "length": 60032,
+      "aliases": [
+        "chr9_GL383542v1_alt",
+        "GL383542.1",
+        "NW_003315931.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR9_1_CTG5",
+      "length": 439082,
+      "aliases": [
+        "chr9_KI270823v1_alt",
+        "KI270823.1",
+        "NT_187578.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR10_1_CTG1",
+      "length": 179254,
+      "aliases": [
+        "GL383545.1",
+        "chr10_GL383545v1_alt",
+        "NW_003315934.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR10_1_CTG2",
+      "length": 309802,
+      "aliases": [
+        "GL383546.1",
+        "NW_003315935.1",
+        "chr10_GL383546v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR10_1_CTG3",
+      "length": 181496,
+      "aliases": [
+        "chr10_KI270824v1_alt",
+        "KI270824.1",
+        "NT_187579.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR10_1_CTG4",
+      "length": 188315,
+      "aliases": [
+        "chr10_KI270825v1_alt",
+        "KI270825.1",
+        "NT_187580.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_1_CTG1_1",
+      "length": 154407,
+      "aliases": [
+        "chr11_GL383547v1_alt",
+        "GL383547.1",
+        "NW_003315936.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HG142_HG150_NOVEL_TEST",
+      "length": 200998,
+      "aliases": [
+        "JH159136.1",
+        "NW_003871073.1",
+        "chr11_JH159136v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HG151_NOVEL_TEST",
+      "length": 191409,
+      "aliases": [
+        "JH159137.1",
+        "NW_003871074.1",
+        "chr11_JH159137v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_1_CTG2",
+      "length": 186169,
+      "aliases": [
+        "NT_187581.1",
+        "KI270826.1",
+        "chr11_KI270826v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_1_CTG3",
+      "length": 67707,
+      "aliases": [
+        "NT_187582.1",
+        "chr11_KI270827v1_alt",
+        "KI270827.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_1_CTG5",
+      "length": 204059,
+      "aliases": [
+        "KI270829.1",
+        "NT_187583.1",
+        "chr11_KI270829v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_1_CTG6",
+      "length": 177092,
+      "aliases": [
+        "NT_187584.1",
+        "KI270830.1",
+        "chr11_KI270830v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_1_CTG7",
+      "length": 296895,
+      "aliases": [
+        "chr11_KI270831v1_alt",
+        "KI270831.1",
+        "NT_187585.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_1_CTG8",
+      "length": 210133,
+      "aliases": [
+        "KI270832.1",
+        "chr11_KI270832v1_alt",
+        "NT_187586.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_1_CTG2",
+      "length": 120804,
+      "aliases": [
+        "NW_003315938.1",
+        "chr12_GL383549v1_alt",
+        "GL383549.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_1_CTG2_1",
+      "length": 169178,
+      "aliases": [
+        "NW_003315939.2",
+        "chr12_GL383550v2_alt",
+        "GL383550.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_4_CTG2_1",
+      "length": 184319,
+      "aliases": [
+        "GL383551.1",
+        "chr12_GL383551v1_alt",
+        "NW_003315940.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_2_CTG2_1",
+      "length": 138655,
+      "aliases": [
+        "GL383552.1",
+        "chr12_GL383552v1_alt",
+        "NW_003315941.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_3_CTG2_1",
+      "length": 152874,
+      "aliases": [
+        "GL383553.2",
+        "NW_003315942.2",
+        "chr12_GL383553v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_1_CTG1",
+      "length": 167313,
+      "aliases": [
+        "chr12_GL877875v1_alt",
+        "GL877875.1",
+        "NW_003571049.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_2_CTG2",
+      "length": 408271,
+      "aliases": [
+        "GL877876.1",
+        "chr12_GL877876v1_alt",
+        "NW_003571050.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_5_CTG2_1",
+      "length": 76061,
+      "aliases": [
+        "KI270833.1",
+        "NT_187589.1",
+        "chr12_KI270833v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_6_CTG2_1",
+      "length": 119498,
+      "aliases": [
+        "NT_187590.1",
+        "KI270834.1",
+        "chr12_KI270834v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_4_CTG2",
+      "length": 238139,
+      "aliases": [
+        "NT_187587.1",
+        "chr12_KI270835v1_alt",
+        "KI270835.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_7_CTG2_1",
+      "length": 56134,
+      "aliases": [
+        "KI270836.1",
+        "NT_187591.1",
+        "chr12_KI270836v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_5_CTG2",
+      "length": 40090,
+      "aliases": [
+        "KI270837.1",
+        "chr12_KI270837v1_alt",
+        "NT_187588.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR13_1_CTG1",
+      "length": 306913,
+      "aliases": [
+        "chr13_KI270838v1_alt",
+        "NT_187592.1",
+        "KI270838.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR13_1_CTG2",
+      "length": 180306,
+      "aliases": [
+        "chr13_KI270839v1_alt",
+        "NT_187593.1",
+        "KI270839.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR13_1_CTG3",
+      "length": 191684,
+      "aliases": [
+        "NT_187594.1",
+        "KI270840.1",
+        "chr13_KI270840v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR13_1_CTG4",
+      "length": 169134,
+      "aliases": [
+        "KI270841.1",
+        "chr13_KI270841v1_alt",
+        "NT_187595.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR13_1_CTG5",
+      "length": 37287,
+      "aliases": [
+        "chr13_KI270842v1_alt",
+        "KI270842.1",
+        "NT_187596.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR13_1_CTG6",
+      "length": 103832,
+      "aliases": [
+        "NT_187597.1",
+        "KI270843.1",
+        "chr13_KI270843v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR14_1_CTG1",
+      "length": 322166,
+      "aliases": [
+        "chr14_KI270844v1_alt",
+        "NT_187598.1",
+        "KI270844.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR14_2_CTG1",
+      "length": 180703,
+      "aliases": [
+        "NT_187599.1",
+        "chr14_KI270845v1_alt",
+        "KI270845.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR14_3_CTG1",
+      "length": 1351393,
+      "aliases": [
+        "NT_187600.1",
+        "KI270846.1",
+        "chr14_KI270846v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR14_7_CTG1",
+      "length": 1511111,
+      "aliases": [
+        "chr14_KI270847v1_alt",
+        "KI270847.1",
+        "NT_187601.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_1_CTG8",
+      "length": 296527,
+      "aliases": [
+        "GL383554.1",
+        "NW_003315943.1",
+        "chr15_GL383554v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_2_CTG8",
+      "length": 388773,
+      "aliases": [
+        "GL383555.2",
+        "NW_003315944.2",
+        "chr15_GL383555v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_1_CTG3",
+      "length": 327382,
+      "aliases": [
+        "NT_187603.1",
+        "chr15_KI270848v1_alt",
+        "KI270848.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_3_CTG8",
+      "length": 244917,
+      "aliases": [
+        "KI270849.1",
+        "chr15_KI270849v1_alt",
+        "NT_187605.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_5_CTG8",
+      "length": 430880,
+      "aliases": [
+        "KI270850.1",
+        "NT_187606.1",
+        "chr15_KI270850v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_3_CTG3",
+      "length": 263054,
+      "aliases": [
+        "NT_187604.1",
+        "KI270851.1",
+        "chr15_KI270851v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_1_CTG1",
+      "length": 478999,
+      "aliases": [
+        "KI270852.1",
+        "NT_187602.1",
+        "chr15_KI270852v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR16_1_CTG3_1",
+      "length": 192462,
+      "aliases": [
+        "GL383556.1",
+        "chr16_GL383556v1_alt",
+        "NW_003315945.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR16_2_CTG3_1",
+      "length": 89672,
+      "aliases": [
+        "NW_003315946.1",
+        "chr16_GL383557v1_alt",
+        "GL383557.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR16_1_CTG1",
+      "length": 2659700,
+      "aliases": [
+        "NT_187607.1",
+        "chr16_KI270853v1_alt",
+        "KI270853.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR16_CTG2",
+      "length": 134193,
+      "aliases": [
+        "chr16_KI270854v1_alt",
+        "KI270854.1",
+        "NT_187610.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR16_3_CTG1",
+      "length": 232857,
+      "aliases": [
+        "KI270855.1",
+        "NT_187608.1",
+        "chr16_KI270855v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR16_4_CTG1",
+      "length": 63982,
+      "aliases": [
+        "NT_187609.1",
+        "KI270856.1",
+        "chr16_KI270856v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_1_CTG5",
+      "length": 1821992,
+      "aliases": [
+        "GL000258.2",
+        "NT_167251.2",
+        "chr17_GL000258v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_1_CTG1",
+      "length": 375691,
+      "aliases": [
+        "NW_003315952.3",
+        "GL383563.3",
+        "chr17_GL383563v3_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_1_CTG4",
+      "length": 133151,
+      "aliases": [
+        "chr17_GL383564v2_alt",
+        "NW_003315953.2",
+        "GL383564.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_2_CTG4",
+      "length": 223995,
+      "aliases": [
+        "NW_003315954.1",
+        "GL383565.1",
+        "chr17_GL383565v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_3_CTG4",
+      "length": 90219,
+      "aliases": [
+        "GL383566.1",
+        "chr17_GL383566v1_alt",
+        "NW_003315955.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_4_CTG4",
+      "length": 278131,
+      "aliases": [
+        "JH159146.1",
+        "chr17_JH159146v1_alt",
+        "NW_003871091.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_5_CTG4",
+      "length": 70345,
+      "aliases": [
+        "JH159147.1",
+        "NW_003871092.1",
+        "chr17_JH159147v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_7_CTG4",
+      "length": 2877074,
+      "aliases": [
+        "chr17_KI270857v1_alt",
+        "KI270857.1",
+        "NT_187614.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_8_CTG4",
+      "length": 235827,
+      "aliases": [
+        "NT_187615.1",
+        "KI270858.1",
+        "chr17_KI270858v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_9_CTG4",
+      "length": 108763,
+      "aliases": [
+        "KI270859.1",
+        "NT_187616.1",
+        "chr17_KI270859v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_1_CTG9",
+      "length": 178921,
+      "aliases": [
+        "NT_187612.1",
+        "chr17_KI270860v1_alt",
+        "KI270860.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_1_CTG2",
+      "length": 196688,
+      "aliases": [
+        "chr17_KI270861v1_alt",
+        "KI270861.1",
+        "NT_187611.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_2_CTG2",
+      "length": 391357,
+      "aliases": [
+        "chr17_KI270862v1_alt",
+        "NT_187613.1",
+        "KI270862.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_1_CTG1_1",
+      "length": 289831,
+      "aliases": [
+        "GL383567.1",
+        "NW_003315956.1",
+        "chr18_GL383567v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_1_CTG2",
+      "length": 104552,
+      "aliases": [
+        "NW_003315957.1",
+        "GL383568.1",
+        "chr18_GL383568v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_1_CTG2_1",
+      "length": 167950,
+      "aliases": [
+        "chr18_GL383569v1_alt",
+        "GL383569.1",
+        "NW_003315958.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_2_CTG1_1",
+      "length": 164789,
+      "aliases": [
+        "NW_003315959.1",
+        "GL383570.1",
+        "chr18_GL383570v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_2_CTG2",
+      "length": 198278,
+      "aliases": [
+        "NW_003315960.1",
+        "chr18_GL383571v1_alt",
+        "GL383571.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_2_CTG2_1",
+      "length": 159547,
+      "aliases": [
+        "chr18_GL383572v1_alt",
+        "GL383572.1",
+        "NW_003315961.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_3_CTG2_1",
+      "length": 167999,
+      "aliases": [
+        "KI270863.1",
+        "NT_187617.1",
+        "chr18_KI270863v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_4_CTG1_1",
+      "length": 111737,
+      "aliases": [
+        "NT_187618.1",
+        "KI270864.1",
+        "chr18_KI270864v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_1_CTG2",
+      "length": 385657,
+      "aliases": [
+        "chr19_GL383573v1_alt",
+        "GL383573.1",
+        "NW_003315962.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_1_CTG3_1",
+      "length": 155864,
+      "aliases": [
+        "NW_003315963.1",
+        "GL383574.1",
+        "chr19_GL383574v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_2_CTG2",
+      "length": 170222,
+      "aliases": [
+        "NW_003315964.2",
+        "chr19_GL383575v2_alt",
+        "GL383575.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_3_CTG2",
+      "length": 188024,
+      "aliases": [
+        "GL383576.1",
+        "NW_003315965.1",
+        "chr19_GL383576v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_COX1_CTG3_1",
+      "length": 987716,
+      "aliases": [
+        "NW_003571054.1",
+        "chr19_GL949746v1_alt",
+        "GL949746.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_4_CTG2",
+      "length": 52969,
+      "aliases": [
+        "KI270865.1",
+        "chr19_KI270865v1_alt",
+        "NT_187621.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_2_CTG3_1",
+      "length": 43156,
+      "aliases": [
+        "NT_187619.1",
+        "chr19_KI270866v1_alt",
+        "KI270866.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_3_CTG3_1",
+      "length": 233762,
+      "aliases": [
+        "chr19_KI270867v1_alt",
+        "KI270867.1",
+        "NT_187620.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_5_CTG2",
+      "length": 61734,
+      "aliases": [
+        "KI270868.1",
+        "chr19_KI270868v1_alt",
+        "NT_187622.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR20_1_CTG1",
+      "length": 128386,
+      "aliases": [
+        "GL383577.2",
+        "chr20_GL383577v2_alt",
+        "NW_003315966.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR20_1_CTG2",
+      "length": 118774,
+      "aliases": [
+        "chr20_KI270869v1_alt",
+        "NT_187623.1",
+        "KI270869.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR20_1_CTG3",
+      "length": 183433,
+      "aliases": [
+        "NT_187624.1",
+        "KI270870.1",
+        "chr20_KI270870v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR20_1_CTG4",
+      "length": 58661,
+      "aliases": [
+        "KI270871.1",
+        "NT_187625.1",
+        "chr20_KI270871v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR21_1_CTG1_1",
+      "length": 63917,
+      "aliases": [
+        "GL383578.2",
+        "NW_003315967.2",
+        "chr21_GL383578v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR21_2_CTG1_1",
+      "length": 201197,
+      "aliases": [
+        "chr21_GL383579v2_alt",
+        "GL383579.2",
+        "NW_003315968.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR21_3_CTG1_1",
+      "length": 74653,
+      "aliases": [
+        "NW_003315969.2",
+        "GL383580.2",
+        "chr21_GL383580v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR21_4_CTG1_1",
+      "length": 116689,
+      "aliases": [
+        "GL383581.2",
+        "NW_003315970.2",
+        "chr21_GL383581v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR21_5_CTG2",
+      "length": 82692,
+      "aliases": [
+        "KI270872.1",
+        "NT_187626.1",
+        "chr21_KI270872v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR21_6_CTG1_1",
+      "length": 143900,
+      "aliases": [
+        "NT_187627.1",
+        "chr21_KI270873v1_alt",
+        "KI270873.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR21_8_CTG1_1",
+      "length": 166743,
+      "aliases": [
+        "NT_187628.1",
+        "chr21_KI270874v1_alt",
+        "KI270874.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_1_CTG1",
+      "length": 162811,
+      "aliases": [
+        "NW_003315971.2",
+        "chr22_GL383582v2_alt",
+        "GL383582.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_1_CTG2",
+      "length": 96924,
+      "aliases": [
+        "GL383583.2",
+        "NW_003315972.2",
+        "chr22_GL383583v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_1_CTG3",
+      "length": 259914,
+      "aliases": [
+        "chr22_KI270875v1_alt",
+        "NT_187629.1",
+        "KI270875.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_1_CTG4",
+      "length": 263666,
+      "aliases": [
+        "NT_187630.1",
+        "chr22_KI270876v1_alt",
+        "KI270876.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_1_CTG5",
+      "length": 101331,
+      "aliases": [
+        "chr22_KI270877v1_alt",
+        "NT_187631.1",
+        "KI270877.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_1_CTG6",
+      "length": 186262,
+      "aliases": [
+        "NT_187632.1",
+        "chr22_KI270878v1_alt",
+        "KI270878.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_1_CTG7",
+      "length": 304135,
+      "aliases": [
+        "NT_187633.1",
+        "chr22_KI270879v1_alt",
+        "KI270879.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHRX_1_CTG3",
+      "length": 284869,
+      "aliases": [
+        "NT_187634.1",
+        "KI270880.1",
+        "chrX_KI270880v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHRX_2_CTG12",
+      "length": 144206,
+      "aliases": [
+        "NT_187635.1",
+        "KI270881.1",
+        "chrX_KI270881v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR1_ALT2_1_CTG32_1",
+      "length": 162212,
+      "aliases": [
+        "chr1_KI270892v1_alt",
+        "KI270892.1",
+        "NT_187646.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_2_CTG15",
+      "length": 161218,
+      "aliases": [
+        "NT_187647.1",
+        "KI270893.1",
+        "chr2_KI270893v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR2_2_CTG7",
+      "length": 214158,
+      "aliases": [
+        "chr2_KI270894v1_alt",
+        "KI270894.1",
+        "NT_187648.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_3_CTG3",
+      "length": 162896,
+      "aliases": [
+        "chr3_KI270895v1_alt",
+        "KI270895.1",
+        "NT_187649.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_6_CTG12",
+      "length": 378547,
+      "aliases": [
+        "KI270896.1",
+        "NT_187650.1",
+        "chr4_KI270896v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_1_CTG1_1",
+      "length": 1144418,
+      "aliases": [
+        "NT_187651.1",
+        "chr5_KI270897v1_alt",
+        "KI270897.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR5_3_CTG5",
+      "length": 130957,
+      "aliases": [
+        "chr5_KI270898v1_alt",
+        "NT_187652.1",
+        "KI270898.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_COX_CTG1",
+      "length": 4795265,
+      "aliases": [
+        "chr6_GL000251v2_alt",
+        "GL000251.2",
+        "NT_113891.3"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR7_2_CTG1",
+      "length": 190869,
+      "aliases": [
+        "chr7_KI270899v1_alt",
+        "KI270899.1",
+        "NT_187653.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_5_CTG1",
+      "length": 318687,
+      "aliases": [
+        "chr8_KI270900v1_alt",
+        "NT_187654.1",
+        "KI270900.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_6_CTG1",
+      "length": 136959,
+      "aliases": [
+        "chr8_KI270901v1_alt",
+        "KI270901.1",
+        "NT_187655.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_2_CTG1",
+      "length": 106711,
+      "aliases": [
+        "NT_187656.1",
+        "chr11_KI270902v1_alt",
+        "KI270902.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_2_CTG1_1",
+      "length": 214625,
+      "aliases": [
+        "NT_187657.1",
+        "chr11_KI270903v1_alt",
+        "KI270903.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR12_3_CTG2",
+      "length": 572349,
+      "aliases": [
+        "KI270904.1",
+        "chr12_KI270904v1_alt",
+        "NT_187658.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_4_CTG8",
+      "length": 5161414,
+      "aliases": [
+        "chr15_KI270905v1_alt",
+        "NT_187660.1",
+        "KI270905.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR15_2_CTG3",
+      "length": 196384,
+      "aliases": [
+        "chr15_KI270906v1_alt",
+        "KI270906.1",
+        "NT_187659.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_6_CTG4",
+      "length": 88070,
+      "aliases": [
+        "JH159148.1",
+        "NW_003871093.1",
+        "chr17_JH159148v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_2_CTG1",
+      "length": 137721,
+      "aliases": [
+        "NT_187662.1",
+        "chr17_KI270907v1_alt",
+        "KI270907.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_2_CTG5",
+      "length": 1423190,
+      "aliases": [
+        "NT_187663.1",
+        "KI270908.1",
+        "chr17_KI270908v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_10_CTG4",
+      "length": 325800,
+      "aliases": [
+        "KI270909.1",
+        "NT_187661.1",
+        "chr17_KI270909v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR17_3_CTG2",
+      "length": 157099,
+      "aliases": [
+        "chr17_KI270910v1_alt",
+        "KI270910.1",
+        "NT_187664.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_ALT2_CTG2_1",
+      "length": 157710,
+      "aliases": [
+        "KI270911.1",
+        "chr18_KI270911v1_alt",
+        "NT_187666.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR18_ALT21_CTG2_1",
+      "length": 174061,
+      "aliases": [
+        "KI270912.1",
+        "NT_187665.1",
+        "chr18_KI270912v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_COX2_CTG3_1",
+      "length": 729520,
+      "aliases": [
+        "GL949747.2",
+        "NW_003571055.2",
+        "chr19_GL949747v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_2_CTG1",
+      "length": 74013,
+      "aliases": [
+        "chr22_KB663609v1_alt",
+        "NW_004504305.1",
+        "KB663609.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHRX_2_CTG3",
+      "length": 274009,
+      "aliases": [
+        "chrX_KI270913v1_alt",
+        "KI270913.1",
+        "NT_187667.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_4_CTG3",
+      "length": 166540,
+      "aliases": [
+        "KI270924.1",
+        "NT_187678.1",
+        "chr3_KI270924v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR4_7_CTG12",
+      "length": 555799,
+      "aliases": [
+        "KI270925.1",
+        "chr4_KI270925v1_alt",
+        "NT_187679.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_DBB_CTG1",
+      "length": 4604811,
+      "aliases": [
+        "GL000252.2",
+        "chr6_GL000252v2_alt",
+        "NT_167245.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR8_7_CTG1",
+      "length": 229282,
+      "aliases": [
+        "NT_187680.1",
+        "KI270926.1",
+        "chr8_KI270926v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR11_3_CTG1",
+      "length": 218612,
+      "aliases": [
+        "NT_187681.1",
+        "chr11_KI270927v1_alt",
+        "KI270927.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_I_CTG3_1",
+      "length": 1064304,
+      "aliases": [
+        "NW_003571056.2",
+        "GL949748.2",
+        "chr19_GL949748v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR22_3_CTG1",
+      "length": 176103,
+      "aliases": [
+        "KI270928.1",
+        "NT_187682.1",
+        "chr22_KI270928v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_5_CTG3",
+      "length": 163458,
+      "aliases": [
+        "KI270934.1",
+        "chr3_KI270934v1_alt",
+        "NT_187688.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_MANN_CTG1",
+      "length": 4677643,
+      "aliases": [
+        "chr6_GL000253v2_alt",
+        "NT_167246.2",
+        "GL000253.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_J_CTG3_1",
+      "length": 1091841,
+      "aliases": [
+        "GL949749.2",
+        "NW_003571057.2",
+        "chr19_GL949749v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_6_CTG3",
+      "length": 197351,
+      "aliases": [
+        "chr3_KI270935v1_alt",
+        "KI270935.1",
+        "NT_187689.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_MCF_CTG1",
+      "length": 4827813,
+      "aliases": [
+        "GL000254.2",
+        "NT_167247.2",
+        "chr6_GL000254v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_S_CTG3_1",
+      "length": 1066390,
+      "aliases": [
+        "chr19_GL949750v2_alt",
+        "GL949750.2",
+        "NW_003571058.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_7_CTG3",
+      "length": 164170,
+      "aliases": [
+        "chr3_KI270936v1_alt",
+        "KI270936.1",
+        "NT_187690.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_QBL_CTG1",
+      "length": 4606388,
+      "aliases": [
+        "chr6_GL000255v2_alt",
+        "GL000255.2",
+        "NT_167248.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_LRC_T_CTG3_1",
+      "length": 1002683,
+      "aliases": [
+        "GL949751.2",
+        "NW_003571059.2",
+        "chr19_GL949751v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR3_8_CTG3",
+      "length": 165607,
+      "aliases": [
+        "KI270937.1",
+        "chr3_KI270937v1_alt",
+        "NT_187691.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_MHC_SSTO_CTG1",
+      "length": 4929269,
+      "aliases": [
+        "GL000256.2",
+        "chr6_GL000256v2_alt",
+        "NT_167249.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_PGF1_CTG3_1",
+      "length": 987100,
+      "aliases": [
+        "GL949752.1",
+        "chr19_GL949752v1_alt",
+        "NW_003571060.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR6_8_CTG1",
+      "length": 76752,
+      "aliases": [
+        "KI270758.1",
+        "NT_187692.1",
+        "chr6_KI270758v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19LRC_PGF2_CTG3_1",
+      "length": 796479,
+      "aliases": [
+        "NW_003571061.2",
+        "GL949753.2",
+        "chr19_GL949753v2_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19_4_CTG3_1",
+      "length": 1066800,
+      "aliases": [
+        "chr19_KI270938v1_alt",
+        "NT_187693.1",
+        "KI270938.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH15_B_HAP_CTG3_1",
+      "length": 248807,
+      "aliases": [
+        "KI270882.1",
+        "NT_187636.1",
+        "chr19_KI270882v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_G085_A_HAP_CTG3_1",
+      "length": 170399,
+      "aliases": [
+        "NT_187637.1",
+        "KI270883.1",
+        "chr19_KI270883v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_G085_BA1_HAP_CTG3_1",
+      "length": 157053,
+      "aliases": [
+        "chr19_KI270884v1_alt",
+        "KI270884.1",
+        "NT_187638.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_G248_A_HAP_CTG3_1",
+      "length": 171027,
+      "aliases": [
+        "chr19_KI270885v1_alt",
+        "NT_187639.1",
+        "KI270885.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_G248_BA2_HAP_CTG3_1",
+      "length": 204239,
+      "aliases": [
+        "chr19_KI270886v1_alt",
+        "NT_187640.1",
+        "KI270886.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_GRC212_AB_HAP_CTG3_1",
+      "length": 209512,
+      "aliases": [
+        "chr19_KI270887v1_alt",
+        "NT_187641.1",
+        "KI270887.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_GRC212_BA1_HAP_CTG3_1",
+      "length": 155532,
+      "aliases": [
+        "chr19_KI270888v1_alt",
+        "KI270888.1",
+        "NT_187642.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_LUCE_A_HAP_CTG3_1",
+      "length": 170698,
+      "aliases": [
+        "chr19_KI270889v1_alt",
+        "NT_187643.1",
+        "KI270889.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_LUCE_BDEL_HAP_CTG3_1",
+      "length": 184499,
+      "aliases": [
+        "chr19_KI270890v1_alt",
+        "NT_187644.1",
+        "KI270890.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_RSH_A_HAP_CTG3_1",
+      "length": 170680,
+      "aliases": [
+        "KI270891.1",
+        "NT_187645.1",
+        "chr19_KI270891v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_RSH_BA2_HAP_CTG3_1",
+      "length": 205194,
+      "aliases": [
+        "KI270914.1",
+        "NT_187668.1",
+        "chr19_KI270914v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_T7526_A_HAP_CTG3_1",
+      "length": 170665,
+      "aliases": [
+        "chr19_KI270915v1_alt",
+        "KI270915.1",
+        "NT_187669.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_T7526_BDEL_HAP_CTG3_1",
+      "length": 184516,
+      "aliases": [
+        "chr19_KI270916v1_alt",
+        "KI270916.1",
+        "NT_187670.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_ABC08_A1_HAP_CTG3_1",
+      "length": 190932,
+      "aliases": [
+        "NT_187671.1",
+        "chr19_KI270917v1_alt",
+        "KI270917.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_ABC08_AB_HAP_C_P_CTG3_1",
+      "length": 123111,
+      "aliases": [
+        "chr19_KI270918v1_alt",
+        "KI270918.1",
+        "NT_187672.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_ABC08_AB_HAP_T_P_CTG3_1",
+      "length": 170701,
+      "aliases": [
+        "KI270919.1",
+        "chr19_KI270919v1_alt",
+        "NT_187673.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH05_A_HAP_CTG3_1",
+      "length": 198005,
+      "aliases": [
+        "KI270920.1",
+        "chr19_KI270920v1_alt",
+        "NT_187674.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH05_B_HAP_CTG3_1",
+      "length": 282224,
+      "aliases": [
+        "KI270921.1",
+        "NT_187675.1",
+        "chr19_KI270921v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH06_A_HAP_CTG3_1",
+      "length": 187935,
+      "aliases": [
+        "NT_187676.1",
+        "KI270922.1",
+        "chr19_KI270922v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH06_BA1_HAP_CTG3_1",
+      "length": 189352,
+      "aliases": [
+        "chr19_KI270923v1_alt",
+        "KI270923.1",
+        "NT_187677.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH08_A_HAP_CTG3_1",
+      "length": 186203,
+      "aliases": [
+        "KI270929.1",
+        "NT_187683.1",
+        "chr19_KI270929v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH08_BAX_HAP_CTG3_1",
+      "length": 200773,
+      "aliases": [
+        "chr19_KI270930v1_alt",
+        "KI270930.1",
+        "NT_187684.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH13_A_HAP_CTG3_1",
+      "length": 170148,
+      "aliases": [
+        "NT_187685.1",
+        "KI270931.1",
+        "chr19_KI270931v1_alt"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH13_BA2_HAP_CTG3_1",
+      "length": 215732,
+      "aliases": [
+        "chr19_KI270932v1_alt",
+        "KI270932.1",
+        "NT_187686.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_FH15_A_HAP_CTG3_1",
+      "length": 170537,
+      "aliases": [
+        "NT_187687.1",
+        "chr19_KI270933v1_alt",
+        "KI270933.1"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "HSCHR19KIR_RP5_B_HAP_CTG3_1",
+      "length": 177381,
+      "aliases": [
+        "NT_113949.2",
+        "chr19_GL000209v2_alt",
+        "GL000209.2"
+      ],
+      "sequence_role": "alt-scaffold"
+    },
+    {
+      "name": "MT",
+      "length": 16569,
+      "aliases": [
+        "chrM",
+        "J01415.2",
+        "NC_012920.1"
+      ],
+      "sequence_role": "assembled-molecule"
+    }
+  ],
+  "description": "UCSC hg38.p12 reference genome (GRCh38.p12)",
+  "contigs_missing_from_fasta": [
+    "1",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "2",
+    "20",
+    "21",
+    "22",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "MT",
+    "X",
+    "Y"
+  ]
+}

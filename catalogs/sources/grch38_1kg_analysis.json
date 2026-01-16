@@ -15,9 +15,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "CM000663.2",
         "NC_000001.11",
-        "1"
+        "1",
+        "CM000663.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -29,9 +29,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "2",
         "CM000664.2",
-        "NC_000002.12"
+        "NC_000002.12",
+        "2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -58,8 +58,8 @@
       "species": "Human",
       "aliases": [
         "NC_000004.12",
-        "4",
-        "CM000666.2"
+        "CM000666.2",
+        "4"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -71,9 +71,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "CM000667.2",
         "NC_000005.10",
-        "5"
+        "5",
+        "CM000667.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -85,9 +85,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "CM000668.2",
+        "6",
         "NC_000006.12",
-        "6"
+        "CM000668.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -99,9 +99,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "7",
+        "CM000669.2",
         "NC_000007.14",
-        "CM000669.2"
+        "7"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -114,8 +114,8 @@
       "species": "Human",
       "aliases": [
         "NC_000008.11",
-        "8",
-        "CM000670.2"
+        "CM000670.2",
+        "8"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -127,9 +127,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "CM000671.2",
         "9",
-        "NC_000009.12",
-        "CM000671.2"
+        "NC_000009.12"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -155,8 +155,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "CM000673.2",
         "NC_000011.10",
+        "CM000673.2",
         "11"
       ],
       "sequence_role": "assembled-molecule"
@@ -198,8 +198,8 @@
       "species": "Human",
       "aliases": [
         "CM000676.2",
-        "NC_000014.9",
-        "14"
+        "14",
+        "NC_000014.9"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -225,9 +225,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NC_000016.10",
         "CM000678.2",
-        "16"
+        "16",
+        "NC_000016.10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -239,9 +239,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "17",
         "CM000679.2",
-        "NC_000017.11",
-        "17"
+        "NC_000017.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -267,9 +267,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NC_000019.10",
+        "19",
         "CM000681.2",
-        "19"
+        "NC_000019.10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -281,9 +281,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "20",
         "CM000682.2",
-        "NC_000020.11",
-        "20"
+        "NC_000020.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -295,9 +295,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "21",
         "CM000683.2",
-        "NC_000021.9"
+        "NC_000021.9",
+        "21"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -310,8 +310,8 @@
       "species": "Human",
       "aliases": [
         "NC_000022.11",
-        "22",
-        "CM000684.2"
+        "CM000684.2",
+        "22"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -323,9 +323,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NC_000023.11",
+        "CM000685.2",
         "X",
-        "CM000685.2"
+        "NC_000023.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -337,9 +337,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "Y",
         "NC_000024.10",
-        "CM000686.2",
-        "Y"
+        "CM000686.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -352,8 +352,8 @@
       "species": "Human",
       "aliases": [
         "NC_012920.1",
-        "J01415.2",
-        "MT"
+        "MT",
+        "J01415.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -365,9 +365,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187361.1",
+        "KI270706.1",
         "HSCHR1_CTG1_UNLOCALIZED",
-        "KI270706.1"
+        "NT_187361.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -379,9 +379,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270707.1",
         "NT_187362.1",
-        "HSCHR1_CTG2_UNLOCALIZED"
+        "HSCHR1_CTG2_UNLOCALIZED",
+        "KI270707.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -393,8 +393,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187363.1",
         "KI270708.1",
+        "NT_187363.1",
         "HSCHR1_CTG3_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -407,9 +407,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270709.1",
         "NT_187364.1",
-        "HSCHR1_CTG4_UNLOCALIZED",
-        "KI270709.1"
+        "HSCHR1_CTG4_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -463,8 +463,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR1_CTG8_UNLOCALIZED",
         "NT_187368.1",
+        "HSCHR1_CTG8_UNLOCALIZED",
         "KI270713.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -505,8 +505,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR2_RANDOM_CTG2",
         "NT_187371.1",
+        "HSCHR2_RANDOM_CTG2",
         "KI270716.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -519,8 +519,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_167215.1",
         "GL000221.1",
+        "NT_167215.1",
         "HSCHR3UN_CTG2"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -547,9 +547,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL000208.1",
         "NT_113948.1",
-        "HSCHR5_RANDOM_CTG1"
+        "HSCHR5_RANDOM_CTG1",
+        "GL000208.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -561,9 +561,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270717.1",
         "NT_187372.1",
-        "HSCHR9_UNLOCALIZED_CTG1"
+        "HSCHR9_UNLOCALIZED_CTG1",
+        "KI270717.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -575,8 +575,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR9_UNLOCALIZED_CTG2",
         "KI270718.1",
+        "HSCHR9_UNLOCALIZED_CTG2",
         "NT_187373.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -589,8 +589,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR9_UNLOCALIZED_CTG3",
         "NT_187374.1",
+        "HSCHR9_UNLOCALIZED_CTG3",
         "KI270719.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -604,8 +604,8 @@
       "species": "Human",
       "aliases": [
         "KI270720.1",
-        "HSCHR9_UNLOCALIZED_CTG4",
-        "NT_187375.1"
+        "NT_187375.1",
+        "HSCHR9_UNLOCALIZED_CTG4"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -617,8 +617,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270721.1",
-        "HSCHR11_CTG1_UNLOCALIZED"
+        "HSCHR11_CTG1_UNLOCALIZED",
+        "KI270721.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -630,8 +630,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL000009.2",
         "HSCHR14_CTG1_UNLOCALIZED",
+        "GL000009.2",
         "NT_113796.3"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -644,9 +644,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR14_CTG2_UNLOCALIZED",
+        "GL000225.1",
         "NT_167219.1",
-        "GL000225.1"
+        "HSCHR14_CTG2_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -658,8 +658,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270722.1",
         "NT_187377.1",
+        "KI270722.1",
         "HSCHR14_CTG3_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -672,9 +672,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR14_CTG4_UNLOCALIZED",
         "GL000194.1",
-        "NT_113888.1",
-        "HSCHR14_CTG4_UNLOCALIZED"
+        "NT_113888.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -686,9 +686,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270723.1",
         "NT_187378.1",
-        "HSCHR14_CTG5_UNLOCALIZED"
+        "HSCHR14_CTG5_UNLOCALIZED",
+        "KI270723.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -714,9 +714,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270725.1",
+        "NT_187380.1",
         "HSCHR14_CTG7_UNLOCALIZED",
-        "NT_187380.1"
+        "KI270725.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -728,9 +728,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270726.1",
+        "HSCHR14_CTG8_UNLOCALIZED",
         "NT_187381.1",
-        "HSCHR14_CTG8_UNLOCALIZED"
+        "KI270726.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -742,9 +742,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187382.1",
         "KI270727.1",
-        "HSCHR15_RANDOM_CTG1"
+        "HSCHR15_RANDOM_CTG1",
+        "NT_187382.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -757,8 +757,8 @@
       "species": "Human",
       "aliases": [
         "NT_187383.1",
-        "KI270728.1",
-        "HSCHR16_RANDOM_CTG1"
+        "HSCHR16_RANDOM_CTG1",
+        "KI270728.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -771,8 +771,8 @@
       "species": "Human",
       "aliases": [
         "GL000205.2",
-        "NT_113930.2",
-        "HSCHR17_RANDOM_CTG3"
+        "HSCHR17_RANDOM_CTG3",
+        "NT_113930.2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -784,8 +784,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR17_RANDOM_CTG4",
         "NT_187384.1",
+        "HSCHR17_RANDOM_CTG4",
         "KI270729.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -798,9 +798,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270730.1",
         "NT_187385.1",
-        "HSCHR17_RANDOM_CTG5",
-        "KI270730.1"
+        "HSCHR17_RANDOM_CTG5"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -812,8 +812,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR22_UNLOCALIZED_CTG1",
         "KI270731.1",
+        "HSCHR22_UNLOCALIZED_CTG1",
         "NT_187386.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -826,9 +826,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR22_UNLOCALIZED_CTG2",
+        "NT_187387.1",
         "KI270732.1",
-        "NT_187387.1"
+        "HSCHR22_UNLOCALIZED_CTG2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -840,9 +840,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187388.1",
         "KI270733.1",
-        "HSCHR22_UNLOCALIZED_CTG3"
+        "HSCHR22_UNLOCALIZED_CTG3",
+        "NT_187388.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -867,9 +867,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187390.1",
         "HSCHR22_UNLOCALIZED_CTG5",
-        "KI270735.1",
-        "NT_187390.1"
+        "KI270735.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -881,8 +881,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187391.1",
         "KI270736.1",
+        "NT_187391.1",
         "HSCHR22_UNLOCALIZED_CTG6"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -895,9 +895,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187392.1",
         "HSCHR22_UNLOCALIZED_CTG7",
-        "KI270737.1",
-        "NT_187392.1"
+        "KI270737.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -909,9 +909,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187393.1",
         "HSCHR22_UNLOCALIZED_CTG8",
-        "KI270738.1",
-        "NT_187393.1"
+        "KI270738.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -923,9 +923,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270739.1",
         "NT_187394.1",
-        "HSCHR22_UNLOCALIZED_CTG9",
-        "KI270739.1"
+        "HSCHR22_UNLOCALIZED_CTG9"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -937,9 +937,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270740.1",
         "NT_187395.1",
-        "HSCHRY_RANDOM_CTG1",
-        "KI270740.1"
+        "HSCHRY_RANDOM_CTG1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -951,9 +951,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187396.1",
         "KI270302.1",
-        "HSCHRUN_RANDOM_100",
-        "NT_187396.1"
+        "HSCHRUN_RANDOM_100"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -965,9 +965,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187397.1",
         "HSCHRUN_RANDOM_101",
-        "KI270304.1"
+        "KI270304.1",
+        "NT_187397.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -980,8 +980,8 @@
       "species": "Human",
       "aliases": [
         "NT_187398.1",
-        "HSCHRUN_RANDOM_102",
-        "KI270303.1"
+        "KI270303.1",
+        "HSCHRUN_RANDOM_102"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -993,9 +993,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187399.1",
         "HSCHRUN_RANDOM_103",
-        "KI270305.1",
-        "NT_187399.1"
+        "KI270305.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1007,9 +1007,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270322.1",
         "HSCHRUN_RANDOM_104",
-        "NT_187400.1",
-        "KI270322.1"
+        "NT_187400.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1022,8 +1022,8 @@
       "species": "Human",
       "aliases": [
         "KI270320.1",
-        "HSCHRUN_RANDOM_105",
-        "NT_187401.1"
+        "NT_187401.1",
+        "HSCHRUN_RANDOM_105"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1035,9 +1035,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_106",
         "KI270310.1",
-        "NT_187402.1",
-        "HSCHRUN_RANDOM_106"
+        "NT_187402.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1049,9 +1049,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_107",
         "NT_187403.1",
-        "KI270316.1",
-        "HSCHRUN_RANDOM_107"
+        "KI270316.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1063,9 +1063,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187404.1",
+        "KI270315.1",
         "HSCHRUN_RANDOM_108",
-        "KI270315.1"
+        "NT_187404.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1077,9 +1077,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_109",
         "KI270312.1",
-        "NT_187405.1",
-        "HSCHRUN_RANDOM_109"
+        "NT_187405.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1091,9 +1091,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_110",
         "KI270311.1",
-        "NT_187406.1",
-        "HSCHRUN_RANDOM_110"
+        "NT_187406.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1105,8 +1105,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187407.1",
         "KI270317.1",
+        "NT_187407.1",
         "HSCHRUN_RANDOM_111"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -1120,8 +1120,8 @@
       "species": "Human",
       "aliases": [
         "NT_187408.1",
-        "KI270412.1",
-        "HSCHRUN_RANDOM_112"
+        "HSCHRUN_RANDOM_112",
+        "KI270412.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1133,9 +1133,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187409.1",
         "HSCHRUN_RANDOM_113",
-        "KI270411.1"
+        "KI270411.1",
+        "NT_187409.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1162,8 +1162,8 @@
       "species": "Human",
       "aliases": [
         "NT_187411.1",
-        "HSCHRUN_RANDOM_115",
-        "KI270419.1"
+        "KI270419.1",
+        "HSCHRUN_RANDOM_115"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1175,9 +1175,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187412.1",
+        "KI270418.1",
         "HSCHRUN_RANDOM_116",
-        "KI270418.1"
+        "NT_187412.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1189,9 +1189,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187413.1",
         "HSCHRUN_RANDOM_117",
-        "KI270420.1",
-        "NT_187413.1"
+        "KI270420.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1203,9 +1203,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187414.1",
         "KI270424.1",
-        "HSCHRUN_RANDOM_118",
-        "NT_187414.1"
+        "HSCHRUN_RANDOM_118"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1218,8 +1218,8 @@
       "species": "Human",
       "aliases": [
         "KI270417.1",
-        "NT_187415.1",
-        "HSCHRUN_RANDOM_119"
+        "HSCHRUN_RANDOM_119",
+        "NT_187415.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1246,8 +1246,8 @@
       "species": "Human",
       "aliases": [
         "KI270423.1",
-        "NT_187417.1",
-        "HSCHRUN_RANDOM_121"
+        "HSCHRUN_RANDOM_121",
+        "NT_187417.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1259,9 +1259,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187418.1",
         "HSCHRUN_RANDOM_122",
-        "KI270425.1",
-        "NT_187418.1"
+        "KI270425.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1287,8 +1287,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_124",
         "NT_187420.1",
+        "HSCHRUN_RANDOM_124",
         "KI270442.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -1301,9 +1301,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270466.1",
         "NT_187421.1",
-        "HSCHRUN_RANDOM_125"
+        "HSCHRUN_RANDOM_125",
+        "KI270466.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1316,8 +1316,8 @@
       "species": "Human",
       "aliases": [
         "KI270465.1",
-        "HSCHRUN_RANDOM_126",
-        "NT_187422.1"
+        "NT_187422.1",
+        "HSCHRUN_RANDOM_126"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1329,9 +1329,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_127",
         "NT_187423.1",
-        "KI270467.1",
-        "HSCHRUN_RANDOM_127"
+        "KI270467.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1344,8 +1344,8 @@
       "species": "Human",
       "aliases": [
         "KI270435.1",
-        "HSCHRUN_RANDOM_128",
-        "NT_187424.1"
+        "NT_187424.1",
+        "HSCHRUN_RANDOM_128"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1357,9 +1357,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_129",
+        "KI270438.1",
         "NT_187425.1",
-        "KI270438.1"
+        "HSCHRUN_RANDOM_129"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1371,9 +1371,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270468.1",
         "NT_187426.1",
-        "HSCHRUN_RANDOM_130",
-        "KI270468.1"
+        "HSCHRUN_RANDOM_130"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1385,9 +1385,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187427.1",
         "HSCHRUN_RANDOM_131",
-        "KI270510.1"
+        "KI270510.1",
+        "NT_187427.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1399,9 +1399,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187428.1",
         "HSCHRUN_RANDOM_132",
-        "KI270509.1",
-        "NT_187428.1"
+        "KI270509.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1413,9 +1413,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_133",
         "KI270518.1",
-        "NT_187429.1",
-        "HSCHRUN_RANDOM_133"
+        "NT_187429.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1427,9 +1427,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_134",
+        "NT_187430.1",
         "KI270508.1",
-        "NT_187430.1"
+        "HSCHRUN_RANDOM_134"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1455,8 +1455,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187432.1",
         "KI270512.1",
+        "NT_187432.1",
         "HSCHRUN_RANDOM_136"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -1483,9 +1483,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270522.1",
         "NT_187434.1",
-        "HSCHRUN_RANDOM_138",
-        "KI270522.1"
+        "HSCHRUN_RANDOM_138"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1497,9 +1497,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187435.1",
         "HSCHRUN_RANDOM_139",
-        "KI270511.1",
-        "NT_187435.1"
+        "KI270511.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1526,8 +1526,8 @@
       "species": "Human",
       "aliases": [
         "KI270507.1",
-        "HSCHRUN_RANDOM_141",
-        "NT_187437.1"
+        "NT_187437.1",
+        "HSCHRUN_RANDOM_141"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1539,9 +1539,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_142",
         "KI270517.1",
-        "NT_187438.1",
-        "HSCHRUN_RANDOM_142"
+        "NT_187438.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1553,8 +1553,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270529.1",
         "HSCHRUN_RANDOM_143",
+        "KI270529.1",
         "NT_187439.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -1567,9 +1567,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_144",
+        "NT_187440.1",
         "KI270528.1",
-        "NT_187440.1"
+        "HSCHRUN_RANDOM_144"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1595,9 +1595,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_146",
         "KI270539.1",
-        "NT_187442.1",
-        "HSCHRUN_RANDOM_146"
+        "NT_187442.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1623,9 +1623,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_148",
         "KI270544.1",
-        "NT_187444.1"
+        "NT_187444.1",
+        "HSCHRUN_RANDOM_148"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1637,9 +1637,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270548.1",
         "NT_187445.1",
-        "HSCHRUN_RANDOM_149",
-        "KI270548.1"
+        "HSCHRUN_RANDOM_149"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1651,9 +1651,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_154",
+        "NT_187446.1",
         "KI270583.1",
-        "NT_187446.1"
+        "HSCHRUN_RANDOM_154"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1666,8 +1666,8 @@
       "species": "Human",
       "aliases": [
         "NT_187447.1",
-        "KI270587.1",
-        "HSCHRUN_RANDOM_155"
+        "HSCHRUN_RANDOM_155",
+        "KI270587.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1679,9 +1679,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187448.1",
         "HSCHRUN_RANDOM_156",
-        "KI270580.1",
-        "NT_187448.1"
+        "KI270580.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1693,9 +1693,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187449.1",
+        "HSCHRUN_RANDOM_157",
         "KI270581.1",
-        "HSCHRUN_RANDOM_157"
+        "NT_187449.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1707,9 +1707,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187450.1",
+        "KI270579.1",
         "HSCHRUN_RANDOM_158",
-        "KI270579.1"
+        "NT_187450.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1721,9 +1721,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_159",
+        "NT_187451.1",
         "KI270589.1",
-        "NT_187451.1"
+        "HSCHRUN_RANDOM_159"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1736,8 +1736,8 @@
       "species": "Human",
       "aliases": [
         "NT_187452.1",
-        "HSCHRUN_RANDOM_160",
-        "KI270590.1"
+        "KI270590.1",
+        "HSCHRUN_RANDOM_160"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1749,9 +1749,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_161",
         "KI270584.1",
-        "NT_187453.1"
+        "NT_187453.1",
+        "HSCHRUN_RANDOM_161"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1763,9 +1763,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270582.1",
+        "HSCHRUN_RANDOM_162",
         "NT_187454.1",
-        "HSCHRUN_RANDOM_162"
+        "KI270582.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1777,8 +1777,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187455.1",
         "HSCHRUN_RANDOM_163",
+        "NT_187455.1",
         "KI270588.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -1791,8 +1791,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_164",
         "NT_187456.1",
+        "HSCHRUN_RANDOM_164",
         "KI270593.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -1819,9 +1819,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_166",
         "KI270330.1",
-        "NT_187458.1",
-        "HSCHRUN_RANDOM_166"
+        "NT_187458.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1833,9 +1833,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187459.1",
+        "HSCHRUN_RANDOM_167",
         "KI270329.1",
-        "HSCHRUN_RANDOM_167"
+        "NT_187459.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1848,8 +1848,8 @@
       "species": "Human",
       "aliases": [
         "HSCHRUN_RANDOM_168",
-        "NT_187460.1",
-        "KI270334.1"
+        "KI270334.1",
+        "NT_187460.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1862,8 +1862,8 @@
       "species": "Human",
       "aliases": [
         "KI270333.1",
-        "HSCHRUN_RANDOM_169",
-        "NT_187461.1"
+        "NT_187461.1",
+        "HSCHRUN_RANDOM_169"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1875,9 +1875,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187462.1",
+        "HSCHRUN_RANDOM_170",
         "KI270335.1",
-        "HSCHRUN_RANDOM_170"
+        "NT_187462.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1890,8 +1890,8 @@
       "species": "Human",
       "aliases": [
         "HSCHRUN_RANDOM_171",
-        "NT_187463.1",
-        "KI270338.1"
+        "KI270338.1",
+        "NT_187463.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1903,9 +1903,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187464.1",
         "KI270340.1",
-        "HSCHRUN_RANDOM_172",
-        "NT_187464.1"
+        "HSCHRUN_RANDOM_172"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1917,9 +1917,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187465.1",
         "HSCHRUN_RANDOM_173",
-        "KI270336.1"
+        "KI270336.1",
+        "NT_187465.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1931,9 +1931,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187466.1",
         "HSCHRUN_RANDOM_174",
-        "KI270337.1"
+        "KI270337.1",
+        "NT_187466.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1945,9 +1945,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187467.1",
         "KI270363.1",
-        "HSCHRUN_RANDOM_175",
-        "NT_187467.1"
+        "HSCHRUN_RANDOM_175"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1973,8 +1973,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270362.1",
         "NT_187469.1",
+        "KI270362.1",
         "HSCHRUN_RANDOM_177"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -1987,8 +1987,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187470.1",
         "KI270366.1",
+        "NT_187470.1",
         "HSCHRUN_RANDOM_178"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2002,8 +2002,8 @@
       "species": "Human",
       "aliases": [
         "HSCHRUN_RANDOM_179",
-        "KI270378.1",
-        "NT_187471.1"
+        "NT_187471.1",
+        "KI270378.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2015,9 +2015,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187472.1",
+        "KI270379.1",
         "HSCHRUN_RANDOM_180",
-        "KI270379.1"
+        "NT_187472.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2030,8 +2030,8 @@
       "species": "Human",
       "aliases": [
         "KI270389.1",
-        "HSCHRUN_RANDOM_181",
-        "NT_187473.1"
+        "NT_187473.1",
+        "HSCHRUN_RANDOM_181"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2044,8 +2044,8 @@
       "species": "Human",
       "aliases": [
         "KI270390.1",
-        "HSCHRUN_RANDOM_182",
-        "NT_187474.1"
+        "NT_187474.1",
+        "HSCHRUN_RANDOM_182"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2057,8 +2057,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_183",
         "KI270387.1",
+        "HSCHRUN_RANDOM_183",
         "NT_187475.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2071,9 +2071,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187476.1",
+        "HSCHRUN_RANDOM_184",
         "KI270395.1",
-        "HSCHRUN_RANDOM_184"
+        "NT_187476.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2085,9 +2085,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270396.1",
         "HSCHRUN_RANDOM_185",
-        "NT_187477.1",
-        "KI270396.1"
+        "NT_187477.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2099,9 +2099,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_186",
+        "KI270388.1",
         "NT_187478.1",
-        "KI270388.1"
+        "HSCHRUN_RANDOM_186"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2114,8 +2114,8 @@
       "species": "Human",
       "aliases": [
         "NT_187479.1",
-        "KI270394.1",
-        "HSCHRUN_RANDOM_187"
+        "HSCHRUN_RANDOM_187",
+        "KI270394.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2127,9 +2127,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_188",
         "KI270386.1",
-        "NT_187480.1"
+        "NT_187480.1",
+        "HSCHRUN_RANDOM_188"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2141,8 +2141,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_189",
         "NT_187481.1",
+        "HSCHRUN_RANDOM_189",
         "KI270391.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2155,8 +2155,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187482.1",
         "KI270383.1",
+        "NT_187482.1",
         "HSCHRUN_RANDOM_190"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2169,9 +2169,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_191",
+        "KI270393.1",
         "NT_187483.1",
-        "KI270393.1"
+        "HSCHRUN_RANDOM_191"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2183,8 +2183,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270384.1",
         "NT_187484.1",
+        "KI270384.1",
         "HSCHRUN_RANDOM_192"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2197,9 +2197,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_193",
+        "NT_187485.1",
         "KI270392.1",
-        "NT_187485.1"
+        "HSCHRUN_RANDOM_193"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2212,8 +2212,8 @@
       "species": "Human",
       "aliases": [
         "KI270381.1",
-        "NT_187486.1",
-        "HSCHRUN_RANDOM_194"
+        "HSCHRUN_RANDOM_194",
+        "NT_187486.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2225,9 +2225,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270385.1",
         "NT_187487.1",
-        "HSCHRUN_RANDOM_195"
+        "HSCHRUN_RANDOM_195",
+        "KI270385.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2239,8 +2239,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_196",
         "KI270382.1",
+        "HSCHRUN_RANDOM_196",
         "NT_187488.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2267,9 +2267,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_198",
         "KI270374.1",
-        "NT_187490.1"
+        "NT_187490.1",
+        "HSCHRUN_RANDOM_198"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2282,8 +2282,8 @@
       "species": "Human",
       "aliases": [
         "HSCHRUN_RANDOM_199",
-        "KI270372.1",
-        "NT_187491.1"
+        "NT_187491.1",
+        "KI270372.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2295,9 +2295,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_200",
+        "NT_187492.1",
         "KI270373.1",
-        "NT_187492.1"
+        "HSCHRUN_RANDOM_200"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2309,9 +2309,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_201",
+        "NT_187493.1",
         "KI270375.1",
-        "NT_187493.1"
+        "HSCHRUN_RANDOM_201"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2323,9 +2323,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270371.1",
+        "HSCHRUN_RANDOM_202",
         "NT_187494.1",
-        "HSCHRUN_RANDOM_202"
+        "KI270371.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2337,9 +2337,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270448.1",
         "NT_187495.1",
-        "HSCHRUN_RANDOM_203",
-        "KI270448.1"
+        "HSCHRUN_RANDOM_203"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2352,8 +2352,8 @@
       "species": "Human",
       "aliases": [
         "KI270521.1",
-        "HSCHRUN_RANDOM_204",
-        "NT_187496.1"
+        "NT_187496.1",
+        "HSCHRUN_RANDOM_204"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2379,9 +2379,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG10",
         "GL000219.1",
-        "NT_167213.1"
+        "NT_167213.1",
+        "HSCHRUN_RANDOM_CTG10"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2393,9 +2393,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL000220.1",
+        "NT_167214.1",
         "HSCHRUN_RANDOM_CTG11",
-        "NT_167214.1"
+        "GL000220.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2408,8 +2408,8 @@
       "species": "Human",
       "aliases": [
         "NT_167218.1",
-        "HSCHRUN_RANDOM_CTG16",
-        "GL000224.1"
+        "GL000224.1",
+        "HSCHRUN_RANDOM_CTG16"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2421,8 +2421,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270741.1",
         "HSCHRUN_RANDOM_CTG17",
+        "KI270741.1",
         "NT_187497.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2435,9 +2435,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG19",
+        "GL000226.1",
         "NT_167220.1",
-        "GL000226.1"
+        "HSCHRUN_RANDOM_CTG19"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2464,8 +2464,8 @@
       "species": "Human",
       "aliases": [
         "NT_187498.1",
-        "HSCHRUN_RANDOM_CTG20",
-        "KI270743.1"
+        "KI270743.1",
+        "HSCHRUN_RANDOM_CTG20"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2477,9 +2477,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG21",
         "NT_187499.1",
-        "KI270744.1"
+        "KI270744.1",
+        "HSCHRUN_RANDOM_CTG21"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2491,9 +2491,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270745.1",
         "HSCHRUN_RANDOM_CTG22",
-        "NT_187500.1",
-        "KI270745.1"
+        "NT_187500.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2505,8 +2505,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG23",
         "KI270746.1",
+        "HSCHRUN_RANDOM_CTG23",
         "NT_187501.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2519,9 +2519,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270747.1",
+        "NT_187502.1",
         "HSCHRUN_RANDOM_CTG24",
-        "NT_187502.1"
+        "KI270747.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2533,9 +2533,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187503.1",
         "HSCHRUN_RANDOM_CTG25",
-        "KI270748.1"
+        "KI270748.1",
+        "NT_187503.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2561,9 +2561,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHRUN_RANDOM_CTG27",
         "NT_187505.1",
-        "KI270750.1",
-        "HSCHRUN_RANDOM_CTG27"
+        "KI270750.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2575,9 +2575,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270751.1",
         "NT_187506.1",
-        "HSCHRUN_RANDOM_CTG28"
+        "HSCHRUN_RANDOM_CTG28",
+        "KI270751.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2589,8 +2589,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG29",
-        "KI270752.1"
+        "KI270752.1",
+        "HSCHRUN_RANDOM_CTG29"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2603,8 +2603,8 @@
       "species": "Human",
       "aliases": [
         "NT_187508.1",
-        "HSCHRUN_RANDOM_CTG30",
-        "KI270753.1"
+        "KI270753.1",
+        "HSCHRUN_RANDOM_CTG30"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2616,9 +2616,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG33",
+        "NT_187509.1",
         "KI270754.1",
-        "NT_187509.1"
+        "HSCHRUN_RANDOM_CTG33"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2630,8 +2630,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187510.1",
         "KI270755.1",
+        "NT_187510.1",
         "HSCHRUN_RANDOM_CTG34"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2644,9 +2644,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187511.1",
         "HSCHRUN_RANDOM_CTG35",
-        "KI270756.1"
+        "KI270756.1",
+        "NT_187511.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2658,9 +2658,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187512.1",
         "HSCHRUN_RANDOM_CTG36",
-        "KI270757.1",
-        "NT_187512.1"
+        "KI270757.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2673,8 +2673,8 @@
       "species": "Human",
       "aliases": [
         "GL000214.1",
-        "HSCHRUN_RANDOM_CTG4",
-        "NT_167209.1"
+        "NT_167209.1",
+        "HSCHRUN_RANDOM_CTG4"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2686,8 +2686,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270742.1",
         "HSCHRUN_RANDOM_CTG42",
+        "KI270742.1",
         "NT_187513.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -2714,9 +2714,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_113889.1",
         "HSCHRUN_RANDOM_CTG9",
-        "GL000218.1",
-        "NT_113889.1"
+        "GL000218.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -2742,9 +2742,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR1_2_CTG3",
+        "KI270766.1",
         "NT_187517.1",
-        "KI270766.1"
+        "HSCHR1_2_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2756,9 +2756,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187514.1",
+        "KI270760.1",
         "HSCHR1_1_CTG11",
-        "KI270760.1"
+        "NT_187514.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2770,9 +2770,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR1_4_CTG31",
+        "NT_187520.1",
         "KI270765.1",
-        "NT_187520.1"
+        "HSCHR1_4_CTG31"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2784,8 +2784,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR1_1_CTG31",
         "GL383518.1",
+        "HSCHR1_1_CTG31",
         "NW_003315905.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2798,9 +2798,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR1_2_CTG31",
         "GL383519.1",
-        "NW_003315906.1"
+        "NW_003315906.1",
+        "HSCHR1_2_CTG31"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2812,8 +2812,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315907.2",
         "HSCHR1_3_CTG31",
+        "NW_003315907.2",
         "GL383520.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -2827,8 +2827,8 @@
       "species": "Human",
       "aliases": [
         "KI270764.1",
-        "HSCHR1_4_CTG32_1",
-        "NT_187521.1"
+        "NT_187521.1",
+        "HSCHR1_4_CTG32_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2840,9 +2840,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270763.1",
+        "HSCHR1_3_CTG32_1",
         "NT_187519.1",
-        "HSCHR1_3_CTG32_1"
+        "KI270763.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2854,9 +2854,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR1_1_CTG32_1",
         "KI270759.1",
-        "NT_187516.1",
-        "HSCHR1_1_CTG32_1"
+        "NT_187516.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2869,8 +2869,8 @@
       "species": "Human",
       "aliases": [
         "HSCHR1_2_CTG32_1",
-        "KI270761.1",
-        "NT_187518.1"
+        "NT_187518.1",
+        "KI270761.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2897,8 +2897,8 @@
       "species": "Human",
       "aliases": [
         "NT_187526.1",
-        "HSCHR2_3_CTG1",
-        "KI270773.1"
+        "KI270773.1",
+        "HSCHR2_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2910,9 +2910,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270774.1",
         "NT_187529.1",
-        "HSCHR2_4_CTG1"
+        "HSCHR2_4_CTG1",
+        "KI270774.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2952,9 +2952,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270772.1",
+        "NT_187524.1",
         "HSCHR2_1_CTG7",
-        "NT_187524.1"
+        "KI270772.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2980,9 +2980,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270771.1",
         "NT_187530.1",
-        "HSCHR2_4_CTG7_2",
-        "KI270771.1"
+        "HSCHR2_4_CTG7_2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2994,9 +2994,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR2_3_CTG7_2",
         "KI270768.1",
-        "NT_187528.1",
-        "HSCHR2_3_CTG7_2"
+        "NT_187528.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3008,9 +3008,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL582966.2",
         "NW_003571033.2",
-        "HSCHR2_2_CTG7_2"
+        "HSCHR2_2_CTG7_2",
+        "GL582966.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3023,8 +3023,8 @@
       "species": "Human",
       "aliases": [
         "NW_003315909.1",
-        "GL383522.1",
-        "HSCHR2_1_CTG7_2"
+        "HSCHR2_1_CTG7_2",
+        "GL383522.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3050,9 +3050,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR2_1_CTG15",
+        "NT_187523.1",
         "KI270767.1",
-        "NT_187523.1"
+        "HSCHR2_1_CTG15"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3064,8 +3064,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR3_1_CTG1",
         "NW_003871060.2",
+        "HSCHR3_1_CTG1",
         "JH636055.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -3078,9 +3078,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR3_3_CTG1",
         "KI270783.1",
-        "NT_187535.1"
+        "NT_187535.1",
+        "HSCHR3_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3092,9 +3092,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR3_4_CTG2_1",
         "KI270780.1",
-        "NT_187537.1",
-        "HSCHR3_4_CTG2_1"
+        "NT_187537.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3106,9 +3106,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315913.1",
         "HSCHR3_1_CTG2_1",
-        "GL383526.1"
+        "GL383526.1",
+        "NW_003315913.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3120,9 +3120,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187533.1",
         "HSCHR3_2_CTG2_1",
-        "KI270777.1",
-        "NT_187533.1"
+        "KI270777.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3135,8 +3135,8 @@
       "species": "Human",
       "aliases": [
         "NT_187536.1",
-        "HSCHR3_3_CTG2_1",
-        "KI270778.1"
+        "KI270778.1",
+        "HSCHR3_3_CTG2_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3148,9 +3148,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270781.1",
         "HSCHR3_5_CTG2_1",
-        "NT_187538.1",
-        "KI270781.1"
+        "NT_187538.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3162,8 +3162,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187532.1",
         "HSCHR3_1_CTG3",
+        "NT_187532.1",
         "KI270779.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3177,8 +3177,8 @@
       "species": "Human",
       "aliases": [
         "NT_187534.1",
-        "HSCHR3_2_CTG3",
-        "KI270782.1"
+        "KI270782.1",
+        "HSCHR3_2_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3190,9 +3190,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187539.1",
         "KI270784.1",
-        "HSCHR3_9_CTG3"
+        "HSCHR3_9_CTG3",
+        "NT_187539.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3205,8 +3205,8 @@
       "species": "Human",
       "aliases": [
         "KI270790.1",
-        "HSCHR4_1_CTG4",
-        "NT_187540.1"
+        "NT_187540.1",
+        "HSCHR4_1_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3246,8 +3246,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_167250.2",
         "GL000257.2",
+        "NT_167250.2",
         "HSCHR4_1_CTG9"
       ],
       "sequence_role": "alt-scaffold"
@@ -3260,8 +3260,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR4_4_CTG12",
         "NT_187544.1",
+        "HSCHR4_4_CTG12",
         "KI270788.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3275,8 +3275,8 @@
       "species": "Human",
       "aliases": [
         "NW_003315914.1",
-        "GL383527.1",
-        "HSCHR4_1_CTG12"
+        "HSCHR4_1_CTG12",
+        "GL383527.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3288,9 +3288,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270785.1",
+        "NT_187542.1",
         "HSCHR4_2_CTG12",
-        "NT_187542.1"
+        "KI270785.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3303,8 +3303,8 @@
       "species": "Human",
       "aliases": [
         "NT_187545.1",
-        "HSCHR4_5_CTG12",
-        "KI270789.1"
+        "KI270789.1",
+        "HSCHR4_5_CTG12"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3330,9 +3330,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR5_5_CTG1",
         "KI270793.1",
-        "NT_187550.1"
+        "NT_187550.1",
+        "HSCHR5_5_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3358,8 +3358,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270791.1",
         "NT_187547.1",
+        "KI270791.1",
         "HSCHR5_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3373,8 +3373,8 @@
       "species": "Human",
       "aliases": [
         "GL383532.1",
-        "HSCHR5_1_CTG1",
-        "NW_003315920.1"
+        "NW_003315920.1",
+        "HSCHR5_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3387,8 +3387,8 @@
       "species": "Human",
       "aliases": [
         "GL949742.1",
-        "HSCHR5_2_CTG1",
-        "NW_003571036.1"
+        "NW_003571036.1",
+        "HSCHR5_2_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3401,8 +3401,8 @@
       "species": "Human",
       "aliases": [
         "KI270794.1",
-        "NT_187551.1",
-        "HSCHR5_6_CTG1"
+        "HSCHR5_6_CTG1",
+        "NT_187551.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3414,9 +3414,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "GL339449.2",
         "NW_003315917.2",
-        "HSCHR5_2_CTG1_1",
-        "GL339449.2"
+        "HSCHR5_2_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3428,8 +3428,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315918.1",
         "HSCHR5_3_CTG1_1",
+        "NW_003315918.1",
         "GL383530.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3443,8 +3443,8 @@
       "species": "Human",
       "aliases": [
         "KI270796.1",
-        "HSCHR5_4_CTG1_1",
-        "NT_187549.1"
+        "NT_187549.1",
+        "HSCHR5_4_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3456,9 +3456,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315919.1",
+        "GL383531.1",
         "HSCHR5_1_CTG5",
-        "GL383531.1"
+        "NW_003315919.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3470,9 +3470,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270795.1",
         "NT_187546.1",
-        "HSCHR5_2_CTG5"
+        "HSCHR5_2_CTG5",
+        "KI270795.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3485,8 +3485,8 @@
       "species": "Human",
       "aliases": [
         "NT_167244.2",
-        "HSCHR6_MHC_APD_CTG1",
-        "GL000250.2"
+        "GL000250.2",
+        "HSCHR6_MHC_APD_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3498,9 +3498,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187555.1",
         "HSCHR6_1_CTG7",
-        "KI270800.1"
+        "KI270800.1",
+        "NT_187555.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3512,8 +3512,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270799.1",
         "HSCHR6_1_CTG6",
+        "KI270799.1",
         "NT_187554.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3526,9 +3526,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "GL383533.1",
         "HSCHR6_1_CTG2",
-        "NW_003315921.1",
-        "GL383533.1"
+        "NW_003315921.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3540,8 +3540,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR6_1_CTG8",
         "KI270801.1",
+        "HSCHR6_1_CTG8",
         "NT_187556.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3554,9 +3554,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR6_1_CTG9",
         "KI270802.1",
-        "NT_187557.1"
+        "NT_187557.1",
+        "HSCHR6_1_CTG9"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3569,8 +3569,8 @@
       "species": "Human",
       "aliases": [
         "HSCHR6_1_CTG3",
-        "NW_004166862.2",
-        "KB021644.2"
+        "KB021644.2",
+        "NW_004166862.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3596,9 +3596,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270798.1",
         "HSCHR6_1_CTG5",
-        "NT_187553.1"
+        "NT_187553.1",
+        "KI270798.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3610,9 +3610,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187558.1",
         "HSCHR7_1_CTG1",
-        "KI270804.1",
-        "NT_187558.1"
+        "KI270804.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3624,8 +3624,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270809.1",
         "HSCHR7_2_CTG4_4",
+        "KI270809.1",
         "NT_187561.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3638,9 +3638,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187559.1",
         "HSCHR7_1_CTG4_4",
-        "KI270806.1",
-        "NT_187559.1"
+        "KI270806.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3652,9 +3652,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315922.2",
         "GL383534.2",
-        "HSCHR7_1_CTG6"
+        "HSCHR7_1_CTG6",
+        "NW_003315922.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3666,8 +3666,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187562.1",
         "KI270803.1",
+        "NT_187562.1",
         "HSCHR7_2_CTG6"
       ],
       "sequence_role": "alt-scaffold"
@@ -3680,9 +3680,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270808.1",
         "NT_187564.1",
-        "HSCHR7_3_CTG6"
+        "HSCHR7_3_CTG6",
+        "KI270808.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3708,8 +3708,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR7_1_CTG7",
         "KI270805.1",
+        "HSCHR7_1_CTG7",
         "NT_187560.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3723,8 +3723,8 @@
       "species": "Human",
       "aliases": [
         "NT_187572.1",
-        "HSCHR8_4_CTG1",
-        "KI270818.1"
+        "KI270818.1",
+        "HSCHR8_4_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3750,9 +3750,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187565.1",
+        "HSCHR8_1_CTG1",
         "KI270811.1",
-        "HSCHR8_1_CTG1"
+        "NT_187565.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3764,8 +3764,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187576.1",
         "KI270821.1",
+        "NT_187576.1",
         "HSCHR8_8_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3778,8 +3778,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270813.1",
         "NT_187570.1",
+        "KI270813.1",
         "HSCHR8_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3792,8 +3792,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270822.1",
         "NT_187577.1",
+        "KI270822.1",
         "HSCHR8_9_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3806,9 +3806,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187566.1",
         "KI270814.1",
-        "HSCHR8_1_CTG6",
-        "NT_187566.1"
+        "HSCHR8_1_CTG6"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3820,9 +3820,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270810.1",
+        "HSCHR8_1_CTG7",
         "NT_187567.1",
-        "HSCHR8_1_CTG7"
+        "KI270810.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3835,8 +3835,8 @@
       "species": "Human",
       "aliases": [
         "NT_187574.1",
-        "HSCHR8_5_CTG7",
-        "KI270819.1"
+        "KI270819.1",
+        "HSCHR8_5_CTG7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3848,9 +3848,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187575.1",
         "KI270820.1",
-        "HSCHR8_6_CTG7",
-        "NT_187575.1"
+        "HSCHR8_6_CTG7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3863,8 +3863,8 @@
       "species": "Human",
       "aliases": [
         "NT_187573.1",
-        "HSCHR8_4_CTG7",
-        "KI270817.1"
+        "KI270817.1",
+        "HSCHR8_4_CTG7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3877,8 +3877,8 @@
       "species": "Human",
       "aliases": [
         "NT_187571.1",
-        "HSCHR8_3_CTG7",
-        "KI270816.1"
+        "KI270816.1",
+        "HSCHR8_3_CTG7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3918,9 +3918,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR9_1_CTG2",
         "GL383540.1",
-        "NW_003315929.1",
-        "HSCHR9_1_CTG2"
+        "NW_003315929.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3932,9 +3932,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "GL383541.1",
         "NW_003315930.1",
-        "HSCHR9_1_CTG3",
-        "GL383541.1"
+        "HSCHR9_1_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3946,9 +3946,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315931.1",
         "HSCHR9_1_CTG4",
-        "GL383542.1"
+        "GL383542.1",
+        "NW_003315931.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3961,8 +3961,8 @@
       "species": "Human",
       "aliases": [
         "KI270823.1",
-        "HSCHR9_1_CTG5",
-        "NT_187578.1"
+        "NT_187578.1",
+        "HSCHR9_1_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3974,9 +3974,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "GL383545.1",
         "HSCHR10_1_CTG1",
-        "NW_003315934.1",
-        "GL383545.1"
+        "NW_003315934.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4030,8 +4030,8 @@
       "species": "Human",
       "aliases": [
         "NT_187586.1",
-        "KI270832.1",
-        "HSCHR11_1_CTG8"
+        "HSCHR11_1_CTG8",
+        "KI270832.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4043,8 +4043,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187584.1",
         "HSCHR11_1_CTG6",
+        "NT_187584.1",
         "KI270830.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4057,9 +4057,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR11_1_CTG7",
         "KI270831.1",
-        "NT_187585.1",
-        "HSCHR11_1_CTG7"
+        "NT_187585.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4071,9 +4071,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR11_1_CTG5",
         "KI270829.1",
-        "NT_187583.1"
+        "NT_187583.1",
+        "HSCHR11_1_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4086,8 +4086,8 @@
       "species": "Human",
       "aliases": [
         "NW_003315936.1",
-        "HSCHR11_1_CTG1_1",
-        "GL383547.1"
+        "GL383547.1",
+        "HSCHR11_1_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4099,9 +4099,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "JH159136.1",
         "NW_003871073.1",
-        "HG142_HG150_NOVEL_TEST",
-        "JH159136.1"
+        "HG142_HG150_NOVEL_TEST"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4127,8 +4127,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR11_1_CTG3",
         "KI270827.1",
+        "HSCHR11_1_CTG3",
         "NT_187582.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4141,8 +4141,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270826.1",
         "HSCHR11_1_CTG2",
+        "KI270826.1",
         "NT_187581.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4155,8 +4155,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL877875.1",
         "NW_003571049.1",
+        "GL877875.1",
         "HSCHR12_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4169,9 +4169,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL877876.1",
+        "NW_003571050.1",
         "HSCHR12_2_CTG2",
-        "NW_003571050.1"
+        "GL877876.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4197,9 +4197,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NW_003315938.1",
         "GL383549.1",
-        "HSCHR12_1_CTG2",
-        "NW_003315938.1"
+        "HSCHR12_1_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4225,9 +4225,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL383550.2",
         "NW_003315939.2",
-        "HSCHR12_1_CTG2_1"
+        "HSCHR12_1_CTG2_1",
+        "GL383550.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4253,8 +4253,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315942.2",
         "HSCHR12_3_CTG2_1",
+        "NW_003315942.2",
         "GL383553.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -4281,9 +4281,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR12_4_CTG2_1",
         "GL383551.1",
-        "NW_003315940.1",
-        "HSCHR12_4_CTG2_1"
+        "NW_003315940.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4295,8 +4295,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270833.1",
         "HSCHR12_5_CTG2_1",
+        "KI270833.1",
         "NT_187589.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4323,9 +4323,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR13_1_CTG3",
         "NT_187594.1",
-        "KI270840.1",
-        "HSCHR13_1_CTG3"
+        "KI270840.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4337,9 +4337,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187593.1",
         "HSCHR13_1_CTG2",
-        "KI270839.1",
-        "NT_187593.1"
+        "KI270839.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4351,9 +4351,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270843.1",
         "NT_187597.1",
-        "HSCHR13_1_CTG6"
+        "HSCHR13_1_CTG6",
+        "KI270843.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4365,9 +4365,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187595.1",
+        "HSCHR13_1_CTG4",
         "KI270841.1",
-        "HSCHR13_1_CTG4"
+        "NT_187595.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4379,8 +4379,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187592.1",
         "HSCHR13_1_CTG1",
+        "NT_187592.1",
         "KI270838.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4393,9 +4393,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR13_1_CTG5",
         "KI270842.1",
-        "NT_187596.1"
+        "NT_187596.1",
+        "HSCHR13_1_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4407,9 +4407,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR14_1_CTG1",
+        "KI270844.1",
         "NT_187598.1",
-        "KI270844.1"
+        "HSCHR14_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4421,8 +4421,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270847.1",
         "NT_187601.1",
+        "KI270847.1",
         "HSCHR14_7_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4435,9 +4435,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270845.1",
         "NT_187599.1",
-        "HSCHR14_2_CTG1"
+        "HSCHR14_2_CTG1",
+        "KI270845.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4449,9 +4449,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187600.1",
+        "HSCHR14_3_CTG1",
         "KI270846.1",
-        "HSCHR14_3_CTG1"
+        "NT_187600.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4463,9 +4463,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270852.1",
+        "NT_187602.1",
         "HSCHR15_1_CTG1",
-        "NT_187602.1"
+        "KI270852.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4477,8 +4477,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR15_3_CTG3",
         "NT_187604.1",
+        "HSCHR15_3_CTG3",
         "KI270851.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4505,8 +4505,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315943.1",
         "HSCHR15_1_CTG8",
+        "NW_003315943.1",
         "GL383554.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4533,9 +4533,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR15_2_CTG8",
+        "NW_003315944.2",
         "GL383555.2",
-        "NW_003315944.2"
+        "HSCHR15_2_CTG8"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4548,8 +4548,8 @@
       "species": "Human",
       "aliases": [
         "KI270850.1",
-        "NT_187606.1",
-        "HSCHR15_5_CTG8"
+        "HSCHR15_5_CTG8",
+        "NT_187606.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4562,8 +4562,8 @@
       "species": "Human",
       "aliases": [
         "NT_187610.1",
-        "KI270854.1",
-        "HSCHR16_CTG2"
+        "HSCHR16_CTG2",
+        "KI270854.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4575,9 +4575,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187609.1",
         "KI270856.1",
-        "HSCHR16_4_CTG1"
+        "HSCHR16_4_CTG1",
+        "NT_187609.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4590,8 +4590,8 @@
       "species": "Human",
       "aliases": [
         "NT_187608.1",
-        "HSCHR16_3_CTG1",
-        "KI270855.1"
+        "KI270855.1",
+        "HSCHR16_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4603,9 +4603,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270853.1",
         "NT_187607.1",
-        "HSCHR16_1_CTG1"
+        "HSCHR16_1_CTG1",
+        "KI270853.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4617,9 +4617,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NW_003315945.1",
         "HSCHR16_1_CTG3_1",
-        "GL383556.1",
-        "NW_003315945.1"
+        "GL383556.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4631,8 +4631,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR16_2_CTG3_1",
         "NW_003315946.1",
+        "HSCHR16_2_CTG3_1",
         "GL383557.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4645,9 +4645,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR17_1_CTG1",
         "GL383563.3",
-        "NW_003315952.3"
+        "NW_003315952.3",
+        "HSCHR17_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4674,8 +4674,8 @@
       "species": "Human",
       "aliases": [
         "NT_187611.1",
-        "KI270861.1",
-        "HSCHR17_1_CTG2"
+        "HSCHR17_1_CTG2",
+        "KI270861.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4702,8 +4702,8 @@
       "species": "Human",
       "aliases": [
         "HSCHR17_4_CTG4",
-        "NW_003871091.1",
-        "JH159146.1"
+        "JH159146.1",
+        "NW_003871091.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4716,8 +4716,8 @@
       "species": "Human",
       "aliases": [
         "NW_003871092.1",
-        "HSCHR17_5_CTG4",
-        "JH159147.1"
+        "JH159147.1",
+        "HSCHR17_5_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4729,9 +4729,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL383564.2",
+        "NW_003315953.2",
         "HSCHR17_1_CTG4",
-        "NW_003315953.2"
+        "GL383564.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4757,8 +4757,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315954.1",
         "HSCHR17_2_CTG4",
+        "NW_003315954.1",
         "GL383565.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4771,8 +4771,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187615.1",
         "HSCHR17_8_CTG4",
+        "NT_187615.1",
         "KI270858.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4785,9 +4785,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270859.1",
         "NT_187616.1",
-        "HSCHR17_9_CTG4"
+        "HSCHR17_9_CTG4",
+        "KI270859.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4799,9 +4799,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR17_3_CTG4",
         "GL383566.1",
-        "NW_003315955.1"
+        "NW_003315955.1",
+        "HSCHR17_3_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4813,8 +4813,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270860.1",
         "HSCHR17_1_CTG9",
+        "KI270860.1",
         "NT_187612.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4828,8 +4828,8 @@
       "species": "Human",
       "aliases": [
         "HSCHR18_4_CTG1_1",
-        "NT_187618.1",
-        "KI270864.1"
+        "KI270864.1",
+        "NT_187618.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4842,8 +4842,8 @@
       "species": "Human",
       "aliases": [
         "HSCHR18_1_CTG1_1",
-        "GL383567.1",
-        "NW_003315956.1"
+        "NW_003315956.1",
+        "GL383567.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4855,8 +4855,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315959.1",
         "GL383570.1",
+        "NW_003315959.1",
         "HSCHR18_2_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4869,8 +4869,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL383571.1",
         "HSCHR18_2_CTG2",
+        "GL383571.1",
         "NW_003315960.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4897,9 +4897,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315958.1",
         "GL383569.1",
-        "HSCHR18_1_CTG2_1"
+        "HSCHR18_1_CTG2_1",
+        "NW_003315958.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4911,9 +4911,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NW_003315961.1",
         "HSCHR18_2_CTG2_1",
-        "GL383572.1",
-        "NW_003315961.1"
+        "GL383572.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4939,8 +4939,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270868.1",
         "HSCHR19_5_CTG2",
+        "KI270868.1",
         "NT_187622.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -4953,9 +4953,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19_4_CTG2",
         "KI270865.1",
-        "NT_187621.1"
+        "NT_187621.1",
+        "HSCHR19_4_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4967,9 +4967,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315962.1",
+        "HSCHR19_1_CTG2",
         "GL383573.1",
-        "HSCHR19_1_CTG2"
+        "NW_003315962.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4982,8 +4982,8 @@
       "species": "Human",
       "aliases": [
         "NW_003315964.2",
-        "GL383575.2",
-        "HSCHR19_2_CTG2"
+        "HSCHR19_2_CTG2",
+        "GL383575.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -4996,8 +4996,8 @@
       "species": "Human",
       "aliases": [
         "NW_003315965.1",
-        "HSCHR19_3_CTG2",
-        "GL383576.1"
+        "GL383576.1",
+        "HSCHR19_3_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5023,9 +5023,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270866.1",
         "NT_187619.1",
-        "HSCHR19_2_CTG3_1",
-        "KI270866.1"
+        "HSCHR19_2_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5037,8 +5037,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19_3_CTG3_1",
         "NT_187620.1",
+        "HSCHR19_3_CTG3_1",
         "KI270867.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -5065,9 +5065,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NW_003315966.2",
         "HSCHR20_1_CTG1",
-        "GL383577.2"
+        "GL383577.2",
+        "NW_003315966.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5080,8 +5080,8 @@
       "species": "Human",
       "aliases": [
         "NT_187623.1",
-        "KI270869.1",
-        "HSCHR20_1_CTG2"
+        "HSCHR20_1_CTG2",
+        "KI270869.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5107,8 +5107,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270870.1",
         "HSCHR20_1_CTG3",
+        "KI270870.1",
         "NT_187624.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -5122,8 +5122,8 @@
       "species": "Human",
       "aliases": [
         "GL383578.2",
-        "NW_003315967.2",
-        "HSCHR21_1_CTG1_1"
+        "HSCHR21_1_CTG1_1",
+        "NW_003315967.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5136,8 +5136,8 @@
       "species": "Human",
       "aliases": [
         "NT_187628.1",
-        "HSCHR21_8_CTG1_1",
-        "KI270874.1"
+        "KI270874.1",
+        "HSCHR21_8_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5149,9 +5149,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR21_6_CTG1_1",
         "KI270873.1",
-        "NT_187627.1"
+        "NT_187627.1",
+        "HSCHR21_6_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5163,8 +5163,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR21_2_CTG1_1",
         "NW_003315968.2",
+        "HSCHR21_2_CTG1_1",
         "GL383579.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -5191,9 +5191,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR21_4_CTG1_1",
         "GL383581.2",
-        "NW_003315970.2"
+        "NW_003315970.2",
+        "HSCHR21_4_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5219,9 +5219,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187629.1",
         "HSCHR22_1_CTG3",
-        "KI270875.1",
-        "NT_187629.1"
+        "KI270875.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5233,9 +5233,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187632.1",
         "HSCHR22_1_CTG6",
-        "KI270878.1",
-        "NT_187632.1"
+        "KI270878.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5262,8 +5262,8 @@
       "species": "Human",
       "aliases": [
         "HSCHR22_1_CTG4",
-        "NT_187630.1",
-        "KI270876.1"
+        "KI270876.1",
+        "NT_187630.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5303,9 +5303,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR22_1_CTG1",
         "GL383582.2",
-        "NW_003315971.2",
-        "HSCHR22_1_CTG1"
+        "NW_003315971.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5317,9 +5317,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270880.1",
+        "HSCHRX_1_CTG3",
         "NT_187634.1",
-        "HSCHRX_1_CTG3"
+        "KI270880.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5331,9 +5331,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187635.1",
         "HSCHRX_2_CTG12",
-        "KI270881.1",
-        "NT_187635.1"
+        "KI270881.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5345,9 +5345,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19KIR_FH15_B_HAP_CTG3_1",
+        "NT_187636.1",
         "KI270882.1",
-        "NT_187636.1"
+        "HSCHR19KIR_FH15_B_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5359,9 +5359,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187637.1",
+        "HSCHR19KIR_G085_A_HAP_CTG3_1",
         "KI270883.1",
-        "HSCHR19KIR_G085_A_HAP_CTG3_1"
+        "NT_187637.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5373,9 +5373,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19KIR_G085_BA1_HAP_CTG3_1",
         "KI270884.1",
-        "NT_187638.1"
+        "NT_187638.1",
+        "HSCHR19KIR_G085_BA1_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5387,9 +5387,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR19KIR_G248_A_HAP_CTG3_1",
         "KI270885.1",
-        "NT_187639.1",
-        "HSCHR19KIR_G248_A_HAP_CTG3_1"
+        "NT_187639.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5401,9 +5401,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270886.1",
         "NT_187640.1",
-        "HSCHR19KIR_G248_BA2_HAP_CTG3_1"
+        "HSCHR19KIR_G248_BA2_HAP_CTG3_1",
+        "KI270886.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5415,9 +5415,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270887.1",
         "HSCHR19KIR_GRC212_AB_HAP_CTG3_1",
-        "NT_187641.1"
+        "NT_187641.1",
+        "KI270887.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5429,9 +5429,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19KIR_GRC212_BA1_HAP_CTG3_1",
+        "NT_187642.1",
         "KI270888.1",
-        "NT_187642.1"
+        "HSCHR19KIR_GRC212_BA1_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5443,9 +5443,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19KIR_LUCE_A_HAP_CTG3_1",
         "NT_187643.1",
-        "KI270889.1"
+        "KI270889.1",
+        "HSCHR19KIR_LUCE_A_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5457,9 +5457,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270890.1",
+        "NT_187644.1",
         "HSCHR19KIR_LUCE_BDEL_HAP_CTG3_1",
-        "NT_187644.1"
+        "KI270890.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5471,9 +5471,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270891.1",
         "HSCHR19KIR_RSH_A_HAP_CTG3_1",
-        "NT_187645.1",
-        "KI270891.1"
+        "NT_187645.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5485,9 +5485,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR1_ALT2_1_CTG32_1",
         "KI270892.1",
-        "NT_187646.1",
-        "HSCHR1_ALT2_1_CTG32_1"
+        "NT_187646.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5499,9 +5499,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270894.1",
         "HSCHR2_2_CTG7",
-        "NT_187648.1",
-        "KI270894.1"
+        "NT_187648.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5513,9 +5513,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR2_2_CTG15",
         "KI270893.1",
-        "NT_187647.1",
-        "HSCHR2_2_CTG15"
+        "NT_187647.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5527,9 +5527,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR3_3_CTG3",
         "KI270895.1",
-        "NT_187649.1"
+        "NT_187649.1",
+        "HSCHR3_3_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5541,9 +5541,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270896.1",
+        "HSCHR4_6_CTG12",
         "NT_187650.1",
-        "HSCHR4_6_CTG12"
+        "KI270896.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5555,9 +5555,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR5_1_CTG1_1",
         "KI270897.1",
-        "NT_187651.1",
-        "HSCHR5_1_CTG1_1"
+        "NT_187651.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5569,9 +5569,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR5_3_CTG5",
+        "NT_187652.1",
         "KI270898.1",
-        "NT_187652.1"
+        "HSCHR5_3_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5583,9 +5583,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "GL000251.2",
         "NT_113891.3",
-        "HSCHR6_MHC_COX_CTG1",
-        "GL000251.2"
+        "HSCHR6_MHC_COX_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5597,9 +5597,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR7_2_CTG1",
         "NT_187653.1",
-        "KI270899.1"
+        "KI270899.1",
+        "HSCHR7_2_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5611,9 +5611,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187655.1",
         "HSCHR8_6_CTG1",
-        "KI270901.1"
+        "KI270901.1",
+        "NT_187655.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5625,9 +5625,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270900.1",
         "NT_187654.1",
-        "HSCHR8_5_CTG1",
-        "KI270900.1"
+        "HSCHR8_5_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5640,8 +5640,8 @@
       "species": "Human",
       "aliases": [
         "KI270902.1",
-        "NT_187656.1",
-        "HSCHR11_2_CTG1"
+        "HSCHR11_2_CTG1",
+        "NT_187656.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5667,9 +5667,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270904.1",
         "NT_187658.1",
-        "HSCHR12_3_CTG2"
+        "HSCHR12_3_CTG2",
+        "KI270904.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5681,9 +5681,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187659.1",
+        "KI270906.1",
         "HSCHR15_2_CTG3",
-        "KI270906.1"
+        "NT_187659.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5709,9 +5709,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187662.1",
         "HSCHR17_2_CTG1",
-        "KI270907.1",
-        "NT_187662.1"
+        "KI270907.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5723,9 +5723,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270910.1",
         "HSCHR17_3_CTG2",
-        "NT_187664.1",
-        "KI270910.1"
+        "NT_187664.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5737,9 +5737,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187661.1",
+        "HSCHR17_10_CTG4",
         "KI270909.1",
-        "HSCHR17_10_CTG4"
+        "NT_187661.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5751,9 +5751,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NW_003871093.1",
         "JH159148.1",
-        "HSCHR17_6_CTG4",
-        "NW_003871093.1"
+        "HSCHR17_6_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5765,8 +5765,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270908.1",
         "HSCHR17_2_CTG5",
+        "KI270908.1",
         "NT_187663.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -5793,9 +5793,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270911.1",
         "HSCHR18_ALT2_CTG2_1",
-        "NT_187666.1"
+        "NT_187666.1",
+        "KI270911.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5808,8 +5808,8 @@
       "species": "Human",
       "aliases": [
         "NW_003571055.2",
-        "GL949747.2",
-        "HSCHR19LRC_COX2_CTG3_1"
+        "HSCHR19LRC_COX2_CTG3_1",
+        "GL949747.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5821,9 +5821,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NW_004504305.1",
         "KB663609.1",
-        "HSCHR22_2_CTG1",
-        "NW_004504305.1"
+        "HSCHR22_2_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5835,9 +5835,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187667.1",
+        "HSCHRX_2_CTG3",
         "KI270913.1",
-        "HSCHRX_2_CTG3"
+        "NT_187667.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5849,9 +5849,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270914.1",
         "NT_187668.1",
-        "HSCHR19KIR_RSH_BA2_HAP_CTG3_1",
-        "KI270914.1"
+        "HSCHR19KIR_RSH_BA2_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5864,8 +5864,8 @@
       "species": "Human",
       "aliases": [
         "NT_187669.1",
-        "KI270915.1",
-        "HSCHR19KIR_T7526_A_HAP_CTG3_1"
+        "HSCHR19KIR_T7526_A_HAP_CTG3_1",
+        "KI270915.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5877,9 +5877,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187670.1",
         "HSCHR19KIR_T7526_BDEL_HAP_CTG3_1",
-        "KI270916.1",
-        "NT_187670.1"
+        "KI270916.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5891,8 +5891,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187671.1",
         "KI270917.1",
+        "NT_187671.1",
         "HSCHR19KIR_ABC08_A1_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -5905,9 +5905,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270918.1",
         "HSCHR19KIR_ABC08_AB_HAP_C_P_CTG3_1",
-        "NT_187672.1",
-        "KI270918.1"
+        "NT_187672.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5919,9 +5919,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "KI270919.1",
         "NT_187673.1",
-        "HSCHR19KIR_ABC08_AB_HAP_T_P_CTG3_1",
-        "KI270919.1"
+        "HSCHR19KIR_ABC08_AB_HAP_T_P_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5933,8 +5933,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187674.1",
         "KI270920.1",
+        "NT_187674.1",
         "HSCHR19KIR_FH05_A_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -5947,9 +5947,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187675.1",
         "HSCHR19KIR_FH05_B_HAP_CTG3_1",
-        "KI270921.1"
+        "KI270921.1",
+        "NT_187675.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -5961,8 +5961,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270922.1",
         "HSCHR19KIR_FH06_A_HAP_CTG3_1",
+        "KI270922.1",
         "NT_187676.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -5989,9 +5989,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187678.1",
+        "HSCHR3_4_CTG3",
         "KI270924.1",
-        "HSCHR3_4_CTG3"
+        "NT_187678.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6003,9 +6003,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "NT_187679.1",
         "KI270925.1",
-        "HSCHR4_7_CTG12",
-        "NT_187679.1"
+        "HSCHR4_7_CTG12"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6017,8 +6017,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_167245.2",
         "HSCHR6_MHC_DBB_CTG1",
+        "NT_167245.2",
         "GL000252.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -6031,8 +6031,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270926.1",
         "NT_187680.1",
+        "KI270926.1",
         "HSCHR8_7_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -6045,8 +6045,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270927.1",
         "HSCHR11_3_CTG1",
+        "KI270927.1",
         "NT_187681.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -6059,9 +6059,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR19LRC_LRC_I_CTG3_1",
         "NW_003571056.2",
-        "GL949748.2",
-        "HSCHR19LRC_LRC_I_CTG3_1"
+        "GL949748.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6087,8 +6087,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19KIR_FH08_A_HAP_CTG3_1",
         "KI270929.1",
+        "HSCHR19KIR_FH08_A_HAP_CTG3_1",
         "NT_187683.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -6102,8 +6102,8 @@
       "species": "Human",
       "aliases": [
         "NT_187684.1",
-        "KI270930.1",
-        "HSCHR19KIR_FH08_BAX_HAP_CTG3_1"
+        "HSCHR19KIR_FH08_BAX_HAP_CTG3_1",
+        "KI270930.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6115,9 +6115,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187685.1",
         "HSCHR19KIR_FH13_A_HAP_CTG3_1",
-        "KI270931.1"
+        "KI270931.1",
+        "NT_187685.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6129,9 +6129,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187686.1",
+        "HSCHR19KIR_FH13_BA2_HAP_CTG3_1",
         "KI270932.1",
-        "HSCHR19KIR_FH13_BA2_HAP_CTG3_1"
+        "NT_187686.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6143,8 +6143,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR19KIR_FH15_A_HAP_CTG3_1",
         "NT_187687.1",
+        "HSCHR19KIR_FH15_A_HAP_CTG3_1",
         "KI270933.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -6157,8 +6157,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_113949.2",
         "GL000209.2",
+        "NT_113949.2",
         "HSCHR19KIR_RP5_B_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -6171,9 +6171,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270934.1",
         "HSCHR3_5_CTG3",
-        "NT_187688.1"
+        "NT_187688.1",
+        "KI270934.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6185,9 +6185,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "HSCHR6_MHC_MANN_CTG1",
+        "GL000253.2",
         "NT_167246.2",
-        "GL000253.2"
+        "HSCHR6_MHC_MANN_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6199,9 +6199,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL949749.2",
         "NW_003571057.2",
-        "HSCHR19LRC_LRC_J_CTG3_1"
+        "HSCHR19LRC_LRC_J_CTG3_1",
+        "GL949749.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6227,8 +6227,8 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_167247.2",
         "GL000254.2",
+        "NT_167247.2",
         "HSCHR6_MHC_MCF_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -6242,8 +6242,8 @@
       "species": "Human",
       "aliases": [
         "GL949750.2",
-        "HSCHR19LRC_LRC_S_CTG3_1",
-        "NW_003571058.2"
+        "NW_003571058.2",
+        "HSCHR19LRC_LRC_S_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6269,9 +6269,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL000255.2",
         "NT_167248.2",
-        "HSCHR6_MHC_QBL_CTG1"
+        "HSCHR6_MHC_QBL_CTG1",
+        "GL000255.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6283,9 +6283,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL949751.2",
         "HSCHR19LRC_LRC_T_CTG3_1",
-        "NW_003571059.2"
+        "NW_003571059.2",
+        "GL949751.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6297,9 +6297,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
+        "HSCHR3_8_CTG3",
         "KI270937.1",
-        "NT_187691.1",
-        "HSCHR3_8_CTG3"
+        "NT_187691.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6311,9 +6311,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "GL000256.2",
+        "HSCHR6_MHC_SSTO_CTG1",
         "NT_167249.2",
-        "HSCHR6_MHC_SSTO_CTG1"
+        "GL000256.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6326,8 +6326,8 @@
       "species": "Human",
       "aliases": [
         "HSCHR19LRC_PGF1_CTG3_1",
-        "GL949752.1",
-        "NW_003571060.1"
+        "NW_003571060.1",
+        "GL949752.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6339,9 +6339,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "KI270758.1",
+        "NT_187692.1",
         "HSCHR6_8_CTG1",
-        "NT_187692.1"
+        "KI270758.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -6367,9 +6367,9 @@
       "uri": "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
       "species": "Human",
       "aliases": [
-        "NT_187693.1",
         "HSCHR19_4_CTG3_1",
-        "KI270938.1"
+        "KI270938.1",
+        "NT_187693.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -29665,9 +29665,9 @@
       "name": "HG986_PATCH",
       "length": 186494,
       "aliases": [
-        "chr1_KN196472v1_fix",
         "KN196472.1",
-        "NW_009646194.1"
+        "NW_009646194.1",
+        "chr1_KN196472v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29675,9 +29675,9 @@
       "name": "HG2058_PATCH",
       "length": 166200,
       "aliases": [
-        "NW_009646195.1",
+        "chr1_KN196473v1_fix",
         "KN196473.1",
-        "chr1_KN196473v1_fix"
+        "NW_009646195.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29685,9 +29685,9 @@
       "name": "HG2104_PATCH",
       "length": 122022,
       "aliases": [
+        "KN196474.1",
         "NW_009646196.1",
-        "chr1_KN196474v1_fix",
-        "KN196474.1"
+        "chr1_KN196474v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29695,8 +29695,8 @@
       "name": "HG1832_PATCH",
       "length": 460100,
       "aliases": [
-        "chr1_KN538360v1_fix",
         "KN538360.1",
+        "chr1_KN538360v1_fix",
         "NW_011332687.1"
       ],
       "sequence_role": "fix-patch"
@@ -29705,9 +29705,9 @@
       "name": "HG2095_PATCH",
       "length": 305542,
       "aliases": [
+        "KN538361.1",
         "chr1_KN538361v1_fix",
-        "NW_011332688.1",
-        "KN538361.1"
+        "NW_011332688.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29715,9 +29715,9 @@
       "name": "HG1342_HG2282_PATCH",
       "length": 467143,
       "aliases": [
+        "chr1_KQ031383v1_fix",
         "KQ031383.1",
-        "NW_012132914.1",
-        "chr1_KQ031383v1_fix"
+        "NW_012132914.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29725,8 +29725,8 @@
       "name": "HG2002_PATCH",
       "length": 330031,
       "aliases": [
-        "NW_018654708.1",
         "KZ208906.1",
+        "NW_018654708.1",
         "chr1_KZ208906v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -29735,9 +29735,9 @@
       "name": "HG460_PATCH",
       "length": 44955,
       "aliases": [
-        "NW_019805487.1",
         "chr1_KZ559100v1_fix",
-        "KZ559100.1"
+        "KZ559100.1",
+        "NW_019805487.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29745,8 +29745,8 @@
       "name": "HG1343_HG173_HG459_PATCH",
       "length": 1572686,
       "aliases": [
-        "NW_025791756.1",
         "MU273333.1",
+        "NW_025791756.1",
         "chr1_MU273333v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -29765,9 +29765,9 @@
       "name": "HG2515_PATCH",
       "length": 211934,
       "aliases": [
-        "chr1_MU273335v1_fix",
         "MU273335.1",
-        "NW_025791758.1"
+        "NW_025791758.1",
+        "chr1_MU273335v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29775,9 +29775,9 @@
       "name": "HG2577_PATCH",
       "length": 250447,
       "aliases": [
-        "MU273336.1",
         "NW_025791759.1",
-        "chr1_MU273336v1_fix"
+        "chr1_MU273336v1_fix",
+        "MU273336.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29795,8 +29795,8 @@
       "name": "HSCHR1_4_CTG3",
       "length": 349938,
       "aliases": [
-        "NW_014040926.1",
         "KQ458383.1",
+        "NW_014040926.1",
         "chr1_KQ458383v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -29805,9 +29805,9 @@
       "name": "HSCHR1_5_CTG32_1",
       "length": 212205,
       "aliases": [
+        "chr1_KQ458384v1_alt",
         "KQ458384.1",
-        "NW_014040927.1",
-        "chr1_KQ458384v1_alt"
+        "NW_014040927.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -29825,8 +29825,8 @@
       "name": "HSCHR1_6_CTG3",
       "length": 551020,
       "aliases": [
-        "KV880763.1",
         "NW_017852928.1",
+        "KV880763.1",
         "chr1_KV880763v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -29835,8 +29835,8 @@
       "name": "HSCHR1_8_CTG3",
       "length": 166136,
       "aliases": [
-        "NW_018654706.1",
         "KZ208904.1",
+        "NW_018654706.1",
         "chr1_KZ208904v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -29865,8 +29865,8 @@
       "name": "HSCHR1_5_CTG31",
       "length": 847441,
       "aliases": [
-        "chr1_MU273331v1_alt",
         "MU273331.1",
+        "chr1_MU273331v1_alt",
         "NW_025791754.1"
       ],
       "sequence_role": "novel-patch"
@@ -29875,9 +29875,9 @@
       "name": "HSCHR1_6_CTG31",
       "length": 335159,
       "aliases": [
-        "MU273332.1",
+        "NW_025791755.1",
         "chr1_MU273332v1_alt",
-        "NW_025791755.1"
+        "MU273332.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -29885,8 +29885,8 @@
       "name": "HG2233_PATCH",
       "length": 208149,
       "aliases": [
-        "KN538362.1",
         "NW_011332689.1",
+        "KN538362.1",
         "chr2_KN538362v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -29895,9 +29895,9 @@
       "name": "HG2232_PATCH",
       "length": 365499,
       "aliases": [
-        "NW_011332690.1",
         "chr2_KN538363v1_fix",
-        "KN538363.1"
+        "KN538363.1",
+        "NW_011332690.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29905,9 +29905,9 @@
       "name": "HG2290_PATCH",
       "length": 481245,
       "aliases": [
-        "NW_012132915.1",
         "chr2_KQ031384v1_fix",
-        "KQ031384.1"
+        "KQ031384.1",
+        "NW_012132915.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29915,9 +29915,9 @@
       "name": "HG721_PATCH",
       "length": 145975,
       "aliases": [
-        "NW_021159987.1",
+        "chr2_ML143341v1_fix",
         "ML143341.1",
-        "chr2_ML143341v1_fix"
+        "NW_021159987.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29926,8 +29926,8 @@
       "length": 84043,
       "aliases": [
         "ML143342.1",
-        "chr2_ML143342v1_fix",
-        "NW_021159988.1"
+        "NW_021159988.1",
+        "chr2_ML143342v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29935,8 +29935,8 @@
       "name": "HG2494_PATCH",
       "length": 120381,
       "aliases": [
-        "chr2_MU273341v1_fix",
         "MU273341.1",
+        "chr2_MU273341v1_fix",
         "NW_025791764.1"
       ],
       "sequence_role": "fix-patch"
@@ -29945,8 +29945,8 @@
       "name": "HG2275_PATCH",
       "length": 955087,
       "aliases": [
-        "MU273342.1",
         "NW_025791765.1",
+        "MU273342.1",
         "chr2_MU273342v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -29955,9 +29955,9 @@
       "name": "HG2052_PATCH",
       "length": 489404,
       "aliases": [
+        "chr2_MU273343v1_fix",
         "NW_025791766.1",
-        "MU273343.1",
-        "chr2_MU273343v1_fix"
+        "MU273343.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29965,9 +29965,9 @@
       "name": "HG2231_HG2496_PATCH",
       "length": 244725,
       "aliases": [
-        "NW_025791767.1",
+        "MU273344.1",
         "chr2_MU273344v1_fix",
-        "MU273344.1"
+        "NW_025791767.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -29985,9 +29985,9 @@
       "name": "HSCHR2_6_CTG7_2",
       "length": 535088,
       "aliases": [
-        "NW_015495299.1",
         "chr2_KQ983256v1_alt",
-        "KQ983256.1"
+        "KQ983256.1",
+        "NW_015495299.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -29995,9 +29995,9 @@
       "name": "HSCHR2_7_CTG7_2",
       "length": 181658,
       "aliases": [
-        "chr2_KZ208907v1_alt",
+        "NW_018654709.1",
         "KZ208907.1",
-        "NW_018654709.1"
+        "chr2_KZ208907v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30005,9 +30005,9 @@
       "name": "HSCHR2_8_CTG7_2",
       "length": 140361,
       "aliases": [
+        "KZ208908.1",
         "NW_018654710.1",
-        "chr2_KZ208908v1_alt",
-        "KZ208908.1"
+        "chr2_KZ208908v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30026,8 +30026,8 @@
       "length": 535251,
       "aliases": [
         "MU273338.1",
-        "chr2_MU273338v1_alt",
-        "NW_025791761.1"
+        "NW_025791761.1",
+        "chr2_MU273338v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30035,8 +30035,8 @@
       "name": "HSCHR2_12_CTG7_2",
       "length": 500581,
       "aliases": [
-        "chr2_MU273339v1_alt",
         "NW_025791762.1",
+        "chr2_MU273339v1_alt",
         "MU273339.1"
       ],
       "sequence_role": "novel-patch"
@@ -30045,9 +30045,9 @@
       "name": "HSCHR2_6_CTG1",
       "length": 284971,
       "aliases": [
+        "MU273340.1",
         "NW_025791763.1",
-        "chr2_MU273340v1_alt",
-        "MU273340.1"
+        "chr2_MU273340v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30055,9 +30055,9 @@
       "name": "HG2066_PATCH",
       "length": 451168,
       "aliases": [
-        "NW_009646197.1",
         "KN196475.1",
-        "chr3_KN196475v1_fix"
+        "chr3_KN196475v1_fix",
+        "NW_009646197.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30085,9 +30085,9 @@
       "name": "HG2235_PATCH",
       "length": 373699,
       "aliases": [
+        "KQ031385.1",
         "NW_012132916.1",
-        "chr3_KQ031385v1_fix",
-        "KQ031385.1"
+        "chr3_KQ031385v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30095,9 +30095,9 @@
       "name": "HG2237_PATCH",
       "length": 165718,
       "aliases": [
-        "chr3_KQ031386v1_fix",
+        "KQ031386.1",
         "NW_012132917.1",
-        "KQ031386.1"
+        "chr3_KQ031386v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30135,9 +30135,9 @@
       "name": "HG2077_PATCH",
       "length": 301310,
       "aliases": [
+        "MU273347.1",
         "NW_025791770.1",
-        "chr3_MU273347v1_fix",
-        "MU273347.1"
+        "chr3_MU273347v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30146,8 +30146,8 @@
       "length": 475876,
       "aliases": [
         "chr3_MU273348v1_fix",
-        "MU273348.1",
-        "NW_025791771.1"
+        "NW_025791771.1",
+        "MU273348.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30156,8 +30156,8 @@
       "length": 175849,
       "aliases": [
         "NW_018654711.1",
-        "chr3_KZ208909v1_alt",
-        "KZ208909.1"
+        "KZ208909.1",
+        "chr3_KZ208909v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30165,9 +30165,9 @@
       "name": "HSCHR3_7_CTG2_1",
       "length": 164041,
       "aliases": [
+        "NW_019805488.1",
         "chr3_KZ559101v1_alt",
-        "KZ559101.1",
-        "NW_019805488.1"
+        "KZ559101.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30175,9 +30175,9 @@
       "name": "HSCHR3_8_CTG2_1",
       "length": 197752,
       "aliases": [
-        "KZ559102.1",
         "chr3_KZ559102v1_alt",
-        "NW_019805489.1"
+        "NW_019805489.1",
+        "KZ559102.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30195,9 +30195,9 @@
       "name": "HSCHR3_6_CTG2_1",
       "length": 195063,
       "aliases": [
+        "KZ559105.1",
         "NW_019805492.1",
-        "chr3_KZ559105v1_alt",
-        "KZ559105.1"
+        "chr3_KZ559105v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30215,9 +30215,9 @@
       "name": "HG2023_PATCH",
       "length": 230434,
       "aliases": [
+        "chr4_KQ983257v1_fix",
         "KQ983257.1",
-        "NW_015495300.1",
-        "chr4_KQ983257v1_fix"
+        "NW_015495300.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30226,8 +30226,8 @@
       "length": 235734,
       "aliases": [
         "NW_021159990.1",
-        "ML143344.1",
-        "chr4_ML143344v1_fix"
+        "chr4_ML143344v1_fix",
+        "ML143344.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30235,9 +30235,9 @@
       "name": "HG2525_PATCH",
       "length": 341066,
       "aliases": [
-        "ML143345.1",
+        "chr4_ML143345v1_fix",
         "NW_021159991.1",
-        "chr4_ML143345v1_fix"
+        "ML143345.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30245,9 +30245,9 @@
       "name": "HG1299_PATCH",
       "length": 53476,
       "aliases": [
-        "ML143346.1",
         "NW_021159992.1",
-        "chr4_ML143346v1_fix"
+        "chr4_ML143346v1_fix",
+        "ML143346.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30255,8 +30255,8 @@
       "name": "HG1298_PATCH",
       "length": 176674,
       "aliases": [
-        "ML143347.1",
         "NW_021159993.1",
+        "ML143347.1",
         "chr4_ML143347v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -30266,8 +30266,8 @@
       "length": 125549,
       "aliases": [
         "chr4_ML143348v1_fix",
-        "NW_021159994.1",
-        "ML143348.1"
+        "ML143348.1",
+        "NW_021159994.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30275,9 +30275,9 @@
       "name": "HG705_PATCH",
       "length": 276109,
       "aliases": [
-        "NW_021159995.1",
+        "chr4_ML143349v1_fix",
         "ML143349.1",
-        "chr4_ML143349v1_fix"
+        "NW_021159995.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30286,8 +30286,8 @@
       "length": 113364,
       "aliases": [
         "MU273350.1",
-        "NW_025791773.1",
-        "chr4_MU273350v1_fix"
+        "chr4_MU273350v1_fix",
+        "NW_025791773.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30295,9 +30295,9 @@
       "name": "HG287_PATCH",
       "length": 205691,
       "aliases": [
-        "NW_025791774.1",
+        "chr4_MU273351v1_fix",
         "MU273351.1",
-        "chr4_MU273351v1_fix"
+        "NW_025791774.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30305,8 +30305,8 @@
       "name": "HSCHR4_2_CTG4",
       "length": 90922,
       "aliases": [
-        "KQ090013.1",
         "NW_013171799.1",
+        "KQ090013.1",
         "chr4_KQ090013v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -30315,8 +30315,8 @@
       "name": "HSCHR4_8_CTG12",
       "length": 163749,
       "aliases": [
-        "KQ090014.1",
         "NW_013171800.1",
+        "KQ090014.1",
         "chr4_KQ090014v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -30326,8 +30326,8 @@
       "length": 236512,
       "aliases": [
         "NW_013171801.1",
-        "chr4_KQ090015v1_alt",
-        "KQ090015.1"
+        "KQ090015.1",
+        "chr4_KQ090015v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30335,8 +30335,8 @@
       "name": "HSCHR4_11_CTG12",
       "length": 205407,
       "aliases": [
-        "KQ983258.1",
         "chr4_KQ983258v1_alt",
+        "KQ983258.1",
         "NW_015495301.1"
       ],
       "sequence_role": "novel-patch"
@@ -30345,8 +30345,8 @@
       "name": "HSCHR4_12_CTG12",
       "length": 420675,
       "aliases": [
-        "KV766193.1",
         "chr4_KV766193v1_alt",
+        "KV766193.1",
         "NW_017363814.1"
       ],
       "sequence_role": "novel-patch"
@@ -30355,9 +30355,9 @@
       "name": "HSCHR4_2_CTG8_1",
       "length": 308682,
       "aliases": [
-        "MU273349.1",
+        "chr4_MU273349v1_alt",
         "NW_025791772.1",
-        "chr4_MU273349v1_alt"
+        "MU273349.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30365,9 +30365,9 @@
       "name": "HG30_PATCH",
       "length": 673059,
       "aliases": [
+        "KV575244.1",
         "NW_016107298.1",
-        "chr5_KV575244v1_fix",
-        "KV575244.1"
+        "chr5_KV575244v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30375,9 +30375,9 @@
       "name": "HG1395_PATCH",
       "length": 89956,
       "aliases": [
+        "NW_021159996.1",
         "ML143350.1",
-        "chr5_ML143350v1_fix",
-        "NW_021159996.1"
+        "chr5_ML143350v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30405,9 +30405,9 @@
       "name": "HG2405_PATCH",
       "length": 2101585,
       "aliases": [
-        "chr5_MU273354v1_fix",
         "NW_025791777.1",
-        "MU273354.1"
+        "MU273354.1",
+        "chr5_MU273354v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30415,9 +30415,9 @@
       "name": "HG2308_PATCH",
       "length": 508332,
       "aliases": [
-        "NW_025791778.1",
+        "MU273355.1",
         "chr5_MU273355v1_fix",
-        "MU273355.1"
+        "NW_025791778.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30426,8 +30426,8 @@
       "length": 139087,
       "aliases": [
         "chr5_KN196477v1_alt",
-        "NW_009646199.1",
-        "KN196477.1"
+        "KN196477.1",
+        "NW_009646199.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30435,9 +30435,9 @@
       "name": "HSCHR5_8_CTG1",
       "length": 362221,
       "aliases": [
+        "chr5_KV575243v1_alt",
         "KV575243.1",
-        "NW_016107297.1",
-        "chr5_KV575243v1_alt"
+        "NW_016107297.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30445,9 +30445,9 @@
       "name": "HSCHR5_9_CTG1",
       "length": 135987,
       "aliases": [
-        "KZ208910.1",
+        "chr5_KZ208910v1_alt",
         "NW_018654712.1",
-        "chr5_KZ208910v1_alt"
+        "KZ208910.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30456,8 +30456,8 @@
       "length": 302485,
       "aliases": [
         "NW_025791779.1",
-        "MU273356.1",
-        "chr5_MU273356v1_alt"
+        "chr5_MU273356v1_alt",
+        "MU273356.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30475,9 +30475,9 @@
       "name": "HG1651_PATCH",
       "length": 320750,
       "aliases": [
-        "NW_012132918.1",
+        "KQ031387.1",
         "chr6_KQ031387v1_fix",
-        "KQ031387.1"
+        "NW_012132918.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30485,9 +30485,9 @@
       "name": "HG2072_PATCH",
       "length": 245716,
       "aliases": [
+        "KQ090016.1",
         "NW_013171802.1",
-        "chr6_KQ090016v1_fix",
-        "KQ090016.1"
+        "chr6_KQ090016v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30495,9 +30495,9 @@
       "name": "HG2121_PATCH",
       "length": 139427,
       "aliases": [
-        "KV766194.1",
         "NW_017363815.1",
-        "chr6_KV766194v1_fix"
+        "chr6_KV766194v1_fix",
+        "KV766194.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30506,8 +30506,8 @@
       "length": 242796,
       "aliases": [
         "chr6_KZ208911v1_fix",
-        "NW_018654713.1",
-        "KZ208911.1"
+        "KZ208911.1",
+        "NW_018654713.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30515,9 +30515,9 @@
       "name": "HG563_PATCH",
       "length": 73265,
       "aliases": [
-        "NW_021159997.1",
+        "ML143351.1",
         "chr6_ML143351v1_fix",
-        "ML143351.1"
+        "NW_021159997.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30525,9 +30525,9 @@
       "name": "HSCHR6_1_CTG10",
       "length": 82315,
       "aliases": [
-        "chr6_KQ090017v1_alt",
+        "NW_013171803.1",
         "KQ090017.1",
-        "NW_013171803.1"
+        "chr6_KQ090017v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30535,8 +30535,8 @@
       "name": "HSCHR6_1_CTG1",
       "length": 383128,
       "aliases": [
-        "chr6_MU273357v1_alt",
         "MU273357.1",
+        "chr6_MU273357v1_alt",
         "NW_025791780.1"
       ],
       "sequence_role": "novel-patch"
@@ -30545,9 +30545,9 @@
       "name": "HG2239_PATCH",
       "length": 179932,
       "aliases": [
+        "NW_012132919.1",
         "chr7_KQ031388v1_fix",
-        "KQ031388.1",
-        "NW_012132919.1"
+        "KQ031388.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30565,9 +30565,9 @@
       "name": "HG2266_PATCH",
       "length": 468267,
       "aliases": [
+        "KV880765.1",
         "NW_017852930.1",
-        "chr7_KV880765v1_fix",
-        "KV880765.1"
+        "chr7_KV880765v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30575,9 +30575,9 @@
       "name": "HG708_PATCH",
       "length": 589656,
       "aliases": [
+        "KZ208912.1",
         "chr7_KZ208912v1_fix",
-        "NW_018654714.1",
-        "KZ208912.1"
+        "NW_018654714.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30586,8 +30586,8 @@
       "length": 254759,
       "aliases": [
         "NW_021159998.1",
-        "ML143352.1",
-        "chr7_ML143352v1_fix"
+        "chr7_ML143352v1_fix",
+        "ML143352.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30595,9 +30595,9 @@
       "name": "HSCHR7_3_CTG4_4",
       "length": 680662,
       "aliases": [
-        "chr7_KZ208913v1_alt",
         "KZ208913.1",
-        "NW_018654715.1"
+        "NW_018654715.1",
+        "chr7_KZ208913v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30605,9 +30605,9 @@
       "name": "HSCHR7_3_CTG1",
       "length": 172555,
       "aliases": [
-        "chr7_KZ559106v1_alt",
+        "KZ559106.1",
         "NW_019805493.1",
-        "KZ559106.1"
+        "chr7_KZ559106v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30615,9 +30615,9 @@
       "name": "HSCHR7_4_CTG1",
       "length": 464417,
       "aliases": [
-        "MU273358.1",
         "NW_025791781.1",
-        "chr7_MU273358v1_alt"
+        "chr7_MU273358v1_alt",
+        "MU273358.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30626,8 +30626,8 @@
       "length": 156998,
       "aliases": [
         "chr8_KV880766v1_fix",
-        "KV880766.1",
-        "NW_017852931.1"
+        "NW_017852931.1",
+        "KV880766.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30636,8 +30636,8 @@
       "length": 265876,
       "aliases": [
         "chr8_KV880767v1_fix",
-        "KV880767.1",
-        "NW_017852932.1"
+        "NW_017852932.1",
+        "KV880767.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30645,8 +30645,8 @@
       "name": "HG2419_PATCH",
       "length": 165120,
       "aliases": [
-        "NW_018654716.1",
         "chr8_KZ208914v1_fix",
+        "NW_018654716.1",
         "KZ208914.1"
       ],
       "sequence_role": "fix-patch"
@@ -30655,9 +30655,9 @@
       "name": "HG76_PATCH",
       "length": 6367528,
       "aliases": [
+        "NW_018654717.1",
         "chr8_KZ208915v1_fix",
-        "KZ208915.1",
-        "NW_018654717.1"
+        "KZ208915.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30675,8 +30675,8 @@
       "name": "HG1047_PATCH",
       "length": 39290,
       "aliases": [
-        "MU273360.1",
         "NW_025791783.1",
+        "MU273360.1",
         "chr8_MU273360v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -30685,9 +30685,9 @@
       "name": "HG2408_PATCH",
       "length": 106905,
       "aliases": [
+        "NW_025791784.1",
         "chr8_MU273361v1_fix",
-        "MU273361.1",
-        "NW_025791784.1"
+        "MU273361.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30695,9 +30695,9 @@
       "name": "HG2267_PATCH",
       "length": 429744,
       "aliases": [
+        "NW_025791785.1",
         "chr8_MU273362v1_fix",
-        "MU273362.1",
-        "NW_025791785.1"
+        "MU273362.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30706,8 +30706,8 @@
       "length": 207371,
       "aliases": [
         "NW_025791786.1",
-        "MU273363.1",
-        "chr8_MU273363v1_fix"
+        "chr8_MU273363v1_fix",
+        "MU273363.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30725,9 +30725,9 @@
       "name": "HG2030_PATCH",
       "length": 330164,
       "aliases": [
+        "NW_009646201.1",
         "chr9_KN196479v1_fix",
-        "KN196479.1",
-        "NW_009646201.1"
+        "KN196479.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30735,9 +30735,9 @@
       "name": "HG613_PATCH",
       "length": 25408,
       "aliases": [
-        "NW_021159999.1",
+        "ML143353.1",
         "chr9_ML143353v1_fix",
-        "ML143353.1"
+        "NW_021159999.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30745,9 +30745,9 @@
       "name": "HG2158_PATCH",
       "length": 340717,
       "aliases": [
-        "chr9_MU273364v1_fix",
         "MU273364.1",
-        "NW_025791787.1"
+        "NW_025791787.1",
+        "chr9_MU273364v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30756,8 +30756,8 @@
       "length": 482250,
       "aliases": [
         "MU273365.1",
-        "NW_025791788.1",
-        "chr9_MU273365v1_fix"
+        "chr9_MU273365v1_fix",
+        "NW_025791788.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30765,9 +30765,9 @@
       "name": "HG1206_PATCH",
       "length": 569668,
       "aliases": [
+        "MU273366.1",
         "chr9_MU273366v1_fix",
-        "NW_025791789.1",
-        "MU273366.1"
+        "NW_025791789.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30796,8 +30796,8 @@
       "length": 277797,
       "aliases": [
         "KN196480.1",
-        "NW_009646202.1",
-        "chr10_KN196480v1_fix"
+        "chr10_KN196480v1_fix",
+        "NW_009646202.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30805,9 +30805,9 @@
       "name": "HG2241_PATCH",
       "length": 14347,
       "aliases": [
+        "chr10_KN538365v1_fix",
         "KN538365.1",
-        "NW_011332692.1",
-        "chr10_KN538365v1_fix"
+        "NW_011332692.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30815,9 +30815,9 @@
       "name": "HG2242_HG2243_PATCH",
       "length": 85284,
       "aliases": [
-        "KN538366.1",
         "NW_011332693.1",
-        "chr10_KN538366v1_fix"
+        "chr10_KN538366v1_fix",
+        "KN538366.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30826,8 +30826,8 @@
       "length": 420164,
       "aliases": [
         "NW_011332694.1",
-        "chr10_KN538367v1_fix",
-        "KN538367.1"
+        "KN538367.1",
+        "chr10_KN538367v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30845,8 +30845,8 @@
       "name": "HG545_PATCH",
       "length": 454963,
       "aliases": [
-        "ML143354.1",
         "NW_021160000.1",
+        "ML143354.1",
         "chr10_ML143354v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -30865,8 +30865,8 @@
       "name": "HG2576_PATCH",
       "length": 196262,
       "aliases": [
-        "MU273367.1",
         "NW_025791790.1",
+        "MU273367.1",
         "chr10_MU273367v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -30875,9 +30875,9 @@
       "name": "HSCHR10_1_CTG6",
       "length": 185507,
       "aliases": [
-        "KQ090020.1",
         "NW_013171806.1",
-        "chr10_KQ090020v1_alt"
+        "chr10_KQ090020v1_alt",
+        "KQ090020.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -30905,9 +30905,9 @@
       "name": "HG107_HG2565_PATCH",
       "length": 204999,
       "aliases": [
-        "KQ759759.2",
+        "NW_015148966.2",
         "chr11_KQ759759v2_fix",
-        "NW_015148966.2"
+        "KQ759759.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30915,9 +30915,9 @@
       "name": "HG1708_PATCH",
       "length": 140877,
       "aliases": [
-        "KV766195.1",
         "NW_017363816.1",
-        "chr11_KV766195v1_fix"
+        "chr11_KV766195v1_fix",
+        "KV766195.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30935,9 +30935,9 @@
       "name": "HG2114_PATCH",
       "length": 279644,
       "aliases": [
-        "chr11_KZ559109v1_fix",
+        "NW_019805496.1",
         "KZ559109.1",
-        "NW_019805496.1"
+        "chr11_KZ559109v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30945,9 +30945,9 @@
       "name": "HG1521_PATCH",
       "length": 45257,
       "aliases": [
+        "NW_021160002.1",
         "ML143356.1",
-        "chr11_ML143356v1_fix",
-        "NW_021160002.1"
+        "chr11_ML143356v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30965,9 +30965,9 @@
       "name": "HG28_PATCH",
       "length": 270122,
       "aliases": [
+        "chr11_ML143358v1_fix",
         "ML143358.1",
-        "NW_021160004.1",
-        "chr11_ML143358v1_fix"
+        "NW_021160004.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30975,9 +30975,9 @@
       "name": "HG2115_PATCH",
       "length": 217075,
       "aliases": [
+        "chr11_ML143359v1_fix",
         "NW_021160005.1",
-        "ML143359.1",
-        "chr11_ML143359v1_fix"
+        "ML143359.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -30985,9 +30985,9 @@
       "name": "HG2111_PATCH",
       "length": 170928,
       "aliases": [
-        "NW_021160006.1",
         "ML143360.1",
-        "chr11_ML143360v1_fix"
+        "chr11_ML143360v1_fix",
+        "NW_021160006.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31005,8 +31005,8 @@
       "name": "HG2568_PATCH",
       "length": 344606,
       "aliases": [
-        "NW_025791793.1",
         "MU273370.1",
+        "NW_025791793.1",
         "chr11_MU273370v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -31015,8 +31015,8 @@
       "name": "HG2578_PATCH",
       "length": 122722,
       "aliases": [
-        "MU273371.1",
         "chr11_MU273371v1_fix",
+        "MU273371.1",
         "NW_025791794.1"
       ],
       "sequence_role": "fix-patch"
@@ -31025,9 +31025,9 @@
       "name": "HSCHR11_1_CTG1_2",
       "length": 203552,
       "aliases": [
-        "chr11_KN538368v1_alt",
+        "NW_011332695.1",
         "KN538368.1",
-        "NW_011332695.1"
+        "chr11_KN538368v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31045,8 +31045,8 @@
       "name": "HSCHR11_1_CTG3_1",
       "length": 181167,
       "aliases": [
-        "chr11_KZ559111v1_alt",
         "KZ559111.1",
+        "chr11_KZ559111v1_alt",
         "NW_019805498.1"
       ],
       "sequence_role": "novel-patch"
@@ -31055,8 +31055,8 @@
       "name": "HSCHR11_2_CTG3_1",
       "length": 261194,
       "aliases": [
-        "MU273368.1",
         "chr11_MU273368v1_alt",
+        "MU273368.1",
         "NW_025791791.1"
       ],
       "sequence_role": "novel-patch"
@@ -31096,8 +31096,8 @@
       "length": 315610,
       "aliases": [
         "NW_015148967.1",
-        "KQ759760.1",
-        "chr12_KQ759760v1_fix"
+        "chr12_KQ759760v1_fix",
+        "KQ759760.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31115,9 +31115,9 @@
       "name": "HG2047_PATCH",
       "length": 64689,
       "aliases": [
-        "KZ208917.1",
         "NW_018654719.1",
-        "chr12_KZ208917v1_fix"
+        "chr12_KZ208917v1_fix",
+        "KZ208917.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31126,8 +31126,8 @@
       "length": 297568,
       "aliases": [
         "ML143361.1",
-        "NW_021160007.1",
-        "chr12_ML143361v1_fix"
+        "chr12_ML143361v1_fix",
+        "NW_021160007.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31145,9 +31145,9 @@
       "name": "HG2554_PATCH",
       "length": 104537,
       "aliases": [
-        "NW_025791795.1",
+        "MU273372.1",
         "chr12_MU273372v1_fix",
-        "MU273372.1"
+        "NW_025791795.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31155,9 +31155,9 @@
       "name": "HSCHR12_2_CTG1",
       "length": 109323,
       "aliases": [
-        "KQ090023.1",
+        "chr12_KQ090023v1_alt",
         "NW_013171809.1",
-        "chr12_KQ090023v1_alt"
+        "KQ090023.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31165,9 +31165,9 @@
       "name": "HSCHR12_8_CTG2_1",
       "length": 174808,
       "aliases": [
+        "NW_018654720.1",
         "KZ208918.1",
-        "chr12_KZ208918v1_alt",
-        "NW_018654720.1"
+        "chr12_KZ208918v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31175,9 +31175,9 @@
       "name": "HSCHR12_9_CTG2_1",
       "length": 154139,
       "aliases": [
+        "chr12_KZ559112v1_alt",
         "NW_019805499.1",
-        "KZ559112.1",
-        "chr12_KZ559112v1_alt"
+        "KZ559112.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31186,8 +31186,8 @@
       "length": 35455,
       "aliases": [
         "KN196483.1",
-        "chr13_KN196483v1_fix",
-        "NW_009646205.1"
+        "NW_009646205.1",
+        "chr13_KN196483v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31206,8 +31206,8 @@
       "length": 356766,
       "aliases": [
         "chr13_KN538372v1_fix",
-        "NW_011332699.1",
-        "KN538372.1"
+        "KN538372.1",
+        "NW_011332699.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31215,9 +31215,9 @@
       "name": "HG2249_PATCH",
       "length": 148762,
       "aliases": [
-        "KN538373.1",
         "NW_011332700.1",
-        "chr13_KN538373v1_fix"
+        "chr13_KN538373v1_fix",
+        "KN538373.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31226,8 +31226,8 @@
       "length": 7309,
       "aliases": [
         "ML143363.1",
-        "chr13_ML143363v1_fix",
-        "NW_021160009.1"
+        "NW_021160009.1",
+        "chr13_ML143363v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31245,9 +31245,9 @@
       "name": "HG1524_PATCH",
       "length": 65394,
       "aliases": [
-        "ML143365.1",
         "chr13_ML143365v1_fix",
-        "NW_021160011.1"
+        "NW_021160011.1",
+        "ML143365.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31255,8 +31255,8 @@
       "name": "HG2509_PATCH",
       "length": 409912,
       "aliases": [
-        "NW_021160012.1",
         "chr13_ML143366v1_fix",
+        "NW_021160012.1",
         "ML143366.1"
       ],
       "sequence_role": "fix-patch"
@@ -31265,9 +31265,9 @@
       "name": "HSCHR13_1_CTG7",
       "length": 168146,
       "aliases": [
-        "NW_013171810.1",
         "KQ090024.1",
-        "chr13_KQ090024v1_alt"
+        "chr13_KQ090024v1_alt",
+        "NW_013171810.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31285,9 +31285,9 @@
       "name": "HG1_PATCH",
       "length": 690932,
       "aliases": [
+        "chr14_KZ208920v1_fix",
         "KZ208920.1",
-        "NW_018654722.1",
-        "chr14_KZ208920v1_fix"
+        "NW_018654722.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31295,9 +31295,9 @@
       "name": "HG2510_PATCH",
       "length": 399183,
       "aliases": [
-        "chr14_ML143367v1_fix",
         "ML143367.1",
-        "NW_021160013.1"
+        "NW_021160013.1",
+        "chr14_ML143367v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31305,9 +31305,9 @@
       "name": "HG2526_HG2573_PATCH",
       "length": 722645,
       "aliases": [
-        "NW_025791796.1",
+        "chr14_MU273373v1_fix",
         "MU273373.1",
-        "chr14_MU273373v1_fix"
+        "NW_025791796.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31325,9 +31325,9 @@
       "name": "HSCHR14_9_CTG1",
       "length": 264228,
       "aliases": [
-        "ML143368.1",
         "NW_021160014.1",
-        "chr14_ML143368v1_alt"
+        "chr14_ML143368v1_alt",
+        "ML143368.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31335,9 +31335,9 @@
       "name": "HG2139_PATCH",
       "length": 4998962,
       "aliases": [
+        "NW_011332701.1",
         "KN538374.1",
-        "chr15_KN538374v1_fix",
-        "NW_011332701.1"
+        "chr15_KN538374v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31346,8 +31346,8 @@
       "length": 97763,
       "aliases": [
         "chr15_ML143369v1_fix",
-        "NW_021160015.1",
-        "ML143369.1"
+        "ML143369.1",
+        "NW_021160015.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31355,9 +31355,9 @@
       "name": "HG2198_PATCH",
       "length": 369264,
       "aliases": [
-        "chr15_ML143370v1_fix",
         "ML143370.1",
-        "NW_021160016.1"
+        "NW_021160016.1",
+        "chr15_ML143370v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31375,9 +31375,9 @@
       "name": "HG2511_PATCH",
       "length": 396515,
       "aliases": [
+        "NW_021160018.1",
         "chr15_ML143372v1_fix",
-        "ML143372.1",
-        "NW_021160018.1"
+        "ML143372.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31385,9 +31385,9 @@
       "name": "HG2280_PATCH",
       "length": 1154574,
       "aliases": [
-        "chr15_MU273374v1_fix",
         "MU273374.1",
-        "NW_025791797.1"
+        "NW_025791797.1",
+        "chr15_MU273374v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31395,9 +31395,9 @@
       "name": "HSCHR15_6_CTG8",
       "length": 2365364,
       "aliases": [
+        "chr15_KQ031389v1_alt",
         "KQ031389.1",
-        "NW_012132920.1",
-        "chr15_KQ031389v1_alt"
+        "NW_012132920.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31405,8 +31405,8 @@
       "name": "HSCHR15_9_CTG8",
       "length": 204007,
       "aliases": [
-        "chr15_MU273375v1_alt",
         "NW_025791798.1",
+        "chr15_MU273375v1_alt",
         "MU273375.1"
       ],
       "sequence_role": "novel-patch"
@@ -31416,8 +31416,8 @@
       "length": 1927115,
       "aliases": [
         "chr16_KV880768v1_fix",
-        "NW_017852933.1",
-        "KV880768.1"
+        "KV880768.1",
+        "NW_017852933.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31435,9 +31435,9 @@
       "name": "HG2471_PATCH",
       "length": 270967,
       "aliases": [
-        "ML143373.1",
         "chr16_ML143373v1_fix",
-        "NW_021160019.1"
+        "NW_021160019.1",
+        "ML143373.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31445,9 +31445,9 @@
       "name": "HG401_PATCH",
       "length": 87715,
       "aliases": [
-        "MU273376.1",
         "NW_025791799.1",
-        "chr16_MU273376v1_fix"
+        "chr16_MU273376v1_fix",
+        "MU273376.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31455,8 +31455,8 @@
       "name": "HG405_PATCH",
       "length": 334997,
       "aliases": [
-        "NW_025791800.1",
         "MU273377.1",
+        "NW_025791800.1",
         "chr16_MU273377v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -31465,9 +31465,9 @@
       "name": "HSCHR16_3_CTG3_1",
       "length": 169136,
       "aliases": [
-        "KQ031390.1",
         "NW_012132921.1",
-        "chr16_KQ031390v1_alt"
+        "chr16_KQ031390v1_alt",
+        "KQ031390.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31475,9 +31475,9 @@
       "name": "HSCHR16_5_CTG1",
       "length": 59016,
       "aliases": [
-        "NW_013171812.1",
         "KQ090026.1",
-        "chr16_KQ090026v1_alt"
+        "chr16_KQ090026v1_alt",
+        "NW_013171812.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31495,8 +31495,8 @@
       "name": "HSCHR16_5_CTG3_1",
       "length": 78609,
       "aliases": [
-        "KZ208921.1",
         "chr16_KZ208921v1_alt",
+        "KZ208921.1",
         "NW_018654723.1"
       ],
       "sequence_role": "novel-patch"
@@ -31505,9 +31505,9 @@
       "name": "HG2046_PATCH",
       "length": 154723,
       "aliases": [
+        "KV575245.1",
         "NW_016107299.1",
-        "chr17_KV575245v1_fix",
-        "KV575245.1"
+        "chr17_KV575245v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31515,9 +31515,9 @@
       "name": "HG2285_HG106_HG2252_PATCH",
       "length": 281919,
       "aliases": [
+        "chr17_KV766196v1_fix",
         "KV766196.1",
-        "NW_017363817.1",
-        "chr17_KV766196v1_fix"
+        "NW_017363817.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31525,9 +31525,9 @@
       "name": "HG2087_PATCH",
       "length": 137908,
       "aliases": [
+        "NW_021160020.1",
         "chr17_ML143374v1_fix",
-        "ML143374.1",
-        "NW_021160020.1"
+        "ML143374.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31535,8 +31535,8 @@
       "name": "HG1320_PATCH",
       "length": 56695,
       "aliases": [
-        "chr17_ML143375v1_fix",
         "NW_021160021.1",
+        "chr17_ML143375v1_fix",
         "ML143375.1"
       ],
       "sequence_role": "fix-patch"
@@ -31546,8 +31546,8 @@
       "length": 234878,
       "aliases": [
         "chr17_MU273379v1_fix",
-        "MU273379.1",
-        "NW_025791802.1"
+        "NW_025791802.1",
+        "MU273379.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31566,8 +31566,8 @@
       "length": 144689,
       "aliases": [
         "NW_025791804.1",
-        "MU273381.1",
-        "chr17_MU273381v1_fix"
+        "chr17_MU273381v1_fix",
+        "MU273381.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31576,8 +31576,8 @@
       "length": 187626,
       "aliases": [
         "MU273382.1",
-        "chr17_MU273382v1_fix",
-        "NW_025791805.1"
+        "NW_025791805.1",
+        "chr17_MU273382v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31585,9 +31585,9 @@
       "name": "HG2580_PATCH",
       "length": 172609,
       "aliases": [
+        "chr17_MU273383v1_fix",
         "MU273383.1",
-        "NW_025791806.1",
-        "chr17_MU273383v1_fix"
+        "NW_025791806.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31605,9 +31605,9 @@
       "name": "HSCHR17_3_CTG1",
       "length": 276292,
       "aliases": [
+        "KV766198.1",
         "chr17_KV766198v1_alt",
-        "NW_017363819.1",
-        "KV766198.1"
+        "NW_017363819.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31615,9 +31615,9 @@
       "name": "HSCHR17_12_CTG4",
       "length": 116753,
       "aliases": [
-        "KZ559114.1",
         "NW_019805501.1",
-        "chr17_KZ559114v1_alt"
+        "chr17_KZ559114v1_alt",
+        "KZ559114.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31635,9 +31635,9 @@
       "name": "HG2213_PATCH",
       "length": 407387,
       "aliases": [
-        "chr18_KQ090028v1_fix",
         "NW_013171814.1",
-        "KQ090028.1"
+        "KQ090028.1",
+        "chr18_KQ090028v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31645,8 +31645,8 @@
       "name": "HG2442_PATCH",
       "length": 93070,
       "aliases": [
-        "NW_018654724.1",
         "KZ208922.1",
+        "NW_018654724.1",
         "chr18_KZ208922v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -31655,8 +31655,8 @@
       "name": "HG2412_PATCH",
       "length": 230843,
       "aliases": [
-        "chr18_KZ559115v1_fix",
         "KZ559115.1",
+        "chr18_KZ559115v1_fix",
         "NW_019805502.1"
       ],
       "sequence_role": "fix-patch"
@@ -31666,8 +31666,8 @@
       "length": 205101,
       "aliases": [
         "NW_014040928.1",
-        "chr18_KQ458385v1_alt",
-        "KQ458385.1"
+        "KQ458385.1",
+        "chr18_KQ458385v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31676,8 +31676,8 @@
       "length": 163186,
       "aliases": [
         "chr18_KZ559116v1_alt",
-        "KZ559116.1",
-        "NW_019805503.1"
+        "NW_019805503.1",
+        "KZ559116.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31685,8 +31685,8 @@
       "name": "HG2021_PATCH",
       "length": 370917,
       "aliases": [
-        "NW_009646206.1",
         "KN196484.1",
+        "NW_009646206.1",
         "chr19_KN196484v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -31695,9 +31695,9 @@
       "name": "HG26_PATCH",
       "length": 405389,
       "aliases": [
-        "NW_014040929.1",
+        "chr19_KQ458386v1_fix",
         "KQ458386.1",
-        "chr19_KQ458386v1_fix"
+        "NW_014040929.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31705,9 +31705,9 @@
       "name": "HG109_PATCH",
       "length": 493165,
       "aliases": [
-        "ML143376.1",
         "chr19_ML143376v1_fix",
-        "NW_021160022.1"
+        "NW_021160022.1",
+        "ML143376.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31715,9 +31715,9 @@
       "name": "HG2461_PATCH",
       "length": 333754,
       "aliases": [
-        "MU273384.1",
         "NW_025791807.1",
-        "chr19_MU273384v1_fix"
+        "chr19_MU273384v1_fix",
+        "MU273384.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31725,9 +31725,9 @@
       "name": "HG2569_PATCH",
       "length": 137818,
       "aliases": [
+        "MU273385.1",
         "NW_025791808.1",
-        "chr19_MU273385v1_fix",
-        "MU273385.1"
+        "chr19_MU273385v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31735,8 +31735,8 @@
       "name": "HG2469_PATCH",
       "length": 226166,
       "aliases": [
-        "chr19_MU273386v1_fix",
         "NW_025791809.1",
+        "chr19_MU273386v1_fix",
         "MU273386.1"
       ],
       "sequence_role": "fix-patch"
@@ -31745,8 +31745,8 @@
       "name": "HSCHR19KIR_0019-4656-A_CTG3_1",
       "length": 163926,
       "aliases": [
-        "NW_016107300.1",
         "KV575246.1",
+        "NW_016107300.1",
         "chr19_KV575246v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -31755,9 +31755,9 @@
       "name": "HSCHR19KIR_CA01-TA01_1_CTG3_1",
       "length": 170206,
       "aliases": [
-        "chr19_KV575247v1_alt",
+        "KV575247.1",
         "NW_016107301.1",
-        "KV575247.1"
+        "chr19_KV575247v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31775,9 +31775,9 @@
       "name": "HSCHR19KIR_CA01-TB04_CTG3_1",
       "length": 293522,
       "aliases": [
+        "chr19_KV575249v1_alt",
         "KV575249.1",
-        "NW_016107303.1",
-        "chr19_KV575249v1_alt"
+        "NW_016107303.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31785,8 +31785,8 @@
       "name": "HSCHR19KIR_CA01-TB01_CTG3_1",
       "length": 241058,
       "aliases": [
-        "KV575250.1",
         "NW_016107304.1",
+        "KV575250.1",
         "chr19_KV575250v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -31805,9 +31805,9 @@
       "name": "HSCHR19KIR_502960008-2_CTG3_1",
       "length": 178197,
       "aliases": [
+        "KV575252.1",
         "NW_016107306.1",
-        "chr19_KV575252v1_alt",
-        "KV575252.1"
+        "chr19_KV575252v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31826,8 +31826,8 @@
       "length": 99845,
       "aliases": [
         "KV575254.1",
-        "chr19_KV575254v1_alt",
-        "NW_016107308.1"
+        "NW_016107308.1",
+        "chr19_KV575254v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31835,8 +31835,8 @@
       "name": "HSCHR19KIR_7191059-1_CTG3_1",
       "length": 161095,
       "aliases": [
-        "NW_016107309.1",
         "KV575255.1",
+        "NW_016107309.1",
         "chr19_KV575255v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -31846,8 +31846,8 @@
       "length": 223118,
       "aliases": [
         "NW_016107310.1",
-        "KV575256.1",
-        "chr19_KV575256v1_alt"
+        "chr19_KV575256v1_alt",
+        "KV575256.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31855,8 +31855,8 @@
       "name": "HSCHR19KIR_CA04_CTG3_1",
       "length": 100553,
       "aliases": [
-        "NW_016107311.1",
         "KV575257.1",
+        "NW_016107311.1",
         "chr19_KV575257v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -31865,9 +31865,9 @@
       "name": "HSCHR19KIR_HG2393_CTG3_1",
       "length": 156965,
       "aliases": [
-        "NW_016107312.1",
+        "chr19_KV575258v1_alt",
         "KV575258.1",
-        "chr19_KV575258v1_alt"
+        "NW_016107312.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31875,9 +31875,9 @@
       "name": "HSCHR19KIR_7191059-2_CTG3_1",
       "length": 171263,
       "aliases": [
+        "chr19_KV575259v1_alt",
         "KV575259.1",
-        "NW_016107313.1",
-        "chr19_KV575259v1_alt"
+        "NW_016107313.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31885,9 +31885,9 @@
       "name": "HSCHR19KIR_HG2396_CTG3_1",
       "length": 145691,
       "aliases": [
-        "KV575260.1",
+        "NW_016107314.1",
         "chr19_KV575260v1_alt",
-        "NW_016107314.1"
+        "KV575260.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31896,8 +31896,8 @@
       "length": 89211,
       "aliases": [
         "MU273387.1",
-        "NW_025791810.1",
-        "chr19_MU273387v1_alt"
+        "chr19_MU273387v1_alt",
+        "NW_025791810.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -31905,9 +31905,9 @@
       "name": "HG2225_PATCH",
       "length": 273725,
       "aliases": [
-        "chr20_MU273388v1_fix",
+        "NW_025791811.1",
         "MU273388.1",
-        "NW_025791811.1"
+        "chr20_MU273388v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31916,8 +31916,8 @@
       "length": 355731,
       "aliases": [
         "MU273389.1",
-        "chr20_MU273389v1_fix",
-        "NW_025791812.1"
+        "NW_025791812.1",
+        "chr20_MU273389v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31935,9 +31935,9 @@
       "name": "HG2219_PATCH",
       "length": 336752,
       "aliases": [
-        "MU273390.1",
+        "chr21_MU273390v1_fix",
         "NW_025791813.1",
-        "chr21_MU273390v1_fix"
+        "MU273390.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31946,8 +31946,8 @@
       "length": 1020778,
       "aliases": [
         "MU273391.1",
-        "NW_025791814.1",
-        "chr21_MU273391v1_fix"
+        "chr21_MU273391v1_fix",
+        "NW_025791814.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31955,9 +31955,9 @@
       "name": "HG2521_PATCH",
       "length": 189707,
       "aliases": [
-        "MU273392.1",
         "NW_025791815.1",
-        "chr21_MU273392v1_fix"
+        "chr21_MU273392v1_fix",
+        "MU273392.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31965,9 +31965,9 @@
       "name": "HG1311_HG2539_PATCH",
       "length": 101040,
       "aliases": [
-        "NW_015148969.2",
+        "chr22_KQ759762v2_fix",
         "KQ759762.2",
-        "chr22_KQ759762v2_fix"
+        "NW_015148969.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31975,9 +31975,9 @@
       "name": "HG1485_PATCH",
       "length": 461303,
       "aliases": [
-        "ML143378.1",
+        "NW_021160024.1",
         "chr22_ML143378v1_fix",
-        "NW_021160024.1"
+        "ML143378.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -31995,8 +31995,8 @@
       "name": "HG2512_PATCH",
       "length": 412368,
       "aliases": [
-        "NW_021160026.1",
         "ML143380.1",
+        "NW_021160026.1",
         "chr22_ML143380v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -32005,8 +32005,8 @@
       "name": "HSCHR22_4_CTG1",
       "length": 156562,
       "aliases": [
-        "chr22_KN196485v1_alt",
         "KN196485.1",
+        "chr22_KN196485v1_alt",
         "NW_009646207.1"
       ],
       "sequence_role": "novel-patch"
@@ -32026,8 +32026,8 @@
       "length": 155930,
       "aliases": [
         "NW_014040930.1",
-        "KQ458387.1",
-        "chr22_KQ458387v1_alt"
+        "chr22_KQ458387v1_alt",
+        "KQ458387.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -32036,8 +32036,8 @@
       "length": 174749,
       "aliases": [
         "NW_014040931.1",
-        "chr22_KQ458388v1_alt",
-        "KQ458388.1"
+        "KQ458388.1",
+        "chr22_KQ458388v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -32055,9 +32055,9 @@
       "name": "HG439_PATCH",
       "length": 403128,
       "aliases": [
+        "chrX_ML143381v1_fix",
         "ML143381.1",
-        "NW_021160027.1",
-        "chrX_ML143381v1_fix"
+        "NW_021160027.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -32065,9 +32065,9 @@
       "name": "HG1506_PATCH",
       "length": 28824,
       "aliases": [
-        "ML143382.1",
+        "NW_021160028.1",
         "chrX_ML143382v1_fix",
-        "NW_021160028.1"
+        "ML143382.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -32075,9 +32075,9 @@
       "name": "HG1507_PATCH",
       "length": 68192,
       "aliases": [
-        "chrX_ML143383v1_fix",
         "ML143383.1",
-        "NW_021160029.1"
+        "NW_021160029.1",
+        "chrX_ML143383v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -32085,9 +32085,9 @@
       "name": "HG1509_PATCH",
       "length": 14678,
       "aliases": [
-        "NW_021160030.1",
         "ML143384.1",
-        "chrX_ML143384v1_fix"
+        "chrX_ML143384v1_fix",
+        "NW_021160030.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -32116,8 +32116,8 @@
       "length": 140567,
       "aliases": [
         "chrX_MU273394v1_fix",
-        "MU273394.1",
-        "NW_025791817.1"
+        "NW_025791817.1",
+        "MU273394.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -32126,8 +32126,8 @@
       "length": 188004,
       "aliases": [
         "KV766199.1",
-        "NW_017363820.1",
-        "chrX_KV766199v1_alt"
+        "chrX_KV766199v1_alt",
+        "NW_017363820.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -32135,8 +32135,8 @@
       "name": "HSCHRX_1_CTG14",
       "length": 619716,
       "aliases": [
-        "chrX_MU273395v1_alt",
         "NW_025791818.1",
+        "chrX_MU273395v1_alt",
         "MU273395.1"
       ],
       "sequence_role": "novel-patch"
@@ -32145,9 +32145,9 @@
       "name": "HSCHRX_2_CTG14",
       "length": 294119,
       "aliases": [
-        "NW_025791819.1",
         "chrX_MU273396v1_alt",
-        "MU273396.1"
+        "MU273396.1",
+        "NW_025791819.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -32155,8 +32155,8 @@
       "name": "HSCHRX_3_CTG3",
       "length": 330493,
       "aliases": [
-        "MU273397.1",
         "chrX_MU273397v1_alt",
+        "MU273397.1",
         "NW_025791820.1"
       ],
       "sequence_role": "novel-patch"
@@ -32165,8 +32165,8 @@
       "name": "HG2062_PATCH",
       "length": 101150,
       "aliases": [
-        "NW_009646209.1",
         "KN196487.1",
+        "NW_009646209.1",
         "chrY_KN196487v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -32175,9 +32175,9 @@
       "name": "HG1531_PATCH",
       "length": 48370,
       "aliases": [
-        "chrY_KZ208923v1_fix",
+        "KZ208923.1",
         "NW_018654725.1",
-        "KZ208923.1"
+        "chrY_KZ208923v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -32185,9 +32185,9 @@
       "name": "HG1535_PATCH",
       "length": 209722,
       "aliases": [
+        "chrY_KZ208924v1_fix",
         "KZ208924.1",
-        "NW_018654726.1",
-        "chrY_KZ208924v1_fix"
+        "NW_018654726.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -32196,8 +32196,8 @@
       "length": 865743,
       "aliases": [
         "MU273398.1",
-        "chrY_MU273398v1_fix",
-        "NW_025791821.1"
+        "NW_025791821.1",
+        "chrY_MU273398v1_fix"
       ],
       "sequence_role": "fix-patch"
     }

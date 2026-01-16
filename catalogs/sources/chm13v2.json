@@ -27,9 +27,9 @@
       "length": 242696752,
       "md5": "e5ff97665b6025191d4d7dfa2cec4cf0",
       "aliases": [
+        "chr2",
         "2",
-        "CP068276.2",
-        "chr2"
+        "CP068276.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -38,8 +38,8 @@
       "length": 201105948,
       "md5": "0012f8a55c07f0b61e199736105e7257",
       "aliases": [
-        "chr3",
         "3",
+        "chr3",
         "CP068275.2"
       ],
       "sequence_role": "assembled-molecule"
@@ -49,9 +49,9 @@
       "length": 193574945,
       "md5": "b7e17a4f043aab5bc45cdfd5cccf9deb",
       "aliases": [
-        "4",
+        "chr4",
         "CP068274.2",
-        "chr4"
+        "4"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -71,9 +71,9 @@
       "length": 172126628,
       "md5": "ae714983adbd673c7c84b0b1daa91f7e",
       "aliases": [
-        "6",
+        "chr6",
         "CP068272.2",
-        "chr6"
+        "6"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -82,9 +82,9 @@
       "length": 160567428,
       "md5": "3ff4435e65cf8cdd69a3150d09dd649f",
       "aliases": [
-        "chr7",
         "7",
-        "CP068271.2"
+        "CP068271.2",
+        "chr7"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -94,8 +94,8 @@
       "md5": "29aeec58cb54d9132e2283839f9fcc9c",
       "aliases": [
         "chr8",
-        "CP068270.2",
-        "8"
+        "8",
+        "CP068270.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -104,9 +104,9 @@
       "length": 150617247,
       "md5": "419dad1fb58ae389ad8828536b5d78cd",
       "aliases": [
-        "9",
         "CP068269.2",
-        "chr9"
+        "chr9",
+        "9"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -115,9 +115,9 @@
       "length": 134758134,
       "md5": "fbf3087282695f275d460157fc7864a5",
       "aliases": [
-        "chr10",
         "10",
-        "CP068268.2"
+        "CP068268.2",
+        "chr10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -126,9 +126,9 @@
       "length": 135127769,
       "md5": "7f144a0b4800c341a4b4f1518838cc59",
       "aliases": [
-        "11",
         "CP068267.2",
-        "chr11"
+        "chr11",
+        "11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -137,9 +137,9 @@
       "length": 133324548,
       "md5": "5086cf368e83b9cefd7bb19ef0f40d3c",
       "aliases": [
-        "chr12",
         "12",
-        "CP068266.2"
+        "CP068266.2",
+        "chr12"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -148,8 +148,8 @@
       "length": 113566686,
       "md5": "6f9949b26d5ece38c6cdefd48a516907",
       "aliases": [
-        "13",
         "CP068265.2",
+        "13",
         "chr13"
       ],
       "sequence_role": "assembled-molecule"
@@ -159,9 +159,9 @@
       "length": 101161492,
       "md5": "7ad36d43a1ab059e190ab918f27cb5bf",
       "aliases": [
-        "14",
         "CP068264.2",
-        "chr14"
+        "chr14",
+        "14"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -181,8 +181,8 @@
       "length": 96330374,
       "md5": "fcc04e14d89b12c757d56c177261e248",
       "aliases": [
-        "16",
         "chr16",
+        "16",
         "CP068262.2"
       ],
       "sequence_role": "assembled-molecule"
@@ -192,9 +192,9 @@
       "length": 84276897,
       "md5": "8627043bd24255e9f356e0c99ece251f",
       "aliases": [
+        "CP068261.2",
         "17",
-        "chr17",
-        "CP068261.2"
+        "chr17"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -215,8 +215,8 @@
       "md5": "c2c74cb0832b34b9e8eebf4b744a88c1",
       "aliases": [
         "chr19",
-        "CP068259.2",
-        "19"
+        "19",
+        "CP068259.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -225,9 +225,9 @@
       "length": 66210255,
       "md5": "f1a31f30d3da50893470ff47bf0b5a38",
       "aliases": [
-        "chr20",
+        "20",
         "CP068258.2",
-        "20"
+        "chr20"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -247,9 +247,9 @@
       "length": 51324926,
       "md5": "0068189b6b7c95e860cce0815662293f",
       "aliases": [
+        "chr22",
         "22",
-        "CP068256.2",
-        "chr22"
+        "CP068256.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -258,9 +258,9 @@
       "length": 154259566,
       "md5": "1f2616c4cfa30104517e44dd3c426453",
       "aliases": [
-        "X",
         "CP068255.2",
-        "chrX"
+        "chrX",
+        "X"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -269,9 +269,9 @@
       "length": 62460029,
       "md5": "775564f397e3690ae4e4f0372537ff49",
       "aliases": [
-        "Y",
+        "chrY",
         "CP086569.2",
-        "chrY"
+        "Y"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -285,5 +285,8 @@
       "sequence_role": "assembled-molecule"
     }
   ],
-  "description": "Telomere-to-Telomere CHM13v2.0 complete human genome"
+  "description": "Telomere-to-Telomere CHM13v2.0 complete human genome",
+  "contigs_missing_from_fasta": [
+    "MT"
+  ]
 }

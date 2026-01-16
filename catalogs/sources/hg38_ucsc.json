@@ -12,9 +12,9 @@
       "length": 248956422,
       "md5": "2648ae1bacce4ec4b6cf337dcae37816",
       "aliases": [
-        "1",
+        "NC_000001.11",
         "CM000663.2",
-        "NC_000001.11"
+        "1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -34,9 +34,9 @@
       "length": 135086622,
       "md5": "1511375dc2dd1b633af8cf439ae90cec",
       "aliases": [
-        "11",
         "CM000673.2",
-        "NC_000011.10"
+        "NC_000011.10",
+        "11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -45,8 +45,8 @@
       "length": 100316,
       "md5": "9654b5d3f36845bb9d19a6dbd15d2f22",
       "aliases": [
-        "HSCHR11_CTG1_UNLOCALIZED",
-        "KI270721.1"
+        "KI270721.1",
+        "HSCHR11_CTG1_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -55,9 +55,9 @@
       "length": 133275309,
       "md5": "e81e16d3f44337034695a29b97708fce",
       "aliases": [
-        "12",
+        "NC_000012.12",
         "CM000674.2",
-        "NC_000012.12"
+        "12"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -77,9 +77,9 @@
       "length": 107043718,
       "md5": "acbd9552c059d9b403e75ed26c1ce5bc",
       "aliases": [
-        "14",
         "CM000676.2",
-        "NC_000014.9"
+        "NC_000014.9",
+        "14"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -89,8 +89,8 @@
       "md5": "862f555045546733591ff7ab15bcecbe",
       "aliases": [
         "HSCHR14_CTG1_UNLOCALIZED",
-        "NT_113796.3",
-        "GL000009.2"
+        "GL000009.2",
+        "NT_113796.3"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -99,9 +99,9 @@
       "length": 211173,
       "md5": "63945c3e6962f28ffd469719a747e73c",
       "aliases": [
-        "HSCHR14_CTG2_UNLOCALIZED",
+        "NT_167219.1",
         "GL000225.1",
-        "NT_167219.1"
+        "HSCHR14_CTG2_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -110,9 +110,9 @@
       "length": 194050,
       "md5": "51f46c9093929e6edc3b4dfd50d803fc",
       "aliases": [
-        "KI270722.1",
+        "NT_187377.1",
         "HSCHR14_CTG3_UNLOCALIZED",
-        "NT_187377.1"
+        "KI270722.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -121,8 +121,8 @@
       "length": 191469,
       "md5": "6ac8f815bf8e845bb3031b73f812c012",
       "aliases": [
-        "GL000194.1",
         "NT_113888.1",
+        "GL000194.1",
         "HSCHR14_CTG4_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -132,9 +132,9 @@
       "length": 38115,
       "md5": "74a4b480675592095fb0c577c515b5df",
       "aliases": [
-        "HSCHR14_CTG5_UNLOCALIZED",
         "KI270723.1",
-        "NT_187378.1"
+        "NT_187378.1",
+        "HSCHR14_CTG5_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -154,9 +154,9 @@
       "length": 172810,
       "md5": "edc6402e58396b90b8738a5e37bf773d",
       "aliases": [
-        "HSCHR14_CTG7_UNLOCALIZED",
+        "KI270725.1",
         "NT_187380.1",
-        "KI270725.1"
+        "HSCHR14_CTG7_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -166,8 +166,8 @@
       "md5": "fbe54a3197e2b469ccb2f4b161cfbe86",
       "aliases": [
         "NT_187381.1",
-        "KI270726.1",
-        "HSCHR14_CTG8_UNLOCALIZED"
+        "HSCHR14_CTG8_UNLOCALIZED",
+        "KI270726.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -176,9 +176,9 @@
       "length": 101991189,
       "md5": "f036bd11158407596ca6bf3581454706",
       "aliases": [
-        "15",
         "CM000677.2",
-        "NC_000015.10"
+        "NC_000015.10",
+        "15"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -187,8 +187,8 @@
       "length": 448248,
       "md5": "84fe18a7bf03f3b7fc76cbac8eb583f1",
       "aliases": [
-        "KI270727.1",
         "NT_187382.1",
+        "KI270727.1",
         "HSCHR15_RANDOM_CTG1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -198,8 +198,8 @@
       "length": 90338345,
       "md5": "24e7cabfba3548a2bb4dff582b9ee870",
       "aliases": [
-        "16",
         "CM000678.2",
+        "16",
         "NC_000016.10"
       ],
       "sequence_role": "assembled-molecule"
@@ -209,9 +209,9 @@
       "length": 1872759,
       "md5": "369ff74cf36683b3066a2ca929d9c40d",
       "aliases": [
-        "HSCHR16_RANDOM_CTG1",
         "NT_187383.1",
-        "KI270728.1"
+        "KI270728.1",
+        "HSCHR16_RANDOM_CTG1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -221,8 +221,8 @@
       "md5": "a8499ca51d6fb77332c2d242923994eb",
       "aliases": [
         "CM000679.2",
-        "NC_000017.11",
-        "17"
+        "17",
+        "NC_000017.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -231,8 +231,8 @@
       "length": 185591,
       "md5": "458e71cd53dd1df4083dc7983a6c82c4",
       "aliases": [
-        "HSCHR17_RANDOM_CTG3",
         "GL000205.2",
+        "HSCHR17_RANDOM_CTG3",
         "NT_113930.2"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -242,9 +242,9 @@
       "length": 280839,
       "md5": "2756f6ee4f5780acce31e995443508b6",
       "aliases": [
-        "HSCHR17_RANDOM_CTG4",
+        "KI270729.1",
         "NT_187384.1",
-        "KI270729.1"
+        "HSCHR17_RANDOM_CTG4"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -253,8 +253,8 @@
       "length": 112551,
       "md5": "48f98ede8e28a06d241ab2e946c15e07",
       "aliases": [
-        "KI270730.1",
         "NT_187385.1",
+        "KI270730.1",
         "HSCHR17_RANDOM_CTG5"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -264,9 +264,9 @@
       "length": 80373285,
       "md5": "11eeaa801f6b0e2e36a1138616b8ee9a",
       "aliases": [
-        "NC_000018.10",
+        "CM000680.2",
         "18",
-        "CM000680.2"
+        "NC_000018.10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -275,9 +275,9 @@
       "length": 58617616,
       "md5": "b0eba2c7bb5c953d1e06a508b5e487de",
       "aliases": [
-        "NC_000019.10",
         "19",
-        "CM000681.2"
+        "CM000681.2",
+        "NC_000019.10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -286,9 +286,9 @@
       "length": 175055,
       "md5": "62def1a794b3e18192863d187af956e6",
       "aliases": [
-        "NT_187361.1",
+        "HSCHR1_CTG1_UNLOCALIZED",
         "KI270706.1",
-        "HSCHR1_CTG1_UNLOCALIZED"
+        "NT_187361.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -297,9 +297,9 @@
       "length": 32032,
       "md5": "78135804eb15220565483b7cdd02f3be",
       "aliases": [
+        "KI270707.1",
         "NT_187362.1",
-        "HSCHR1_CTG2_UNLOCALIZED",
-        "KI270707.1"
+        "HSCHR1_CTG2_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -308,9 +308,9 @@
       "length": 127682,
       "md5": "1e95e047b98ed92148dd84d6c037158c",
       "aliases": [
+        "KI270708.1",
         "NT_187363.1",
-        "HSCHR1_CTG3_UNLOCALIZED",
-        "KI270708.1"
+        "HSCHR1_CTG3_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -319,9 +319,9 @@
       "length": 66860,
       "md5": "4e2db2933ea96aee8dab54af60ecb37d",
       "aliases": [
+        "NT_187364.1",
         "HSCHR1_CTG4_UNLOCALIZED",
-        "KI270709.1",
-        "NT_187364.1"
+        "KI270709.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -330,9 +330,9 @@
       "length": 40176,
       "md5": "9949f776680c6214512ee738ac5da289",
       "aliases": [
-        "NT_187365.1",
+        "KI270710.1",
         "HSCHR1_CTG5_UNLOCALIZED",
-        "KI270710.1"
+        "NT_187365.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -341,9 +341,9 @@
       "length": 42210,
       "md5": "af383f98cf4492c1f1c4e750c26cbb40",
       "aliases": [
-        "HSCHR1_CTG6_UNLOCALIZED",
         "KI270711.1",
-        "NT_187366.1"
+        "NT_187366.1",
+        "HSCHR1_CTG6_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -352,9 +352,9 @@
       "length": 176043,
       "md5": "c38a0fecae6a1838a405406f724d6838",
       "aliases": [
+        "NT_187367.1",
         "KI270712.1",
-        "HSCHR1_CTG7_UNLOCALIZED",
-        "NT_187367.1"
+        "HSCHR1_CTG7_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -363,8 +363,8 @@
       "length": 40745,
       "md5": "cb78d48cc0adbc58822a1c6fe89e3569",
       "aliases": [
-        "KI270713.1",
         "HSCHR1_CTG8_UNLOCALIZED",
+        "KI270713.1",
         "NT_187368.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -374,9 +374,9 @@
       "length": 41717,
       "md5": "42f7a452b8b769d051ad738ee9f00631",
       "aliases": [
-        "HSCHR1_CTG9_UNLOCALIZED",
+        "KI270714.1",
         "NT_187369.1",
-        "KI270714.1"
+        "HSCHR1_CTG9_UNLOCALIZED"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -385,8 +385,8 @@
       "length": 242193529,
       "md5": "4bb4f82880a14111eb7327169ffb729b",
       "aliases": [
-        "NC_000002.12",
         "CM000664.2",
+        "NC_000002.12",
         "2"
       ],
       "sequence_role": "assembled-molecule"
@@ -396,9 +396,9 @@
       "length": 64444167,
       "md5": "b18e6c531b0bd70e949a7fc20859cb01",
       "aliases": [
+        "20",
         "CM000682.2",
-        "NC_000020.11",
-        "20"
+        "NC_000020.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -407,9 +407,9 @@
       "length": 46709983,
       "md5": "2f45a3455007b7e271509161e52954a9",
       "aliases": [
-        "21",
+        "CM000683.2",
         "NC_000021.9",
-        "CM000683.2"
+        "21"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -419,8 +419,8 @@
       "md5": "221733a2a15e2de66d33e73d126c5109",
       "aliases": [
         "NC_000022.11",
-        "22",
-        "CM000684.2"
+        "CM000684.2",
+        "22"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -430,8 +430,8 @@
       "md5": "8176d9a20401e8d9f01b7ca8b51d9c08",
       "aliases": [
         "NT_187386.1",
-        "KI270731.1",
-        "HSCHR22_UNLOCALIZED_CTG1"
+        "HSCHR22_UNLOCALIZED_CTG1",
+        "KI270731.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -440,9 +440,9 @@
       "length": 41543,
       "md5": "d837bab5e416450df6e1038ae6cd0817",
       "aliases": [
-        "KI270732.1",
         "NT_187387.1",
-        "HSCHR22_UNLOCALIZED_CTG2"
+        "HSCHR22_UNLOCALIZED_CTG2",
+        "KI270732.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -451,9 +451,9 @@
       "length": 179772,
       "md5": "f1fa05d48bb0c1f87237a28b66f0be0b",
       "aliases": [
-        "KI270733.1",
         "NT_187388.1",
-        "HSCHR22_UNLOCALIZED_CTG3"
+        "HSCHR22_UNLOCALIZED_CTG3",
+        "KI270733.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -472,8 +472,8 @@
       "length": 42811,
       "md5": "eb6b07b73dd9a47252098ed3d9fb78b8",
       "aliases": [
-        "HSCHR22_UNLOCALIZED_CTG5",
         "NT_187390.1",
+        "HSCHR22_UNLOCALIZED_CTG5",
         "KI270735.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -483,9 +483,9 @@
       "length": 181920,
       "md5": "2ff189f33cfa52f321accddf648c5616",
       "aliases": [
-        "HSCHR22_UNLOCALIZED_CTG6",
+        "NT_187391.1",
         "KI270736.1",
-        "NT_187391.1"
+        "HSCHR22_UNLOCALIZED_CTG6"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -494,9 +494,9 @@
       "length": 103838,
       "md5": "2ea8bc113a8193d1d700b584b2c5f42a",
       "aliases": [
-        "HSCHR22_UNLOCALIZED_CTG7",
+        "NT_187392.1",
         "KI270737.1",
-        "NT_187392.1"
+        "HSCHR22_UNLOCALIZED_CTG7"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -506,8 +506,8 @@
       "md5": "854ec525c7b6a79e7268f515b6a9877c",
       "aliases": [
         "HSCHR22_UNLOCALIZED_CTG8",
-        "NT_187393.1",
-        "KI270738.1"
+        "KI270738.1",
+        "NT_187393.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -516,9 +516,9 @@
       "length": 73985,
       "md5": "760fbd73515fedcc9f37737c4a722d6a",
       "aliases": [
-        "HSCHR22_UNLOCALIZED_CTG9",
+        "NT_187394.1",
         "KI270739.1",
-        "NT_187394.1"
+        "HSCHR22_UNLOCALIZED_CTG9"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -528,8 +528,8 @@
       "md5": "b65a8af1d7bbb7f3c77eea85423452bb",
       "aliases": [
         "KI270715.1",
-        "NT_187370.1",
-        "HSCHR2_RANDOM_CTG1"
+        "HSCHR2_RANDOM_CTG1",
+        "NT_187370.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -560,8 +560,8 @@
       "length": 155397,
       "md5": "3238fb74ea87ae857f9c7508d315babb",
       "aliases": [
-        "NT_167215.1",
         "HSCHR3UN_CTG2",
+        "NT_167215.1",
         "GL000221.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -571,9 +571,9 @@
       "length": 190214555,
       "md5": "3210fecf1eb92d5489da4346b3fddc6e",
       "aliases": [
-        "NC_000004.12",
         "4",
-        "CM000666.2"
+        "CM000666.2",
+        "NC_000004.12"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -582,8 +582,8 @@
       "length": 209709,
       "md5": "a999388c587908f80406444cebe80ba3",
       "aliases": [
-        "HSCHR4_RANDOM_CTG4",
         "NT_113793.3",
+        "HSCHR4_RANDOM_CTG4",
         "GL000008.2"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -593,8 +593,8 @@
       "length": 181538259,
       "md5": "f7f05fb7ceea78cbc32ce652c540ff2d",
       "aliases": [
-        "NC_000005.10",
         "CM000667.2",
+        "NC_000005.10",
         "5"
       ],
       "sequence_role": "assembled-molecule"
@@ -604,9 +604,9 @@
       "length": 92689,
       "md5": "aa81be49bf3fe63a79bdc6a6f279abf6",
       "aliases": [
-        "GL000208.1",
         "NT_113948.1",
-        "HSCHR5_RANDOM_CTG1"
+        "HSCHR5_RANDOM_CTG1",
+        "GL000208.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -615,8 +615,8 @@
       "length": 170805979,
       "md5": "6a48dfa97e854e3c6f186c8ff973f7dd",
       "aliases": [
-        "CM000668.2",
         "NC_000006.12",
+        "CM000668.2",
         "6"
       ],
       "sequence_role": "assembled-molecule"
@@ -626,9 +626,9 @@
       "length": 159345973,
       "md5": "94eef2b96fd5a7c8db162c8c74378039",
       "aliases": [
-        "CM000669.2",
         "7",
-        "NC_000007.14"
+        "NC_000007.14",
+        "CM000669.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -637,9 +637,9 @@
       "length": 145138636,
       "md5": "c67955b5f7815a9a1edfaa15893d3616",
       "aliases": [
-        "CM000670.2",
         "NC_000008.11",
-        "8"
+        "8",
+        "CM000670.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -648,9 +648,9 @@
       "length": 138394717,
       "md5": "addd2795560986b7491c40b1faa3978a",
       "aliases": [
+        "9",
         "NC_000009.12",
-        "CM000671.2",
-        "9"
+        "CM000671.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -659,9 +659,9 @@
       "length": 40062,
       "md5": "796773a1ee67c988b4de887addbed9e7",
       "aliases": [
-        "NT_187372.1",
         "KI270717.1",
-        "HSCHR9_UNLOCALIZED_CTG1"
+        "HSCHR9_UNLOCALIZED_CTG1",
+        "NT_187372.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -670,9 +670,9 @@
       "length": 38054,
       "md5": "b0c463c8efa8d64442b48e936368dad5",
       "aliases": [
-        "KI270718.1",
         "HSCHR9_UNLOCALIZED_CTG2",
-        "NT_187373.1"
+        "NT_187373.1",
+        "KI270718.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -682,8 +682,8 @@
       "md5": "cd5e932cfc4c74d05bb64e2126873a3a",
       "aliases": [
         "KI270719.1",
-        "NT_187374.1",
-        "HSCHR9_UNLOCALIZED_CTG3"
+        "HSCHR9_UNLOCALIZED_CTG3",
+        "NT_187374.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -693,8 +693,8 @@
       "md5": "8c2683400a4aeeb40abff96652b9b127",
       "aliases": [
         "NT_187375.1",
-        "HSCHR9_UNLOCALIZED_CTG4",
-        "KI270720.1"
+        "KI270720.1",
+        "HSCHR9_UNLOCALIZED_CTG4"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -703,9 +703,9 @@
       "length": 354444,
       "md5": "b0397179e5a92bb7a3300b68e45a9f72",
       "aliases": [
+        "KI270762.1",
         "NT_187515.1",
-        "HSCHR1_1_CTG3",
-        "KI270762.1"
+        "HSCHR1_1_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -714,9 +714,9 @@
       "length": 256271,
       "md5": "e3f36479d0e07abbd0d47babdc76e19d",
       "aliases": [
-        "NT_187517.1",
+        "HSCHR1_2_CTG3",
         "KI270766.1",
-        "HSCHR1_2_CTG3"
+        "NT_187517.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -736,8 +736,8 @@
       "length": 185285,
       "md5": "628b663499df4f5de7dbdd56943bdb6e",
       "aliases": [
-        "NT_187520.1",
         "KI270765.1",
+        "NT_187520.1",
         "HSCHR1_4_CTG31"
       ],
       "sequence_role": "alt-scaffold"
@@ -747,9 +747,9 @@
       "length": 182439,
       "md5": "978987018f1a910273ebcc387e038de8",
       "aliases": [
+        "NW_003315905.1",
         "HSCHR1_1_CTG31",
-        "GL383518.1",
-        "NW_003315905.1"
+        "GL383518.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -769,9 +769,9 @@
       "length": 366580,
       "md5": "52e97087cc76c9fd73d4815c1e379ee0",
       "aliases": [
-        "HSCHR1_3_CTG31",
+        "NW_003315907.2",
         "GL383520.2",
-        "NW_003315907.2"
+        "HSCHR1_3_CTG31"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -780,9 +780,9 @@
       "length": 50258,
       "md5": "36d9e8a04906213f8c1d4cf81fc4f83f",
       "aliases": [
-        "HSCHR1_4_CTG32_1",
         "NT_187521.1",
-        "KI270764.1"
+        "KI270764.1",
+        "HSCHR1_4_CTG32_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -802,9 +802,9 @@
       "length": 425601,
       "md5": "8477794d60329af9bd00cd9277981a59",
       "aliases": [
-        "HSCHR1_1_CTG32_1",
+        "NT_187516.1",
         "KI270759.1",
-        "NT_187516.1"
+        "HSCHR1_1_CTG32_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -814,8 +814,8 @@
       "md5": "3909a76846aa6ed534ba6be66a60cc81",
       "aliases": [
         "NT_187518.1",
-        "HSCHR1_2_CTG32_1",
-        "KI270761.1"
+        "KI270761.1",
+        "HSCHR1_2_CTG32_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -824,8 +824,8 @@
       "length": 136240,
       "md5": "38181b04426519779c84cf9a8927cf00",
       "aliases": [
-        "HSCHR2_2_CTG1",
         "KI270770.1",
+        "HSCHR2_2_CTG1",
         "NT_187525.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -846,9 +846,9 @@
       "length": 223625,
       "md5": "a6d8be44258a4b8e3b55ffaccbd3b444",
       "aliases": [
+        "NT_187529.1",
         "KI270774.1",
-        "HSCHR2_4_CTG1",
-        "NT_187529.1"
+        "HSCHR2_4_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -857,8 +857,8 @@
       "length": 120616,
       "md5": "537f266cfc0ba05dfb532658fb592eb0",
       "aliases": [
-        "HSCHR2_1_CTG1",
         "KI270769.1",
+        "HSCHR2_1_CTG1",
         "NT_187522.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -868,9 +868,9 @@
       "length": 143390,
       "md5": "8c6f0a214ddbfbd52be574a566e4b21a",
       "aliases": [
-        "GL383521.1",
         "HSCHR2_1_CTG5",
-        "NW_003315908.1"
+        "NW_003315908.1",
+        "GL383521.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -880,8 +880,8 @@
       "md5": "7cc5209d7e796e90bd024204c04a9b7f",
       "aliases": [
         "HSCHR2_1_CTG7",
-        "KI270772.1",
-        "NT_187524.1"
+        "NT_187524.1",
+        "KI270772.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -890,9 +890,9 @@
       "length": 138019,
       "md5": "79c3c0ad56276d3eff8cb747b57973a3",
       "aliases": [
-        "KI270775.1",
         "HSCHR2_5_CTG7_2",
-        "NT_187531.1"
+        "NT_187531.1",
+        "KI270775.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -912,8 +912,8 @@
       "length": 110099,
       "md5": "5f6d54708a2fd0e4592319c2c91850a7",
       "aliases": [
-        "NT_187528.1",
         "KI270768.1",
+        "NT_187528.1",
         "HSCHR2_3_CTG7_2"
       ],
       "sequence_role": "alt-scaffold"
@@ -923,9 +923,9 @@
       "length": 96131,
       "md5": "485c442c93fe19514153702f0c84d952",
       "aliases": [
+        "HSCHR2_2_CTG7_2",
         "GL582966.2",
-        "NW_003571033.2",
-        "HSCHR2_2_CTG7_2"
+        "NW_003571033.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -934,9 +934,9 @@
       "length": 123821,
       "md5": "df3e809f9a87f792218db18db51f6ad4",
       "aliases": [
+        "GL383522.1",
         "NW_003315909.1",
-        "HSCHR2_1_CTG7_2",
-        "GL383522.1"
+        "HSCHR2_1_CTG7_2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -946,8 +946,8 @@
       "md5": "87fe3336a33a4aa9c04ff7991aa78a11",
       "aliases": [
         "HSCHR2_3_CTG15",
-        "NT_187527.1",
-        "KI270776.1"
+        "KI270776.1",
+        "NT_187527.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -967,8 +967,8 @@
       "length": 173151,
       "md5": "42f48ed9d46aded55795ef64e4713d55",
       "aliases": [
-        "JH636055.2",
         "HSCHR3_1_CTG1",
+        "JH636055.2",
         "NW_003871060.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -989,9 +989,9 @@
       "length": 224108,
       "md5": "2c050e6aeecf29b54469dea8c5631057",
       "aliases": [
+        "KI270780.1",
         "NT_187537.1",
-        "HSCHR3_4_CTG2_1",
-        "KI270780.1"
+        "HSCHR3_4_CTG2_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1011,9 +1011,9 @@
       "length": 173649,
       "md5": "9673b29322cf16da2d295778229c1772",
       "aliases": [
-        "NT_187533.1",
         "HSCHR3_2_CTG2_1",
-        "KI270777.1"
+        "KI270777.1",
+        "NT_187533.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1023,8 +1023,8 @@
       "md5": "f0053d7b401730af8c34cd7d20dd0a91",
       "aliases": [
         "KI270778.1",
-        "NT_187536.1",
-        "HSCHR3_3_CTG2_1"
+        "HSCHR3_3_CTG2_1",
+        "NT_187536.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1033,8 +1033,8 @@
       "length": 113034,
       "md5": "c94ff451868540e0399bf62acb24e1dd",
       "aliases": [
-        "NT_187538.1",
         "KI270781.1",
+        "NT_187538.1",
         "HSCHR3_5_CTG2_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1044,9 +1044,9 @@
       "length": 205312,
       "md5": "3eec883e9656d4c4d96ea1e6d3c118ca",
       "aliases": [
-        "NT_187532.1",
         "HSCHR3_1_CTG3",
-        "KI270779.1"
+        "KI270779.1",
+        "NT_187532.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1055,9 +1055,9 @@
       "length": 162429,
       "md5": "ceaa7d4ca7d4b80ba9a8d9e48223de2a",
       "aliases": [
-        "KI270782.1",
+        "NT_187534.1",
         "HSCHR3_2_CTG3",
-        "NT_187534.1"
+        "KI270782.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1066,9 +1066,9 @@
       "length": 184404,
       "md5": "35980922a4773cefc710c08134d16772",
       "aliases": [
-        "KI270784.1",
         "NT_187539.1",
-        "HSCHR3_9_CTG3"
+        "HSCHR3_9_CTG3",
+        "KI270784.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1077,9 +1077,9 @@
       "length": 220246,
       "md5": "07cf7caef89c4677af575c370a1ebbb0",
       "aliases": [
+        "KI270790.1",
         "NT_187540.1",
-        "HSCHR4_1_CTG4",
-        "KI270790.1"
+        "HSCHR4_1_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1088,9 +1088,9 @@
       "length": 376187,
       "md5": "2948653361f974fbed3e26a4dfbf332c",
       "aliases": [
-        "NW_003315915.1",
         "GL383528.1",
-        "HSCHR4_1_CTG6"
+        "HSCHR4_1_CTG6",
+        "NW_003315915.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1111,8 +1111,8 @@
       "md5": "03c6c36060cd6c9f9b4fd0b096ff40e2",
       "aliases": [
         "GL000257.2",
-        "NT_167250.2",
-        "HSCHR4_1_CTG9"
+        "HSCHR4_1_CTG9",
+        "NT_167250.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1122,8 +1122,8 @@
       "md5": "463baeb6369579e0d387371989492dc0",
       "aliases": [
         "KI270788.1",
-        "HSCHR4_4_CTG12",
-        "NT_187544.1"
+        "NT_187544.1",
+        "HSCHR4_4_CTG12"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1154,9 +1154,9 @@
       "length": 205944,
       "md5": "3c9ef00afbe249de4934eeac37d64233",
       "aliases": [
-        "HSCHR4_5_CTG12",
         "KI270789.1",
-        "NT_187545.1"
+        "NT_187545.1",
+        "HSCHR4_5_CTG12"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1166,8 +1166,8 @@
       "md5": "107c6b17f17b5d24936663fe8e70cd2a",
       "aliases": [
         "HSCHR4_3_CTG12",
-        "KI270786.1",
-        "NT_187543.1"
+        "NT_187543.1",
+        "KI270786.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1187,8 +1187,8 @@
       "length": 179043,
       "md5": "3677eaca510b7e7c5f30ec8382a09d24",
       "aliases": [
-        "HSCHR5_4_CTG1",
         "NT_187548.1",
+        "HSCHR5_4_CTG1",
         "KI270792.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1199,8 +1199,8 @@
       "md5": "3a62433e49995583fc44e640241a60bf",
       "aliases": [
         "HSCHR5_3_CTG1",
-        "KI270791.1",
-        "NT_187547.1"
+        "NT_187547.1",
+        "KI270791.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1221,8 +1221,8 @@
       "md5": "20d5046bbd2a21729fdd64fa94bdd5a1",
       "aliases": [
         "HSCHR5_2_CTG1",
-        "NW_003571036.1",
-        "GL949742.1"
+        "GL949742.1",
+        "NW_003571036.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1231,9 +1231,9 @@
       "length": 164558,
       "md5": "9808234a2843375d92d4c34e262373b5",
       "aliases": [
+        "KI270794.1",
         "NT_187551.1",
-        "HSCHR5_6_CTG1",
-        "KI270794.1"
+        "HSCHR5_6_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1242,8 +1242,8 @@
       "length": 1612928,
       "md5": "1b6fa375fdf382778e6645d822d12254",
       "aliases": [
-        "GL339449.2",
         "NW_003315917.2",
+        "GL339449.2",
         "HSCHR5_2_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1253,9 +1253,9 @@
       "length": 101241,
       "md5": "adcb4048e465b6b949990853e436a136",
       "aliases": [
-        "GL383530.1",
         "NW_003315918.1",
-        "HSCHR5_3_CTG1_1"
+        "HSCHR5_3_CTG1_1",
+        "GL383530.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1264,9 +1264,9 @@
       "length": 172708,
       "md5": "6b125232b8842fafd4179203620fa2be",
       "aliases": [
-        "HSCHR5_4_CTG1_1",
+        "NT_187549.1",
         "KI270796.1",
-        "NT_187549.1"
+        "HSCHR5_4_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1275,9 +1275,9 @@
       "length": 173459,
       "md5": "9161d10779b02fa44b841136ef9e499c",
       "aliases": [
+        "HSCHR5_1_CTG5",
         "NW_003315919.1",
-        "GL383531.1",
-        "HSCHR5_1_CTG5"
+        "GL383531.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1287,8 +1287,8 @@
       "md5": "6670fafb8f6ceb4f46392f3178f29666",
       "aliases": [
         "KI270795.1",
-        "HSCHR5_2_CTG5",
-        "NT_187546.1"
+        "NT_187546.1",
+        "HSCHR5_2_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1308,9 +1308,9 @@
       "length": 175808,
       "md5": "3ed7e87ce250a8466359176e96d6a6a5",
       "aliases": [
+        "HSCHR6_1_CTG7",
         "NT_187555.1",
-        "KI270800.1",
-        "HSCHR6_1_CTG7"
+        "KI270800.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1319,9 +1319,9 @@
       "length": 152148,
       "md5": "80fd907ae0e4d20ad13960cb92ab6d45",
       "aliases": [
-        "HSCHR6_1_CTG6",
         "KI270799.1",
-        "NT_187554.1"
+        "NT_187554.1",
+        "HSCHR6_1_CTG6"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1341,9 +1341,9 @@
       "length": 870480,
       "md5": "bd0c66e2085cf16906ebc6b130862bd6",
       "aliases": [
-        "KI270801.1",
+        "HSCHR6_1_CTG8",
         "NT_187556.1",
-        "HSCHR6_1_CTG8"
+        "KI270801.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1352,9 +1352,9 @@
       "length": 75005,
       "md5": "c66357c9b0909ee32c75286796602ce3",
       "aliases": [
+        "NT_187557.1",
         "KI270802.1",
-        "HSCHR6_1_CTG9",
-        "NT_187557.1"
+        "HSCHR6_1_CTG9"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1363,9 +1363,9 @@
       "length": 185823,
       "md5": "332d693d4f2026747d670e52836694ea",
       "aliases": [
+        "HSCHR6_1_CTG3",
         "NW_004166862.2",
-        "KB021644.2",
-        "HSCHR6_1_CTG3"
+        "KB021644.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1374,9 +1374,9 @@
       "length": 197536,
       "md5": "2b76b3d07dc4cb2992e7125c19e32594",
       "aliases": [
+        "KI270797.1",
         "NT_187552.1",
-        "HSCHR6_1_CTG4",
-        "KI270797.1"
+        "HSCHR6_1_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1396,9 +1396,9 @@
       "length": 157952,
       "md5": "9babd3431c32811769c782703f7b8c3d",
       "aliases": [
-        "KI270804.1",
+        "HSCHR7_1_CTG1",
         "NT_187558.1",
-        "HSCHR7_1_CTG1"
+        "KI270804.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1418,9 +1418,9 @@
       "length": 158166,
       "md5": "b55d6ad642408486735aede89d70c0c5",
       "aliases": [
-        "KI270806.1",
         "HSCHR7_1_CTG4_4",
-        "NT_187559.1"
+        "NT_187559.1",
+        "KI270806.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1440,8 +1440,8 @@
       "length": 1111570,
       "md5": "986e63220694b8c91bad1d6d990f6c83",
       "aliases": [
-        "KI270803.1",
         "NT_187562.1",
+        "KI270803.1",
         "HSCHR7_2_CTG6"
       ],
       "sequence_role": "alt-scaffold"
@@ -1451,9 +1451,9 @@
       "length": 271455,
       "md5": "52ce11809c32fe22003c5039e407d3e4",
       "aliases": [
-        "KI270808.1",
         "NT_187564.1",
-        "HSCHR7_3_CTG6"
+        "HSCHR7_3_CTG6",
+        "KI270808.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1463,8 +1463,8 @@
       "md5": "4da184771ac6a8644e6df506bbd8a35e",
       "aliases": [
         "HSCHR7_2_CTG7",
-        "KI270807.1",
-        "NT_187563.1"
+        "NT_187563.1",
+        "KI270807.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1473,9 +1473,9 @@
       "length": 209988,
       "md5": "d3a95141230a470a930f685fbce90a04",
       "aliases": [
-        "KI270805.1",
+        "HSCHR7_1_CTG7",
         "NT_187560.1",
-        "HSCHR7_1_CTG7"
+        "KI270805.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1495,8 +1495,8 @@
       "length": 282736,
       "md5": "93b572cdabe748641570fa2ed3391222",
       "aliases": [
-        "HSCHR8_2_CTG1",
         "KI270812.1",
+        "HSCHR8_2_CTG1",
         "NT_187568.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1506,9 +1506,9 @@
       "length": 292436,
       "md5": "dacc0b0ef9fae890a1741dca03ba7d5c",
       "aliases": [
-        "HSCHR8_1_CTG1",
         "KI270811.1",
-        "NT_187565.1"
+        "NT_187565.1",
+        "HSCHR8_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1518,8 +1518,8 @@
       "md5": "bbdee492e8852d313be96b6340fbfb1c",
       "aliases": [
         "HSCHR8_8_CTG1",
-        "KI270821.1",
-        "NT_187576.1"
+        "NT_187576.1",
+        "KI270821.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1528,9 +1528,9 @@
       "length": 300230,
       "md5": "c91599edb1c553cf527c7f3ba754bb20",
       "aliases": [
-        "HSCHR8_3_CTG1",
+        "NT_187570.1",
         "KI270813.1",
-        "NT_187570.1"
+        "HSCHR8_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1539,9 +1539,9 @@
       "length": 624492,
       "md5": "2cd6749ad4385747595c0b41440cb41d",
       "aliases": [
-        "HSCHR8_9_CTG1",
         "KI270822.1",
-        "NT_187577.1"
+        "NT_187577.1",
+        "HSCHR8_9_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1550,9 +1550,9 @@
       "length": 141812,
       "md5": "84d9d4bbbac92a40b13809e501ff92fe",
       "aliases": [
-        "KI270814.1",
         "NT_187566.1",
-        "HSCHR8_1_CTG6"
+        "HSCHR8_1_CTG6",
+        "KI270814.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1561,9 +1561,9 @@
       "length": 374415,
       "md5": "369545bbf4f206fd1175a84da12b38fc",
       "aliases": [
+        "KI270810.1",
         "NT_187567.1",
-        "HSCHR8_1_CTG7",
-        "KI270810.1"
+        "HSCHR8_1_CTG7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1572,8 +1572,8 @@
       "length": 133535,
       "md5": "29d6d49a19ae259feb012f492ab83ce0",
       "aliases": [
-        "KI270819.1",
         "HSCHR8_5_CTG7",
+        "KI270819.1",
         "NT_187574.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1583,9 +1583,9 @@
       "length": 36640,
       "md5": "d3b4609d5f29708fc33023259e4b775a",
       "aliases": [
-        "NT_187575.1",
         "KI270820.1",
-        "HSCHR8_6_CTG7"
+        "HSCHR8_6_CTG7",
+        "NT_187575.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1605,9 +1605,9 @@
       "length": 305841,
       "md5": "60bb5379ab4d817058300ef606b9fee6",
       "aliases": [
-        "HSCHR8_3_CTG7",
         "KI270816.1",
-        "NT_187571.1"
+        "NT_187571.1",
+        "HSCHR8_3_CTG7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1616,9 +1616,9 @@
       "length": 132244,
       "md5": "8be72bf872ff1edfc3f43cd9b7d0b9b3",
       "aliases": [
-        "NT_187569.1",
         "HSCHR8_2_CTG7",
-        "KI270815.1"
+        "KI270815.1",
+        "NT_187569.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1627,9 +1627,9 @@
       "length": 162988,
       "md5": "12406aad3f3da31bda9c21a1aa0e16b6",
       "aliases": [
-        "GL383539.1",
         "NW_003315928.1",
-        "HSCHR9_1_CTG1"
+        "HSCHR9_1_CTG1",
+        "GL383539.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1638,8 +1638,8 @@
       "length": 71551,
       "md5": "23aea04f46682e2a2be1a5ff3934a9fe",
       "aliases": [
-        "NW_003315929.1",
         "GL383540.1",
+        "NW_003315929.1",
         "HSCHR9_1_CTG2"
       ],
       "sequence_role": "alt-scaffold"
@@ -1660,9 +1660,9 @@
       "length": 60032,
       "md5": "12a3180640a49f33c960eb12ca61a6c4",
       "aliases": [
-        "NW_003315931.1",
+        "GL383542.1",
         "HSCHR9_1_CTG4",
-        "GL383542.1"
+        "NW_003315931.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1671,9 +1671,9 @@
       "length": 439082,
       "md5": "ad4baa1567e313eda0aad427008e10cf",
       "aliases": [
-        "HSCHR9_1_CTG5",
         "KI270823.1",
-        "NT_187578.1"
+        "NT_187578.1",
+        "HSCHR9_1_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1683,8 +1683,8 @@
       "md5": "c27dc6fea378fecf178a44682257c25e",
       "aliases": [
         "GL383545.1",
-        "NW_003315934.1",
-        "HSCHR10_1_CTG1"
+        "HSCHR10_1_CTG1",
+        "NW_003315934.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1694,8 +1694,8 @@
       "md5": "af40e32c32de290cfe497a110ff3bdfa",
       "aliases": [
         "KI270824.1",
-        "NT_187579.1",
-        "HSCHR10_1_CTG3"
+        "HSCHR10_1_CTG3",
+        "NT_187579.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1715,8 +1715,8 @@
       "length": 188315,
       "md5": "3119d196965ee9cae7aeda77131076f9",
       "aliases": [
-        "KI270825.1",
-        "HSCHR10_1_CTG4"
+        "HSCHR10_1_CTG4",
+        "KI270825.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1725,9 +1725,9 @@
       "length": 210133,
       "md5": "2b63a3f97e490e807587639807d26293",
       "aliases": [
-        "KI270832.1",
+        "HSCHR11_1_CTG8",
         "NT_187586.1",
-        "HSCHR11_1_CTG8"
+        "KI270832.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1736,9 +1736,9 @@
       "length": 177092,
       "md5": "dbe0c94a39d4a91469ffa6e509b3f191",
       "aliases": [
-        "NT_187584.1",
+        "KI270830.1",
         "HSCHR11_1_CTG6",
-        "KI270830.1"
+        "NT_187584.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1747,8 +1747,8 @@
       "length": 296895,
       "md5": "b0f755388212c03651b6fdc7531c3fd2",
       "aliases": [
-        "HSCHR11_1_CTG7",
         "NT_187585.1",
+        "HSCHR11_1_CTG7",
         "KI270831.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1758,8 +1758,8 @@
       "length": 204059,
       "md5": "6bc1308e442a1662ae27952f126b7c01",
       "aliases": [
-        "HSCHR11_1_CTG5",
         "KI270829.1",
+        "HSCHR11_1_CTG5",
         "NT_187583.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1780,9 +1780,9 @@
       "length": 200998,
       "md5": "8ac9fb9d942dba38bfd30f8d767f4bba",
       "aliases": [
-        "NW_003871073.1",
+        "JH159136.1",
         "HG142_HG150_NOVEL_TEST",
-        "JH159136.1"
+        "NW_003871073.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1802,8 +1802,8 @@
       "length": 67707,
       "md5": "86017dee76a03e3dc3c8833018101fae",
       "aliases": [
-        "KI270827.1",
         "NT_187582.1",
+        "KI270827.1",
         "HSCHR11_1_CTG3"
       ],
       "sequence_role": "alt-scaffold"
@@ -1825,8 +1825,8 @@
       "md5": "3dd30a7638c3a3c518fc15571546b1be",
       "aliases": [
         "NW_003571049.1",
-        "GL877875.1",
-        "HSCHR12_1_CTG1"
+        "HSCHR12_1_CTG1",
+        "GL877875.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1835,9 +1835,9 @@
       "length": 408271,
       "md5": "5c3a364520bf7ed46894abdce8f6e032",
       "aliases": [
-        "GL877876.1",
+        "NW_003571050.1",
         "HSCHR12_2_CTG2",
-        "NW_003571050.1"
+        "GL877876.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1846,9 +1846,9 @@
       "length": 40090,
       "md5": "e749a70a94624f09e134600d122c130d",
       "aliases": [
-        "KI270837.1",
         "HSCHR12_5_CTG2",
-        "NT_187588.1"
+        "NT_187588.1",
+        "KI270837.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1857,9 +1857,9 @@
       "length": 120804,
       "md5": "60a7c1711d7f23fd7311a7e4f96896f7",
       "aliases": [
-        "NW_003315938.1",
+        "HSCHR12_1_CTG2",
         "GL383549.1",
-        "HSCHR12_1_CTG2"
+        "NW_003315938.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1869,8 +1869,8 @@
       "md5": "b163c6fa013f6cb75b01088689f1a67f",
       "aliases": [
         "KI270835.1",
-        "HSCHR12_4_CTG2",
-        "NT_187587.1"
+        "NT_187587.1",
+        "HSCHR12_4_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1879,9 +1879,9 @@
       "length": 169178,
       "md5": "d61d9a153c3fd556b48e1c511a6145e4",
       "aliases": [
-        "GL383550.2",
+        "HSCHR12_1_CTG2_1",
         "NW_003315939.2",
-        "HSCHR12_1_CTG2_1"
+        "GL383550.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1890,9 +1890,9 @@
       "length": 138655,
       "md5": "c28f12c6ee0dec4cc6995766a710960c",
       "aliases": [
+        "NW_003315941.1",
         "GL383552.1",
-        "HSCHR12_2_CTG2_1",
-        "NW_003315941.1"
+        "HSCHR12_2_CTG2_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1902,8 +1902,8 @@
       "md5": "89b111e38005345de92036b249ab6080",
       "aliases": [
         "NW_003315942.2",
-        "GL383553.2",
-        "HSCHR12_3_CTG2_1"
+        "HSCHR12_3_CTG2_1",
+        "GL383553.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1913,8 +1913,8 @@
       "md5": "3ad1c94c00299533f6acd33ea2f04df1",
       "aliases": [
         "HSCHR12_6_CTG2_1",
-        "KI270834.1",
-        "NT_187590.1"
+        "NT_187590.1",
+        "KI270834.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1923,9 +1923,9 @@
       "length": 184319,
       "md5": "d96719c32333013a51c4d6d3261f984f",
       "aliases": [
-        "HSCHR12_4_CTG2_1",
+        "NW_003315940.1",
         "GL383551.1",
-        "NW_003315940.1"
+        "HSCHR12_4_CTG2_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1945,8 +1945,8 @@
       "length": 56134,
       "md5": "28a69648439a2c02d46750eee929b20d",
       "aliases": [
-        "NT_187591.1",
         "HSCHR12_7_CTG2_1",
+        "NT_187591.1",
         "KI270836.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1956,9 +1956,9 @@
       "length": 191684,
       "md5": "d90a653d7ac3171c8fb762d0012249f7",
       "aliases": [
+        "HSCHR13_1_CTG3",
         "KI270840.1",
-        "NT_187594.1",
-        "HSCHR13_1_CTG3"
+        "NT_187594.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -1967,8 +1967,8 @@
       "length": 180306,
       "md5": "b97ea581776626ac41b69f851a85a456",
       "aliases": [
-        "KI270839.1",
         "NT_187593.1",
+        "KI270839.1",
         "HSCHR13_1_CTG2"
       ],
       "sequence_role": "alt-scaffold"
@@ -1978,8 +1978,8 @@
       "length": 103832,
       "md5": "563c8412eb284fc5321af590a4c9ab9d",
       "aliases": [
-        "HSCHR13_1_CTG6",
         "NT_187597.1",
+        "HSCHR13_1_CTG6",
         "KI270843.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -1989,9 +1989,9 @@
       "length": 169134,
       "md5": "6ac8a99077817e6bc9be36327b8aa18e",
       "aliases": [
+        "KI270841.1",
         "NT_187595.1",
-        "HSCHR13_1_CTG4",
-        "KI270841.1"
+        "HSCHR13_1_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2000,8 +2000,8 @@
       "length": 306913,
       "md5": "baf90eafb4ed6330cb151c1d5538f721",
       "aliases": [
-        "NT_187592.1",
         "KI270838.1",
+        "NT_187592.1",
         "HSCHR13_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2011,9 +2011,9 @@
       "length": 37287,
       "md5": "231dd4484df464129d3120986fe2af73",
       "aliases": [
-        "NT_187596.1",
         "HSCHR13_1_CTG5",
-        "KI270842.1"
+        "KI270842.1",
+        "NT_187596.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2023,8 +2023,8 @@
       "md5": "b64acbff6218bd210676141e4e678a82",
       "aliases": [
         "HSCHR14_1_CTG1",
-        "KI270844.1",
-        "NT_187598.1"
+        "NT_187598.1",
+        "KI270844.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2033,9 +2033,9 @@
       "length": 1511111,
       "md5": "9d380ae26e2edb178ef0121021f7a7ce",
       "aliases": [
+        "KI270847.1",
         "HSCHR14_7_CTG1",
-        "NT_187601.1",
-        "KI270847.1"
+        "NT_187601.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2044,9 +2044,9 @@
       "length": 180703,
       "md5": "51b3fa9f43d11aeb91b3debb33496d22",
       "aliases": [
-        "HSCHR14_2_CTG1",
         "KI270845.1",
-        "NT_187599.1"
+        "NT_187599.1",
+        "HSCHR14_2_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2055,9 +2055,9 @@
       "length": 1351393,
       "md5": "1ee28b84d30d13e03341b382995b05bc",
       "aliases": [
-        "HSCHR14_3_CTG1",
         "KI270846.1",
-        "NT_187600.1"
+        "NT_187600.1",
+        "HSCHR14_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2077,9 +2077,9 @@
       "length": 263054,
       "md5": "64217994ed61c2feb5412ecc5a7a37b9",
       "aliases": [
-        "HSCHR15_3_CTG3",
+        "KI270851.1",
         "NT_187604.1",
-        "KI270851.1"
+        "HSCHR15_3_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2089,8 +2089,8 @@
       "md5": "d61e4262335c4884ad97dc5d73782870",
       "aliases": [
         "HSCHR15_1_CTG3",
-        "NT_187603.1",
-        "KI270848.1"
+        "KI270848.1",
+        "NT_187603.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2099,9 +2099,9 @@
       "length": 296527,
       "md5": "4a3d54bda53308ca941d6d0e794b05cb",
       "aliases": [
+        "HSCHR15_1_CTG8",
         "GL383554.1",
-        "NW_003315943.1",
-        "HSCHR15_1_CTG8"
+        "NW_003315943.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2110,9 +2110,9 @@
       "length": 244917,
       "md5": "7966604eef1b897ee97e8dce9e79b18e",
       "aliases": [
+        "HSCHR15_3_CTG8",
         "KI270849.1",
-        "NT_187605.1",
-        "HSCHR15_3_CTG8"
+        "NT_187605.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2121,8 +2121,8 @@
       "length": 388773,
       "md5": "c904b1792869ae0565acbbdc19b9522f",
       "aliases": [
-        "NW_003315944.2",
         "HSCHR15_2_CTG8",
+        "NW_003315944.2",
         "GL383555.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -2155,8 +2155,8 @@
       "md5": "515d2b9de600d584473c20bea079f34c",
       "aliases": [
         "HSCHR16_4_CTG1",
-        "NT_187609.1",
-        "KI270856.1"
+        "KI270856.1",
+        "NT_187609.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2165,9 +2165,9 @@
       "length": 232857,
       "md5": "436afa974458133c013b037d4a2dc1c2",
       "aliases": [
+        "NT_187608.1",
         "HSCHR16_3_CTG1",
-        "KI270855.1",
-        "NT_187608.1"
+        "KI270855.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2176,9 +2176,9 @@
       "length": 2659700,
       "md5": "5e28daf08ffeafb037b6e97ba3c959e3",
       "aliases": [
+        "KI270853.1",
         "NT_187607.1",
-        "HSCHR16_1_CTG1",
-        "KI270853.1"
+        "HSCHR16_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2187,8 +2187,8 @@
       "length": 192462,
       "md5": "bed6a2667e8452a176e93e921e0c21f6",
       "aliases": [
-        "NW_003315945.1",
         "GL383556.1",
+        "NW_003315945.1",
         "HSCHR16_1_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2198,9 +2198,9 @@
       "length": 89672,
       "md5": "0989118882ce9c38635e2809e5bf71c6",
       "aliases": [
-        "NW_003315946.1",
+        "HSCHR16_2_CTG3_1",
         "GL383557.1",
-        "HSCHR16_2_CTG3_1"
+        "NW_003315946.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2220,9 +2220,9 @@
       "length": 391357,
       "md5": "f2efc8dc887a8c0101053fa14491e07f",
       "aliases": [
-        "HSCHR17_2_CTG2",
+        "NT_187613.1",
         "KI270862.1",
-        "NT_187613.1"
+        "HSCHR17_2_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2231,9 +2231,9 @@
       "length": 196688,
       "md5": "808750bf9b346e0a731a1bffac75a01e",
       "aliases": [
+        "HSCHR17_1_CTG2",
         "KI270861.1",
-        "NT_187611.1",
-        "HSCHR17_1_CTG2"
+        "NT_187611.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2254,8 +2254,8 @@
       "md5": "384b5b32f0ea2cfd15ac268a2ce07909",
       "aliases": [
         "HSCHR17_4_CTG4",
-        "JH159146.1",
-        "NW_003871091.1"
+        "NW_003871091.1",
+        "JH159146.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2275,9 +2275,9 @@
       "length": 133151,
       "md5": "fc2eb07543a6ecb0a27d9fa12cd91cfc",
       "aliases": [
-        "HSCHR17_1_CTG4",
         "NW_003315953.2",
-        "GL383564.2"
+        "GL383564.2",
+        "HSCHR17_1_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2298,8 +2298,8 @@
       "md5": "063358c8e7f81361b959efab7b3f15cc",
       "aliases": [
         "NW_003315954.1",
-        "HSCHR17_2_CTG4",
-        "GL383565.1"
+        "GL383565.1",
+        "HSCHR17_2_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2341,9 +2341,9 @@
       "length": 178921,
       "md5": "91e560df1ad6c58e7e1739178b8c7209",
       "aliases": [
+        "KI270860.1",
         "NT_187612.1",
-        "HSCHR17_1_CTG9",
-        "KI270860.1"
+        "HSCHR17_1_CTG9"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2352,9 +2352,9 @@
       "length": 111737,
       "md5": "04e6ca7eabe96be35a18eb4c0675071d",
       "aliases": [
+        "HSCHR18_4_CTG1_1",
         "KI270864.1",
-        "NT_187618.1",
-        "HSCHR18_4_CTG1_1"
+        "NT_187618.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2363,9 +2363,9 @@
       "length": 289831,
       "md5": "d9015dd9a0916a98ed8ab99fd3cdd012",
       "aliases": [
-        "HSCHR18_1_CTG1_1",
+        "GL383567.1",
         "NW_003315956.1",
-        "GL383567.1"
+        "HSCHR18_1_CTG1_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2374,9 +2374,9 @@
       "length": 164789,
       "md5": "08366c03855961f13b1d5e65920ccf74",
       "aliases": [
-        "NW_003315959.1",
+        "GL383570.1",
         "HSCHR18_2_CTG1_1",
-        "GL383570.1"
+        "NW_003315959.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2385,9 +2385,9 @@
       "length": 198278,
       "md5": "40015159c7da8f06875bb558587e3f07",
       "aliases": [
+        "GL383571.1",
         "NW_003315960.1",
-        "HSCHR18_2_CTG2",
-        "GL383571.1"
+        "HSCHR18_2_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2397,8 +2397,8 @@
       "md5": "e9aba11d18125a2bce2b1e5915e9a904",
       "aliases": [
         "HSCHR18_1_CTG2",
-        "GL383568.1",
-        "NW_003315957.1"
+        "NW_003315957.1",
+        "GL383568.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2407,9 +2407,9 @@
       "length": 167950,
       "md5": "8d13c3e7cbb2b7e1a3225c5a54fe8f44",
       "aliases": [
-        "NW_003315958.1",
         "HSCHR18_1_CTG2_1",
-        "GL383569.1"
+        "GL383569.1",
+        "NW_003315958.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2418,8 +2418,8 @@
       "length": 159547,
       "md5": "8fc7aaa775b43df3d77c9782a140a981",
       "aliases": [
-        "HSCHR18_2_CTG2_1",
         "NW_003315961.1",
+        "HSCHR18_2_CTG2_1",
         "GL383572.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2429,8 +2429,8 @@
       "length": 167999,
       "md5": "2e691a3fc5108cc7decde377ef398fde",
       "aliases": [
-        "HSCHR18_3_CTG2_1",
         "KI270863.1",
+        "HSCHR18_3_CTG2_1",
         "NT_187617.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2440,8 +2440,8 @@
       "length": 61734,
       "md5": "2dfd26bf8f217b858edc062be1846db5",
       "aliases": [
-        "NT_187622.1",
         "KI270868.1",
+        "NT_187622.1",
         "HSCHR19_5_CTG2"
       ],
       "sequence_role": "alt-scaffold"
@@ -2451,9 +2451,9 @@
       "length": 52969,
       "md5": "b95ce15823c60ab83ec7a984f3dc9ebc",
       "aliases": [
+        "KI270865.1",
         "NT_187621.1",
-        "HSCHR19_4_CTG2",
-        "KI270865.1"
+        "HSCHR19_4_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2462,9 +2462,9 @@
       "length": 385657,
       "md5": "5404455aab275489bc8e6c9fb3ead5cb",
       "aliases": [
+        "NW_003315962.1",
         "GL383573.1",
-        "HSCHR19_1_CTG2",
-        "NW_003315962.1"
+        "HSCHR19_1_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2474,8 +2474,8 @@
       "md5": "dd8730d9d33765ff135fcfadb8810280",
       "aliases": [
         "GL383575.2",
-        "HSCHR19_2_CTG2",
-        "NW_003315964.2"
+        "NW_003315964.2",
+        "HSCHR19_2_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2484,9 +2484,9 @@
       "length": 188024,
       "md5": "8d4496a682182f8273a2fad665fcf4a4",
       "aliases": [
-        "NW_003315965.1",
+        "GL383576.1",
         "HSCHR19_3_CTG2",
-        "GL383576.1"
+        "NW_003315965.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2496,8 +2496,8 @@
       "md5": "0386df1d3476e6649f919195cc072fc7",
       "aliases": [
         "NW_003315963.1",
-        "HSCHR19_1_CTG3_1",
-        "GL383574.1"
+        "GL383574.1",
+        "HSCHR19_1_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2517,9 +2517,9 @@
       "length": 233762,
       "md5": "3d8464a9e183031ea70e0e12fa231163",
       "aliases": [
-        "HSCHR19_3_CTG3_1",
+        "NT_187620.1",
         "KI270867.1",
-        "NT_187620.1"
+        "HSCHR19_3_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2528,9 +2528,9 @@
       "length": 987716,
       "md5": "d76e635e75bc038782fb3d0c195d33fb",
       "aliases": [
-        "HSCHR19LRC_COX1_CTG3_1",
+        "GL949746.1",
         "NW_003571054.1",
-        "GL949746.1"
+        "HSCHR19LRC_COX1_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2539,9 +2539,9 @@
       "length": 128386,
       "md5": "f00c218d09df83c8b515a6b5591fe30c",
       "aliases": [
-        "NW_003315966.2",
         "HSCHR20_1_CTG1",
-        "GL383577.2"
+        "GL383577.2",
+        "NW_003315966.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2550,9 +2550,9 @@
       "length": 118774,
       "md5": "2b8065d3bdbac6664d7f35c25d049113",
       "aliases": [
+        "NT_187623.1",
         "HSCHR20_1_CTG2",
-        "KI270869.1",
-        "NT_187623.1"
+        "KI270869.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2561,9 +2561,9 @@
       "length": 58661,
       "md5": "29e7c064fe54ab6b7fd8accb0363821b",
       "aliases": [
+        "KI270871.1",
         "NT_187625.1",
-        "HSCHR20_1_CTG4",
-        "KI270871.1"
+        "HSCHR20_1_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2572,9 +2572,9 @@
       "length": 183433,
       "md5": "779f6fd5220eddc54631e80b94bb905a",
       "aliases": [
+        "KI270870.1",
         "HSCHR20_1_CTG3",
-        "NT_187624.1",
-        "KI270870.1"
+        "NT_187624.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2583,8 +2583,8 @@
       "length": 63917,
       "md5": "d512f47a48fc477e7232d3b46f2bda86",
       "aliases": [
-        "HSCHR21_1_CTG1_1",
         "NW_003315967.2",
+        "HSCHR21_1_CTG1_1",
         "GL383578.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -2594,9 +2594,9 @@
       "length": 166743,
       "md5": "45c435343bfd1d94c4ff17689faf507d",
       "aliases": [
-        "NT_187628.1",
         "HSCHR21_8_CTG1_1",
-        "KI270874.1"
+        "KI270874.1",
+        "NT_187628.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2617,8 +2617,8 @@
       "md5": "631f76952802048256225746f1a14a89",
       "aliases": [
         "HSCHR21_2_CTG1_1",
-        "NW_003315968.2",
-        "GL383579.2"
+        "GL383579.2",
+        "NW_003315968.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2638,8 +2638,8 @@
       "length": 116689,
       "md5": "1c9b893acb0fb6a6d9ff1915ce9004ed",
       "aliases": [
-        "HSCHR21_4_CTG1_1",
         "GL383581.2",
+        "HSCHR21_4_CTG1_1",
         "NW_003315970.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -2650,8 +2650,8 @@
       "md5": "e8daa648582ccb498c469d4f6dcf4140",
       "aliases": [
         "KI270872.1",
-        "HSCHR21_5_CTG2",
-        "NT_187626.1"
+        "NT_187626.1",
+        "HSCHR21_5_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2660,9 +2660,9 @@
       "length": 259914,
       "md5": "8a27dfcd4c4ae0239e3207b9994d8331",
       "aliases": [
-        "HSCHR22_1_CTG3",
         "KI270875.1",
-        "NT_187629.1"
+        "NT_187629.1",
+        "HSCHR22_1_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2671,9 +2671,9 @@
       "length": 186262,
       "md5": "07e6bd13f82b45996b0165c0a2c0ebb2",
       "aliases": [
+        "HSCHR22_1_CTG6",
         "KI270878.1",
-        "NT_187632.1",
-        "HSCHR22_1_CTG6"
+        "NT_187632.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2682,9 +2682,9 @@
       "length": 304135,
       "md5": "9fb8076a6ca93af66b2878d5cf07ebb0",
       "aliases": [
+        "KI270879.1",
         "NT_187633.1",
-        "HSCHR22_1_CTG7",
-        "KI270879.1"
+        "HSCHR22_1_CTG7"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2693,9 +2693,9 @@
       "length": 263666,
       "md5": "507bafbc0e637e7e5854acab4d2b7de7",
       "aliases": [
+        "HSCHR22_1_CTG4",
         "NT_187630.1",
-        "KI270876.1",
-        "HSCHR22_1_CTG4"
+        "KI270876.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2704,9 +2704,9 @@
       "length": 101331,
       "md5": "b6724c024308122f0d19c875771d571e",
       "aliases": [
+        "KI270877.1",
         "NT_187631.1",
-        "HSCHR22_1_CTG5",
-        "KI270877.1"
+        "HSCHR22_1_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2715,9 +2715,9 @@
       "length": 96924,
       "md5": "03ed78804fcfe33fb202c22d20e1ed05",
       "aliases": [
-        "HSCHR22_1_CTG2",
+        "GL383583.2",
         "NW_003315972.2",
-        "GL383583.2"
+        "HSCHR22_1_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2726,8 +2726,8 @@
       "length": 162811,
       "md5": "1919a95f3ea48fde56ba925295086028",
       "aliases": [
-        "NW_003315971.2",
         "GL383582.2",
+        "NW_003315971.2",
         "HSCHR22_1_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2737,9 +2737,9 @@
       "length": 284869,
       "md5": "e4ed2d1ef2ee71f00075ed9537aab284",
       "aliases": [
-        "HSCHRX_1_CTG3",
+        "KI270880.1",
         "NT_187634.1",
-        "KI270880.1"
+        "HSCHRX_1_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2748,9 +2748,9 @@
       "length": 144206,
       "md5": "6370851c900248567c9bc5bee75089ab",
       "aliases": [
+        "KI270881.1",
         "NT_187635.1",
-        "HSCHRX_2_CTG12",
-        "KI270881.1"
+        "HSCHRX_2_CTG12"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2759,9 +2759,9 @@
       "length": 248807,
       "md5": "9a4ca55b5d44458dc5a1682ac6483738",
       "aliases": [
-        "HSCHR19KIR_FH15_B_HAP_CTG3_1",
         "KI270882.1",
-        "NT_187636.1"
+        "NT_187636.1",
+        "HSCHR19KIR_FH15_B_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2770,8 +2770,8 @@
       "length": 170399,
       "md5": "79916aa2c6a7669500b59ddd7b4eccec",
       "aliases": [
-        "HSCHR19KIR_G085_A_HAP_CTG3_1",
         "KI270883.1",
+        "HSCHR19KIR_G085_A_HAP_CTG3_1",
         "NT_187637.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2781,8 +2781,8 @@
       "length": 157053,
       "md5": "28517f9e5682de5e74b42ba7c84a9d41",
       "aliases": [
-        "NT_187638.1",
         "KI270884.1",
+        "NT_187638.1",
         "HSCHR19KIR_G085_BA1_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2803,8 +2803,8 @@
       "length": 204239,
       "md5": "fae7fb0677c513b24e8027969233140f",
       "aliases": [
-        "KI270886.1",
         "NT_187640.1",
+        "KI270886.1",
         "HSCHR19KIR_G248_BA2_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2814,9 +2814,9 @@
       "length": 209512,
       "md5": "3c672b8b13188d46ed1ea6806fdc9662",
       "aliases": [
-        "NT_187641.1",
         "HSCHR19KIR_GRC212_AB_HAP_CTG3_1",
-        "KI270887.1"
+        "KI270887.1",
+        "NT_187641.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2825,9 +2825,9 @@
       "length": 155532,
       "md5": "325a22a47ae227dda0c8704cf4725601",
       "aliases": [
+        "HSCHR19KIR_GRC212_BA1_HAP_CTG3_1",
         "NT_187642.1",
-        "KI270888.1",
-        "HSCHR19KIR_GRC212_BA1_HAP_CTG3_1"
+        "KI270888.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2836,8 +2836,8 @@
       "length": 170698,
       "md5": "680f4977d9743df71085eacbff34769b",
       "aliases": [
-        "HSCHR19KIR_LUCE_A_HAP_CTG3_1",
         "KI270889.1",
+        "HSCHR19KIR_LUCE_A_HAP_CTG3_1",
         "NT_187643.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2847,9 +2847,9 @@
       "length": 184499,
       "md5": "8862bbaae8fc895769859a6e89d19601",
       "aliases": [
-        "KI270890.1",
+        "HSCHR19KIR_LUCE_BDEL_HAP_CTG3_1",
         "NT_187644.1",
-        "HSCHR19KIR_LUCE_BDEL_HAP_CTG3_1"
+        "KI270890.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2858,9 +2858,9 @@
       "length": 170680,
       "md5": "0b1dd9ea37a3772563fb7298ad1f3857",
       "aliases": [
-        "KI270891.1",
         "HSCHR19KIR_RSH_A_HAP_CTG3_1",
-        "NT_187645.1"
+        "NT_187645.1",
+        "KI270891.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2869,9 +2869,9 @@
       "length": 162212,
       "md5": "24ba517f0feae1b6a95e1c65c21282be",
       "aliases": [
-        "HSCHR1_ALT2_1_CTG32_1",
         "NT_187646.1",
-        "KI270892.1"
+        "KI270892.1",
+        "HSCHR1_ALT2_1_CTG32_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2891,8 +2891,8 @@
       "length": 161218,
       "md5": "d701ebc3d24a0056dc6b9418ba4e15c7",
       "aliases": [
-        "NT_187647.1",
         "HSCHR2_2_CTG15",
+        "NT_187647.1",
         "KI270893.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2902,9 +2902,9 @@
       "length": 162896,
       "md5": "4d08672ade726bd914e62a36d734da0c",
       "aliases": [
-        "HSCHR3_3_CTG3",
+        "NT_187649.1",
         "KI270895.1",
-        "NT_187649.1"
+        "HSCHR3_3_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2913,9 +2913,9 @@
       "length": 378547,
       "md5": "751a447059436d9d5987f8417b2e2bd2",
       "aliases": [
+        "NT_187650.1",
         "HSCHR4_6_CTG12",
-        "KI270896.1",
-        "NT_187650.1"
+        "KI270896.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2924,9 +2924,9 @@
       "length": 1144418,
       "md5": "5a8582c4943187c1a842801cf17d3706",
       "aliases": [
-        "NT_187651.1",
         "KI270897.1",
-        "HSCHR5_1_CTG1_1"
+        "HSCHR5_1_CTG1_1",
+        "NT_187651.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2935,9 +2935,9 @@
       "length": 130957,
       "md5": "9919f71320ac92b1abb42e2aedea84ca",
       "aliases": [
+        "HSCHR5_3_CTG5",
         "KI270898.1",
-        "NT_187652.1",
-        "HSCHR5_3_CTG5"
+        "NT_187652.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2946,8 +2946,8 @@
       "length": 4795265,
       "md5": "e51d466e4a702acf3c9c5ffdc1ee0c51",
       "aliases": [
-        "HSCHR6_MHC_COX_CTG1",
         "GL000251.2",
+        "HSCHR6_MHC_COX_CTG1",
         "NT_113891.3"
       ],
       "sequence_role": "alt-scaffold"
@@ -2957,8 +2957,8 @@
       "length": 190869,
       "md5": "b42d6c28bfd9049414fb9d2617528db4",
       "aliases": [
-        "NT_187653.1",
         "HSCHR7_2_CTG1",
+        "NT_187653.1",
         "KI270899.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2969,8 +2969,8 @@
       "md5": "3d60ee1215e273e0c0267ad063614015",
       "aliases": [
         "KI270901.1",
-        "HSCHR8_6_CTG1",
-        "NT_187655.1"
+        "NT_187655.1",
+        "HSCHR8_6_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -2979,8 +2979,8 @@
       "length": 318687,
       "md5": "80404f3147bd316898e6b5281f32c073",
       "aliases": [
-        "KI270900.1",
         "NT_187654.1",
+        "KI270900.1",
         "HSCHR8_5_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -2990,9 +2990,9 @@
       "length": 106711,
       "md5": "f100803823a7cde3694698028e4c515c",
       "aliases": [
+        "KI270902.1",
         "HSCHR11_2_CTG1",
-        "NT_187656.1",
-        "KI270902.1"
+        "NT_187656.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3002,8 +3002,8 @@
       "md5": "5ce11ce469afc974c3024b30033dc5d8",
       "aliases": [
         "KI270903.1",
-        "NT_187657.1",
-        "HSCHR11_2_CTG1_1"
+        "HSCHR11_2_CTG1_1",
+        "NT_187657.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3012,9 +3012,9 @@
       "length": 572349,
       "md5": "6d8ebe7fb3dd3be62e34a1d2982e6f46",
       "aliases": [
+        "NT_187658.1",
         "KI270904.1",
-        "HSCHR12_3_CTG2",
-        "NT_187658.1"
+        "HSCHR12_3_CTG2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3023,8 +3023,8 @@
       "length": 196384,
       "md5": "eb8157203f051ef7cfcab1f4647f22c7",
       "aliases": [
-        "NT_187659.1",
         "KI270906.1",
+        "NT_187659.1",
         "HSCHR15_2_CTG3"
       ],
       "sequence_role": "alt-scaffold"
@@ -3034,9 +3034,9 @@
       "length": 5161414,
       "md5": "31c97360f2a53ab92bd8d6db1b1a410d",
       "aliases": [
-        "HSCHR15_4_CTG8",
         "NT_187660.1",
-        "KI270905.1"
+        "KI270905.1",
+        "HSCHR15_4_CTG8"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3046,8 +3046,8 @@
       "md5": "f5a65eb09de3017536d1b7c0b2237fbd",
       "aliases": [
         "HSCHR17_2_CTG1",
-        "KI270907.1",
-        "NT_187662.1"
+        "NT_187662.1",
+        "KI270907.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3056,8 +3056,8 @@
       "length": 157099,
       "md5": "4eef5dbfe56e13c810780221b0f6426d",
       "aliases": [
-        "KI270910.1",
         "NT_187664.1",
+        "KI270910.1",
         "HSCHR17_3_CTG2"
       ],
       "sequence_role": "alt-scaffold"
@@ -3067,8 +3067,8 @@
       "length": 325800,
       "md5": "6a46afe4c5e257b556f25c37a09fc024",
       "aliases": [
-        "KI270909.1",
         "NT_187661.1",
+        "KI270909.1",
         "HSCHR17_10_CTG4"
       ],
       "sequence_role": "alt-scaffold"
@@ -3078,9 +3078,9 @@
       "length": 88070,
       "md5": "bd147af8e713f365ff05352eb8a4508f",
       "aliases": [
+        "JH159148.1",
         "NW_003871093.1",
-        "HSCHR17_6_CTG4",
-        "JH159148.1"
+        "HSCHR17_6_CTG4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3089,9 +3089,9 @@
       "length": 1423190,
       "md5": "ef3f9ebebe7ad9f9690daedeae8a74f8",
       "aliases": [
+        "KI270908.1",
         "NT_187663.1",
-        "HSCHR17_2_CTG5",
-        "KI270908.1"
+        "HSCHR17_2_CTG5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3111,8 +3111,8 @@
       "length": 157710,
       "md5": "930ee72eaddcaf1355220cd39539c326",
       "aliases": [
-        "KI270911.1",
         "NT_187666.1",
+        "KI270911.1",
         "HSCHR18_ALT2_CTG2_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3122,9 +3122,9 @@
       "length": 729520,
       "md5": "10169e6e86933b2bf74797be020fc857",
       "aliases": [
-        "HSCHR19LRC_COX2_CTG3_1",
         "GL949747.2",
-        "NW_003571055.2"
+        "NW_003571055.2",
+        "HSCHR19LRC_COX2_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3134,8 +3134,8 @@
       "md5": "54abe159678a84e88ceb2d5271027628",
       "aliases": [
         "KB663609.1",
-        "NW_004504305.1",
-        "HSCHR22_2_CTG1"
+        "HSCHR22_2_CTG1",
+        "NW_004504305.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3144,8 +3144,8 @@
       "length": 274009,
       "md5": "a4d4a5e5b5da1e65f007116b2797a4f6",
       "aliases": [
-        "KI270913.1",
         "NT_187667.1",
+        "KI270913.1",
         "HSCHRX_2_CTG3"
       ],
       "sequence_role": "alt-scaffold"
@@ -3155,8 +3155,8 @@
       "length": 205194,
       "md5": "086e17b28e2ac14e602c5dae2c358364",
       "aliases": [
-        "NT_187668.1",
         "KI270914.1",
+        "NT_187668.1",
         "HSCHR19KIR_RSH_BA2_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3166,8 +3166,8 @@
       "length": 170665,
       "md5": "a5c43ab0e4289f3951e65fd57419782a",
       "aliases": [
-        "KI270915.1",
         "NT_187669.1",
+        "KI270915.1",
         "HSCHR19KIR_T7526_A_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3199,9 +3199,9 @@
       "length": 123111,
       "md5": "e79cb3af945f28de17d744bf24cde080",
       "aliases": [
-        "NT_187672.1",
         "HSCHR19KIR_ABC08_AB_HAP_C_P_CTG3_1",
-        "KI270918.1"
+        "KI270918.1",
+        "NT_187672.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3211,8 +3211,8 @@
       "md5": "a25ce4a282c7ead76bb2468a9a56d082",
       "aliases": [
         "NT_187673.1",
-        "KI270919.1",
-        "HSCHR19KIR_ABC08_AB_HAP_T_P_CTG3_1"
+        "HSCHR19KIR_ABC08_AB_HAP_T_P_CTG3_1",
+        "KI270919.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3221,9 +3221,9 @@
       "length": 198005,
       "md5": "009fb96b4ee6d64732dac95a1f380f41",
       "aliases": [
-        "HSCHR19KIR_FH05_A_HAP_CTG3_1",
         "KI270920.1",
-        "NT_187674.1"
+        "NT_187674.1",
+        "HSCHR19KIR_FH05_A_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3232,9 +3232,9 @@
       "length": 282224,
       "md5": "4e9f360581e618964d379d67e3b51f90",
       "aliases": [
+        "NT_187675.1",
         "HSCHR19KIR_FH05_B_HAP_CTG3_1",
-        "KI270921.1",
-        "NT_187675.1"
+        "KI270921.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3243,9 +3243,9 @@
       "length": 187935,
       "md5": "7b6dc564b92bed8df5de2c1fa8de0986",
       "aliases": [
-        "KI270922.1",
         "NT_187676.1",
-        "HSCHR19KIR_FH06_A_HAP_CTG3_1"
+        "HSCHR19KIR_FH06_A_HAP_CTG3_1",
+        "KI270922.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3254,9 +3254,9 @@
       "length": 189352,
       "md5": "5b0339dbf41b0301512639781d44d546",
       "aliases": [
+        "HSCHR19KIR_FH06_BA1_HAP_CTG3_1",
         "KI270923.1",
-        "NT_187677.1",
-        "HSCHR19KIR_FH06_BA1_HAP_CTG3_1"
+        "NT_187677.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3265,9 +3265,9 @@
       "length": 166540,
       "md5": "944759f109cad94523d1f3918ac0b382",
       "aliases": [
-        "NT_187678.1",
+        "KI270924.1",
         "HSCHR3_4_CTG3",
-        "KI270924.1"
+        "NT_187678.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3276,9 +3276,9 @@
       "length": 555799,
       "md5": "08b3f5ff9beac37e3bbc50767cf3b43b",
       "aliases": [
+        "NT_187679.1",
         "KI270925.1",
-        "HSCHR4_7_CTG12",
-        "NT_187679.1"
+        "HSCHR4_7_CTG12"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3298,8 +3298,8 @@
       "length": 229282,
       "md5": "58a00f9d6216734f0bf36a0f2294c246",
       "aliases": [
-        "NT_187680.1",
         "KI270926.1",
+        "NT_187680.1",
         "HSCHR8_7_CTG1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3309,9 +3309,9 @@
       "length": 218612,
       "md5": "159fb3a622d456897c41d93f4627d169",
       "aliases": [
+        "KI270927.1",
         "NT_187681.1",
-        "HSCHR11_3_CTG1",
-        "KI270927.1"
+        "HSCHR11_3_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3320,9 +3320,9 @@
       "length": 1064304,
       "md5": "21fd288470eea03e7424729134f472f9",
       "aliases": [
-        "GL949748.2",
+        "HSCHR19LRC_LRC_I_CTG3_1",
         "NW_003571056.2",
-        "HSCHR19LRC_LRC_I_CTG3_1"
+        "GL949748.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3331,9 +3331,9 @@
       "length": 176103,
       "md5": "efcf7ce77388977478ffe2757b8f8430",
       "aliases": [
+        "NT_187682.1",
         "HSCHR22_3_CTG1",
-        "KI270928.1",
-        "NT_187682.1"
+        "KI270928.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3342,9 +3342,9 @@
       "length": 186203,
       "md5": "9f8d51d9c1ec4887cd55a1d0d8e61469",
       "aliases": [
-        "NT_187683.1",
+        "HSCHR19KIR_FH08_A_HAP_CTG3_1",
         "KI270929.1",
-        "HSCHR19KIR_FH08_A_HAP_CTG3_1"
+        "NT_187683.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3353,8 +3353,8 @@
       "length": 200773,
       "md5": "2c5abf84ad91658f7262dff7ade3e7b1",
       "aliases": [
-        "NT_187684.1",
         "KI270930.1",
+        "NT_187684.1",
         "HSCHR19KIR_FH08_BAX_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3365,8 +3365,8 @@
       "md5": "36b9336df72c820b6efa95567a5aaf28",
       "aliases": [
         "KI270931.1",
-        "NT_187685.1",
-        "HSCHR19KIR_FH13_A_HAP_CTG3_1"
+        "HSCHR19KIR_FH13_A_HAP_CTG3_1",
+        "NT_187685.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3375,8 +3375,8 @@
       "length": 215732,
       "md5": "4a92a470a7851edf0c238a74814dece5",
       "aliases": [
-        "HSCHR19KIR_FH13_BA2_HAP_CTG3_1",
         "KI270932.1",
+        "HSCHR19KIR_FH13_BA2_HAP_CTG3_1",
         "NT_187686.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3387,8 +3387,8 @@
       "md5": "413442cc380f0bb8f15b33bc25149af1",
       "aliases": [
         "KI270933.1",
-        "HSCHR19KIR_FH15_A_HAP_CTG3_1",
-        "NT_187687.1"
+        "NT_187687.1",
+        "HSCHR19KIR_FH15_A_HAP_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3397,8 +3397,8 @@
       "length": 177381,
       "md5": "0e7a0f548f1f770b4272be1bd8b018fb",
       "aliases": [
-        "GL000209.2",
         "HSCHR19KIR_RP5_B_HAP_CTG3_1",
+        "GL000209.2",
         "NT_113949.2"
       ],
       "sequence_role": "alt-scaffold"
@@ -3408,9 +3408,9 @@
       "length": 163458,
       "md5": "43c32fd3aae0eee20305d3d735e7bbb4",
       "aliases": [
+        "NT_187688.1",
         "KI270934.1",
-        "HSCHR3_5_CTG3",
-        "NT_187688.1"
+        "HSCHR3_5_CTG3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3420,8 +3420,8 @@
       "md5": "a5cdd062ee0d61ea6b3c5166e79b472e",
       "aliases": [
         "GL000253.2",
-        "NT_167246.2",
-        "HSCHR6_MHC_MANN_CTG1"
+        "HSCHR6_MHC_MANN_CTG1",
+        "NT_167246.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3452,9 +3452,9 @@
       "length": 4827813,
       "md5": "ad357767de6beef959952d39200522ea",
       "aliases": [
+        "GL000254.2",
         "HSCHR6_MHC_MCF_CTG1",
-        "NT_167247.2",
-        "GL000254.2"
+        "NT_167247.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3463,9 +3463,9 @@
       "length": 1066390,
       "md5": "c48b453696107dc7105bce3857e1cbc6",
       "aliases": [
+        "NW_003571058.2",
         "HSCHR19LRC_LRC_S_CTG3_1",
-        "GL949750.2",
-        "NW_003571058.2"
+        "GL949750.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3474,9 +3474,9 @@
       "length": 164170,
       "md5": "64f7f27938eb4c80140f34e3d2aed483",
       "aliases": [
-        "KI270936.1",
+        "HSCHR3_7_CTG3",
         "NT_187690.1",
-        "HSCHR3_7_CTG3"
+        "KI270936.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3486,8 +3486,8 @@
       "md5": "bceeb4190283066a6d0891562b41d164",
       "aliases": [
         "HSCHR6_MHC_QBL_CTG1",
-        "GL000255.2",
-        "NT_167248.2"
+        "NT_167248.2",
+        "GL000255.2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3518,9 +3518,9 @@
       "length": 4929269,
       "md5": "a80b1b3c21ac7e7b7acf75178ae3d83c",
       "aliases": [
-        "HSCHR6_MHC_SSTO_CTG1",
         "GL000256.2",
-        "NT_167249.2"
+        "NT_167249.2",
+        "HSCHR6_MHC_SSTO_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3529,8 +3529,8 @@
       "length": 987100,
       "md5": "7d007a35ff02e56325881c68bb17b565",
       "aliases": [
-        "GL949752.1",
         "HSCHR19LRC_PGF1_CTG3_1",
+        "GL949752.1",
         "NW_003571060.1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3541,8 +3541,8 @@
       "md5": "9d0d4a56d72f18d39c7a1094deb177a0",
       "aliases": [
         "KI270758.1",
-        "HSCHR6_8_CTG1",
-        "NT_187692.1"
+        "NT_187692.1",
+        "HSCHR6_8_CTG1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3551,8 +3551,8 @@
       "length": 796479,
       "md5": "19162055ca3e800f14797b6cd37c1d4c",
       "aliases": [
-        "GL949753.2",
         "NW_003571061.2",
+        "GL949753.2",
         "HSCHR19LRC_PGF2_CTG3_1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3562,9 +3562,9 @@
       "length": 1066800,
       "md5": "9363b56f7b34fb35ab3400b1093f431a",
       "aliases": [
-        "KI270938.1",
+        "NT_187693.1",
         "HSCHR19_4_CTG3_1",
-        "NT_187693.1"
+        "KI270938.1"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3574,8 +3574,8 @@
       "md5": "c68f52674c9fb33aef52dcf399755519",
       "aliases": [
         "J01415.2",
-        "MT",
-        "NC_012920.1"
+        "NC_012920.1",
+        "MT"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -3585,8 +3585,8 @@
       "md5": "ee6dff38036f7d03478c70717643196e",
       "aliases": [
         "NT_187396.1",
-        "HSCHRUN_RANDOM_100",
-        "KI270302.1"
+        "KI270302.1",
+        "HSCHRUN_RANDOM_100"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3595,9 +3595,9 @@
       "length": 2165,
       "md5": "9423c1b46a48aa6331a77ab5c702ac9d",
       "aliases": [
-        "NT_187397.1",
         "HSCHRUN_RANDOM_101",
-        "KI270304.1"
+        "KI270304.1",
+        "NT_187397.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3606,9 +3606,9 @@
       "length": 1942,
       "md5": "2cb746c78e0faa11e628603a4bc9bd58",
       "aliases": [
-        "HSCHRUN_RANDOM_102",
+        "NT_187398.1",
         "KI270303.1",
-        "NT_187398.1"
+        "HSCHRUN_RANDOM_102"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3639,8 +3639,8 @@
       "length": 4416,
       "md5": "d898b9c5a0118e76481bf5695272959e",
       "aliases": [
-        "HSCHRUN_RANDOM_105",
         "KI270320.1",
+        "HSCHRUN_RANDOM_105",
         "NT_187401.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -3650,8 +3650,8 @@
       "length": 1201,
       "md5": "af6cb123af7007793bac06485a2a20e9",
       "aliases": [
-        "NT_187402.1",
         "HSCHRUN_RANDOM_106",
+        "NT_187402.1",
         "KI270310.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -3662,8 +3662,8 @@
       "md5": "6adde7a9fe7bd6918f12d0f0924aa8ba",
       "aliases": [
         "NT_187403.1",
-        "KI270316.1",
-        "HSCHRUN_RANDOM_107"
+        "HSCHRUN_RANDOM_107",
+        "KI270316.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3683,9 +3683,9 @@
       "length": 998,
       "md5": "26499f2fe4c65621fd8f4ecafbad31d7",
       "aliases": [
-        "NT_187405.1",
+        "KI270312.1",
         "HSCHRUN_RANDOM_109",
-        "KI270312.1"
+        "NT_187405.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3705,9 +3705,9 @@
       "length": 37690,
       "md5": "cd4b1fda800f6ec9ea8001994dbf6499",
       "aliases": [
-        "NT_187407.1",
+        "KI270317.1",
         "HSCHRUN_RANDOM_111",
-        "KI270317.1"
+        "NT_187407.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3716,9 +3716,9 @@
       "length": 1179,
       "md5": "7bb9612f733fb7f098be79499d46350c",
       "aliases": [
+        "NT_187408.1",
         "HSCHRUN_RANDOM_112",
-        "KI270412.1",
-        "NT_187408.1"
+        "KI270412.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3728,8 +3728,8 @@
       "md5": "fc240322d91d43c04f349cc58fda3eca",
       "aliases": [
         "KI270411.1",
-        "NT_187409.1",
-        "HSCHRUN_RANDOM_113"
+        "HSCHRUN_RANDOM_113",
+        "NT_187409.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3749,9 +3749,9 @@
       "length": 1029,
       "md5": "58455e7a788f0dc82034d1fb109f6f5c",
       "aliases": [
+        "NT_187411.1",
         "KI270419.1",
-        "HSCHRUN_RANDOM_115",
-        "NT_187411.1"
+        "HSCHRUN_RANDOM_115"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3772,8 +3772,8 @@
       "md5": "bac954a897539c91982a7e3985a49910",
       "aliases": [
         "KI270420.1",
-        "NT_187413.1",
-        "HSCHRUN_RANDOM_117"
+        "HSCHRUN_RANDOM_117",
+        "NT_187413.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3793,9 +3793,9 @@
       "length": 2043,
       "md5": "cd26758fda713f9c96e51d541f50c2d0",
       "aliases": [
-        "HSCHRUN_RANDOM_119",
+        "KI270417.1",
         "NT_187415.1",
-        "KI270417.1"
+        "HSCHRUN_RANDOM_119"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3804,8 +3804,8 @@
       "length": 1445,
       "md5": "3fce80eb4c0554376b591699031feb56",
       "aliases": [
-        "HSCHRUN_RANDOM_120",
         "NT_187416.1",
+        "HSCHRUN_RANDOM_120",
         "KI270422.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -3815,9 +3815,9 @@
       "length": 981,
       "md5": "bdf5a85c001731dccfb150db2bfe58ac",
       "aliases": [
+        "KI270423.1",
         "NT_187417.1",
-        "HSCHRUN_RANDOM_121",
-        "KI270423.1"
+        "HSCHRUN_RANDOM_121"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3827,8 +3827,8 @@
       "md5": "665a46879bbb48294b0cfa87b61e71f6",
       "aliases": [
         "NT_187418.1",
-        "HSCHRUN_RANDOM_122",
-        "KI270425.1"
+        "KI270425.1",
+        "HSCHRUN_RANDOM_122"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3837,9 +3837,9 @@
       "length": 1361,
       "md5": "ee8962dbef9396884f649e566b78bf06",
       "aliases": [
+        "NT_187419.1",
         "KI270429.1",
-        "HSCHRUN_RANDOM_123",
-        "NT_187419.1"
+        "HSCHRUN_RANDOM_123"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3849,8 +3849,8 @@
       "md5": "796289c4cda40e358991f9e672490015",
       "aliases": [
         "KI270442.1",
-        "NT_187420.1",
-        "HSCHRUN_RANDOM_124"
+        "HSCHRUN_RANDOM_124",
+        "NT_187420.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3859,9 +3859,9 @@
       "length": 1233,
       "md5": "530b7033716a5d72dd544213c513fd12",
       "aliases": [
-        "HSCHRUN_RANDOM_125",
         "KI270466.1",
-        "NT_187421.1"
+        "NT_187421.1",
+        "HSCHRUN_RANDOM_125"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3870,9 +3870,9 @@
       "length": 1774,
       "md5": "bb1b2323414425c46531b3c3d22ae00d",
       "aliases": [
-        "NT_187422.1",
+        "KI270465.1",
         "HSCHRUN_RANDOM_126",
-        "KI270465.1"
+        "NT_187422.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3881,9 +3881,9 @@
       "length": 3920,
       "md5": "db34e0dc109a4afd499b5ec6aaae9754",
       "aliases": [
+        "HSCHRUN_RANDOM_127",
         "KI270467.1",
-        "NT_187423.1",
-        "HSCHRUN_RANDOM_127"
+        "NT_187423.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3893,8 +3893,8 @@
       "md5": "1655c75415b9c29e143a815f44286d05",
       "aliases": [
         "NT_187424.1",
-        "HSCHRUN_RANDOM_128",
-        "KI270435.1"
+        "KI270435.1",
+        "HSCHRUN_RANDOM_128"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3904,8 +3904,8 @@
       "md5": "e765271939b854dd6826aa764e930c87",
       "aliases": [
         "KI270438.1",
-        "NT_187425.1",
-        "HSCHRUN_RANDOM_129"
+        "HSCHRUN_RANDOM_129",
+        "NT_187425.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3925,9 +3925,9 @@
       "length": 2415,
       "md5": "cd7348b3b5d9d0dfef6aed2af75ce920",
       "aliases": [
-        "KI270510.1",
         "NT_187427.1",
-        "HSCHRUN_RANDOM_131"
+        "HSCHRUN_RANDOM_131",
+        "KI270510.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3936,9 +3936,9 @@
       "length": 2318,
       "md5": "1cdeb8c823d839e1d1735b5bc9a14856",
       "aliases": [
-        "KI270509.1",
         "NT_187428.1",
-        "HSCHRUN_RANDOM_132"
+        "HSCHRUN_RANDOM_132",
+        "KI270509.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3947,9 +3947,9 @@
       "length": 2186,
       "md5": "3fd898b62ca859f50fb8b83e7706352b",
       "aliases": [
+        "NT_187429.1",
         "HSCHRUN_RANDOM_133",
-        "KI270518.1",
-        "NT_187429.1"
+        "KI270518.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3958,8 +3958,8 @@
       "length": 1951,
       "md5": "7d42a358d472b9cbdfdf30c8742473d0",
       "aliases": [
-        "NT_187430.1",
         "KI270508.1",
+        "NT_187430.1",
         "HSCHRUN_RANDOM_134"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -3969,9 +3969,9 @@
       "length": 1300,
       "md5": "1cbaaafbbf016906a5bf5886f5a0ecb7",
       "aliases": [
+        "NT_187431.1",
         "KI270516.1",
-        "HSCHRUN_RANDOM_135",
-        "NT_187431.1"
+        "HSCHRUN_RANDOM_135"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3981,8 +3981,8 @@
       "md5": "ba1021c82d1230af856f59079e2f71b4",
       "aliases": [
         "NT_187432.1",
-        "KI270512.1",
-        "HSCHRUN_RANDOM_136"
+        "HSCHRUN_RANDOM_136",
+        "KI270512.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -3991,9 +3991,9 @@
       "length": 138126,
       "md5": "8d754e9c9afd904fba0a2cd577fcc9a1",
       "aliases": [
+        "NT_187433.1",
         "KI270519.1",
-        "HSCHRUN_RANDOM_137",
-        "NT_187433.1"
+        "HSCHRUN_RANDOM_137"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4002,9 +4002,9 @@
       "length": 5674,
       "md5": "070b4678e22501029c2e3297115216bc",
       "aliases": [
-        "NT_187434.1",
         "HSCHRUN_RANDOM_138",
-        "KI270522.1"
+        "KI270522.1",
+        "NT_187434.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4013,9 +4013,9 @@
       "length": 8127,
       "md5": "907ca34a4a2a6673632ebaf513a4c1a4",
       "aliases": [
-        "NT_187435.1",
         "HSCHRUN_RANDOM_139",
-        "KI270511.1"
+        "KI270511.1",
+        "NT_187435.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4024,8 +4024,8 @@
       "length": 6361,
       "md5": "dd7527ee8e0bdb0a43ca0b2a5456c8c3",
       "aliases": [
-        "NT_187436.1",
         "KI270515.1",
+        "NT_187436.1",
         "HSCHRUN_RANDOM_140"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4036,8 +4036,8 @@
       "md5": "311894d0a815eb07c5cac49da851cb4a",
       "aliases": [
         "KI270507.1",
-        "NT_187437.1",
-        "HSCHRUN_RANDOM_141"
+        "HSCHRUN_RANDOM_141",
+        "NT_187437.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4046,8 +4046,8 @@
       "length": 3253,
       "md5": "913440c38d95c618617ca69bb9296170",
       "aliases": [
-        "NT_187438.1",
         "HSCHRUN_RANDOM_142",
+        "NT_187438.1",
         "KI270517.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4058,8 +4058,8 @@
       "md5": "4caf890f2586daab8e4b2e2db904f05f",
       "aliases": [
         "NT_187439.1",
-        "KI270529.1",
-        "HSCHRUN_RANDOM_143"
+        "HSCHRUN_RANDOM_143",
+        "KI270529.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4068,9 +4068,9 @@
       "length": 2983,
       "md5": "d75c9235f0b8c449fc4352997c56b086",
       "aliases": [
-        "HSCHRUN_RANDOM_144",
         "KI270528.1",
-        "NT_187440.1"
+        "NT_187440.1",
+        "HSCHRUN_RANDOM_144"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4079,9 +4079,9 @@
       "length": 2168,
       "md5": "04549369e1197c626669a10164613635",
       "aliases": [
-        "KI270530.1",
+        "HSCHRUN_RANDOM_145",
         "NT_187441.1",
-        "HSCHRUN_RANDOM_145"
+        "KI270530.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4090,8 +4090,8 @@
       "length": 993,
       "md5": "19e3a982e67eafef39c5a3e4163f1e17",
       "aliases": [
-        "NT_187442.1",
         "KI270539.1",
+        "NT_187442.1",
         "HSCHRUN_RANDOM_146"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4101,8 +4101,8 @@
       "length": 91309,
       "md5": "d60b72221cc7af871f2c757577e4c92a",
       "aliases": [
-        "HSCHRUN_RANDOM_147",
         "NT_187443.1",
+        "HSCHRUN_RANDOM_147",
         "KI270538.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4134,8 +4134,8 @@
       "length": 1400,
       "md5": "b127e2e6dbe358ff192b271b8c6ee690",
       "aliases": [
-        "NT_187446.1",
         "KI270583.1",
+        "NT_187446.1",
         "HSCHRUN_RANDOM_154"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4145,9 +4145,9 @@
       "length": 2969,
       "md5": "36be47659719f47b95caa51744aa8f70",
       "aliases": [
-        "NT_187447.1",
         "HSCHRUN_RANDOM_155",
-        "KI270587.1"
+        "KI270587.1",
+        "NT_187447.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4157,8 +4157,8 @@
       "md5": "1df30dae0f605811d927dcea58e729fc",
       "aliases": [
         "HSCHRUN_RANDOM_156",
-        "KI270580.1",
-        "NT_187448.1"
+        "NT_187448.1",
+        "KI270580.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4167,8 +4167,8 @@
       "length": 7046,
       "md5": "9f26945f9f9b3f865c9ebe953cbbc1a9",
       "aliases": [
-        "KI270581.1",
         "NT_187449.1",
+        "KI270581.1",
         "HSCHRUN_RANDOM_157"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4189,8 +4189,8 @@
       "length": 44474,
       "md5": "211c215414693fe0a2399cf82e707e03",
       "aliases": [
-        "KI270589.1",
         "NT_187451.1",
+        "KI270589.1",
         "HSCHRUN_RANDOM_159"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4200,8 +4200,8 @@
       "length": 4685,
       "md5": "e8a57f147561b361091791b9010cd28b",
       "aliases": [
-        "KI270590.1",
         "NT_187452.1",
+        "KI270590.1",
         "HSCHRUN_RANDOM_160"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4222,9 +4222,9 @@
       "length": 6504,
       "md5": "6fd9804a7478d2e28160fe9f017689cb",
       "aliases": [
-        "HSCHRUN_RANDOM_162",
         "KI270582.1",
-        "NT_187454.1"
+        "NT_187454.1",
+        "HSCHRUN_RANDOM_162"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4233,9 +4233,9 @@
       "length": 6158,
       "md5": "37ffa850e69b342a8f8979bd3ffc77d4",
       "aliases": [
-        "KI270588.1",
         "NT_187455.1",
-        "HSCHRUN_RANDOM_163"
+        "HSCHRUN_RANDOM_163",
+        "KI270588.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4244,9 +4244,9 @@
       "length": 3041,
       "md5": "f4a5bfa203e9e81acb640b18fb11e78e",
       "aliases": [
-        "NT_187456.1",
         "KI270593.1",
-        "HSCHRUN_RANDOM_164"
+        "HSCHRUN_RANDOM_164",
+        "NT_187456.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4256,8 +4256,8 @@
       "md5": "d6af509d69835c9ac25a30086e5a4051",
       "aliases": [
         "NT_187457.1",
-        "HSCHRUN_RANDOM_165",
-        "KI270591.1"
+        "KI270591.1",
+        "HSCHRUN_RANDOM_165"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4266,9 +4266,9 @@
       "length": 1652,
       "md5": "c2c590706a339007b00c59e0b8937e78",
       "aliases": [
-        "HSCHRUN_RANDOM_166",
+        "NT_187458.1",
         "KI270330.1",
-        "NT_187458.1"
+        "HSCHRUN_RANDOM_166"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4277,9 +4277,9 @@
       "length": 1040,
       "md5": "f023f927ae84c5cc48dc4dce11ba90f2",
       "aliases": [
-        "HSCHRUN_RANDOM_167",
         "NT_187459.1",
-        "KI270329.1"
+        "KI270329.1",
+        "HSCHRUN_RANDOM_167"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4299,9 +4299,9 @@
       "length": 2699,
       "md5": "57baf650c47bba9b3a8b7c6d0fb55ad6",
       "aliases": [
-        "HSCHRUN_RANDOM_169",
         "KI270333.1",
-        "NT_187461.1"
+        "NT_187461.1",
+        "HSCHRUN_RANDOM_169"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4310,8 +4310,8 @@
       "length": 1048,
       "md5": "eb27188639503b524d2659a23b8262ea",
       "aliases": [
-        "KI270335.1",
         "NT_187462.1",
+        "KI270335.1",
         "HSCHRUN_RANDOM_170"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4332,8 +4332,8 @@
       "length": 1428,
       "md5": "56b462bac20d385cdfcde0155fe4c3a1",
       "aliases": [
-        "KI270340.1",
         "HSCHRUN_RANDOM_172",
+        "KI270340.1",
         "NT_187464.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4343,9 +4343,9 @@
       "length": 1026,
       "md5": "69ad2d85d870c8b0269434581e86e30e",
       "aliases": [
-        "KI270336.1",
+        "NT_187465.1",
         "HSCHRUN_RANDOM_173",
-        "NT_187465.1"
+        "KI270336.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4354,8 +4354,8 @@
       "length": 1121,
       "md5": "16fc8d71a2662a6cfec7bdeec3d810c6",
       "aliases": [
-        "NT_187466.1",
         "KI270337.1",
+        "NT_187466.1",
         "HSCHRUN_RANDOM_174"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4365,8 +4365,8 @@
       "length": 1803,
       "md5": "6edd17a912f391022edbc192d49f2489",
       "aliases": [
-        "NT_187467.1",
         "KI270363.1",
+        "NT_187467.1",
         "HSCHRUN_RANDOM_175"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4376,9 +4376,9 @@
       "length": 2855,
       "md5": "6ff66a8e589ca27d93b5bac0e5b13a87",
       "aliases": [
+        "NT_187468.1",
         "KI270364.1",
-        "HSCHRUN_RANDOM_176",
-        "NT_187468.1"
+        "HSCHRUN_RANDOM_176"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4387,9 +4387,9 @@
       "length": 3530,
       "md5": "bc82401ffd9a5ae711fa0ea34da8d2f0",
       "aliases": [
-        "KI270362.1",
+        "HSCHRUN_RANDOM_177",
         "NT_187469.1",
-        "HSCHRUN_RANDOM_177"
+        "KI270362.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4398,9 +4398,9 @@
       "length": 8320,
       "md5": "44a0b65b7ba6bcff37eca202e7d966ea",
       "aliases": [
-        "HSCHRUN_RANDOM_178",
         "KI270366.1",
-        "NT_187470.1"
+        "NT_187470.1",
+        "HSCHRUN_RANDOM_178"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4410,8 +4410,8 @@
       "md5": "fc13bda7dbd914c92fb7e49489d1350f",
       "aliases": [
         "HSCHRUN_RANDOM_179",
-        "KI270378.1",
-        "NT_187471.1"
+        "NT_187471.1",
+        "KI270378.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4420,9 +4420,9 @@
       "length": 1045,
       "md5": "3218bef25946cd95de585dfc7750f63b",
       "aliases": [
-        "KI270379.1",
+        "NT_187472.1",
         "HSCHRUN_RANDOM_180",
-        "NT_187472.1"
+        "KI270379.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4431,9 +4431,9 @@
       "length": 1298,
       "md5": "2c9b08c57c27e714d4d5259fd91b6983",
       "aliases": [
+        "HSCHRUN_RANDOM_181",
         "KI270389.1",
-        "NT_187473.1",
-        "HSCHRUN_RANDOM_181"
+        "NT_187473.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4442,9 +4442,9 @@
       "length": 2387,
       "md5": "7a64d89ea14990c16d20f4d6e7283e10",
       "aliases": [
-        "HSCHRUN_RANDOM_182",
+        "KI270390.1",
         "NT_187474.1",
-        "KI270390.1"
+        "HSCHRUN_RANDOM_182"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4454,8 +4454,8 @@
       "md5": "22a12462264340c25e912b8485cdfa91",
       "aliases": [
         "NT_187475.1",
-        "KI270387.1",
-        "HSCHRUN_RANDOM_183"
+        "HSCHRUN_RANDOM_183",
+        "KI270387.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4475,9 +4475,9 @@
       "length": 1880,
       "md5": "9069bed3c2efe7cc87227d619ad5816f",
       "aliases": [
+        "KI270396.1",
         "NT_187477.1",
-        "HSCHRUN_RANDOM_185",
-        "KI270396.1"
+        "HSCHRUN_RANDOM_185"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4486,9 +4486,9 @@
       "length": 1216,
       "md5": "76f9f3315fa4b831e93c36cd88196480",
       "aliases": [
+        "NT_187478.1",
         "HSCHRUN_RANDOM_186",
-        "KI270388.1",
-        "NT_187478.1"
+        "KI270388.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4497,9 +4497,9 @@
       "length": 970,
       "md5": "d5171e863a3d8f832f0559235987b1e5",
       "aliases": [
+        "KI270394.1",
         "HSCHRUN_RANDOM_187",
-        "NT_187479.1",
-        "KI270394.1"
+        "NT_187479.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4508,9 +4508,9 @@
       "length": 1788,
       "md5": "b9b1baaa7abf206f6b70cf31654172db",
       "aliases": [
+        "HSCHRUN_RANDOM_188",
         "KI270386.1",
-        "NT_187480.1",
-        "HSCHRUN_RANDOM_188"
+        "NT_187480.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4519,8 +4519,8 @@
       "length": 1484,
       "md5": "1fa5cf03b3eac0f1b4a64948fd09de53",
       "aliases": [
-        "KI270391.1",
         "NT_187481.1",
+        "KI270391.1",
         "HSCHRUN_RANDOM_189"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4530,9 +4530,9 @@
       "length": 1750,
       "md5": "694d75683e4a9554bcc1291edbcaee43",
       "aliases": [
-        "HSCHRUN_RANDOM_190",
         "KI270383.1",
-        "NT_187482.1"
+        "NT_187482.1",
+        "HSCHRUN_RANDOM_190"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4541,9 +4541,9 @@
       "length": 1308,
       "md5": "3724e1d70677d6b5c4bcf17fd40da111",
       "aliases": [
-        "KI270393.1",
+        "HSCHRUN_RANDOM_191",
         "NT_187483.1",
-        "HSCHRUN_RANDOM_191"
+        "KI270393.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4552,9 +4552,9 @@
       "length": 1658,
       "md5": "b06e44ea15d0a57618d6ca7d2e6ac5d2",
       "aliases": [
-        "KI270384.1",
+        "HSCHRUN_RANDOM_192",
         "NT_187484.1",
-        "HSCHRUN_RANDOM_192"
+        "KI270384.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4563,8 +4563,8 @@
       "length": 971,
       "md5": "59b3ca8de65fb171683f8a06d3b4bf0d",
       "aliases": [
-        "NT_187485.1",
         "HSCHRUN_RANDOM_193",
+        "NT_187485.1",
         "KI270392.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4586,8 +4586,8 @@
       "md5": "112a8b1df94ef0498a0bfe2d2ea5cc23",
       "aliases": [
         "KI270385.1",
-        "HSCHRUN_RANDOM_195",
-        "NT_187487.1"
+        "NT_187487.1",
+        "HSCHRUN_RANDOM_195"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4596,9 +4596,9 @@
       "length": 4215,
       "md5": "e7085cdcee6ad62f359744e13d3209fc",
       "aliases": [
+        "KI270382.1",
         "NT_187488.1",
-        "HSCHRUN_RANDOM_196",
-        "KI270382.1"
+        "HSCHRUN_RANDOM_196"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4607,9 +4607,9 @@
       "length": 1136,
       "md5": "59e8fc80b78d62325082334b43dffdba",
       "aliases": [
-        "NT_187489.1",
+        "KI270376.1",
         "HSCHRUN_RANDOM_197",
-        "KI270376.1"
+        "NT_187489.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4618,9 +4618,9 @@
       "length": 2656,
       "md5": "dbc92c9a92e558946e58b4909ec95dd5",
       "aliases": [
+        "KI270374.1",
         "NT_187490.1",
-        "HSCHRUN_RANDOM_198",
-        "KI270374.1"
+        "HSCHRUN_RANDOM_198"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4630,8 +4630,8 @@
       "md5": "53a9d5e8fd28bce5da5efcfd9114dbf2",
       "aliases": [
         "NT_187491.1",
-        "KI270372.1",
-        "HSCHRUN_RANDOM_199"
+        "HSCHRUN_RANDOM_199",
+        "KI270372.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4641,8 +4641,8 @@
       "md5": "b174fe53be245a840cd6324e39b88ced",
       "aliases": [
         "KI270373.1",
-        "HSCHRUN_RANDOM_200",
-        "NT_187492.1"
+        "NT_187492.1",
+        "HSCHRUN_RANDOM_200"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4652,8 +4652,8 @@
       "md5": "d678250c97e9b94aa390fa46e70a6d83",
       "aliases": [
         "NT_187493.1",
-        "KI270375.1",
-        "HSCHRUN_RANDOM_201"
+        "HSCHRUN_RANDOM_201",
+        "KI270375.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4662,8 +4662,8 @@
       "length": 2805,
       "md5": "a0af3d778dfeb7963e8e6d84c0c54fba",
       "aliases": [
-        "KI270371.1",
         "HSCHRUN_RANDOM_202",
+        "KI270371.1",
         "NT_187494.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4674,8 +4674,8 @@
       "md5": "0f40827c265cb813b6e723da6c9b926b",
       "aliases": [
         "KI270448.1",
-        "HSCHRUN_RANDOM_203",
-        "NT_187495.1"
+        "NT_187495.1",
+        "HSCHRUN_RANDOM_203"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4695,8 +4695,8 @@
       "length": 182896,
       "md5": "5d9ec007868d517e73543b005ba48535",
       "aliases": [
-        "GL000195.1",
         "NT_113901.1",
+        "GL000195.1",
         "HSCHRUN_RANDOM_CTG1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4706,8 +4706,8 @@
       "length": 179198,
       "md5": "f977edd13bac459cb2ed4a5457dba1b3",
       "aliases": [
-        "NT_167213.1",
         "GL000219.1",
+        "NT_167213.1",
         "HSCHRUN_RANDOM_CTG10"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4739,9 +4739,9 @@
       "length": 157432,
       "md5": "86eaea8a15a3950e37442eaaa5c9dc92",
       "aliases": [
+        "KI270741.1",
         "NT_187497.1",
-        "HSCHRUN_RANDOM_CTG17",
-        "KI270741.1"
+        "HSCHRUN_RANDOM_CTG17"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4750,8 +4750,8 @@
       "length": 15008,
       "md5": "1c1b2cd1fccbc0a99b6a447fa24d1504",
       "aliases": [
-        "NT_167220.1",
         "GL000226.1",
+        "NT_167220.1",
         "HSCHRUN_RANDOM_CTG19"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4762,8 +4762,8 @@
       "md5": "9d424fdcc98866650b58f004080a992a",
       "aliases": [
         "NT_167208.1",
-        "HSCHRUN_RANDOM_CTG2",
-        "GL000213.1"
+        "GL000213.1",
+        "HSCHRUN_RANDOM_CTG2"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4773,8 +4773,8 @@
       "md5": "3b62d9d3100f530d509e4efebd98502c",
       "aliases": [
         "NT_187498.1",
-        "HSCHRUN_RANDOM_CTG20",
-        "KI270743.1"
+        "KI270743.1",
+        "HSCHRUN_RANDOM_CTG20"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4783,9 +4783,9 @@
       "length": 168472,
       "md5": "e90aee46b947ff8c32291a6843fde3f9",
       "aliases": [
-        "NT_187499.1",
+        "KI270744.1",
         "HSCHRUN_RANDOM_CTG21",
-        "KI270744.1"
+        "NT_187499.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4805,8 +4805,8 @@
       "length": 66486,
       "md5": "c470486a0a858e14aa21d7866f83cc17",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG23",
         "NT_187501.1",
+        "HSCHRUN_RANDOM_CTG23",
         "KI270746.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4816,9 +4816,9 @@
       "length": 198735,
       "md5": "62375d812ece679c9fd2f3d08d4e22a4",
       "aliases": [
+        "KI270747.1",
         "NT_187502.1",
-        "HSCHRUN_RANDOM_CTG24",
-        "KI270747.1"
+        "HSCHRUN_RANDOM_CTG24"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4838,9 +4838,9 @@
       "length": 158759,
       "md5": "c899a7b4e911d371283f3f4058ca08b7",
       "aliases": [
+        "KI270749.1",
         "NT_187504.1",
-        "HSCHRUN_RANDOM_CTG26",
-        "KI270749.1"
+        "HSCHRUN_RANDOM_CTG26"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4849,9 +4849,9 @@
       "length": 148850,
       "md5": "c022ba92f244b7dc54ea90c4eef4d554",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG27",
         "KI270750.1",
-        "NT_187505.1"
+        "NT_187505.1",
+        "HSCHRUN_RANDOM_CTG27"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4861,8 +4861,8 @@
       "md5": "1b758bbdee0e9ca882058d916cba9d29",
       "aliases": [
         "HSCHRUN_RANDOM_CTG28",
-        "KI270751.1",
-        "NT_187506.1"
+        "NT_187506.1",
+        "KI270751.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4882,8 +4882,8 @@
       "md5": "25075fb2a1ecada67c0eb2f1fe0c7ec9",
       "aliases": [
         "KI270753.1",
-        "HSCHRUN_RANDOM_CTG30",
-        "NT_187508.1"
+        "NT_187508.1",
+        "HSCHRUN_RANDOM_CTG30"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4904,8 +4904,8 @@
       "md5": "4a7da6a658955bd787af8add3ccb5751",
       "aliases": [
         "NT_187510.1",
-        "KI270755.1",
-        "HSCHRUN_RANDOM_CTG34"
+        "HSCHRUN_RANDOM_CTG34",
+        "KI270755.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4914,8 +4914,8 @@
       "length": 79590,
       "md5": "2996b120a5a5e15dab6555f0bf92e374",
       "aliases": [
-        "NT_187511.1",
         "KI270756.1",
+        "NT_187511.1",
         "HSCHRUN_RANDOM_CTG35"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -4937,8 +4937,8 @@
       "md5": "46c2032c37f2ed899eb41c0473319a69",
       "aliases": [
         "NT_167209.1",
-        "GL000214.1",
-        "HSCHRUN_RANDOM_CTG4"
+        "HSCHRUN_RANDOM_CTG4",
+        "GL000214.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4947,9 +4947,9 @@
       "length": 186739,
       "md5": "2f31c013a4a8301deb8ab7ed1ca1cd99",
       "aliases": [
+        "KI270742.1",
         "HSCHRUN_RANDOM_CTG42",
-        "NT_187513.1",
-        "KI270742.1"
+        "NT_187513.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4969,9 +4969,9 @@
       "length": 161147,
       "md5": "1d708b54644c26c7e01c2dad5426d38c",
       "aliases": [
+        "GL000218.1",
         "NT_113889.1",
-        "HSCHRUN_RANDOM_CTG9",
-        "GL000218.1"
+        "HSCHRUN_RANDOM_CTG9"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -4980,9 +4980,9 @@
       "length": 156040895,
       "md5": "49527016a48497d9d1cbd8e4a9049bd3",
       "aliases": [
-        "NC_000023.11",
+        "X",
         "CM000685.2",
-        "X"
+        "NC_000023.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -4991,9 +4991,9 @@
       "length": 57227415,
       "md5": "b2b7e6369564d89059e763cd6e736837",
       "aliases": [
-        "Y",
+        "NC_000024.10",
         "CM000686.2",
-        "NC_000024.10"
+        "Y"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -5002,9 +5002,9 @@
       "length": 37240,
       "md5": "69e42252aead509bf56f1ea6fda91405",
       "aliases": [
+        "KI270740.1",
         "HSCHRY_RANDOM_CTG1",
-        "NT_187395.1",
-        "KI270740.1"
+        "NT_187395.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -5012,9 +5012,9 @@
       "name": "HG986_PATCH",
       "length": 186494,
       "aliases": [
+        "chr1_KN196472v1_fix",
         "KN196472.1",
-        "NW_009646194.1",
-        "chr1_KN196472v1_fix"
+        "NW_009646194.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5023,8 +5023,8 @@
       "length": 166200,
       "aliases": [
         "chr1_KN196473v1_fix",
-        "NW_009646195.1",
-        "KN196473.1"
+        "KN196473.1",
+        "NW_009646195.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5032,9 +5032,9 @@
       "name": "HG2104_PATCH",
       "length": 122022,
       "aliases": [
-        "chr1_KN196474v1_fix",
+        "KN196474.1",
         "NW_009646196.1",
-        "KN196474.1"
+        "chr1_KN196474v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5052,9 +5052,9 @@
       "name": "HG2095_PATCH",
       "length": 305542,
       "aliases": [
-        "chr1_KN538361v1_fix",
         "NW_011332688.1",
-        "KN538361.1"
+        "KN538361.1",
+        "chr1_KN538361v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5082,9 +5082,9 @@
       "name": "HG460_PATCH",
       "length": 44955,
       "aliases": [
-        "KZ559100.1",
+        "chr1_KZ559100v1_fix",
         "NW_019805487.1",
-        "chr1_KZ559100v1_fix"
+        "KZ559100.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5102,9 +5102,9 @@
       "name": "HG2571_PATCH",
       "length": 210426,
       "aliases": [
-        "MU273334.1",
+        "chr1_MU273334v1_fix",
         "NW_025791757.1",
-        "chr1_MU273334v1_fix"
+        "MU273334.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5112,9 +5112,9 @@
       "name": "HG2515_PATCH",
       "length": 211934,
       "aliases": [
-        "chr1_MU273335v1_fix",
         "MU273335.1",
-        "NW_025791758.1"
+        "NW_025791758.1",
+        "chr1_MU273335v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5122,9 +5122,9 @@
       "name": "HG2577_PATCH",
       "length": 250447,
       "aliases": [
+        "MU273336.1",
         "NW_025791759.1",
-        "chr1_MU273336v1_fix",
-        "MU273336.1"
+        "chr1_MU273336v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5132,9 +5132,9 @@
       "name": "HSCHR1_3_CTG3",
       "length": 141019,
       "aliases": [
-        "NW_014040925.1",
         "chr1_KQ458382v1_alt",
-        "KQ458382.1"
+        "KQ458382.1",
+        "NW_014040925.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5142,9 +5142,9 @@
       "name": "HSCHR1_4_CTG3",
       "length": 349938,
       "aliases": [
+        "chr1_KQ458383v1_alt",
         "KQ458383.1",
-        "NW_014040926.1",
-        "chr1_KQ458383v1_alt"
+        "NW_014040926.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5152,9 +5152,9 @@
       "name": "HSCHR1_5_CTG32_1",
       "length": 212205,
       "aliases": [
-        "KQ458384.1",
         "NW_014040927.1",
-        "chr1_KQ458384v1_alt"
+        "chr1_KQ458384v1_alt",
+        "KQ458384.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5162,9 +5162,9 @@
       "name": "HSCHR1_5_CTG3",
       "length": 278659,
       "aliases": [
-        "chr1_KQ983255v1_alt",
+        "NW_015495298.1",
         "KQ983255.1",
-        "NW_015495298.1"
+        "chr1_KQ983255v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5182,9 +5182,9 @@
       "name": "HSCHR1_8_CTG3",
       "length": 166136,
       "aliases": [
+        "chr1_KZ208904v1_alt",
         "NW_018654706.1",
-        "KZ208904.1",
-        "chr1_KZ208904v1_alt"
+        "KZ208904.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5192,9 +5192,9 @@
       "name": "HSCHR1_9_CTG3",
       "length": 140355,
       "aliases": [
+        "NW_018654707.1",
         "chr1_KZ208905v1_alt",
-        "KZ208905.1",
-        "NW_018654707.1"
+        "KZ208905.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5202,9 +5202,9 @@
       "name": "HSCHR1_12_CTG3",
       "length": 516764,
       "aliases": [
-        "chr1_MU273330v1_alt",
         "NW_025791753.1",
-        "MU273330.1"
+        "MU273330.1",
+        "chr1_MU273330v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5212,9 +5212,9 @@
       "name": "HSCHR1_5_CTG31",
       "length": 847441,
       "aliases": [
+        "NW_025791754.1",
         "chr1_MU273331v1_alt",
-        "MU273331.1",
-        "NW_025791754.1"
+        "MU273331.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5222,9 +5222,9 @@
       "name": "HSCHR1_6_CTG31",
       "length": 335159,
       "aliases": [
-        "chr1_MU273332v1_alt",
         "MU273332.1",
-        "NW_025791755.1"
+        "NW_025791755.1",
+        "chr1_MU273332v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5232,9 +5232,9 @@
       "name": "HG2233_PATCH",
       "length": 208149,
       "aliases": [
-        "chr2_KN538362v1_fix",
         "KN538362.1",
-        "NW_011332689.1"
+        "NW_011332689.1",
+        "chr2_KN538362v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5243,8 +5243,8 @@
       "length": 365499,
       "aliases": [
         "NW_011332690.1",
-        "chr2_KN538363v1_fix",
-        "KN538363.1"
+        "KN538363.1",
+        "chr2_KN538363v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5252,9 +5252,9 @@
       "name": "HG2290_PATCH",
       "length": 481245,
       "aliases": [
+        "chr2_KQ031384v1_fix",
         "KQ031384.1",
-        "NW_012132915.1",
-        "chr2_KQ031384v1_fix"
+        "NW_012132915.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5263,8 +5263,8 @@
       "length": 145975,
       "aliases": [
         "NW_021159987.1",
-        "chr2_ML143341v1_fix",
-        "ML143341.1"
+        "ML143341.1",
+        "chr2_ML143341v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5272,9 +5272,9 @@
       "name": "HG1384_PATCH",
       "length": 84043,
       "aliases": [
-        "chr2_ML143342v1_fix",
+        "NW_021159988.1",
         "ML143342.1",
-        "NW_021159988.1"
+        "chr2_ML143342v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5282,9 +5282,9 @@
       "name": "HG2494_PATCH",
       "length": 120381,
       "aliases": [
-        "NW_025791764.1",
+        "MU273341.1",
         "chr2_MU273341v1_fix",
-        "MU273341.1"
+        "NW_025791764.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5302,9 +5302,9 @@
       "name": "HG2052_PATCH",
       "length": 489404,
       "aliases": [
-        "NW_025791766.1",
+        "chr2_MU273343v1_fix",
         "MU273343.1",
-        "chr2_MU273343v1_fix"
+        "NW_025791766.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5312,9 +5312,9 @@
       "name": "HG2231_HG2496_PATCH",
       "length": 244725,
       "aliases": [
+        "NW_025791767.1",
         "chr2_MU273344v1_fix",
-        "MU273344.1",
-        "NW_025791767.1"
+        "MU273344.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5322,9 +5322,9 @@
       "name": "HG2140_PATCH",
       "length": 174385,
       "aliases": [
-        "chr2_MU273345v1_fix",
+        "MU273345.1",
         "NW_025791768.1",
-        "MU273345.1"
+        "chr2_MU273345v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5332,8 +5332,8 @@
       "name": "HSCHR2_6_CTG7_2",
       "length": 535088,
       "aliases": [
-        "KQ983256.1",
         "chr2_KQ983256v1_alt",
+        "KQ983256.1",
         "NW_015495299.1"
       ],
       "sequence_role": "novel-patch"
@@ -5342,9 +5342,9 @@
       "name": "HSCHR2_7_CTG7_2",
       "length": 181658,
       "aliases": [
-        "chr2_KZ208907v1_alt",
         "NW_018654709.1",
-        "KZ208907.1"
+        "KZ208907.1",
+        "chr2_KZ208907v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5352,9 +5352,9 @@
       "name": "HSCHR2_8_CTG7_2",
       "length": 140361,
       "aliases": [
-        "KZ208908.1",
         "NW_018654710.1",
-        "chr2_KZ208908v1_alt"
+        "chr2_KZ208908v1_alt",
+        "KZ208908.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5362,8 +5362,8 @@
       "name": "HSCHR2_10_CTG7_2",
       "length": 431782,
       "aliases": [
-        "MU273337.1",
         "chr2_MU273337v1_alt",
+        "MU273337.1",
         "NW_025791760.1"
       ],
       "sequence_role": "novel-patch"
@@ -5372,9 +5372,9 @@
       "name": "HSCHR2_11_CTG7_2",
       "length": 535251,
       "aliases": [
-        "NW_025791761.1",
+        "chr2_MU273338v1_alt",
         "MU273338.1",
-        "chr2_MU273338v1_alt"
+        "NW_025791761.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5382,8 +5382,8 @@
       "name": "HSCHR2_12_CTG7_2",
       "length": 500581,
       "aliases": [
-        "NW_025791762.1",
         "MU273339.1",
+        "NW_025791762.1",
         "chr2_MU273339v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -5402,8 +5402,8 @@
       "name": "HG2066_PATCH",
       "length": 451168,
       "aliases": [
-        "KN196475.1",
         "NW_009646197.1",
+        "KN196475.1",
         "chr3_KN196475v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -5412,9 +5412,9 @@
       "name": "HG2022_PATCH",
       "length": 305979,
       "aliases": [
-        "KN196476.1",
+        "NW_009646198.1",
         "chr3_KN196476v1_fix",
-        "NW_009646198.1"
+        "KN196476.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5422,8 +5422,8 @@
       "name": "HG126_PATCH",
       "length": 415308,
       "aliases": [
-        "NW_011332691.1",
         "chr3_KN538364v1_fix",
+        "NW_011332691.1",
         "KN538364.1"
       ],
       "sequence_role": "fix-patch"
@@ -5432,9 +5432,9 @@
       "name": "HG2235_PATCH",
       "length": 373699,
       "aliases": [
-        "chr3_KQ031385v1_fix",
         "KQ031385.1",
-        "NW_012132916.1"
+        "NW_012132916.1",
+        "chr3_KQ031385v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5443,8 +5443,8 @@
       "length": 165718,
       "aliases": [
         "chr3_KQ031386v1_fix",
-        "NW_012132917.1",
-        "KQ031386.1"
+        "KQ031386.1",
+        "NW_012132917.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5452,9 +5452,9 @@
       "name": "HG2236_PATCH",
       "length": 411654,
       "aliases": [
+        "chr3_KV766192v1_fix",
         "KV766192.1",
-        "NW_017363813.1",
-        "chr3_KV766192v1_fix"
+        "NW_017363813.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5473,8 +5473,8 @@
       "length": 469342,
       "aliases": [
         "MU273346.1",
-        "chr3_MU273346v1_fix",
-        "NW_025791769.1"
+        "NW_025791769.1",
+        "chr3_MU273346v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5482,9 +5482,9 @@
       "name": "HG2077_PATCH",
       "length": 301310,
       "aliases": [
-        "NW_025791770.1",
         "chr3_MU273347v1_fix",
-        "MU273347.1"
+        "MU273347.1",
+        "NW_025791770.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5493,8 +5493,8 @@
       "length": 475876,
       "aliases": [
         "NW_025791771.1",
-        "chr3_MU273348v1_fix",
-        "MU273348.1"
+        "MU273348.1",
+        "chr3_MU273348v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5502,9 +5502,9 @@
       "name": "HSCHR3_4_CTG1",
       "length": 175849,
       "aliases": [
+        "chr3_KZ208909v1_alt",
         "KZ208909.1",
-        "NW_018654711.1",
-        "chr3_KZ208909v1_alt"
+        "NW_018654711.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5522,9 +5522,9 @@
       "name": "HSCHR3_8_CTG2_1",
       "length": 197752,
       "aliases": [
-        "KZ559102.1",
+        "chr3_KZ559102v1_alt",
         "NW_019805489.1",
-        "chr3_KZ559102v1_alt"
+        "KZ559102.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5532,9 +5532,9 @@
       "name": "HSCHR3_9_CTG2_1",
       "length": 302885,
       "aliases": [
-        "KZ559103.1",
         "NW_019805490.1",
-        "chr3_KZ559103v1_alt"
+        "chr3_KZ559103v1_alt",
+        "KZ559103.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5543,8 +5543,8 @@
       "length": 195063,
       "aliases": [
         "chr3_KZ559105v1_alt",
-        "NW_019805492.1",
-        "KZ559105.1"
+        "KZ559105.1",
+        "NW_019805492.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5552,8 +5552,8 @@
       "name": "HSCHR3_5_CTG1",
       "length": 215443,
       "aliases": [
-        "ML143343.1",
         "NW_021159989.1",
+        "ML143343.1",
         "chr3_ML143343v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -5562,9 +5562,9 @@
       "name": "HG2023_PATCH",
       "length": 230434,
       "aliases": [
+        "chr4_KQ983257v1_fix",
         "KQ983257.1",
-        "NW_015495300.1",
-        "chr4_KQ983257v1_fix"
+        "NW_015495300.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5582,9 +5582,9 @@
       "name": "HG2525_PATCH",
       "length": 341066,
       "aliases": [
-        "chr4_ML143345v1_fix",
         "ML143345.1",
-        "NW_021159991.1"
+        "NW_021159991.1",
+        "chr4_ML143345v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5592,8 +5592,8 @@
       "name": "HG1299_PATCH",
       "length": 53476,
       "aliases": [
-        "ML143346.1",
         "NW_021159992.1",
+        "ML143346.1",
         "chr4_ML143346v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -5612,9 +5612,9 @@
       "name": "HG1296_PATCH",
       "length": 125549,
       "aliases": [
-        "chr4_ML143348v1_fix",
         "ML143348.1",
-        "NW_021159994.1"
+        "NW_021159994.1",
+        "chr4_ML143348v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5622,8 +5622,8 @@
       "name": "HG705_PATCH",
       "length": 276109,
       "aliases": [
-        "chr4_ML143349v1_fix",
         "NW_021159995.1",
+        "chr4_ML143349v1_fix",
         "ML143349.1"
       ],
       "sequence_role": "fix-patch"
@@ -5632,9 +5632,9 @@
       "name": "HG2155_PATCH",
       "length": 113364,
       "aliases": [
+        "chr4_MU273350v1_fix",
         "MU273350.1",
-        "NW_025791773.1",
-        "chr4_MU273350v1_fix"
+        "NW_025791773.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5642,9 +5642,9 @@
       "name": "HG287_PATCH",
       "length": 205691,
       "aliases": [
-        "MU273351.1",
         "NW_025791774.1",
-        "chr4_MU273351v1_fix"
+        "chr4_MU273351v1_fix",
+        "MU273351.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5652,9 +5652,9 @@
       "name": "HSCHR4_2_CTG4",
       "length": 90922,
       "aliases": [
+        "KQ090013.1",
         "NW_013171799.1",
-        "chr4_KQ090013v1_alt",
-        "KQ090013.1"
+        "chr4_KQ090013v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5663,8 +5663,8 @@
       "length": 163749,
       "aliases": [
         "KQ090014.1",
-        "NW_013171800.1",
-        "chr4_KQ090014v1_alt"
+        "chr4_KQ090014v1_alt",
+        "NW_013171800.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5682,9 +5682,9 @@
       "name": "HSCHR4_11_CTG12",
       "length": 205407,
       "aliases": [
-        "KQ983258.1",
         "NW_015495301.1",
-        "chr4_KQ983258v1_alt"
+        "chr4_KQ983258v1_alt",
+        "KQ983258.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5692,9 +5692,9 @@
       "name": "HSCHR4_12_CTG12",
       "length": 420675,
       "aliases": [
-        "KV766193.1",
         "NW_017363814.1",
-        "chr4_KV766193v1_alt"
+        "chr4_KV766193v1_alt",
+        "KV766193.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5703,8 +5703,8 @@
       "length": 308682,
       "aliases": [
         "chr4_MU273349v1_alt",
-        "NW_025791772.1",
-        "MU273349.1"
+        "MU273349.1",
+        "NW_025791772.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5712,8 +5712,8 @@
       "name": "HG30_PATCH",
       "length": 673059,
       "aliases": [
-        "chr5_KV575244v1_fix",
         "KV575244.1",
+        "chr5_KV575244v1_fix",
         "NW_016107298.1"
       ],
       "sequence_role": "fix-patch"
@@ -5722,8 +5722,8 @@
       "name": "HG1395_PATCH",
       "length": 89956,
       "aliases": [
-        "NW_021159996.1",
         "chr5_ML143350v1_fix",
+        "NW_021159996.1",
         "ML143350.1"
       ],
       "sequence_role": "fix-patch"
@@ -5732,9 +5732,9 @@
       "name": "HG1046_PATCH",
       "length": 34400,
       "aliases": [
-        "MU273352.1",
+        "NW_025791775.1",
         "chr5_MU273352v1_fix",
-        "NW_025791775.1"
+        "MU273352.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5742,9 +5742,9 @@
       "name": "HG2476_PATCH",
       "length": 208405,
       "aliases": [
+        "chr5_MU273353v1_fix",
         "MU273353.1",
-        "NW_025791776.1",
-        "chr5_MU273353v1_fix"
+        "NW_025791776.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5753,8 +5753,8 @@
       "length": 2101585,
       "aliases": [
         "NW_025791777.1",
-        "MU273354.1",
-        "chr5_MU273354v1_fix"
+        "chr5_MU273354v1_fix",
+        "MU273354.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5762,9 +5762,9 @@
       "name": "HG2308_PATCH",
       "length": 508332,
       "aliases": [
-        "MU273355.1",
+        "chr5_MU273355v1_fix",
         "NW_025791778.1",
-        "chr5_MU273355v1_fix"
+        "MU273355.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5772,9 +5772,9 @@
       "name": "HSCHR5_7_CTG1",
       "length": 139087,
       "aliases": [
+        "NW_009646199.1",
         "chr5_KN196477v1_alt",
-        "KN196477.1",
-        "NW_009646199.1"
+        "KN196477.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5782,9 +5782,9 @@
       "name": "HSCHR5_8_CTG1",
       "length": 362221,
       "aliases": [
-        "KV575243.1",
         "NW_016107297.1",
-        "chr5_KV575243v1_alt"
+        "chr5_KV575243v1_alt",
+        "KV575243.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5792,8 +5792,8 @@
       "name": "HSCHR5_9_CTG1",
       "length": 135987,
       "aliases": [
-        "NW_018654712.1",
         "chr5_KZ208910v1_alt",
+        "NW_018654712.1",
         "KZ208910.1"
       ],
       "sequence_role": "novel-patch"
@@ -5812,9 +5812,9 @@
       "name": "HG2128_PATCH",
       "length": 268330,
       "aliases": [
+        "NW_009646200.1",
         "KN196478.1",
-        "chr6_KN196478v1_fix",
-        "NW_009646200.1"
+        "chr6_KN196478v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5822,9 +5822,9 @@
       "name": "HG1651_PATCH",
       "length": 320750,
       "aliases": [
-        "chr6_KQ031387v1_fix",
+        "KQ031387.1",
         "NW_012132918.1",
-        "KQ031387.1"
+        "chr6_KQ031387v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5832,9 +5832,9 @@
       "name": "HG2072_PATCH",
       "length": 245716,
       "aliases": [
-        "chr6_KQ090016v1_fix",
         "NW_013171802.1",
-        "KQ090016.1"
+        "KQ090016.1",
+        "chr6_KQ090016v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5842,9 +5842,9 @@
       "name": "HG2121_PATCH",
       "length": 139427,
       "aliases": [
+        "KV766194.1",
         "NW_017363815.1",
-        "chr6_KV766194v1_fix",
-        "KV766194.1"
+        "chr6_KV766194v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5862,9 +5862,9 @@
       "name": "HG563_PATCH",
       "length": 73265,
       "aliases": [
+        "ML143351.1",
         "NW_021159997.1",
-        "chr6_ML143351v1_fix",
-        "ML143351.1"
+        "chr6_ML143351v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5872,9 +5872,9 @@
       "name": "HSCHR6_1_CTG10",
       "length": 82315,
       "aliases": [
-        "KQ090017.1",
         "NW_013171803.1",
-        "chr6_KQ090017v1_alt"
+        "chr6_KQ090017v1_alt",
+        "KQ090017.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5882,9 +5882,9 @@
       "name": "HSCHR6_1_CTG1",
       "length": 383128,
       "aliases": [
-        "chr6_MU273357v1_alt",
         "MU273357.1",
-        "NW_025791780.1"
+        "NW_025791780.1",
+        "chr6_MU273357v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5892,8 +5892,8 @@
       "name": "HG2239_PATCH",
       "length": 179932,
       "aliases": [
-        "chr7_KQ031388v1_fix",
         "KQ031388.1",
+        "chr7_KQ031388v1_fix",
         "NW_012132919.1"
       ],
       "sequence_role": "fix-patch"
@@ -5902,8 +5902,8 @@
       "name": "HG2088_PATCH",
       "length": 142129,
       "aliases": [
-        "KV880764.1",
         "NW_017852929.1",
+        "KV880764.1",
         "chr7_KV880764v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -5912,9 +5912,9 @@
       "name": "HG2266_PATCH",
       "length": 468267,
       "aliases": [
-        "chr7_KV880765v1_fix",
         "NW_017852930.1",
-        "KV880765.1"
+        "KV880765.1",
+        "chr7_KV880765v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5922,9 +5922,9 @@
       "name": "HG708_PATCH",
       "length": 589656,
       "aliases": [
+        "chr7_KZ208912v1_fix",
         "KZ208912.1",
-        "NW_018654714.1",
-        "chr7_KZ208912v1_fix"
+        "NW_018654714.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5942,9 +5942,9 @@
       "name": "HSCHR7_3_CTG4_4",
       "length": 680662,
       "aliases": [
-        "KZ208913.1",
         "NW_018654715.1",
-        "chr7_KZ208913v1_alt"
+        "chr7_KZ208913v1_alt",
+        "KZ208913.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5952,9 +5952,9 @@
       "name": "HSCHR7_3_CTG1",
       "length": 172555,
       "aliases": [
+        "chr7_KZ559106v1_alt",
         "KZ559106.1",
-        "NW_019805493.1",
-        "chr7_KZ559106v1_alt"
+        "NW_019805493.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -5973,8 +5973,8 @@
       "length": 156998,
       "aliases": [
         "KV880766.1",
-        "chr8_KV880766v1_fix",
-        "NW_017852931.1"
+        "NW_017852931.1",
+        "chr8_KV880766v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -5992,9 +5992,9 @@
       "name": "HG2419_PATCH",
       "length": 165120,
       "aliases": [
+        "KZ208914.1",
         "NW_018654716.1",
-        "chr8_KZ208914v1_fix",
-        "KZ208914.1"
+        "chr8_KZ208914v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6002,9 +6002,9 @@
       "name": "HG76_PATCH",
       "length": 6367528,
       "aliases": [
+        "chr8_KZ208915v1_fix",
         "NW_018654717.1",
-        "KZ208915.1",
-        "chr8_KZ208915v1_fix"
+        "KZ208915.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6012,9 +6012,9 @@
       "name": "HG2176_PATCH",
       "length": 150302,
       "aliases": [
+        "NW_025791782.1",
         "chr8_MU273359v1_fix",
-        "MU273359.1",
-        "NW_025791782.1"
+        "MU273359.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6022,9 +6022,9 @@
       "name": "HG1047_PATCH",
       "length": 39290,
       "aliases": [
-        "NW_025791783.1",
         "chr8_MU273360v1_fix",
-        "MU273360.1"
+        "MU273360.1",
+        "NW_025791783.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6032,9 +6032,9 @@
       "name": "HG2408_PATCH",
       "length": 106905,
       "aliases": [
+        "MU273361.1",
         "chr8_MU273361v1_fix",
-        "NW_025791784.1",
-        "MU273361.1"
+        "NW_025791784.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6042,8 +6042,8 @@
       "name": "HG2267_PATCH",
       "length": 429744,
       "aliases": [
-        "MU273362.1",
         "NW_025791785.1",
+        "MU273362.1",
         "chr8_MU273362v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -6052,9 +6052,9 @@
       "name": "HG2031_PATCH",
       "length": 207371,
       "aliases": [
-        "chr8_MU273363v1_fix",
         "NW_025791786.1",
-        "MU273363.1"
+        "MU273363.1",
+        "chr8_MU273363v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6062,9 +6062,9 @@
       "name": "HSCHR8_7_CTG7",
       "length": 103072,
       "aliases": [
+        "NW_019805494.1",
         "chr8_KZ559107v1_alt",
-        "KZ559107.1",
-        "NW_019805494.1"
+        "KZ559107.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6072,9 +6072,9 @@
       "name": "HG2030_PATCH",
       "length": 330164,
       "aliases": [
+        "NW_009646201.1",
         "KN196479.1",
-        "chr9_KN196479v1_fix",
-        "NW_009646201.1"
+        "chr9_KN196479v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6082,9 +6082,9 @@
       "name": "HG613_PATCH",
       "length": 25408,
       "aliases": [
-        "NW_021159999.1",
         "ML143353.1",
-        "chr9_ML143353v1_fix"
+        "chr9_ML143353v1_fix",
+        "NW_021159999.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6102,9 +6102,9 @@
       "name": "HG1012_PATCH",
       "length": 482250,
       "aliases": [
-        "MU273365.1",
         "chr9_MU273365v1_fix",
-        "NW_025791788.1"
+        "NW_025791788.1",
+        "MU273365.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6123,8 +6123,8 @@
       "length": 163882,
       "aliases": [
         "chr9_KQ090018v1_alt",
-        "KQ090018.1",
-        "NW_013171804.1"
+        "NW_013171804.1",
+        "KQ090018.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6133,8 +6133,8 @@
       "length": 134099,
       "aliases": [
         "KQ090019.1",
-        "NW_013171805.1",
-        "chr9_KQ090019v1_alt"
+        "chr9_KQ090019v1_alt",
+        "NW_013171805.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6152,8 +6152,8 @@
       "name": "HG2241_PATCH",
       "length": 14347,
       "aliases": [
-        "NW_011332692.1",
         "chr10_KN538365v1_fix",
+        "NW_011332692.1",
         "KN538365.1"
       ],
       "sequence_role": "fix-patch"
@@ -6162,9 +6162,9 @@
       "name": "HG2242_HG2243_PATCH",
       "length": 85284,
       "aliases": [
+        "chr10_KN538366v1_fix",
         "KN538366.1",
-        "NW_011332693.1",
-        "chr10_KN538366v1_fix"
+        "NW_011332693.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6173,8 +6173,8 @@
       "length": 420164,
       "aliases": [
         "NW_011332694.1",
-        "chr10_KN538367v1_fix",
-        "KN538367.1"
+        "KN538367.1",
+        "chr10_KN538367v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6182,9 +6182,9 @@
       "name": "HG2334_PATCH",
       "length": 264545,
       "aliases": [
+        "NW_013171807.1",
         "chr10_KQ090021v1_fix",
-        "KQ090021.1",
-        "NW_013171807.1"
+        "KQ090021.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6192,9 +6192,9 @@
       "name": "HG545_PATCH",
       "length": 454963,
       "aliases": [
-        "NW_021160000.1",
+        "chr10_ML143354v1_fix",
         "ML143354.1",
-        "chr10_ML143354v1_fix"
+        "NW_021160000.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6202,9 +6202,9 @@
       "name": "HG1277_PATCH",
       "length": 292944,
       "aliases": [
-        "ML143355.1",
         "NW_021160001.1",
-        "chr10_ML143355v1_fix"
+        "chr10_ML143355v1_fix",
+        "ML143355.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6212,9 +6212,9 @@
       "name": "HG2576_PATCH",
       "length": 196262,
       "aliases": [
-        "chr10_MU273367v1_fix",
         "MU273367.1",
-        "NW_025791790.1"
+        "NW_025791790.1",
+        "chr10_MU273367v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6222,9 +6222,9 @@
       "name": "HSCHR10_1_CTG6",
       "length": 185507,
       "aliases": [
-        "chr10_KQ090020v1_alt",
         "KQ090020.1",
-        "NW_013171806.1"
+        "NW_013171806.1",
+        "chr10_KQ090020v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6232,9 +6232,9 @@
       "name": "HG2217_PATCH",
       "length": 108875,
       "aliases": [
-        "KN196481.1",
+        "chr11_KN196481v1_fix",
         "NW_009646203.1",
-        "chr11_KN196481v1_fix"
+        "KN196481.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6242,9 +6242,9 @@
       "name": "HG2116_PATCH",
       "length": 181958,
       "aliases": [
-        "chr11_KQ090022v1_fix",
+        "KQ090022.1",
         "NW_013171808.1",
-        "KQ090022.1"
+        "chr11_KQ090022v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6252,9 +6252,9 @@
       "name": "HG107_HG2565_PATCH",
       "length": 204999,
       "aliases": [
-        "chr11_KQ759759v2_fix",
+        "KQ759759.2",
         "NW_015148966.2",
-        "KQ759759.2"
+        "chr11_KQ759759v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6262,9 +6262,9 @@
       "name": "HG1708_PATCH",
       "length": 140877,
       "aliases": [
+        "chr11_KV766195v1_fix",
         "KV766195.1",
-        "NW_017363816.1",
-        "chr11_KV766195v1_fix"
+        "NW_017363816.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6272,9 +6272,9 @@
       "name": "HG2060_PATCH",
       "length": 305244,
       "aliases": [
-        "KZ559108.1",
         "NW_019805495.1",
-        "chr11_KZ559108v1_fix"
+        "chr11_KZ559108v1_fix",
+        "KZ559108.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6282,9 +6282,9 @@
       "name": "HG2114_PATCH",
       "length": 279644,
       "aliases": [
-        "NW_019805496.1",
         "chr11_KZ559109v1_fix",
-        "KZ559109.1"
+        "KZ559109.1",
+        "NW_019805496.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6312,8 +6312,8 @@
       "name": "HG28_PATCH",
       "length": 270122,
       "aliases": [
-        "NW_021160004.1",
         "ML143358.1",
+        "NW_021160004.1",
         "chr11_ML143358v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -6322,9 +6322,9 @@
       "name": "HG2115_PATCH",
       "length": 217075,
       "aliases": [
-        "chr11_ML143359v1_fix",
         "ML143359.1",
-        "NW_021160005.1"
+        "NW_021160005.1",
+        "chr11_ML143359v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6332,9 +6332,9 @@
       "name": "HG2111_PATCH",
       "length": 170928,
       "aliases": [
-        "NW_021160006.1",
         "chr11_ML143360v1_fix",
-        "ML143360.1"
+        "ML143360.1",
+        "NW_021160006.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6342,9 +6342,9 @@
       "name": "HG152_PATCH",
       "length": 434831,
       "aliases": [
-        "chr11_MU273369v1_fix",
         "MU273369.1",
-        "NW_025791792.1"
+        "NW_025791792.1",
+        "chr11_MU273369v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6362,9 +6362,9 @@
       "name": "HG2578_PATCH",
       "length": 122722,
       "aliases": [
+        "NW_025791794.1",
         "MU273371.1",
-        "chr11_MU273371v1_fix",
-        "NW_025791794.1"
+        "chr11_MU273371v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6382,9 +6382,9 @@
       "name": "HSCHR11_2_CTG8",
       "length": 301637,
       "aliases": [
-        "chr11_KZ559110v1_alt",
         "KZ559110.1",
-        "NW_019805497.1"
+        "NW_019805497.1",
+        "chr11_KZ559110v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6392,9 +6392,9 @@
       "name": "HSCHR11_1_CTG3_1",
       "length": 181167,
       "aliases": [
+        "chr11_KZ559111v1_alt",
         "KZ559111.1",
-        "NW_019805498.1",
-        "chr11_KZ559111v1_alt"
+        "NW_019805498.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6422,9 +6422,9 @@
       "name": "HG1362_PATCH",
       "length": 541038,
       "aliases": [
+        "NW_011332696.1",
         "chr12_KN538369v1_fix",
-        "KN538369.1",
-        "NW_011332696.1"
+        "KN538369.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6432,9 +6432,9 @@
       "name": "HG2247_PATCH",
       "length": 86533,
       "aliases": [
+        "KN538370.1",
         "NW_011332697.1",
-        "chr12_KN538370v1_fix",
-        "KN538370.1"
+        "chr12_KN538370v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6443,8 +6443,8 @@
       "length": 315610,
       "aliases": [
         "KQ759760.1",
-        "chr12_KQ759760v1_fix",
-        "NW_015148967.1"
+        "NW_015148967.1",
+        "chr12_KQ759760v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6452,9 +6452,9 @@
       "name": "HG1815_PATCH",
       "length": 1046838,
       "aliases": [
-        "chr12_KZ208916v1_fix",
+        "KZ208916.1",
         "NW_018654718.1",
-        "KZ208916.1"
+        "chr12_KZ208916v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6463,8 +6463,8 @@
       "length": 64689,
       "aliases": [
         "KZ208917.1",
-        "chr12_KZ208917v1_fix",
-        "NW_018654719.1"
+        "NW_018654719.1",
+        "chr12_KZ208917v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6482,9 +6482,9 @@
       "name": "HG1398_PATCH",
       "length": 192531,
       "aliases": [
-        "NW_021160008.1",
+        "ML143362.1",
         "chr12_ML143362v1_fix",
-        "ML143362.1"
+        "NW_021160008.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6492,9 +6492,9 @@
       "name": "HG2554_PATCH",
       "length": 104537,
       "aliases": [
-        "NW_025791795.1",
+        "MU273372.1",
         "chr12_MU273372v1_fix",
-        "MU273372.1"
+        "NW_025791795.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6513,8 +6513,8 @@
       "length": 174808,
       "aliases": [
         "KZ208918.1",
-        "NW_018654720.1",
-        "chr12_KZ208918v1_alt"
+        "chr12_KZ208918v1_alt",
+        "NW_018654720.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6522,9 +6522,9 @@
       "name": "HSCHR12_9_CTG2_1",
       "length": 154139,
       "aliases": [
+        "NW_019805499.1",
         "chr12_KZ559112v1_alt",
-        "KZ559112.1",
-        "NW_019805499.1"
+        "KZ559112.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6533,8 +6533,8 @@
       "length": 35455,
       "aliases": [
         "KN196483.1",
-        "NW_009646205.1",
-        "chr13_KN196483v1_fix"
+        "chr13_KN196483v1_fix",
+        "NW_009646205.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6542,9 +6542,9 @@
       "name": "HG2288_HG2289_PATCH",
       "length": 206320,
       "aliases": [
-        "NW_011332698.1",
+        "chr13_KN538371v1_fix",
         "KN538371.1",
-        "chr13_KN538371v1_fix"
+        "NW_011332698.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6552,8 +6552,8 @@
       "name": "HG2291_PATCH",
       "length": 356766,
       "aliases": [
-        "KN538372.1",
         "NW_011332699.1",
+        "KN538372.1",
         "chr13_KN538372v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -6562,9 +6562,9 @@
       "name": "HG2249_PATCH",
       "length": 148762,
       "aliases": [
-        "NW_011332700.1",
+        "KN538373.1",
         "chr13_KN538373v1_fix",
-        "KN538373.1"
+        "NW_011332700.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6572,9 +6572,9 @@
       "name": "HG1817_1_PATCH",
       "length": 7309,
       "aliases": [
-        "chr13_ML143363v1_fix",
         "ML143363.1",
-        "NW_021160009.1"
+        "NW_021160009.1",
+        "chr13_ML143363v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6582,9 +6582,9 @@
       "name": "HG1523_PATCH",
       "length": 158944,
       "aliases": [
-        "ML143364.1",
         "NW_021160010.1",
-        "chr13_ML143364v1_fix"
+        "chr13_ML143364v1_fix",
+        "ML143364.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6592,9 +6592,9 @@
       "name": "HG1524_PATCH",
       "length": 65394,
       "aliases": [
-        "NW_021160011.1",
         "ML143365.1",
-        "chr13_ML143365v1_fix"
+        "chr13_ML143365v1_fix",
+        "NW_021160011.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6613,8 +6613,8 @@
       "length": 168146,
       "aliases": [
         "KQ090024.1",
-        "NW_013171810.1",
-        "chr13_KQ090024v1_alt"
+        "chr13_KQ090024v1_alt",
+        "NW_013171810.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6622,8 +6622,8 @@
       "name": "HSCHR13_1_CTG8",
       "length": 123480,
       "aliases": [
-        "KQ090025.1",
         "NW_013171811.1",
+        "KQ090025.1",
         "chr13_KQ090025v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -6632,8 +6632,8 @@
       "name": "HG1_PATCH",
       "length": 690932,
       "aliases": [
-        "NW_018654722.1",
         "chr14_KZ208920v1_fix",
+        "NW_018654722.1",
         "KZ208920.1"
       ],
       "sequence_role": "fix-patch"
@@ -6642,9 +6642,9 @@
       "name": "HG2510_PATCH",
       "length": 399183,
       "aliases": [
+        "chr14_ML143367v1_fix",
         "ML143367.1",
-        "NW_021160013.1",
-        "chr14_ML143367v1_fix"
+        "NW_021160013.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6652,9 +6652,9 @@
       "name": "HG2526_HG2573_PATCH",
       "length": 722645,
       "aliases": [
+        "NW_025791796.1",
         "chr14_MU273373v1_fix",
-        "MU273373.1",
-        "NW_025791796.1"
+        "MU273373.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6662,9 +6662,9 @@
       "name": "HSCHR14_8_CTG1",
       "length": 171798,
       "aliases": [
-        "chr14_KZ208919v1_alt",
         "NW_018654721.1",
-        "KZ208919.1"
+        "KZ208919.1",
+        "chr14_KZ208919v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6672,9 +6672,9 @@
       "name": "HSCHR14_9_CTG1",
       "length": 264228,
       "aliases": [
+        "ML143368.1",
         "NW_021160014.1",
-        "chr14_ML143368v1_alt",
-        "ML143368.1"
+        "chr14_ML143368v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6682,9 +6682,9 @@
       "name": "HG2139_PATCH",
       "length": 4998962,
       "aliases": [
-        "KN538374.1",
+        "chr15_KN538374v1_fix",
         "NW_011332701.1",
-        "chr15_KN538374v1_fix"
+        "KN538374.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6692,8 +6692,8 @@
       "name": "HG2499_PATCH",
       "length": 97763,
       "aliases": [
-        "NW_021160015.1",
         "ML143369.1",
+        "NW_021160015.1",
         "chr15_ML143369v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -6702,9 +6702,9 @@
       "name": "HG2198_PATCH",
       "length": 369264,
       "aliases": [
+        "chr15_ML143370v1_fix",
         "ML143370.1",
-        "NW_021160016.1",
-        "chr15_ML143370v1_fix"
+        "NW_021160016.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6712,9 +6712,9 @@
       "name": "HG2365_PATCH",
       "length": 5500449,
       "aliases": [
-        "chr15_ML143371v1_fix",
+        "NW_021160017.1",
         "ML143371.1",
-        "NW_021160017.1"
+        "chr15_ML143371v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6722,9 +6722,9 @@
       "name": "HG2511_PATCH",
       "length": 396515,
       "aliases": [
-        "chr15_ML143372v1_fix",
         "NW_021160018.1",
-        "ML143372.1"
+        "ML143372.1",
+        "chr15_ML143372v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6732,9 +6732,9 @@
       "name": "HG2280_PATCH",
       "length": 1154574,
       "aliases": [
-        "chr15_MU273374v1_fix",
+        "MU273374.1",
         "NW_025791797.1",
-        "MU273374.1"
+        "chr15_MU273374v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6742,9 +6742,9 @@
       "name": "HSCHR15_6_CTG8",
       "length": 2365364,
       "aliases": [
+        "chr15_KQ031389v1_alt",
         "NW_012132920.1",
-        "KQ031389.1",
-        "chr15_KQ031389v1_alt"
+        "KQ031389.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6753,8 +6753,8 @@
       "length": 204007,
       "aliases": [
         "NW_025791798.1",
-        "chr15_MU273375v1_alt",
-        "MU273375.1"
+        "MU273375.1",
+        "chr15_MU273375v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6773,8 +6773,8 @@
       "length": 480415,
       "aliases": [
         "KZ559113.1",
-        "chr16_KZ559113v1_fix",
-        "NW_019805500.1"
+        "NW_019805500.1",
+        "chr16_KZ559113v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6782,9 +6782,9 @@
       "name": "HG2471_PATCH",
       "length": 270967,
       "aliases": [
-        "ML143373.1",
         "NW_021160019.1",
-        "chr16_ML143373v1_fix"
+        "chr16_ML143373v1_fix",
+        "ML143373.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6792,8 +6792,8 @@
       "name": "HG401_PATCH",
       "length": 87715,
       "aliases": [
-        "MU273376.1",
         "chr16_MU273376v1_fix",
+        "MU273376.1",
         "NW_025791799.1"
       ],
       "sequence_role": "fix-patch"
@@ -6802,8 +6802,8 @@
       "name": "HG405_PATCH",
       "length": 334997,
       "aliases": [
-        "chr16_MU273377v1_fix",
         "NW_025791800.1",
+        "chr16_MU273377v1_fix",
         "MU273377.1"
       ],
       "sequence_role": "fix-patch"
@@ -6812,9 +6812,9 @@
       "name": "HSCHR16_3_CTG3_1",
       "length": 169136,
       "aliases": [
-        "NW_012132921.1",
         "chr16_KQ031390v1_alt",
-        "KQ031390.1"
+        "KQ031390.1",
+        "NW_012132921.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6822,8 +6822,8 @@
       "name": "HSCHR16_5_CTG1",
       "length": 59016,
       "aliases": [
-        "chr16_KQ090026v1_alt",
         "KQ090026.1",
+        "chr16_KQ090026v1_alt",
         "NW_013171812.1"
       ],
       "sequence_role": "novel-patch"
@@ -6862,9 +6862,9 @@
       "name": "HG2285_HG106_HG2252_PATCH",
       "length": 281919,
       "aliases": [
-        "KV766196.1",
         "NW_017363817.1",
-        "chr17_KV766196v1_fix"
+        "chr17_KV766196v1_fix",
+        "KV766196.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6872,9 +6872,9 @@
       "name": "HG2087_PATCH",
       "length": 137908,
       "aliases": [
-        "ML143374.1",
         "NW_021160020.1",
-        "chr17_ML143374v1_fix"
+        "chr17_ML143374v1_fix",
+        "ML143374.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6883,8 +6883,8 @@
       "length": 56695,
       "aliases": [
         "NW_021160021.1",
-        "ML143375.1",
-        "chr17_ML143375v1_fix"
+        "chr17_ML143375v1_fix",
+        "ML143375.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6892,8 +6892,8 @@
       "name": "HG2118_PATCH",
       "length": 234878,
       "aliases": [
-        "MU273379.1",
         "NW_025791802.1",
+        "MU273379.1",
         "chr17_MU273379v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -6902,8 +6902,8 @@
       "name": "HG2407_PATCH",
       "length": 538541,
       "aliases": [
-        "chr17_MU273380v1_fix",
         "NW_025791803.1",
+        "chr17_MU273380v1_fix",
         "MU273380.1"
       ],
       "sequence_role": "fix-patch"
@@ -6912,9 +6912,9 @@
       "name": "HG2251_PATCH",
       "length": 144689,
       "aliases": [
-        "MU273381.1",
         "chr17_MU273381v1_fix",
-        "NW_025791804.1"
+        "NW_025791804.1",
+        "MU273381.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6922,9 +6922,9 @@
       "name": "HG1369_PATCH",
       "length": 187626,
       "aliases": [
-        "MU273382.1",
         "NW_025791805.1",
-        "chr17_MU273382v1_fix"
+        "chr17_MU273382v1_fix",
+        "MU273382.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6933,8 +6933,8 @@
       "length": 172609,
       "aliases": [
         "chr17_MU273383v1_fix",
-        "NW_025791806.1",
-        "MU273383.1"
+        "MU273383.1",
+        "NW_025791806.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6962,9 +6962,9 @@
       "name": "HSCHR17_12_CTG4",
       "length": 116753,
       "aliases": [
-        "chr17_KZ559114v1_alt",
         "KZ559114.1",
-        "NW_019805501.1"
+        "NW_019805501.1",
+        "chr17_KZ559114v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6972,9 +6972,9 @@
       "name": "HSCHR17_13_CTG4",
       "length": 372839,
       "aliases": [
+        "chr17_MU273378v1_alt",
         "MU273378.1",
-        "NW_025791801.1",
-        "chr17_MU273378v1_alt"
+        "NW_025791801.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -6982,9 +6982,9 @@
       "name": "HG2213_PATCH",
       "length": 407387,
       "aliases": [
-        "KQ090028.1",
         "NW_013171814.1",
-        "chr18_KQ090028v1_fix"
+        "chr18_KQ090028v1_fix",
+        "KQ090028.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -6992,9 +6992,9 @@
       "name": "HG2442_PATCH",
       "length": 93070,
       "aliases": [
-        "NW_018654724.1",
+        "chr18_KZ208922v1_fix",
         "KZ208922.1",
-        "chr18_KZ208922v1_fix"
+        "NW_018654724.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7002,9 +7002,9 @@
       "name": "HG2412_PATCH",
       "length": 230843,
       "aliases": [
+        "NW_019805502.1",
         "chr18_KZ559115v1_fix",
-        "KZ559115.1",
-        "NW_019805502.1"
+        "KZ559115.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7012,9 +7012,9 @@
       "name": "HSCHR18_5_CTG1_1",
       "length": 205101,
       "aliases": [
-        "KQ458385.1",
         "NW_014040928.1",
-        "chr18_KQ458385v1_alt"
+        "chr18_KQ458385v1_alt",
+        "KQ458385.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7022,9 +7022,9 @@
       "name": "HSCHR18_1_CTG1",
       "length": 163186,
       "aliases": [
-        "chr18_KZ559116v1_alt",
         "KZ559116.1",
-        "NW_019805503.1"
+        "NW_019805503.1",
+        "chr18_KZ559116v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7032,8 +7032,8 @@
       "name": "HG2021_PATCH",
       "length": 370917,
       "aliases": [
-        "NW_009646206.1",
         "KN196484.1",
+        "NW_009646206.1",
         "chr19_KN196484v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -7043,8 +7043,8 @@
       "length": 405389,
       "aliases": [
         "chr19_KQ458386v1_fix",
-        "KQ458386.1",
-        "NW_014040929.1"
+        "NW_014040929.1",
+        "KQ458386.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7052,8 +7052,8 @@
       "name": "HG109_PATCH",
       "length": 493165,
       "aliases": [
-        "NW_021160022.1",
         "ML143376.1",
+        "NW_021160022.1",
         "chr19_ML143376v1_fix"
       ],
       "sequence_role": "fix-patch"
@@ -7062,9 +7062,9 @@
       "name": "HG2461_PATCH",
       "length": 333754,
       "aliases": [
-        "MU273384.1",
         "NW_025791807.1",
-        "chr19_MU273384v1_fix"
+        "chr19_MU273384v1_fix",
+        "MU273384.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7072,9 +7072,9 @@
       "name": "HG2569_PATCH",
       "length": 137818,
       "aliases": [
+        "MU273385.1",
         "NW_025791808.1",
-        "chr19_MU273385v1_fix",
-        "MU273385.1"
+        "chr19_MU273385v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7082,9 +7082,9 @@
       "name": "HG2469_PATCH",
       "length": 226166,
       "aliases": [
-        "MU273386.1",
+        "NW_025791809.1",
         "chr19_MU273386v1_fix",
-        "NW_025791809.1"
+        "MU273386.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7102,9 +7102,9 @@
       "name": "HSCHR19KIR_CA01-TA01_1_CTG3_1",
       "length": 170206,
       "aliases": [
-        "NW_016107301.1",
         "chr19_KV575247v1_alt",
-        "KV575247.1"
+        "KV575247.1",
+        "NW_016107301.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7122,9 +7122,9 @@
       "name": "HSCHR19KIR_CA01-TB04_CTG3_1",
       "length": 293522,
       "aliases": [
+        "NW_016107303.1",
         "chr19_KV575249v1_alt",
-        "KV575249.1",
-        "NW_016107303.1"
+        "KV575249.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7162,9 +7162,9 @@
       "name": "HSCHR19KIR_502960008-1_CTG3_1",
       "length": 166713,
       "aliases": [
-        "KV575253.1",
+        "NW_016107307.1",
         "chr19_KV575253v1_alt",
-        "NW_016107307.1"
+        "KV575253.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7173,8 +7173,8 @@
       "length": 99845,
       "aliases": [
         "NW_016107308.1",
-        "KV575254.1",
-        "chr19_KV575254v1_alt"
+        "chr19_KV575254v1_alt",
+        "KV575254.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7192,9 +7192,9 @@
       "name": "HSCHR19KIR_0019-4656-B_CTG3_1",
       "length": 223118,
       "aliases": [
+        "KV575256.1",
         "NW_016107310.1",
-        "chr19_KV575256v1_alt",
-        "KV575256.1"
+        "chr19_KV575256v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7202,8 +7202,8 @@
       "name": "HSCHR19KIR_CA04_CTG3_1",
       "length": 100553,
       "aliases": [
-        "KV575257.1",
         "chr19_KV575257v1_alt",
+        "KV575257.1",
         "NW_016107311.1"
       ],
       "sequence_role": "novel-patch"
@@ -7212,9 +7212,9 @@
       "name": "HSCHR19KIR_HG2393_CTG3_1",
       "length": 156965,
       "aliases": [
+        "chr19_KV575258v1_alt",
         "KV575258.1",
-        "NW_016107312.1",
-        "chr19_KV575258v1_alt"
+        "NW_016107312.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7232,9 +7232,9 @@
       "name": "HSCHR19KIR_HG2396_CTG3_1",
       "length": 145691,
       "aliases": [
+        "NW_016107314.1",
         "KV575260.1",
-        "chr19_KV575260v1_alt",
-        "NW_016107314.1"
+        "chr19_KV575260v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7242,9 +7242,9 @@
       "name": "HSCHR19_6_CTG2",
       "length": 89211,
       "aliases": [
-        "NW_025791810.1",
+        "chr19_MU273387v1_alt",
         "MU273387.1",
-        "chr19_MU273387v1_alt"
+        "NW_025791810.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7252,8 +7252,8 @@
       "name": "HG2225_PATCH",
       "length": 273725,
       "aliases": [
-        "chr20_MU273388v1_fix",
         "MU273388.1",
+        "chr20_MU273388v1_fix",
         "NW_025791811.1"
       ],
       "sequence_role": "fix-patch"
@@ -7262,9 +7262,9 @@
       "name": "HG410_PATCH",
       "length": 355731,
       "aliases": [
-        "chr20_MU273389v1_fix",
+        "MU273389.1",
         "NW_025791812.1",
-        "MU273389.1"
+        "chr20_MU273389v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7272,9 +7272,9 @@
       "name": "HG2513_PATCH",
       "length": 519485,
       "aliases": [
-        "chr21_ML143377v1_fix",
+        "ML143377.1",
         "NW_021160023.1",
-        "ML143377.1"
+        "chr21_ML143377v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7282,8 +7282,8 @@
       "name": "HG2219_PATCH",
       "length": 336752,
       "aliases": [
-        "MU273390.1",
         "chr21_MU273390v1_fix",
+        "MU273390.1",
         "NW_025791813.1"
       ],
       "sequence_role": "fix-patch"
@@ -7292,8 +7292,8 @@
       "name": "HG2265_PATCH",
       "length": 1020778,
       "aliases": [
-        "chr21_MU273391v1_fix",
         "MU273391.1",
+        "chr21_MU273391v1_fix",
         "NW_025791814.1"
       ],
       "sequence_role": "fix-patch"
@@ -7302,9 +7302,9 @@
       "name": "HG2521_PATCH",
       "length": 189707,
       "aliases": [
-        "chr21_MU273392v1_fix",
         "NW_025791815.1",
-        "MU273392.1"
+        "MU273392.1",
+        "chr21_MU273392v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7312,9 +7312,9 @@
       "name": "HG1311_HG2539_PATCH",
       "length": 101040,
       "aliases": [
+        "KQ759762.2",
         "NW_015148969.2",
-        "chr22_KQ759762v2_fix",
-        "KQ759762.2"
+        "chr22_KQ759762v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7322,9 +7322,9 @@
       "name": "HG1485_PATCH",
       "length": 461303,
       "aliases": [
-        "chr22_ML143378v1_fix",
         "ML143378.1",
-        "NW_021160024.1"
+        "NW_021160024.1",
+        "chr22_ML143378v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7333,8 +7333,8 @@
       "length": 12295,
       "aliases": [
         "ML143379.1",
-        "NW_021160025.1",
-        "chr22_ML143379v1_fix"
+        "chr22_ML143379v1_fix",
+        "NW_021160025.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7342,9 +7342,9 @@
       "name": "HG2512_PATCH",
       "length": 412368,
       "aliases": [
+        "NW_021160026.1",
         "chr22_ML143380v1_fix",
-        "ML143380.1",
-        "NW_021160026.1"
+        "ML143380.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7352,8 +7352,8 @@
       "name": "HSCHR22_4_CTG1",
       "length": 156562,
       "aliases": [
-        "KN196485.1",
         "NW_009646207.1",
+        "KN196485.1",
         "chr22_KN196485v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -7362,9 +7362,9 @@
       "name": "HSCHR22_5_CTG1",
       "length": 153027,
       "aliases": [
-        "KN196486.1",
         "NW_009646208.1",
-        "chr22_KN196486v1_alt"
+        "chr22_KN196486v1_alt",
+        "KN196486.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7372,9 +7372,9 @@
       "name": "HSCHR22_6_CTG1",
       "length": 155930,
       "aliases": [
-        "KQ458387.1",
+        "chr22_KQ458387v1_alt",
         "NW_014040930.1",
-        "chr22_KQ458387v1_alt"
+        "KQ458387.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7382,9 +7382,9 @@
       "name": "HSCHR22_7_CTG1",
       "length": 174749,
       "aliases": [
+        "NW_014040931.1",
         "chr22_KQ458388v1_alt",
-        "KQ458388.1",
-        "NW_014040931.1"
+        "KQ458388.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7392,8 +7392,8 @@
       "name": "HSCHR22_8_CTG1",
       "length": 145162,
       "aliases": [
-        "NW_015148968.1",
         "KQ759761.1",
+        "NW_015148968.1",
         "chr22_KQ759761v1_alt"
       ],
       "sequence_role": "novel-patch"
@@ -7402,8 +7402,8 @@
       "name": "HG439_PATCH",
       "length": 403128,
       "aliases": [
-        "ML143381.1",
         "chrX_ML143381v1_fix",
+        "ML143381.1",
         "NW_021160027.1"
       ],
       "sequence_role": "fix-patch"
@@ -7412,9 +7412,9 @@
       "name": "HG1506_PATCH",
       "length": 28824,
       "aliases": [
-        "NW_021160028.1",
+        "ML143382.1",
         "chrX_ML143382v1_fix",
-        "ML143382.1"
+        "NW_021160028.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7422,9 +7422,9 @@
       "name": "HG1507_PATCH",
       "length": 68192,
       "aliases": [
-        "ML143383.1",
+        "chrX_ML143383v1_fix",
         "NW_021160029.1",
-        "chrX_ML143383v1_fix"
+        "ML143383.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7453,8 +7453,8 @@
       "length": 68810,
       "aliases": [
         "NW_025791816.1",
-        "chrX_MU273393v1_fix",
-        "MU273393.1"
+        "MU273393.1",
+        "chrX_MU273393v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7462,9 +7462,9 @@
       "name": "HG2541_PATCH",
       "length": 140567,
       "aliases": [
-        "chrX_MU273394v1_fix",
         "MU273394.1",
-        "NW_025791817.1"
+        "NW_025791817.1",
+        "chrX_MU273394v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7472,9 +7472,9 @@
       "name": "HSCHRX_3_CTG7",
       "length": 188004,
       "aliases": [
+        "NW_017363820.1",
         "KV766199.1",
-        "chrX_KV766199v1_alt",
-        "NW_017363820.1"
+        "chrX_KV766199v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7483,8 +7483,8 @@
       "length": 619716,
       "aliases": [
         "NW_025791818.1",
-        "chrX_MU273395v1_alt",
-        "MU273395.1"
+        "MU273395.1",
+        "chrX_MU273395v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7502,9 +7502,9 @@
       "name": "HSCHRX_3_CTG3",
       "length": 330493,
       "aliases": [
+        "MU273397.1",
         "NW_025791820.1",
-        "chrX_MU273397v1_alt",
-        "MU273397.1"
+        "chrX_MU273397v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -7512,9 +7512,9 @@
       "name": "HG2062_PATCH",
       "length": 101150,
       "aliases": [
-        "chrY_KN196487v1_fix",
         "KN196487.1",
-        "NW_009646209.1"
+        "NW_009646209.1",
+        "chrY_KN196487v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7522,9 +7522,9 @@
       "name": "HG1531_PATCH",
       "length": 48370,
       "aliases": [
+        "chrY_KZ208923v1_fix",
         "NW_018654725.1",
-        "KZ208923.1",
-        "chrY_KZ208923v1_fix"
+        "KZ208923.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -7532,8 +7532,8 @@
       "name": "HG1535_PATCH",
       "length": 209722,
       "aliases": [
-        "chrY_KZ208924v1_fix",
         "KZ208924.1",
+        "chrY_KZ208924v1_fix",
         "NW_018654726.1"
       ],
       "sequence_role": "fix-patch"
@@ -7543,8 +7543,8 @@
       "length": 865743,
       "aliases": [
         "MU273398.1",
-        "NW_025791821.1",
-        "chrY_MU273398v1_fix"
+        "chrY_MU273398v1_fix",
+        "NW_025791821.1"
       ],
       "sequence_role": "fix-patch"
     }

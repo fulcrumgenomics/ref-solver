@@ -15,9 +15,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "CM000663.1",
         "NC_000001.10",
-        "1"
+        "1",
+        "CM000663.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -29,9 +29,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NC_000002.11",
+        "2",
         "CM000664.1",
-        "2"
+        "NC_000002.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -43,9 +43,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "CM000665.1",
         "3",
-        "NC_000003.11",
-        "CM000665.1"
+        "NC_000003.11"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -71,9 +71,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "5",
         "CM000667.1",
-        "NC_000005.9"
+        "NC_000005.9",
+        "5"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -85,9 +85,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "6",
         "NC_000006.11",
-        "CM000668.1"
+        "CM000668.1",
+        "6"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -99,9 +99,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "NC_000007.13",
         "7",
-        "CM000669.1",
-        "NC_000007.13"
+        "CM000669.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -127,8 +127,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NC_000009.11",
         "CM000671.1",
+        "NC_000009.11",
         "9"
       ],
       "sequence_role": "assembled-molecule"
@@ -141,8 +141,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NC_000010.10",
         "CM000672.1",
+        "NC_000010.10",
         "10"
       ],
       "sequence_role": "assembled-molecule"
@@ -169,8 +169,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "12",
         "CM000674.1",
+        "12",
         "NC_000012.11"
       ],
       "sequence_role": "assembled-molecule"
@@ -183,9 +183,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "NC_000013.10",
         "CM000675.1",
-        "13",
-        "NC_000013.10"
+        "13"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -197,8 +197,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "CM000676.1",
         "NC_000014.8",
+        "CM000676.1",
         "14"
       ],
       "sequence_role": "assembled-molecule"
@@ -212,8 +212,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "CM000677.1",
-        "15",
-        "NC_000015.9"
+        "NC_000015.9",
+        "15"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -226,8 +226,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "16",
-        "NC_000016.9",
-        "CM000678.1"
+        "CM000678.1",
+        "NC_000016.9"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -239,8 +239,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "CM000679.1",
         "17",
+        "CM000679.1",
         "NC_000017.10"
       ],
       "sequence_role": "assembled-molecule"
@@ -254,8 +254,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "NC_000018.9",
-        "CM000680.1",
-        "18"
+        "18",
+        "CM000680.1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -267,9 +267,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "CM000681.1",
         "NC_000019.9",
-        "19",
-        "CM000681.1"
+        "19"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -282,8 +282,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "20",
-        "NC_000020.10",
-        "CM000682.1"
+        "CM000682.1",
+        "NC_000020.10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -295,8 +295,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "21",
         "NC_000021.8",
+        "21",
         "CM000683.1"
       ],
       "sequence_role": "assembled-molecule"
@@ -309,8 +309,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "CM000684.1",
         "22",
+        "CM000684.1",
         "NC_000022.10"
       ],
       "sequence_role": "assembled-molecule"
@@ -323,9 +323,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NC_000023.10",
+        "X",
         "CM000685.1",
-        "X"
+        "NC_000023.10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -337,9 +337,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "CM000686.1",
         "Y",
-        "NC_000024.9",
-        "CM000686.1"
+        "NC_000024.9"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -352,8 +352,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "NC_012920.1",
-        "J01415.2",
-        "MT"
+        "MT",
+        "J01415.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -393,8 +393,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000228.1",
         "HSCHRUN_RANDOM_CTG21",
+        "GL000228.1",
         "NT_167222.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -421,9 +421,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000226.1",
         "NT_167220.1",
-        "HSCHRUN_RANDOM_CTG19",
-        "GL000226.1"
+        "HSCHRUN_RANDOM_CTG19"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -435,9 +435,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000221.1",
         "HSCHRUN_RANDOM_CTG13",
-        "NT_167215.1"
+        "NT_167215.1",
+        "GL000221.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -449,9 +449,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "NT_113949.1",
         "HSCHR19_RANDOM_CTG2",
-        "GL000209.1",
-        "NT_113949.1"
+        "GL000209.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -463,9 +463,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000218.1",
         "NT_113889.1",
-        "HSCHRUN_RANDOM_CTG9",
-        "GL000218.1"
+        "HSCHRUN_RANDOM_CTG9"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -477,9 +477,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NT_167214.1",
         "GL000220.1",
-        "HSCHRUN_RANDOM_CTG11"
+        "HSCHRUN_RANDOM_CTG11",
+        "NT_167214.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -491,9 +491,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG3",
         "NT_167208.1",
-        "GL000213.1"
+        "GL000213.1",
+        "HSCHRUN_RANDOM_CTG3"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -505,8 +505,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG1",
         "GL000211.1",
+        "HSCHRUN_RANDOM_CTG1",
         "NT_113961.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -519,8 +519,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHR9_RANDOM_CTG2",
         "NT_113916.2",
+        "HSCHR9_RANDOM_CTG2",
         "GL000199.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -533,8 +533,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NT_167212.1",
         "HSCHRUN_RANDOM_CTG7",
+        "NT_167212.1",
         "GL000217.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -575,8 +575,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHR17_RANDOM_CTG3",
         "NT_113930.1",
+        "HSCHR17_RANDOM_CTG3",
         "GL000205.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -603,9 +603,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG16",
         "NT_167218.1",
-        "GL000224.1"
+        "GL000224.1",
+        "HSCHRUN_RANDOM_CTG16"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -618,8 +618,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "NT_167217.1",
-        "GL000223.1",
-        "HSCHRUN_RANDOM_CTG15"
+        "HSCHRUN_RANDOM_CTG15",
+        "GL000223.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -645,9 +645,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000212.1",
         "HSCHRUN_RANDOM_CTG2",
-        "NT_113923.1"
+        "NT_113923.1",
+        "GL000212.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -659,9 +659,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG14",
+        "GL000222.1",
         "NT_167216.1",
-        "GL000222.1"
+        "HSCHRUN_RANDOM_CTG14"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -673,9 +673,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000200.1",
+        "HSCHR9_RANDOM_CTG4",
         "NT_113915.1",
-        "HSCHR9_RANDOM_CTG4"
+        "GL000200.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -687,9 +687,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "NT_113885.1",
         "GL000193.1",
-        "HSCHR4_RANDOM_CTG2",
-        "NT_113885.1"
+        "HSCHR4_RANDOM_CTG2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -701,9 +701,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHR4_RANDOM_CTG3",
         "NT_113888.1",
-        "GL000194.1"
+        "GL000194.1",
+        "HSCHR4_RANDOM_CTG3"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -715,9 +715,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000229.1",
         "NT_167223.1",
-        "HSCHRUN_RANDOM_CTG22"
+        "HSCHRUN_RANDOM_CTG22",
+        "GL000229.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -729,9 +729,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG17",
+        "NT_167219.1",
         "GL000225.1",
-        "NT_167219.1"
+        "HSCHRUN_RANDOM_CTG17"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -743,9 +743,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000231.1",
         "HSCHRUN_RANDOM_CTG24",
-        "NT_167225.1",
-        "GL000231.1"
+        "NT_167225.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -757,9 +757,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHR21_RANDOM_CTG9",
         "GL000210.1",
-        "NT_113950.2"
+        "NT_113950.2",
+        "HSCHR21_RANDOM_CTG9"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -785,9 +785,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000235.1",
         "HSCHRUN_RANDOM_CTG28",
-        "NT_167229.1",
-        "GL000235.1"
+        "NT_167229.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -800,8 +800,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "NT_113911.1",
-        "HSCHR9_RANDOM_CTG5",
-        "GL000201.1"
+        "GL000201.1",
+        "HSCHR9_RANDOM_CTG5"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -813,9 +813,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000247.1",
         "HSCHRUN_RANDOM_CTG40",
-        "NT_167241.1"
+        "NT_167241.1",
+        "GL000247.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -841,8 +841,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHR8_RANDOM_CTG4",
         "GL000197.1",
+        "HSCHR8_RANDOM_CTG4",
         "NT_113907.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -870,8 +870,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "GL000246.1",
-        "HSCHRUN_RANDOM_CTG39",
-        "NT_167240.1"
+        "NT_167240.1",
+        "HSCHRUN_RANDOM_CTG39"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -883,9 +883,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "HSCHRUN_RANDOM_CTG42",
         "NT_167243.1",
-        "GL000249.1",
-        "HSCHRUN_RANDOM_CTG42"
+        "GL000249.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -897,9 +897,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NT_113909.1",
         "GL000196.1",
-        "HSCHR8_RANDOM_CTG1"
+        "HSCHR8_RANDOM_CTG1",
+        "NT_113909.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -911,8 +911,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG41",
         "NT_167242.1",
+        "HSCHRUN_RANDOM_CTG41",
         "GL000248.1"
       ],
       "sequence_role": "unplaced-scaffold"
@@ -925,9 +925,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000244.1",
         "HSCHRUN_RANDOM_CTG37",
-        "NT_167238.1",
-        "GL000244.1"
+        "NT_167238.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -939,9 +939,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG31",
         "NT_167232.1",
-        "GL000238.1"
+        "GL000238.1",
+        "HSCHRUN_RANDOM_CTG31"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -953,9 +953,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000202.1",
+        "NT_113921.2",
         "HSCHR11_RANDOM_CTG2",
-        "NT_113921.2"
+        "GL000202.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -982,8 +982,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "NT_167226.1",
-        "HSCHRUN_RANDOM_CTG25",
-        "GL000232.1"
+        "GL000232.1",
+        "HSCHRUN_RANDOM_CTG25"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -995,9 +995,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "NT_113945.1",
+        "HSCHR17_RANDOM_CTG4",
         "GL000206.1",
-        "HSCHR17_RANDOM_CTG4"
+        "NT_113945.1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -1010,8 +1010,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "NT_167234.1",
-        "GL000240.1",
-        "HSCHRUN_RANDOM_CTG33"
+        "HSCHRUN_RANDOM_CTG33",
+        "GL000240.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1023,9 +1023,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000236.1",
+        "HSCHRUN_RANDOM_CTG29",
         "NT_167230.1",
-        "HSCHRUN_RANDOM_CTG29"
+        "GL000236.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1037,9 +1037,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000241.1",
         "NT_167235.1",
-        "HSCHRUN_RANDOM_CTG34",
-        "GL000241.1"
+        "HSCHRUN_RANDOM_CTG34"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1051,8 +1051,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000207.1",
         "HSCHR18_RANDOM_CTG1",
+        "GL000207.1",
         "NT_113947.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -1065,9 +1065,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "NT_167237.1",
         "HSCHRUN_RANDOM_CTG36",
-        "GL000243.1",
-        "NT_167237.1"
+        "GL000243.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1080,8 +1080,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "GL000242.1",
-        "HSCHRUN_RANDOM_CTG35",
-        "NT_167236.1"
+        "NT_167236.1",
+        "HSCHRUN_RANDOM_CTG35"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1093,9 +1093,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "NT_167224.1",
         "HSCHRUN_RANDOM_CTG23",
-        "GL000230.1",
-        "NT_167224.1"
+        "GL000230.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1107,9 +1107,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "GL000237.1",
         "NT_167231.1",
-        "HSCHRUN_RANDOM_CTG30"
+        "HSCHRUN_RANDOM_CTG30",
+        "GL000237.1"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1121,9 +1121,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHRUN_RANDOM_CTG26",
+        "GL000233.1",
         "NT_167227.1",
-        "GL000233.1"
+        "HSCHRUN_RANDOM_CTG26"
       ],
       "sequence_role": "unplaced-scaffold"
     },
@@ -1135,9 +1135,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000192.1",
         "NT_167207.1",
-        "HSCHR1_RANDOM_CTG12",
-        "GL000192.1"
+        "HSCHR1_RANDOM_CTG12"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -1150,8 +1150,8 @@
       "species": "Homo sapiens",
       "aliases": [
         "GL000204.1",
-        "HSCHR17_RANDOM_CTG2",
-        "NT_113943.1"
+        "NT_113943.1",
+        "HSCHR17_RANDOM_CTG2"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -1163,9 +1163,9 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
+        "GL000198.1",
         "NT_113914.1",
-        "HSCHR9_RANDOM_CTG1",
-        "GL000198.1"
+        "HSCHR9_RANDOM_CTG1"
       ],
       "sequence_role": "unlocalized-scaffold"
     },
@@ -1177,8 +1177,8 @@
       "uri": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz",
       "species": "Homo sapiens",
       "aliases": [
-        "HSCHR19_RANDOM_CTG1",
         "GL000208.1",
+        "HSCHR19_RANDOM_CTG1",
         "NT_113948.1"
       ],
       "sequence_role": "unlocalized-scaffold"
@@ -1187,8 +1187,9 @@
       "name": "HG999_1_PATCH",
       "length": 49316,
       "aliases": [
+        "GL383516.1",
         "NW_003315903.1",
-        "GL383516.1"
+        "chr1_GL383516v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1196,8 +1197,9 @@
       "name": "HG999_2_PATCH",
       "length": 49352,
       "aliases": [
-        "NW_003315904.1",
-        "GL383517.1"
+        "GL383517.1",
+        "chr1_GL383517v1_fix",
+        "NW_003315904.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1205,6 +1207,7 @@
       "name": "HG989_PATCH",
       "length": 151551,
       "aliases": [
+        "chr1_GL949741v1_fix",
         "GL949741.1",
         "NW_003571030.1"
       ],
@@ -1215,7 +1218,8 @@
       "length": 7283150,
       "aliases": [
         "JH636052.4",
-        "NW_003871055.3"
+        "NW_003871055.3",
+        "chr1_JH636052v4_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1223,8 +1227,9 @@
       "name": "HG1292_PATCH",
       "length": 1676126,
       "aliases": [
-        "JH636053.3",
-        "NW_003871056.3"
+        "chr1_JH636053v3_fix",
+        "NW_003871056.3",
+        "JH636053.3"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1232,8 +1237,9 @@
       "name": "HG1293_PATCH",
       "length": 758378,
       "aliases": [
+        "JH636054.1",
         "NW_003871057.1",
-        "JH636054.1"
+        "chr1_JH636054v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1242,6 +1248,7 @@
       "length": 24680,
       "aliases": [
         "NW_004070863.1",
+        "chr1_JH806573v1_fix",
         "JH806573.1"
       ],
       "sequence_role": "fix-patch"
@@ -1250,8 +1257,9 @@
       "name": "HG1472_PATCH",
       "length": 22982,
       "aliases": [
-        "JH806574.2",
-        "NW_004070864.2"
+        "NW_004070864.2",
+        "chr1_JH806574v2_fix",
+        "JH806574.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1260,7 +1268,8 @@
       "length": 47409,
       "aliases": [
         "NW_004070865.1",
-        "JH806575.1"
+        "JH806575.1",
+        "chr1_JH806575v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1269,6 +1278,7 @@
       "length": 182439,
       "aliases": [
         "GL383518.1",
+        "chr1_GL383518v1_alt",
         "NW_003315905.1"
       ],
       "sequence_role": "novel-patch"
@@ -1277,8 +1287,9 @@
       "name": "HSCHR1_2_CTG31",
       "length": 110268,
       "aliases": [
+        "GL383519.1",
         "NW_003315906.1",
-        "GL383519.1"
+        "chr1_GL383519v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1287,7 +1298,8 @@
       "length": 366579,
       "aliases": [
         "GL383520.1",
-        "NW_003315907.1"
+        "NW_003315907.1",
+        "chr1_GL383520v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1296,7 +1308,8 @@
       "length": 66021,
       "aliases": [
         "NW_003571031.1",
-        "GL877870.2"
+        "GL877870.2",
+        "chr2_GL877870v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1305,7 +1318,8 @@
       "length": 389939,
       "aliases": [
         "NW_003571032.1",
-        "GL877871.1"
+        "GL877871.1",
+        "chr2_GL877871v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1314,7 +1328,8 @@
       "length": 599580,
       "aliases": [
         "NW_004504299.1",
-        "KB663603.1"
+        "KB663603.1",
+        "chr2_KB663603v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1323,7 +1338,8 @@
       "length": 143390,
       "aliases": [
         "NW_003315908.1",
-        "GL383521.1"
+        "GL383521.1",
+        "chr2_GL383521v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1332,6 +1348,7 @@
       "length": 123821,
       "aliases": [
         "GL383522.1",
+        "chr2_GL383522v1_alt",
         "NW_003315909.1"
       ],
       "sequence_role": "novel-patch"
@@ -1340,6 +1357,7 @@
       "name": "HSCHR2_2_CTG12",
       "length": 96131,
       "aliases": [
+        "chr2_GL582966v2_alt",
         "GL582966.2",
         "NW_003571033.2"
       ],
@@ -1349,8 +1367,9 @@
       "name": "HG186_PATCH",
       "length": 171362,
       "aliases": [
+        "NW_003315910.1",
         "GL383523.1",
-        "NW_003315910.1"
+        "chr3_GL383523v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1358,6 +1377,7 @@
       "name": "HG280_PATCH",
       "length": 78793,
       "aliases": [
+        "chr3_GL383524v1_fix",
         "GL383524.1",
         "NW_003315911.1"
       ],
@@ -1368,7 +1388,8 @@
       "length": 65063,
       "aliases": [
         "GL383525.1",
-        "NW_003315912.1"
+        "NW_003315912.1",
+        "chr3_GL383525v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1376,8 +1397,9 @@
       "name": "HG1091_PATCH",
       "length": 393769,
       "aliases": [
-        "JH159131.1",
-        "NW_003871058.1"
+        "NW_003871058.1",
+        "chr3_JH159131v1_fix",
+        "JH159131.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1385,8 +1407,9 @@
       "name": "HG325_PATCH",
       "length": 100694,
       "aliases": [
-        "NW_003871059.1",
-        "JH159132.1"
+        "chr3_JH159132v1_fix",
+        "JH159132.1",
+        "NW_003871059.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1394,8 +1417,9 @@
       "name": "HG957_PATCH",
       "length": 263861,
       "aliases": [
-        "KE332495.1",
-        "NW_004775426.1"
+        "NW_004775426.1",
+        "chr3_KE332495v1_fix",
+        "KE332495.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1403,8 +1427,9 @@
       "name": "HSCHR3_1_CTG2_1",
       "length": 180671,
       "aliases": [
+        "GL383526.1",
         "NW_003315913.1",
-        "GL383526.1"
+        "chr3_GL383526v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1413,6 +1438,7 @@
       "length": 173151,
       "aliases": [
         "NW_003871060.1",
+        "chr3_JH636055v1_alt",
         "JH636055.1"
       ],
       "sequence_role": "novel-patch"
@@ -1422,7 +1448,8 @@
       "length": 248177,
       "aliases": [
         "GL582967.1",
-        "NW_003571035.1"
+        "NW_003571035.1",
+        "chr4_GL582967v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1430,8 +1457,9 @@
       "name": "HG1032_PATCH",
       "length": 297485,
       "aliases": [
+        "NW_003571034.1",
         "GL877872.1",
-        "NW_003571034.1"
+        "chr4_GL877872v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1439,8 +1467,9 @@
       "name": "HG174_HG254_PATCH",
       "length": 503215,
       "aliases": [
-        "KE332496.1",
-        "NW_004775427.1"
+        "chr4_KE332496v1_fix",
+        "NW_004775427.1",
+        "KE332496.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1449,6 +1478,7 @@
       "length": 164536,
       "aliases": [
         "GL383527.1",
+        "chr4_GL383527v1_alt",
         "NW_003315914.1"
       ],
       "sequence_role": "novel-patch"
@@ -1457,8 +1487,9 @@
       "name": "HSCHR4_1_CTG6",
       "length": 376187,
       "aliases": [
-        "GL383528.1",
-        "NW_003315915.1"
+        "NW_003315915.1",
+        "chr4_GL383528v1_alt",
+        "GL383528.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1467,7 +1498,8 @@
       "length": 121345,
       "aliases": [
         "NW_003315916.1",
-        "GL383529.1"
+        "GL383529.1",
+        "chr4_GL383529v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1475,8 +1507,9 @@
       "name": "HG1063_PATCH",
       "length": 266316,
       "aliases": [
+        "JH159133.1",
         "NW_003871061.1",
-        "JH159133.1"
+        "chr5_JH159133v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1485,7 +1518,8 @@
       "length": 543325,
       "aliases": [
         "KE332497.1",
-        "NW_004775428.1"
+        "NW_004775428.1",
+        "chr5_KE332497v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1493,8 +1527,9 @@
       "name": "HSCHR5_1_CTG1",
       "length": 1612928,
       "aliases": [
+        "GL339449.2",
         "NW_003315917.2",
-        "GL339449.2"
+        "chr5_GL339449v2_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1503,6 +1538,7 @@
       "length": 101241,
       "aliases": [
         "NW_003315918.1",
+        "chr5_GL383530v1_alt",
         "GL383530.1"
       ],
       "sequence_role": "novel-patch"
@@ -1512,7 +1548,8 @@
       "length": 173459,
       "aliases": [
         "GL383531.1",
-        "NW_003315919.1"
+        "NW_003315919.1",
+        "chr5_GL383531v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1520,8 +1557,9 @@
       "name": "HSCHR5_2_CTG1",
       "length": 82728,
       "aliases": [
-        "GL383532.1",
-        "NW_003315920.1"
+        "NW_003315920.1",
+        "chr5_GL383532v1_alt",
+        "GL383532.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1529,8 +1567,9 @@
       "name": "HSCHR5_3_CTG1",
       "length": 226852,
       "aliases": [
+        "GL949742.1",
         "NW_003571036.1",
-        "GL949742.1"
+        "chr5_GL949742v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1539,6 +1578,7 @@
       "length": 262912,
       "aliases": [
         "NW_003871062.1",
+        "chr6_JH636056v1_fix",
         "JH636056.1"
       ],
       "sequence_role": "fix-patch"
@@ -1548,7 +1588,8 @@
       "length": 200195,
       "aliases": [
         "JH636057.1",
-        "NW_003871063.1"
+        "NW_003871063.1",
+        "chr6_JH636057v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1556,8 +1597,9 @@
       "name": "HG27_PATCH",
       "length": 273386,
       "aliases": [
-        "NW_004070866.1",
-        "JH806576.1"
+        "chr6_JH806576v1_fix",
+        "JH806576.1",
+        "NW_004070866.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1566,6 +1608,7 @@
       "length": 478993,
       "aliases": [
         "KB663604.1",
+        "chr6_KB663604v1_fix",
         "NW_004504300.1"
       ],
       "sequence_role": "fix-patch"
@@ -1575,7 +1618,8 @@
       "length": 149443,
       "aliases": [
         "NW_004775429.1",
-        "KE332498.1"
+        "KE332498.1",
+        "chr6_KE332498v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1584,6 +1628,7 @@
       "length": 124736,
       "aliases": [
         "NW_003315921.1",
+        "chr6_GL383533v1_alt",
         "GL383533.1"
       ],
       "sequence_role": "novel-patch"
@@ -1592,8 +1637,9 @@
       "name": "HSCHR6_2_CTG5",
       "length": 187824,
       "aliases": [
+        "KB021644.1",
         "NW_004166862.1",
-        "KB021644.1"
+        "chr6_KB021644v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1601,8 +1647,9 @@
       "name": "HG115_PATCH",
       "length": 356330,
       "aliases": [
-        "NW_003571037.1",
-        "GL582968.1"
+        "GL582968.1",
+        "chr7_GL582968v1_fix",
+        "NW_003571037.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1610,8 +1657,9 @@
       "name": "HG14_PATCH",
       "length": 251823,
       "aliases": [
-        "NW_003571038.1",
-        "GL582969.1"
+        "chr7_GL582969v1_fix",
+        "GL582969.1",
+        "NW_003571038.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1619,8 +1667,9 @@
       "name": "HG736_PATCH",
       "length": 354970,
       "aliases": [
+        "NW_003571039.1",
         "GL582970.1",
-        "NW_003571039.1"
+        "chr7_GL582970v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1628,8 +1677,9 @@
       "name": "HG7_PATCH",
       "length": 1284284,
       "aliases": [
+        "GL582971.1",
         "NW_003571040.1",
-        "GL582971.1"
+        "chr7_GL582971v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1637,6 +1687,7 @@
       "name": "HG946_PATCH",
       "length": 327774,
       "aliases": [
+        "chr7_GL582972v1_fix",
         "GL582972.1",
         "NW_003571041.1"
       ],
@@ -1647,6 +1698,7 @@
       "length": 3821770,
       "aliases": [
         "JH159134.2",
+        "chr7_JH159134v2_fix",
         "NW_003871064.1"
       ],
       "sequence_role": "fix-patch"
@@ -1655,8 +1707,9 @@
       "name": "HG1308_PATCH",
       "length": 716227,
       "aliases": [
-        "JH636058.1",
-        "NW_003871065.1"
+        "NW_003871065.1",
+        "chr7_JH636058v1_fix",
+        "JH636058.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1664,8 +1717,9 @@
       "name": "HG444_PATCH",
       "length": 274521,
       "aliases": [
-        "KE332499.1",
-        "NW_004775430.1"
+        "chr7_KE332499v1_fix",
+        "NW_004775430.1",
+        "KE332499.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1673,8 +1727,9 @@
       "name": "HSCHR7_1_CTG6",
       "length": 119183,
       "aliases": [
-        "NW_003315922.2",
-        "GL383534.2"
+        "GL383534.2",
+        "chr7_GL383534v2_alt",
+        "NW_003315922.2"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1683,6 +1738,7 @@
       "length": 429806,
       "aliases": [
         "NW_003315923.1",
+        "chr8_GL383535v1_fix",
         "GL383535.1"
       ],
       "sequence_role": "fix-patch"
@@ -1692,7 +1748,8 @@
       "length": 203777,
       "aliases": [
         "GL383536.1",
-        "NW_003315924.1"
+        "NW_003315924.1",
+        "chr8_GL383536v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1700,8 +1757,9 @@
       "name": "HG19_PATCH",
       "length": 608579,
       "aliases": [
+        "GL949743.1",
         "NW_003571042.1",
-        "GL949743.1"
+        "chr8_GL949743v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1710,7 +1768,8 @@
       "length": 102251,
       "aliases": [
         "JH159135.2",
-        "NW_003871066.2"
+        "NW_003871066.2",
+        "chr8_JH159135v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1718,8 +1777,9 @@
       "name": "HG1699_PATCH",
       "length": 228602,
       "aliases": [
-        "NW_004775431.1",
-        "KE332500.1"
+        "KE332500.1",
+        "chr8_KE332500v1_fix",
+        "NW_004775431.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1728,7 +1788,8 @@
       "length": 330164,
       "aliases": [
         "GL339450.1",
-        "NW_003315925.1"
+        "NW_003315925.1",
+        "chr9_GL339450v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1736,8 +1797,9 @@
       "name": "HG998_1_PATCH",
       "length": 62435,
       "aliases": [
-        "NW_003315926.1",
-        "GL383537.1"
+        "GL383537.1",
+        "chr9_GL383537v1_fix",
+        "NW_003315926.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1745,6 +1807,7 @@
       "name": "HG998_2_PATCH",
       "length": 49281,
       "aliases": [
+        "chr9_GL383538v1_fix",
         "GL383538.1",
         "NW_003315927.1"
       ],
@@ -1755,7 +1818,8 @@
       "length": 295379,
       "aliases": [
         "NW_003871067.1",
-        "JH636059.1"
+        "JH636059.1",
+        "chr9_JH636059v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1764,7 +1828,8 @@
       "length": 22394,
       "aliases": [
         "JH806577.1",
-        "NW_004070867.1"
+        "NW_004070867.1",
+        "chr9_JH806577v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1772,8 +1837,9 @@
       "name": "HG1501_PATCH",
       "length": 169437,
       "aliases": [
-        "JH806578.1",
-        "NW_004070868.1"
+        "chr9_JH806578v1_fix",
+        "NW_004070868.1",
+        "JH806578.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1782,7 +1848,8 @@
       "length": 211307,
       "aliases": [
         "NW_004070869.1",
-        "JH806579.1"
+        "JH806579.1",
+        "chr9_JH806579v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1790,6 +1857,7 @@
       "name": "HG50_PATCH",
       "length": 155926,
       "aliases": [
+        "chr9_KB663605v1_fix",
         "KB663605.1",
         "NW_004504301.1"
       ],
@@ -1799,6 +1867,7 @@
       "name": "HSCHR9_1_CTG1",
       "length": 162988,
       "aliases": [
+        "chr9_GL383539v1_alt",
         "NW_003315928.1",
         "GL383539.1"
       ],
@@ -1808,8 +1877,9 @@
       "name": "HSCHR9_1_CTG35",
       "length": 71551,
       "aliases": [
-        "NW_003315929.1",
-        "GL383540.1"
+        "chr9_GL383540v1_alt",
+        "GL383540.1",
+        "NW_003315929.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1818,7 +1888,8 @@
       "length": 171286,
       "aliases": [
         "GL383541.1",
-        "NW_003315930.1"
+        "NW_003315930.1",
+        "chr9_GL383541v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1827,6 +1898,7 @@
       "length": 60032,
       "aliases": [
         "NW_003315931.1",
+        "chr9_GL383542v1_alt",
         "GL383542.1"
       ],
       "sequence_role": "novel-patch"
@@ -1835,8 +1907,9 @@
       "name": "HG544_PATCH",
       "length": 392792,
       "aliases": [
-        "GL383543.1",
-        "NW_003315932.1"
+        "NW_003315932.1",
+        "chr10_GL383543v1_fix",
+        "GL383543.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1844,8 +1917,9 @@
       "name": "HG995_PATCH",
       "length": 128378,
       "aliases": [
+        "NW_003315933.1",
         "GL383544.1",
-        "NW_003315933.1"
+        "chr10_GL383544v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1853,6 +1927,7 @@
       "name": "HG905_PATCH",
       "length": 168465,
       "aliases": [
+        "chr10_GL877873v1_fix",
         "GL877873.1",
         "NW_003571043.1"
       ],
@@ -1863,7 +1938,8 @@
       "length": 2281126,
       "aliases": [
         "JH591181.2",
-        "NW_003871068.1"
+        "NW_003871068.1",
+        "chr10_JH591181v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1872,7 +1948,8 @@
       "length": 196262,
       "aliases": [
         "JH591182.1",
-        "NW_003871069.1"
+        "NW_003871069.1",
+        "chr10_JH591182v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1881,7 +1958,8 @@
       "length": 177920,
       "aliases": [
         "NW_003871070.1",
-        "JH591183.1"
+        "JH591183.1",
+        "chr10_JH591183v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1889,8 +1967,9 @@
       "name": "HG871_PATCH",
       "length": 437946,
       "aliases": [
+        "JH636060.1",
         "NW_003871071.1",
-        "JH636060.1"
+        "chr10_JH636060v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1898,8 +1977,9 @@
       "name": "HG1479_PATCH",
       "length": 93149,
       "aliases": [
-        "JH806580.1",
-        "NW_004070870.1"
+        "NW_004070870.1",
+        "chr10_JH806580v1_fix",
+        "JH806580.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1908,7 +1988,8 @@
       "length": 305900,
       "aliases": [
         "KB663606.1",
-        "NW_004504302.1"
+        "NW_004504302.1",
+        "chr10_KB663606v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1916,8 +1997,9 @@
       "name": "HG979_PATCH",
       "length": 1020827,
       "aliases": [
+        "KE332501.1",
         "NW_004775432.1",
-        "KE332501.1"
+        "chr10_KE332501v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1925,8 +2007,9 @@
       "name": "HSCHR10_1_CTG2",
       "length": 179254,
       "aliases": [
+        "GL383545.1",
         "NW_003315934.1",
-        "GL383545.1"
+        "chr10_GL383545v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1934,8 +2017,9 @@
       "name": "HSCHR10_1_CTG5",
       "length": 309802,
       "aliases": [
+        "GL383546.1",
         "NW_003315935.1",
-        "GL383546.1"
+        "chr10_GL383546v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -1943,6 +2027,7 @@
       "name": "HG281_PATCH",
       "length": 321004,
       "aliases": [
+        "chr11_GL582973v1_fix",
         "GL582973.1",
         "NW_003571045.1"
       ],
@@ -1952,8 +2037,9 @@
       "name": "HG536_PATCH",
       "length": 276448,
       "aliases": [
+        "GL949744.1",
         "NW_003571046.1",
-        "GL949744.1"
+        "chr11_GL949744v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1961,8 +2047,9 @@
       "name": "HG299_PATCH",
       "length": 108875,
       "aliases": [
+        "NW_003871076.1",
         "JH159138.1",
-        "NW_003871076.1"
+        "chr11_JH159138v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1970,8 +2057,9 @@
       "name": "HG305_PATCH",
       "length": 120441,
       "aliases": [
-        "NW_003871077.1",
-        "JH159139.1"
+        "chr11_JH159139v1_fix",
+        "JH159139.1",
+        "NW_003871077.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1979,8 +2067,9 @@
       "name": "HG306_PATCH",
       "length": 546435,
       "aliases": [
+        "JH159140.1",
         "NW_003871078.1",
-        "JH159140.1"
+        "chr11_JH159140v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1989,7 +2078,8 @@
       "length": 240775,
       "aliases": [
         "JH159141.2",
-        "NW_003871079.1"
+        "NW_003871079.1",
+        "chr11_JH159141v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -1997,6 +2087,7 @@
       "name": "HG388_HG400_PATCH",
       "length": 326647,
       "aliases": [
+        "chr11_JH159142v2_fix",
         "NW_003871080.1",
         "JH159142.2"
       ],
@@ -2006,8 +2097,9 @@
       "name": "HG414_PATCH",
       "length": 191402,
       "aliases": [
-        "NW_003871081.1",
-        "JH159143.1"
+        "chr11_JH159143v1_fix",
+        "JH159143.1",
+        "NW_003871081.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2016,7 +2108,8 @@
       "length": 462282,
       "aliases": [
         "JH591184.1",
-        "NW_003871075.1"
+        "NW_003871075.1",
+        "chr11_JH591184v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2024,8 +2117,9 @@
       "name": "HG873_PATCH",
       "length": 167437,
       "aliases": [
+        "NW_003871082.1",
         "JH591185.1",
-        "NW_003871082.1"
+        "chr11_JH591185v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2034,7 +2128,8 @@
       "length": 408430,
       "aliases": [
         "JH720443.2",
-        "NW_003871072.2"
+        "NW_003871072.2",
+        "chr11_JH720443v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2042,8 +2137,9 @@
       "name": "HG865_PATCH",
       "length": 872115,
       "aliases": [
-        "NW_004070871.1",
-        "JH806581.1"
+        "chr11_JH806581v1_fix",
+        "JH806581.1",
+        "NW_004070871.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2051,8 +2147,9 @@
       "name": "HSCHR11_1_CTG1_1",
       "length": 154407,
       "aliases": [
-        "NW_003315936.1",
-        "GL383547.1"
+        "chr11_GL383547v1_alt",
+        "GL383547.1",
+        "NW_003315936.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2060,8 +2157,9 @@
       "name": "HG142_HG150_NOVEL_TEST",
       "length": 200998,
       "aliases": [
+        "NW_003871073.1",
         "JH159136.1",
-        "NW_003871073.1"
+        "chr11_JH159136v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2070,7 +2168,8 @@
       "length": 191409,
       "aliases": [
         "JH159137.1",
-        "NW_003871074.1"
+        "NW_003871074.1",
+        "chr11_JH159137v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2078,8 +2177,9 @@
       "name": "HG996_PATCH",
       "length": 165247,
       "aliases": [
+        "NW_003315937.1",
         "GL383548.1",
-        "NW_003315937.1"
+        "chr12_GL383548v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2087,8 +2187,9 @@
       "name": "HG858_PATCH",
       "length": 163298,
       "aliases": [
-        "NW_003571048.1",
-        "GL582974.1"
+        "chr12_GL582974v1_fix",
+        "GL582974.1",
+        "NW_003571048.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2096,8 +2197,9 @@
       "name": "HG344_PATCH",
       "length": 273128,
       "aliases": [
+        "JH720444.2",
         "NW_003871083.2",
-        "JH720444.2"
+        "chr12_JH720444v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2105,8 +2207,9 @@
       "name": "HG1595_PATCH",
       "length": 334922,
       "aliases": [
-        "NW_004504303.2",
-        "KB663607.2"
+        "chr12_KB663607v2_fix",
+        "KB663607.2",
+        "NW_004504303.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2115,7 +2218,8 @@
       "length": 120804,
       "aliases": [
         "GL383549.1",
-        "NW_003315938.1"
+        "NW_003315938.1",
+        "chr12_GL383549v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2124,7 +2228,8 @@
       "length": 169178,
       "aliases": [
         "NW_003315939.1",
-        "GL383550.1"
+        "GL383550.1",
+        "chr12_GL383550v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2132,8 +2237,9 @@
       "name": "HSCHR12_1_CTG5",
       "length": 184319,
       "aliases": [
+        "GL383551.1",
         "NW_003315940.1",
-        "GL383551.1"
+        "chr12_GL383551v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2142,7 +2248,8 @@
       "length": 138655,
       "aliases": [
         "GL383552.1",
-        "NW_003315941.1"
+        "NW_003315941.1",
+        "chr12_GL383552v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2150,8 +2257,9 @@
       "name": "HSCHR12_3_CTG2_1",
       "length": 152874,
       "aliases": [
+        "GL383553.2",
         "NW_003315942.2",
-        "GL383553.2"
+        "chr12_GL383553v2_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2160,6 +2268,7 @@
       "length": 167313,
       "aliases": [
         "GL877875.1",
+        "chr12_GL877875v1_alt",
         "NW_003571049.1"
       ],
       "sequence_role": "novel-patch"
@@ -2168,8 +2277,9 @@
       "name": "HSCHR12_2_CTG2",
       "length": 408271,
       "aliases": [
-        "NW_003571050.1",
-        "GL877876.1"
+        "GL877876.1",
+        "chr12_GL877876v1_alt",
+        "NW_003571050.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2177,8 +2287,9 @@
       "name": "HG1133_PATCH",
       "length": 372609,
       "aliases": [
-        "GL949745.1",
-        "NW_003571047.1"
+        "NW_003571047.1",
+        "chr12_GL949745v1_alt",
+        "GL949745.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2187,7 +2298,8 @@
       "length": 34662,
       "aliases": [
         "GL582975.1",
-        "NW_003571051.1"
+        "NW_003571051.1",
+        "chr13_GL582975v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2195,6 +2307,7 @@
       "name": "HG1592_PATCH",
       "length": 1523386,
       "aliases": [
+        "chr14_KB021645v1_fix",
         "KB021645.1",
         "NW_004166863.1"
       ],
@@ -2204,8 +2317,9 @@
       "name": "HG971_PATCH",
       "length": 170033,
       "aliases": [
+        "JH720445.1",
         "NW_003871084.1",
-        "JH720445.1"
+        "chr15_JH720445v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2213,6 +2327,7 @@
       "name": "HSCHR15_1_CTG4",
       "length": 296527,
       "aliases": [
+        "chr15_GL383554v1_alt",
         "NW_003315943.1",
         "GL383554.1"
       ],
@@ -2222,6 +2337,7 @@
       "name": "HSCHR15_1_CTG8",
       "length": 388773,
       "aliases": [
+        "chr15_GL383555v1_alt",
         "NW_003315944.1",
         "GL383555.1"
       ],
@@ -2232,7 +2348,8 @@
       "length": 97345,
       "aliases": [
         "JH720446.1",
-        "NW_003871085.1"
+        "NW_003871085.1",
+        "chr16_JH720446v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2240,8 +2357,9 @@
       "name": "HSCHR16_1_CTG3_1",
       "length": 192462,
       "aliases": [
-        "GL383556.1",
-        "NW_003315945.1"
+        "NW_003315945.1",
+        "chr16_GL383556v1_alt",
+        "GL383556.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2249,8 +2367,9 @@
       "name": "HSCHR16_2_CTG3_1",
       "length": 89672,
       "aliases": [
+        "NW_003315946.1",
         "GL383557.1",
-        "NW_003315946.1"
+        "chr16_GL383557v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2259,7 +2378,8 @@
       "length": 457041,
       "aliases": [
         "GL383558.1",
-        "NW_003315947.1"
+        "NW_003315947.1",
+        "chr17_GL383558v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2267,6 +2387,7 @@
       "name": "HG745_PATCH",
       "length": 338640,
       "aliases": [
+        "chr17_GL383559v2_fix",
         "GL383559.2",
         "NW_003315948.2"
       ],
@@ -2277,7 +2398,8 @@
       "length": 534288,
       "aliases": [
         "GL383560.1",
-        "NW_003315949.1"
+        "NW_003315949.1",
+        "chr17_GL383560v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2285,6 +2407,7 @@
       "name": "HG987_PATCH",
       "length": 644425,
       "aliases": [
+        "chr17_GL383561v2_fix",
         "NW_003315950.2",
         "GL383561.2"
       ],
@@ -2295,6 +2418,7 @@
       "length": 45551,
       "aliases": [
         "NW_003315951.1",
+        "chr17_GL383562v1_fix",
         "GL383562.1"
       ],
       "sequence_role": "fix-patch"
@@ -2304,7 +2428,8 @@
       "length": 412535,
       "aliases": [
         "GL582976.1",
-        "NW_003571052.1"
+        "NW_003571052.1",
+        "chr17_GL582976v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2313,7 +2438,8 @@
       "length": 388340,
       "aliases": [
         "JH159144.1",
-        "NW_003871088.1"
+        "NW_003871088.1",
+        "chr17_JH159144v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2322,7 +2448,8 @@
       "length": 194862,
       "aliases": [
         "NW_003871090.1",
-        "JH159145.1"
+        "JH159145.1",
+        "chr17_JH159145v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2330,8 +2457,9 @@
       "name": "HG748_PATCH",
       "length": 376223,
       "aliases": [
+        "NW_003871089.1",
         "JH591186.1",
-        "NW_003871089.1"
+        "chr17_JH591186v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2339,8 +2467,9 @@
       "name": "HG271_PATCH",
       "length": 186059,
       "aliases": [
+        "JH636061.1",
         "NW_003871087.1",
-        "JH636061.1"
+        "chr17_JH636061v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2349,7 +2478,8 @@
       "length": 454385,
       "aliases": [
         "JH720447.1",
-        "NW_003871086.1"
+        "NW_003871086.1",
+        "chr17_JH720447v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2358,7 +2488,8 @@
       "length": 342635,
       "aliases": [
         "JH806582.2",
-        "NW_004070872.2"
+        "NW_004070872.2",
+        "chr17_JH806582v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2366,6 +2497,7 @@
       "name": "HG385_PATCH",
       "length": 211416,
       "aliases": [
+        "chr17_KB021646v2_fix",
         "KB021646.2",
         "NW_004166864.2"
       ],
@@ -2376,6 +2508,7 @@
       "length": 341712,
       "aliases": [
         "NW_004775433.1",
+        "chr17_KE332502v1_fix",
         "KE332502.1"
       ],
       "sequence_role": "fix-patch"
@@ -2385,7 +2518,8 @@
       "length": 270261,
       "aliases": [
         "GL383563.2",
-        "NW_003315952.2"
+        "NW_003315952.2",
+        "chr17_GL383563v2_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2393,8 +2527,9 @@
       "name": "HSCHR17_1_CTG4",
       "length": 133151,
       "aliases": [
+        "GL383564.1",
         "NW_003315953.1",
-        "GL383564.1"
+        "chr17_GL383564v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2402,8 +2537,9 @@
       "name": "HSCHR17_2_CTG4",
       "length": 223995,
       "aliases": [
+        "NW_003315954.1",
         "GL383565.1",
-        "NW_003315954.1"
+        "chr17_GL383565v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2411,8 +2547,9 @@
       "name": "HSCHR17_3_CTG4",
       "length": 90219,
       "aliases": [
-        "NW_003315955.1",
-        "GL383566.1"
+        "chr17_GL383566v1_alt",
+        "GL383566.1",
+        "NW_003315955.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2421,7 +2558,8 @@
       "length": 278131,
       "aliases": [
         "NW_003871091.1",
-        "JH159146.1"
+        "JH159146.1",
+        "chr17_JH159146v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2429,8 +2567,9 @@
       "name": "HSCHR17_5_CTG4",
       "length": 70345,
       "aliases": [
-        "JH159147.1",
-        "NW_003871092.1"
+        "chr17_JH159147v1_alt",
+        "NW_003871092.1",
+        "JH159147.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2439,6 +2578,7 @@
       "length": 88070,
       "aliases": [
         "JH159148.1",
+        "chr17_JH159148v1_alt",
         "NW_003871093.1"
       ],
       "sequence_role": "novel-patch"
@@ -2447,6 +2587,7 @@
       "name": "HSCHR18_1_CTG1_1",
       "length": 289831,
       "aliases": [
+        "chr18_GL383567v1_alt",
         "GL383567.1",
         "NW_003315956.1"
       ],
@@ -2456,6 +2597,7 @@
       "name": "HSCHR18_1_CTG2",
       "length": 104552,
       "aliases": [
+        "chr18_GL383568v1_alt",
         "NW_003315957.1",
         "GL383568.1"
       ],
@@ -2465,8 +2607,9 @@
       "name": "HSCHR18_1_CTG2_1",
       "length": 167950,
       "aliases": [
-        "NW_003315958.1",
-        "GL383569.1"
+        "chr18_GL383569v1_alt",
+        "GL383569.1",
+        "NW_003315958.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2474,8 +2617,9 @@
       "name": "HSCHR18_2_CTG1_1",
       "length": 164789,
       "aliases": [
-        "GL383570.1",
-        "NW_003315959.1"
+        "chr18_GL383570v1_alt",
+        "NW_003315959.1",
+        "GL383570.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2483,8 +2627,9 @@
       "name": "HSCHR18_2_CTG2",
       "length": 198278,
       "aliases": [
+        "NW_003315960.1",
         "GL383571.1",
-        "NW_003315960.1"
+        "chr18_GL383571v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2493,6 +2638,7 @@
       "length": 159547,
       "aliases": [
         "NW_003315961.1",
+        "chr18_GL383572v1_alt",
         "GL383572.1"
       ],
       "sequence_role": "novel-patch"
@@ -2501,8 +2647,9 @@
       "name": "HG730_PATCH",
       "length": 580393,
       "aliases": [
+        "NW_003571053.2",
         "GL582977.2",
-        "NW_003571053.2"
+        "chr19_GL582977v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2510,8 +2657,9 @@
       "name": "HG729_PATCH",
       "length": 245473,
       "aliases": [
-        "JH159149.1",
-        "NW_003871094.1"
+        "NW_003871094.1",
+        "chr19_JH159149v1_fix",
+        "JH159149.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2519,6 +2667,7 @@
       "name": "HG1079_PATCH",
       "length": 1058686,
       "aliases": [
+        "chr19_KB021647v1_fix",
         "KB021647.1",
         "NW_004166865.1"
       ],
@@ -2528,8 +2677,9 @@
       "name": "HG1350_HG959_PATCH",
       "length": 579598,
       "aliases": [
+        "KE332505.1",
         "NW_004775434.1",
-        "KE332505.1"
+        "chr19_KE332505v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2537,8 +2687,9 @@
       "name": "HSCHR19_1_CTG3",
       "length": 385657,
       "aliases": [
-        "NW_003315962.1",
-        "GL383573.1"
+        "chr19_GL383573v1_alt",
+        "GL383573.1",
+        "NW_003315962.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2546,6 +2697,7 @@
       "name": "HSCHR19_1_CTG3_1",
       "length": 155864,
       "aliases": [
+        "chr19_GL383574v1_alt",
         "GL383574.1",
         "NW_003315963.1"
       ],
@@ -2555,8 +2707,9 @@
       "name": "HSCHR19_2_CTG3",
       "length": 170222,
       "aliases": [
+        "GL383575.2",
         "NW_003315964.2",
-        "GL383575.2"
+        "chr19_GL383575v2_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2564,8 +2717,9 @@
       "name": "HSCHR19_3_CTG3",
       "length": 188024,
       "aliases": [
+        "NW_003315965.1",
         "GL383576.1",
-        "NW_003315965.1"
+        "chr19_GL383576v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2574,7 +2728,8 @@
       "length": 987716,
       "aliases": [
         "NW_003571054.1",
-        "GL949746.1"
+        "GL949746.1",
+        "chr19_GL949746v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2583,7 +2738,8 @@
       "length": 729519,
       "aliases": [
         "NW_003571055.1",
-        "GL949747.1"
+        "GL949747.1",
+        "chr19_GL949747v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2591,8 +2747,9 @@
       "name": "HSCHR19LRC_LRC_I_CTG1",
       "length": 1064303,
       "aliases": [
-        "GL949748.1",
-        "NW_003571056.1"
+        "NW_003571056.1",
+        "chr19_GL949748v1_alt",
+        "GL949748.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2600,8 +2757,9 @@
       "name": "HSCHR19LRC_LRC_J_CTG1",
       "length": 1091840,
       "aliases": [
-        "NW_003571057.1",
-        "GL949749.1"
+        "chr19_GL949749v1_alt",
+        "GL949749.1",
+        "NW_003571057.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2609,6 +2767,7 @@
       "name": "HSCHR19LRC_LRC_S_CTG1",
       "length": 1066389,
       "aliases": [
+        "chr19_GL949750v1_alt",
         "NW_003571058.1",
         "GL949750.1"
       ],
@@ -2618,8 +2777,9 @@
       "name": "HSCHR19LRC_LRC_T_CTG1",
       "length": 1002682,
       "aliases": [
+        "GL949751.1",
         "NW_003571059.1",
-        "GL949751.1"
+        "chr19_GL949751v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2628,6 +2788,7 @@
       "length": 987100,
       "aliases": [
         "NW_003571060.1",
+        "chr19_GL949752v1_alt",
         "GL949752.1"
       ],
       "sequence_role": "novel-patch"
@@ -2636,8 +2797,9 @@
       "name": "HSCHR19LRC_PGF2_CTG1",
       "length": 796478,
       "aliases": [
-        "NW_003571061.1",
-        "GL949753.1"
+        "chr19_GL949753v1_alt",
+        "GL949753.1",
+        "NW_003571061.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2645,6 +2807,7 @@
       "name": "HG506_HG507_HG1000_PATCH",
       "length": 179899,
       "aliases": [
+        "chr20_GL582979v2_fix",
         "GL582979.2",
         "NW_003571063.2"
       ],
@@ -2654,8 +2817,9 @@
       "name": "HG144_PATCH",
       "length": 70483,
       "aliases": [
+        "NW_003871095.1",
         "JH720448.1",
-        "NW_003871095.1"
+        "chr20_JH720448v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2663,8 +2827,9 @@
       "name": "HG944_PATCH",
       "length": 283551,
       "aliases": [
-        "NW_004504304.1",
-        "KB663608.1"
+        "KB663608.1",
+        "chr20_KB663608v1_fix",
+        "NW_004504304.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2672,8 +2837,9 @@
       "name": "HSCHR20_1_CTG1",
       "length": 128385,
       "aliases": [
-        "GL383577.1",
-        "NW_003315966.1"
+        "chr20_GL383577v1_alt",
+        "NW_003315966.1",
+        "GL383577.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2681,8 +2847,9 @@
       "name": "HG237_PATCH",
       "length": 307252,
       "aliases": [
-        "NW_004775435.1",
-        "KE332506.1"
+        "chr21_KE332506v1_fix",
+        "KE332506.1",
+        "NW_004775435.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2690,8 +2857,9 @@
       "name": "HSCHR21_1_CTG1_1",
       "length": 63917,
       "aliases": [
-        "NW_003315967.1",
-        "GL383578.1"
+        "chr21_GL383578v1_alt",
+        "GL383578.1",
+        "NW_003315967.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2700,7 +2868,8 @@
       "length": 201198,
       "aliases": [
         "NW_003315968.1",
-        "GL383579.1"
+        "GL383579.1",
+        "chr21_GL383579v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2709,7 +2878,8 @@
       "length": 74652,
       "aliases": [
         "NW_003315969.1",
-        "GL383580.1"
+        "GL383580.1",
+        "chr21_GL383580v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2717,8 +2887,9 @@
       "name": "HSCHR21_4_CTG1_1",
       "length": 116690,
       "aliases": [
-        "NW_003315970.1",
-        "GL383581.1"
+        "chr21_GL383581v1_alt",
+        "GL383581.1",
+        "NW_003315970.1"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2726,8 +2897,9 @@
       "name": "HG329_PATCH",
       "length": 212298,
       "aliases": [
-        "JH720449.1",
-        "NW_003871096.1"
+        "NW_003871096.1",
+        "chr22_JH720449v1_fix",
+        "JH720449.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2735,8 +2907,9 @@
       "name": "HG1486_PATCH",
       "length": 167183,
       "aliases": [
-        "JH806583.1",
-        "NW_004070873.1"
+        "NW_004070873.1",
+        "chr22_JH806583v1_fix",
+        "JH806583.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2745,7 +2918,8 @@
       "length": 70876,
       "aliases": [
         "JH806584.1",
-        "NW_004070874.1"
+        "NW_004070874.1",
+        "chr22_JH806584v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2753,6 +2927,7 @@
       "name": "HG1488_PATCH",
       "length": 73505,
       "aliases": [
+        "chr22_JH806585v1_fix",
         "JH806585.1",
         "NW_004070875.1"
       ],
@@ -2762,6 +2937,7 @@
       "name": "HG497_PATCH",
       "length": 43543,
       "aliases": [
+        "chr22_JH806586v1_fix",
         "JH806586.1",
         "NW_004070876.1"
       ],
@@ -2772,6 +2948,7 @@
       "length": 162811,
       "aliases": [
         "GL383582.2",
+        "chr22_GL383582v2_alt",
         "NW_003315971.2"
       ],
       "sequence_role": "novel-patch"
@@ -2780,8 +2957,9 @@
       "name": "HSCHR22_1_CTG2",
       "length": 96924,
       "aliases": [
+        "NW_003315972.1",
         "GL383583.1",
-        "NW_003315972.1"
+        "chr22_GL383583v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2790,7 +2968,8 @@
       "length": 74013,
       "aliases": [
         "NW_004504305.1",
-        "KB663609.1"
+        "KB663609.1",
+        "chr22_KB663609v1_alt"
       ],
       "sequence_role": "novel-patch"
     },
@@ -2799,7 +2978,8 @@
       "length": 284527,
       "aliases": [
         "NW_003571064.2",
-        "GL877877.2"
+        "GL877877.2",
+        "chrX_GL877877v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2808,6 +2988,7 @@
       "length": 3110903,
       "aliases": [
         "JH159150.3",
+        "chrX_JH159150v3_fix",
         "NW_003871103.3"
       ],
       "sequence_role": "fix-patch"
@@ -2816,8 +2997,9 @@
       "name": "HG1423_PATCH",
       "length": 898979,
       "aliases": [
-        "JH720451.1",
-        "NW_003871098.1"
+        "NW_003871098.1",
+        "chrX_JH720451v1_fix",
+        "JH720451.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2825,6 +3007,7 @@
       "name": "HG1424_PATCH",
       "length": 522319,
       "aliases": [
+        "chrX_JH720452v1_fix",
         "NW_003871099.1",
         "JH720452.1"
       ],
@@ -2834,8 +3017,9 @@
       "name": "HG1425_PATCH",
       "length": 1461188,
       "aliases": [
-        "JH720453.1",
-        "NW_003871100.1"
+        "chrX_JH720453v1_fix",
+        "NW_003871100.1",
+        "JH720453.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2844,6 +3028,7 @@
       "length": 752267,
       "aliases": [
         "JH720454.3",
+        "chrX_JH720454v3_fix",
         "NW_003871101.3"
       ],
       "sequence_role": "fix-patch"
@@ -2853,7 +3038,8 @@
       "length": 65034,
       "aliases": [
         "NW_003871102.1",
-        "JH720455.1"
+        "JH720455.1",
+        "chrX_JH720455v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2861,6 +3047,7 @@
       "name": "HG1433_PATCH",
       "length": 4110759,
       "aliases": [
+        "chrX_JH806587v1_fix",
         "JH806587.1",
         "NW_004070877.1"
       ],
@@ -2870,8 +3057,9 @@
       "name": "HG1434_PATCH",
       "length": 862483,
       "aliases": [
+        "JH806588.1",
         "NW_004070878.1",
-        "JH806588.1"
+        "chrX_JH806588v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2879,6 +3067,7 @@
       "name": "HG1435_PATCH",
       "length": 270630,
       "aliases": [
+        "chrX_JH806589v1_fix",
         "JH806589.1",
         "NW_004070879.1"
       ],
@@ -2889,7 +3078,8 @@
       "length": 2418393,
       "aliases": [
         "JH806590.2",
-        "NW_004070880.2"
+        "NW_004070880.2",
+        "chrX_JH806590v2_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2897,6 +3087,7 @@
       "name": "HG1437_PATCH",
       "length": 882083,
       "aliases": [
+        "chrX_JH806591v1_fix",
         "NW_004070881.1",
         "JH806591.1"
       ],
@@ -2907,7 +3098,8 @@
       "length": 835911,
       "aliases": [
         "JH806592.1",
-        "NW_004070882.1"
+        "NW_004070882.1",
+        "chrX_JH806592v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2915,8 +3107,9 @@
       "name": "HG1439_PATCH",
       "length": 389631,
       "aliases": [
+        "NW_004070883.1",
         "JH806593.1",
-        "NW_004070883.1"
+        "chrX_JH806593v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2924,6 +3117,7 @@
       "name": "HG1440_PATCH",
       "length": 390496,
       "aliases": [
+        "chrX_JH806594v1_fix",
         "JH806594.1",
         "NW_004070884.1"
       ],
@@ -2934,7 +3128,8 @@
       "length": 444074,
       "aliases": [
         "JH806595.1",
-        "NW_004070885.1"
+        "NW_004070885.1",
+        "chrX_JH806595v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2943,7 +3138,8 @@
       "length": 413927,
       "aliases": [
         "JH806596.1",
-        "NW_004070886.1"
+        "NW_004070886.1",
+        "chrX_JH806596v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2951,8 +3147,9 @@
       "name": "HG1443_HG1444_PATCH",
       "length": 1045622,
       "aliases": [
+        "JH806597.1",
         "NW_004070887.1",
-        "JH806597.1"
+        "chrX_JH806597v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2961,7 +3158,8 @@
       "length": 899320,
       "aliases": [
         "JH806598.1",
-        "NW_004070888.1"
+        "NW_004070888.1",
+        "chrX_JH806598v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2969,8 +3167,9 @@
       "name": "HG1458_PATCH",
       "length": 1214327,
       "aliases": [
+        "NW_004070889.1",
         "JH806599.1",
-        "NW_004070889.1"
+        "chrX_JH806599v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2978,8 +3177,9 @@
       "name": "HG1459_PATCH",
       "length": 6530008,
       "aliases": [
-        "JH806600.2",
-        "NW_004070890.2"
+        "NW_004070890.2",
+        "chrX_JH806600v2_fix",
+        "JH806600.2"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2987,8 +3187,9 @@
       "name": "HG1462_PATCH",
       "length": 1389764,
       "aliases": [
+        "NW_004070891.1",
         "JH806601.1",
-        "NW_004070891.1"
+        "chrX_JH806601v1_fix"
       ],
       "sequence_role": "fix-patch"
     },
@@ -2996,8 +3197,9 @@
       "name": "HG1463_PATCH",
       "length": 713266,
       "aliases": [
-        "JH806602.1",
-        "NW_004070892.1"
+        "NW_004070892.1",
+        "chrX_JH806602v1_fix",
+        "JH806602.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -3005,8 +3207,9 @@
       "name": "HG1490_PATCH",
       "length": 182949,
       "aliases": [
-        "NW_004070893.1",
-        "JH806603.1"
+        "JH806603.1",
+        "chrX_JH806603v1_fix",
+        "NW_004070893.1"
       ],
       "sequence_role": "fix-patch"
     },
@@ -3015,6 +3218,7 @@
       "length": 469972,
       "aliases": [
         "NW_004166866.1",
+        "chrX_KB021648v1_fix",
         "KB021648.1"
       ],
       "sequence_role": "fix-patch"
@@ -3023,8 +3227,8 @@
       "name": "HSCHR6_MHC_APD_CTG1",
       "length": 4622290,
       "aliases": [
-        "GL000250.1",
         "NT_167244.1",
+        "GL000250.1",
         "chr6_apd_hap1"
       ],
       "sequence_role": "alt-scaffold"
@@ -3033,9 +3237,9 @@
       "name": "HSCHR6_MHC_COX_CTG1",
       "length": 4795371,
       "aliases": [
+        "GL000251.1",
         "NT_113891.2",
-        "chr6_cox_hap2",
-        "GL000251.1"
+        "chr6_cox_hap2"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3043,9 +3247,9 @@
       "name": "HSCHR6_MHC_DBB_CTG1",
       "length": 4610396,
       "aliases": [
-        "chr6_dbb_hap3",
+        "NT_167245.1",
         "GL000252.1",
-        "NT_167245.1"
+        "chr6_dbb_hap3"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3053,9 +3257,9 @@
       "name": "HSCHR6_MHC_MANN_CTG1",
       "length": 4683263,
       "aliases": [
+        "GL000253.1",
         "NT_167246.1",
-        "chr6_mann_hap4",
-        "GL000253.1"
+        "chr6_mann_hap4"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3064,8 +3268,8 @@
       "length": 4833398,
       "aliases": [
         "NT_167247.1",
-        "chr6_mcf_hap5",
-        "GL000254.1"
+        "GL000254.1",
+        "chr6_mcf_hap5"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3073,9 +3277,9 @@
       "name": "HSCHR6_MHC_QBL_CTG1",
       "length": 4611984,
       "aliases": [
+        "GL000255.1",
         "NT_167248.1",
-        "chr6_qbl_hap6",
-        "GL000255.1"
+        "chr6_qbl_hap6"
       ],
       "sequence_role": "alt-scaffold"
     },
@@ -3103,9 +3307,9 @@
       "name": "HSCHR17_1_CTG5",
       "length": 1680828,
       "aliases": [
+        "chr17_ctg5_hap1",
         "GL000258.1",
-        "NT_167251.1",
-        "chr17_ctg5_hap1"
+        "NT_167251.1"
       ],
       "sequence_role": "alt-scaffold"
     }
