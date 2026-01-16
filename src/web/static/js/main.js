@@ -268,6 +268,13 @@ function loadExample(tabType) {
         textarea.value = example;
         tabManager.validateFormat();
     }
+
+    // Set threshold to 0 so example matches are visible
+    updateThreshold(0);
+    const slider = document.getElementById('score-threshold');
+    if (slider) {
+        slider.value = 0;
+    }
 }
 
 /**
