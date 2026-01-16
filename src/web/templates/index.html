@@ -48,7 +48,8 @@
                 <p><strong>Sequence Dictionary:</strong> Upload Picard .dict files from reference preparation</p>
                 <p><strong>Assembly Report:</strong> Upload NCBI assembly reports with comprehensive metadata</p>
                 <p><strong>VCF Header:</strong> Upload VCF files to extract <code>##contig</code> lines</p>
-                <p><strong>BAM/CRAM:</strong> Upload .bam or .cram files to extract headers automatically</p>
+                <p><strong>FASTA Index:</strong> Paste or upload .fai index files (5 tab-separated columns)</p>
+                <p><strong>BAM/CRAM/FASTA:</strong> Upload binary files (.bam, .cram, .fa, .fasta) to extract headers automatically</p>
                 <p>All formats are automatically detected and parsed appropriately.</p>
             </div>
             <div class="help-tab-content" id="help-results">
@@ -77,19 +78,19 @@
             <button class="tab-button active" onclick="showTab('sam-dict')">SAM Header / Dictionary</button>
             <button class="tab-button" onclick="showTab('assembly-report')">Assembly Report</button>
             <button class="tab-button" onclick="showTab('vcf')">VCF Header</button>
-            <button class="tab-button" onclick="showTab('binary')">BAM/CRAM</button>
+            <button class="tab-button" onclick="showTab('binary')">BAM/CRAM/FASTA</button>
         </div>
 
         <form id="identify-form">
-            <!-- SAM Header / Dictionary Tab -->
+            <!-- SAM Header / Dictionary / FAI Tab -->
             <div class="tab-content active" id="tab-sam-dict">
                 <div class="card-body">
                     <div class="tab-description">
-                        Paste SAM header lines (@SQ) or upload SAM files / Picard sequence dictionary (.dict) files.
+                        Paste SAM header lines (@SQ), FASTA index, or upload .sam, .dict, or .fai files.
                     </div>
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
                         <label for="sam-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
-                        <input type="file" id="sam-file-upload" name="file" accept=".sam,.dict,.txt" onchange="handleFileUpload(this, 'text')" style="display: none;">
+                        <input type="file" id="sam-file-upload" name="file" accept=".sam,.dict,.fai,.txt" onchange="handleFileUpload(this, 'text')" style="display: none;">
                         <button type="button" class="demo-button" onclick="loadExample('sam-dict')">📋 Load Example</button>
                         <button type="button" class="demo-button" onclick="clearTextArea('header-input')">🗑️ Clear</button>
                     </div>
@@ -138,15 +139,15 @@
                 </div>
             </div>
 
-            <!-- BAM/CRAM Tab -->
+            <!-- BAM/CRAM/FASTA Tab -->
             <div class="tab-content" id="tab-binary">
                 <div class="card-body">
                     <div class="tab-description">
-                        Upload BAM or CRAM files to automatically extract sequence dictionary information from headers. Binary files cannot be pasted as text.
+                        Upload BAM, CRAM, or FASTA files to automatically extract sequence information from headers. These files are uploaded and processed server-side.
                     </div>
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
                         <label for="binary-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
-                        <input type="file" id="binary-file-upload" name="file" accept=".bam,.cram" onchange="handleFileUpload(this, 'binary')" style="display: none;">
+                        <input type="file" id="binary-file-upload" name="file" accept=".bam,.cram,.fa,.fasta,.fna,.fa.gz,.fasta.gz,.fna.gz" onchange="handleFileUpload(this, 'binary')" style="display: none;">
                     </div>
                     <div id="binary-preview" style="margin-top: 1rem; display: none;">
                         <p style="color: var(--text-muted);">File uploaded: <span id="binary-filename"></span></p>

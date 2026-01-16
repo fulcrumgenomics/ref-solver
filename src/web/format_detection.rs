@@ -18,6 +18,10 @@ pub enum FileFormat {
     NcbiReport,
     /// TSV/CSV tabular files
     Tsv,
+    /// FASTA index (.fai) files
+    Fai,
+    /// FASTA sequence files
+    Fasta,
     /// Automatically detect format
     Auto,
 }
@@ -53,6 +57,8 @@ impl FileFormat {
             FileFormat::Vcf => "VCF File",
             FileFormat::NcbiReport => "NCBI Assembly Report",
             FileFormat::Tsv => "TSV/CSV Table",
+            FileFormat::Fai => "FASTA Index",
+            FileFormat::Fasta => "FASTA File",
             FileFormat::Auto => "Auto-detect",
         }
     }
@@ -87,6 +93,22 @@ pub fn detect_format(content: &str, filename: Option<&str>) -> Result<FileFormat
 /// Detect format based on filename and extension
 fn detect_format_from_filename(filename: &str) -> Option<FileFormat> {
     let path = Path::new(filename);
+    let lower_name = filename.to_lowercase();
+
+    // Check for compressed formats first (multi-extension patterns)
+    if lower_name.ends_with(".vcf.gz") {
+        return Some(FileFormat::Vcf);
+    }
+    if lower_name.ends_with(".fa.gz")
+        || lower_name.ends_with(".fasta.gz")
+        || lower_name.ends_with(".fna.gz")
+        || lower_name.ends_with(".fa.bgz")
+        || lower_name.ends_with(".fasta.bgz")
+        || lower_name.ends_with(".fna.bgz")
+    {
+        return Some(FileFormat::Fasta);
+    }
+
     let extension = path.extension()?.to_str()?.to_lowercase();
 
     match extension.as_str() {
@@ -95,18 +117,11 @@ fn detect_format_from_filename(filename: &str) -> Option<FileFormat> {
         "cram" => Some(FileFormat::Cram),
         "dict" => Some(FileFormat::Dict),
         "vcf" => Some(FileFormat::Vcf),
-        "gz" => {
-            // Check for .vcf.gz
-            if filename.to_ascii_lowercase().ends_with(".vcf.gz") {
-                Some(FileFormat::Vcf)
-            } else {
-                None
-            }
-        }
+        "fai" => Some(FileFormat::Fai),
+        "fa" | "fasta" | "fna" => Some(FileFormat::Fasta),
         "tsv" | "csv" => Some(FileFormat::Tsv),
         "txt" => {
             // Disambiguate .txt files based on filename patterns
-            let lower_name = filename.to_lowercase();
             if lower_name.contains("assembly") || lower_name.contains("report") {
                 Some(FileFormat::NcbiReport)
             } else if lower_name.ends_with(".dict.txt") {
@@ -205,6 +220,28 @@ fn detect_format_from_content(content: &str) -> Result<FileFormat, FormatError> 
         }
     }
 
+    // FAI format: exactly 5 tab-separated columns (name, length, offset, line_bases, line_width)
+    // All non-empty, non-comment lines should have 5 columns with numeric values in columns 2-5
+    if !lines.is_empty() {
+        let fai_lines: Vec<&&str> = lines
+            .iter()
+            .filter(|line| !line.is_empty() && !line.starts_with('#'))
+            .collect();
+
+        if !fai_lines.is_empty()
+            && fai_lines.iter().all(|line| {
+                let fields: Vec<&str> = line.split('\t').collect();
+                if fields.len() != 5 {
+                    return false;
+                }
+                // All fields after the first should be numeric
+                fields[1..].iter().all(|f| f.parse::<u64>().is_ok())
+            })
+        {
+            return Ok(FileFormat::Fai);
+        }
+    }
+
     // If content looks like plain text with sequence-like data, assume SAM header
     if lines.iter().any(|line| {
         line.contains("chr")
@@ -239,7 +276,15 @@ fn validate_format_content(content: &str, format: &FileFormat) -> bool {
                 && (content.to_lowercase().contains("length")
                     || content.to_lowercase().contains("sequence"))
         }
-        FileFormat::Bam | FileFormat::Cram => {
+        FileFormat::Fai => {
+            // FAI format has 5 tab-separated columns
+            let lines: Vec<&str> = content.lines().take(5).collect();
+            lines.iter().any(|line| {
+                let fields: Vec<&str> = line.split('\t').collect();
+                fields.len() == 5 && fields[1..].iter().all(|f| f.parse::<u64>().is_ok())
+            })
+        }
+        FileFormat::Bam | FileFormat::Cram | FileFormat::Fasta => {
             // Binary formats should not be validated against text content
             false
         }
@@ -298,6 +343,12 @@ pub fn parse_with_format(content: &str, format: FileFormat) -> Result<QueryHeade
                 }),
             }
         }
+        FileFormat::Fai => {
+            crate::parsing::fai::parse_fai_text(content).map_err(|e| ParseError::ParseFailed {
+                format: FileFormat::Fai,
+                message: e.to_string(),
+            })
+        }
         FileFormat::Bam => Err(ParseError::ParseFailed {
             format: FileFormat::Bam,
             message: "BAM files must be parsed as binary, not text".to_string(),
@@ -305,6 +356,10 @@ pub fn parse_with_format(content: &str, format: FileFormat) -> Result<QueryHeade
         FileFormat::Cram => Err(ParseError::ParseFailed {
             format: FileFormat::Cram,
             message: "CRAM files must be parsed as binary, not text".to_string(),
+        }),
+        FileFormat::Fasta => Err(ParseError::ParseFailed {
+            format: FileFormat::Fasta,
+            message: "FASTA files must be parsed as binary, not text".to_string(),
         }),
         FileFormat::Auto => {
             // For auto-detection, detect format first then parse
@@ -358,6 +413,27 @@ pub fn parse_binary_file(
                 message: "Binary file parsing failed".to_string(), // Sanitized error message
             })
         }
+        FileFormat::Fasta => {
+            // Determine appropriate extension based on content (check for gzip magic bytes)
+            let is_gzipped =
+                file_content.len() >= 2 && file_content[0] == 0x1f && file_content[1] == 0x8b;
+            let file_extension = if is_gzipped { ".fa.gz" } else { ".fa" };
+
+            let mut temp_file =
+                NamedTempFile::with_suffix(file_extension).map_err(ParseError::Io)?;
+
+            // Write bytes to secure temporary file
+            temp_file.write_all(file_content).map_err(ParseError::Io)?;
+
+            // Parse the FASTA file using the secure temp file path
+            let result = crate::parsing::fasta::parse_fasta_file(temp_file.path());
+
+            // File automatically deleted when NamedTempFile drops
+            result.map_err(|_e| ParseError::ParseFailed {
+                format,
+                message: "Binary file parsing failed".to_string(), // Sanitized error message
+            })
+        }
         _ => Err(ParseError::ParseFailed {
             format,
             message: "Format is not a binary file format".to_string(),
@@ -395,6 +471,26 @@ mod tests {
             detect_format_from_filename("assembly_report.txt"),
             Some(FileFormat::NcbiReport)
         );
+        assert_eq!(
+            detect_format_from_filename("reference.fai"),
+            Some(FileFormat::Fai)
+        );
+        assert_eq!(
+            detect_format_from_filename("reference.fa"),
+            Some(FileFormat::Fasta)
+        );
+        assert_eq!(
+            detect_format_from_filename("reference.fasta"),
+            Some(FileFormat::Fasta)
+        );
+        assert_eq!(
+            detect_format_from_filename("reference.fa.gz"),
+            Some(FileFormat::Fasta)
+        );
+        assert_eq!(
+            detect_format_from_filename("reference.fasta.gz"),
+            Some(FileFormat::Fasta)
+        );
         assert_eq!(detect_format_from_filename("unknown.xyz"), None);
     }
 
@@ -424,6 +520,24 @@ mod tests {
             detect_format_from_content(content),
             Ok(FileFormat::NcbiReport)
         );
+    }
+
+    #[test]
+    fn test_fai_detection() {
+        let content = "chr1\t248956422\t112\t70\t71\nchr2\t242193529\t253404903\t70\t71\n";
+        assert_eq!(detect_format_from_content(content), Ok(FileFormat::Fai));
+    }
+
+    #[test]
+    fn test_fai_validation() {
+        assert!(validate_format_content(
+            "chr1\t248956422\t112\t70\t71",
+            &FileFormat::Fai
+        ));
+        assert!(!validate_format_content(
+            "chr1\t248956422\t112",
+            &FileFormat::Fai
+        ));
     }
 
     #[test]

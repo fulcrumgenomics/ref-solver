@@ -220,6 +220,19 @@ pub fn validate_file_format(content: &[u8], expected_format: FileFormat) -> bool
                     || content_str.to_lowercase().contains("sequence")
                     || content_str.to_lowercase().contains("size"))
         }
+        FileFormat::Fai => {
+            // FAI files have 5 tab-separated columns per line
+            let content_str = std::str::from_utf8(content).unwrap_or("");
+            content_str.lines().take(5).any(|line| {
+                let fields: Vec<&str> = line.split('\t').collect();
+                fields.len() == 5 && fields[1..].iter().all(|f| f.parse::<u64>().is_ok())
+            })
+        }
+        FileFormat::Fasta => {
+            // FASTA files start with '>' or are gzip compressed (0x1f 0x8b)
+            content.starts_with(b">")
+                || (content.len() >= 2 && content[0] == 0x1f && content[1] == 0x8b)
+        }
         FileFormat::Auto => {
             // Auto-detection always passes initial validation
             true
