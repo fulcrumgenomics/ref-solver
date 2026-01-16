@@ -131,24 +131,27 @@ impl MatchScore {
                 + normalized_weights.md5_query_coverage * md5_query_coverage
                 + normalized_weights.order_score * order_score
         } else {
-            // Without MD5s, redistribute MD5 weights to name/length coverage
-            let total_non_md5_weight = normalized_weights.name_length_jaccard
-                + normalized_weights.md5_query_coverage
-                + normalized_weights.order_score;
+            // Without MD5s, redistribute weights proportionally among non-MD5 components
+            // The MD5 weights (md5_jaccard + md5_query_coverage) get distributed to the others
+            let total_non_md5_weight =
+                normalized_weights.name_length_jaccard + normalized_weights.order_score;
 
             if total_non_md5_weight > 0.0 {
-                let redistributed_name_length = (normalized_weights.name_length_jaccard
-                    + normalized_weights.md5_jaccard)
-                    / total_non_md5_weight;
-                let redistributed_coverage =
-                    normalized_weights.md5_query_coverage / total_non_md5_weight;
+                // Normalize the non-MD5 weights to sum to 1.0
+                let redistributed_name_length =
+                    normalized_weights.name_length_jaccard / total_non_md5_weight;
                 let redistributed_order = normalized_weights.order_score / total_non_md5_weight;
 
-                redistributed_name_length * name_length_jaccard
-                    + redistributed_coverage * name_length_query_coverage
+                // Use name_length_query_coverage as the coverage metric when MD5 isn't available
+                // Split name_length weight between jaccard and coverage
+                let name_weight = redistributed_name_length * 0.7; // 70% to jaccard
+                let coverage_weight = redistributed_name_length * 0.3; // 30% to coverage
+
+                name_weight * name_length_jaccard
+                    + coverage_weight * name_length_query_coverage
                     + redistributed_order * order_score
             } else {
-                // Fallback to equal weights
+                // Fallback to equal weights (sum to 1.0)
                 0.6 * name_length_jaccard + 0.25 * name_length_query_coverage + 0.15 * order_score
             }
         };
@@ -353,5 +356,121 @@ mod tests {
         assert_eq!(longest_increasing_subsequence(&[5, 4, 3, 2, 1]), 1);
         assert_eq!(longest_increasing_subsequence(&[1, 3, 2, 4, 5]), 4);
         assert_eq!(longest_increasing_subsequence(&[]), 0);
+    }
+
+    #[test]
+    fn test_composite_score_never_exceeds_one() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Create a reference with some contigs
+        let ref_contigs = vec![
+            Contig::new("chr1", 1000),
+            Contig::new("chr2", 2000),
+            Contig::new("chr3", 3000),
+        ];
+        let reference = KnownReference::new(
+            "test_ref",
+            "Test Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Test with query that has NO MD5s (triggers the redistribution code path)
+        let query_no_md5 = QueryHeader::new(vec![
+            Contig::new("chr1", 1000),
+            Contig::new("chr2", 2000),
+            Contig::new("chr3", 3000),
+        ]);
+
+        let score_no_md5 = MatchScore::calculate(&query_no_md5, &reference);
+        assert!(
+            score_no_md5.composite <= 1.0,
+            "Composite score without MD5 should not exceed 1.0, got {}",
+            score_no_md5.composite
+        );
+        assert!(
+            score_no_md5.composite >= 0.0,
+            "Composite score should not be negative, got {}",
+            score_no_md5.composite
+        );
+
+        // Test with query that HAS MD5s
+        let query_with_md5 = QueryHeader::new(vec![
+            Contig::new("chr1", 1000).with_md5("abc123"),
+            Contig::new("chr2", 2000).with_md5("def456"),
+            Contig::new("chr3", 3000).with_md5("ghi789"),
+        ]);
+
+        let score_with_md5 = MatchScore::calculate(&query_with_md5, &reference);
+        assert!(
+            score_with_md5.composite <= 1.0,
+            "Composite score with MD5 should not exceed 1.0, got {}",
+            score_with_md5.composite
+        );
+        assert!(
+            score_with_md5.composite >= 0.0,
+            "Composite score should not be negative, got {}",
+            score_with_md5.composite
+        );
+    }
+
+    #[test]
+    fn test_composite_score_with_custom_weights_never_exceeds_one() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+        use crate::matching::engine::ScoringWeights;
+
+        let ref_contigs = vec![Contig::new("chr1", 1000), Contig::new("chr2", 2000)];
+        let reference = KnownReference::new(
+            "test_ref",
+            "Test Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        let query = QueryHeader::new(vec![Contig::new("chr1", 1000), Contig::new("chr2", 2000)]);
+
+        // Test with various weight configurations
+        let weight_configs = vec![
+            ScoringWeights {
+                md5_jaccard: 0.4,
+                name_length_jaccard: 0.3,
+                md5_query_coverage: 0.2,
+                order_score: 0.1,
+            },
+            ScoringWeights {
+                md5_jaccard: 0.0,
+                name_length_jaccard: 0.5,
+                md5_query_coverage: 0.0,
+                order_score: 0.5,
+            },
+            ScoringWeights {
+                md5_jaccard: 1.0,
+                name_length_jaccard: 1.0,
+                md5_query_coverage: 1.0,
+                order_score: 1.0,
+            },
+        ];
+
+        for weights in weight_configs {
+            let score = MatchScore::calculate_with_weights(&query, &reference, &weights);
+            assert!(
+                score.composite <= 1.0,
+                "Composite score should not exceed 1.0 with weights {:?}, got {}",
+                weights,
+                score.composite
+            );
+            assert!(
+                score.composite >= 0.0,
+                "Composite score should not be negative with weights {:?}, got {}",
+                weights,
+                score.composite
+            );
+        }
     }
 }
