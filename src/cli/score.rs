@@ -194,7 +194,12 @@ fn parse_input(path: &Path) -> anyhow::Result<QueryHeader> {
 fn print_text_result(result: &ScoreResult, weights: &ScoringWeights, suffix: &str) {
     let norm = weights.normalized();
 
-    println!("\nScoring{}: {} vs {}", suffix, result.query_path.display(), result.reference_path.display());
+    println!(
+        "\nScoring{}: {} vs {}",
+        suffix,
+        result.query_path.display(),
+        result.reference_path.display()
+    );
 
     // Score breakdown
     println!(
@@ -300,7 +305,11 @@ fn print_json_results(
     Ok(())
 }
 
-fn print_tsv_results(forward: &ScoreResult, reverse: Option<&ScoreResult>, weights: &ScoringWeights) {
+fn print_tsv_results(
+    forward: &ScoreResult,
+    reverse: Option<&ScoreResult>,
+    weights: &ScoringWeights,
+) {
     let norm = weights.normalized();
 
     // Header
@@ -339,5 +348,255 @@ fn print_tsv_results(forward: &ScoreResult, reverse: Option<&ScoreResult>, weigh
     print_row("forward", forward);
     if let Some(rev) = reverse {
         print_row("reverse", rev);
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::core::contig::Contig;
+    use std::io::Write;
+    use tempfile::NamedTempFile;
+
+    fn create_temp_dict_file(contigs: &[(&str, u64, Option<&str>)]) -> NamedTempFile {
+        let mut file = NamedTempFile::with_suffix(".dict").unwrap();
+        writeln!(file, "@HD\tVN:1.0\tSO:unsorted").unwrap();
+        for (name, len, md5) in contigs {
+            let md5_field = md5.map(|m| format!("\tM5:{m}")).unwrap_or_default();
+            writeln!(file, "@SQ\tSN:{name}\tLN:{len}{md5_field}").unwrap();
+        }
+        file.flush().unwrap();
+        file
+    }
+
+    #[test]
+    fn test_parse_dict_input() {
+        // MD5 must be exactly 32 hex characters
+        let valid_md5 = "6aef897c3d6ff0c78aff06ac189178dd";
+        let file = create_temp_dict_file(&[("chr1", 1000, Some(valid_md5)), ("chr2", 2000, None)]);
+
+        let header = parse_input(file.path()).unwrap();
+        assert_eq!(header.contigs.len(), 2);
+        assert_eq!(header.contigs[0].name, "chr1");
+        assert_eq!(header.contigs[0].length, 1000);
+        assert_eq!(header.contigs[0].md5.as_deref(), Some(valid_md5));
+        assert_eq!(header.contigs[1].name, "chr2");
+        assert_eq!(header.contigs[1].length, 2000);
+        assert!(header.contigs[1].md5.is_none());
+    }
+
+    #[test]
+    fn test_compute_score_perfect_match() {
+        let query_header =
+            QueryHeader::new(vec![Contig::new("chr1", 1000), Contig::new("chr2", 2000)]);
+        let reference_header =
+            QueryHeader::new(vec![Contig::new("chr1", 1000), Contig::new("chr2", 2000)]);
+
+        let weights = ScoringWeights::default();
+        let result = compute_score(
+            PathBuf::from("query.dict"),
+            PathBuf::from("reference.dict"),
+            &query_header,
+            &reference_header,
+            &weights,
+        );
+
+        // Perfect match: all contigs match by name+length
+        assert_eq!(result.score.name_length_matches, 2);
+        assert_eq!(result.score.unmatched, 0);
+        assert!(
+            result.score.composite > 0.9,
+            "Perfect match should score > 90%"
+        );
+    }
+
+    #[test]
+    fn test_compute_score_partial_match() {
+        let query_header = QueryHeader::new(vec![
+            Contig::new("chr1", 1000),
+            Contig::new("chr2", 2000),
+            Contig::new("chr3", 3000),
+        ]);
+        let reference_header =
+            QueryHeader::new(vec![Contig::new("chr1", 1000), Contig::new("chr2", 2000)]);
+
+        let weights = ScoringWeights::default();
+        let result = compute_score(
+            PathBuf::from("query.dict"),
+            PathBuf::from("reference.dict"),
+            &query_header,
+            &reference_header,
+            &weights,
+        );
+
+        // 2 of 3 query contigs match
+        assert_eq!(result.score.name_length_matches, 2);
+        assert_eq!(result.score.unmatched, 1);
+        assert!(
+            result.score.contig_match_score < 1.0,
+            "Partial match should have contig_match_score < 1.0"
+        );
+    }
+
+    #[test]
+    fn test_compute_score_asymmetric() {
+        // Query has fewer contigs than reference
+        let query_header = QueryHeader::new(vec![Contig::new("chr1", 1000)]);
+        let reference_header = QueryHeader::new(vec![
+            Contig::new("chr1", 1000),
+            Contig::new("chr2", 2000),
+            Contig::new("chr3", 3000),
+        ]);
+
+        let weights = ScoringWeights::default();
+
+        // Forward: query → reference
+        let forward = compute_score(
+            PathBuf::from("query.dict"),
+            PathBuf::from("reference.dict"),
+            &query_header,
+            &reference_header,
+            &weights,
+        );
+
+        // Reverse: reference → query
+        let reverse = compute_score(
+            PathBuf::from("reference.dict"),
+            PathBuf::from("query.dict"),
+            &reference_header,
+            &query_header,
+            &weights,
+        );
+
+        // Forward: all query contigs match (100% contig match), but only 1/3 ref covered
+        assert_eq!(forward.score.name_length_matches, 1);
+        assert!(
+            (forward.score.contig_match_score - 1.0).abs() < 0.001,
+            "All query contigs match"
+        );
+        assert!(
+            forward.score.coverage_score < 0.5,
+            "Coverage should be 1/3 = 0.33"
+        );
+
+        // Reverse: only 1/3 query contigs match, but reference is fully covered
+        assert_eq!(reverse.score.unmatched, 2);
+        assert!(
+            reverse.score.contig_match_score < 0.5,
+            "Only 1/3 query contigs match"
+        );
+        assert!(
+            (reverse.score.coverage_score - 1.0).abs() < 0.001,
+            "Reference fully covered"
+        );
+    }
+
+    #[test]
+    fn test_custom_weights() {
+        let query_header =
+            QueryHeader::new(vec![Contig::new("chr1", 1000), Contig::new("chr2", 2000)]);
+        let reference_header = QueryHeader::new(vec![
+            Contig::new("chr1", 1000),
+            Contig::new("chr2", 2000),
+            Contig::new("chr3", 3000),
+        ]);
+
+        // Emphasize coverage over match
+        let high_coverage_weights = ScoringWeights {
+            contig_match: 0.2,
+            coverage: 0.7,
+            order: 0.1,
+            conflict_penalty: 0.1,
+        };
+
+        // Emphasize match over coverage
+        let high_match_weights = ScoringWeights {
+            contig_match: 0.8,
+            coverage: 0.1,
+            order: 0.1,
+            conflict_penalty: 0.1,
+        };
+
+        let result_high_cov = compute_score(
+            PathBuf::from("q.dict"),
+            PathBuf::from("r.dict"),
+            &query_header,
+            &reference_header,
+            &high_coverage_weights,
+        );
+
+        let result_high_match = compute_score(
+            PathBuf::from("q.dict"),
+            PathBuf::from("r.dict"),
+            &query_header,
+            &reference_header,
+            &high_match_weights,
+        );
+
+        // With emphasis on coverage (2/3), score should be lower
+        // With emphasis on match (100%), score should be higher
+        assert!(
+            result_high_match.score.composite > result_high_cov.score.composite,
+            "High match weight should yield higher score when matches are 100% but coverage is 66%"
+        );
+    }
+
+    #[test]
+    fn test_score_with_md5_match() {
+        let query_header = QueryHeader::new(vec![
+            Contig::new("chr1", 1000).with_md5("abc123"),
+            Contig::new("chr2", 2000).with_md5("def456"),
+        ]);
+        let reference_header = QueryHeader::new(vec![
+            Contig::new("chr1", 1000).with_md5("abc123"),
+            Contig::new("chr2", 2000).with_md5("def456"),
+        ]);
+
+        let weights = ScoringWeights::default();
+        let result = compute_score(
+            PathBuf::from("query.dict"),
+            PathBuf::from("reference.dict"),
+            &query_header,
+            &reference_header,
+            &weights,
+        );
+
+        // With matching MD5s, these should be exact matches
+        assert_eq!(result.score.exact_matches, 2);
+        assert_eq!(result.score.name_length_matches, 0);
+        assert!(
+            result.score.composite > 0.95,
+            "Exact MD5 match should score very high"
+        );
+    }
+
+    #[test]
+    fn test_score_with_md5_conflict() {
+        let query_header = QueryHeader::new(vec![
+            Contig::new("chr1", 1000).with_md5("abc123"),
+            Contig::new("chr2", 2000).with_md5("def456"),
+        ]);
+        let reference_header = QueryHeader::new(vec![
+            Contig::new("chr1", 1000).with_md5("DIFFERENT1"),
+            Contig::new("chr2", 2000).with_md5("DIFFERENT2"),
+        ]);
+
+        let weights = ScoringWeights::default();
+        let result = compute_score(
+            PathBuf::from("query.dict"),
+            PathBuf::from("reference.dict"),
+            &query_header,
+            &reference_header,
+            &weights,
+        );
+
+        // MD5 conflicts should be penalized
+        assert_eq!(result.score.md5_conflicts, 2);
+        assert_eq!(result.score.exact_matches, 0);
+        assert!(
+            result.score.composite < 0.3,
+            "MD5 conflicts should result in low score, got {:.1}%",
+            result.score.composite * 100.0
+        );
     }
 }

@@ -52,6 +52,9 @@ ref-solver identify sample.bam --format json
 # Compare two files/references
 ref-solver compare sample.bam grch38_ncbi --reference
 
+# Score one file against another directly
+ref-solver score query.bam reference.dict
+
 # List all known references
 ref-solver catalog list
 
@@ -178,6 +181,35 @@ Commands:
   export  Export the catalog to a JSON file
 ```
 
+### `score`
+Compare two files directly without using the catalog. Useful for comparing arbitrary files. By default, scoring is asymmetric: it measures how well the query matches the reference.
+
+```bash
+ref-solver score [OPTIONS] <QUERY> <REFERENCE>
+
+Arguments:
+  <QUERY>      Query file (BAM, SAM, CRAM, FASTA, FAI, VCF, .dict, TSV, CSV)
+  <REFERENCE>  Reference file to compare against
+
+Options:
+      --symmetric            Compute both directions (query→reference and reference→query)
+      --weight-match <N>     Weight for contig match score (0-100) [default: 70]
+      --weight-coverage <N>  Weight for coverage score (0-100) [default: 20]
+      --weight-order <N>     Weight for order score (0-100) [default: 10]
+```
+
+Example:
+```bash
+# Compare a BAM against a reference FASTA index
+ref-solver score sample.bam reference.fa.fai
+
+# Compare in both directions
+ref-solver score --symmetric file_a.dict file_b.dict
+
+# Custom scoring weights (emphasize coverage)
+ref-solver score --weight-match 50 --weight-coverage 40 --weight-order 10 query.bam ref.dict
+```
+
 ### `serve`
 Start the web interface.
 
@@ -250,6 +282,54 @@ ref-solver catalog export my_catalog.json
 # Use custom catalog
 ref-solver identify --catalog my_catalog.json sample.bam
 ```
+
+## UCSC-Style Naming for Patches
+
+ref-solver automatically generates UCSC-style names for fix-patches and novel-patches in GRCh38 assembly reports. This is particularly important for assembly reports prior to p13, where the UCSC-style-name column shows "na" for patches.
+
+### Naming Convention
+
+UCSC uses the following format for patch contigs:
+
+| Patch Type | Format | Example |
+|------------|--------|---------|
+| Fix patches | `chr{chr}_{accession}v{version}_fix` | `chr1_KN196472v1_fix` |
+| Novel patches | `chr{chr}_{accession}v{version}_alt` | `chr1_KQ458382v1_alt` |
+
+The transformation converts NCBI GenBank accessions (e.g., `KN196472.1`) to UCSC-style names by:
+1. Replacing `.` with `v` in the accession
+2. Prepending `chr{chromosome}_`
+3. Appending `_fix` or `_alt` based on patch type
+
+### Examples
+
+| NCBI Accession | Patch Type | Chromosome | UCSC Name |
+|----------------|------------|------------|-----------|
+| `KN196472.1` | fix-patch | 1 | `chr1_KN196472v1_fix` |
+| `KQ458382.1` | novel-patch | 1 | `chr1_KQ458382v1_alt` |
+| `KN196487.1` | fix-patch | Y | `chrY_KN196487v1_fix` |
+| `KV766199.1` | novel-patch | X | `chrX_KV766199v1_alt` |
+
+### Disabling UCSC Name Generation
+
+When building custom catalogs, you can disable automatic UCSC name generation:
+
+```bash
+ref-solver catalog build \
+  --id my_ref \
+  --name "My Reference" \
+  --input assembly_report.txt \
+  --no-generate-ucsc-names
+```
+
+This is useful when you want strict adherence to names in the assembly report.
+
+### Official Documentation
+
+- [UCSC FAQ - Downloads](https://genome.ucsc.edu/FAQ/FAQdownloads.html)
+- [UCSC Blog - Patches Explained](https://genome-blog.soe.ucsc.edu/blog/2019/02/22/patches/)
+- [UCSC hg38 Downloads](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/)
+- [GRC Patches Documentation](https://www.ncbi.nlm.nih.gov/grc/help/patches/)
 
 ## Library Usage
 
