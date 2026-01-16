@@ -1,7 +1,7 @@
 //! Parser for VCF header contig lines.
 //!
 //! VCF files have contig definitions in the header as:
-//! `##contig=<ID=chr1,length=248_956_422>`
+//! `##contig=<ID=chr1,length=248956422>`
 //!
 //! Additional fields like `md5` and `assembly` may also be present.
 //!
@@ -65,7 +65,7 @@ pub fn parse_vcf_header_text(text: &str) -> Result<QueryHeader, ParseError> {
 
 /// Parse a single ##contig=<...> line
 fn parse_contig_line(line: &str) -> Result<Option<Contig>, ParseError> {
-    // Format: ##contig=<ID=chr1,length=248_956_422,md5=abc123,...>
+    // Format: ##contig=<ID=chr1,length=248956422,md5=abc123,...>
     let content = line
         .strip_prefix("##contig=<")
         .and_then(|s| s.strip_suffix('>'))
@@ -148,8 +148,8 @@ mod tests {
     #[test]
     fn test_parse_vcf_header() {
         let vcf = r#"##fileformat=VCFv4.2
-##contig=<ID=chr1,length=248_956_422>
-##contig=<ID=chr2,length=242_193_529,md5=f98db672eb0993dcfdabafe2a882905c>
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529,md5=f98db672eb0993dcfdabafe2a882905c>
 ##contig=<ID=chrM,length=16569,assembly=GRCh38>
 ##INFO=<ID=DP,Number=1,Type=Integer,Description="Depth">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
@@ -183,7 +183,7 @@ mod tests {
 
     #[test]
     fn test_parse_contig_line() {
-        let line = "##contig=<ID=chr1,length=248_956_422,md5=6aef897c3d6ff0c78aff06ac189178dd>";
+        let line = "##contig=<ID=chr1,length=248956422,md5=6aef897c3d6ff0c78aff06ac189178dd>";
         let contig = parse_contig_line(line).unwrap().unwrap();
 
         assert_eq!(contig.name, "chr1");
@@ -198,7 +198,7 @@ mod tests {
     fn test_parse_vcf_quoted_values() {
         // Test that quoted values are handled properly
         let vcf = r#"##fileformat=VCFv4.2
-##contig=<ID=chr1,length=248_956_422,assembly="GRCh38.p14">
+##contig=<ID=chr1,length=248956422,assembly="GRCh38.p14">
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
 "#;
         let query = parse_vcf_header_text(vcf).unwrap();

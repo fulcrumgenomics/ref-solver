@@ -245,7 +245,7 @@ fn test_format_detection_security() {
     use ref_solver::web::format_detection::{detect_format, FileFormat};
 
     // Test public format detection API with different content types
-    let dict_content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248_956_422\tM5:abc123\n";
+    let dict_content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248956422\tM5:abc123\n";
     let detected = detect_format(dict_content, Some("test.dict")).unwrap();
     // Should detect dict based on filename and content
     assert!(matches!(detected, FileFormat::Dict | FileFormat::Sam));

@@ -193,8 +193,8 @@ mod tests {
         let report = r"# Assembly name:  GRCh38.p14
 # Organism name:  Homo sapiens
 # Sequence-Name	Sequence-Role	Assigned-Molecule	Assigned-Molecule-Location/Type	GenBank-Accn	Relationship	RefSeq-Accn	Assembly-Unit	Sequence-Length	UCSC-style-name
-1	assembled-molecule	1	Chromosome	CM000663.2	=	NC_000001.11	Primary Assembly	248_956_422	chr1
-2	assembled-molecule	2	Chromosome	CM000664.2	=	NC_000002.12	Primary Assembly	242_193_529	chr2
+1	assembled-molecule	1	Chromosome	CM000663.2	=	NC_000001.11	Primary Assembly	248956422	chr1
+2	assembled-molecule	2	Chromosome	CM000664.2	=	NC_000002.12	Primary Assembly	242193529	chr2
 MT	assembled-molecule	MT	Mitochondrion	J01415.2	=	NC_012920.1	non-nuclear	16569	chrM
 ";
 
@@ -244,7 +244,7 @@ MT	assembled-molecule	MT	Mitochondrion	J01415.2	=	NC_012920.1	non-nuclear	16569	
 
     #[test]
     fn test_parse_ncbi_report_no_header() {
-        let report = "1\tassembled-molecule\t1\t248_956_422\n";
+        let report = "1\tassembled-molecule\t1\t248956422\n";
         let result = parse_ncbi_report_text(report);
         assert!(result.is_err());
     }

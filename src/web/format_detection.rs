@@ -400,19 +400,19 @@ mod tests {
 
     #[test]
     fn test_sam_header_detection() {
-        let content = "@SQ\tSN:chr1\tLN:248_956_422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
+        let content = "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n";
         assert_eq!(detect_format_from_content(content), Ok(FileFormat::Sam));
     }
 
     #[test]
     fn test_dict_detection() {
-        let content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248_956_422\tM5:abc123\n";
+        let content = "@HD\tVN:1.0\tSO:coordinate\n@SQ\tSN:chr1\tLN:248956422\tM5:abc123\n";
         assert_eq!(detect_format_from_content(content), Ok(FileFormat::Dict));
     }
 
     #[test]
     fn test_vcf_detection() {
-        let content = "##fileformat=VCFv4.2\n##contig=<ID=chr1,length=248_956_422>\n";
+        let content = "##fileformat=VCFv4.2\n##contig=<ID=chr1,length=248956422>\n";
         assert_eq!(detect_format_from_content(content), Ok(FileFormat::Vcf));
     }
 
@@ -443,7 +443,7 @@ mod tests {
 
     #[test]
     fn test_combined_detection() {
-        let content = "@SQ\tSN:chr1\tLN:248_956_422\n";
+        let content = "@SQ\tSN:chr1\tLN:248956422\n";
         assert_eq!(
             detect_format(content, Some("test.sam")),
             Ok(FileFormat::Sam)

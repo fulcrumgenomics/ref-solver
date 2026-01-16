@@ -32,8 +32,8 @@ mod tests {
     #[test]
     fn test_parse_dict_text() {
         let dict = r"@HD	VN:1.6
-@SQ	SN:chr1	LN:248_956_422	M5:6aef897c3d6ff0c78aff06ac189178dd	UR:file:///reference/hg38.fa
-@SQ	SN:chr2	LN:242_193_529	M5:f98db672eb0993dcfdabafe2a882905c	UR:file:///reference/hg38.fa
+@SQ	SN:chr1	LN:248956422	M5:6aef897c3d6ff0c78aff06ac189178dd	UR:file:///reference/hg38.fa
+@SQ	SN:chr2	LN:242193529	M5:f98db672eb0993dcfdabafe2a882905c	UR:file:///reference/hg38.fa
 ";
 
         let query = parse_dict_text(dict).unwrap();

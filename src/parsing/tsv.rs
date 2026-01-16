@@ -93,8 +93,8 @@ mod tests {
     #[test]
     fn test_parse_tsv_text() {
         let tsv = r"name	length	md5
-chr1	248_956_422	6aef897c3d6ff0c78aff06ac189178dd
-chr2	242_193_529	f98db672eb0993dcfdabafe2a882905c
+chr1	248956422	6aef897c3d6ff0c78aff06ac189178dd
+chr2	242193529	f98db672eb0993dcfdabafe2a882905c
 chrM	16569
 ";
 
@@ -109,8 +109,8 @@ chrM	16569
     #[test]
     fn test_parse_csv_text() {
         let csv = r"chrom,length,md5
-chr1,248_956_422,6aef897c3d6ff0c78aff06ac189178dd
-chr2,242_193_529,f98db672eb0993dcfdabafe2a882905c
+chr1,248956422,6aef897c3d6ff0c78aff06ac189178dd
+chr2,242193529,f98db672eb0993dcfdabafe2a882905c
 ";
 
         let query = parse_tsv_text(csv, ',').unwrap();
@@ -119,7 +119,7 @@ chr2,242_193_529,f98db672eb0993dcfdabafe2a882905c
 
     #[test]
     fn test_parse_tsv_no_header() {
-        let tsv = "chr1\t248_956_422\nchr2\t242_193_529\n";
+        let tsv = "chr1\t248956422\nchr2\t242193529\n";
         let query = parse_tsv_text(tsv, '\t').unwrap();
         assert_eq!(query.contigs.len(), 2);
     }
@@ -131,8 +131,8 @@ chr2,242_193_529,f98db672eb0993dcfdabafe2a882905c
 # Another comment
 
 name	length	md5
-chr1	248_956_422	6aef897c3d6ff0c78aff06ac189178dd
-chr2	242_193_529	f98db672eb0993dcfdabafe2a882905c
+chr1	248956422	6aef897c3d6ff0c78aff06ac189178dd
+chr2	242193529	f98db672eb0993dcfdabafe2a882905c
 ";
         let query = parse_tsv_text(tsv, '\t').unwrap();
         assert_eq!(query.contigs.len(), 2);

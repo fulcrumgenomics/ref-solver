@@ -275,8 +275,8 @@ mod tests {
     #[test]
     fn test_parse_header_text() {
         let header = r"@HD	VN:1.6	SO:coordinate
-@SQ	SN:chr1	LN:248_956_422	M5:6aef897c3d6ff0c78aff06ac189178dd
-@SQ	SN:chr2	LN:242_193_529	M5:f98db672eb0993dcfdabafe2a882905c
+@SQ	SN:chr1	LN:248956422	M5:6aef897c3d6ff0c78aff06ac189178dd
+@SQ	SN:chr2	LN:242193529	M5:f98db672eb0993dcfdabafe2a882905c
 @SQ	SN:chrM	LN:16569
 @RG	ID:sample1
 ";
@@ -306,7 +306,7 @@ mod tests {
     #[test]
     fn test_parse_header_text_with_aliases() {
         let header = r"@HD	VN:1.6
-@SQ	SN:chr1	LN:248_956_422	M5:6aef897c3d6ff0c78aff06ac189178dd	AN:1,NC_000001.11
+@SQ	SN:chr1	LN:248956422	M5:6aef897c3d6ff0c78aff06ac189178dd	AN:1,NC_000001.11
 @SQ	SN:chrM	LN:16569	AN:MT,chrMT,NC_012920.1
 ";
 

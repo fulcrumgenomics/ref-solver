@@ -1368,12 +1368,12 @@ mod tests {
         .unwrap();
         writeln!(
             file,
-            "@SQ\tSN:chr1\tLN:248_956_422\tM5:6aef897c3d6ff0c78aff06ac189178dd"
+            "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178dd"
         )
         .unwrap();
         writeln!(
             file,
-            "@SQ\tSN:chr2\tLN:242_193_529\tM5:f98db672eb0993dcfdabafe2a882905c"
+            "@SQ\tSN:chr2\tLN:242193529\tM5:f98db672eb0993dcfdabafe2a882905c"
         )
         .unwrap();
 
