@@ -32,6 +32,9 @@ fn main() -> anyhow::Result<()> {
         cli::Commands::Compare(args) => {
             cli::compare::run(args, cli.format, cli.verbose)?;
         }
+        cli::Commands::Score(args) => {
+            cli::score::run(args, cli.format, cli.verbose)?;
+        }
         cli::Commands::Catalog(args) => {
             cli::catalog::run(args, cli.format, cli.verbose)?;
         }

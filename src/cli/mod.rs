@@ -31,6 +31,7 @@ use clap::{Parser, Subcommand};
 pub mod catalog;
 pub mod compare;
 pub mod identify;
+pub mod score;
 
 #[derive(Parser)]
 #[command(name = "ref-solver")]
@@ -60,6 +61,11 @@ pub enum Commands {
 
     /// Compare two headers or references
     Compare(compare::CompareArgs),
+
+    /// Score a query file against a reference file directly (no catalog).
+    /// By default, scoring is asymmetric: it measures how well the query
+    /// matches the reference. Use --symmetric to compute both directions.
+    Score(score::ScoreArgs),
 
     /// Manage the reference catalog
     Catalog(catalog::CatalogArgs),
