@@ -17,9 +17,6 @@ pub struct MatchDiagnosis {
     /// Query contigs that match by MD5 but have different names
     pub renamed_matches: Vec<RenamedContig>,
 
-    /// Query contigs that match by name+length but MD5 differs or is missing
-    pub name_length_only_matches: Vec<ContigMatch>,
-
     /// Query contigs with no match in reference
     pub query_only: Vec<Contig>,
 
@@ -246,7 +243,6 @@ impl MatchDiagnosis {
             match_type,
             exact_matches,
             renamed_matches,
-            name_length_only_matches,
             query_only,
             reordered,
             conflicts,

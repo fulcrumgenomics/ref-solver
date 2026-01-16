@@ -27,13 +27,13 @@
 //! ## Example
 //!
 //! ```rust,no_run
-//! use ref_solver::{ReferenceCatalog, MatchingEngine, QueryHeader};
+//! use ref_solver::{ReferenceCatalog, MatchingEngine, MatchingConfig, QueryHeader};
 //! use ref_solver::parsing::sam::parse_header_text;
 //!
 //! let catalog = ReferenceCatalog::load_embedded().unwrap();
 //! let query = parse_header_text("@SQ\tSN:chr1\tLN:248_956_422\n").unwrap();
 //!
-//! let engine = MatchingEngine::new(&catalog);
+//! let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 //! let matches = engine.find_matches(&query, 5);
 //!
 //! for m in &matches {

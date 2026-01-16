@@ -22,7 +22,7 @@
 //! ## Example
 //!
 //! ```rust,no_run
-//! use ref_solver::{ReferenceCatalog, MatchingEngine, QueryHeader};
+//! use ref_solver::{ReferenceCatalog, MatchingEngine, MatchingConfig, QueryHeader};
 //! use ref_solver::parsing::sam::parse_header_text;
 //!
 //! // Load the embedded catalog of known references
@@ -33,7 +33,7 @@
 //! let query = parse_header_text(header_text).unwrap();
 //!
 //! // Find matching references
-//! let engine = MatchingEngine::new(&catalog);
+//! let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 //! let matches = engine.find_matches(&query, 5);
 //!
 //! for m in matches {
@@ -64,4 +64,4 @@ pub use core::contig::Contig;
 pub use core::header::QueryHeader;
 pub use core::reference::KnownReference;
 pub use core::types::*;
-pub use matching::engine::{MatchResult, MatchingEngine};
+pub use matching::engine::{MatchResult, MatchingConfig, MatchingEngine};

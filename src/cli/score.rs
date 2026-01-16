@@ -205,7 +205,7 @@ fn print_text_result(result: &ScoreResult, weights: &ScoringWeights, suffix: &st
     println!(
         "\n   Score: {:.1}% = {:.0}%×match + {:.0}%×coverage + {:.0}%×order",
         result.score.composite * 100.0,
-        result.score.contig_match_score * 100.0,
+        result.score.match_quality * 100.0,
         result.score.coverage_score * 100.0,
         result.score.order_score * 100.0,
     );
@@ -268,7 +268,7 @@ fn print_json_results(
             "score": {
                 "composite": result.score.composite,
                 "confidence": format!("{:?}", result.score.confidence),
-                "contig_match_score": result.score.contig_match_score,
+                "match_quality": result.score.match_quality,
                 "coverage_score": result.score.coverage_score,
                 "order_score": result.score.order_score,
                 "weights": {
@@ -328,7 +328,7 @@ fn print_tsv_results(
             result.query_path.display(),
             result.reference_path.display(),
             result.score.composite,
-            result.score.contig_match_score,
+            result.score.match_quality,
             result.score.coverage_score,
             result.score.order_score,
             norm.contig_match,
@@ -433,8 +433,8 @@ mod tests {
         assert_eq!(result.score.name_length_matches, 2);
         assert_eq!(result.score.unmatched, 1);
         assert!(
-            result.score.contig_match_score < 1.0,
-            "Partial match should have contig_match_score < 1.0"
+            result.score.match_quality < 1.0,
+            "Partial match should have match_quality < 1.0"
         );
     }
 
@@ -471,7 +471,7 @@ mod tests {
         // Forward: all query contigs match (100% contig match), but only 1/3 ref covered
         assert_eq!(forward.score.name_length_matches, 1);
         assert!(
-            (forward.score.contig_match_score - 1.0).abs() < 0.001,
+            (forward.score.match_quality - 1.0).abs() < 0.001,
             "All query contigs match"
         );
         assert!(
@@ -482,7 +482,7 @@ mod tests {
         // Reverse: only 1/3 query contigs match, but reference is fully covered
         assert_eq!(reverse.score.unmatched, 2);
         assert!(
-            reverse.score.contig_match_score < 0.5,
+            reverse.score.match_quality < 0.5,
             "Only 1/3 query contigs match"
         );
         assert!(

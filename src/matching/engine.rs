@@ -20,23 +20,7 @@ pub struct MatchResult {
 
 impl MatchResult {
     #[must_use]
-    pub fn new(reference: &KnownReference, query: &QueryHeader) -> Self {
-        let score = MatchScore::calculate(query, reference);
-        let diagnosis = MatchDiagnosis::analyze(query, reference);
-
-        Self {
-            reference: reference.clone(),
-            score,
-            diagnosis,
-        }
-    }
-
-    #[must_use]
-    pub fn new_with_weights(
-        reference: &KnownReference,
-        query: &QueryHeader,
-        weights: &ScoringWeights,
-    ) -> Self {
+    pub fn new(reference: &KnownReference, query: &QueryHeader, weights: &ScoringWeights) -> Self {
         let score = MatchScore::calculate_with_weights(query, reference, weights);
         let diagnosis = MatchDiagnosis::analyze(query, reference);
 
@@ -150,18 +134,9 @@ pub struct MatchingEngine<'a> {
 }
 
 impl<'a> MatchingEngine<'a> {
-    /// Create a new matching engine with default configuration
-    #[must_use]
-    pub fn new(catalog: &'a ReferenceCatalog) -> Self {
-        Self {
-            catalog,
-            config: MatchingConfig::default(),
-        }
-    }
-
     /// Create a new matching engine with custom configuration
     #[must_use]
-    pub fn with_config(catalog: &'a ReferenceCatalog, config: MatchingConfig) -> Self {
+    pub fn new(catalog: &'a ReferenceCatalog, config: MatchingConfig) -> Self {
         Self { catalog, config }
     }
 
@@ -171,7 +146,7 @@ impl<'a> MatchingEngine<'a> {
         // Step 1: Try exact signature match
         if let Some(sig) = &query.signature {
             if let Some(reference) = self.catalog.find_by_signature(sig) {
-                return vec![MatchResult::new_with_weights(
+                return vec![MatchResult::new(
                     reference,
                     query,
                     &self.config.scoring_weights,
@@ -188,7 +163,7 @@ impl<'a> MatchingEngine<'a> {
             .into_iter()
             .map(|idx| {
                 let reference = &self.catalog.references[idx];
-                MatchResult::new_with_weights(reference, query, &self.config.scoring_weights)
+                MatchResult::new(reference, query, &self.config.scoring_weights)
             })
             .collect();
 
@@ -228,7 +203,7 @@ mod tests {
     #[test]
     fn test_find_matches_grch38() {
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         // Create query with GRCh38 chromosomes
         let contigs = vec![
@@ -254,7 +229,7 @@ mod tests {
     #[test]
     fn test_find_matches_grch37() {
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         // Create query with GRCh37 chromosomes
         let contigs = vec![
@@ -280,7 +255,7 @@ mod tests {
     #[test]
     fn test_find_matches_ncbi_naming() {
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         // Create query with NCBI naming but GRCh38 sequences
         let contigs = vec![
@@ -306,7 +281,7 @@ mod tests {
     #[test]
     fn test_find_matches_no_md5() {
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         // Create query without MD5s
         let contigs = vec![
@@ -324,7 +299,7 @@ mod tests {
     #[test]
     fn test_find_best_match() {
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         let contigs =
             vec![Contig::new("chr1", 248_956_422).with_md5("6aef897c3d6ff0c78aff06ac189178dd")];
@@ -337,7 +312,7 @@ mod tests {
     #[test]
     fn test_no_matches_for_invalid_contigs() {
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         // Create query with invalid contigs
         let contigs = vec![
@@ -360,7 +335,7 @@ mod tests {
         // Test that queries with UCSC-style fix-patch names match catalog references
         // The catalog should have these names as aliases (generated from NCBI reports)
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         // Query with UCSC-style fix-patch name (chr1_KN196472v1_fix)
         // This should match grch38_v38 (or similar) which has KN196472.1 as a fix-patch
@@ -394,7 +369,7 @@ mod tests {
     fn test_ucsc_style_novel_patch_matching() {
         // Test that queries with UCSC-style novel-patch (alt) names match catalog references
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         // Query with UCSC-style novel-patch name (chr1_KQ458382v1_alt)
         let contigs = vec![
@@ -426,7 +401,7 @@ mod tests {
     fn test_ucsc_style_y_chromosome_patch_matching() {
         // Test Y chromosome fix-patch matching
         let catalog = make_test_catalog();
-        let engine = MatchingEngine::new(&catalog);
+        let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 
         let contigs = vec![
             Contig::new("chr1", 248_956_422).with_md5("6aef897c3d6ff0c78aff06ac189178dd"),

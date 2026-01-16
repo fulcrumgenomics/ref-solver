@@ -158,7 +158,7 @@ fn run_flat(
         min_score: 0.1,
         scoring_weights: scoring_weights.clone(),
     };
-    let engine = MatchingEngine::with_config(&catalog, config);
+    let engine = MatchingEngine::new(&catalog, config);
     let matches = engine.find_matches(query, args.max_matches);
 
     if matches.is_empty() {
@@ -325,7 +325,7 @@ fn print_text_results(
         println!(
             "\n   Score: {:.1}% = {:.0}%×match + {:.0}%×coverage + {:.0}%×order",
             result.score.composite * 100.0,
-            result.score.contig_match_score * 100.0,
+            result.score.match_quality * 100.0,
             result.score.coverage_score * 100.0,
             result.score.order_score * 100.0,
         );
@@ -505,7 +505,7 @@ fn print_json_results(
                     "composite": m.score.composite,
                     "confidence": format!("{:?}", m.score.confidence),
                     // Component scores (these make up the composite)
-                    "contig_match_score": m.score.contig_match_score,
+                    "match_quality": m.score.match_quality,
                     "coverage_score": m.score.coverage_score,
                     "order_score": m.score.order_score,
                     // Weights used
@@ -566,7 +566,7 @@ fn print_tsv_results(matches: &[MatchResult], weights: &ScoringWeights) {
             m.reference.source,
             m.diagnosis.match_type,
             m.score.composite,
-            m.score.contig_match_score,
+            m.score.match_quality,
             m.score.coverage_score,
             m.score.order_score,
             norm.contig_match,

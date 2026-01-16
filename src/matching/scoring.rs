@@ -55,7 +55,7 @@ pub struct MatchScore {
 
     // === Derived scores ===
     /// Per-contig match score: (exact + neutral + 0.1*conflicts) / total
-    pub contig_match_score: f64,
+    pub match_quality: f64,
 
     /// Coverage score: `good_matches` / `reference_contigs`
     pub coverage_score: f64,
@@ -89,7 +89,7 @@ impl MatchScore {
     /// - `Md5Conflict` gets heavy penalty (0.1 credit - name is right but sequence is wrong)
     /// - Unmatched gets no credit
     ///
-    /// Composite = 70% `contig_match_score` + 20% `coverage_score` + 10% `order_score`
+    /// Composite = 70% `match_quality` + 20% `coverage_score` + 10% `order_score`
     #[must_use]
     pub fn calculate(query: &QueryHeader, reference: &KnownReference) -> Self {
         // Classify each query contig
@@ -115,7 +115,7 @@ impl MatchScore {
             + count_to_f64(name_length_matches)
             + (count_to_f64(md5_conflicts) * 0.1);
 
-        let contig_match_score = if total_query > 0 {
+        let match_quality = if total_query > 0 {
             weighted_matches / count_to_f64(total_query)
         } else {
             0.0
@@ -134,9 +134,8 @@ impl MatchScore {
 
         // New composite formula: 70% match quality, 20% coverage, 10% order
         // Clamp to [0.0, 1.0] to handle floating point precision issues
-        let composite =
-            ((0.70 * contig_match_score) + (0.20 * coverage_score) + (0.10 * order_score))
-                .clamp(0.0, 1.0);
+        let composite = ((0.70 * match_quality) + (0.20 * coverage_score) + (0.10 * order_score))
+            .clamp(0.0, 1.0);
 
         let confidence = Confidence::from_score(composite);
 
@@ -158,7 +157,7 @@ impl MatchScore {
             name_length_matches,
             md5_conflicts,
             unmatched,
-            contig_match_score,
+            match_quality,
             coverage_score,
             order_score,
             order_preserved,
@@ -207,7 +206,7 @@ impl MatchScore {
             + count_to_f64(name_length_matches)
             + (count_to_f64(md5_conflicts) * normalized_weights.conflict_penalty);
 
-        let contig_match_score = if total_query > 0 {
+        let match_quality = if total_query > 0 {
             weighted_matches / count_to_f64(total_query)
         } else {
             0.0
@@ -226,7 +225,7 @@ impl MatchScore {
 
         // Composite with custom weights
         // Clamp to [0.0, 1.0] to handle floating point precision issues
-        let composite = ((normalized_weights.contig_match * contig_match_score)
+        let composite = ((normalized_weights.contig_match * match_quality)
             + (normalized_weights.coverage * coverage_score)
             + (normalized_weights.order * order_score))
             .clamp(0.0, 1.0);
@@ -251,7 +250,7 @@ impl MatchScore {
             name_length_matches,
             md5_conflicts,
             unmatched,
-            contig_match_score,
+            match_quality,
             coverage_score,
             order_score,
             order_preserved,
@@ -839,9 +838,9 @@ mod tests {
 
         // Contig match score should be 1.0 (3 neutral matches / 3 total)
         assert!(
-            (score.contig_match_score - 1.0).abs() < 0.001,
+            (score.match_quality - 1.0).abs() < 0.001,
             "Contig match score should be 1.0, got {}",
-            score.contig_match_score
+            score.match_quality
         );
 
         // Coverage should be 1.0 (3 good matches / 3 reference contigs)
@@ -895,9 +894,9 @@ mod tests {
 
         // Contig match score should be 0.1 * 2 / 2 = 0.1 (10% credit for conflicts)
         assert!(
-            (score.contig_match_score - 0.1).abs() < 0.001,
+            (score.match_quality - 0.1).abs() < 0.001,
             "Contig match score for conflicts should be 0.1, got {}",
-            score.contig_match_score
+            score.match_quality
         );
 
         // Composite should be low due to conflicts
@@ -950,10 +949,10 @@ mod tests {
         // Contig match score = (1*1.0 + 1*1.0 + 1*0.1 + 0) / 4 = 2.1 / 4 = 0.525
         let expected_match_score = (1.0 + 1.0 + 0.1) / 4.0;
         assert!(
-            (score.contig_match_score - expected_match_score).abs() < 0.001,
-            "Expected contig_match_score = {}, got {}",
+            (score.match_quality - expected_match_score).abs() < 0.001,
+            "Expected match_quality = {}, got {}",
             expected_match_score,
-            score.contig_match_score
+            score.match_quality
         );
     }
 

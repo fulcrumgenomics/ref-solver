@@ -334,7 +334,7 @@ This is useful when you want strict adherence to names in the assembly report.
 ## Library Usage
 
 ```rust
-use ref_solver::{ReferenceCatalog, MatchingEngine, QueryHeader};
+use ref_solver::{ReferenceCatalog, MatchingEngine, MatchingConfig, QueryHeader};
 use ref_solver::parsing::sam::parse_header_text;
 
 // Load catalog
@@ -345,7 +345,7 @@ let header_text = "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178
 let query = parse_header_text(header_text)?;
 
 // Find matches
-let engine = MatchingEngine::new(&catalog);
+let engine = MatchingEngine::new(&catalog, MatchingConfig::default());
 let matches = engine.find_matches(&query, 5);
 
 for m in matches {

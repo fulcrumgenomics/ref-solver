@@ -129,6 +129,19 @@ pub enum CatalogCommands {
         #[allow(clippy::option_option)]
         // Distinguishes: not present / present without value / present with value
         infer_assembly: Option<Option<PathBuf>>,
+
+        /// Disable automatic generation of UCSC-style names for patches.
+        ///
+        /// By default, when parsing NCBI assembly reports, UCSC-style names are
+        /// generated for fix-patches and novel-patches that have "na" in the
+        /// UCSC-style-name column (common in reports prior to p13).
+        ///
+        /// Use this flag to disable this behavior and only use names explicitly
+        /// present in the assembly report.
+        ///
+        /// See: <https://genome.ucsc.edu/FAQ/FAQdownloads.html>
+        #[arg(long)]
+        no_generate_ucsc_names: bool,
     },
 
     /// Build a new reference entry from input files
@@ -189,6 +202,19 @@ pub enum CatalogCommands {
         /// Error if any contig lacks MD5 checksum
         #[arg(long)]
         require_md5: bool,
+
+        /// Disable automatic generation of UCSC-style names for patches.
+        ///
+        /// By default, when parsing NCBI assembly reports, UCSC-style names are
+        /// generated for fix-patches and novel-patches that have "na" in the
+        /// UCSC-style-name column (common in reports prior to p13).
+        ///
+        /// Use this flag to disable this behavior and only use names explicitly
+        /// present in the assembly report.
+        ///
+        /// See: <https://genome.ucsc.edu/FAQ/FAQdownloads.html>
+        #[arg(long)]
+        no_generate_ucsc_names: bool,
     },
 }
 
@@ -263,6 +289,7 @@ pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
             force,
             require_md5,
             infer_assembly,
+            no_generate_ucsc_names,
         } => run_build_hierarchical(
             id,
             name,
@@ -277,6 +304,7 @@ pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
             force,
             require_md5,
             infer_assembly,
+            !no_generate_ucsc_names, // Convert opt-out flag to opt-in parameter
             format,
             verbose,
         ),
@@ -295,6 +323,7 @@ pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
             force,
             input_format,
             require_md5,
+            no_generate_ucsc_names,
         } => run_build(
             id,
             name,
@@ -310,6 +339,7 @@ pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
             force,
             input_format,
             require_md5,
+            !no_generate_ucsc_names, // Convert opt-out flag to opt-in parameter
             format,
             verbose,
         ),
@@ -769,7 +799,8 @@ fn run_list_hierarchical(
     clippy::too_many_arguments,
     clippy::needless_pass_by_value,
     clippy::option_option,
-    clippy::too_many_lines
+    clippy::too_many_lines,
+    clippy::fn_params_excessive_bools
 )] // CLI entry point
 fn run_build_hierarchical(
     id: String,
@@ -785,6 +816,7 @@ fn run_build_hierarchical(
     force: bool,
     require_md5: bool,
     infer_assembly: Option<Option<PathBuf>>,
+    generate_ucsc_names: bool,
     format: OutputFormat,
     verbose: bool,
 ) -> anyhow::Result<()> {
@@ -800,10 +832,11 @@ fn run_build_hierarchical(
         .map(|s| s.split(',').map(|t| t.trim().to_string()).collect())
         .unwrap_or_default();
 
-    // Create builder
+    // Create builder with UCSC name generation option
     let mut builder = DistributionBuilder::new(&id)
         .with_display_name(&name)
-        .with_source(ref_source);
+        .with_source(ref_source)
+        .with_generate_ucsc_names(generate_ucsc_names);
 
     if let Some(url) = download_url {
         builder = builder.with_download_url(url);
@@ -1053,7 +1086,8 @@ fn truncate(s: &str, max_len: usize) -> String {
 #[allow(
     clippy::too_many_arguments,
     clippy::needless_pass_by_value,
-    clippy::too_many_lines
+    clippy::too_many_lines,
+    clippy::fn_params_excessive_bools
 )] // CLI entry point
 fn run_build(
     id: String,
@@ -1070,6 +1104,7 @@ fn run_build(
     force: bool,
     input_format: Option<InputFormatArg>,
     require_md5: bool,
+    generate_ucsc_names: bool,
     format: OutputFormat,
     verbose: bool,
 ) -> anyhow::Result<()> {
@@ -1084,8 +1119,8 @@ fn run_build(
         .map(|s| s.split(',').map(|t| t.trim().to_string()).collect())
         .unwrap_or_default();
 
-    // Create builder
-    let mut builder = ReferenceBuilder::new(&id, &name);
+    // Create builder with UCSC name generation option
+    let mut builder = ReferenceBuilder::new(&id, &name).generate_ucsc_names(generate_ucsc_names);
 
     if let Some(assembly) = assembly {
         builder = builder.assembly(assembly);

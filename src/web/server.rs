@@ -327,7 +327,7 @@ async fn identify_handler(
         scoring_weights: config.scoring_weights.clone(),
     };
 
-    let engine = MatchingEngine::with_config(&state.catalog, matching_config);
+    let engine = MatchingEngine::new(&state.catalog, matching_config);
     let matches = engine.find_matches(&query, config.result_limit);
 
     // Check if detailed mode is requested
