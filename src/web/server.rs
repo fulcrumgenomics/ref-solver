@@ -1025,16 +1025,18 @@ fn detect_binary_format(filename: &str) -> Option<FileFormat> {
 /// Parse scoring weights from frontend format
 fn parse_scoring_weights(weights: &HashMap<String, f64>) -> ScoringWeights {
     // Note: The frontend sends percentages (0-100), but the backend expects ratios (0-1)
-    let md5_jaccard = weights.get("md5Jaccard").unwrap_or(&40.0) / 100.0;
-    let name_length_jaccard = weights.get("nameLength").unwrap_or(&30.0) / 100.0;
-    let md5_query_coverage = weights.get("md5Coverage").unwrap_or(&20.0) / 100.0;
-    let order_score = weights.get("orderScore").unwrap_or(&10.0) / 100.0;
+    // New scoring model: contig_match, coverage, order, and conflict_penalty
+    let contig_match = weights.get("contigMatch").unwrap_or(&70.0) / 100.0;
+    let coverage = weights.get("coverage").unwrap_or(&20.0) / 100.0;
+    let order = weights.get("orderScore").unwrap_or(&10.0) / 100.0;
+    // Conflict penalty is a multiplier (0-1), not a weight percentage
+    let conflict_penalty = weights.get("conflictPenalty").unwrap_or(&10.0) / 100.0;
 
     ScoringWeights {
-        md5_jaccard,
-        name_length_jaccard,
-        md5_query_coverage,
-        order_score,
+        contig_match,
+        coverage,
+        order,
+        conflict_penalty,
     }
 }
 

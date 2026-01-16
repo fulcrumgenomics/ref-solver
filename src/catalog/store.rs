@@ -258,6 +258,43 @@ mod tests {
     }
 
     #[test]
+    fn test_name_length_set_contains_aliases() {
+        // Verify that aliases are added to name_length_set during rebuild_indexes
+        let catalog = ReferenceCatalog::load_embedded().unwrap();
+
+        // Find grch38_ncbi which has aliases (NCBI accession numbers with UCSC aliases)
+        let ref38 = catalog
+            .references
+            .iter()
+            .find(|r| r.id.0 == "grch38_ncbi")
+            .expect("grch38_ncbi should exist");
+
+        // The reference should have contigs with aliases
+        // So name_length_set should have more entries than just contigs
+        assert!(
+            ref38.name_length_set.len() > ref38.contigs.len(),
+            "name_length_set should contain more entries than contigs (should include aliases), \
+             got {} vs {} contigs",
+            ref38.name_length_set.len(),
+            ref38.contigs.len()
+        );
+
+        // Check that chr1 is in name_length_set (alias of NC_000001.11)
+        let chr1_key = ("chr1".to_string(), 248_956_422u64);
+        assert!(
+            ref38.name_length_set.contains(&chr1_key),
+            "chr1 should be in name_length_set as an alias"
+        );
+
+        // Debug: print name_length_set size
+        println!(
+            "name_length_set size: {} (contigs: {})",
+            ref38.name_length_set.len(),
+            ref38.contigs.len(),
+        );
+    }
+
+    #[test]
     fn test_alias_indexing() {
         // Test that contig aliases are indexed in name_length_to_refs
         // so query names can match catalog aliases

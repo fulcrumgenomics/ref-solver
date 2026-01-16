@@ -7,7 +7,7 @@ use crate::catalog::store::ReferenceCatalog;
 use crate::cli::OutputFormat;
 use crate::core::header::QueryHeader;
 use crate::core::types::Confidence;
-use crate::matching::engine::{MatchResult, MatchingEngine};
+use crate::matching::engine::{MatchResult, MatchingConfig, MatchingEngine, ScoringWeights};
 use crate::matching::hierarchical_engine::{HierarchicalMatchResult, HierarchicalMatchingEngine};
 use crate::matching::Suggestion;
 use crate::parsing;
@@ -56,6 +56,22 @@ pub struct IdentifyArgs {
     /// (e.g., CHM13 MT which uses standard rCRS mitochondria)
     #[arg(long, value_enum, default_value = "warn")]
     pub missing_contig_handling: MissingContigHandling,
+
+    // === Scoring weight options ===
+    /// Weight for contig match score (0-100, default 70)
+    /// How well query contigs match reference contigs
+    #[arg(long, default_value = "70", value_parser = clap::value_parser!(u32).range(0..=100))]
+    pub weight_match: u32,
+
+    /// Weight for coverage score (0-100, default 20)
+    /// What fraction of reference contigs are covered by query
+    #[arg(long, default_value = "20", value_parser = clap::value_parser!(u32).range(0..=100))]
+    pub weight_coverage: u32,
+
+    /// Weight for order score (0-100, default 10)
+    /// Whether contigs appear in the same order
+    #[arg(long, default_value = "10", value_parser = clap::value_parser!(u32).range(0..=100))]
+    pub weight_order: u32,
 }
 
 #[derive(Clone, Copy, Debug, clap::ValueEnum)]
@@ -120,8 +136,29 @@ fn run_flat(
         return Ok(());
     }
 
-    // Find matches
-    let engine = MatchingEngine::new(&catalog);
+    // Build scoring weights from command line args
+    let scoring_weights = ScoringWeights {
+        contig_match: f64::from(args.weight_match) / 100.0,
+        coverage: f64::from(args.weight_coverage) / 100.0,
+        order: f64::from(args.weight_order) / 100.0,
+        conflict_penalty: 0.1, // Default: 10% credit for MD5 conflicts
+    };
+
+    if verbose {
+        eprintln!(
+            "Scoring weights: {:.0}% match, {:.0}% coverage, {:.0}% order",
+            scoring_weights.contig_match * 100.0,
+            scoring_weights.coverage * 100.0,
+            scoring_weights.order * 100.0,
+        );
+    }
+
+    // Find matches with custom config
+    let config = MatchingConfig {
+        min_score: 0.1,
+        scoring_weights: scoring_weights.clone(),
+    };
+    let engine = MatchingEngine::with_config(&catalog, config);
     let matches = engine.find_matches(query, args.max_matches);
 
     if matches.is_empty() {
@@ -132,10 +169,18 @@ fn run_flat(
     // Output results
     match format {
         OutputFormat::Text => {
-            print_text_results(&matches, query, verbose, args.missing_contig_handling);
+            print_text_results(
+                &matches,
+                query,
+                verbose,
+                args.missing_contig_handling,
+                &scoring_weights,
+            );
         }
-        OutputFormat::Json => print_json_results(&matches, args.missing_contig_handling)?,
-        OutputFormat::Tsv => print_tsv_results(&matches),
+        OutputFormat::Json => {
+            print_json_results(&matches, args.missing_contig_handling, &scoring_weights)?;
+        }
+        OutputFormat::Tsv => print_tsv_results(&matches, &scoring_weights),
     }
 
     Ok(())
@@ -248,6 +293,7 @@ fn print_text_results(
     query: &QueryHeader,
     verbose: bool,
     missing_handling: MissingContigHandling,
+    weights: &ScoringWeights,
 ) {
     for (i, result) in matches.iter().enumerate() {
         if i > 0 {
@@ -272,7 +318,23 @@ fn print_text_results(
         println!("   Assembly: {}", result.reference.assembly);
         println!("   Source: {}", result.reference.source);
         println!("   Match Type: {:?}", result.diagnosis.match_type);
-        println!("   Score: {:.1}%", result.score.composite * 100.0);
+
+        // Score breakdown: show component scores and final composite
+        // Normalize weights for display
+        let norm = weights.normalized();
+        println!(
+            "\n   Score: {:.1}% = {:.0}%×match + {:.0}%×coverage + {:.0}%×order",
+            result.score.composite * 100.0,
+            result.score.contig_match_score * 100.0,
+            result.score.coverage_score * 100.0,
+            result.score.order_score * 100.0,
+        );
+        println!(
+            "          (weights: {:.0}% match, {:.0}% coverage, {:.0}% order)",
+            norm.contig_match * 100.0,
+            norm.coverage * 100.0,
+            norm.order * 100.0,
+        );
 
         // Check for contigs missing from FASTA
         if !result.reference.contigs_missing_from_fasta.is_empty() {
@@ -322,16 +384,23 @@ fn print_text_results(
             }
         }
 
-        // Match details
-        let _total_query = query.contigs.len();
-        let exact = result.diagnosis.exact_matches.len();
-        let renamed = result.diagnosis.renamed_matches.len();
-        let name_len = result.diagnosis.name_length_only_matches.len();
-        let unmatched = result.diagnosis.query_only.len();
-        let conflicts = result.diagnosis.conflicts.len();
+        // Match details - query contigs
+        let total_query = query.contigs.len();
+        let exact = result.score.exact_matches;
+        let name_len = result.score.name_length_matches;
+        let conflicts = result.score.md5_conflicts;
+        let unmatched = result.score.unmatched;
 
         println!(
-            "\n   Contigs: {exact} exact, {renamed} renamed, {name_len} by name+length, {unmatched} unmatched, {conflicts} conflicts"
+            "\n   Query contigs: {total_query} total → {exact} exact, {name_len} name+length, {conflicts} conflicts, {unmatched} unmatched"
+        );
+
+        // Reference coverage info
+        let total_ref = result.reference.contigs.len();
+        let matched_ref = exact + name_len; // Good matches that cover reference
+        let uncovered_ref = total_ref.saturating_sub(matched_ref);
+        println!(
+            "   Reference contigs: {total_ref} total, {matched_ref} matched, {uncovered_ref} not in query"
         );
 
         if result.diagnosis.reordered {
@@ -411,11 +480,18 @@ fn print_text_results(
 fn print_json_results(
     matches: &[MatchResult],
     missing_handling: MissingContigHandling,
+    weights: &ScoringWeights,
 ) -> anyhow::Result<()> {
+    let norm = weights.normalized();
     // Create serializable output
     let output: Vec<serde_json::Value> = matches
         .iter()
         .map(|m| {
+            // Calculate reference coverage
+            let ref_total = m.reference.contigs.len();
+            let ref_matched = m.score.exact_matches + m.score.name_length_matches;
+            let ref_uncovered = ref_total.saturating_sub(ref_matched);
+
             let mut json = serde_json::json!({
                 "reference": {
                     "id": m.reference.id.0,
@@ -423,18 +499,35 @@ fn print_json_results(
                     "assembly": format!("{}", m.reference.assembly),
                     "source": format!("{}", m.reference.source),
                     "download_url": m.reference.download_url,
+                    "total_contigs": ref_total,
                 },
                 "score": {
                     "composite": m.score.composite,
-                    "md5_jaccard": m.score.md5_jaccard,
-                    "name_length_jaccard": m.score.name_length_jaccard,
                     "confidence": format!("{:?}", m.score.confidence),
+                    // Component scores (these make up the composite)
+                    "contig_match_score": m.score.contig_match_score,
+                    "coverage_score": m.score.coverage_score,
+                    "order_score": m.score.order_score,
+                    // Weights used
+                    "weights": {
+                        "match": norm.contig_match,
+                        "coverage": norm.coverage,
+                        "order": norm.order,
+                    },
+                },
+                "query_contigs": {
+                    "exact_matches": m.score.exact_matches,
+                    "name_length_matches": m.score.name_length_matches,
+                    "md5_conflicts": m.score.md5_conflicts,
+                    "unmatched": m.score.unmatched,
+                },
+                "reference_coverage": {
+                    "total": ref_total,
+                    "matched": ref_matched,
+                    "not_in_query": ref_uncovered,
                 },
                 "match_type": format!("{:?}", m.diagnosis.match_type),
                 "reordered": m.diagnosis.reordered,
-                "exact_matches": m.diagnosis.exact_matches.len(),
-                "renamed_matches": m.diagnosis.renamed_matches.len(),
-                "conflicts": m.diagnosis.conflicts.len(),
             });
 
             // Add missing contig info unless silent
@@ -453,11 +546,19 @@ fn print_json_results(
     Ok(())
 }
 
-fn print_tsv_results(matches: &[MatchResult]) {
-    println!("rank\tid\tdisplay_name\tassembly\tsource\tmatch_type\tscore\tconfidence");
+fn print_tsv_results(matches: &[MatchResult], weights: &ScoringWeights) {
+    let norm = weights.normalized();
+    // Header with all fields
+    println!(
+        "rank\tid\tdisplay_name\tassembly\tsource\tmatch_type\tscore\tmatch_score\tcoverage_score\torder_score\tweight_match\tweight_coverage\tweight_order\tconfidence\texact\tname_length\tconflicts\tunmatched\tref_total\tref_matched\tref_uncovered"
+    );
     for (i, m) in matches.iter().enumerate() {
+        let ref_total = m.reference.contigs.len();
+        let ref_matched = m.score.exact_matches + m.score.name_length_matches;
+        let ref_uncovered = ref_total.saturating_sub(ref_matched);
+
         println!(
-            "{}\t{}\t{}\t{}\t{}\t{:?}\t{:.4}\t{:?}",
+            "{}\t{}\t{}\t{}\t{}\t{:?}\t{:.4}\t{:.4}\t{:.4}\t{:.4}\t{:.2}\t{:.2}\t{:.2}\t{:?}\t{}\t{}\t{}\t{}\t{}\t{}\t{}",
             i + 1,
             m.reference.id,
             m.reference.display_name,
@@ -465,7 +566,20 @@ fn print_tsv_results(matches: &[MatchResult]) {
             m.reference.source,
             m.diagnosis.match_type,
             m.score.composite,
+            m.score.contig_match_score,
+            m.score.coverage_score,
+            m.score.order_score,
+            norm.contig_match,
+            norm.coverage,
+            norm.order,
             m.score.confidence,
+            m.score.exact_matches,
+            m.score.name_length_matches,
+            m.score.md5_conflicts,
+            m.score.unmatched,
+            ref_total,
+            ref_matched,
+            ref_uncovered,
         );
     }
 }

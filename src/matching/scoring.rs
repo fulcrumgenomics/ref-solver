@@ -1,8 +1,22 @@
 use std::collections::HashSet;
 
+use crate::core::contig::Contig;
 use crate::core::header::QueryHeader;
 use crate::core::reference::KnownReference;
 use crate::core::types::Confidence;
+
+/// Classification of how a query contig matches a reference
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ContigMatchType {
+    /// Name+length match AND MD5 matches (or both are primary chromosomes with same length)
+    Exact,
+    /// Name+length match, but MD5 not available on one or both sides (neutral)
+    NameLengthNoMd5,
+    /// Name+length match, but MD5 differs (different sequence - heavy penalty!)
+    Md5Conflict,
+    /// No name+length match found
+    Unmatched,
+}
 
 /// Safely convert usize to f64 for percentage calculations
 ///
@@ -20,6 +34,39 @@ fn count_to_f64(count: usize) -> f64 {
 /// Detailed similarity scores between a query and a reference
 #[derive(Debug, Clone)]
 pub struct MatchScore {
+    /// Weighted composite score (the primary ranking metric)
+    pub composite: f64,
+
+    /// Confidence level derived from score
+    pub confidence: Confidence,
+
+    // === New per-contig match classification metrics ===
+    /// Number of contigs with exact match (name+length+MD5 all match)
+    pub exact_matches: usize,
+
+    /// Number of contigs with name+length match but no MD5 available (neutral)
+    pub name_length_matches: usize,
+
+    /// Number of contigs with name+length match but MD5 conflicts (different sequence!)
+    pub md5_conflicts: usize,
+
+    /// Number of contigs with no match found
+    pub unmatched: usize,
+
+    // === Derived scores ===
+    /// Per-contig match score: (exact + neutral + 0.1*conflicts) / total
+    pub contig_match_score: f64,
+
+    /// Coverage score: `good_matches` / `reference_contigs`
+    pub coverage_score: f64,
+
+    /// Fraction of contigs in correct relative order
+    pub order_score: f64,
+
+    /// Are matched contigs in the same order?
+    pub order_preserved: bool,
+
+    // === Legacy metrics (for backward compatibility) ===
     /// Jaccard similarity of MD5 sets: |intersection| / |union|
     pub md5_jaccard: f64,
 
@@ -31,32 +78,72 @@ pub struct MatchScore {
 
     /// Fraction of query contigs matched by name+length
     pub name_length_query_coverage: f64,
-
-    /// Are matched contigs in the same order?
-    pub order_preserved: bool,
-
-    /// Fraction of contigs in correct relative order
-    pub order_score: f64,
-
-    /// Weighted composite score
-    pub composite: f64,
-
-    /// Confidence level derived from score
-    pub confidence: Confidence,
 }
 
 impl MatchScore {
     /// Calculate match score between query and reference
+    ///
+    /// Uses the new contig-based scoring algorithm:
+    /// - Classifies each query contig as Exact, `NameLengthNoMd5`, `Md5Conflict`, or Unmatched
+    /// - Exact and `NameLengthNoMd5` get full credit (1.0)
+    /// - `Md5Conflict` gets heavy penalty (0.1 credit - name is right but sequence is wrong)
+    /// - Unmatched gets no credit
+    ///
+    /// Composite = 70% `contig_match_score` + 20% `coverage_score` + 10% `order_score`
     #[must_use]
     pub fn calculate(query: &QueryHeader, reference: &KnownReference) -> Self {
-        let md5_jaccard = jaccard_similarity(&query.md5_set, &reference.md5_set);
+        // Classify each query contig
+        let mut exact_matches = 0usize;
+        let mut name_length_matches = 0usize; // No MD5 available
+        let mut md5_conflicts = 0usize;
+        let mut unmatched = 0usize;
 
-        // For name+length matching, also consider alias matches
-        // A query contig matches if: query name matches ref name OR query alias matches ref name
+        for contig in &query.contigs {
+            match classify_contig_match(contig, reference) {
+                ContigMatchType::Exact => exact_matches += 1,
+                ContigMatchType::NameLengthNoMd5 => name_length_matches += 1,
+                ContigMatchType::Md5Conflict => md5_conflicts += 1,
+                ContigMatchType::Unmatched => unmatched += 1,
+            }
+        }
+
+        let total_query = query.contigs.len();
+
+        // Contig match score: full credit for exact/neutral, 10% for conflicts, 0 for unmatched
+        // Key principle: MD5 absence is neutral (full credit), MD5 conflict is penalized
+        let weighted_matches = count_to_f64(exact_matches)
+            + count_to_f64(name_length_matches)
+            + (count_to_f64(md5_conflicts) * 0.1);
+
+        let contig_match_score = if total_query > 0 {
+            weighted_matches / count_to_f64(total_query)
+        } else {
+            0.0
+        };
+
+        // Coverage: what fraction of reference is covered by good matches (exact + neutral)
+        let good_matches = exact_matches + name_length_matches;
+        let coverage_score = if reference.contigs.is_empty() {
+            0.0
+        } else {
+            (count_to_f64(good_matches) / count_to_f64(reference.contigs.len())).min(1.0)
+        };
+
+        // Order analysis (existing function)
+        let (order_preserved, order_score) = analyze_order(query, reference);
+
+        // New composite formula: 70% match quality, 20% coverage, 10% order
+        // Clamp to [0.0, 1.0] to handle floating point precision issues
+        let composite =
+            ((0.70 * contig_match_score) + (0.20 * coverage_score) + (0.10 * order_score))
+                .clamp(0.0, 1.0);
+
+        let confidence = Confidence::from_score(composite);
+
+        // Compute legacy metrics for backward compatibility
+        let md5_jaccard = jaccard_similarity(&query.md5_set, &reference.md5_set);
         let (name_length_jaccard, name_length_query_coverage) =
             calculate_name_length_similarity_with_aliases(query, reference);
-
-        // Query coverage
         let md5_query_coverage = if query.md5_set.is_empty() {
             0.0
         } else {
@@ -64,50 +151,92 @@ impl MatchScore {
                 / count_to_f64(query.md5_set.len())
         };
 
-        // Order analysis
-        let (order_preserved, order_score) = analyze_order(query, reference);
-
-        // Composite score with weights
-        // MD5 is most reliable when available
-        let has_md5 = !query.md5_set.is_empty() && !reference.md5_set.is_empty();
-
-        let composite = if has_md5 {
-            0.50 * md5_jaccard
-                + 0.25 * name_length_jaccard
-                + 0.15 * md5_query_coverage
-                + 0.10 * order_score
-        } else {
-            0.60 * name_length_jaccard + 0.25 * name_length_query_coverage + 0.15 * order_score
-        };
-
-        let confidence = Confidence::from_score(composite);
-
         Self {
+            composite,
+            confidence,
+            exact_matches,
+            name_length_matches,
+            md5_conflicts,
+            unmatched,
+            contig_match_score,
+            coverage_score,
+            order_score,
+            order_preserved,
             md5_jaccard,
             name_length_jaccard,
             md5_query_coverage,
             name_length_query_coverage,
-            order_preserved,
-            order_score,
-            composite,
-            confidence,
         }
     }
 
     /// Calculate match score with custom scoring weights
+    ///
+    /// Uses the new contig-based scoring algorithm with configurable weights:
+    /// - `contig_match_weight`: Weight for per-contig match score (default 70%)
+    /// - `coverage_weight`: Weight for reference coverage (default 20%)
+    /// - `order_weight`: Weight for contig ordering (default 10%)
+    /// - `conflict_penalty`: Credit given to MD5 conflicts (default 0.1 = 10%)
     #[must_use]
     pub fn calculate_with_weights(
         query: &QueryHeader,
         reference: &KnownReference,
         weights: &crate::matching::engine::ScoringWeights,
     ) -> Self {
-        let md5_jaccard = jaccard_similarity(&query.md5_set, &reference.md5_set);
+        // Classify each query contig
+        let mut exact_matches = 0usize;
+        let mut name_length_matches = 0usize;
+        let mut md5_conflicts = 0usize;
+        let mut unmatched = 0usize;
 
-        // For name+length matching, also consider alias matches
+        for contig in &query.contigs {
+            match classify_contig_match(contig, reference) {
+                ContigMatchType::Exact => exact_matches += 1,
+                ContigMatchType::NameLengthNoMd5 => name_length_matches += 1,
+                ContigMatchType::Md5Conflict => md5_conflicts += 1,
+                ContigMatchType::Unmatched => unmatched += 1,
+            }
+        }
+
+        let total_query = query.contigs.len();
+
+        // Normalize weights
+        let normalized_weights = weights.normalized();
+
+        // Contig match score using configurable conflict penalty
+        let weighted_matches = count_to_f64(exact_matches)
+            + count_to_f64(name_length_matches)
+            + (count_to_f64(md5_conflicts) * normalized_weights.conflict_penalty);
+
+        let contig_match_score = if total_query > 0 {
+            weighted_matches / count_to_f64(total_query)
+        } else {
+            0.0
+        };
+
+        // Coverage: what fraction of reference is covered by good matches
+        let good_matches = exact_matches + name_length_matches;
+        let coverage_score = if reference.contigs.is_empty() {
+            0.0
+        } else {
+            (count_to_f64(good_matches) / count_to_f64(reference.contigs.len())).min(1.0)
+        };
+
+        // Order analysis
+        let (order_preserved, order_score) = analyze_order(query, reference);
+
+        // Composite with custom weights
+        // Clamp to [0.0, 1.0] to handle floating point precision issues
+        let composite = ((normalized_weights.contig_match * contig_match_score)
+            + (normalized_weights.coverage * coverage_score)
+            + (normalized_weights.order * order_score))
+            .clamp(0.0, 1.0);
+
+        let confidence = Confidence::from_score(composite);
+
+        // Compute legacy metrics for backward compatibility
+        let md5_jaccard = jaccard_similarity(&query.md5_set, &reference.md5_set);
         let (name_length_jaccard, name_length_query_coverage) =
             calculate_name_length_similarity_with_aliases(query, reference);
-
-        // Query coverage
         let md5_query_coverage = if query.md5_set.is_empty() {
             0.0
         } else {
@@ -115,58 +244,21 @@ impl MatchScore {
                 / count_to_f64(query.md5_set.len())
         };
 
-        // Order analysis
-        let (order_preserved, order_score) = analyze_order(query, reference);
-
-        // Normalize weights to ensure they sum to 1.0
-        let normalized_weights = weights.normalized();
-
-        // Composite score with custom weights
-        let has_md5 = !query.md5_set.is_empty() && !reference.md5_set.is_empty();
-
-        let composite = if has_md5 {
-            // When MD5s are available, use all four components
-            normalized_weights.md5_jaccard * md5_jaccard
-                + normalized_weights.name_length_jaccard * name_length_jaccard
-                + normalized_weights.md5_query_coverage * md5_query_coverage
-                + normalized_weights.order_score * order_score
-        } else {
-            // Without MD5s, redistribute weights proportionally among non-MD5 components
-            // The MD5 weights (md5_jaccard + md5_query_coverage) get distributed to the others
-            let total_non_md5_weight =
-                normalized_weights.name_length_jaccard + normalized_weights.order_score;
-
-            if total_non_md5_weight > 0.0 {
-                // Normalize the non-MD5 weights to sum to 1.0
-                let redistributed_name_length =
-                    normalized_weights.name_length_jaccard / total_non_md5_weight;
-                let redistributed_order = normalized_weights.order_score / total_non_md5_weight;
-
-                // Use name_length_query_coverage as the coverage metric when MD5 isn't available
-                // Split name_length weight between jaccard and coverage
-                let name_weight = redistributed_name_length * 0.7; // 70% to jaccard
-                let coverage_weight = redistributed_name_length * 0.3; // 30% to coverage
-
-                name_weight * name_length_jaccard
-                    + coverage_weight * name_length_query_coverage
-                    + redistributed_order * order_score
-            } else {
-                // Fallback to equal weights (sum to 1.0)
-                0.6 * name_length_jaccard + 0.25 * name_length_query_coverage + 0.15 * order_score
-            }
-        };
-
-        let confidence = Confidence::from_score(composite);
-
         Self {
+            composite,
+            confidence,
+            exact_matches,
+            name_length_matches,
+            md5_conflicts,
+            unmatched,
+            contig_match_score,
+            coverage_score,
+            order_score,
+            order_preserved,
             md5_jaccard,
             name_length_jaccard,
             md5_query_coverage,
             name_length_query_coverage,
-            order_preserved,
-            order_score,
-            composite,
-            confidence,
         }
     }
 }
@@ -255,13 +347,17 @@ fn calculate_name_length_similarity_with_aliases(
 fn analyze_order(query: &QueryHeader, reference: &KnownReference) -> (bool, f64) {
     use std::collections::HashMap;
 
-    // Build position map for reference using exact names
-    let ref_positions: HashMap<(&str, u64), usize> = reference
-        .contigs
-        .iter()
-        .enumerate()
-        .map(|(i, c)| ((c.name.as_str(), c.length), i))
-        .collect();
+    // Build position map for reference using exact names AND aliases
+    // This allows order matching when query uses different naming convention
+    let mut ref_positions: HashMap<(&str, u64), usize> = HashMap::new();
+    for (i, contig) in reference.contigs.iter().enumerate() {
+        // Add primary name
+        ref_positions.insert((contig.name.as_str(), contig.length), i);
+        // Add all aliases (so query "chr1" can find reference "1" with alias "chr1")
+        for alias in &contig.aliases {
+            ref_positions.insert((alias.as_str(), contig.length), i);
+        }
+    }
 
     // Get positions of query contigs in reference ordering
     // Check both direct name match and alias matches
@@ -322,6 +418,82 @@ fn longest_increasing_subsequence(arr: &[usize]) -> usize {
 
     // Safety: dp is non-empty (arr.len() >= 1 after early return check)
     dp.into_iter().max().expect("dp is non-empty")
+}
+
+/// Classify how a query contig matches against a reference.
+///
+/// Returns the match type indicating whether the contig:
+/// - Has an exact match (name+length+MD5 all match)
+/// - Has a name+length match but no MD5 to compare (neutral)
+/// - Has a name+length match but MD5 differs (conflict - different sequence!)
+/// - Has no match
+fn classify_contig_match(query_contig: &Contig, reference: &KnownReference) -> ContigMatchType {
+    // First, find if there's a name+length match (including aliases)
+    let matched_ref_contig = find_matching_reference_contig(query_contig, reference);
+
+    match matched_ref_contig {
+        None => ContigMatchType::Unmatched,
+        Some(ref_contig) => {
+            // Name+length matched, now check MD5
+            match (&query_contig.md5, &ref_contig.md5) {
+                // Both have MD5 - compare them
+                (Some(q_md5), Some(r_md5)) => {
+                    if q_md5.eq_ignore_ascii_case(r_md5) {
+                        ContigMatchType::Exact
+                    } else {
+                        // MD5 mismatch - same name/length but different sequence!
+                        ContigMatchType::Md5Conflict
+                    }
+                }
+                // Either or both missing MD5 - neutral (can't verify but not a conflict)
+                _ => ContigMatchType::NameLengthNoMd5,
+            }
+        }
+    }
+}
+
+/// Find the reference contig that matches the query contig by name+length.
+/// Checks both direct name match and alias matches.
+fn find_matching_reference_contig<'a>(
+    query_contig: &Contig,
+    reference: &'a KnownReference,
+) -> Option<&'a Contig> {
+    // Check if query name+length matches any reference contig
+    let query_key = (query_contig.name.clone(), query_contig.length);
+    if reference.name_length_set.contains(&query_key) {
+        // Find the actual contig (could be by name or alias)
+        for ref_contig in &reference.contigs {
+            if ref_contig.name == query_contig.name && ref_contig.length == query_contig.length {
+                return Some(ref_contig);
+            }
+            // Check if query name matches a reference alias
+            for alias in &ref_contig.aliases {
+                if alias == &query_contig.name && ref_contig.length == query_contig.length {
+                    return Some(ref_contig);
+                }
+            }
+        }
+    }
+
+    // Check if any query alias matches a reference name or alias
+    for query_alias in &query_contig.aliases {
+        let alias_key = (query_alias.clone(), query_contig.length);
+        if reference.name_length_set.contains(&alias_key) {
+            // Find the actual contig
+            for ref_contig in &reference.contigs {
+                if ref_contig.name == *query_alias && ref_contig.length == query_contig.length {
+                    return Some(ref_contig);
+                }
+                for ref_alias in &ref_contig.aliases {
+                    if ref_alias == query_alias && ref_contig.length == query_contig.length {
+                        return Some(ref_contig);
+                    }
+                }
+            }
+        }
+    }
+
+    None
 }
 
 #[cfg(test)]
@@ -438,22 +610,22 @@ mod tests {
         // Test with various weight configurations
         let weight_configs = vec![
             ScoringWeights {
-                md5_jaccard: 0.4,
-                name_length_jaccard: 0.3,
-                md5_query_coverage: 0.2,
-                order_score: 0.1,
+                contig_match: 0.7,
+                coverage: 0.2,
+                order: 0.1,
+                conflict_penalty: 0.1,
             },
             ScoringWeights {
-                md5_jaccard: 0.0,
-                name_length_jaccard: 0.5,
-                md5_query_coverage: 0.0,
-                order_score: 0.5,
+                contig_match: 0.5,
+                coverage: 0.3,
+                order: 0.2,
+                conflict_penalty: 0.0,
             },
             ScoringWeights {
-                md5_jaccard: 1.0,
-                name_length_jaccard: 1.0,
-                md5_query_coverage: 1.0,
-                order_score: 1.0,
+                contig_match: 1.0,
+                coverage: 1.0,
+                order: 1.0,
+                conflict_penalty: 0.5,
             },
         ];
 
@@ -617,6 +789,267 @@ mod tests {
             (score.name_length_jaccard - 1.0).abs() < 0.001,
             "Query alias matching ref alias should have jaccard = 1.0, got {}",
             score.name_length_jaccard
+        );
+    }
+
+    // ========================================================================
+    // New Scoring Algorithm Tests
+    // ========================================================================
+
+    #[test]
+    fn test_perfect_name_length_match_no_md5_gets_high_score() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Reference with 3 contigs, no MD5
+        let ref_contigs = vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+            Contig::new("chr3", 198_295_559),
+        ];
+        let reference = KnownReference::new(
+            "test_ref",
+            "Test Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Query matches perfectly, also no MD5
+        let query = QueryHeader::new(vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+            Contig::new("chr3", 198_295_559),
+        ]);
+
+        let score = MatchScore::calculate(&query, &reference);
+
+        // All contigs should be classified as NameLengthNoMd5 (neutral = full credit)
+        assert_eq!(
+            score.exact_matches, 0,
+            "No exact matches (no MD5 available)"
+        );
+        assert_eq!(
+            score.name_length_matches, 3,
+            "All 3 contigs should be name+length matches"
+        );
+        assert_eq!(score.md5_conflicts, 0, "No conflicts");
+        assert_eq!(score.unmatched, 0, "No unmatched");
+
+        // Contig match score should be 1.0 (3 neutral matches / 3 total)
+        assert!(
+            (score.contig_match_score - 1.0).abs() < 0.001,
+            "Contig match score should be 1.0, got {}",
+            score.contig_match_score
+        );
+
+        // Coverage should be 1.0 (3 good matches / 3 reference contigs)
+        assert!(
+            (score.coverage_score - 1.0).abs() < 0.001,
+            "Coverage score should be 1.0, got {}",
+            score.coverage_score
+        );
+
+        // Composite should be high: 0.7*1.0 + 0.2*1.0 + 0.1*order = 0.9 + order
+        // Order score should be 1.0 for 3 contigs in order
+        assert!(
+            score.composite > 0.9,
+            "100% name+length match with no MD5 should score > 90%, got {:.1}%",
+            score.composite * 100.0
+        );
+    }
+
+    #[test]
+    fn test_md5_conflict_gets_heavy_penalty() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Reference with MD5
+        let ref_contigs = vec![
+            Contig::new("chr1", 248_956_422).with_md5("abc123"),
+            Contig::new("chr2", 242_193_529).with_md5("def456"),
+        ];
+        let reference = KnownReference::new(
+            "test_ref",
+            "Test Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Query with DIFFERENT MD5s (conflict!)
+        let query = QueryHeader::new(vec![
+            Contig::new("chr1", 248_956_422).with_md5("DIFFERENT1"),
+            Contig::new("chr2", 242_193_529).with_md5("DIFFERENT2"),
+        ]);
+
+        let score = MatchScore::calculate(&query, &reference);
+
+        // All contigs should be classified as Md5Conflict
+        assert_eq!(score.exact_matches, 0, "No exact matches");
+        assert_eq!(score.name_length_matches, 0, "No name+length-only matches");
+        assert_eq!(score.md5_conflicts, 2, "Both contigs have MD5 conflicts");
+        assert_eq!(score.unmatched, 0, "No unmatched");
+
+        // Contig match score should be 0.1 * 2 / 2 = 0.1 (10% credit for conflicts)
+        assert!(
+            (score.contig_match_score - 0.1).abs() < 0.001,
+            "Contig match score for conflicts should be 0.1, got {}",
+            score.contig_match_score
+        );
+
+        // Composite should be low due to conflicts
+        assert!(
+            score.composite < 0.2,
+            "MD5 conflicts should result in low score, got {:.1}%",
+            score.composite * 100.0
+        );
+    }
+
+    #[test]
+    fn test_mixed_match_types_weighted_correctly() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Reference: 3 contigs with MD5
+        let ref_contigs = vec![
+            Contig::new("chr1", 248_956_422).with_md5("correct_md5_1"),
+            Contig::new("chr2", 242_193_529).with_md5("correct_md5_2"),
+            Contig::new("chr3", 198_295_559), // No MD5
+        ];
+        let reference = KnownReference::new(
+            "test_ref",
+            "Test Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Query: 4 contigs
+        // - chr1: exact match (MD5 matches)
+        // - chr2: conflict (MD5 differs)
+        // - chr3: name+length only (no MD5 on either side)
+        // - chr4: unmatched
+        let query = QueryHeader::new(vec![
+            Contig::new("chr1", 248_956_422).with_md5("correct_md5_1"),
+            Contig::new("chr2", 242_193_529).with_md5("WRONG_MD5"),
+            Contig::new("chr3", 198_295_559),
+            Contig::new("chr4", 100_000), // Unmatched
+        ]);
+
+        let score = MatchScore::calculate(&query, &reference);
+
+        assert_eq!(score.exact_matches, 1, "1 exact match (chr1)");
+        assert_eq!(score.name_length_matches, 1, "1 name+length match (chr3)");
+        assert_eq!(score.md5_conflicts, 1, "1 conflict (chr2)");
+        assert_eq!(score.unmatched, 1, "1 unmatched (chr4)");
+
+        // Contig match score = (1*1.0 + 1*1.0 + 1*0.1 + 0) / 4 = 2.1 / 4 = 0.525
+        let expected_match_score = (1.0 + 1.0 + 0.1) / 4.0;
+        assert!(
+            (score.contig_match_score - expected_match_score).abs() < 0.001,
+            "Expected contig_match_score = {}, got {}",
+            expected_match_score,
+            score.contig_match_score
+        );
+    }
+
+    #[test]
+    fn test_classify_contig_match_exact() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        let ref_contigs = vec![Contig::new("chr1", 1000).with_md5("abc123")];
+        let reference = KnownReference::new(
+            "test",
+            "Test",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        let query_contig = Contig::new("chr1", 1000).with_md5("abc123");
+        assert_eq!(
+            classify_contig_match(&query_contig, &reference),
+            ContigMatchType::Exact
+        );
+    }
+
+    #[test]
+    fn test_classify_contig_match_no_md5() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        let ref_contigs = vec![Contig::new("chr1", 1000)]; // No MD5
+        let reference = KnownReference::new(
+            "test",
+            "Test",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        let query_contig = Contig::new("chr1", 1000); // No MD5
+        assert_eq!(
+            classify_contig_match(&query_contig, &reference),
+            ContigMatchType::NameLengthNoMd5
+        );
+    }
+
+    #[test]
+    fn test_classify_contig_match_md5_conflict() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        let ref_contigs = vec![Contig::new("chr1", 1000).with_md5("abc123")];
+        let reference = KnownReference::new(
+            "test",
+            "Test",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        let query_contig = Contig::new("chr1", 1000).with_md5("DIFFERENT");
+        assert_eq!(
+            classify_contig_match(&query_contig, &reference),
+            ContigMatchType::Md5Conflict
+        );
+    }
+
+    #[test]
+    fn test_classify_contig_match_unmatched() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        let ref_contigs = vec![Contig::new("chr1", 1000)];
+        let reference = KnownReference::new(
+            "test",
+            "Test",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Different name
+        let query_contig = Contig::new("chr2", 1000);
+        assert_eq!(
+            classify_contig_match(&query_contig, &reference),
+            ContigMatchType::Unmatched
+        );
+
+        // Different length
+        let query_contig2 = Contig::new("chr1", 2000);
+        assert_eq!(
+            classify_contig_match(&query_contig2, &reference),
+            ContigMatchType::Unmatched
         );
     }
 }

@@ -69,48 +69,75 @@ impl Default for MatchingConfig {
     }
 }
 
-/// Configurable weights for different scoring components
+/// Configurable weights for the scoring algorithm
+///
+/// The scoring algorithm uses three main components:
+/// - `contig_match`: Per-contig match quality (exact, name+length, conflicts)
+/// - coverage: What fraction of the reference is covered by good matches
+/// - order: Whether contigs appear in the same order
+///
+/// Additionally, `conflict_penalty` controls how much credit MD5 conflicts receive
+/// (name+length matches but MD5 differs, indicating different sequences).
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 pub struct ScoringWeights {
-    /// Weight for MD5 Jaccard similarity
-    pub md5_jaccard: f64,
-    /// Weight for name+length Jaccard similarity
-    pub name_length_jaccard: f64,
-    /// Weight for MD5 query coverage
-    pub md5_query_coverage: f64,
-    /// Weight for order score
-    pub order_score: f64,
+    /// Weight for per-contig match score (default 0.70 = 70%)
+    #[serde(default = "default_contig_match")]
+    pub contig_match: f64,
+
+    /// Weight for reference coverage (default 0.20 = 20%)
+    #[serde(default = "default_coverage")]
+    pub coverage: f64,
+
+    /// Weight for contig ordering (default 0.10 = 10%)
+    #[serde(default = "default_order")]
+    pub order: f64,
+
+    /// Credit given to MD5 conflicts (default 0.1 = 10% credit)
+    /// Set to 0.0 for zero credit on conflicts, 1.0 to treat conflicts as matches
+    #[serde(default = "default_conflict_penalty")]
+    pub conflict_penalty: f64,
+}
+
+fn default_contig_match() -> f64 {
+    0.70
+}
+fn default_coverage() -> f64 {
+    0.20
+}
+fn default_order() -> f64 {
+    0.10
+}
+fn default_conflict_penalty() -> f64 {
+    0.1
 }
 
 impl Default for ScoringWeights {
     fn default() -> Self {
         Self {
-            md5_jaccard: 0.4,         // 40%
-            name_length_jaccard: 0.3, // 30%
-            md5_query_coverage: 0.2,  // 20%
-            order_score: 0.1,         // 10%
+            contig_match: 0.70,    // 70%
+            coverage: 0.20,        // 20%
+            order: 0.10,           // 10%
+            conflict_penalty: 0.1, // 10% credit for conflicts
         }
     }
 }
 
 impl ScoringWeights {
-    /// Normalize weights to sum to 1.0
+    /// Normalize the main weights (`contig_match`, coverage, order) to sum to 1.0
+    /// The `conflict_penalty` is kept as-is since it's a multiplier, not a weight.
     #[must_use]
     pub fn normalized(&self) -> Self {
-        let total = self.md5_jaccard
-            + self.name_length_jaccard
-            + self.md5_query_coverage
-            + self.order_score;
+        let total = self.contig_match + self.coverage + self.order;
 
         if total <= 0.0 {
             return Self::default();
         }
 
         Self {
-            md5_jaccard: self.md5_jaccard / total,
-            name_length_jaccard: self.name_length_jaccard / total,
-            md5_query_coverage: self.md5_query_coverage / total,
-            order_score: self.order_score / total,
+            contig_match: self.contig_match / total,
+            coverage: self.coverage / total,
+            order: self.order / total,
+            conflict_penalty: self.conflict_penalty.clamp(0.0, 1.0),
         }
     }
 }
@@ -144,7 +171,11 @@ impl<'a> MatchingEngine<'a> {
         // Step 1: Try exact signature match
         if let Some(sig) = &query.signature {
             if let Some(reference) = self.catalog.find_by_signature(sig) {
-                return vec![MatchResult::new(reference, query)];
+                return vec![MatchResult::new_with_weights(
+                    reference,
+                    query,
+                    &self.config.scoring_weights,
+                )];
             }
         }
 
@@ -318,5 +349,142 @@ mod tests {
         let matches = engine.find_matches(&query, 5);
         // Should return empty or low-scoring matches
         assert!(matches.is_empty() || matches[0].score.composite < 0.2);
+    }
+
+    // ========================================================================
+    // UCSC-Style Patch Name Matching Integration Tests
+    // ========================================================================
+
+    #[test]
+    fn test_ucsc_style_fix_patch_matching() {
+        // Test that queries with UCSC-style fix-patch names match catalog references
+        // The catalog should have these names as aliases (generated from NCBI reports)
+        let catalog = make_test_catalog();
+        let engine = MatchingEngine::new(&catalog);
+
+        // Query with UCSC-style fix-patch name (chr1_KN196472v1_fix)
+        // This should match grch38_v38 (or similar) which has KN196472.1 as a fix-patch
+        let contigs = vec![
+            // Primary chromosomes with MD5s for strong matching
+            Contig::new("chr1", 248_956_422).with_md5("6aef897c3d6ff0c78aff06ac189178dd"),
+            Contig::new("chr2", 242_193_529).with_md5("f98db672eb0993dcfdabafe2a882905c"),
+            // UCSC-style fix-patch name (generated from KN196472.1)
+            Contig::new("chr1_KN196472v1_fix", 186_494),
+        ];
+        let query = QueryHeader::new(contigs);
+
+        let matches = engine.find_matches(&query, 5);
+        assert!(
+            !matches.is_empty(),
+            "Should find matches for UCSC-style patch names"
+        );
+
+        // Best match should be a GRCh38 reference (since fix-patches are GRCh38-specific)
+        let best = &matches[0];
+        assert!(
+            best.reference.display_name.contains("38")
+                || best.reference.display_name.contains("hg38")
+                || best.reference.display_name.contains("hs38"),
+            "Expected GRCh38 match for fix-patch query, got: {}",
+            best.reference.display_name
+        );
+    }
+
+    #[test]
+    fn test_ucsc_style_novel_patch_matching() {
+        // Test that queries with UCSC-style novel-patch (alt) names match catalog references
+        let catalog = make_test_catalog();
+        let engine = MatchingEngine::new(&catalog);
+
+        // Query with UCSC-style novel-patch name (chr1_KQ458382v1_alt)
+        let contigs = vec![
+            Contig::new("chr1", 248_956_422).with_md5("6aef897c3d6ff0c78aff06ac189178dd"),
+            Contig::new("chr2", 242_193_529).with_md5("f98db672eb0993dcfdabafe2a882905c"),
+            // UCSC-style novel-patch name (generated from KQ458382.1)
+            Contig::new("chr1_KQ458382v1_alt", 141_019),
+        ];
+        let query = QueryHeader::new(contigs);
+
+        let matches = engine.find_matches(&query, 5);
+        assert!(
+            !matches.is_empty(),
+            "Should find matches for UCSC-style alt patch names"
+        );
+
+        // Best match should be a GRCh38 reference
+        let best = &matches[0];
+        assert!(
+            best.reference.display_name.contains("38")
+                || best.reference.display_name.contains("hg38")
+                || best.reference.display_name.contains("hs38"),
+            "Expected GRCh38 match for novel-patch query, got: {}",
+            best.reference.display_name
+        );
+    }
+
+    #[test]
+    fn test_ucsc_style_y_chromosome_patch_matching() {
+        // Test Y chromosome fix-patch matching
+        let catalog = make_test_catalog();
+        let engine = MatchingEngine::new(&catalog);
+
+        let contigs = vec![
+            Contig::new("chr1", 248_956_422).with_md5("6aef897c3d6ff0c78aff06ac189178dd"),
+            Contig::new("chrY", 57_227_415).with_md5("ce3e31103314a704255f3cd90369ecce"),
+            // Y chromosome fix-patch (generated from KN196487.1)
+            Contig::new("chrY_KN196487v1_fix", 101_150),
+        ];
+        let query = QueryHeader::new(contigs);
+
+        let matches = engine.find_matches(&query, 5);
+        assert!(
+            !matches.is_empty(),
+            "Should find matches for Y chromosome fix-patch names"
+        );
+    }
+
+    #[test]
+    fn test_catalog_contains_ucsc_patch_aliases() {
+        // Verify that the embedded catalog has UCSC-style names indexed for matching
+        // Note: The matching tests above verify functional matching works. This test
+        // verifies the catalog structure supports UCSC-style names.
+        let catalog = make_test_catalog();
+
+        // Check that some GRCh38 references have UCSC-style names indexed
+        // Either in name_length_to_refs or alias_length_to_refs
+        let has_fix_patch_index = catalog
+            .name_length_to_refs
+            .keys()
+            .any(|(name, _)| name.contains("_fix") && name.starts_with("chr"))
+            || catalog
+                .alias_length_to_refs
+                .keys()
+                .any(|(name, _)| name.contains("_fix") && name.starts_with("chr"));
+
+        let has_alt_patch_index = catalog.name_length_to_refs.keys().any(|(name, _)| {
+            name.ends_with("_alt") && name.starts_with("chr") && name.contains('v')
+        }) || catalog.alias_length_to_refs.keys().any(|(name, _)| {
+            name.ends_with("_alt") && name.starts_with("chr") && name.contains('v')
+        });
+
+        // At minimum, the matching tests above prove UCSC patch names work.
+        // This test is informational - if the catalog structure changes,
+        // we want to ensure UCSC names are still indexed somewhere.
+        if !has_fix_patch_index && !has_alt_patch_index {
+            // Check if any reference has UCSC-style names in its name_length_set
+            let any_ref_has_patches = catalog.references.iter().any(|r| {
+                r.name_length_set.iter().any(|(name, _)| {
+                    (name.contains("_fix") || name.contains("_alt"))
+                        && name.starts_with("chr")
+                        && name.contains('v')
+                })
+            });
+
+            assert!(
+                any_ref_has_patches,
+                "Catalog should have UCSC-style patch names indexed for matching. \
+                 The matching tests pass, so this may indicate a catalog structure change."
+            );
+        }
     }
 }
