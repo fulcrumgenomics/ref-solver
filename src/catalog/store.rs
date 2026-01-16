@@ -256,4 +256,60 @@ mod tests {
         assert!(retrieved.is_some());
         assert_eq!(retrieved.unwrap().display_name, "Test Reference");
     }
+
+    #[test]
+    fn test_alias_indexing() {
+        // Test that contig aliases are indexed in name_length_to_refs
+        // so query names can match catalog aliases
+        let mut catalog = ReferenceCatalog::new();
+
+        // Create a reference with NCBI names and UCSC aliases
+        let contigs = vec![
+            Contig::new("NC_000001.11", 248_956_422)
+                .with_md5("6aef897c3d6ff0c78aff06ac189178dd")
+                .with_aliases(vec!["chr1".to_string(), "1".to_string()]),
+            Contig::new("NC_000002.12", 242_193_529)
+                .with_md5("f98db672eb0993dcfdabafe2a882905c")
+                .with_aliases(vec!["chr2".to_string(), "2".to_string()]),
+        ];
+
+        let reference = KnownReference::new(
+            "test_ncbi_ref",
+            "Test NCBI Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(contigs);
+
+        catalog.add_reference(reference);
+
+        // Verify primary names are indexed
+        assert!(
+            catalog
+                .name_length_to_refs
+                .contains_key(&("NC_000001.11".to_string(), 248_956_422)),
+            "Primary name should be indexed"
+        );
+
+        // Verify aliases are also indexed in name_length_to_refs
+        // This is CRITICAL for matching UCSC queries against NCBI references
+        assert!(
+            catalog
+                .name_length_to_refs
+                .contains_key(&("chr1".to_string(), 248_956_422)),
+            "Alias 'chr1' should be indexed in name_length_to_refs"
+        );
+        assert!(
+            catalog
+                .name_length_to_refs
+                .contains_key(&("1".to_string(), 248_956_422)),
+            "Alias '1' should be indexed in name_length_to_refs"
+        );
+        assert!(
+            catalog
+                .name_length_to_refs
+                .contains_key(&("chr2".to_string(), 242_193_529)),
+            "Alias 'chr2' should be indexed in name_length_to_refs"
+        );
+    }
 }

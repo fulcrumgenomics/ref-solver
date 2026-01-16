@@ -99,11 +99,16 @@ impl MatchDiagnosis {
             .collect();
 
         // Use exact names for matching (no normalization)
-        let ref_by_name_length: HashMap<(String, u64), &Contig> = reference
-            .contigs
-            .iter()
-            .map(|c| ((c.name.clone(), c.length), c))
-            .collect();
+        // Index by both primary name AND aliases for proper alias-based matching
+        let mut ref_by_name_length: HashMap<(String, u64), &Contig> = HashMap::new();
+        for contig in &reference.contigs {
+            // Primary name
+            ref_by_name_length.insert((contig.name.clone(), contig.length), contig);
+            // Also index by aliases so query names can match ref aliases
+            for alias in &contig.aliases {
+                ref_by_name_length.insert((alias.clone(), contig.length), contig);
+            }
+        }
 
         let mut matched_ref_md5s: HashSet<&str> = HashSet::new();
         let mut matched_ref_name_lengths: HashSet<(String, u64)> = HashSet::new();

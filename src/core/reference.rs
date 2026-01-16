@@ -106,6 +106,11 @@ impl KnownReference {
             // Use exact name for matching (no normalization)
             self.name_length_set
                 .insert((contig.name.clone(), contig.length));
+
+            // Also add aliases to name_length_set for matching
+            for alias in &contig.aliases {
+                self.name_length_set.insert((alias.clone(), contig.length));
+            }
         }
 
         // Compute signature from sorted MD5s

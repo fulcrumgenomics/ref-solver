@@ -100,6 +100,13 @@ impl Contig {
         self
     }
 
+    #[cfg(test)]
+    #[must_use]
+    pub fn with_aliases(mut self, aliases: Vec<String>) -> Self {
+        self.aliases = aliases;
+        self
+    }
+
     /// Check if this contig is a primary chromosome (1-22, X, Y)
     /// Matches both UCSC (chr1) and NCBI (1) naming conventions exactly
     #[must_use]

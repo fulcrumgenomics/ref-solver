@@ -473,4 +473,150 @@ mod tests {
             );
         }
     }
+
+    // Tests for all 4 alias matching combinations:
+    // 1. Query name → Ref name (direct match)
+    // 2. Query name → Ref alias (UCSC query chr1 matches NCBI ref with chr1 alias)
+    // 3. Query alias → Ref name (NCBI query with chr1 alias matches UCSC ref chr1)
+    // 4. Query alias → Ref alias (both have aliases that match)
+
+    #[test]
+    fn test_alias_match_query_name_to_ref_name() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Direct match: query chr1 → ref chr1
+        let ref_contigs = vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+        ];
+        let reference = KnownReference::new(
+            "test_ref",
+            "Test Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        let query = QueryHeader::new(vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+        ]);
+
+        let score = MatchScore::calculate(&query, &reference);
+        assert!(
+            (score.name_length_jaccard - 1.0).abs() < 0.001,
+            "Direct name match should have jaccard = 1.0, got {}",
+            score.name_length_jaccard
+        );
+    }
+
+    #[test]
+    fn test_alias_match_query_name_to_ref_alias() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Query uses UCSC names (chr1), ref uses NCBI names with chr1 as alias
+        let ref_contigs = vec![
+            Contig::new("NC_000001.11", 248_956_422)
+                .with_aliases(vec!["chr1".to_string(), "1".to_string()]),
+            Contig::new("NC_000002.12", 242_193_529)
+                .with_aliases(vec!["chr2".to_string(), "2".to_string()]),
+        ];
+        let reference = KnownReference::new(
+            "test_ncbi_ref",
+            "Test NCBI Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Query with UCSC names - NO aliases
+        let query = QueryHeader::new(vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+        ]);
+
+        let score = MatchScore::calculate(&query, &reference);
+        assert!(
+            (score.name_length_jaccard - 1.0).abs() < 0.001,
+            "Query name matching ref alias should have jaccard = 1.0, got {}",
+            score.name_length_jaccard
+        );
+    }
+
+    #[test]
+    fn test_alias_match_query_alias_to_ref_name() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Ref uses UCSC names (chr1), query uses NCBI names with chr1 as alias
+        let ref_contigs = vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+        ];
+        let reference = KnownReference::new(
+            "test_ucsc_ref",
+            "Test UCSC Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Query with NCBI names that have UCSC aliases
+        let query = QueryHeader::new(vec![
+            Contig::new("NC_000001.11", 248_956_422)
+                .with_aliases(vec!["chr1".to_string(), "1".to_string()]),
+            Contig::new("NC_000002.12", 242_193_529)
+                .with_aliases(vec!["chr2".to_string(), "2".to_string()]),
+        ]);
+
+        let score = MatchScore::calculate(&query, &reference);
+        assert!(
+            (score.name_length_jaccard - 1.0).abs() < 0.001,
+            "Query alias matching ref name should have jaccard = 1.0, got {}",
+            score.name_length_jaccard
+        );
+    }
+
+    #[test]
+    fn test_alias_match_query_alias_to_ref_alias() {
+        use crate::core::contig::Contig;
+        use crate::core::reference::KnownReference;
+        use crate::core::types::{Assembly, ReferenceSource};
+
+        // Both query and ref use NCBI names with UCSC aliases
+        // They should match via their common alias
+        let ref_contigs = vec![
+            Contig::new("NC_000001.11", 248_956_422)
+                .with_aliases(vec!["chr1".to_string(), "CM000663.2".to_string()]),
+            Contig::new("NC_000002.12", 242_193_529)
+                .with_aliases(vec!["chr2".to_string(), "CM000664.2".to_string()]),
+        ];
+        let reference = KnownReference::new(
+            "test_ncbi_ref_1",
+            "Test NCBI Reference 1",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        // Query with different primary names but overlapping aliases
+        let query = QueryHeader::new(vec![
+            Contig::new("CM000663.2", 248_956_422)
+                .with_aliases(vec!["chr1".to_string(), "NC_000001.11".to_string()]),
+            Contig::new("CM000664.2", 242_193_529)
+                .with_aliases(vec!["chr2".to_string(), "NC_000002.12".to_string()]),
+        ]);
+
+        let score = MatchScore::calculate(&query, &reference);
+        assert!(
+            (score.name_length_jaccard - 1.0).abs() < 0.001,
+            "Query alias matching ref alias should have jaccard = 1.0, got {}",
+            score.name_length_jaccard
+        );
+    }
 }

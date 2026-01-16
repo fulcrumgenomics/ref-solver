@@ -101,3 +101,91 @@ impl<'a> CandidateFinder<'a> {
         result
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::core::contig::Contig;
+    use crate::core::reference::KnownReference;
+    use crate::core::types::{Assembly, ReferenceSource};
+
+    #[test]
+    fn test_find_candidates_via_alias() {
+        // Create a catalog with an NCBI reference that has UCSC aliases
+        let mut catalog = ReferenceCatalog::new();
+
+        let ref_contigs = vec![
+            Contig::new("NC_000001.11", 248_956_422)
+                .with_md5("6aef897c3d6ff0c78aff06ac189178dd")
+                .with_aliases(vec!["chr1".to_string(), "1".to_string()]),
+            Contig::new("NC_000002.12", 242_193_529)
+                .with_md5("f98db672eb0993dcfdabafe2a882905c")
+                .with_aliases(vec!["chr2".to_string(), "2".to_string()]),
+        ];
+
+        let reference = KnownReference::new(
+            "test_ncbi_ref",
+            "Test NCBI Reference",
+            Assembly::Grch38,
+            ReferenceSource::Custom("test".to_string()),
+        )
+        .with_contigs(ref_contigs);
+
+        catalog.add_reference(reference);
+
+        // Create a query with UCSC names (no aliases, no MD5s)
+        let query = QueryHeader::new(vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+        ]);
+
+        // The CandidateFinder should find the NCBI reference via alias matching
+        let finder = CandidateFinder::new(&catalog);
+        let candidates = finder.find_candidates_by_name_length(&query);
+
+        assert!(
+            !candidates.is_empty(),
+            "Should find NCBI reference as candidate via UCSC aliases"
+        );
+
+        // The reference should have matched 2 contigs via alias
+        let (idx, count) = candidates[0];
+        assert_eq!(idx, 0, "Should match the first (and only) reference");
+        assert_eq!(count, 2, "Should match both chr1 and chr2 via aliases");
+    }
+
+    #[test]
+    fn test_find_candidates_real_catalog() {
+        // Test with the real embedded catalog
+        let catalog = ReferenceCatalog::load_embedded().unwrap();
+
+        // Create a query with UCSC names (matching hg38)
+        let query = QueryHeader::new(vec![
+            Contig::new("chr1", 248_956_422),
+            Contig::new("chr2", 242_193_529),
+        ]);
+
+        let finder = CandidateFinder::new(&catalog);
+        let candidates = finder.find_candidates_by_name_length(&query);
+
+        // Should find some candidates
+        assert!(
+            !candidates.is_empty(),
+            "Should find candidates for UCSC chr1/chr2 query"
+        );
+
+        // Check if grch38_v38 (p12) is among the candidates
+        let grch38_v38_idx = catalog
+            .references
+            .iter()
+            .position(|r| r.id.0 == "grch38_v38");
+
+        if let Some(expected_idx) = grch38_v38_idx {
+            let found = candidates.iter().any(|(idx, _)| *idx == expected_idx);
+            assert!(
+                found,
+                "grch38_v38 (with UCSC aliases) should be found as candidate for UCSC query"
+            );
+        }
+    }
+}
