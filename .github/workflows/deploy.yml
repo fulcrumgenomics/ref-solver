@@ -1,0 +1,70 @@
+name: Deploy to Lightsail
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # Allow manual trigger
+
+env:
+  BINARY_NAME: ref-solver
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-action@stable
+
+      - name: Cache cargo registry
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-release-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-release-
+
+      - name: Build release binary
+        run: cargo build --release
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: binary
+          path: target/release/${{ env.BINARY_NAME }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: binary
+
+      - name: Deploy to Lightsail
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+          SERVER_IP: ${{ secrets.LIGHTSAIL_IP }}
+          SERVER_USER: ${{ secrets.LIGHTSAIL_USER }}
+        run: |
+          # Setup SSH
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+
+          # Make binary executable
+          chmod +x ${{ env.BINARY_NAME }}
+
+          # Stop service, upload binary, start service
+          ssh -i ~/.ssh/deploy_key $SERVER_USER@$SERVER_IP "sudo systemctl stop ref-solver || true"
+          scp -i ~/.ssh/deploy_key ${{ env.BINARY_NAME }} $SERVER_USER@$SERVER_IP:/tmp/
+          ssh -i ~/.ssh/deploy_key $SERVER_USER@$SERVER_IP "sudo mv /tmp/${{ env.BINARY_NAME }} /usr/local/bin/ && sudo systemctl start ref-solver"
+
+          # Cleanup
+          rm ~/.ssh/deploy_key

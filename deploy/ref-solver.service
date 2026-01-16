@@ -1,0 +1,14 @@
+[Unit]
+Description=ref-solver web server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+ExecStart=/usr/local/bin/ref-solver serve --address 0.0.0.0 --port 8080
+Restart=always
+RestartSec=5
+Environment=RUST_LOG=info
+
+[Install]
+WantedBy=multi-user.target
