@@ -193,6 +193,22 @@ pub struct ReferenceBuilder {
 
     /// Warnings
     warnings: Vec<String>,
+
+    /// Whether to generate UCSC-style names for patches when parsing NCBI assembly reports.
+    ///
+    /// When `true` (default), for fix-patches and novel-patches that have "na" in the
+    /// UCSC-style-name column, a UCSC-style name will be generated using the convention:
+    /// `chr{chromosome}_{accession}v{version}_{suffix}` where suffix is `_fix` or `_alt`.
+    ///
+    /// This is useful for matching queries that use UCSC naming (like hg38.p12) against
+    /// NCBI assembly reports that don't include UCSC names for patches.
+    ///
+    /// Set to `false` to disable this behavior and only use names explicitly present
+    /// in the assembly report.
+    ///
+    /// See module documentation for [`crate::parsing::ncbi_report`] for details on the
+    /// naming convention and verification sources.
+    generate_ucsc_names: bool,
 }
 
 impl ReferenceBuilder {
@@ -213,7 +229,33 @@ impl ReferenceBuilder {
             inputs_processed: Vec::new(),
             conflicts: Vec::new(),
             warnings: Vec::new(),
+            generate_ucsc_names: true, // Default: generate UCSC names for patches
         }
+    }
+
+    /// Configure whether to generate UCSC-style names for patches.
+    ///
+    /// When `true` (default), for fix-patches and novel-patches that have "na" in the
+    /// UCSC-style-name column of NCBI assembly reports, a UCSC-style name will be
+    /// generated using the convention: `chr{chromosome}_{accession}v{version}_{suffix}`
+    /// where suffix is `_fix` for fix-patches or `_alt` for novel-patches.
+    ///
+    /// Set to `false` to disable this behavior (opt-out) and only use names explicitly
+    /// present in the assembly report.
+    ///
+    /// # Example
+    ///
+    /// ```
+    /// use ref_solver::catalog::builder::ReferenceBuilder;
+    ///
+    /// // Opt-out of UCSC name generation
+    /// let builder = ReferenceBuilder::new("my_ref", "My Reference")
+    ///     .generate_ucsc_names(false);
+    /// ```
+    #[must_use]
+    pub fn generate_ucsc_names(mut self, generate: bool) -> Self {
+        self.generate_ucsc_names = generate;
+        self
     }
 
     #[must_use]
@@ -425,7 +467,8 @@ impl ReferenceBuilder {
         };
 
         for entry in entries {
-            let contig = entry.to_contig();
+            // Use generate_ucsc_names option to control UCSC name generation for patches
+            let contig = entry.to_contig_with_options(self.generate_ucsc_names);
             let (merged, aliases) = self.merge_contig(&contig, path_str)?;
             if merged {
                 record.contigs_merged += 1;
@@ -938,6 +981,9 @@ pub struct DistributionBuilder {
 
     /// Source files processed
     source_files: Vec<String>,
+
+    /// Whether to generate UCSC-style names for patches (see [`ReferenceBuilder`])
+    generate_ucsc_names: bool,
 }
 
 impl Default for DistributionBuilder {
@@ -958,7 +1004,17 @@ impl DistributionBuilder {
             contigs: HashMap::new(),
             insertion_order: Vec::new(),
             source_files: Vec::new(),
+            generate_ucsc_names: true, // Default: generate UCSC names for patches
         }
+    }
+
+    /// Configure whether to generate UCSC-style names for patches.
+    ///
+    /// See [`ReferenceBuilder::generate_ucsc_names`] for details.
+    #[must_use]
+    pub fn with_generate_ucsc_names(mut self, generate: bool) -> Self {
+        self.generate_ucsc_names = generate;
+        self
     }
 
     /// Set the display name
@@ -1042,7 +1098,6 @@ impl DistributionBuilder {
     }
 
     /// Parse contigs from an input file
-    #[allow(clippy::unused_self)] // Kept as method for API consistency
     fn parse_input(&self, path: &Path, format: InputFormat) -> Result<Vec<Contig>, BuilderError> {
         match format {
             InputFormat::Dict | InputFormat::Sam => {
@@ -1072,7 +1127,11 @@ impl DistributionBuilder {
                 let content = std::fs::read_to_string(path)?;
                 let entries = crate::parsing::ncbi_report::parse_ncbi_report_text(&content)
                     .map_err(|e| BuilderError::Parse(e.to_string()))?;
-                Ok(entries.into_iter().map(|e| e.to_contig()).collect())
+                // Use generate_ucsc_names option to control UCSC name generation for patches
+                Ok(entries
+                    .into_iter()
+                    .map(|e| e.to_contig_with_options(self.generate_ucsc_names))
+                    .collect())
             }
             InputFormat::Vcf => {
                 let content = std::fs::read_to_string(path)?;
