@@ -1,0 +1,61 @@
+name: Deploy to Local Server
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+  workflow_dispatch:  # Allow manual trigger
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  BINARY_NAME: ref-solver
+
+jobs:
+  build-and-deploy:
+    runs-on: [self-hosted, linux, x64, ref-solver-deploy]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        run: |
+          if ! command -v rustc &> /dev/null; then
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          fi
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Cache cargo registry
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-ref-solver-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-ref-solver-
+
+      - name: Build release binary
+        run: |
+          source "$HOME/.cargo/env"
+          cargo build --release
+
+      - name: Deploy binary
+        run: |
+          sudo systemctl stop ref-solver || true
+          sudo cp target/release/${{ env.BINARY_NAME }} /usr/local/bin/
+          sudo chmod +x /usr/local/bin/${{ env.BINARY_NAME }}
+
+      - name: Start service
+        run: |
+          sudo systemctl start ref-solver
+
+      - name: Verify deployment
+        run: |
+          sleep 3
+          curl -sf http://localhost:8081/ > /dev/null && echo "Service is running" || echo "Service starting..."
