@@ -239,7 +239,7 @@ impl HierarchicalCatalog {
                 if match_rate >= min_match_rate {
                     let is_better = best_match
                         .as_ref()
-                        .is_none_or(|b| match_rate > b.match_rate);
+                        .map_or(true, |b| match_rate > b.match_rate);
 
                     if is_better {
                         best_match = Some(InferredAssembly {

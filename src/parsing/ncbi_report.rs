@@ -238,7 +238,7 @@ impl NcbiContigEntry {
     /// # Arguments
     ///
     /// * `generate_ucsc_names` - If `true`, generate UCSC-style names for patches
-    ///   that don't have them in the assembly report. See [`all_names_with_options`]
+    ///   that don't have them in the assembly report. See [`Self::all_names_with_options`]
     ///   for details on the naming convention.
     #[must_use]
     pub fn to_contig_with_options(&self, generate_ucsc_names: bool) -> Contig {

@@ -2,9 +2,9 @@
 //!
 //! This module provides the core matching functionality:
 //!
-//! - [`MatchingEngine`]: Main entry point for finding reference matches
-//! - [`MatchScore`]: Detailed similarity scores between a query and reference
-//! - [`MatchDiagnosis`]: Detailed analysis of differences and suggestions
+//! - [`engine::MatchingEngine`]: Main entry point for finding reference matches
+//! - [`scoring::MatchScore`]: Detailed similarity scores between a query and reference
+//! - [`diagnosis::MatchDiagnosis`]: Detailed analysis of differences and suggestions
 //!
 //! ## Matching Algorithm
 //!

@@ -9,6 +9,8 @@ repository = "https://github.com/fulcrumgenomics/ref-solver"
 readme = "README.md"
 keywords = ["bioinformatics", "genomics", "bam", "sam", "reference-genome"]
 categories = ["command-line-utilities", "science"]
+rust-version = "1.75"
+exclude = ["deploy/", ".github/"]
 
 [dependencies]
 # CLI

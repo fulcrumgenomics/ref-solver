@@ -2,11 +2,11 @@
 //!
 //! This module provides the fundamental types used throughout the library:
 //!
-//! - [`Contig`]: Represents a single sequence/chromosome with name, length, and optional MD5
-//! - [`QueryHeader`]: A sequence dictionary extracted from a BAM/SAM/CRAM file
-//! - [`KnownReference`]: A reference genome definition from the catalog
-//! - [`ReferenceId`], [`Assembly`], [`ReferenceSource`]: Reference metadata types
-//! - [`MatchType`], [`Confidence`]: Result classification types
+//! - [`contig::Contig`]: Represents a single sequence/chromosome with name, length, and optional MD5
+//! - [`header::QueryHeader`]: A sequence dictionary extracted from a BAM/SAM/CRAM file
+//! - [`reference::KnownReference`]: A reference genome definition from the catalog
+//! - [`types::ReferenceId`], [`types::Assembly`], [`types::ReferenceSource`]: Reference metadata types
+//! - [`types::MatchType`], [`types::Confidence`]: Result classification types
 //!
 //! ## Contig Naming
 //!
