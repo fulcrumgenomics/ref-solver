@@ -5,6 +5,7 @@
 [![CI](https://github.com/fulcrumgenomics/ref-solver/workflows/CI/badge.svg)](https://github.com/fulcrumgenomics/ref-solver/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rust](https://img.shields.io/badge/rust-1.75%2B-blue.svg)](https://www.rust-lang.org)
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/ref-solver/README.html)
 
 Identify which human reference genome was used to align a BAM/SAM/CRAM file.
 
