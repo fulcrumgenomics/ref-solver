@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/fulcrumgenomics/ref-solver/compare/v0.1.0...v0.1.1) - 2026-02-19
+
+### Other
+
+- Add Zenodo DOI badge to README ([#4](https://github.com/fulcrumgenomics/ref-solver/pull/4))
+- Add bioconda badge to README ([#3](https://github.com/fulcrumgenomics/ref-solver/pull/3))
+- release v0.1.0 ([#1](https://github.com/fulcrumgenomics/ref-solver/pull/1))
+
 ## [0.1.0](https://github.com/fulcrumgenomics/ref-solver/releases/tag/v0.1.0) - 2026-02-13
 
 ### Other
