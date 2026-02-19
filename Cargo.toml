@@ -1,6 +1,6 @@
 [package]
 name = "ref-solver"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Fulcrum Genomics"]
 description = "Solve reference genome identification from BAM/SAM headers"
