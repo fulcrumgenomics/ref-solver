@@ -11,6 +11,7 @@ use crate::matching::engine::{MatchResult, MatchingConfig, MatchingEngine, Scori
 use crate::matching::hierarchical_engine::{HierarchicalMatchResult, HierarchicalMatchingEngine};
 use crate::matching::Suggestion;
 use crate::parsing;
+use crate::refget::{EnrichedContig, RefgetConfig, RefgetLookupResult};
 
 /// How to handle references that have contigs missing from their FASTA
 /// (e.g., CHM13 where MT is in assembly report but uses standard rCRS mitochondria)
@@ -72,6 +73,12 @@ pub struct IdentifyArgs {
     /// Whether contigs appear in the same order
     #[arg(long, default_value = "10", value_parser = clap::value_parser!(u32).range(0..=100))]
     pub weight_order: u32,
+
+    /// Refget server URL for looking up unknown contigs.
+    /// When set, unmatched contigs with MD5 digests are queried against this
+    /// server to retrieve aliases and other metadata.
+    #[arg(long)]
+    pub refget_server: Option<String>,
 }
 
 #[derive(Clone, Copy, Debug, clap::ValueEnum)]
@@ -166,6 +173,35 @@ fn run_flat(
         return Ok(());
     }
 
+    // Optionally enrich unmatched contigs via refget
+    let enriched = if let Some(ref server_url) = args.refget_server {
+        let config = RefgetConfig::new(server_url);
+        // Collect all query_only contigs from the top match
+        let unmatched_contigs: Vec<_> = matches
+            .first()
+            .map(|m| m.diagnosis.query_only.clone())
+            .unwrap_or_default();
+
+        if unmatched_contigs.is_empty() {
+            None
+        } else {
+            if verbose {
+                eprintln!(
+                    "Querying refget server for {} unmatched contigs...",
+                    unmatched_contigs.len()
+                );
+            }
+            let rt = tokio::runtime::Runtime::new()?;
+            let results = rt.block_on(crate::refget::enrichment::enrich_contigs(
+                &unmatched_contigs,
+                &config,
+            ));
+            Some(results)
+        }
+    } else {
+        None
+    };
+
     // Output results
     match format {
         OutputFormat::Text => {
@@ -176,11 +212,24 @@ fn run_flat(
                 args.missing_contig_handling,
                 &scoring_weights,
             );
+            if let Some(ref enriched) = enriched {
+                print_refget_text_results(enriched);
+            }
         }
         OutputFormat::Json => {
-            print_json_results(&matches, args.missing_contig_handling, &scoring_weights)?;
+            print_json_results(
+                &matches,
+                args.missing_contig_handling,
+                &scoring_weights,
+                enriched.as_deref(),
+            )?;
         }
-        OutputFormat::Tsv => print_tsv_results(&matches, &scoring_weights),
+        OutputFormat::Tsv => {
+            print_tsv_results(&matches, &scoring_weights);
+            if let Some(ref enriched) = enriched {
+                print_refget_tsv_results(enriched);
+            }
+        }
     }
 
     Ok(())
@@ -481,10 +530,11 @@ fn print_json_results(
     matches: &[MatchResult],
     missing_handling: MissingContigHandling,
     weights: &ScoringWeights,
+    enriched: Option<&[EnrichedContig]>,
 ) -> anyhow::Result<()> {
     let norm = weights.normalized();
     // Create serializable output
-    let output: Vec<serde_json::Value> = matches
+    let results: Vec<serde_json::Value> = matches
         .iter()
         .map(|m| {
             // Calculate reference coverage
@@ -542,6 +592,12 @@ fn print_json_results(
         })
         .collect();
 
+    let mut output = serde_json::json!({ "matches": results });
+
+    if let Some(enriched) = enriched {
+        output["refget_enrichment"] = serde_json::json!(enriched);
+    }
+
     println!("{}", serde_json::to_string_pretty(&output)?);
     Ok(())
 }
@@ -581,6 +637,89 @@ fn print_tsv_results(matches: &[MatchResult], weights: &ScoringWeights) {
             ref_matched,
             ref_uncovered,
         );
+    }
+}
+
+// ============================================================================
+// Refget enrichment output functions
+// ============================================================================
+
+fn print_refget_text_results(enriched: &[EnrichedContig]) {
+    let found: Vec<_> = enriched
+        .iter()
+        .filter(|e| matches!(e.refget_metadata, RefgetLookupResult::Found { .. }))
+        .collect();
+
+    if found.is_empty() {
+        println!("Refget: no unmatched contigs found in refget server.");
+        return;
+    }
+
+    println!("\nRefget Aliases for Unmatched Contigs:");
+    println!("{}", "─".repeat(60));
+    for entry in &found {
+        if let RefgetLookupResult::Found {
+            aliases,
+            sha512t24u,
+            circular,
+        } = &entry.refget_metadata
+        {
+            print!("  {} ", entry.name);
+            if *circular {
+                print!("(circular) ");
+            }
+            println!("[sha512t24u: {sha512t24u}]");
+            if aliases.is_empty() {
+                println!("    (no aliases)");
+            } else {
+                for alias in aliases {
+                    println!("    {}: {}", alias.naming_authority, alias.value);
+                }
+            }
+        }
+    }
+    println!();
+}
+
+fn print_refget_tsv_results(enriched: &[EnrichedContig]) {
+    println!("\n# Refget enrichment for unmatched contigs");
+    println!("contig\tmd5\tstatus\tsha512t24u\tcircular\taliases");
+    for entry in enriched {
+        match &entry.refget_metadata {
+            RefgetLookupResult::Found {
+                aliases,
+                sha512t24u,
+                circular,
+            } => {
+                let alias_str: Vec<String> = aliases
+                    .iter()
+                    .map(|a| format!("{}={}", a.naming_authority, a.value))
+                    .collect();
+                println!(
+                    "{}\t{}\tfound\t{}\t{}\t{}",
+                    entry.name,
+                    entry.md5.as_deref().unwrap_or(""),
+                    sha512t24u,
+                    circular,
+                    alias_str.join(";"),
+                );
+            }
+            RefgetLookupResult::NotFound => {
+                println!(
+                    "{}\t{}\tnot_found\t\t\t",
+                    entry.name,
+                    entry.md5.as_deref().unwrap_or(""),
+                );
+            }
+            RefgetLookupResult::Error { message } => {
+                println!(
+                    "{}\t{}\terror\t\t\t{}",
+                    entry.name,
+                    entry.md5.as_deref().unwrap_or(""),
+                    message,
+                );
+            }
+        }
     }
 }
 

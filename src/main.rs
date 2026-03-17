@@ -6,6 +6,7 @@ mod cli;
 mod core;
 mod matching;
 mod parsing;
+mod refget;
 mod utils;
 mod web;
 

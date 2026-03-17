@@ -44,6 +44,7 @@ fn count_to_f64(count: usize) -> f64 {
 /// Shared application state
 pub struct AppState {
     pub catalog: ReferenceCatalog,
+    pub refget_config: Option<crate::refget::RefgetConfig>,
 }
 
 /// Input data extracted from multipart form
@@ -123,14 +124,19 @@ pub fn run(args: ServeArgs) -> anyhow::Result<()> {
 
 /// Create the application router with all routes and middleware configured.
 ///
+/// Pass `None` for `refget_config` to disable refget enrichment.
+///
 /// # Errors
 ///
 /// Returns an error if the catalog cannot be loaded.
 #[allow(clippy::missing_panics_doc)] // Panics only on invalid governor config (constants are valid)
-pub fn create_router() -> anyhow::Result<Router> {
+pub fn create_router(refget_config: Option<crate::refget::RefgetConfig>) -> anyhow::Result<Router> {
     // Load catalog
     let catalog = ReferenceCatalog::load_embedded()?;
-    let state = Arc::new(AppState { catalog });
+    let state = Arc::new(AppState {
+        catalog,
+        refget_config,
+    });
 
     // Configure IP-based rate limiting
     let governor_conf = GovernorConfigBuilder::default()
@@ -207,7 +213,12 @@ pub fn create_router() -> anyhow::Result<Router> {
 }
 
 async fn run_server(args: ServeArgs) -> anyhow::Result<()> {
-    let app = create_router()?;
+    let refget_config = if args.no_refget {
+        None
+    } else {
+        Some(crate::refget::RefgetConfig::new(&args.refget_server))
+    };
+    let app = create_router(refget_config)?;
 
     let addr = format!("{}:{}", args.address, args.port);
     println!("Starting ref-solver web server at http://{addr}");
@@ -332,7 +343,15 @@ async fn identify_handler(
 
     // Check if detailed mode is requested
     if params.mode.as_deref() == Some("detailed") {
-        return handle_detailed_response(&params, &matches, &query, start_time, &config).await;
+        return handle_detailed_response(
+            &params,
+            &matches,
+            &query,
+            start_time,
+            &config,
+            state.refget_config.as_ref(),
+        )
+        .await;
     }
 
     // Build enhanced response
@@ -433,17 +452,14 @@ async fn identify_handler(
 }
 
 /// Handle detailed response mode for contig breakdown
-#[allow(
-    clippy::cast_possible_truncation,
-    clippy::unused_async,
-    clippy::too_many_lines
-)] // JSON indices; TODO: refactor
+#[allow(clippy::cast_possible_truncation, clippy::too_many_lines)] // JSON indices; TODO: refactor
 async fn handle_detailed_response(
     params: &DetailedQueryParams,
     matches: &[crate::matching::engine::MatchResult],
     query: &crate::core::header::QueryHeader,
     start_time: std::time::Instant,
     config: &ConfigurationInfo,
+    refget_config: Option<&crate::refget::RefgetConfig>,
 ) -> Response {
     use crate::core::contig::Contig;
 
@@ -601,6 +617,33 @@ async fn handle_detailed_response(
         }
     }
 
+    // Enrich unmatched (missing) contigs on the current page via refget
+    let enriched_map: std::collections::HashMap<String, crate::refget::EnrichedContig> =
+        if let Some(refget_cfg) = refget_config {
+            // Only enrich contigs that are both unmatched and on the current page
+            let page_unmatched: Vec<&Contig> = selected_match
+                .diagnosis
+                .query_only
+                .iter()
+                .filter(|c| {
+                    query_name_to_index
+                        .get(c.name.as_str())
+                        .is_some_and(|&idx| idx >= query_start && idx < query_end)
+                })
+                .collect();
+            if page_unmatched.is_empty() {
+                std::collections::HashMap::new()
+            } else {
+                // Collect owned contigs for the enrichment call
+                let to_enrich: Vec<Contig> = page_unmatched.into_iter().cloned().collect();
+                let enriched =
+                    crate::refget::enrichment::enrich_contigs(&to_enrich, refget_cfg).await;
+                enriched.into_iter().map(|e| (e.name.clone(), e)).collect()
+            }
+        } else {
+            std::collections::HashMap::new()
+        };
+
     // Build response
     #[allow(clippy::cast_possible_truncation)] // Processing time won't exceed u64
     let processing_time = start_time.elapsed().as_millis() as u64;
@@ -624,7 +667,7 @@ async fn handle_detailed_response(
                     "unknown"
                 };
 
-                serde_json::json!({
+                let mut entry = serde_json::json!({
                     "index": global_idx,
                     "name": contig.name,
                     "length": contig.length,
@@ -633,7 +676,16 @@ async fn handle_detailed_response(
                     "sequence_role": format!("{:?}", contig.sequence_role),
                     "aliases": contig.aliases,
                     "match_status": match_status
-                })
+                });
+
+                // Attach refget metadata for missing contigs that were enriched
+                if match_status == "missing" {
+                    if let Some(enriched) = enriched_map.get(&contig.name) {
+                        entry["refget_metadata"] = serde_json::json!(&enriched.refget_metadata);
+                    }
+                }
+
+                entry
             }).collect::<Vec<_>>(),
             "pagination": {
                 "page": query_page,
