@@ -38,6 +38,9 @@ pub struct ReferenceCatalog {
     /// Index: MD5 -> indices of references containing this MD5
     pub md5_to_refs: HashMap<String, Vec<usize>>,
 
+    /// Index: sha512t24u digest -> indices of references containing this digest
+    pub sha512t24u_to_refs: HashMap<String, Vec<usize>>,
+
     /// Index: (`exact_name`, length) -> indices of references
     pub name_length_to_refs: HashMap<(String, u64), Vec<usize>>,
 
@@ -57,6 +60,7 @@ impl ReferenceCatalog {
             references: Vec::new(),
             id_to_index: HashMap::new(),
             md5_to_refs: HashMap::new(),
+            sha512t24u_to_refs: HashMap::new(),
             name_length_to_refs: HashMap::new(),
             alias_length_to_refs: HashMap::new(),
             signature_to_ref: HashMap::new(),
@@ -120,6 +124,14 @@ impl ReferenceCatalog {
         // Index by MD5s
         for md5 in &reference.md5_set {
             self.md5_to_refs.entry(md5.clone()).or_default().push(index);
+        }
+
+        // Index by sha512t24u digests
+        for digest in &reference.sha512t24u_set {
+            self.sha512t24u_to_refs
+                .entry(digest.clone())
+                .or_default()
+                .push(index);
         }
 
         // Index by (name, length) pairs

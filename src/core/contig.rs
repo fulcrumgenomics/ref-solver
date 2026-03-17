@@ -53,6 +53,11 @@ pub struct Contig {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub md5: Option<String>,
 
+    /// GA4GH sha512t24u digest (SHA-512, truncate to 24 bytes, base64url no-pad)
+    /// 32-character string, used for refget/seqcol compatibility
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub sha512t24u: Option<String>,
+
     /// Assembly identifier (AS tag in SAM)
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub assembly: Option<String>,
@@ -85,6 +90,7 @@ impl Contig {
             name: name.into(),
             length,
             md5: None,
+            sha512t24u: None,
             assembly: None,
             uri: None,
             species: None,

@@ -32,6 +32,10 @@ pub struct QueryHeader {
     #[serde(skip)]
     pub md5_set: HashSet<String>,
 
+    /// Set of sha512t24u digests present in header
+    #[serde(skip)]
+    pub sha512t24u_set: HashSet<String>,
+
     /// Set of (`exact_name`, length) pairs for matching
     #[serde(skip)]
     pub name_length_set: HashSet<(String, u64)>,
@@ -55,6 +59,7 @@ impl QueryHeader {
             contigs,
             naming_convention,
             md5_set: HashSet::new(),
+            sha512t24u_set: HashSet::new(),
             name_length_set: HashSet::new(),
             alias_length_set: HashSet::new(),
             signature: None,
@@ -72,12 +77,16 @@ impl QueryHeader {
 
     pub fn rebuild_indexes(&mut self) {
         self.md5_set.clear();
+        self.sha512t24u_set.clear();
         self.name_length_set.clear();
         self.alias_length_set.clear();
 
         for contig in &self.contigs {
             if let Some(md5) = &contig.md5 {
                 self.md5_set.insert(md5.clone());
+            }
+            if let Some(digest) = &contig.sha512t24u {
+                self.sha512t24u_set.insert(digest.clone());
             }
             // Use exact name for matching (no normalization)
             self.name_length_set

@@ -183,6 +183,10 @@ pub enum CatalogCommands {
         #[arg(long)]
         tags: Option<String>,
 
+        /// Species name to set on all contigs (e.g., "Homo sapiens")
+        #[arg(long)]
+        species: Option<String>,
+
         /// Output file (JSON). If not specified, prints to stdout
         #[arg(short, long)]
         output: Option<PathBuf>,
@@ -318,6 +322,7 @@ pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
             download_url,
             assembly_report_url,
             tags,
+            species,
             output,
             append_to,
             force,
@@ -334,6 +339,7 @@ pub fn run(args: CatalogArgs, format: OutputFormat, verbose: bool) -> anyhow::Re
             download_url,
             assembly_report_url,
             tags,
+            species,
             output,
             append_to,
             force,
@@ -1099,6 +1105,7 @@ fn run_build(
     download_url: Option<String>,
     assembly_report_url: Option<String>,
     tags: Option<String>,
+    species: Option<String>,
     output: Option<PathBuf>,
     append_to: Option<PathBuf>,
     force: bool,
@@ -1139,6 +1146,9 @@ fn run_build(
     }
     if !tags.is_empty() {
         builder = builder.tags(tags);
+    }
+    if let Some(sp) = species {
+        builder = builder.species(sp);
     }
 
     // Process input files

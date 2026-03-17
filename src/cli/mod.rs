@@ -55,6 +55,7 @@ pub struct Cli {
 }
 
 #[derive(Subcommand)]
+#[allow(clippy::large_enum_variant)]
 pub enum Commands {
     /// Identify the reference genome used in a BAM/SAM file
     Identify(identify::IdentifyArgs),
