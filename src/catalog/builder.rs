@@ -12,6 +12,7 @@ use crate::core::assembly::{ContigMergeError, FastaContig, FastaDistribution};
 use crate::core::contig::{Contig, SequenceRole};
 use crate::core::reference::KnownReference;
 use crate::core::types::{Assembly, ReferenceSource};
+use crate::utils::validation::{is_valid_md5, is_valid_sha512t24u};
 
 #[derive(Error, Debug)]
 pub enum BuilderError {
@@ -23,6 +24,9 @@ pub enum BuilderError {
 
     #[error("Conflict: {0}")]
     Conflict(String),
+
+    #[error("Validation error: {0}")]
+    Validation(String),
 
     #[error("Missing required field: {0}")]
     MissingField(String),
@@ -107,6 +111,9 @@ pub struct ContigMetadata {
     /// MD5 checksum
     pub md5: Option<String>,
 
+    /// GA4GH sha512t24u digest
+    pub sha512t24u: Option<String>,
+
     /// Explicit aliases (from AN tag or NCBI report)
     pub aliases: HashSet<String>,
 
@@ -132,6 +139,7 @@ impl ContigMetadata {
             primary_name: name,
             length: None,
             md5: None,
+            sha512t24u: None,
             aliases: HashSet::new(),
             assembly: None,
             uri: None,
@@ -146,6 +154,7 @@ impl ContigMetadata {
         let length = self.length?;
         let mut contig = Contig::new(&self.primary_name, length);
         contig.md5.clone_from(&self.md5);
+        contig.sha512t24u.clone_from(&self.sha512t24u);
         contig.assembly.clone_from(&self.assembly);
         contig.uri.clone_from(&self.uri);
         contig.species.clone_from(&self.species);
@@ -194,6 +203,10 @@ pub struct ReferenceBuilder {
     /// Warnings
     warnings: Vec<String>,
 
+    /// Optional species override for all contigs (e.g., "Homo sapiens").
+    /// When set, overrides whatever the dict's SP tag had.
+    species: Option<String>,
+
     /// Whether to generate UCSC-style names for patches when parsing NCBI assembly reports.
     ///
     /// When `true` (default), for fix-patches and novel-patches that have "na" in the
@@ -229,6 +242,7 @@ impl ReferenceBuilder {
             inputs_processed: Vec::new(),
             conflicts: Vec::new(),
             warnings: Vec::new(),
+            species: None,
             generate_ucsc_names: true, // Default: generate UCSC names for patches
         }
     }
@@ -291,6 +305,16 @@ impl ReferenceBuilder {
     #[must_use]
     pub fn tags(mut self, tags: Vec<String>) -> Self {
         self.tags = tags;
+        self
+    }
+
+    /// Set a species override for all contigs (e.g., "Homo sapiens").
+    ///
+    /// When set, this value is written to each contig's `species` field, overriding
+    /// whatever the dict's SP tag had.
+    #[must_use]
+    pub fn species(mut self, species: impl Into<String>) -> Self {
+        self.species = Some(species.into());
         self
     }
 
@@ -554,6 +578,48 @@ impl ReferenceBuilder {
         Ok(())
     }
 
+    /// Check an optional digest field for conflicts, merging if no conflict.
+    /// Validates the incoming digest format using the provided validator function.
+    /// Returns `Err` with a conflict message if values differ or validation fails,
+    /// or `Ok(())` if merged/skipped.
+    fn check_digest_conflict(
+        existing: &mut Option<String>,
+        incoming: Option<&String>,
+        field_name: &str,
+        contig_name: &str,
+        source: &str,
+        conflicts: &mut Vec<String>,
+        validator: fn(&str) -> bool,
+    ) -> Result<(), BuilderError> {
+        if let Some(new_val) = incoming {
+            if !validator(new_val) {
+                let msg = format!(
+                    "Invalid {field_name} for '{contig_name}': '{new_val}' (from {source})"
+                );
+                return Err(BuilderError::Validation(msg));
+            }
+            if let Some(existing_val) = existing.as_ref() {
+                if existing_val != new_val {
+                    let msg = format!(
+                        "{field_name} conflict for '{contig_name}': {existing_val} vs {new_val} (from {source})"
+                    );
+                    conflicts.push(msg.clone());
+                    return Err(BuilderError::Conflict(msg));
+                }
+            } else {
+                *existing = Some(new_val.clone());
+            }
+        }
+        Ok(())
+    }
+
+    /// Find the primary name for a contig, checking both its name and aliases.
+    fn find_primary_for_contig(&self, contig: &Contig) -> Option<String> {
+        std::iter::once(&contig.name)
+            .chain(contig.aliases.iter())
+            .find_map(|name| self.find_existing_primary(name))
+    }
+
     /// Merge a contig into the builder.
     /// Returns (`was_merged_into_existing`, `num_aliases_added`)
     fn merge_contig(
@@ -561,20 +627,7 @@ impl ReferenceBuilder {
         contig: &Contig,
         source: &str,
     ) -> Result<(bool, usize), BuilderError> {
-        // Find existing entry by exact name or alias
-        let mut existing_primary = self.find_existing_primary(&contig.name);
-
-        // Also check if any of the incoming contig's aliases match existing entries
-        if existing_primary.is_none() {
-            for alias in &contig.aliases {
-                if let Some(primary) = self.find_existing_primary(alias) {
-                    existing_primary = Some(primary);
-                    break;
-                }
-            }
-        }
-
-        if let Some(primary) = existing_primary {
+        if let Some(primary) = self.find_primary_for_contig(contig) {
             // Merge into existing
             let metadata = self.contigs.get_mut(&primary).unwrap();
             let aliases_before = metadata.aliases.len();
@@ -593,19 +646,25 @@ impl ReferenceBuilder {
                 metadata.length = Some(contig.length);
             }
 
-            // Check MD5 conflict
-            if let (Some(existing_md5), Some(new_md5)) = (&metadata.md5, &contig.md5) {
-                if existing_md5 != new_md5 {
-                    let msg = format!(
-                        "MD5 conflict for '{}': {} vs {} (from {})",
-                        contig.name, existing_md5, new_md5, source
-                    );
-                    self.conflicts.push(msg.clone());
-                    return Err(BuilderError::Conflict(msg));
-                }
-            } else if metadata.md5.is_none() && contig.md5.is_some() {
-                metadata.md5.clone_from(&contig.md5);
-            }
+            // Check digest conflicts
+            Self::check_digest_conflict(
+                &mut metadata.md5,
+                contig.md5.as_ref(),
+                "MD5",
+                &contig.name,
+                source,
+                &mut self.conflicts,
+                is_valid_md5,
+            )?;
+            Self::check_digest_conflict(
+                &mut metadata.sha512t24u,
+                contig.sha512t24u.as_ref(),
+                "sha512t24u",
+                &contig.name,
+                source,
+                &mut self.conflicts,
+                is_valid_sha512t24u,
+            )?;
 
             // Merge aliases
             for alias in &contig.aliases {
@@ -655,6 +714,7 @@ impl ReferenceBuilder {
             let mut metadata = ContigMetadata::new(contig.name.clone());
             metadata.length = Some(contig.length);
             metadata.md5.clone_from(&contig.md5);
+            metadata.sha512t24u.clone_from(&contig.sha512t24u);
             metadata.assembly.clone_from(&contig.assembly);
             metadata.uri.clone_from(&contig.uri);
             metadata.species.clone_from(&contig.species);
@@ -729,12 +789,40 @@ impl ReferenceBuilder {
         }
 
         // Build contigs in order
-        let contigs: Vec<Contig> = self
+        let mut contigs: Vec<Contig> = self
             .contig_order
             .iter()
             .filter_map(|name| self.contigs.get(name))
             .filter_map(ContigMetadata::to_contig)
             .collect();
+
+        // Override per-contig URIs with the download URL if provided.
+        // Dict files embed local filesystem paths in the UR tag which should not
+        // leak into the catalog when a remote download URL is specified.
+        if let Some(ref url) = self.download_url {
+            for contig in &mut contigs {
+                contig.uri = Some(url.clone());
+            }
+        }
+
+        // Override per-contig assembly fields with the builder's assembly value.
+        // Dict files may embed inconsistent or missing AS tags; the CLI --assembly
+        // flag should be the authoritative source.
+        if let Some(ref assembly) = self.assembly {
+            let assembly_str = assembly.to_string();
+            for contig in &mut contigs {
+                contig.assembly = Some(assembly_str.clone());
+            }
+        }
+
+        // Override per-contig species fields with the builder's species value.
+        // Dict files may embed inconsistent SP tags; the CLI --species flag should
+        // be the authoritative source when provided.
+        if let Some(ref species) = self.species {
+            for contig in &mut contigs {
+                contig.species = Some(species.clone());
+            }
+        }
 
         // Find contigs that are in assembly report but missing MD5 (i.e., not in FASTA)
         // These are typically assembled-molecule contigs that use external references (like MT in CHM13)
@@ -772,6 +860,7 @@ impl ReferenceBuilder {
             tags: self.tags,
             contigs_missing_from_fasta,
             md5_set: HashSet::new(),
+            sha512t24u_set: HashSet::new(),
             name_length_set: HashSet::new(),
             signature: None,
         };
@@ -1414,6 +1503,101 @@ mod tests {
     }
 
     #[test]
+    fn test_builder_download_url_overrides_contig_uri() {
+        let local_uri = "file:///local/path/to/ref.fasta";
+        let download_url = "https://example.com/ref.fasta";
+
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .assembly(Assembly::Grch38)
+            .source(ReferenceSource::Custom("test".to_string()))
+            .download_url(download_url);
+
+        // Manually add contigs with local URIs (as a dict file would produce)
+        let mut contig1 = Contig::new("chr1", 248_956_422);
+        contig1.uri = Some(local_uri.to_string());
+        builder.merge_contig(&contig1, "test").unwrap();
+
+        let mut contig2 = Contig::new("chr2", 242_193_529);
+        contig2.uri = Some(local_uri.to_string());
+        builder.merge_contig(&contig2, "test").unwrap();
+
+        let reference = builder.build().unwrap();
+
+        // The download_url should be set on the reference
+        assert_eq!(reference.download_url.as_deref(), Some(download_url));
+
+        // Each contig's uri should be the download URL, not the local path
+        for contig in &reference.contigs {
+            assert_eq!(
+                contig.uri.as_deref(),
+                Some(download_url),
+                "contig {} uri should be the download URL, not the local path",
+                contig.name
+            );
+        }
+    }
+
+    #[test]
+    fn test_builder_no_download_url_preserves_contig_uri() {
+        let local_uri = "file:///local/path/to/ref.fasta";
+
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .assembly(Assembly::Grch38)
+            .source(ReferenceSource::Custom("test".to_string()));
+        // No download_url set
+
+        let mut contig = Contig::new("chr1", 248_956_422);
+        contig.uri = Some(local_uri.to_string());
+        builder.merge_contig(&contig, "test").unwrap();
+
+        let reference = builder.build().unwrap();
+
+        // Without download_url, the original local URI should be preserved
+        assert_eq!(reference.contigs[0].uri.as_deref(), Some(local_uri));
+    }
+
+    #[test]
+    fn test_builder_download_url_overrides_dict_file_uri() {
+        use std::io::Write;
+        use tempfile::NamedTempFile;
+
+        let download_url = "https://storage.googleapis.com/bucket/ref.fasta";
+
+        // Create a dict file with a local UR tag (as real dict files have)
+        let mut dict_file = NamedTempFile::with_suffix(".dict").unwrap();
+        writeln!(dict_file, "@HD\tVN:1.6").unwrap();
+        writeln!(
+            dict_file,
+            "@SQ\tSN:chr1\tLN:1000\tM5:6aef897c3d6ff0c78aff06ac189178dd\tUR:file:///local/ref.fa"
+        )
+        .unwrap();
+        writeln!(
+            dict_file,
+            "@SQ\tSN:chr2\tLN:2000\tM5:f98db672eb0993dcfdabafe2a882905c\tUR:file:///local/ref.fa"
+        )
+        .unwrap();
+
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .assembly(Assembly::Grch38)
+            .source(ReferenceSource::Custom("test".to_string()))
+            .download_url(download_url);
+
+        builder.add_input(dict_file.path()).unwrap();
+
+        let reference = builder.build().unwrap();
+
+        assert_eq!(reference.download_url.as_deref(), Some(download_url));
+        for contig in &reference.contigs {
+            assert_eq!(
+                contig.uri.as_deref(),
+                Some(download_url),
+                "contig {} uri should be overridden by download_url",
+                contig.name
+            );
+        }
+    }
+
+    #[test]
     fn test_distribution_builder_preserves_order() {
         use std::io::Write;
         use tempfile::NamedTempFile;
@@ -1446,5 +1630,156 @@ mod tests {
         assert_eq!(dist.contigs[1].sort_order, 1);
         assert_eq!(dist.contigs[2].name, "chr2");
         assert_eq!(dist.contigs[2].sort_order, 2);
+    }
+
+    #[test]
+    fn test_builder_assembly_overrides_contig_assembly() {
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .assembly(Assembly::Grch38)
+            .source(ReferenceSource::Custom("test".to_string()));
+
+        // Add contigs with existing assembly fields (as dict AS tags would produce)
+        let mut contig1 = Contig::new("chr1", 248_956_422);
+        contig1.assembly = Some("hg38".to_string());
+        builder.merge_contig(&contig1, "test").unwrap();
+
+        let mut contig2 = Contig::new("chr2", 242_193_529);
+        contig2.assembly = Some("hg38".to_string());
+        builder.merge_contig(&contig2, "test").unwrap();
+
+        let reference = builder.build().unwrap();
+
+        // Each contig's assembly should be the builder's Assembly Display value
+        for contig in &reference.contigs {
+            assert_eq!(
+                contig.assembly.as_deref(),
+                Some("GRCh38"),
+                "contig {} assembly should be overridden by builder assembly",
+                contig.name
+            );
+        }
+    }
+
+    #[test]
+    fn test_builder_no_assembly_preserves_contig_assembly() {
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .source(ReferenceSource::Custom("test".to_string()));
+        // No assembly set on builder
+
+        let mut contig = Contig::new("chr1", 248_956_422);
+        contig.assembly = Some("hg38".to_string());
+        builder.merge_contig(&contig, "test").unwrap();
+
+        let reference = builder.build().unwrap();
+
+        // Without builder assembly, the original contig assembly should be preserved
+        assert_eq!(reference.contigs[0].assembly.as_deref(), Some("hg38"));
+    }
+
+    #[test]
+    fn test_builder_species_overrides_contig_species() {
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .assembly(Assembly::Grch38)
+            .source(ReferenceSource::Custom("test".to_string()))
+            .species("Homo sapiens");
+
+        // Add contigs with existing species fields (as dict SP tags would produce)
+        let mut contig1 = Contig::new("chr1", 248_956_422);
+        contig1.species = Some("Human".to_string());
+        builder.merge_contig(&contig1, "test").unwrap();
+
+        let contig2 = Contig::new("chr2", 242_193_529);
+        // No species set on this contig
+        builder.merge_contig(&contig2, "test").unwrap();
+
+        let reference = builder.build().unwrap();
+
+        // Each contig's species should be the builder's species value
+        for contig in &reference.contigs {
+            assert_eq!(
+                contig.species.as_deref(),
+                Some("Homo sapiens"),
+                "contig {} species should be overridden by builder species",
+                contig.name
+            );
+        }
+    }
+
+    #[test]
+    fn test_builder_no_species_preserves_contig_species() {
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .assembly(Assembly::Grch38)
+            .source(ReferenceSource::Custom("test".to_string()));
+        // No species set on builder
+
+        let mut contig = Contig::new("chr1", 248_956_422);
+        contig.species = Some("Human".to_string());
+        builder.merge_contig(&contig, "test").unwrap();
+
+        let reference = builder.build().unwrap();
+
+        // Without builder species, the original contig species should be preserved
+        assert_eq!(reference.contigs[0].species.as_deref(), Some("Human"));
+    }
+
+    #[test]
+    fn test_builder_assembly_overrides_dict_file_as_tag() {
+        use std::io::Write;
+        use tempfile::NamedTempFile;
+
+        // Create a dict file with AS and SP tags
+        let mut dict_file = NamedTempFile::with_suffix(".dict").unwrap();
+        writeln!(dict_file, "@HD\tVN:1.6").unwrap();
+        writeln!(
+            dict_file,
+            "@SQ\tSN:chr1\tLN:1000\tM5:6aef897c3d6ff0c78aff06ac189178dd\tAS:hg38\tSP:Human"
+        )
+        .unwrap();
+        writeln!(
+            dict_file,
+            "@SQ\tSN:chr2\tLN:2000\tM5:f98db672eb0993dcfdabafe2a882905c\tAS:hg38\tSP:Human"
+        )
+        .unwrap();
+
+        let mut builder = ReferenceBuilder::new("test_ref", "Test Reference")
+            .assembly(Assembly::Grch38)
+            .source(ReferenceSource::Custom("test".to_string()))
+            .species("Homo sapiens");
+
+        builder.add_input(dict_file.path()).unwrap();
+
+        let reference = builder.build().unwrap();
+
+        for contig in &reference.contigs {
+            assert_eq!(
+                contig.assembly.as_deref(),
+                Some("GRCh38"),
+                "contig {} assembly should be overridden by builder assembly",
+                contig.name
+            );
+            assert_eq!(
+                contig.species.as_deref(),
+                Some("Homo sapiens"),
+                "contig {} species should be overridden by builder species",
+                contig.name
+            );
+        }
+    }
+
+    #[test]
+    fn test_builder_chm13_assembly_display() {
+        let mut builder = ReferenceBuilder::new("chm13", "T2T-CHM13v2.0")
+            .assembly(Assembly::Other("T2T-CHM13v2.0".to_string()))
+            .source(ReferenceSource::Custom("test".to_string()));
+
+        let contig = Contig::new("chr1", 248_387_328);
+        builder.merge_contig(&contig, "test").unwrap();
+
+        let reference = builder.build().unwrap();
+
+        assert_eq!(
+            reference.contigs[0].assembly.as_deref(),
+            Some("T2T-CHM13v2.0")
+        );
     }
 }

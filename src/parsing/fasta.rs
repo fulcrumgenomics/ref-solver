@@ -18,7 +18,7 @@ use noodles::fasta;
 use crate::core::contig::Contig;
 use crate::core::header::QueryHeader;
 use crate::parsing::sam::ParseError;
-use crate::utils::validation::check_contig_limit;
+use crate::utils::validation::{check_contig_limit, compute_sha512t24u, is_valid_sha512t24u};
 
 /// Check if the path has a FASTA extension
 pub fn is_fasta_file(path: &Path) -> bool {
@@ -127,16 +127,19 @@ fn parse_fasta_reader_with_md5<R: BufRead>(
         let sequence = record.sequence();
         let length = sequence.len() as u64;
 
-        // Compute MD5 on uppercase sequence (standard convention)
+        // Compute digests on uppercase sequence (standard convention)
         let uppercase: Vec<u8> = sequence
             .as_ref()
             .iter()
             .map(u8::to_ascii_uppercase)
             .collect();
         let md5 = format!("{:x}", md5::compute(&uppercase));
+        let sha512t24u = compute_sha512t24u(&uppercase);
+        debug_assert!(is_valid_sha512t24u(&sha512t24u));
 
         let mut contig = Contig::new(name, length);
         contig.md5 = Some(md5);
+        contig.sha512t24u = Some(sha512t24u);
         contigs.push(contig);
     }
 

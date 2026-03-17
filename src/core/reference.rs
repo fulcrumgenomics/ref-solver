@@ -52,6 +52,10 @@ pub struct KnownReference {
     #[serde(skip)]
     pub md5_set: HashSet<String>,
 
+    /// Set of all sha512t24u digests in this reference
+    #[serde(skip)]
+    pub sha512t24u_set: HashSet<String>,
+
     /// Set of all (`exact_name`, length) pairs for matching
     #[serde(skip)]
     pub name_length_set: HashSet<(String, u64)>,
@@ -81,6 +85,7 @@ impl KnownReference {
             tags: Vec::new(),
             contigs_missing_from_fasta: Vec::new(),
             md5_set: HashSet::new(),
+            sha512t24u_set: HashSet::new(),
             name_length_set: HashSet::new(),
             signature: None,
         }
@@ -97,11 +102,15 @@ impl KnownReference {
     /// Rebuild the internal indexes after modifying contigs
     pub fn rebuild_indexes(&mut self) {
         self.md5_set.clear();
+        self.sha512t24u_set.clear();
         self.name_length_set.clear();
 
         for contig in &self.contigs {
             if let Some(md5) = &contig.md5 {
                 self.md5_set.insert(md5.clone());
+            }
+            if let Some(digest) = &contig.sha512t24u {
+                self.sha512t24u_set.insert(digest.clone());
             }
             // Use exact name for matching (no normalization)
             self.name_length_set

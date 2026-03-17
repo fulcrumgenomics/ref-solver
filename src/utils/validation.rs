@@ -1,5 +1,9 @@
 //! Centralized validation and helper functions.
 
+use base64::engine::general_purpose::URL_SAFE_NO_PAD;
+use base64::Engine;
+use sha2::{Digest, Sha512};
+
 use crate::web::format_detection::FileFormat;
 use std::collections::HashSet;
 
@@ -35,6 +39,44 @@ pub fn normalize_md5(s: &str) -> Option<String> {
     } else {
         None
     }
+}
+
+/// Compute the GA4GH sha512t24u digest for a sequence.
+///
+/// Algorithm: SHA-512 the sequence bytes, truncate to the first 24 bytes,
+/// then base64url-encode without padding, producing a 32-character string.
+///
+/// The input sequence should already be uppercased.
+///
+/// # Examples
+///
+/// ```
+/// use ref_solver::utils::validation::compute_sha512t24u;
+///
+/// let digest = compute_sha512t24u(b"ACGT");
+/// assert_eq!(digest.len(), 32);
+/// ```
+#[must_use]
+pub fn compute_sha512t24u(sequence: &[u8]) -> String {
+    let hash = Sha512::digest(sequence);
+    URL_SAFE_NO_PAD.encode(&hash[..24])
+}
+
+/// Validate that a string is a valid sha512t24u digest (32 chars, base64url alphabet).
+///
+/// # Examples
+///
+/// ```
+/// use ref_solver::utils::validation::is_valid_sha512t24u;
+///
+/// assert!(is_valid_sha512t24u("aKF498dAxcJAqme6QYQ7EZ07-fiw8Kw2"));
+/// assert!(!is_valid_sha512t24u("too-short"));
+/// ```
+#[must_use]
+pub fn is_valid_sha512t24u(s: &str) -> bool {
+    s.len() == 32
+        && s.bytes()
+            .all(|b| b.is_ascii_alphanumeric() || b == b'-' || b == b'_')
 }
 
 /// Compute a signature hash from a set of MD5 checksums.
@@ -351,6 +393,34 @@ mod tests {
         assert!(!is_valid_md5("6aef897c3d6ff0c78aff06ac189178ddd")); // 33 chars
         assert!(!is_valid_md5("")); // empty
         assert!(!is_valid_md5("6aef897c3d6ff0c78aff06ac189178dg")); // invalid char
+    }
+
+    #[test]
+    fn test_compute_sha512t24u() {
+        // "ACGT" -> known sha512t24u digest
+        let digest = compute_sha512t24u(b"ACGT");
+        assert_eq!(digest.len(), 32);
+        assert!(is_valid_sha512t24u(&digest));
+
+        // Deterministic: same input -> same output
+        assert_eq!(digest, compute_sha512t24u(b"ACGT"));
+
+        // Different input -> different output
+        assert_ne!(digest, compute_sha512t24u(b"TGCA"));
+
+        // Verify against known value (SHA-512 of "ACGT", truncated to 24 bytes, base64url no-pad)
+        assert_eq!(digest, "aKF498dAxcJAqme6QYQ7EZ07-fiw8Kw2");
+    }
+
+    #[test]
+    fn test_is_valid_sha512t24u() {
+        assert!(is_valid_sha512t24u("aKF498dAxcJAqme6QYQ7EZ07-fiw8Kw2"));
+        assert!(!is_valid_sha512t24u("too-short"));
+        assert!(!is_valid_sha512t24u(""));
+        // 33 chars - too long
+        assert!(!is_valid_sha512t24u("aKF498dAxcJAqme6QYQ7EZ07-fiw8Kw2X"));
+        // Invalid character (space)
+        assert!(!is_valid_sha512t24u("aKF498dAxcJAqme6QYQ7EZ07-fiw8Kw "));
     }
 
     #[test]
