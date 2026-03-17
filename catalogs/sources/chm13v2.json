@@ -15,10 +15,14 @@
       "name": "NC_060925.1",
       "length": 248387328,
       "md5": "e469247288ceb332aee524caec92bb22",
+      "sha512t24u": "S9dv70MOE6RecB0OYnc32EilaGTDWca-",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "CP068277.2",
-        "chr1",
-        "1"
+        "1",
+        "chr1"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -26,10 +30,14 @@
       "name": "NC_060926.1",
       "length": 242696752,
       "md5": "e5ff97665b6025191d4d7dfa2cec4cf0",
+      "sha512t24u": "5vv2Xb_ZkaagKWYCz0EayrGncmRRAfTJ",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "chr2",
         "2",
-        "CP068276.2"
+        "CP068276.2",
+        "chr2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -37,10 +45,14 @@
       "name": "NC_060927.1",
       "length": 201105948,
       "md5": "0012f8a55c07f0b61e199736105e7257",
+      "sha512t24u": "f1uycHw0NkDpPp4OQ5cbYbWlDU7ONBJs",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
+        "CP068275.2",
         "3",
-        "chr3",
-        "CP068275.2"
+        "chr3"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -48,10 +60,14 @@
       "name": "NC_060928.1",
       "length": 193574945,
       "md5": "b7e17a4f043aab5bc45cdfd5cccf9deb",
+      "sha512t24u": "B5f4g5kiBInZy0qREU0PZr3ZVXd018y7",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "chr4",
-        "CP068274.2",
-        "4"
+        "4",
+        "CP068274.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -59,6 +75,10 @@
       "name": "NC_060929.1",
       "length": 182045439,
       "md5": "e069fd69dce480b348767fa9827671b4",
+      "sha512t24u": "Z1-DN-r0aDfOSnfhMw-xYMmk5R_SMGm1",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "chr5",
         "5",
@@ -70,10 +90,14 @@
       "name": "NC_060930.1",
       "length": 172126628,
       "md5": "ae714983adbd673c7c84b0b1daa91f7e",
+      "sha512t24u": "H5_IgBjHE38dUtPCY61ED3LFqUiRD8Qi",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "chr6",
+        "6",
         "CP068272.2",
-        "6"
+        "chr6"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -81,9 +105,13 @@
       "name": "NC_060931.1",
       "length": 160567428,
       "md5": "3ff4435e65cf8cdd69a3150d09dd649f",
+      "sha512t24u": "kw_NNQ-we0XAHqnMpG1fx4lXZmXxdXDH",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "7",
         "CP068271.2",
+        "7",
         "chr7"
       ],
       "sequence_role": "assembled-molecule"
@@ -92,10 +120,14 @@
       "name": "NC_060932.1",
       "length": 146259331,
       "md5": "29aeec58cb54d9132e2283839f9fcc9c",
+      "sha512t24u": "nMrDOOwFLH-JRnTE-avAOFNhPpkmmc-Q",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "chr8",
+        "CP068270.2",
         "8",
-        "CP068270.2"
+        "chr8"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -103,6 +135,10 @@
       "name": "NC_060933.1",
       "length": 150617247,
       "md5": "419dad1fb58ae389ad8828536b5d78cd",
+      "sha512t24u": "LprKbuM4Y3H4uZsYOZLuRD6BDfs31VJ8",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "CP068269.2",
         "chr9",
@@ -114,10 +150,14 @@
       "name": "NC_060934.1",
       "length": 134758134,
       "md5": "fbf3087282695f275d460157fc7864a5",
+      "sha512t24u": "hWguOYPWvLYNA7rsqGLFikI0G-bzkHce",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "10",
         "CP068268.2",
-        "chr10"
+        "chr10",
+        "10"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -125,9 +165,13 @@
       "name": "NC_060935.1",
       "length": 135127769,
       "md5": "7f144a0b4800c341a4b4f1518838cc59",
+      "sha512t24u": "jsrczUzFGixtlsbFNWSg9eeop4fwHwyA",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "CP068267.2",
         "chr11",
+        "CP068267.2",
         "11"
       ],
       "sequence_role": "assembled-molecule"
@@ -136,10 +180,14 @@
       "name": "NC_060936.1",
       "length": 133324548,
       "md5": "5086cf368e83b9cefd7bb19ef0f40d3c",
+      "sha512t24u": "Pu7CKolaqtbj0_3OMQCf_BKFEE7GMvtl",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "12",
+        "chr12",
         "CP068266.2",
-        "chr12"
+        "12"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -147,10 +195,14 @@
       "name": "NC_060937.1",
       "length": 113566686,
       "md5": "6f9949b26d5ece38c6cdefd48a516907",
+      "sha512t24u": "ParpK2T2j01KRr9IgIklnzQ8DpTjlon-",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "CP068265.2",
         "13",
-        "chr13"
+        "chr13",
+        "CP068265.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -158,10 +210,14 @@
       "name": "NC_060938.1",
       "length": 101161492,
       "md5": "7ad36d43a1ab059e190ab918f27cb5bf",
+      "sha512t24u": "qrn4JzTUlPJmhoaCvHvMQdoxxfBBgs-B",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "CP068264.2",
         "chr14",
-        "14"
+        "14",
+        "CP068264.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -169,6 +225,10 @@
       "name": "NC_060939.1",
       "length": 99753195,
       "md5": "914e0733351aaa9a4354ca8efb527401",
+      "sha512t24u": "ZuvHSl4N_P7wI78ZVk4_Qc7pzXgqVaD6",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "CP068263.2",
         "chr15",
@@ -180,10 +240,14 @@
       "name": "NC_060940.1",
       "length": 96330374,
       "md5": "fcc04e14d89b12c757d56c177261e248",
+      "sha512t24u": "CEgkNynB_UVQ38m9vA88qn_xIiJQHqj3",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "chr16",
+        "CP068262.2",
         "16",
-        "CP068262.2"
+        "chr16"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -191,10 +255,14 @@
       "name": "NC_060941.1",
       "length": 84276897,
       "md5": "8627043bd24255e9f356e0c99ece251f",
+      "sha512t24u": "ibOlfL0yXZvyPHIjzS08D0kuqKIkIqSk",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "CP068261.2",
-        "17",
-        "chr17"
+        "chr17",
+        "17"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -202,9 +270,13 @@
       "name": "NC_060942.1",
       "length": 80542538,
       "md5": "b6a85aabc31b2d57f707aa679a8612c5",
+      "sha512t24u": "_aE9CdSQZZgotYGAT05qlxJoQywJbHlw",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "18",
         "CP068260.2",
+        "18",
         "chr18"
       ],
       "sequence_role": "assembled-molecule"
@@ -213,10 +285,14 @@
       "name": "NC_060943.1",
       "length": 61707364,
       "md5": "c2c74cb0832b34b9e8eebf4b744a88c1",
+      "sha512t24u": "6h6toZfxT1syeodZIIAkXsdegMLIOiXq",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "chr19",
+        "CP068259.2",
         "19",
-        "CP068259.2"
+        "chr19"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -224,10 +300,14 @@
       "name": "NC_060944.1",
       "length": 66210255,
       "md5": "f1a31f30d3da50893470ff47bf0b5a38",
+      "sha512t24u": "J3YqxzhSQKEx8zAJ_VQLSNBh_EGcJn8O",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
+        "chr20",
         "20",
-        "CP068258.2",
-        "chr20"
+        "CP068258.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -235,10 +315,14 @@
       "name": "NC_060945.1",
       "length": 45090682,
       "md5": "760794bbbe965d4d1e3884bf09d1f306",
+      "sha512t24u": "bboFugWC_sKlc7tZPEpUgoxWofFOcPUX",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
+        "CP068257.2",
         "chr21",
-        "21",
-        "CP068257.2"
+        "21"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -246,6 +330,10 @@
       "name": "NC_060946.1",
       "length": 51324926,
       "md5": "0068189b6b7c95e860cce0815662293f",
+      "sha512t24u": "HwkRopQHJAPg6_Lt8-9YrzXuzyUadW66",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "chr22",
         "22",
@@ -257,10 +345,14 @@
       "name": "NC_060947.1",
       "length": 154259566,
       "md5": "1f2616c4cfa30104517e44dd3c426453",
+      "sha512t24u": "xrlHAe5hUN1d5EcfRYjPY0AMWFPxOomG",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "CP068255.2",
         "chrX",
-        "X"
+        "X",
+        "CP068255.2"
       ],
       "sequence_role": "assembled-molecule"
     },
@@ -268,19 +360,26 @@
       "name": "NC_060948.1",
       "length": 62460029,
       "md5": "775564f397e3690ae4e4f0372537ff49",
+      "sha512t24u": "RVZf-n0H5wmBYfl2y7iKJqWV5j9tki4p",
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
         "chrY",
-        "CP086569.2",
-        "Y"
+        "Y",
+        "CP086569.2"
       ],
       "sequence_role": "assembled-molecule"
     },
     {
       "name": "MT",
       "length": 16569,
+      "assembly": "chm13",
+      "uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/914/755/GCF_009914755.1_T2T-CHM13v2.0/GCF_009914755.1_T2T-CHM13v2.0_genomic.fna.gz",
+      "species": "Homo sapiens",
       "aliases": [
-        "CP068254.1",
-        "chrM"
+        "chrM",
+        "CP068254.1"
       ],
       "sequence_role": "assembled-molecule"
     }
