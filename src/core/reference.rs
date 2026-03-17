@@ -7,6 +7,7 @@ use crate::utils::validation::compute_signature as compute_sig;
 
 /// A known reference genome in the catalog
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[non_exhaustive]
 pub struct KnownReference {
     /// Unique identifier
     pub id: ReferenceId,

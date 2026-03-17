@@ -16,6 +16,7 @@ fn count_to_f64(count: usize) -> f64 {
 
 /// A query header extracted from a BAM/SAM/CRAM file
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[non_exhaustive]
 pub struct QueryHeader {
     /// Source file path (if known)
     #[serde(default, skip_serializing_if = "Option::is_none")]

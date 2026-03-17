@@ -24,6 +24,7 @@ pub struct CatalogArgs {
 }
 
 #[derive(Subcommand)]
+#[non_exhaustive]
 pub enum CatalogCommands {
     /// List all references in the catalog
     List {
