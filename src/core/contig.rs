@@ -41,6 +41,7 @@ impl SequenceRole {
 
 /// A single contig/sequence in a reference genome
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[non_exhaustive]
 pub struct Contig {
     /// Sequence name (SN tag in SAM)
     pub name: String,

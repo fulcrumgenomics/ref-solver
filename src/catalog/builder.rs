@@ -15,6 +15,7 @@ use crate::core::types::{Assembly, ReferenceSource};
 use crate::utils::validation::{is_valid_md5, is_valid_sha512t24u};
 
 #[derive(Error, Debug)]
+#[non_exhaustive]
 pub enum BuilderError {
     #[error("IO error: {0}")]
     Io(#[from] std::io::Error),
@@ -101,6 +102,7 @@ impl InputFormat {
 
 /// Metadata for a single contig, collected from multiple sources
 #[derive(Debug, Clone)]
+#[non_exhaustive]
 pub struct ContigMetadata {
     /// Primary name (exact, from first source)
     pub primary_name: String,
