@@ -629,6 +629,7 @@ async fn handle_detailed_response(
                     "name": contig.name,
                     "length": contig.length,
                     "md5": contig.md5,
+                    "sha512t24u": contig.sha512t24u,
                     "sequence_role": format!("{:?}", contig.sequence_role),
                     "aliases": contig.aliases,
                     "match_status": match_status
@@ -665,6 +666,7 @@ async fn handle_detailed_response(
                     "name": contig.name,
                     "length": contig.length,
                     "md5": contig.md5,
+                    "sha512t24u": contig.sha512t24u,
                     "sequence_role": format!("{:?}", contig.sequence_role),
                     "aliases": contig.aliases,
                     "match_status": match_status
