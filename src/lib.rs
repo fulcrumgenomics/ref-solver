@@ -47,6 +47,7 @@
 //! - [`core`]: Core data types for contigs, references, and headers
 //! - [`matching`]: Matching engine and scoring algorithms
 //! - [`parsing`]: Parsers for SAM/BAM/CRAM, dict, and TSV files
+//! - [`refget`]: Refget server integration for unknown contig lookup
 //! - [`cli`]: Command-line interface implementation
 //! - [`web`]: Web server for browser-based identification
 
@@ -55,6 +56,7 @@ pub mod cli;
 pub mod core;
 pub mod matching;
 pub mod parsing;
+pub mod refget;
 pub mod utils;
 pub mod web;
 

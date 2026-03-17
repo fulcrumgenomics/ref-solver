@@ -286,9 +286,13 @@ export class SplitViewManager {
             const statusClass = this.getStatusClass(contig.match_status);
             const contigIndex = startIdx + i;
 
+            const refgetBadge = this.hasRefgetMatch(contig)
+                ? '<span class="refget-badge" title="Found in refget" style="background: var(--accent); color: white; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.7rem; margin-left: 0.25rem;">refget</span>'
+                : '';
+
             html += `
                 <div class="contig-item ${statusClass}" data-contig-index="${contigIndex}" data-contig-type="query">
-                    <div class="contig-name">${escapeHtml(contig.name)}</div>
+                    <div class="contig-name">${escapeHtml(contig.name)}${refgetBadge}</div>
                     <div class="contig-details">
                         <span class="contig-length">${contig.length.toLocaleString()} bp</span>
                         <span class="contig-status ${statusClass}">${escapeHtml(contig.match_status)}</span>
@@ -448,6 +452,15 @@ export class SplitViewManager {
             case 'conflict': return 'var(--error)';
             default: return 'var(--text-muted)';
         }
+    }
+
+    /**
+     * Check whether a contig has refget metadata with a "found" status
+     * @param {ContigData} contig - Contig data object
+     * @returns {boolean} True if refget metadata was found
+     */
+    hasRefgetMatch(contig) {
+        return contig.refget_metadata && contig.refget_metadata.status === 'found';
     }
 
     /**
@@ -675,6 +688,42 @@ export class SplitViewManager {
                                 <div class="detail-row">
                                     <span class="detail-label">Assembly:</span>
                                     <span class="detail-value">${escapeHtml(contig.assembly_info.assembly)}${contig.assembly_info.organism ? ` (${escapeHtml(contig.assembly_info.organism)})` : ''}</span>
+                                </div>
+                                ` : ''}
+
+                                <!-- Refget metadata for missing contigs -->
+                                ${this.hasRefgetMatch(contig) ? `
+                                <div class="detail-row" style="grid-column: 1 / -1; margin-top: 0.5rem;">
+                                    <span class="detail-label" style="font-weight: bold; color: var(--accent);">Refget Aliases:</span>
+                                </div>
+                                ${contig.refget_metadata.aliases && contig.refget_metadata.aliases.length > 0 ? contig.refget_metadata.aliases.map(alias => `
+                                <div class="detail-row">
+                                    <span class="detail-label" style="padding-left: 1rem;">${escapeHtml(alias.naming_authority)}:</span>
+                                    <span class="detail-value">${escapeHtml(alias.value)}</span>
+                                </div>
+                                `).join('') : `
+                                <div class="detail-row">
+                                    <span class="detail-value" style="padding-left: 1rem;">(no aliases)</span>
+                                </div>
+                                `}
+                                ${contig.refget_metadata.sha512t24u ? `
+                                <div class="detail-row">
+                                    <span class="detail-label" style="padding-left: 1rem;">sha512t24u:</span>
+                                    <span class="detail-value monospace">${escapeHtml(contig.refget_metadata.sha512t24u)}</span>
+                                </div>
+                                ` : ''}
+                                ${contig.refget_metadata.circular ? `
+                                <div class="detail-row">
+                                    <span class="detail-label" style="padding-left: 1rem;">Circular:</span>
+                                    <span class="detail-value">Yes</span>
+                                </div>
+                                ` : ''}
+                                ` : ''}
+
+                                ${contig.refget_metadata && contig.refget_metadata.status === 'not_found' ? `
+                                <div class="detail-row">
+                                    <span class="detail-label">Refget:</span>
+                                    <span class="detail-value" style="color: var(--text-muted);">Not found in refget server</span>
                                 </div>
                                 ` : ''}
 

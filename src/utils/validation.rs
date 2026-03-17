@@ -1,9 +1,5 @@
 //! Centralized validation and helper functions.
 
-use base64::engine::general_purpose::URL_SAFE_NO_PAD;
-use base64::Engine;
-use sha2::{Digest, Sha512};
-
 use crate::web::format_detection::FileFormat;
 use std::collections::HashSet;
 
@@ -58,8 +54,7 @@ pub fn normalize_md5(s: &str) -> Option<String> {
 /// ```
 #[must_use]
 pub fn compute_sha512t24u(sequence: &[u8]) -> String {
-    let hash = Sha512::digest(sequence);
-    URL_SAFE_NO_PAD.encode(&hash[..24])
+    refget_digest::sha512t24u(sequence)
 }
 
 /// Validate that a string is a valid sha512t24u digest (32 chars, base64url alphabet).

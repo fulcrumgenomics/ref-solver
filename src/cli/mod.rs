@@ -88,6 +88,15 @@ pub struct ServeArgs {
     /// Open browser automatically
     #[arg(long)]
     pub open: bool,
+
+    /// Refget server URL for looking up unknown contigs.
+    /// Defaults to EBI's ENA CRAM endpoint. Use --no-refget to disable.
+    #[arg(long, default_value = crate::refget::DEFAULT_REFGET_SERVER)]
+    pub refget_server: String,
+
+    /// Disable refget lookups for unmatched contigs
+    #[arg(long)]
+    pub no_refget: bool,
 }
 
 #[derive(Clone, Copy, Debug, clap::ValueEnum)]
