@@ -15,6 +15,7 @@ import { escapeHtml, debounce, DEBOUNCE_DELAY } from '../utils/helpers.js';
  * @property {string} name - Contig name
  * @property {number} length - Contig length in base pairs
  * @property {string} [md5] - MD5 hash of sequence
+ * @property {string} [sha512t24u] - GA4GH sha512t24u digest
  * @property {MatchStatus} match_status - Match status
  * @property {string} [sequence_role] - Role of the sequence
  * @property {string[]} [aliases] - Alternative names
@@ -634,6 +635,14 @@ export class SplitViewManager {
                                 <div class="detail-row">
                                     <span class="detail-label">MD5 Hash:</span>
                                     <span class="detail-value monospace">${escapeHtml(contig.md5)}</span>
+                                </div>
+                                ` : ''}
+
+                                <!-- Only show sha512t24u if it exists -->
+                                ${contig.sha512t24u ? `
+                                <div class="detail-row">
+                                    <span class="detail-label">sha512t24u:</span>
+                                    <span class="detail-value monospace">${escapeHtml(contig.sha512t24u)}</span>
                                 </div>
                                 ` : ''}
 
