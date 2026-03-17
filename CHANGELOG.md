@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0](https://github.com/fulcrumgenomics/ref-solver/compare/v0.1.0...v0.2.0) - 2026-03-17
+
+### Added
+
+- add pre-commit hook for format and lint checks ([#7](https://github.com/fulcrumgenomics/ref-solver/pull/7))
+- display sha512t24u digests in web UI contig details
+- rebuild catalog with sha512t24u digests
+- add sha512t24u (GA4GH refget) digest computation
+
+### Fixed
+
+- clarify web UI title to specify human genomes ([#5](https://github.com/fulcrumgenomics/ref-solver/pull/5))
+
+### Other
+
+- add #[non_exhaustive] to public structs and enums ([#8](https://github.com/fulcrumgenomics/ref-solver/pull/8))
+- Add Zenodo DOI badge to README ([#4](https://github.com/fulcrumgenomics/ref-solver/pull/4))
+- Add bioconda badge to README ([#3](https://github.com/fulcrumgenomics/ref-solver/pull/3))
+- release v0.1.0 ([#1](https://github.com/fulcrumgenomics/ref-solver/pull/1))
+
 ## [0.1.0](https://github.com/fulcrumgenomics/ref-solver/releases/tag/v0.1.0) - 2026-02-13
 
 ### Other
