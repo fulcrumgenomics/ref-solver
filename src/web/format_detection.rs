@@ -135,6 +135,17 @@ fn detect_format_from_filename(filename: &str) -> Option<FileFormat> {
     }
 }
 
+/// Check if a line starts with a SAM record type prefix followed by a tab or space.
+///
+/// SAM headers use tabs as delimiters, but copy-pasted text often has spaces instead.
+fn is_sam_record(line: &str, prefix: &str) -> bool {
+    line.starts_with(prefix)
+        && line
+            .as_bytes()
+            .get(prefix.len())
+            .is_some_and(|&b| b == b'\t' || b == b' ')
+}
+
 /// Detect format from file content analysis
 fn detect_format_from_content(content: &str) -> Result<FileFormat, FormatError> {
     let content_trimmed = content.trim();
@@ -155,23 +166,14 @@ fn detect_format_from_content(content: &str) -> Result<FileFormat, FormatError> 
     let lines: Vec<&str> = content_trimmed.lines().take(20).collect(); // Sample first 20 lines
 
     // Picard dictionary: starts with @HD and has @SQ lines (check BEFORE Sam)
-    // Accept both tab-separated (canonical) and space-separated (copy-paste) formats
-    if lines
-        .iter()
-        .any(|line| line.starts_with("@HD\t") || line.starts_with("@HD "))
-        && lines
-            .iter()
-            .any(|line| line.starts_with("@SQ\t") || line.starts_with("@SQ "))
+    if lines.iter().any(|line| is_sam_record(line, "@HD"))
+        && lines.iter().any(|line| is_sam_record(line, "@SQ"))
     {
         return Ok(FileFormat::Dict);
     }
 
     // SAM header format: starts with @SQ lines
-    // Accept both tab-separated (canonical) and space-separated (copy-paste) formats
-    if lines
-        .iter()
-        .any(|line| line.starts_with("@SQ\t") || line.starts_with("@SQ "))
-    {
+    if lines.iter().any(|line| is_sam_record(line, "@SQ")) {
         return Ok(FileFormat::Sam);
     }
 

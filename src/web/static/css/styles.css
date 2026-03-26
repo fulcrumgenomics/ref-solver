@@ -751,6 +751,20 @@ button:disabled {
     border-radius: 4px;
 }
 
+.warning-banner {
+    background: rgba(210, 153, 34, 0.1);
+    border: 1px solid var(--warning);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    color: var(--warning);
+}
+
+.warning-banner ul {
+    margin: 0.25rem 0 0 1.5rem;
+    padding: 0;
+}
+
 .stats {
     display: flex;
     gap: 2rem;

@@ -1,3 +1,4 @@
+use std::borrow::Cow;
 use std::io::BufReader;
 use std::path::Path;
 use thiserror::Error;
@@ -194,11 +195,16 @@ fn header_to_query(
 /// because their content is free-form text where spaces are meaningful.
 ///
 /// Returns the (possibly normalized) text and a boolean indicating whether any
-/// normalization was performed.
+/// normalization was performed. Uses `Cow` to avoid allocation when no
+/// normalization is needed (the common case for well-formed input).
 #[must_use]
-pub fn normalize_sam_whitespace(text: &str) -> (String, bool) {
+pub fn normalize_sam_whitespace(text: &str) -> (Cow<'_, str>, bool) {
+    // Fast path: check if any line needs normalization before allocating
+    if !text.lines().any(needs_space_to_tab_normalization) {
+        return (Cow::Borrowed(text), false);
+    }
+
     let mut normalized = String::with_capacity(text.len());
-    let mut any_normalized = false;
 
     for line in text.lines() {
         if !normalized.is_empty() {
@@ -216,7 +222,6 @@ pub fn normalize_sam_whitespace(text: &str) -> (String, bool) {
                     normalized.push_str(field);
                 }
             }
-            any_normalized = true;
         } else {
             normalized.push_str(line);
         }
@@ -227,7 +232,7 @@ pub fn normalize_sam_whitespace(text: &str) -> (String, bool) {
         normalized.push('\n');
     }
 
-    (normalized, any_normalized)
+    (Cow::Owned(normalized), true)
 }
 
 /// Check if a line is a SAM header line that uses spaces instead of tabs.
@@ -263,10 +268,7 @@ fn needs_space_to_tab_normalization(line: &str) -> bool {
 /// required fields, or no contigs are found, or `ParseError::TooManyContigs`
 /// if the limit is exceeded.
 pub fn parse_header_text(text: &str) -> Result<QueryHeader, ParseError> {
-    let (normalized_text, was_normalized) = normalize_sam_whitespace(text);
-    if was_normalized {
-        warn!("SAM header contained spaces instead of tabs between fields; auto-corrected");
-    }
+    let (normalized_text, _) = normalize_sam_whitespace(text);
     let text = &normalized_text;
     let mut contigs = Vec::new();
 

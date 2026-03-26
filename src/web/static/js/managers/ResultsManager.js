@@ -99,16 +99,9 @@ export class ResultsManager {
         let warningsHtml = '';
         if (data.warnings && data.warnings.length > 0) {
             warningsHtml = `
-                <div class="warning-banner" style="
-                    background: #fef3cd;
-                    border: 1px solid #ffc107;
-                    border-radius: 6px;
-                    padding: 0.75rem 1rem;
-                    margin-bottom: 1rem;
-                    color: #856404;
-                ">
+                <div class="warning-banner">
                     <strong>Warning:</strong>
-                    <ul style="margin: 0.25rem 0 0 1.5rem; padding: 0;">
+                    <ul>
                         ${data.warnings.map(w => `<li>${escapeHtml(w)}</li>`).join('')}
                     </ul>
                 </div>
