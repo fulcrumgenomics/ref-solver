@@ -175,6 +175,10 @@ pub fn create_router(refget_config: Option<crate::refget::RefgetConfig>) -> anyh
             "/static/js/managers/SplitViewManager.js",
             get(split_view_manager_js_handler),
         )
+        .route(
+            "/static/js/utils/headerExtractor.js",
+            get(header_extractor_js_handler),
+        )
         .with_state(state)
         .layer(
             ServiceBuilder::new()
@@ -313,6 +317,16 @@ async fn split_view_manager_js_handler() -> impl IntoResponse {
             "application/javascript; charset=utf-8",
         )],
         include_str!("static/js/managers/SplitViewManager.js"),
+    )
+}
+
+async fn header_extractor_js_handler() -> impl IntoResponse {
+    (
+        [(
+            header::CONTENT_TYPE,
+            "application/javascript; charset=utf-8",
+        )],
+        include_str!("static/js/utils/headerExtractor.js"),
     )
 }
 
