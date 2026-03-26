@@ -155,14 +155,23 @@ fn detect_format_from_content(content: &str) -> Result<FileFormat, FormatError> 
     let lines: Vec<&str> = content_trimmed.lines().take(20).collect(); // Sample first 20 lines
 
     // Picard dictionary: starts with @HD and has @SQ lines (check BEFORE Sam)
-    if lines.iter().any(|line| line.starts_with("@HD\t"))
-        && lines.iter().any(|line| line.starts_with("@SQ\t"))
+    // Accept both tab-separated (canonical) and space-separated (copy-paste) formats
+    if lines
+        .iter()
+        .any(|line| line.starts_with("@HD\t") || line.starts_with("@HD "))
+        && lines
+            .iter()
+            .any(|line| line.starts_with("@SQ\t") || line.starts_with("@SQ "))
     {
         return Ok(FileFormat::Dict);
     }
 
     // SAM header format: starts with @SQ lines
-    if lines.iter().any(|line| line.starts_with("@SQ\t")) {
+    // Accept both tab-separated (canonical) and space-separated (copy-paste) formats
+    if lines
+        .iter()
+        .any(|line| line.starts_with("@SQ\t") || line.starts_with("@SQ "))
+    {
         return Ok(FileFormat::Sam);
     }
 
@@ -553,6 +562,26 @@ mod tests {
             &FileFormat::Vcf
         ));
         assert!(!validate_format_content("@SQ\tSN:chr1", &FileFormat::Vcf));
+    }
+
+    #[test]
+    fn test_sam_header_detection_with_spaces() {
+        let content = "@SQ SN:chr1 LN:248956422 M5:6aef897c3d6ff0c78aff06ac189178dd\n";
+        assert_eq!(detect_format_from_content(content), Ok(FileFormat::Sam));
+    }
+
+    #[test]
+    fn test_dict_detection_with_spaces() {
+        let content = "@HD VN:1.0 SO:coordinate\n@SQ SN:chr1 LN:248956422\n";
+        assert_eq!(detect_format_from_content(content), Ok(FileFormat::Dict));
+    }
+
+    #[test]
+    fn test_sam_validation_with_spaces() {
+        assert!(validate_format_content(
+            "@SQ SN:chr1 LN:123",
+            &FileFormat::Sam
+        ));
     }
 
     #[test]
