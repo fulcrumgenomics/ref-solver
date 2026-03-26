@@ -12,10 +12,12 @@ import {
     escapeHtml,
     examples,
     validateFileSize,
+    formatFileSize,
     clamp,
     MAX_FILE_SIZE,
     MAX_TEXT_FILE_SIZE
 } from './utils/helpers.js';
+import { extractBamHeader, isBamFile } from './utils/headerExtractor.js';
 
 /**
  * @typedef {'text'|'assembly'|'vcf'|'binary'} FileFormatType
@@ -190,14 +192,73 @@ function showUploadError(message) {
 }
 
 /**
+ * Show a status message during header extraction
+ * @param {string} message
+ */
+function showExtractionStatus(message) {
+    let statusDiv = document.getElementById('extraction-status');
+    if (!statusDiv) {
+        statusDiv = document.createElement('div');
+        statusDiv.id = 'extraction-status';
+        statusDiv.className = 'extraction-status';
+        const preview = document.getElementById('binary-preview');
+        if (preview && preview.parentNode) {
+            preview.parentNode.insertBefore(statusDiv, preview);
+        }
+    }
+    statusDiv.textContent = message;
+    statusDiv.style.display = 'block';
+}
+
+/**
+ * Hide the extraction status message
+ */
+function hideExtractionStatus() {
+    const statusDiv = document.getElementById('extraction-status');
+    if (statusDiv) {
+        statusDiv.style.display = 'none';
+    }
+}
+
+/**
  * Handle file upload and preview
  * @param {HTMLInputElement} input - File input element
  * @param {FileFormatType} format - Expected file format
  * @returns {void}
  */
-function handleFileUpload(input, format) {
+async function handleFileUpload(input, format) {
     const file = input.files[0];
     if (!file) return;
+
+    // For BAM files, try to extract just the header client-side
+    if (format === 'binary' && isBamFile(file.name)) {
+        try {
+            showExtractionStatus('Extracting header from BAM file...');
+            const result = await extractBamHeader(file);
+            if (result) {
+                // Store as a synthetic text file for form submission
+                const headerBlob = new Blob([result.header], { type: 'text/plain' });
+                const headerFile = new File(
+                    [headerBlob], file.name + '.header.sam', { type: 'text/plain' }
+                );
+                tabManager.currentFile = headerFile;
+                tabManager.currentFormat = 'text';
+
+                // Show the extracted header in the binary preview area
+                document.getElementById('binary-preview').style.display = 'block';
+                document.getElementById('binary-filename').textContent =
+                    `${file.name} (header extracted, ${formatFileSize(result.header.length)})`;
+
+                hideExtractionStatus();
+                tabManager.validateFormat();
+                return;
+            }
+        } catch (err) {
+            console.warn('Client-side BAM header extraction failed, falling back to upload:', err);
+            hideExtractionStatus();
+            // Fall through to normal upload
+        }
+    }
 
     // Validate file size based on format
     const maxSize = format === 'binary' ? MAX_FILE_SIZE : MAX_TEXT_FILE_SIZE;

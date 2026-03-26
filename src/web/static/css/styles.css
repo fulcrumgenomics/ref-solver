@@ -721,6 +721,14 @@ button:disabled {
     white-space: pre;
 }
 
+.extraction-status {
+    color: var(--accent);
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: none;
+}
+
 .loading {
     text-align: center;
     padding: 3rem;
