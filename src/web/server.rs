@@ -32,6 +32,11 @@ pub const MAX_MULTIPART_FIELDS: usize = 10;
 pub const MAX_FILE_FIELD_SIZE: usize = 16 * 1024 * 1024; // 16MB
 pub const MAX_TEXT_FIELD_SIZE: usize = 1024 * 1024; // 1MB
 
+/// Maximum bytes to read from a binary file upload for header extraction.
+/// BAM/CRAM headers are typically under 500KB; 4MB provides generous headroom
+/// for reference genomes with many contigs (e.g. >100,000 alt contigs).
+pub const MAX_BINARY_HEADER_SIZE: usize = 4 * 1024 * 1024;
+
 /// Helper function to convert usize count to f64 with explicit precision loss allowance
 #[inline]
 fn count_to_f64(count: usize) -> f64 {
@@ -806,8 +811,28 @@ async fn extract_request_data(
 
                         match field.bytes().await {
                             Ok(bytes) => {
+                                // Detect format from filename first to pick the right size limit
+                                let detected_format = if let Some(ref name) = filename {
+                                    detect_binary_format(name).unwrap_or(FileFormat::Auto)
+                                } else {
+                                    FileFormat::Auto
+                                };
+
+                                // Use stricter limit for binary files (only headers needed).
+                                // FASTA is intentionally excluded: unlike BAM/CRAM where we
+                                // only need the header, FASTA files require full sequences
+                                // to compute contig lengths.
+                                let max_size = if matches!(
+                                    detected_format,
+                                    FileFormat::Bam | FileFormat::Cram
+                                ) {
+                                    MAX_BINARY_HEADER_SIZE
+                                } else {
+                                    MAX_FILE_FIELD_SIZE
+                                };
+
                                 // Validate field size before processing
-                                if bytes.len() > MAX_FILE_FIELD_SIZE {
+                                if bytes.len() > max_size {
                                     return Err((
                                         StatusCode::PAYLOAD_TOO_LARGE,
                                         Json(ErrorResponse {
@@ -818,13 +843,6 @@ async fn extract_request_data(
                                     )
                                         .into_response());
                                 }
-
-                                // Detect format from filename for validation
-                                let detected_format = if let Some(ref name) = filename {
-                                    detect_binary_format(name).unwrap_or(FileFormat::Auto)
-                                } else {
-                                    FileFormat::Auto
-                                };
 
                                 // Use comprehensive validation function for security
                                 match validate_upload(filename.as_deref(), &bytes, detected_format)
