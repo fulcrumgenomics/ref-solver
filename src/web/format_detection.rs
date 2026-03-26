@@ -385,64 +385,56 @@ pub fn parse_with_format(content: &str, format: FileFormat) -> Result<QueryHeade
     }
 }
 
-/// Parse binary file content (for BAM/CRAM files)
+/// Parse binary file content (for BAM/CRAM/FASTA files)
 ///
-/// Note: This creates a secure temporary file since the underlying parsers expect file paths
+/// BAM and CRAM are parsed directly from memory via a `Cursor<&[u8]>`.
+/// FASTA still requires a temporary file since the parser must read full sequences
+/// to compute contig lengths.
 ///
 /// # Errors
 ///
-/// Returns `ParseError::Io` if the temporary file cannot be created or written,
+/// Returns `ParseError::Io` if a temporary file cannot be created or written (FASTA only),
 /// or `ParseError::ParseFailed` if parsing fails.
 pub fn parse_binary_file(
     file_content: &[u8],
     format: FileFormat,
 ) -> Result<QueryHeader, ParseError> {
-    use std::io::Write;
-    use tempfile::NamedTempFile;
-
     match format {
-        FileFormat::Bam | FileFormat::Cram => {
-            // Create a secure temporary file with cryptographically random name
-            let file_extension = match format {
-                FileFormat::Bam => ".bam",
-                FileFormat::Cram => ".cram",
-                _ => ".bin",
-            };
-
-            let mut temp_file =
-                NamedTempFile::with_suffix(file_extension).map_err(ParseError::Io)?;
-
-            // Write bytes to secure temporary file
-            temp_file.write_all(file_content).map_err(ParseError::Io)?;
-
-            // Parse the file using the secure temp file path
-            let result = crate::parsing::sam::parse_file(temp_file.path());
-
-            // File automatically deleted when NamedTempFile drops
-            result.map_err(|_e| ParseError::ParseFailed {
-                format,
-                message: "Binary file parsing failed".to_string(), // Sanitized error message
+        FileFormat::Bam => {
+            let cursor = std::io::Cursor::new(file_content);
+            crate::parsing::sam::parse_bam_from_reader(cursor).map_err(|_e| {
+                ParseError::ParseFailed {
+                    format,
+                    message: "BAM file parsing failed".to_string(),
+                }
+            })
+        }
+        FileFormat::Cram => {
+            let cursor = std::io::Cursor::new(file_content);
+            crate::parsing::sam::parse_cram_from_reader(cursor).map_err(|_e| {
+                ParseError::ParseFailed {
+                    format,
+                    message: "CRAM file parsing failed".to_string(),
+                }
             })
         }
         FileFormat::Fasta => {
-            // Determine appropriate extension based on content (check for gzip magic bytes)
+            // FASTA still needs temp file — must read full sequences for lengths
+            use std::io::Write;
+            use tempfile::NamedTempFile;
+
             let is_gzipped =
                 file_content.len() >= 2 && file_content[0] == 0x1f && file_content[1] == 0x8b;
             let file_extension = if is_gzipped { ".fa.gz" } else { ".fa" };
 
             let mut temp_file =
                 NamedTempFile::with_suffix(file_extension).map_err(ParseError::Io)?;
-
-            // Write bytes to secure temporary file
             temp_file.write_all(file_content).map_err(ParseError::Io)?;
 
-            // Parse the FASTA file using the secure temp file path
             let result = crate::parsing::fasta::parse_fasta_file(temp_file.path());
-
-            // File automatically deleted when NamedTempFile drops
             result.map_err(|_e| ParseError::ParseFailed {
                 format,
-                message: "Binary file parsing failed".to_string(), // Sanitized error message
+                message: "FASTA file parsing failed".to_string(),
             })
         }
         _ => Err(ParseError::ParseFailed {
@@ -598,5 +590,30 @@ mod tests {
             Ok(FileFormat::Sam)
         ); // Content overrides filename
         assert_eq!(detect_format(content, None), Ok(FileFormat::Sam));
+    }
+
+    #[test]
+    fn test_parse_binary_file_bam_from_bytes() {
+        use noodles::bam;
+        use noodles::sam;
+        use noodles::sam::header::record::value::map::{Map, ReferenceSequence};
+        use std::num::NonZeroUsize;
+
+        let header = sam::Header::builder()
+            .add_reference_sequence(
+                "chr1",
+                Map::<ReferenceSequence>::new(NonZeroUsize::new(248_956_422).unwrap()),
+            )
+            .build();
+        let mut bam_bytes = Vec::new();
+        {
+            let mut writer = bam::io::Writer::new(&mut bam_bytes);
+            writer.write_header(&header).unwrap();
+        }
+
+        let query = parse_binary_file(&bam_bytes, FileFormat::Bam).unwrap();
+        assert_eq!(query.contigs.len(), 1);
+        assert_eq!(query.contigs[0].name, "chr1");
+        assert_eq!(query.contigs[0].length, 248_956_422);
     }
 }

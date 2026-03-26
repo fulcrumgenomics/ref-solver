@@ -109,8 +109,6 @@ fn parse_cram_file(path: &Path) -> Result<QueryHeader, ParseError> {
 /// Returns `ParseError::Noodles` if the BAM header cannot be parsed,
 /// `ParseError::InvalidFormat` if no contigs are found, or
 /// `ParseError::TooManyContigs` if the limit is exceeded.
-// TODO: remove #[allow(dead_code)] when wired into web server (Task 2)
-#[allow(dead_code)]
 pub fn parse_bam_from_reader<R: std::io::Read>(reader: R) -> Result<QueryHeader, ParseError> {
     use noodles::bam;
 
@@ -134,8 +132,6 @@ pub fn parse_bam_from_reader<R: std::io::Read>(reader: R) -> Result<QueryHeader,
 /// Returns `ParseError::Noodles` if the CRAM header cannot be parsed,
 /// `ParseError::InvalidFormat` if no contigs are found, or
 /// `ParseError::TooManyContigs` if the limit is exceeded.
-// TODO: remove #[allow(dead_code)] when wired into web server (Task 2)
-#[allow(dead_code)]
 pub fn parse_cram_from_reader<R: std::io::Read>(reader: R) -> Result<QueryHeader, ParseError> {
     use noodles::cram;
 
