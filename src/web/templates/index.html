@@ -143,7 +143,11 @@
             <div class="tab-content" id="tab-binary">
                 <div class="card-body">
                     <div class="tab-description">
-                        Upload BAM, CRAM, or FASTA files to automatically extract sequence information from headers. These files are uploaded and processed server-side.
+                        Upload BAM, CRAM, or FASTA files to automatically extract sequence information from headers.
+                    </div>
+                    <div class="upload-hint">
+                        <strong>BAM:</strong> Headers are extracted in your browser &mdash; large files are fine.<br>
+                        <strong>CRAM/FASTA:</strong> Upload limit is 4MB (headers only).
                     </div>
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
                         <label for="binary-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
