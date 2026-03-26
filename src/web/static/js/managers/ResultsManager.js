@@ -95,12 +95,25 @@ export class ResultsManager {
             return;
         }
 
+        // Display warnings (e.g., whitespace normalization)
+        let warningsHtml = '';
+        if (data.warnings && data.warnings.length > 0) {
+            warningsHtml = `
+                <div class="warning-banner">
+                    <strong>Warning:</strong>
+                    <ul>
+                        ${data.warnings.map(w => `<li>${escapeHtml(w)}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
         // Filter by score threshold
         const filteredMatches = this.currentResults.filter(match =>
             match.score.composite >= config.scoreThreshold
         );
 
-        let html = `
+        let html = warningsHtml + `
             <div class="stats">
                 <div>Contigs: <span>${data.query.contig_count}</span></div>
                 <div>MD5 Coverage: <span>${(data.query.md5_coverage * 100).toFixed(0)}%</span></div>

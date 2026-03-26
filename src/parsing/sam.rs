@@ -1,3 +1,4 @@
+use std::borrow::Cow;
 use std::io::BufReader;
 use std::path::Path;
 use thiserror::Error;
@@ -182,6 +183,83 @@ fn header_to_query(
     Ok(query)
 }
 
+/// Normalize SAM header lines that use spaces instead of tabs.
+///
+/// Browsers and copy-paste often convert tabs to spaces. This function detects
+/// SAM header lines (`@XX` prefix) where fields are space-separated instead of
+/// tab-separated and converts the spaces to tabs.
+///
+/// Only normalizes lines that start with a SAM header record type (`@HD`, `@SQ`,
+/// `@RG`, `@PG`) followed by a space and a TAG: pattern. Lines that already
+/// contain tabs are left unchanged. `@CO` (comment) lines are not normalized
+/// because their content is free-form text where spaces are meaningful.
+///
+/// Returns the (possibly normalized) text and a boolean indicating whether any
+/// normalization was performed. Uses `Cow` to avoid allocation when no
+/// normalization is needed (the common case for well-formed input).
+#[must_use]
+pub fn normalize_sam_whitespace(text: &str) -> (Cow<'_, str>, bool) {
+    // Fast path: check if any line needs normalization before allocating
+    if !text.lines().any(needs_space_to_tab_normalization) {
+        return (Cow::Borrowed(text), false);
+    }
+
+    let mut normalized = String::with_capacity(text.len());
+
+    for line in text.lines() {
+        if !normalized.is_empty() {
+            normalized.push('\n');
+        }
+
+        if needs_space_to_tab_normalization(line) {
+            let mut first = true;
+            for field in line.split_whitespace() {
+                if first {
+                    normalized.push_str(field);
+                    first = false;
+                } else {
+                    normalized.push('\t');
+                    normalized.push_str(field);
+                }
+            }
+        } else {
+            normalized.push_str(line);
+        }
+    }
+
+    // Preserve trailing newline if present
+    if text.ends_with('\n') {
+        normalized.push('\n');
+    }
+
+    (Cow::Owned(normalized), true)
+}
+
+/// Check if a line is a SAM header line that uses spaces instead of tabs.
+///
+/// Returns true only when the line starts with a recognized SAM record type
+/// followed by whitespace and a TAG: pattern, and the line contains NO tab
+/// characters.
+fn needs_space_to_tab_normalization(line: &str) -> bool {
+    if line.contains('\t') {
+        return false;
+    }
+
+    // @CO lines are free-form comments — do not normalize
+    let sam_prefixes = ["@HD ", "@SQ ", "@RG ", "@PG "];
+    if !sam_prefixes.iter().any(|p| line.starts_with(p)) {
+        return false;
+    }
+
+    // Must have at least one TAG:VALUE pattern after the record type
+    line.split_whitespace().skip(1).any(|field| {
+        field.len() >= 3
+            && field.as_bytes().get(2) == Some(&b':')
+            && field.as_bytes()[0].is_ascii_uppercase()
+            && field.as_bytes()[1].is_ascii_uppercase()
+    })
+}
+
 /// Parse header from raw text (stdin or pasted)
 ///
 /// # Errors
@@ -190,6 +268,8 @@ fn header_to_query(
 /// required fields, or no contigs are found, or `ParseError::TooManyContigs`
 /// if the limit is exceeded.
 pub fn parse_header_text(text: &str) -> Result<QueryHeader, ParseError> {
+    let (normalized_text, _) = normalize_sam_whitespace(text);
+    let text = &normalized_text;
     let mut contigs = Vec::new();
 
     for line in text.lines() {
@@ -330,5 +410,87 @@ mod tests {
                 "NC_012920.1".to_string()
             ]
         );
+    }
+
+    #[test]
+    fn test_normalize_sam_whitespace_spaces_to_tabs() {
+        let input = "@SQ SN:chr1 LN:248956422 M5:6aef897c3d6ff0c78aff06ac189178dd\n";
+        let (normalized, was_normalized) = normalize_sam_whitespace(input);
+        assert!(was_normalized);
+        assert_eq!(
+            normalized,
+            "@SQ\tSN:chr1\tLN:248956422\tM5:6aef897c3d6ff0c78aff06ac189178dd\n"
+        );
+    }
+
+    #[test]
+    fn test_normalize_sam_whitespace_already_tabs() {
+        let input = "@SQ\tSN:chr1\tLN:248956422\n";
+        let (normalized, was_normalized) = normalize_sam_whitespace(input);
+        assert!(!was_normalized);
+        assert_eq!(normalized, input);
+    }
+
+    #[test]
+    fn test_normalize_sam_whitespace_mixed_lines() {
+        let input =
+            "@HD VN:1.6 SO:coordinate\n@SQ SN:chr1 LN:248956422\n@SQ SN:chr2 LN:242193529\n";
+        let (normalized, was_normalized) = normalize_sam_whitespace(input);
+        assert!(was_normalized);
+        assert!(normalized.contains("@HD\tVN:1.6\tSO:coordinate"));
+        assert!(normalized.contains("@SQ\tSN:chr1\tLN:248956422"));
+        assert!(normalized.contains("@SQ\tSN:chr2\tLN:242193529"));
+    }
+
+    #[test]
+    fn test_normalize_sam_whitespace_multiple_spaces() {
+        let input = "@SQ  SN:chr1  LN:248956422\n";
+        let (normalized, was_normalized) = normalize_sam_whitespace(input);
+        assert!(was_normalized);
+        assert_eq!(normalized, "@SQ\tSN:chr1\tLN:248956422\n");
+    }
+
+    #[test]
+    fn test_normalize_sam_whitespace_preserves_non_header_lines() {
+        let input = "some random text with spaces\n@SQ SN:chr1 LN:100\n";
+        let (normalized, was_normalized) = normalize_sam_whitespace(input);
+        assert!(was_normalized);
+        assert!(normalized.starts_with("some random text with spaces\n"));
+        assert!(normalized.contains("@SQ\tSN:chr1\tLN:100"));
+    }
+
+    #[test]
+    fn test_normalize_sam_whitespace_tabs_and_spaces_mixed() {
+        // Line has some tabs and some spaces — leave it alone
+        let input = "@SQ\tSN:chr1 LN:248956422\n";
+        let (normalized, was_normalized) = normalize_sam_whitespace(input);
+        assert!(!was_normalized);
+        assert_eq!(normalized, input);
+    }
+
+    #[test]
+    fn test_normalize_sam_whitespace_skips_comment_lines() {
+        let input = "@CO This is a comment with VN:1.0 mentioned\n@SQ SN:chr1 LN:100\n";
+        let (normalized, was_normalized) = normalize_sam_whitespace(input);
+        assert!(was_normalized);
+        // Comment line should be preserved as-is
+        assert!(normalized.starts_with("@CO This is a comment with VN:1.0 mentioned\n"));
+        assert!(normalized.contains("@SQ\tSN:chr1\tLN:100"));
+    }
+
+    #[test]
+    fn test_parse_header_text_with_spaces() {
+        let header = "@SQ SN:chr1 LN:248956422 M5:6aef897c3d6ff0c78aff06ac189178dd\n\
+                      @SQ SN:chr2 LN:242193529\n";
+        let query = parse_header_text(header).unwrap();
+        assert_eq!(query.contigs.len(), 2);
+        assert_eq!(query.contigs[0].name, "chr1");
+        assert_eq!(query.contigs[0].length, 248_956_422);
+        assert_eq!(
+            query.contigs[0].md5,
+            Some("6aef897c3d6ff0c78aff06ac189178dd".to_string())
+        );
+        assert_eq!(query.contigs[1].name, "chr2");
+        assert_eq!(query.contigs[1].length, 242_193_529);
     }
 }
