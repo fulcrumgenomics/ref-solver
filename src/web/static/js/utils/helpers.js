@@ -101,10 +101,10 @@ MT\tassembled-molecule\tMT\tMitochondrion\tJ01415.2\t=\tNC_012920.1\tnon-nuclear
 };
 
 /**
- * Maximum file size for uploads (16MB)
+ * Maximum file size for uploads (4MB)
  * @constant {number}
  */
-export const MAX_FILE_SIZE = 16 * 1024 * 1024;
+export const MAX_FILE_SIZE = 4 * 1024 * 1024; // 4MB - only headers needed for BAM/CRAM
 
 /**
  * Maximum file size for text files (1MB)
