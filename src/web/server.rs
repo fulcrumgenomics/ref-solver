@@ -60,11 +60,33 @@ struct InputData {
     format: Option<FileFormat>,
 }
 
+/// Typed error categories for API error responses.
+///
+/// Serialized as `snake_case` strings in JSON to maintain backwards compatibility.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ErrorType {
+    FieldLimitExceeded,
+    FileTooLarge,
+    TextTooLarge,
+    InternalError,
+    InvalidMatchId,
+    FilenameTooLong,
+    InvalidFilename,
+    FormatMismatch,
+    InvalidContent,
+    ValidationFailed,
+    MissingInput,
+    FormatDetectionFailed,
+    ParseFailed,
+    BinaryParseFailed,
+}
+
 /// Enhanced error response
 #[derive(Serialize)]
 pub struct ErrorResponse {
     pub error: String,
-    pub error_type: String,
+    pub error_type: ErrorType,
     pub details: Option<String>,
 }
 
@@ -95,18 +117,18 @@ struct DetailedQueryParams {
 /// Create a safe error response that prevents information disclosure
 /// while logging detailed errors server-side for debugging
 pub fn create_safe_error_response(
-    error_type: &str,
+    error_type: ErrorType,
     user_message: &str,
     internal_error: Option<&str>,
 ) -> ErrorResponse {
     // Log detailed error server-side for debugging (not exposed to client)
     if let Some(internal_msg) = internal_error {
-        tracing::error!("Internal error ({}): {}", error_type, internal_msg);
+        tracing::error!("Internal error ({:?}): {}", error_type, internal_msg);
     }
 
     ErrorResponse {
         error: user_message.to_string(),
-        error_type: error_type.to_string(),
+        error_type,
         details: None, // Never expose internal details to prevent information disclosure
     }
 }
@@ -469,7 +491,7 @@ async fn handle_detailed_response(
         return (
             StatusCode::BAD_REQUEST,
             Json(create_safe_error_response(
-                "invalid_match_id",
+                ErrorType::InvalidMatchId,
                 "Invalid match ID specified",
                 Some("Match index out of bounds"),
             )),
@@ -787,7 +809,7 @@ async fn extract_request_data(
                 StatusCode::BAD_REQUEST,
                 Json(ErrorResponse {
                     error: "Too many form fields".to_string(),
-                    error_type: "field_limit_exceeded".to_string(),
+                    error_type: ErrorType::FieldLimitExceeded,
                     details: None, // No internal details for security
                 }),
             )
@@ -811,7 +833,7 @@ async fn extract_request_data(
                                         StatusCode::PAYLOAD_TOO_LARGE,
                                         Json(ErrorResponse {
                                             error: "File size exceeds limit".to_string(),
-                                            error_type: "file_too_large".to_string(),
+                                            error_type: ErrorType::FileTooLarge,
                                             details: None,
                                         }),
                                     )
@@ -844,7 +866,7 @@ async fn extract_request_data(
                                         return Err((
                                             StatusCode::BAD_REQUEST,
                                             Json(create_safe_error_response(
-                                                "filename_too_long",
+                                                ErrorType::FilenameTooLong,
                                                 "Filename exceeds maximum length limit",
                                                 Some("Filename validation failed due to length constraints")
                                             )),
@@ -854,7 +876,7 @@ async fn extract_request_data(
                                         return Err((
                                             StatusCode::BAD_REQUEST,
                                             Json(create_safe_error_response(
-                                                "invalid_filename",
+                                                ErrorType::InvalidFilename,
                                                 "Filename contains invalid or dangerous characters",
                                                 Some("Filename validation failed due to invalid characters")
                                             )),
@@ -864,7 +886,7 @@ async fn extract_request_data(
                                         return Err((
                                             StatusCode::BAD_REQUEST,
                                             Json(create_safe_error_response(
-                                                "format_mismatch",
+                                                ErrorType::FormatMismatch,
                                                 "File content does not match the expected format based on filename",
                                                 Some("Format validation failed")
                                             )),
@@ -874,7 +896,7 @@ async fn extract_request_data(
                                         return Err((
                                             StatusCode::BAD_REQUEST,
                                             Json(create_safe_error_response(
-                                                "invalid_content",
+                                                ErrorType::InvalidContent,
                                                 "File content appears malformed or corrupted",
                                                 None,
                                             )),
@@ -885,7 +907,7 @@ async fn extract_request_data(
                                         return Err((
                                             StatusCode::BAD_REQUEST,
                                             Json(create_safe_error_response(
-                                                "validation_failed",
+                                                ErrorType::ValidationFailed,
                                                 "File validation failed",
                                                 None,
                                             )),
@@ -905,7 +927,7 @@ async fn extract_request_data(
                                     StatusCode::PAYLOAD_TOO_LARGE,
                                     Json(ErrorResponse {
                                         error: "Text field size exceeds limit".to_string(),
-                                        error_type: "text_too_large".to_string(),
+                                        error_type: ErrorType::TextTooLarge,
                                         details: None,
                                     }),
                                 )
@@ -964,7 +986,7 @@ async fn extract_request_data(
         return Err((
             StatusCode::BAD_REQUEST,
             Json(create_safe_error_response(
-                "missing_input",
+                ErrorType::MissingInput,
                 error_msg,
                 None, // Never include details for consistency
             )),
@@ -987,7 +1009,7 @@ fn parse_input_data(
                 (
                     StatusCode::BAD_REQUEST,
                     Json(create_safe_error_response(
-                        "format_detection_failed",
+                        ErrorType::FormatDetectionFailed,
                         "Unable to detect file format. Please check the file type and try again.",
                         Some("Format detection failed during parsing"),
                     )),
@@ -1001,7 +1023,7 @@ fn parse_input_data(
             Err(_) => Err(Box::new((
                 StatusCode::BAD_REQUEST,
                 Json(create_safe_error_response(
-                    "parse_failed",
+                    ErrorType::ParseFailed,
                     "Unable to process file content. Please check the file format and try again.",
                     Some("File parsing failed during content processing"),
                 )),
@@ -1017,7 +1039,7 @@ fn parse_input_data(
             Err(_) => Err(Box::new((
                 StatusCode::BAD_REQUEST,
                 Json(create_safe_error_response(
-                    "binary_parse_failed",
+                    ErrorType::BinaryParseFailed,
                     "Unable to process binary file. Please verify the file format and try again.",
                     Some("Binary file parsing failed during processing"),
                 )),
@@ -1030,7 +1052,7 @@ fn parse_input_data(
                 StatusCode::INTERNAL_SERVER_ERROR,
                 Json(ErrorResponse {
                     error: "Internal error: no input data".to_string(),
-                    error_type: "internal_error".to_string(),
+                    error_type: ErrorType::InternalError,
                     details: None,
                 }),
             )
