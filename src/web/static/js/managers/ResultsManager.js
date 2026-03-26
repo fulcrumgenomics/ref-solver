@@ -95,12 +95,32 @@ export class ResultsManager {
             return;
         }
 
+        // Display warnings (e.g., whitespace normalization)
+        let warningsHtml = '';
+        if (data.warnings && data.warnings.length > 0) {
+            warningsHtml = `
+                <div class="warning-banner" style="
+                    background: #fef3cd;
+                    border: 1px solid #ffc107;
+                    border-radius: 6px;
+                    padding: 0.75rem 1rem;
+                    margin-bottom: 1rem;
+                    color: #856404;
+                ">
+                    <strong>Warning:</strong>
+                    <ul style="margin: 0.25rem 0 0 1.5rem; padding: 0;">
+                        ${data.warnings.map(w => `<li>${escapeHtml(w)}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
         // Filter by score threshold
         const filteredMatches = this.currentResults.filter(match =>
             match.score.composite >= config.scoreThreshold
         );
 
-        let html = `
+        let html = warningsHtml + `
             <div class="stats">
                 <div>Contigs: <span>${data.query.contig_count}</span></div>
                 <div>MD5 Coverage: <span>${(data.query.md5_coverage * 100).toFixed(0)}%</span></div>
