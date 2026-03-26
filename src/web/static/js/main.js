@@ -241,8 +241,7 @@ async function handleFileUpload(input, format) {
                 const headerFile = new File(
                     [headerBlob], file.name + '.header.sam', { type: 'text/plain' }
                 );
-                tabManager.currentFile = headerFile;
-                tabManager.currentFormat = 'text';
+                tabManager.setCurrentFile(headerFile, 'text');
 
                 // Show the extracted header in the binary preview area
                 document.getElementById('binary-preview').style.display = 'block';
