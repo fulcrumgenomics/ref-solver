@@ -98,6 +98,60 @@ fn parse_cram_file(path: &Path) -> Result<QueryHeader, ParseError> {
     header_to_query(&header, Some(path))
 }
 
+/// Parse a BAM header from any reader (no file path required).
+///
+/// This enables parsing from in-memory buffers (e.g. `Cursor<Vec<u8>>`)
+/// without writing to a temporary file. Only the header is read;
+/// the reader does not need to contain complete record data.
+///
+/// # Errors
+///
+/// Returns `ParseError::Noodles` if the BAM header cannot be parsed,
+/// `ParseError::InvalidFormat` if no contigs are found, or
+/// `ParseError::TooManyContigs` if the limit is exceeded.
+// TODO: remove #[allow(dead_code)] when wired into web server (Task 2)
+#[allow(dead_code)]
+pub fn parse_bam_from_reader<R: std::io::Read>(reader: R) -> Result<QueryHeader, ParseError> {
+    use noodles::bam;
+
+    let mut reader = bam::io::Reader::new(reader);
+
+    let header = reader
+        .read_header()
+        .map_err(|e| ParseError::Noodles(e.to_string()))?;
+
+    header_to_query(&header, None)
+}
+
+/// Parse a CRAM header from any reader (no file path required).
+///
+/// This enables parsing from in-memory buffers (e.g. `Cursor<Vec<u8>>`)
+/// without writing to a temporary file. Only the file definition and
+/// header are read.
+///
+/// # Errors
+///
+/// Returns `ParseError::Noodles` if the CRAM header cannot be parsed,
+/// `ParseError::InvalidFormat` if no contigs are found, or
+/// `ParseError::TooManyContigs` if the limit is exceeded.
+// TODO: remove #[allow(dead_code)] when wired into web server (Task 2)
+#[allow(dead_code)]
+pub fn parse_cram_from_reader<R: std::io::Read>(reader: R) -> Result<QueryHeader, ParseError> {
+    use noodles::cram;
+
+    let mut reader = cram::io::Reader::new(reader);
+
+    reader
+        .read_file_definition()
+        .map_err(|e| ParseError::Noodles(e.to_string()))?;
+
+    let header = reader
+        .read_file_header()
+        .map_err(|e| ParseError::Noodles(e.to_string()))?;
+
+    header_to_query(&header, None)
+}
+
 /// Convert noodles header to `QueryHeader`
 fn header_to_query(
     header: &noodles::sam::Header,
@@ -492,5 +546,140 @@ mod tests {
         );
         assert_eq!(query.contigs[1].name, "chr2");
         assert_eq!(query.contigs[1].length, 242_193_529);
+    }
+}
+
+#[cfg(test)]
+mod reader_tests {
+    use super::*;
+    use std::io::Cursor;
+
+    /// Helper: create a minimal BAM file in memory with the given contigs.
+    fn create_test_bam(contigs: &[(&str, usize)]) -> Vec<u8> {
+        use noodles::bam;
+        use noodles::sam;
+        use noodles::sam::header::record::value::map::ReferenceSequence;
+        use noodles::sam::header::record::value::Map;
+        use std::num::NonZeroUsize;
+
+        let mut header = sam::Header::builder();
+        for &(name, length) in contigs {
+            header = header.add_reference_sequence(
+                name,
+                Map::<ReferenceSequence>::new(NonZeroUsize::new(length).unwrap()),
+            );
+        }
+        let header = header.build();
+
+        let mut buf = Vec::new();
+        {
+            let mut writer = bam::io::Writer::new(&mut buf);
+            writer.write_header(&header).unwrap();
+        }
+        buf
+    }
+
+    #[test]
+    fn test_parse_bam_from_reader_basic() {
+        let bam_bytes = create_test_bam(&[("chr1", 248_956_422), ("chr2", 242_193_529)]);
+        let cursor = Cursor::new(&bam_bytes);
+        let query = parse_bam_from_reader(cursor).unwrap();
+        assert_eq!(query.contigs.len(), 2);
+        assert_eq!(query.contigs[0].name, "chr1");
+        assert_eq!(query.contigs[0].length, 248_956_422);
+        assert_eq!(query.contigs[1].name, "chr2");
+        assert_eq!(query.contigs[1].length, 242_193_529);
+    }
+
+    #[test]
+    fn test_parse_bam_from_reader_truncated_after_header() {
+        let mut bam_bytes = create_test_bam(&[("chr1", 248_956_422)]);
+        bam_bytes.extend_from_slice(&[0u8; 100]);
+        let cursor = Cursor::new(&bam_bytes);
+        let query = parse_bam_from_reader(cursor).unwrap();
+        assert_eq!(query.contigs.len(), 1);
+        assert_eq!(query.contigs[0].name, "chr1");
+    }
+
+    #[test]
+    fn test_parse_bam_from_reader_empty() {
+        let cursor = Cursor::new(Vec::<u8>::new());
+        let result = parse_bam_from_reader(cursor);
+        assert!(result.is_err());
+    }
+
+    /// Helper: create a minimal CRAM file in memory with the given contigs.
+    ///
+    /// Each contig is `(name, length, md5)`.  The CRAM writer requires MD5
+    /// checksums on every reference sequence, so we must supply them here.
+    fn create_test_cram(contigs: &[(&str, usize, &str)]) -> Vec<u8> {
+        use noodles::cram;
+        use noodles::sam;
+        use noodles::sam::header::record::value::map::reference_sequence::tag;
+        use noodles::sam::header::record::value::map::ReferenceSequence;
+        use noodles::sam::header::record::value::Map;
+        use std::num::NonZeroUsize;
+
+        let mut header = sam::Header::builder();
+        for &(name, length, md5) in contigs {
+            let map = Map::<ReferenceSequence>::builder()
+                .set_length(NonZeroUsize::new(length).unwrap())
+                .insert(tag::MD5_CHECKSUM, md5)
+                .build()
+                .unwrap();
+            header = header.add_reference_sequence(name, map);
+        }
+        let header = header.build();
+
+        let mut buf = Vec::new();
+        {
+            let mut writer = cram::io::Writer::new(&mut buf);
+            writer.write_file_definition().unwrap();
+            writer.write_file_header(&header).unwrap();
+        }
+        buf
+    }
+
+    #[test]
+    fn test_parse_cram_from_reader_basic() {
+        let cram_bytes = create_test_cram(&[
+            ("chr1", 248_956_422, "6aef897c3d6ff0c78aff06ac189178dd"),
+            ("chrX", 156_040_895, "01234567890abcdef01234567890abcd"),
+        ]);
+        let cursor = Cursor::new(&cram_bytes);
+        let query = parse_cram_from_reader(cursor).unwrap();
+        assert_eq!(query.contigs.len(), 2);
+        assert_eq!(query.contigs[0].name, "chr1");
+        assert_eq!(query.contigs[0].length, 248_956_422);
+        assert_eq!(
+            query.contigs[0].md5,
+            Some("6aef897c3d6ff0c78aff06ac189178dd".to_string())
+        );
+        assert_eq!(query.contigs[1].name, "chrX");
+        assert_eq!(query.contigs[1].length, 156_040_895);
+        assert_eq!(
+            query.contigs[1].md5,
+            Some("01234567890abcdef01234567890abcd".to_string())
+        );
+    }
+
+    #[test]
+    fn test_parse_cram_from_reader_truncated_after_header() {
+        let mut cram_bytes =
+            create_test_cram(&[("chr1", 248_956_422, "6aef897c3d6ff0c78aff06ac189178dd")]);
+        // Append garbage bytes to simulate a truncated upload that ends mid-record.
+        // parse_cram_from_reader only reads the header, so this must still succeed.
+        cram_bytes.extend_from_slice(&[0u8; 100]);
+        let cursor = Cursor::new(&cram_bytes);
+        let query = parse_cram_from_reader(cursor).unwrap();
+        assert_eq!(query.contigs.len(), 1);
+        assert_eq!(query.contigs[0].name, "chr1");
+    }
+
+    #[test]
+    fn test_parse_cram_from_reader_empty() {
+        let cursor = Cursor::new(Vec::<u8>::new());
+        let result = parse_cram_from_reader(cursor);
+        assert!(result.is_err());
     }
 }
