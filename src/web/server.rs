@@ -327,8 +327,8 @@ async fn identify_handler(
     };
 
     // Parse input using intelligent format detection
-    let query = match parse_input_data(&input_data) {
-        Ok(query) => query,
+    let (query, parse_warnings) = match parse_input_data(&input_data) {
+        Ok(result) => result,
         Err(error_response) => return *error_response,
     };
 
@@ -437,6 +437,7 @@ async fn identify_handler(
             "md5_coverage": query.md5_coverage(),
             "naming_convention": format!("{:?}", query.naming_convention),
         },
+        "warnings": parse_warnings,
         "matches": results,
         "processing_info": {
             "detected_format": input_data.format.as_ref().map_or("unknown", super::format_detection::FileFormat::display_name),
@@ -975,11 +976,27 @@ async fn extract_request_data(
     Ok((input_data, config))
 }
 
-/// Parse input data using intelligent format detection
+/// Parse input data using intelligent format detection.
+///
+/// Returns the parsed query header and a list of warnings (e.g. whitespace normalization).
 fn parse_input_data(
     input_data: &InputData,
-) -> Result<crate::core::header::QueryHeader, Box<Response>> {
+) -> Result<(crate::core::header::QueryHeader, Vec<String>), Box<Response>> {
+    let mut warnings: Vec<String> = Vec::new();
+
     if let Some(text_content) = &input_data.text_content {
+        // Normalize space-separated SAM headers before detection and parsing
+        let (normalized_content, was_normalized) =
+            crate::parsing::sam::normalize_sam_whitespace(text_content);
+        if was_normalized {
+            warnings.push(
+                "Input contained spaces instead of tabs between SAM header fields. \
+                 Fields were automatically converted to tab-separated format."
+                    .to_string(),
+            );
+        }
+        let text_content = &normalized_content;
+
         // Text-based parsing with format detection
         let Ok(detected_format) = detect_format(text_content, input_data.filename.as_deref())
         else {
@@ -997,7 +1014,7 @@ fn parse_input_data(
         };
 
         match parse_with_format(text_content, detected_format) {
-            Ok(query) => Ok(query),
+            Ok(query) => Ok((query, warnings)),
             Err(_) => Err(Box::new((
                 StatusCode::BAD_REQUEST,
                 Json(create_safe_error_response(
@@ -1013,7 +1030,7 @@ fn parse_input_data(
         let format = input_data.format.unwrap_or(FileFormat::Bam);
 
         match parse_binary_file(binary_content, format) {
-            Ok(query) => Ok(query),
+            Ok(query) => Ok((query, Vec::new())),
             Err(_) => Err(Box::new((
                 StatusCode::BAD_REQUEST,
                 Json(create_safe_error_response(
