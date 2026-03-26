@@ -6,8 +6,23 @@
  * @module utils/headerExtractor
  */
 
-/** Max bytes to read from file for header extraction. */
-const MAX_HEADER_READ = 4 * 1024 * 1024;
+import { MAX_FILE_SIZE } from './helpers.js';
+
+/**
+ * Concatenate an array of Uint8Array chunks into a single Uint8Array.
+ * @param {Uint8Array[]} chunks
+ * @returns {Uint8Array}
+ */
+function concatChunks(chunks) {
+    const totalLength = chunks.reduce((sum, c) => sum + c.length, 0);
+    const result = new Uint8Array(totalLength);
+    let offset = 0;
+    for (const chunk of chunks) {
+        result.set(chunk, offset);
+        offset += chunk.length;
+    }
+    return result;
+}
 
 /**
  * Read a slice of a File as an ArrayBuffer.
@@ -46,14 +61,7 @@ async function decompressGzipBlock(block) {
             chunks.push(value);
         }
 
-        const totalLength = chunks.reduce((sum, c) => sum + c.length, 0);
-        const result = new Uint8Array(totalLength);
-        let offset = 0;
-        for (const chunk of chunks) {
-            result.set(chunk, offset);
-            offset += chunk.length;
-        }
-        return result;
+        return concatChunks(chunks);
     } catch (err) {
         reader.cancel().catch(() => {});
         writer.abort(err).catch(() => {});
@@ -62,13 +70,16 @@ async function decompressGzipBlock(block) {
 }
 
 /**
- * Decompress consecutive BGZF blocks from raw bytes.
+ * Decompress consecutive BGZF blocks, stopping as soon as we have
+ * enough uncompressed data for the BAM header.
  * @param {Uint8Array} bytes - Raw BGZF data
+ * @param {number} [neededBytes=0] - Stop after accumulating this many uncompressed bytes (0 = all)
  * @returns {Promise<Uint8Array>} Concatenated decompressed data
  */
-async function decompressBgzfBlocks(bytes) {
+async function decompressBgzfBlocks(bytes, neededBytes = 0) {
     const chunks = [];
     let offset = 0;
+    let accumulated = 0;
 
     while (offset < bytes.length) {
         // Check for gzip magic
@@ -105,21 +116,18 @@ async function decompressBgzfBlocks(bytes) {
             const decompressed = await decompressGzipBlock(block);
             if (decompressed.length === 0) break; // EOF block
             chunks.push(decompressed);
+            accumulated += decompressed.length;
         } catch {
             break;
         }
 
         offset += bsize;
+
+        // Stop early once we have enough data for the header
+        if (neededBytes > 0 && accumulated >= neededBytes) break;
     }
 
-    const totalLength = chunks.reduce((sum, c) => sum + c.length, 0);
-    const result = new Uint8Array(totalLength);
-    let writeOffset = 0;
-    for (const chunk of chunks) {
-        result.set(chunk, writeOffset);
-        writeOffset += chunk.length;
-    }
-    return result;
+    return concatChunks(chunks);
 }
 
 /**
@@ -129,12 +137,12 @@ async function decompressBgzfBlocks(bytes) {
  * @throws {Error} If the file is not a valid BAM or extraction fails
  */
 export async function extractBamHeader(file) {
-    const readSize = Math.min(file.size, MAX_HEADER_READ);
+    const readSize = Math.min(file.size, MAX_FILE_SIZE);
     const buffer = await readFileSlice(file, 0, readSize);
     const bytes = new Uint8Array(buffer);
 
-    const uncompressed = await decompressBgzfBlocks(bytes);
-    const view = new DataView(uncompressed.buffer);
+    // First pass: decompress enough to read the l_text field (8 bytes minimum)
+    let uncompressed = await decompressBgzfBlocks(bytes, 8);
 
     // Verify BAM magic: "BAM\1"
     if (uncompressed.length < 8 ||
@@ -143,9 +151,19 @@ export async function extractBamHeader(file) {
         throw new Error('Not a valid BAM file (bad magic bytes)');
     }
 
+    const view = new DataView(uncompressed.buffer);
     const headerLength = view.getInt32(4, true);
-    if (headerLength < 0 || headerLength > uncompressed.length - 8) {
-        throw new Error('BAM header length exceeds available data');
+    if (headerLength < 0) {
+        throw new Error('BAM header length is negative');
+    }
+
+    // If we don't have enough data yet, decompress more blocks
+    const needed = 8 + headerLength;
+    if (uncompressed.length < needed) {
+        uncompressed = await decompressBgzfBlocks(bytes, needed);
+        if (uncompressed.length < needed) {
+            throw new Error('BAM header length exceeds available data');
+        }
     }
 
     const decoder = new TextDecoder('ascii');
@@ -161,13 +179,4 @@ export async function extractBamHeader(file) {
  */
 export function isBamFile(filename) {
     return filename.toLowerCase().endsWith('.bam');
-}
-
-/**
- * Check if a filename indicates a CRAM file.
- * @param {string} filename
- * @returns {boolean}
- */
-export function isCramFile(filename) {
-    return filename.toLowerCase().endsWith('.cram');
 }

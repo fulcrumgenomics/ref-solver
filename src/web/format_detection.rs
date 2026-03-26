@@ -402,19 +402,19 @@ pub fn parse_binary_file(
     match format {
         FileFormat::Bam => {
             let cursor = std::io::Cursor::new(file_content);
-            crate::parsing::sam::parse_bam_from_reader(cursor).map_err(|_e| {
+            crate::parsing::sam::parse_bam_from_reader(cursor).map_err(|e| {
                 ParseError::ParseFailed {
                     format,
-                    message: "BAM file parsing failed".to_string(),
+                    message: format!("BAM file parsing failed: {e}"),
                 }
             })
         }
         FileFormat::Cram => {
             let cursor = std::io::Cursor::new(file_content);
-            crate::parsing::sam::parse_cram_from_reader(cursor).map_err(|_e| {
+            crate::parsing::sam::parse_cram_from_reader(cursor).map_err(|e| {
                 ParseError::ParseFailed {
                     format,
-                    message: "CRAM file parsing failed".to_string(),
+                    message: format!("CRAM file parsing failed: {e}"),
                 }
             })
         }
@@ -432,9 +432,9 @@ pub fn parse_binary_file(
             temp_file.write_all(file_content).map_err(ParseError::Io)?;
 
             let result = crate::parsing::fasta::parse_fasta_file(temp_file.path());
-            result.map_err(|_e| ParseError::ParseFailed {
+            result.map_err(|e| ParseError::ParseFailed {
                 format,
-                message: "FASTA file parsing failed".to_string(),
+                message: format!("FASTA file parsing failed: {e}"),
             })
         }
         _ => Err(ParseError::ParseFailed {
