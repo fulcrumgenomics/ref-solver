@@ -6,7 +6,7 @@
  * @module utils/headerExtractor
  */
 
-import { MAX_FILE_SIZE } from './helpers.js';
+import { MAX_BAM_HEADER_READ } from './helpers.js';
 
 /**
  * Concatenate an array of Uint8Array chunks into a single Uint8Array.
@@ -137,7 +137,7 @@ async function decompressBgzfBlocks(bytes, neededBytes = 0) {
  * @throws {Error} If the file is not a valid BAM or extraction fails
  */
 export async function extractBamHeader(file) {
-    const readSize = Math.min(file.size, MAX_FILE_SIZE);
+    const readSize = Math.min(file.size, MAX_BAM_HEADER_READ);
     const buffer = await readFileSlice(file, 0, readSize);
     const bytes = new Uint8Array(buffer);
 
