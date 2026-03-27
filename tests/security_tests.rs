@@ -218,24 +218,27 @@ fn test_comprehensive_upload_validation() {
 /// Test error message sanitization
 #[test]
 fn test_error_sanitization() {
-    use ref_solver::web::server::create_safe_error_response;
+    use ref_solver::web::server::{create_safe_error_response, ErrorType};
 
     // Test that internal error details are not exposed
     let error_response = create_safe_error_response(
-        "test_error",
+        ErrorType::InternalError,
         "User-friendly message",
         Some("/internal/path/file.rs:123 - Database connection failed"),
     );
 
     assert_eq!(error_response.error, "User-friendly message");
-    assert_eq!(error_response.error_type, "test_error");
+    assert_eq!(error_response.error_type, ErrorType::InternalError);
+    let serialized =
+        serde_json::to_value(&error_response).expect("Failed to serialize error response");
+    assert_eq!(serialized["error_type"], "internal_error");
     assert!(
         error_response.details.is_none(),
         "Internal details should never be exposed"
     );
 
     // Test that the function handles None internal errors
-    let error_response = create_safe_error_response("test_error", "User message", None);
+    let error_response = create_safe_error_response(ErrorType::InternalError, "User message", None);
     assert!(error_response.details.is_none());
 }
 
