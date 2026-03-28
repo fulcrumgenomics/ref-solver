@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0](https://github.com/fulcrumgenomics/ref-solver/compare/v0.2.0...v0.3.0) - 2026-03-28
+
+### Added
+
+- stream binary uploads to read only headers from BAM/CRAM files ([#18](https://github.com/fulcrumgenomics/ref-solver/pull/18))
+- show upload size limit and header extraction info in web UI
+- extract BAM headers client-side before upload
+- cap binary file uploads at 4MB for header-only parsing
+- add reader-based BAM/CRAM header parsing functions
+- normalize space-separated SAM headers in web UI ([#13](https://github.com/fulcrumgenomics/ref-solver/pull/13))
+- add refget integration for unknown contig lookup ([#9](https://github.com/fulcrumgenomics/ref-solver/pull/9))
+
+### Other
+
+- replace stringly-typed error_type with enum ([#16](https://github.com/fulcrumgenomics/ref-solver/pull/16))
+- update fulcrum genomics logo with light/dark theme support ([#17](https://github.com/fulcrumgenomics/ref-solver/pull/17))
+- simplify headerExtractor, fix review findings
+- add integration tests for reader-based BAM header parsing
+- use reader-based parsing for BAM/CRAM, eliminate temp files
+
 ## [0.2.0](https://github.com/fulcrumgenomics/ref-solver/compare/v0.1.0...v0.2.0) - 2026-03-17
 
 ### Added
