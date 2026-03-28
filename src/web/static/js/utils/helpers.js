@@ -101,16 +101,18 @@ MT\tassembled-molecule\tMT\tMitochondrion\tJ01415.2\t=\tNC_012920.1\tnon-nuclear
 };
 
 /**
- * Maximum file size for uploads (4MB)
+ * Maximum bytes to read for client-side BAM header extraction (64MB).
+ * BAM headers are typically well under 1MB of compressed BGZF blocks,
+ * so 64MB is more than sufficient for even the largest headers.
  * @constant {number}
  */
-export const MAX_FILE_SIZE = 4 * 1024 * 1024; // 4MB - only headers needed for BAM/CRAM
+export const MAX_BAM_HEADER_READ = 64 * 1024 * 1024;
 
 /**
- * Maximum file size for text files (1MB)
+ * Maximum file size for text file uploads (16MB)
  * @constant {number}
  */
-export const MAX_TEXT_FILE_SIZE = 1024 * 1024;
+export const MAX_TEXT_FILE_SIZE = 16 * 1024 * 1024;
 
 /**
  * Debounce delay in milliseconds

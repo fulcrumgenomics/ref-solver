@@ -444,6 +444,40 @@ pub fn parse_binary_file(
     }
 }
 
+/// Parse a binary file directly from a file path (for streamed uploads).
+///
+/// Unlike [`parse_binary_file`], this function does not need to create a temporary file —
+/// the caller already has one.  The file may be truncated after the header; only the
+/// header portion is needed for BAM/CRAM.
+///
+/// # Errors
+///
+/// Returns `ParseError::ParseFailed` if parsing fails, or if the format is not a
+/// supported binary format.
+pub fn parse_binary_file_from_path(
+    path: &std::path::Path,
+    format: FileFormat,
+) -> Result<QueryHeader, ParseError> {
+    match format {
+        FileFormat::Bam | FileFormat::Cram => {
+            crate::parsing::sam::parse_file(path).map_err(|e| ParseError::ParseFailed {
+                format,
+                message: format!("Binary file parsing failed: {e}"),
+            })
+        }
+        FileFormat::Fasta => {
+            crate::parsing::fasta::parse_fasta_file(path).map_err(|e| ParseError::ParseFailed {
+                format,
+                message: format!("FASTA file parsing failed: {e}"),
+            })
+        }
+        _ => Err(ParseError::ParseFailed {
+            format,
+            message: "Format is not a binary file format".to_string(),
+        }),
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -615,5 +649,78 @@ mod tests {
         assert_eq!(query.contigs.len(), 1);
         assert_eq!(query.contigs[0].name, "chr1");
         assert_eq!(query.contigs[0].length, 248_956_422);
+    }
+
+    /// Helper: build a minimal BAM byte buffer from a SAM header string.
+    fn build_bam_bytes(header_text: &str) -> Vec<u8> {
+        use noodles::bam;
+        use noodles::sam;
+
+        let mut reader = sam::io::Reader::new(header_text.as_bytes());
+        let header = reader.read_header().unwrap();
+
+        let mut buf = Vec::new();
+        {
+            let mut writer = bam::io::Writer::new(&mut buf);
+            writer.write_header(&header).unwrap();
+        }
+        buf
+    }
+
+    #[test]
+    fn test_parse_binary_file_from_path_bam() {
+        use std::io::Write;
+        use tempfile::NamedTempFile;
+
+        let bam_bytes = build_bam_bytes(
+            "@HD\tVN:1.6\n@SQ\tSN:chr1\tLN:248956422\n@SQ\tSN:chr2\tLN:242193529\n",
+        );
+
+        let mut temp = NamedTempFile::with_suffix(".bam").unwrap();
+        temp.write_all(&bam_bytes).unwrap();
+
+        let result = parse_binary_file_from_path(temp.path(), FileFormat::Bam);
+        assert!(result.is_ok());
+        let query = result.unwrap();
+        assert_eq!(query.contigs.len(), 2);
+        assert_eq!(query.contigs[0].name, "chr1");
+        assert_eq!(query.contigs[0].length, 248_956_422);
+        assert_eq!(query.contigs[1].name, "chr2");
+        assert_eq!(query.contigs[1].length, 242_193_529);
+    }
+
+    #[test]
+    fn test_parse_binary_file_from_path_truncated_bam() {
+        // Verify that parsing works on a BAM file truncated after the header.
+        // This simulates the server-side streaming behavior where only the first
+        // N bytes of a large BAM are written to a temp file.
+        use std::io::Write;
+        use tempfile::NamedTempFile;
+
+        let mut bam_bytes = build_bam_bytes("@HD\tVN:1.6\n@SQ\tSN:chr1\tLN:248956422\n");
+
+        // Append junk data to simulate a truncated file (records cut off mid-stream)
+        bam_bytes.extend_from_slice(&[0u8; 1024]);
+
+        let mut temp = NamedTempFile::with_suffix(".bam").unwrap();
+        temp.write_all(&bam_bytes).unwrap();
+
+        let result = parse_binary_file_from_path(temp.path(), FileFormat::Bam);
+        assert!(result.is_ok());
+        let query = result.unwrap();
+        assert_eq!(query.contigs.len(), 1);
+        assert_eq!(query.contigs[0].name, "chr1");
+    }
+
+    #[test]
+    fn test_parse_binary_file_from_path_unsupported_format() {
+        use std::io::Write;
+        use tempfile::NamedTempFile;
+
+        let mut temp = NamedTempFile::with_suffix(".txt").unwrap();
+        temp.write_all(b"not a binary file").unwrap();
+
+        let result = parse_binary_file_from_path(temp.path(), FileFormat::Sam);
+        assert!(result.is_err());
     }
 }

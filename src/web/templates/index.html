@@ -147,7 +147,8 @@
                     </div>
                     <div class="upload-hint">
                         <strong>BAM:</strong> Headers are extracted in your browser &mdash; large files are fine.<br>
-                        <strong>CRAM/FASTA:</strong> Upload limit is 4MB (headers only).
+                        <strong>CRAM:</strong> Only the header is read from the upload stream &mdash; large files are supported.<br>
+                        <strong>FASTA:</strong> Full upload required for contig lengths. Text files are limited to 16 MB.
                     </div>
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
                         <label for="binary-file-upload" class="demo-button" style="cursor: pointer;">📄 Upload</label>
@@ -155,7 +156,7 @@
                     </div>
                     <div id="binary-preview" style="margin-top: 1rem; display: none;">
                         <p style="color: var(--text-muted);">File uploaded: <span id="binary-filename"></span></p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Binary files are processed server-side. Click Identify to analyze.</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Only the file header will be read &mdash; large BAM/CRAM files are supported. Click Identify to analyze.</p>
                     </div>
                 </div>
             </div>

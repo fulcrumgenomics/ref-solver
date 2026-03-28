@@ -14,7 +14,6 @@ import {
     validateFileSize,
     formatFileSize,
     clamp,
-    MAX_FILE_SIZE,
     MAX_TEXT_FILE_SIZE
 } from './utils/helpers.js';
 import { extractBamHeader, isBamFile } from './utils/headerExtractor.js';
@@ -255,18 +254,19 @@ async function handleFileUpload(input, format) {
         } catch (err) {
             console.warn('Client-side BAM header extraction failed, falling back to upload:', err);
             hideExtractionStatus();
-            // Fall through to normal upload
+            // Fall through to server-side streaming upload
         }
     }
 
-    // Validate file size based on format
-    const maxSize = format === 'binary' ? MAX_FILE_SIZE : MAX_TEXT_FILE_SIZE;
-    const validation = validateFileSize(file, maxSize);
-
-    if (!validation.valid) {
-        showUploadError(validation.error);
-        input.value = ''; // Clear the file input
-        return;
+    // Validate file size for text formats only; binary uploads are streamed
+    // server-side (only the header is read), so no client-side limit is needed.
+    if (format !== 'binary') {
+        const validation = validateFileSize(file, MAX_TEXT_FILE_SIZE);
+        if (!validation.valid) {
+            showUploadError(validation.error);
+            input.value = ''; // Clear the file input
+            return;
+        }
     }
 
     tabManager.currentFile = file;

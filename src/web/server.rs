@@ -24,18 +24,22 @@ use crate::matching::engine::{MatchingConfig, MatchingEngine, ScoringWeights};
 use crate::matching::Suggestion;
 use crate::utils::validation::{validate_upload, ValidationError};
 use crate::web::format_detection::{
-    detect_format, parse_binary_file, parse_with_format, FileFormat,
+    detect_format, parse_binary_file, parse_binary_file_from_path, parse_with_format, FileFormat,
 };
 
 /// Security configuration constants to prevent `DoS` attacks
 pub const MAX_MULTIPART_FIELDS: usize = 10;
-pub const MAX_FILE_FIELD_SIZE: usize = 16 * 1024 * 1024; // 16MB
+pub const MAX_FILE_FIELD_SIZE: usize = 16 * 1024 * 1024; // 16MB for text files
 pub const MAX_TEXT_FIELD_SIZE: usize = 1024 * 1024; // 1MB
 
-/// Maximum bytes to read from a binary file upload for header extraction.
-/// BAM/CRAM headers are typically under 500KB; 4MB provides generous headroom
-/// for reference genomes with many contigs (e.g. >100,000 alt contigs).
-pub const MAX_BINARY_HEADER_SIZE: usize = 4 * 1024 * 1024;
+/// Maximum bytes to read from a binary upload before attempting header parse.
+/// BAM/CRAM headers are typically < 1 MB; 64 MB provides generous headroom.
+pub const BINARY_HEADER_READ_LIMIT: usize = 64 * 1024 * 1024; // 64MB
+
+/// Axum body limit — raised to allow large binary uploads to stream through.
+/// This does not cause memory bloat because `field.chunk()` reads lazily from
+/// the underlying HTTP body stream.
+const MAX_BODY_SIZE: usize = 256 * 1024 * 1024; // 256MB
 
 /// Helper function to convert usize count to f64 with explicit precision loss allowance
 #[inline]
@@ -52,13 +56,22 @@ pub struct AppState {
     pub refget_config: Option<crate::refget::RefgetConfig>,
 }
 
+/// Binary content from an upload, either fully buffered or streamed to a temp file.
+#[derive(Debug)]
+enum BinaryContent {
+    /// Small binary file fully buffered in memory (e.g. from a non-binary-format upload)
+    InMemory(Vec<u8>),
+    /// Large binary file streamed to a temp file (BAM/CRAM uploads)
+    TempFile(tempfile::NamedTempFile),
+}
+
 /// Input data extracted from multipart form
 #[derive(Debug)]
 struct InputData {
     /// Text content (if provided via textarea or text file)
     text_content: Option<String>,
     /// Binary file content (if provided)
-    binary_content: Option<Vec<u8>>,
+    binary_content: Option<BinaryContent>,
     /// Original filename
     filename: Option<String>,
     /// Detected or specified format
@@ -236,8 +249,9 @@ pub fn create_router(refget_config: Option<crate::refget::RefgetConfig>) -> anyh
                 ))
                 // Limit concurrent requests to prevent DOS
                 .layer(ConcurrencyLimitLayer::new(100))
-                // Limit request body size (accommodate largest file + multipart overhead)
-                .layer(DefaultBodyLimit::max(20 * 1024 * 1024)), // 20MB limit
+                // Limit request body size — raised for binary streaming; actual read
+                // limits are enforced per-field in extract_request_data()
+                .layer(DefaultBodyLimit::max(MAX_BODY_SIZE)),
         );
 
     Ok(app)
@@ -845,111 +859,117 @@ async fn extract_request_data(
                     "file" => {
                         let filename = field.file_name().map(std::string::ToString::to_string);
 
-                        match field.bytes().await {
-                            Ok(bytes) => {
-                                // Detect format from filename first to pick the right size limit
-                                let detected_format = if let Some(ref name) = filename {
-                                    detect_binary_format(name).unwrap_or(FileFormat::Auto)
-                                } else {
-                                    FileFormat::Auto
-                                };
+                        // Detect format from filename before reading the body
+                        let detected_format = if let Some(ref name) = filename {
+                            detect_binary_format(name).unwrap_or(FileFormat::Auto)
+                        } else {
+                            FileFormat::Auto
+                        };
 
-                                // Use stricter limit for binary files (only headers needed).
-                                // FASTA is intentionally excluded: unlike BAM/CRAM where we
-                                // only need the header, FASTA files require full sequences
-                                // to compute contig lengths.
-                                let max_size = if matches!(
-                                    detected_format,
-                                    FileFormat::Bam | FileFormat::Cram
-                                ) {
-                                    MAX_BINARY_HEADER_SIZE
-                                } else {
-                                    MAX_FILE_FIELD_SIZE
-                                };
-
-                                // Validate field size before processing
-                                if bytes.len() > max_size {
-                                    return Err((
-                                        StatusCode::PAYLOAD_TOO_LARGE,
-                                        Json(ErrorResponse {
-                                            error: "File size exceeds limit".to_string(),
-                                            error_type: ErrorType::FileTooLarge,
-                                            details: None,
-                                        }),
-                                    )
-                                        .into_response());
+                        // For BAM/CRAM: stream chunks to a temp file (header-only read)
+                        if matches!(detected_format, FileFormat::Bam | FileFormat::Cram) {
+                            match read_binary_chunks(field, detected_format).await {
+                                Ok((temp_file, _bytes_read)) => {
+                                    input_data.filename = filename;
+                                    input_data.binary_content =
+                                        Some(BinaryContent::TempFile(temp_file));
+                                    input_data.format = Some(detected_format);
                                 }
+                                Err(err_response) => return Err(err_response),
+                            }
+                        } else {
+                            // Text and other formats: buffer fully in memory
+                            match field.bytes().await {
+                                Ok(bytes) => {
+                                    // Validate field size before processing
+                                    if bytes.len() > MAX_FILE_FIELD_SIZE {
+                                        return Err((
+                                            StatusCode::PAYLOAD_TOO_LARGE,
+                                            Json(ErrorResponse {
+                                                error: "File size exceeds limit".to_string(),
+                                                error_type: ErrorType::FileTooLarge,
+                                                details: None,
+                                            }),
+                                        )
+                                            .into_response());
+                                    }
 
-                                // Use comprehensive validation function for security
-                                match validate_upload(filename.as_deref(), &bytes, detected_format)
-                                {
-                                    Ok(validated_filename) => {
-                                        input_data.filename = validated_filename;
+                                    // Use comprehensive validation function for security
+                                    match validate_upload(
+                                        filename.as_deref(),
+                                        &bytes,
+                                        detected_format,
+                                    ) {
+                                        Ok(validated_filename) => {
+                                            input_data.filename = validated_filename;
 
-                                        // Detect if content is binary or text
-                                        if is_binary_content(&bytes) {
-                                            input_data.binary_content = Some(bytes.to_vec());
-                                            input_data.format = Some(detected_format);
-                                        } else {
-                                            input_data.text_content =
-                                                Some(String::from_utf8_lossy(&bytes).to_string());
+                                            // Detect if content is binary or text
+                                            if is_binary_content(&bytes) {
+                                                input_data.binary_content =
+                                                    Some(BinaryContent::InMemory(bytes.to_vec()));
+                                                input_data.format = Some(detected_format);
+                                            } else {
+                                                input_data.text_content = Some(
+                                                    String::from_utf8_lossy(&bytes).to_string(),
+                                                );
+                                            }
+                                        }
+                                        Err(ValidationError::FilenameTooLong) => {
+                                            return Err((
+                                                StatusCode::BAD_REQUEST,
+                                                Json(create_safe_error_response(
+                                                    ErrorType::FilenameTooLong,
+                                                    "Filename exceeds maximum length limit",
+                                                    Some("Filename validation failed due to length constraints")
+                                                )),
+                                            ).into_response());
+                                        }
+                                        Err(ValidationError::InvalidFilename) => {
+                                            return Err((
+                                                StatusCode::BAD_REQUEST,
+                                                Json(create_safe_error_response(
+                                                    ErrorType::InvalidFilename,
+                                                    "Filename contains invalid or dangerous characters",
+                                                    Some("Filename validation failed due to invalid characters")
+                                                )),
+                                            ).into_response());
+                                        }
+                                        Err(ValidationError::FormatValidationFailed) => {
+                                            return Err((
+                                                StatusCode::BAD_REQUEST,
+                                                Json(create_safe_error_response(
+                                                    ErrorType::FormatMismatch,
+                                                    "File content does not match the expected format based on filename",
+                                                    Some("Format validation failed")
+                                                )),
+                                            ).into_response());
+                                        }
+                                        Err(ValidationError::InvalidFileContent) => {
+                                            return Err((
+                                                StatusCode::BAD_REQUEST,
+                                                Json(create_safe_error_response(
+                                                    ErrorType::InvalidContent,
+                                                    "File content appears malformed or corrupted",
+                                                    None,
+                                                )),
+                                            )
+                                                .into_response());
+                                        }
+                                        Err(_) => {
+                                            return Err((
+                                                StatusCode::BAD_REQUEST,
+                                                Json(create_safe_error_response(
+                                                    ErrorType::ValidationFailed,
+                                                    "File validation failed",
+                                                    None,
+                                                )),
+                                            )
+                                                .into_response());
                                         }
                                     }
-                                    Err(ValidationError::FilenameTooLong) => {
-                                        return Err((
-                                            StatusCode::BAD_REQUEST,
-                                            Json(create_safe_error_response(
-                                                ErrorType::FilenameTooLong,
-                                                "Filename exceeds maximum length limit",
-                                                Some("Filename validation failed due to length constraints")
-                                            )),
-                                        ).into_response());
-                                    }
-                                    Err(ValidationError::InvalidFilename) => {
-                                        return Err((
-                                            StatusCode::BAD_REQUEST,
-                                            Json(create_safe_error_response(
-                                                ErrorType::InvalidFilename,
-                                                "Filename contains invalid or dangerous characters",
-                                                Some("Filename validation failed due to invalid characters")
-                                            )),
-                                        ).into_response());
-                                    }
-                                    Err(ValidationError::FormatValidationFailed) => {
-                                        return Err((
-                                            StatusCode::BAD_REQUEST,
-                                            Json(create_safe_error_response(
-                                                ErrorType::FormatMismatch,
-                                                "File content does not match the expected format based on filename",
-                                                Some("Format validation failed")
-                                            )),
-                                        ).into_response());
-                                    }
-                                    Err(ValidationError::InvalidFileContent) => {
-                                        return Err((
-                                            StatusCode::BAD_REQUEST,
-                                            Json(create_safe_error_response(
-                                                ErrorType::InvalidContent,
-                                                "File content appears malformed or corrupted",
-                                                None,
-                                            )),
-                                        )
-                                            .into_response());
-                                    }
-                                    Err(_) => {
-                                        return Err((
-                                            StatusCode::BAD_REQUEST,
-                                            Json(create_safe_error_response(
-                                                ErrorType::ValidationFailed,
-                                                "File validation failed",
-                                                None,
-                                            )),
-                                        )
-                                            .into_response());
-                                    }
                                 }
+                                Err(_) => had_parse_error = true,
                             }
-                            Err(_) => had_parse_error = true,
                         }
                     }
                     "header_text" => match field.text().await {
@@ -1083,7 +1103,12 @@ fn parse_input_data(
         // Binary file parsing
         let format = input_data.format.unwrap_or(FileFormat::Bam);
 
-        match parse_binary_file(binary_content, format) {
+        let result = match binary_content {
+            BinaryContent::InMemory(bytes) => parse_binary_file(bytes, format),
+            BinaryContent::TempFile(temp) => parse_binary_file_from_path(temp.path(), format),
+        };
+
+        match result {
             Ok(query) => Ok((query, Vec::new())),
             Err(_) => Err(Box::new((
                 StatusCode::BAD_REQUEST,
@@ -1108,6 +1133,94 @@ fn parse_input_data(
                 .into_response(),
         ))
     }
+}
+
+/// Read a binary file upload in chunks, writing to a temp file.
+///
+/// Stops after [`BINARY_HEADER_READ_LIMIT`] bytes — enough for any BAM/CRAM header.
+/// Returns the temp file (kept alive for parsing) and total bytes written.
+async fn read_binary_chunks(
+    mut field: axum::extract::multipart::Field<'_>,
+    format: FileFormat,
+) -> Result<(tempfile::NamedTempFile, usize), Response> {
+    use std::io::Write;
+
+    let extension = match format {
+        FileFormat::Bam => ".bam",
+        FileFormat::Cram => ".cram",
+        _ => ".bin",
+    };
+
+    let mut temp_file = tempfile::NamedTempFile::with_suffix(extension).map_err(|e| {
+        tracing::error!("Failed to create temp file for binary upload: {e}");
+        (
+            StatusCode::INTERNAL_SERVER_ERROR,
+            Json(ErrorResponse {
+                error: "Internal error processing upload".to_string(),
+                error_type: ErrorType::InternalError,
+                details: None,
+            }),
+        )
+            .into_response()
+    })?;
+
+    let mut bytes_written: usize = 0;
+
+    loop {
+        match field.chunk().await {
+            Ok(Some(chunk)) => {
+                let remaining = BINARY_HEADER_READ_LIMIT.saturating_sub(bytes_written);
+                if remaining == 0 {
+                    break;
+                }
+
+                let to_write = chunk.len().min(remaining);
+                temp_file.write_all(&chunk[..to_write]).map_err(|e| {
+                    tracing::error!("Failed to write binary upload to temp file: {e}");
+                    (
+                        StatusCode::INTERNAL_SERVER_ERROR,
+                        Json(ErrorResponse {
+                            error: "Internal error processing upload".to_string(),
+                            error_type: ErrorType::InternalError,
+                            details: None,
+                        }),
+                    )
+                        .into_response()
+                })?;
+                bytes_written += to_write;
+
+                if to_write < chunk.len() {
+                    break; // Hit the limit mid-chunk
+                }
+            }
+            Ok(None) => break, // End of field
+            Err(_) => {
+                return Err((
+                    StatusCode::BAD_REQUEST,
+                    Json(create_safe_error_response(
+                        ErrorType::InvalidContent,
+                        "Failed to read uploaded file",
+                        Some("Error reading multipart chunk during binary upload"),
+                    )),
+                )
+                    .into_response());
+            }
+        }
+    }
+
+    if bytes_written == 0 {
+        return Err((
+            StatusCode::BAD_REQUEST,
+            Json(create_safe_error_response(
+                ErrorType::MissingInput,
+                "Uploaded file is empty",
+                None,
+            )),
+        )
+            .into_response());
+    }
+
+    Ok((temp_file, bytes_written))
 }
 
 /// Check if content appears to be binary
