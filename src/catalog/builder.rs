@@ -987,13 +987,7 @@ impl std::fmt::Display for BuildSummary {
         writeln!(f)?;
 
         writeln!(f, "Coverage:")?;
-        let pct = |n: usize, total: usize| {
-            if total == 0 {
-                0
-            } else {
-                (n * 100) / total
-            }
-        };
+        let pct = |n: usize, total: usize| (n * 100).checked_div(total).unwrap_or(0);
         let check = |n: usize, total: usize| {
             if n == total {
                 "+"
