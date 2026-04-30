@@ -30,7 +30,7 @@ impl<'a> CandidateFinder<'a> {
         }
 
         let mut candidates: Vec<_> = ref_counts.into_iter().collect();
-        candidates.sort_by(|a, b| b.1.cmp(&a.1)); // Sort by count descending
+        candidates.sort_by_key(|b| std::cmp::Reverse(b.1)); // Sort by count descending
         candidates
     }
 
@@ -68,7 +68,7 @@ impl<'a> CandidateFinder<'a> {
         }
 
         let mut candidates: Vec<_> = ref_counts.into_iter().collect();
-        candidates.sort_by(|a, b| b.1.cmp(&a.1));
+        candidates.sort_by_key(|b| std::cmp::Reverse(b.1));
         candidates
     }
 
