@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1](https://github.com/fulcrumgenomics/ref-solver/compare/v0.3.0...v0.3.1) - 2026-04-30
+
+### Fixed
+
+- unblock CI (rust-1.95 clippy + SHA-pinned actions) ([#19](https://github.com/fulcrumgenomics/ref-solver/pull/19))
+
+### Other
+
+- *(readme)* use absolute URLs for logo images ([#21](https://github.com/fulcrumgenomics/ref-solver/pull/21))
+
 ## [0.3.0](https://github.com/fulcrumgenomics/ref-solver/compare/v0.2.0...v0.3.0) - 2026-03-28
 
 ### Added
